@@ -9,6 +9,8 @@
 [![Domain](https://img.shields.io/badge/Dominio-freakonia.com-ff00ff?style=flat-square&logo=google-domains)](https://freakonia.com)
 
 ---
+[![VER WEB](https://img.shields.io/badge/🌐%20VER%20WEB-freakonia.com-00ff41?style=for-the-badge)](https://karlete.github.io/freakonia/)
+
 
 ## 🏰 ¿Qué es Freakonia?
 
