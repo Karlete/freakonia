@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Freakonia — Gaming. Historial gamer de Karlete: Master System II, Game Boy, Super Nintendo, PlayStation 1 y PC." />
+  <title>Gaming — Freakonia</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/gaming.css" />
+
+</head>
+<body>
+
+<!-- CRT overlay -->
+<div class="crt-overlay" aria-hidden="true"></div>
+
+<!-- ─── Navigation ─────────────────────────────────────────────────────── -->
+<nav class="navbar" role="navigation" aria-label="Navegación principal">
+  <div class="container">
+    <a href="index.html" class="nav-brand">⚔ FREAKONIA</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">▼ MENU</button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html"     class="nav-link">🏠 Inicio</a></li>
+      <li><a href="gamedev.html"   class="nav-link">🎮 GameDev</a></li>
+      <li><a href="gaming.html"    class="nav-link active">🕹 Gaming</a></li>
+      <li><a href="esports.html"   class="nav-link">🏆 Esports</a></li>
+      <li><a href="got.html"       class="nav-link">🐉 GoT</a></li>
+      <li><a href="warhammer.html" class="nav-link">⚙ Warhammer</a></li>
+      <li><a href="magic.html"     class="nav-link">✨ MtG</a></li>
+      <li><a href="rol.html"       class="nav-link">🎲 Rol</a></li>
+      <li><a href="nba.html"       class="nav-link">🏀 NBA</a></li>
+      <li><a href="java.html"      class="nav-link">☕ Java</a></li>
+      <li><a href="social.html"    class="nav-link">📡 Social</a></li>
+      <li><a href="news.html"      class="nav-link">📰 News</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ─── Page Header ─────────────────────────────────────────────────────── -->
+<header class="page-header-gaming">
+  <div class="container">
+    <p class="page-header-pre">// CARGANDO HISTORIAL GAMER — KARLETE.EXE</p>
+    <h1 class="page-header-title">🕹 GAMING</h1>
+    <p class="page-header-sub">De la Master System al PC — toda una vida de píxeles, vidas perdidas y momentos épicos.</p>
+  </div>
+</header>
+
+<main>
+
+  <!-- ─── Stats overview ───────────────────────────────────────────────── -->
+  <section class="section" style="padding-top: var(--sp-7); padding-bottom: var(--sp-5);">
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--accent-tertiary);text-shadow:var(--glow-blue);">5</span>
+          <span class="stat-label">Plataformas</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value">∞</span>
+          <span class="stat-label">Horas Jugadas</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--accent-secondary);text-shadow:var(--glow-pink);">NVL 99</span>
+          <span class="stat-label">Rango Definitivo</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">1993</span>
+          <span class="stat-label">Año de Inicio</span>
+        </div>
+      </div>
+
+      <!-- Quick platform navigation -->
+      <nav class="platform-quicknav" aria-label="Saltar a plataforma">
+        <span style="font-family:var(--font-primary);font-size:0.45rem;color:var(--text-dim);align-self:center;">▶ IR A:</span>
+        <a href="#master-system" class="sms">📺 MASTER SYSTEM II</a>
+        <a href="#game-boy"      class="gb">🎮 GAME BOY</a>
+        <a href="#super-nintendo" class="snes">🟣 SUPER NINTENDO</a>
+        <a href="#playstation-1" class="ps1">💿 PLAYSTATION 1</a>
+        <a href="#pc"            class="pc">💻 PC</a>
+      </nav>
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 1 — MASTER SYSTEM II
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section platform-section" id="master-system">
+    <div class="container">
+
+      <div class="section-label blue">📺 CONSOLA 1</div>
+
+      <!-- Platform header -->
+      <div class="platform-header" style="border-left-color: var(--accent-tertiary);">
+        <div class="platform-icon">📺</div>
+        <div class="platform-info">
+          <span class="platform-name" style="color:var(--accent-tertiary);text-shadow:var(--glow-blue);">MASTER SYSTEM II</span>
+          <span class="platform-era">SEGA — Mi primera consola propia · Era: primeros 90s</span>
+        </div>
+        <span class="era-badge">~1993 – 1996</span>
+      </div>
+
+      <!-- Console image -->
+      <div class="console-img-wrap" data-console="mastersystem">
+        <img class="console-img" src="assets/img/Master_System_II.jpg" alt="Master System II" style="height: 300px; object-fit: fill;"/>
+      </div>
+
+      <!-- Intro -->
+      <div class="platform-intro-card reveal">
+        <p>
+          La <strong style="color:var(--accent-tertiary);">Master System II</strong> fue mi primera consola propia,
+          y con ella empezó todo de verdad. Antes de ella ya había visto el <strong>Doom</strong> en casa de mi primo,
+          y tocado el <strong>Sonic</strong> y el <strong>Alex Kid</strong> en algún sitio, pero tenerla en casa fue
+          otro nivel. Esas tardes enganchada a la tele con el mando en la mano son de las que no se olvidan.
+        </p>
+        <p>
+          La SMS2 venía de serie con <strong>Alex Kidd in Miracle World</strong> integrado en la ROM, así que técnicamente
+          era el primer juego de cualquiera que la tuviera. Un plataformas lleno de pantallas de piedra-papel-tijera
+          donde te podían eliminar de un bofetón. Genial.
+        </p>
+        <div style="display:flex; flex-wrap:wrap; gap:var(--sp-2); margin-top:var(--sp-4);">
+          <span class="tag blue">SEGA</span>
+          <span class="tag blue">8-BIT</span>
+          <span class="tag blue">PLATAFORMAS</span>
+          <span class="tag blue">PRIMERA CONSOLA</span>
+        </div>
+      </div>
+
+      <!-- Game memory cards -->
+      <!--
+        ┌─────────────────────────────────────────────────────────────────┐
+        │  Para añadir un juego: copia un bloque .memory-card y          │
+        │  rellena título, emoji, descripción y tags.                    │
+        │  Aplica el --memory-color inline para el efecto de hover.      │
+        └─────────────────────────────────────────────────────────────────┘
+      -->
+      <div class="grid-3 stagger">
+
+        <!-- Alex Kidd in Miracle World -->
+        <div class="memory-card reveal" style="--memory-color: var(--accent-tertiary);">
+          <div class="memory-card-icon">👊</div>
+          <div class="memory-card-body">
+            <h3 class="memory-card-title">Alex Kidd in Miracle World</h3>
+            <p class="memory-card-desc">
+              El juego que venía integrado en la consola. Plataformas, puñetazos, y las infames
+              pantallas de piedra-papel-tijera donde perdías vidas por pura mala suerte. El primer
+              "jefe final" de mi vida gamer.
+            </p>
+          </div>
+          <div class="memory-card-footer">
+            <span class="tag blue">PLATAFORMAS</span>
+            <span class="tag blue">BUILT-IN</span>
+            <span class="tag blue">SEGA</span>
+          </div>
+        </div>
+
+        <!-- Sonic the Hedgehog -->
+        <div class="memory-card reveal" style="--memory-color: var(--accent-tertiary);">
+          <div class="memory-card-icon">💨</div>
+          <div class="memory-card-body">
+            <h3 class="memory-card-title">Sonic the Hedgehog</h3>
+            <p class="memory-card-desc">
+              Velocidad, anillos y el Dr. Robotnik. La versión de Master System era diferente a la
+              de Mega Drive pero igual de adictiva. Green Hill Zone sonará en mi cabeza hasta el
+              día que me muera.
+            </p>
+          </div>
+          <div class="memory-card-footer">
+            <span class="tag blue">PLATAFORMAS</span>
+            <span class="tag blue">VELOCIDAD</span>
+            <span class="tag blue">SEGA</span>
+          </div>
+        </div>
+
+        <!-- Placeholder — más juegos -->
+        <div class="more-games-hint reveal">
+          <strong>// MÁS JUEGOS POR AÑADIR</strong>
+          Hay más títulos que marcan esta época. Próximamente ampliaremos esta sección con más recuerdos pixelados.
+        </div>
+
+      </div><!-- /grid-3 -->
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 2 — GAME BOY
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section platform-section" id="game-boy">
+    <div class="container">
+
+      <div class="section-label">🎮 CONSOLA 2</div>
+
+      <!-- Platform header -->
+      <div class="platform-header" style="border-left-color: var(--accent-primary);">
+        <div class="platform-icon">🎮</div>
+        <div class="platform-info">
+          <span class="platform-name" style="color:var(--accent-primary);text-shadow:var(--glow-green);">GAME BOY</span>
+          <span class="platform-era">NINTENDO — La portátil de los píxeles verdes · Era: mediados 90s</span>
+        </div>
+        <span class="era-badge">~1994 – 1998</span>
+      </div>
+
+      <!-- Console image -->
+      <div class="console-img-wrap" data-console="gameboy">
+        <img class="console-img" src="assets/img/Game_Boy.jpg" alt="Game Boy" style="height: 300px; object-fit: fill;"/>
+      </div>
+
+      <!-- Intro -->
+      <div class="platform-intro-card reveal">
+        <p>
+          La <strong style="color:var(--accent-primary);">Game Boy</strong> original — pantalla verde,
+          cuatro colores de gris y una pila que duraba para siempre. Llevártela a todas partes era
+          la libertad máxima cuando eras cría. En el coche, en casa de la abuela, debajo de las mantas
+          con una linterna.
+        </p>
+        <p>
+          <strong>Super Mario Land 2: 6 Golden Coins</strong> fue el juego que me enganchó de verdad a
+          la portátil. Mario con orejitas de conejo, mundos disparatados y ese final boss que era
+          Wario por primera vez. Magia pura de 8 bits en una pantalla del tamaño de un posavasos.
+        </p>
+        <div style="display:flex; flex-wrap:wrap; gap:var(--sp-2); margin-top:var(--sp-4);">
+          <span class="tag">NINTENDO</span>
+          <span class="tag">8-BIT</span>
+          <span class="tag">PORTÁTIL</span>
+          <span class="tag">PLATAFORMAS</span>
+        </div>
+      </div>
+
+      <!-- Game memory cards -->
+      <div class="grid-3 stagger">
+
+        <!-- Super Mario Land 2 -->
+        <div class="memory-card reveal" style="--memory-color: var(--accent-primary);">
+          <div class="memory-card-icon">🍄</div>
+          <div class="memory-card-body">
+            <h3 class="memory-card-title">Super Mario Land 2: 6 Golden Coins</h3>
+            <p class="memory-card-desc">
+              El Mario portátil definitivo. Seis mundos temáticos raros y maravillosos — el espacio,
+              una calabaza gigante, una zona de juguetes. Y la primera aparición de Wario como
+              villano. Un clásico absoluto de la portátil gris.
+            </p>
+          </div>
+          <div class="memory-card-footer">
+            <span class="tag">PLATAFORMAS</span>
+            <span class="tag">NINTENDO</span>
+            <span class="tag">MARIO</span>
+          </div>
+        </div>
+
+        <!-- Placeholder -->
+        <div class="more-games-hint reveal">
+          <strong>// MÁS JUEGOS POR AÑADIR</strong>
+          La Game Boy dio para mucho más. Iremos añadiendo más títulos y recuerdos de la portátil verde.
+        </div>
+
+        <!-- Placeholder 2 -->
+        <div class="more-games-hint reveal">
+          <strong>// SLOT LIBRE</strong>
+          ¿Tetris? ¿Pokémon? ¿Kirby? El futuro dirá qué más entra en esta sección.
+        </div>
+
+      </div><!-- /grid-3 -->
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 3 — SUPER NINTENDO
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section platform-section" id="super-nintendo">
+    <div class="container">
+
+      <div class="section-label pink">🟣 CONSOLA 3</div>
+
+      <!-- Platform header -->
+      <div class="platform-header" style="border-left-color: var(--accent-secondary);">
+        <div class="platform-icon">🟣</div>
+        <div class="platform-info">
+          <span class="platform-name" style="color:var(--accent-secondary);text-shadow:var(--glow-pink);">SUPER NINTENDO</span>
+          <span class="platform-era">NINTENDO — El salón dorado del 16 bits · Era: mediados 90s</span>
+        </div>
+        <span class="era-badge">~1994 – 1998</span>
+      </div>
+
+      <!-- Console image -->
+      <div class="console-img-wrap" data-console="supernintendo">
+        <img class="console-img" src="assets/img/Super_Nintendo.jpg" alt="Super Nintendo" style="height: 300px; object-fit: fill;"/>
+      </div>
+
+      <!-- Intro -->
+      <div class="platform-intro-card reveal">
+        <p>
+          La <strong style="color:var(--accent-secondary);">Super Nintendo</strong> era la consola de los sueños.
+          Gráficos que te volaban la cabeza, música que todavía tararea uno cuando está en la ducha,
+          y juegos con una calidad que pocas generaciones han igualado. El 16 bits en estado puro.
+        </p>
+        <p>
+          <strong>Super Mario World</strong> fue el primer contacto serio con el salto generacional.
+          Después llegó todo lo demás: las peleas de <strong>Mortal Kombat</strong>, las tardes épicas
+          con los amigos frente al televisor, y la sensación de que los videojuegos eran algo
+          que había llegado para quedarse de verdad.
+        </p>
+        <div style="display:flex; flex-wrap:wrap; gap:var(--sp-2); margin-top:var(--sp-4);">
+          <span class="tag pink">NINTENDO</span>
+          <span class="tag pink">16-BIT</span>
+          <span class="tag pink">MULTIPLAYER</span>
+          <span class="tag pink">GOLDEN ERA</span>
+        </div>
+      </div>
+
+      <!-- Game memory cards -->
+      <div class="grid-3 stagger">
+
+        <!-- Super Mario World -->
+        <div class="memory-card reveal" style="--memory-color: var(--accent-secondary);">
+          <div class="memory-card-icon">🦕</div>
+          <div class="memory-card-body">
+            <h3 class="memory-card-title">Super Mario World</h3>
+            <p class="memory-card-desc">
+              Yoshi, Cabo Koopa, los castillos de los hermanos Koopa y ese mapa del mundo tan bien
+              construido. El juego de lanzamiento por excelencia de la SNES. Recorrerlo entero
+              era un rito de paso gamer de los 90.
+            </p>
+          </div>
+          <div class="memory-card-footer">
+            <span class="tag pink">PLATAFORMAS</span>
+            <span class="tag pink">NINTENDO</span>
+            <span class="tag pink">CLÁSICO</span>
+          </div>
+        </div>
+
+        <!-- Mortal Kombat -->
+        <div class="memory-card reveal" style="--memory-color: var(--accent-secondary);">
+          <div class="memory-card-icon">🩸</div>
+          <div class="memory-card-body">
+            <h3 class="memory-card-title">Mortal Kombat</h3>
+            <p class="memory-card-desc">
+              Las peleas épicas frente a la tele con amigos. Los fatalities que parecían el colmo
+              del escándalo en aquella época. Scorpion, Sub-Zero, y esa canción de intro grabada
+              a fuego en la memoria de toda una generación.
+            </p>
+          </div>
+          <div class="memory-card-footer">
+            <span class="tag pink">LUCHA</span>
+            <span class="tag pink">MULTIJUGADOR</span>
+            <span class="tag pink">ARCADE</span>
+          </div>
+        </div>
+
+        <!-- Placeholder -->
+        <div class="more-games-hint reveal">
+          <strong>// MÁS JUEGOS POR AÑADIR</strong>
+          La SNES tiene un catálogo brutal. Aquí vendrán más recuerdos de esa era dorada del 16 bits.
+        </div>
+
+      </div><!-- /grid-3 -->
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 4 — PLAYSTATION 1
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section platform-section" id="playstation-1">
+    <div class="container">
+
+      <div class="section-label gold">💿 CONSOLA 4</div>
+
+      <!-- Platform header -->
+      <div class="platform-header" style="border-left-color: var(--accent-warn);">
+        <div class="platform-icon">💿</div>
+        <div class="platform-info">
+          <span class="platform-name" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">PLAYSTATION 1</span>
+          <span class="platform-era">SONY — El salto al 3D y los CDs · Era: finales 90s</span>
+        </div>
+        <span class="era-badge">~1997 – 2001</span>
+      </div>
+
+      <!-- Console image -->
+      <div class="console-img-wrap" data-console="playstation">
+        <img class="console-img" src="assets/img/Play_station_1.png" alt="PlayStation 1" style="height: 300px; object-fit: fill;"/>
+      </div>
+
+      <!-- Intro -->
+      <div class="platform-intro-card reveal">
+        <p>
+          La <strong style="color:var(--accent-warn);">PlayStation</strong> lo cambió todo. El salto
+          de los cartuchos a los CDs, del 2D al 3D, y una biblioteca de juegos que era como haber
+          ganado la lotería. SONY irrumpió en el mercado con algo que nadie esperaba y lo petó desde
+          el primer día.
+        </p>
+        <p>
+          Aquí llegaron los juegos que de verdad marcaron época: <strong>Tomb Raider</strong> y esa
+          sensación de explorar mundos tridimensionales por primera vez, los <strong>Final Fantasy</strong>
+          con sus historias épicas y sus cinemáticas que te dejaban con la boca abierta. Y por supuesto,
+          los eternos <strong>PES</strong>, <strong>NBA Live</strong> y <strong>NBA 2K</strong> para
+          las tardes multijugador con el mando partido en dos.
+        </p>
+        <div style="display:flex; flex-wrap:wrap; gap:var(--sp-2); margin-top:var(--sp-4);">
+          <span class="tag gold">SONY</span>
+          <span class="tag gold">3D</span>
+          <span class="tag gold">RPG</span>
+          <span class="tag gold">ACCIÓN</span>
+          <span class="tag gold">DEPORTES</span>
+        </div>
+      </div>
+
+      <!-- Game memory cards -->
+      <div class="grid-3 stagger">
+
+        <!-- Tomb Raider -->
+        <div class="memory-card reveal" style="--memory-color: var(--accent-warn);">
+          <div class="memory-card-icon">🏛</div>
+          <div class="memory-card-body">
+            <h3 class="memory-card-title">Tomb Raider</h3>
+            <p class="memory-card-desc">
+              Lara Croft escalando, saltando y disparando en entornos 3D que en aquel momento
+              parecían imposibles. La exploración de tumbas, los puzzles y esa mezcla de acción
+              y aventura que no se parecía a nada de lo que había existido antes.
+            </p>
+          </div>
+          <div class="memory-card-footer">
+            <span class="tag gold">ACCIÓN</span>
+            <span class="tag gold">AVENTURA</span>
+            <span class="tag gold">3D</span>
+          </div>
+        </div>
+
+        <!-- Final Fantasy -->
+        <div class="memory-card reveal" style="--memory-color: var(--accent-warn);">
+          <div class="memory-card-icon">⚔</div>
+          <div class="memory-card-body">
+            <h3 class="memory-card-title">Final Fantasy (Serie)</h3>
+            <p class="memory-card-desc">
+              Historias épicas, personajes memorables, sistemas de combate por turnos que
+              podías pasarte horas optimizando. La saga que demostró que los videojuegos
+              podían contar historias tan buenas como cualquier novela o película.
+            </p>
+          </div>
+          <div class="memory-card-footer">
+            <span class="tag gold">JRPG</span>
+            <span class="tag gold">TURNO</span>
+            <span class="tag gold">ÉPICO</span>
+          </div>
+        </div>
+
+        <!-- PES / NBA -->
+        <div class="memory-card reveal" style="--memory-color: var(--accent-warn);">
+          <div class="memory-card-icon">⚽</div>
+          <div class="memory-card-body">
+            <h3 class="memory-card-title">PES · NBA Live · NBA 2K</h3>
+            <p class="memory-card-desc">
+              Los partidos de fútbol y baloncesto eternos con amigos. El ritual de elegir
+              equipos, los gritos cuando marcabas, las excusas cuando perdías. Los deportivos
+              de PS1 fueron la excusa perfecta para reunir a todo el mundo frente a la tele.
+            </p>
+          </div>
+          <div class="memory-card-footer">
+            <span class="tag gold">DEPORTES</span>
+            <span class="tag gold">MULTIJUGADOR</span>
+            <span class="tag gold">FÚTBOL</span>
+          </div>
+        </div>
+
+        <!-- Placeholder -->
+        <div class="more-games-hint reveal">
+          <strong>// MÁS JUEGOS POR AÑADIR</strong>
+          La PS1 tiene un catálogo enorme. Hay mucho más que contar de esta era dorada de Sony.
+        </div>
+
+      </div><!-- /grid-3 -->
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 5 — PC
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section platform-section" id="pc">
+    <div class="container">
+
+      <div class="section-label" style="background:var(--text-dim);">💻 PLATAFORMA 5</div>
+
+      <!-- Platform header -->
+      <div class="platform-header" style="border-left-color: #e0e0e0;">
+        <div class="platform-icon">💻</div>
+        <div class="platform-info">
+          <span class="platform-name" style="color:var(--text-bright);">PC</span>
+          <span class="platform-era">Windows / La plataforma definitiva · Era: 2000s – presente</span>
+        </div>
+        <span class="era-badge">~2000 – Presente</span>
+      </div>
+
+      <!-- Console image -->
+      <div class="console-img-wrap" data-console="pc">
+        <img class="console-img" src="assets/img/PC_antiguo.jpg" alt="PC" style="height: 300px; object-fit: fill;"/>
+      </div>
+
+      <!-- Intro -->
+      <div class="platform-intro-card reveal">
+        <p>
+          El <strong style="color:var(--text-bright);">PC</strong> lo cambió todo otra vez. Y aquí la
+          historia tiene nombre propio: el mítico ciber <strong>Death Match</strong> de Cáceres, donde
+          con toda la pandilla pasábamos tardes y noches enteras dale que te pego al
+          <strong>Action Quake 2</strong>, al primer <strong>Counter-Strike</strong>al glorioso
+          <strong>Diablo 2</strong>, al mitiquísimo <strong>Unreal</strong> y por supuesto al <strong>Starcraft</strong>. 
+          Esos días en el ciber son irrepetibles, joder qué recuerdos!
+        </p>
+        <p>
+          Luego vinieron los años del gaming en solitario en casa con la compra de un PC::
+          <strong>Gothic</strong>, Fallout, los <strong>Heroes of Might and Magic</strong> del II al V
+          (sí, el V también), Oblivion y Skyrim con mil mods instalados...Son solo unos ejemplos, pero es que la lista de juegos
+          que quemé es inabarcable. El PC te abre una puerta a un mundo infinito de juegos, 
+          géneros y posibilidades que ninguna consola puede igualar.
+        </p>
+        <p>
+          Y ya saben cómo sigue esto: <strong>League of Legends</strong> y
+          <strong>Dead by Daylight</strong>. Ya no los juego, lo juro — pero miro el competitivo
+          y finjo que podría con cualquiera. La sección de Esports tiene todos los detalles.
+        </p>
+        <div style="display:flex; flex-wrap:wrap; gap:var(--sp-2); margin-top:var(--sp-4);">
+          <span class="tag">PC</span>
+          <span class="tag">FPS</span>
+          <span class="tag">RPG</span>
+          <span class="tag">ESTRATEGIA</span>
+          <span class="tag pink">LoL</span>
+          <span class="tag pink">DBD</span>
+          <span class="tag">ONLINE</span>
+        </div>
+      </div>
+
+      <!-- Subsection: Cybercafe era -->
+      <div style="margin-bottom: var(--sp-5);">
+        <h3 style="font-size:0.6rem; color:var(--accent-tertiary); text-shadow:var(--glow-blue); margin-bottom:var(--sp-4);">
+          ▶ ERA DEL CIBER — DEATH MATCH, CÁCERES
+        </h3>
+      </div>
+
+      <div class="grid-3 stagger">
+
+        <!-- Action Quake 2 -->
+        <div class="memory-card reveal" style="--memory-color: #e0e0e0;">
+          <div class="memory-card-icon">🔫</div>
+          <div class="memory-card-body">
+            <h3 class="memory-card-title">Action Quake 2</h3>
+            <p class="memory-card-desc">
+              El mod de Quake 2 que lo tenía todo: carreras por los tejados, caídas con rotura de
+              piernas, armas realistas y partidas frenéticas con los colegas del pueblo en el
+              ciber. El precursor espiritual de lo que vendría después.
+            </p>
+          </div>
+          <div class="memory-card-footer">
+            <span class="tag">FPS</span>
+            <span class="tag">MULTIJUGADOR</span>
+            <span class="tag">CIBER</span>
+          </div>
+        </div>
+
+        <!-- Counter-Strike -->
+        <div class="memory-card reveal" style="--memory-color: #e0e0e0;">
+          <div class="memory-card-icon">💣</div>
+          <div class="memory-card-body">
+            <h3 class="memory-card-title">Counter-Strike</h3>
+            <p class="memory-card-desc">
+              Terroristas contra antiterroristas. Comprar el AK o la M4, plantar la bomba,
+              defenderla. El CS original que empezó siendo un mod de Half-Life y se convirtió
+              en el FPS competitivo por excelencia de toda una generación.
+            </p>
+          </div>
+          <div class="memory-card-footer">
+            <span class="tag">FPS</span>
+            <span class="tag">COMPETITIVO</span>
+            <span class="tag">ONLINE</span>
+          </div>
+        </div>
+
+        <!-- Diablo II -->
+        <div class="memory-card reveal" style="--memory-color: #e0e0e0;">
+          <div class="memory-card-icon">👹</div>
+          <div class="memory-card-body">
+            <h3 class="memory-card-title">Diablo II</h3>
+            <p class="memory-card-desc">
+              El hack-and-slash definitivo. Clases, builds, el loot interminable y esa atmósfera
+              oscura e hipnótica que te tenía horas pegada a la pantalla. El Acto 2 con el desierto
+              y Duriel es terrorismo psicológico de primera.
+            </p>
+          </div>
+          <div class="memory-card-footer">
+            <span class="tag">HACK & SLASH</span>
+            <span class="tag">RPG</span>
+            <span class="tag">LOOT</span>
+          </div>
+        </div>
+
+      </div><!-- /grid-3 ciber era -->
+
+      <!-- Subsection: Home PC era -->
+      <div style="margin: var(--sp-7) 0 var(--sp-5);">
+        <h3 style="font-size:0.6rem; color:var(--accent-primary); text-shadow:var(--glow-green); margin-bottom:var(--sp-4);">
+          ▶ ERA DEL PC EN CASA — RPGs, ESTRATEGIA Y MUNDOS ABIERTOS
+        </h3>
+      </div>
+
+      <div class="grid-3 stagger">
+
+        <!-- Heroes of Might and Magic -->
+        <div class="memory-card reveal" style="--memory-color: var(--accent-warn);">
+          <div class="memory-card-icon">🏰</div>
+          <div class="memory-card-body">
+            <h3 class="memory-card-title">Heroes of Might and Magic II – V</h3>
+            <p class="memory-card-desc">
+              La saga de estrategia por turnos que te robaba el fin de semana entero. Construir
+              castillos, reclutar ejércitos, explorar el mapa y esas batallas hexagonales donde
+              cada movimiento contaba. Del II al V, todos buenos a su manera.
+            </p>
+          </div>
+          <div class="memory-card-footer">
+            <span class="tag gold">ESTRATEGIA</span>
+            <span class="tag gold">TURNOS</span>
+            <span class="tag gold">FANTASÍA</span>
+          </div>
+        </div>
+
+        <!-- Gothic -->
+        <div class="memory-card reveal" style="--memory-color: var(--accent-primary);">
+          <div class="memory-card-icon">⛏</div>
+          <div class="memory-card-body">
+            <h3 class="memory-card-title">Gothic</h3>
+            <p class="memory-card-desc">
+              Atrapado en una colonia penitenciaria mágica, sin mapa y con todo el mundo
+              queriendo matarte desde el minuto uno. Un RPG duro, inmersivo y con una
+              atmósfera única. El tipo de juego que se te queda grabado para siempre.
+            </p>
+          </div>
+          <div class="memory-card-footer">
+            <span class="tag">RPG</span>
+            <span class="tag">MUNDO ABIERTO</span>
+            <span class="tag">DIFÍCIL</span>
+          </div>
+        </div>
+
+        <!-- Skyrim -->
+        <div class="memory-card reveal" style="--memory-color: var(--accent-secondary);">
+          <div class="memory-card-icon">🐉</div>
+          <div class="memory-card-body">
+            <h3 class="memory-card-title">Skyrim (con mil mods)</h3>
+            <p class="memory-card-desc">
+              El Dovahkiin, los dragones y ese mundo abierto que podías explorar durante semanas.
+              Pero la versión real es la de mods: gráficos mejorados, nuevas quests, armas,
+              armaduras... convertir Skyrim en algo nuevo cada vez que lo instalas.
+            </p>
+          </div>
+          <div class="memory-card-footer">
+            <span class="tag pink">RPG</span>
+            <span class="tag pink">MUNDO ABIERTO</span>
+            <span class="tag pink">MODS</span>
+          </div>
+        </div>
+
+        <!-- LoL + DBD — link to esports -->
+        <div class="memory-card reveal" style="--memory-color: var(--accent-secondary);">
+          <div class="memory-card-icon">🏆</div>
+          <div class="memory-card-body">
+            <h3 class="memory-card-title">League of Legends · Dead by Daylight</h3>
+            <p class="memory-card-desc">
+              El capítulo final del PC gaming personal. Dos juegos muy diferentes que tuvieron
+              su momento. Ya no los juego — pero el competitivo de LoL y los parches de DBD
+              siguen siendo tema de conversación. La sección de Esports tiene toda la historia.
+            </p>
+          </div>
+          <div class="memory-card-footer">
+            <a href="esports.html" class="btn btn-small btn-pink" style="text-decoration:none;">🏆 VER ESPORTS</a>
+            <span class="tag pink">MOBA</span>
+            <span class="tag pink">HORROR</span>
+          </div>
+        </div>
+
+        <!-- StarCraft -->
+        <div class="memory-card reveal" style="--memory-color: var(--accent-tertiary);">
+          <div class="memory-card-icon">🛸</div>
+          <div class="memory-card-body">
+            <h3 class="memory-card-title">StarCraft</h3>
+            <p class="memory-card-desc">
+              Terran, Zerg o Protoss — cada carrera con su estilo, su curva de aprendizaje y
+              sus estrategias infinitas. El RTS que convirtió la estrategia en tiempo real en
+              un deporte y sentó las bases del gaming competitivo moderno.
+            </p>
+          </div>
+          <div class="memory-card-footer">
+            <span class="tag blue">ESTRATEGIA</span>
+            <span class="tag blue">RTS</span>
+            <span class="tag blue">COMPETITIVO</span>
+          </div>
+        </div>
+
+        <!-- Placeholder -->
+        <div class="more-games-hint reveal">
+          <strong>// MÁS JUEGOS POR AÑADIR</strong>
+          Fallout, Oblivion, Baldurs gate... la lista del PC es interminable. Esta sección crecerá con el tiempo.
+        </div>
+
+      </div><!-- /grid-3 home era -->
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ─── Footer ──────────────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="gamedev.html">GameDev</a></li>
+      <li><a href="gaming.html">Gaming</a></li>
+      <li><a href="esports.html">Esports</a></li>
+      <li><a href="got.html">GoT</a></li>
+      <li><a href="social.html">Social</a></li>
+      <li><a href="java.html">Java</a></li>
+    </ul>
+    <p>⚔ FREAKONIA — KARLETE</p>
+    <p style="color:#444;">HECHO CON AMOR PIXELADO Y DEMASIADAS BEBIDAS ENERGÉTICAS</p>
+    <p style="color:#333;">◄ INSERT COIN ►</p>
+
+    <div class="footer-legal">
+      <div class="pixel-divider"></div>
+      <p class="footer-copyright">
+        © 2025 FREAKONIA — KARLETE. ALL RIGHTS RESERVED.
+      </p>
+      <p class="footer-trademark">
+        FREAKONIA™ IS A REGISTERED PERSONAL BRAND.
+        ALL CONTENT, DESIGNS, GAME CONCEPTS AND ORIGINAL TEXTS
+        ON THIS SITE ARE THE EXCLUSIVE PROPERTY OF THEIR AUTHOR.
+        UNAUTHORIZED REPRODUCTION, DISTRIBUTION OR USE OF ANY
+        CONTENT IS STRICTLY PROHIBITED WITHOUT PRIOR WRITTEN PERMISSION.
+      </p>
+      <p class="footer-notice">
+        ⚠ THIS SITE CONTAINS STRONG OPINIONS ABOUT VIDEO GAMES,
+        FANTASY LORE AND BASKETBALL. READER DISCRETION IS ADVISED.
+        NO GOBLINS WERE HARMED IN THE MAKING OF THIS WEBSITE.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="js/main.js"></script>
+</body>
+</html>

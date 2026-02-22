@@ -1,0 +1,2205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Freakonia — Warhammer Fantasy. El Viejo Mundo, Bretonia, ediciones, ejércitos y la historia de una niña de 12 años con una caja de quinta edición." />
+  <title>Warhammer Fantasy — Freakonia</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+
+  <style>
+    /* ── Warhammer accent vars ── */
+    :root {
+      --wh-gold:  var(--accent-warn);
+      --wh-red:   #990000;
+      --glow-red: 0 0 8px #990000, 0 0 20px #990000;
+    }
+
+    /* ── Page header ── */
+    .page-header-warhammer {
+      background: var(--bg-surface);
+      border-bottom: 4px solid var(--accent-warn);
+      padding: var(--sp-7) 0 var(--sp-6);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header-warhammer::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(255,204,0,0.07) 0%, transparent 50%),
+        linear-gradient(225deg, rgba(153,0,0,0.06) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .page-header-warhammer::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%; height: 4px;
+      background: linear-gradient(90deg,
+        var(--accent-warn)  0%,
+        #cc4400             30%,
+        var(--accent-warn)  60%,
+        #cc4400             100%);
+    }
+
+    .page-header-warhammer .container { position: relative; z-index: 1; }
+
+    .page-header-pre {
+      font-family: var(--font-primary);
+      font-size: 0.5rem;
+      color: var(--accent-warn);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: var(--sp-3);
+    }
+
+    .page-header-title {
+      font-family: var(--font-primary);
+      font-size: clamp(1.2rem, 4vw, 2.2rem);
+      color: var(--text-bright);
+      text-shadow: var(--glow-gold);
+      margin-bottom: var(--sp-3);
+    }
+
+    .page-header-sub {
+      font-family: var(--font-secondary);
+      font-size: 22px;
+      color: var(--text-dim);
+      margin-bottom: 0;
+    }
+
+    /* ── Section label strip ── */
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-3);
+      font-family: var(--font-primary);
+      font-size: 0.55rem;
+      color: #000;
+      background: var(--accent-warn);
+      padding: var(--sp-2) var(--sp-4);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: var(--sp-5);
+    }
+
+    .section-label.red   { background: var(--wh-red);            color: #fff; }
+    .section-label.green { background: var(--accent-primary);    color: #000; }
+    .section-label.blue  { background: var(--accent-tertiary);   color: #000; }
+    .section-label.pink  { background: var(--accent-secondary);  color: #fff; }
+    .section-label.dim   { background: #333; color: var(--text-dim); }
+
+    /* ── Quote card ── */
+    .quote-card {
+      background: var(--bg-card);
+      border: var(--border-dim);
+      padding: var(--sp-5) var(--sp-6);
+      position: relative;
+      margin-bottom: var(--sp-5);
+    }
+
+    .quote-card::before {
+      content: '"';
+      position: absolute;
+      top: var(--sp-2);
+      left: var(--sp-4);
+      font-family: var(--font-secondary);
+      font-size: 5rem;
+      color: var(--accent-warn);
+      opacity: 0.15;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .quote-card p { font-size: 19px; line-height: 1.8; position: relative; z-index: 1; }
+
+    /* ── Section quick nav ── */
+    .section-quicknav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--sp-3);
+      margin: var(--sp-5) 0 var(--sp-6);
+    }
+
+    .section-quicknav a {
+      font-family: var(--font-primary);
+      font-size: 0.4rem;
+      color: var(--text-dim);
+      border: 2px solid #333;
+      padding: var(--sp-2) var(--sp-3);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
+      transition: color 0.1s, border-color 0.1s, box-shadow 0.1s;
+    }
+
+    .section-quicknav a:hover {
+      color: var(--accent-warn);
+      border-color: var(--accent-warn);
+      box-shadow: var(--glow-gold);
+    }
+
+    .section-quicknav a.red:hover {
+      color: #cc4400;
+      border-color: #cc4400;
+      box-shadow: 0 0 8px #cc4400, 0 0 20px #cc4400;
+    }
+
+    /* ── Era header ── */
+    .era-header {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-4);
+      margin: var(--sp-7) 0 var(--sp-5);
+      padding-bottom: var(--sp-3);
+      border-bottom: 2px solid #222;
+    }
+
+    .era-title {
+      font-family: var(--font-primary);
+      font-size: clamp(0.5rem, 1.5vw, 0.75rem);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      flex: 1;
+    }
+
+    .era-badge {
+      font-family: var(--font-primary);
+      font-size: 0.4rem;
+      color: var(--text-dim);
+      border: 1px solid #333;
+      padding: 3px 8px;
+      text-transform: uppercase;
+    }
+
+    /* ── Personal story card ── */
+    .personal-story {
+      background: var(--bg-card);
+      border: 4px solid var(--accent-warn);
+      box-shadow: 0 0 0 1px var(--accent-warn), var(--glow-gold);
+      padding: var(--sp-6);
+      position: relative;
+      overflow: hidden;
+      margin-bottom: var(--sp-6);
+    }
+
+    .personal-story::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,204,0,0.04) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .personal-story-header {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--sp-5);
+      position: relative;
+      z-index: 1;
+      margin-bottom: var(--sp-5);
+    }
+
+    .personal-story-icon {
+      font-size: 3.5rem;
+      line-height: 1;
+      filter: drop-shadow(0 0 10px var(--accent-warn));
+      flex-shrink: 0;
+    }
+
+    .personal-story-meta {}
+
+    .personal-story-label {
+      font-family: var(--font-primary);
+      font-size: 0.45rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      display: block;
+      margin-bottom: var(--sp-2);
+    }
+
+    .personal-story-title {
+      font-family: var(--font-primary);
+      font-size: clamp(0.7rem, 2.5vw, 1.1rem);
+      color: var(--accent-warn);
+      text-shadow: var(--glow-gold);
+      display: block;
+      margin-bottom: var(--sp-2);
+      line-height: 1.4;
+    }
+
+    .personal-story-date {
+      font-family: var(--font-secondary);
+      font-size: 19px;
+      color: var(--text-dim);
+    }
+
+    .personal-story-body {
+      position: relative;
+      z-index: 1;
+    }
+
+    .personal-story-body p {
+      font-family: var(--font-secondary);
+      font-size: 19px;
+      line-height: 1.8;
+      color: var(--text);
+    }
+
+    .personal-story-body p + p { margin-top: var(--sp-4); }
+
+    /* ── Personal story gallery ── */
+    .whf-gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0 2rem 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .whf-gallery-img-wrap {
+      display: flex;
+      flex-direction: column;
+      border: 4px solid var(--accent-warn);
+      box-shadow: 0 0 14px var(--accent-warn),
+                  0 0 28px rgba(255, 204, 0, 0.3);
+      overflow: hidden;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .whf-gallery-img-wrap:hover {
+      border-color: var(--accent-secondary);
+      box-shadow: 0 0 20px var(--accent-secondary),
+                  0 0 40px rgba(255, 0, 255, 0.3);
+    }
+
+    .whf-gallery-img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+    }
+
+    .whf-gallery-caption {
+      display: block;
+      font-family: var(--font-primary);
+      font-size: 0.45rem;
+      color: var(--accent-warn);
+      text-align: center;
+      padding: 0.5rem;
+      background: var(--bg-surface);
+      line-height: 1.5;
+    }
+
+    @media (max-width: 600px) {
+      .whf-gallery { grid-template-columns: 1fr; }
+      .whf-gallery-img { height: 220px; }
+    }
+
+    /* ── Edition card ── */
+    .edition-card {
+      background: var(--bg-card);
+      border: 2px solid #252525;
+      overflow: hidden;
+      transition: border-color 0.15s, box-shadow 0.15s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .edition-card:hover {
+      border-color: var(--ed-color, var(--accent-warn));
+      box-shadow: 0 0 0 1px var(--ed-color, var(--accent-warn)),
+                  0 0 8px  var(--ed-color, var(--accent-warn)),
+                  0 0 20px var(--ed-color, var(--accent-warn));
+    }
+
+    .edition-card.featured {
+      border: 3px solid var(--accent-warn);
+      box-shadow: 0 0 0 1px var(--accent-warn), var(--glow-gold);
+    }
+
+    .edition-card-header {
+      background: var(--bg-surface);
+      border-bottom: 2px solid #252525;
+      padding: var(--sp-4) var(--sp-5);
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: var(--sp-3);
+      flex-wrap: wrap;
+    }
+
+    .edition-card:hover .edition-card-header,
+    .edition-card.featured .edition-card-header {
+      border-bottom-color: var(--ed-color, var(--accent-warn));
+    }
+
+    .edition-num {
+      font-family: var(--font-primary);
+      font-size: clamp(1rem, 3vw, 1.6rem);
+      color: var(--accent-warn);
+      text-shadow: var(--glow-gold);
+      line-height: 1;
+    }
+
+    .edition-year {
+      font-family: var(--font-secondary);
+      font-size: 18px;
+      color: var(--text-dim);
+    }
+
+    .edition-name {
+      font-family: var(--font-primary);
+      font-size: clamp(0.4rem, 1.2vw, 0.58rem);
+      color: var(--text-bright);
+      line-height: 1.5;
+      margin-top: var(--sp-2);
+    }
+
+    .edition-box-tag {
+      font-family: var(--font-primary);
+      font-size: 0.38rem;
+      padding: 3px 8px;
+      border: 1px solid #444;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+      align-self: flex-start;
+    }
+
+    .edition-card-body {
+      padding: var(--sp-4) var(--sp-5);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-4);
+    }
+
+    .edition-sub { border-left: 3px solid #2a2a2a; padding-left: var(--sp-4); }
+
+    .edition-sub-label {
+      font-family: var(--font-primary);
+      font-size: 0.42rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      display: block;
+      margin-bottom: var(--sp-2);
+    }
+
+    .edition-sub-label.gold  { color: var(--accent-warn);      }
+    .edition-sub-label.red   { color: #cc4400;                 }
+    .edition-sub-label.blue  { color: var(--accent-tertiary);  }
+    .edition-sub-label.green { color: var(--accent-primary);   }
+    .edition-sub-label.pink  { color: var(--accent-secondary); }
+
+    .edition-sub p { font-size: 16px; line-height: 1.6; margin: 0; }
+
+    /* ── Highlight box ── */
+    .highlight-box {
+      background: var(--bg-surface);
+      border: 2px solid var(--accent-warn);
+      padding: var(--sp-3) var(--sp-4);
+      margin-top: var(--sp-1);
+    }
+
+    .highlight-box-label {
+      font-family: var(--font-primary);
+      font-size: 0.4rem;
+      color: var(--accent-warn);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      display: block;
+      margin-bottom: var(--sp-1);
+    }
+
+    .highlight-box-title {
+      font-family: var(--font-primary);
+      font-size: 0.5rem;
+      color: var(--text-bright);
+      display: block;
+      margin-bottom: var(--sp-1);
+      line-height: 1.5;
+    }
+
+    .highlight-box-detail {
+      font-family: var(--font-secondary);
+      font-size: 15px;
+      color: var(--text-dim);
+      margin: 0;
+    }
+
+    /* ── End Times box (dramatic red) ── */
+    .endtimes-box {
+      background: var(--bg-card);
+      border: 4px solid var(--wh-red);
+      box-shadow: 0 0 0 1px var(--wh-red), var(--glow-red);
+      padding: var(--sp-5) var(--sp-6);
+      position: relative;
+      overflow: hidden;
+      margin-bottom: var(--sp-5);
+    }
+
+    .endtimes-box::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(153,0,0,0.07) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .endtimes-box-title {
+      font-family: var(--font-primary);
+      font-size: clamp(0.6rem, 2vw, 1rem);
+      color: var(--wh-red);
+      text-shadow: var(--glow-red);
+      display: block;
+      margin-bottom: var(--sp-4);
+      position: relative;
+      z-index: 1;
+    }
+
+    .endtimes-box p {
+      font-family: var(--font-secondary);
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--text);
+      position: relative;
+      z-index: 1;
+    }
+
+    .endtimes-box p + p { margin-top: var(--sp-3); }
+
+    /* ── End Times chronicle cards ── */
+    .chronicle-card {
+      background: var(--bg-card);
+      border: 2px solid #2a1a1a;
+      overflow: hidden;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    .chronicle-card:hover {
+      border-color: var(--wh-red);
+      box-shadow: 0 0 0 1px var(--wh-red), var(--glow-red);
+    }
+
+    .chronicle-card-header {
+      background: rgba(153,0,0,0.08);
+      border-bottom: 2px solid #2a1a1a;
+      padding: var(--sp-3) var(--sp-4);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--sp-2);
+    }
+
+    .chronicle-num {
+      font-family: var(--font-primary);
+      font-size: 0.7rem;
+      color: var(--wh-red);
+      text-shadow: var(--glow-red);
+    }
+
+    .chronicle-title {
+      font-family: var(--font-primary);
+      font-size: 0.42rem;
+      color: var(--text-bright);
+      line-height: 1.4;
+    }
+
+    .chronicle-card-body {
+      padding: var(--sp-3) var(--sp-4);
+    }
+
+    .chronicle-card-body p {
+      font-family: var(--font-secondary);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-dim);
+    }
+
+    /* ── Army card ── */
+    .army-card {
+      background: var(--bg-card);
+      border: 2px solid #252525;
+      overflow: hidden;
+      transition: border-color 0.15s, box-shadow 0.15s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .army-card:hover {
+      border-color: var(--army-color, var(--accent-warn));
+      box-shadow: 0 0 0 1px var(--army-color, var(--accent-warn)),
+                  0 0 8px  var(--army-color, var(--accent-warn)),
+                  0 0 20px var(--army-color, var(--accent-warn));
+    }
+
+    /* Bretonnia featured */
+    .army-card.my-army {
+      border: 2px solid var(--accent-warn);
+      box-shadow: 0 0 0 1px var(--accent-warn);
+    }
+
+    .army-card-header {
+      background: var(--bg-surface);
+      border-bottom: 2px solid #252525;
+      padding: var(--sp-3) var(--sp-4);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--sp-2);
+      flex-wrap: wrap;
+    }
+
+    .army-card:hover .army-card-header {
+      border-bottom-color: var(--army-color, var(--accent-warn));
+    }
+
+    .army-card.my-army .army-card-header {
+      border-bottom-color: var(--accent-warn);
+      background: rgba(255,204,0,0.05);
+    }
+
+    .army-name {
+      font-family: var(--font-primary);
+      font-size: 0.44rem;
+      color: var(--text-bright);
+      line-height: 1.4;
+    }
+
+    .army-alignment {
+      font-family: var(--font-primary);
+      font-size: 0.34rem;
+      padding: 2px 6px;
+      border: 1px solid #333;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .army-alignment.order   { border-color: var(--accent-tertiary); color: var(--accent-tertiary); }
+    .army-alignment.chaos   { border-color: #cc4400;               color: #cc4400; }
+    .army-alignment.death   { border-color: var(--accent-primary);  color: var(--accent-primary);  }
+    .army-alignment.destruct{ border-color: var(--accent-secondary);color: var(--accent-secondary);}
+    .army-alignment.neutral { border-color: #555; color: #999; }
+    .army-alignment.mine    { border-color: var(--accent-warn); color: var(--accent-warn); background: rgba(255,204,0,0.08); }
+
+    .army-card-body {
+      padding: var(--sp-3) var(--sp-4);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-3);
+    }
+
+    /* ── Army card images ── */
+    .army-img-container {
+      width: 100%;
+      margin: 0.25rem 0 0.25rem 0;
+      border: 4px solid var(--accent-primary);
+      overflow: hidden;
+    }
+
+    .army-card:hover .army-img-container {
+      border-color: var(--army-color, var(--accent-warn));
+    }
+
+    .army-card.my-army .army-img-container {
+      border-color: var(--accent-warn);
+    }
+
+    .army-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+      image-rendering: auto;
+    }
+
+    @media (max-width: 768px) {
+      .army-img { height: 150px; }
+    }
+
+    /* ── Per-army object-position overrides ── */
+    [data-army="bretonia"]       .army-img { object-position: center 30%; }
+    [data-army="imperio"]        .army-img { object-position: center bottom; }
+    [data-army="enanos"]         .army-img { object-position: center bottom; }
+    [data-army="altos-elfos"]    .army-img { object-position: center center; }
+    [data-army="elfos-silvanos"] .army-img { object-position: center center; }
+    [data-army="hombres-lagarto"].army-img { object-position: center bottom; }
+    [data-army="guerreros-caos"] .army-img { object-position: center center; }
+    [data-army="demonios-caos"]  .army-img { object-position: center center; }
+    [data-army="bestias-caos"]   .army-img { object-position: center center; }
+    [data-army="elfos-oscuros"]  .army-img { object-position: center center; }
+    [data-army="enanos-caos"]    .army-img { object-position: center center; }
+    [data-army="skavens"]        .army-img { object-position: center bottom; }
+    [data-army="condes-vampiro"] .army-img { object-position: center center; }
+    [data-army="reyes-funerarios"].army-img{ object-position: center center; }
+    [data-army="orcos"]          .army-img { object-position: center center; }
+    [data-army="reinos-ogros"]   .army-img { object-position: center center; }
+
+    .army-desc {
+      font-family: var(--font-secondary);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text);
+      flex: 1;
+    }
+
+    .army-units { display: flex; flex-wrap: wrap; gap: 4px; }
+
+    .army-unit-tag {
+      font-family: var(--font-primary);
+      font-size: 0.32rem;
+      padding: 2px 5px;
+      border: 1px solid #2a2a2a;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Lore box ── */
+    .lore-box {
+      background: var(--bg-card);
+      border: 2px solid #2a2a2a;
+      padding: var(--sp-5);
+    }
+
+    .lore-box-title {
+      font-family: var(--font-primary);
+      font-size: 0.5rem;
+      color: var(--accent-warn);
+      text-shadow: var(--glow-gold);
+      margin-bottom: var(--sp-4);
+      display: block;
+    }
+
+    .lore-box p {
+      font-family: var(--font-secondary);
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--text);
+    }
+
+    .lore-box p + p { margin-top: var(--sp-3); }
+
+    /* ── Old World revival box ── */
+    .oldworld-box {
+      background: var(--bg-card);
+      border: 4px solid var(--accent-tertiary);
+      box-shadow: 0 0 0 1px var(--accent-tertiary), var(--glow-blue);
+      padding: var(--sp-5) var(--sp-6);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .oldworld-box::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,191,255,0.04) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .oldworld-box p {
+      font-family: var(--font-secondary);
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--text);
+      position: relative;
+      z-index: 1;
+    }
+
+    .oldworld-box p + p { margin-top: var(--sp-3); }
+
+    /* ── Army group header ── */
+    .army-group-header {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-3);
+      margin: var(--sp-6) 0 var(--sp-4);
+      padding-bottom: var(--sp-2);
+      border-bottom: 1px solid #1e1e1e;
+    }
+
+    .army-group-title {
+      font-family: var(--font-primary);
+      font-size: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .personal-story-header { flex-direction: column; gap: var(--sp-3); }
+      .personal-story-icon { font-size: 2.5rem; }
+    }
+
+    @media (max-width: 640px) {
+      .personal-story { padding: var(--sp-4); }
+      .edition-card-body { padding: var(--sp-3) var(--sp-4); }
+      .endtimes-box { padding: var(--sp-4); }
+      .quote-card { padding: var(--sp-4); }
+    }
+
+    /* ── Footer legal ── */
+    .footer-legal {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+    .footer-copyright {
+      font-family: var(--font-primary);
+      font-size: 0.4rem;
+      color: var(--accent-primary);
+      margin-bottom: 0.8rem;
+    }
+    .footer-trademark {
+      font-family: var(--font-secondary);
+      font-size: 14px;
+      color: #555;
+      line-height: 1.5;
+      margin-bottom: 0.5rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .footer-notice {
+      font-family: var(--font-secondary);
+      font-size: 14px;
+      color: #444;
+      line-height: 1.5;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ── Section images ── */
+    .whf-section-img-wrap {
+      width: 100%;
+      margin: 1.5rem 0 2.5rem 0;
+      border: 4px solid;
+      overflow: hidden;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .whf-section-img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .whf-section-img-wrap:hover .whf-section-img {
+      transform: scale(1.02);
+    }
+
+    /* Ediciones — var(--accent-warn) gold #ffcc00 */
+    .whf-img-ediciones {
+      border-color: var(--accent-warn);
+      box-shadow: 0 0 16px var(--accent-warn),
+                  0 0 32px rgba(255, 204, 0, 0.30);
+    }
+
+    .whf-img-ediciones:hover {
+      border-color: #ffe066;
+      box-shadow: 0 0 24px #ffe066,
+                  0 0 48px rgba(255, 224, 102, 0.40);
+    }
+
+    /* End Times — var(--wh-red) #990000 */
+    .whf-img-endtimes {
+      border-color: var(--wh-red);
+      box-shadow: 0 0 16px #990000,
+                  0 0 32px rgba(153, 0, 0, 0.30);
+    }
+
+    .whf-img-endtimes:hover {
+      border-color: #cc0000;
+      box-shadow: 0 0 24px #cc0000,
+                  0 0 48px rgba(204, 0, 0, 0.40);
+    }
+
+    /* Old World — var(--accent-tertiary) #00bfff */
+    .whf-img-oldworld {
+      border-color: var(--accent-tertiary);
+      box-shadow: 0 0 16px var(--accent-tertiary),
+                  0 0 32px rgba(0, 191, 255, 0.30);
+    }
+
+    .whf-img-oldworld:hover {
+      border-color: #66d9ff;
+      box-shadow: 0 0 24px #66d9ff,
+                  0 0 48px rgba(102, 217, 255, 0.40);
+    }
+
+    @media (max-width: 768px) {
+      .whf-section-img { height: 220px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- CRT overlay -->
+<div class="crt-overlay" aria-hidden="true"></div>
+
+<!-- ─── Navigation ─────────────────────────────────────────────────────── -->
+<nav class="navbar" role="navigation" aria-label="Navegación principal">
+  <div class="container">
+    <a href="index.html" class="nav-brand">⚔ FREAKONIA</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">▼ MENU</button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html"     class="nav-link">🏠 Inicio</a></li>
+      <li><a href="gamedev.html"   class="nav-link">🎮 GameDev</a></li>
+      <li><a href="gaming.html"    class="nav-link">🕹 Gaming</a></li>
+      <li><a href="esports.html"   class="nav-link">🏆 Esports</a></li>
+      <li><a href="got.html"       class="nav-link">🐉 GoT</a></li>
+      <li><a href="warhammer.html" class="nav-link active">⚙ Warhammer</a></li>
+      <li><a href="magic.html"     class="nav-link">✨ MtG</a></li>
+      <li><a href="rol.html"       class="nav-link">🎲 Rol</a></li>
+      <li><a href="nba.html"       class="nav-link">🏀 NBA</a></li>
+      <li><a href="java.html"      class="nav-link">☕ Java</a></li>
+      <li><a href="social.html"    class="nav-link">📡 Social</a></li>
+      <li><a href="news.html"      class="nav-link">📰 News</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ─── Page Header ─────────────────────────────────────────────────────── -->
+<header class="page-header-warhammer">
+  <div class="container">
+    <p class="page-header-pre">// THE OLD WORLD NEVER TRULY DIES</p>
+    <h1 class="page-header-title">⚔ WARHAMMER FANTASY</h1>
+    <p class="page-header-sub">Warhammer Fantasy Battle · El Viejo Mundo · 1983–2015 · 2024</p>
+  </div>
+</header>
+
+<main>
+
+  <!-- ─── Stats overview ──────────────────────────────────────────────── -->
+  <section class="section" style="padding-top: var(--sp-7); padding-bottom: var(--sp-5);">
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">1983</span>
+          <span class="stat-label">Primer Lanzamiento</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value">8</span>
+          <span class="stat-label">Ediciones Oficiales</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--accent-tertiary);text-shadow:var(--glow-blue);">16+</span>
+          <span class="stat-label">Ejércitos del Viejo Mundo</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">1996</span>
+          <span class="stat-label">Karlete Empieza · 12 Años</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ─── Quick nav ────────────────────────────────────────────────────── -->
+  <section class="section" style="padding-top: var(--sp-5); padding-bottom: var(--sp-4);">
+    <div class="container">
+      <nav class="section-quicknav" aria-label="Saltar a sección">
+        <span style="font-family:var(--font-primary);font-size:0.4rem;color:var(--text-dim);align-self:center;">▶ IR A:</span>
+        <a href="#historia">⚔ Mi Historia</a>
+        <a href="#bretonia">🛡 Bretonia</a>
+        <a href="#ediciones">📖 Ediciones</a>
+        <a href="#ejercitos">⚔ Los Ejércitos</a>
+        <a href="#fin-tiempos" class="red">💀 El Fin</a>
+        <a href="#old-world">🌍 The Old World</a>
+      </nav>
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 1 — MI HISTORIA CON WARHAMMER
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="historia" style="padding-top: var(--sp-7);">
+    <div class="container">
+
+      <div class="section-label">⚔ MI HISTORIA CON WARHAMMER FANTASY</div>
+      <h2 class="section-title" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">1996 — UNA CAJA QUE LO CAMBIÓ TODO</h2>
+
+      <!-- Big personal story card -->
+      <div class="personal-story reveal" id="historia-card">
+        <div class="personal-story-header">
+          <div class="personal-story-icon">🛡</div>
+          <div class="personal-story-meta">
+            <span class="personal-story-label">▶ KARLETE — INICIO EN EL HOBBY</span>
+            <span class="personal-story-title">QUINTA EDICIÓN · BRETONIA · 12 AÑOS</span>
+            <span class="personal-story-date">1996 — Quinta Edición de Warhammer Fantasy Battle</span>
+          </div>
+        </div>
+
+        <div class="whf-gallery">
+          <div class="whf-gallery-img-wrap">
+            <img
+              src="assets/img/warhammer_caja_quinta_edicion.jpg"
+              alt="Caja Quinta Edición Warhammer Fantasy Battle 1996"
+              class="whf-gallery-img"
+            >
+            <span class="whf-gallery-caption">Quinta Edición — 1996</span>
+          </div>
+          <div class="whf-gallery-img-wrap">
+            <img
+              src="assets/img/miniaturas_caja.jpg"
+              alt="Miniaturas incluidas en la caja de Quinta Edición"
+              class="whf-gallery-img"
+            >
+            <span class="whf-gallery-caption">Las miniaturas de la caja</span>
+          </div>
+        </div>
+
+        <div class="personal-story-body">
+          <p>
+            En 1996, con 12 años recién cumplidos, entré por primera vez en una tienda de juegos de rol y
+            tablero. En el escaparate había una caja enorme con una ilustración épica en la portada: caballeros
+            medievales con lanzas en ristre cargando contra criaturas reptilianas enormes en un campo de batalla
+            lleno de color y detalles. Era la <strong>Quinta Edición de Warhammer Fantasy Battle</strong>. La compré.
+            Y esa fue, sin exageración, una de las mejores decisiones de mi infancia.
+          </p>
+          <p>
+            La caja traía dos ejércitos completos: <strong>Bretonia</strong> y <strong>Hombres Lagarto</strong>.
+            Tenía un amigo que también se había interesado en el juego — lo convencí a él también — así que tomamos
+            la decisión más lógica del mundo: yo me quedaría con todos los Bretonianos y él con todos los Hombres
+            Lagarto. Intercambiamos las miniaturas del bando contrario de nuestras respectivas cajas: yo le daba
+            mis Hombres Lagarto, él me daba sus Bretonianos. De repente, sin gastar más dinero, los dos teníamos
+            un ejército inicial completo de un solo bando. Sin ejércitos divididos, sin fracciones mezcladas:
+            <strong>ejército puro desde el primer día</strong>.
+          </p>
+          <p>
+            Con el tiempo ambos fuimos ampliando nuestras colecciones. Blister a blister, caja a caja, con
+            la paga semanal y los regalos de cumpleaños. Yo añadí más caballería — Caballeros del Grial,
+            Caballeros Andantes, Pegasos Celestiales — y él construyó un ejército de Hombres Lagarto que
+            con el tiempo llegó a ser formidable: bloques de Guerreros Saurus como yunque, Skinks hostigando
+            los flancos, Kroxigor como martillo en el cuerpo a cuerpo. Nuestras batallas eran épicas
+            a escala de infancia: mesitas de la sala de estar como tableros de juego, libros como colinas,
+            cajas de cartón como edificios, y horas y horas de tirar dados y discutir reglas que ninguno
+            de los dos entendía del todo bien.
+          </p>
+          <p>
+            Y luego llegó la parte más difícil y más satisfactoria: <strong>pintar las miniaturas</strong>.
+            Un niño de 12 años armado con un pincel de maquillaje de su madre, pinturas Citadel en botes
+            que tardaban siglos en abrirse bien, y sin la menor idea de lo que era el sombreado o el lavado.
+            Los primeros caballeros tenían capas planas de color sin sombreado ninguno, colores que a veces
+            no pegaban entre sí, y una base de cola blanca que se despegaba al mes siguiente. No importaba.
+            Eran mis caballeros. En mi cabeza eran perfectos, y en el tablero hacían lo que se suponía
+            que debían hacer: <em>cargar contra todo lo que se moviese</em>.
+          </p>
+          <p>
+            Warhammer Fantasy no era solo un juego. Era un hobby con cuatro capas distintas, cada una con
+            su propio placer y su propio nivel de dedicación. <strong>Coleccionar</strong> — la búsqueda
+            permanente de la miniatura perfecta que completase la unidad. <strong>Construir y preparar</strong> —
+            limpiar rebabas con bisturí, ensamblar con pegamento de plástico, rellenar juntas con
+            <em>green stuff</em>. <strong>Pintar</strong> — con una paciencia que de adulta ya no tengo pero que
+            entonces me absorbía durante horas. Y finalmente <strong>jugar</strong> — las partidas que a veces
+            duraban toda una tarde de sábado, con el reglamento en la mesa, el medidor de distancias en mano,
+            y la eterna discusión sobre si esa unidad llegaba al flanco o no.
+          </p>
+          <p>
+            Warhammer Fantasy Battle fue el hobby que me enseñó a tener paciencia, a pensar estratégicamente,
+            a leer reglamentos de 200 páginas con doce años, y a pasar horas haciendo algo con las manos que
+            tenía valor solo para mí. No muchos niños de mi edad tenían ese hobby. Eso también me gustaba.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bretonia deep dive -->
+      <div id="bretonia" class="era-header">
+        <h3 class="era-title" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">🛡 BRETONIA — MI EJÉRCITO DE TODA LA VIDA</h3>
+        <span class="era-badge">CABALLERÍA · DAMA DEL LAGO · HONOR</span>
+      </div>
+
+      <div class="reveal" style="margin-bottom: var(--sp-6);">
+        <img
+          src="assets/img/Bretonnia_background.JPG"
+          alt="Bretonia — Caballeros del Viejo Mundo"
+          style="width:100%; display:block; border: 4px solid var(--accent-warn); box-shadow: 0 0 0 1px var(--accent-warn), var(--glow-gold);"
+        />
+      </div>
+
+      <div class="grid-2 stagger">
+
+        <div class="lore-box reveal">
+          <span class="lore-box-title">🐴 LA ESENCIA DE BRETONIA</span>
+          <p>Bretonia es el ejército más romántico de todo Warhammer Fantasy Battle. Inspirado directamente
+          en la Francia medieval y las leyendas artúricas, su filosofía es sencilla: la caballería es la
+          nación. Los caballeros bretonianos son lo más parecido a un guerrero perfecto que el Viejo Mundo
+          puede producir — entrenados desde niños en la equitación y el combate, vinculados por el Código
+          de Caballería, y en última instancia buscadores del favor de la Dama del Lago.</p>
+          <p>La estructura social es feudal al extremo: duques, barones y caballeros forman la élite
+          combatiente, mientras que los campesinos — hombres de armas y arqueros — sirven de apoyo y
+          escudo humano. En juego, Bretonia funciona exactamente como suena: la caballería pesada es
+          el arma de victoria, los campesinos son el anvil que fija al enemigo, y los movimientos de
+          flanqueo ganan las partidas.</p>
+        </div>
+
+        <div class="lore-box reveal">
+          <span class="lore-box-title">⚔ LAS UNIDADES ICÓNICAS</span>
+          <p><strong>Caballeros Andantes</strong> — la caballería joven y poco disciplinada que carga sin
+          pensar. Mi unidad favorita estéticamente, con sus capas de colores brillantes y sus escudos
+          con heráldica pintada a mano. <strong>Caballeros del Reino</strong> — la espina dorsal,
+          caballería probada en batalla. <strong>Caballeros del Grial</strong> — lo mejor del ejército,
+          veteranos que completaron la Búsqueda del Grial y fueron bendecidos por la Dama. Sus stats
+          son los mejores de toda la caballería del Viejo Mundo.</p>
+          <p><strong>Pegasos Celestiales</strong> — la fantasía pura hecha miniatura: caballería voladora
+          montada en caballos alados. Para un niño de 12 años, ver esa miniatura en la vitrina de la tienda
+          y saber que podía tenerla en su ejército era exactamente el tipo de motivación que mantenía el hobby
+          vivo. También: <strong>Trebuchet de Bretonia</strong>, la artillería más volátil y divertida del
+          juego — podía destrozar una unidad entera o matar a tu propio general.</p>
+        </div>
+
+        <div class="lore-box reveal">
+          <span class="lore-box-title">📜 EL CÓDIGO DE CABALLERÍA</span>
+          <p>La mecánica única de Bretonia era el Código de Caballería — un sistema de virtudes caballerescas
+          que los personajes podían adoptar. Virtud del Heroísmo, Virtud de la Nobleza de Espíritu,
+          Virtud del Estoicismo... cada una daba bonificaciones en reglas concretas del juego, pero
+          también representaba una forma de jugar. Los caballeros de Bretonia no disparan con arcos
+          (es deshonroso), no huyen de un combate cuerpo a cuerpo iniciado por ellos, y siempre
+          intentan retarse mutuamente antes de la batalla.</p>
+          <p>Era un ejército con personalidad propia, con restricciones que lo hacían diferente a los demás
+          y que te obligaban a jugar de una manera específica. No podías simplemente copiar una lista de
+          tournament y ganar. Bretonia requería creatividad táctica y un cierto romanticismo a la hora
+          de construir el ejército. Eso era exactamente lo que me gustaba de él.</p>
+        </div>
+
+        <div class="lore-box reveal">
+          <span class="lore-box-title">🌸 LA DAMA DEL LAGO</span>
+          <p>La religión central de Bretonia es el culto a la Dama del Lago — un ser sobrenatural (posiblemente
+          un Elemental del Caos de la Luz, posiblemente una Elfa Silvana, posiblemente algo completamente
+          distinto; la ambigüedad es intencional) que otorga su favor a los caballeros más virtuosos.
+          Las Damiselas y Prophetesses son sus sacerdotisas y las magas del ejército, canalizando su poder
+          divino en forma de spells defensivos y de apoyo.</p>
+          <p>La Búsqueda del Grial es el viaje definitivo de todo caballero Bretoniano: abandonar sus tierras
+          y viajar por el mundo buscando el Grial Sagrado. La mayoría nunca vuelve. Los pocos que regresan
+          con él se convierten en Caballeros del Grial, prácticamente inmortales, con los ojos que brillan
+          con la luz de la Dama. Es la mitología artúrica reinterpretada con el sabor oscuro único del
+          Viejo Mundo. Perfecta.</p>
+        </div>
+
+      </div><!-- /grid bretonia -->
+
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 2 — LAS EDICIONES
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="ediciones" style="padding-top: var(--sp-7);">
+    <div class="container">
+
+      <div class="section-label">📖 LAS EDICIONES DE WARHAMMER FANTASY BATTLE</div>
+      <h2 class="section-title" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">8 EDICIONES · 32 AÑOS DE HISTORIA</h2>
+
+      <div class="quote-card reveal">
+        <p>
+          Warhammer Fantasy Battle no fue siempre el mismo juego. En 32 años de historia pasó por ocho
+          ediciones oficiales, cada una reformando reglas, añadiendo razas, cambiando la escala del conflicto
+          y refinando una ambientación que se fue haciendo más rica y oscura con cada iteración.
+          Desde el pequeño manual de 1983 que mezclaba rol y wargame, hasta el monstruo de 8ª edición
+          con sus vientos de magia y sus monstruos de plástico gigantes. <strong>Cada edición tuvo sus fans
+          devotos, sus críticas, y sus momentos que definieron la mesa de batalla de toda una generación.</strong>
+        </p>
+      </div>
+
+      <div class="whf-section-img-wrap whf-img-ediciones reveal">
+        <img
+          src="assets/img/warhammer_partida_1.jpg"
+          alt="Partida de Warhammer Fantasy Battle — Las Ediciones"
+          class="whf-section-img"
+        >
+      </div>
+
+      <!-- Pre-historia compact -->
+      <div class="era-header">
+        <h3 class="era-title" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">📜 LA PREHISTORIA — EDICIONES 1ª A 4ª</h3>
+        <span class="era-badge">1983 – 1992</span>
+      </div>
+
+      <div class="grid-2 stagger">
+
+        <div class="lore-box reveal">
+          <span class="lore-box-title">⚙ 1ª Y 2ª EDICIÓN · 1983 – 1984</span>
+          <p>Warhammer nació en 1983 de la mano de Games Workshop como un híbrido extraño entre
+          wargame miniatura y juego de rol. El libro original —<em>Warhammer: The Mass Combat Fantasy
+          Role-playing Game</em>— era un manual delgado, denso y experimental que mezclaba reglas de combate
+          masivo con mecánicas de rol al estilo de los juegos de la época.</p>
+          <p>La segunda edición (1984) refinó las reglas básicas pero mantuvo la naturaleza híbrida del
+          juego. El mundo de Warhammer empezaba a tomar forma: el Viejo Mundo como continente medieval,
+          el Imperio como nación humana central, los elfos, enanos y las fuerzas del Caos como los
+          primeros grandes bandos. Pocas miniaturas, muchas reglas en construcción, y la energía de algo
+          que todavía no sabía exactamente lo que quería ser.</p>
+        </div>
+
+        <div class="lore-box reveal">
+          <span class="lore-box-title">⚙ 3ª Y 4ª EDICIÓN · 1987 – 1992</span>
+          <p>La 3ª Edición (1987) fue la primera realmente reconocible como Warhammer moderno. Tres tomos,
+          reglas detalladas para ejércitos completos, los primeros <em>Regiments of Renown</em> (unidades
+          mercenarias con nombre y trasfondo propio), y una escala de complejidad que hoy sería considerada
+          brutal para un juego de miniaturas. Era un juego para adultos dedicados, con tablas para todo
+          y modificadores para cada situación.</p>
+          <p>La 4ª Edición (1992) simplificó radicalmente la estructura y estableció el formato que perduraría
+          durante décadas: <strong>Army Books individuales por ejército</strong>, caja de inicio con dos
+          ejércitos (Altos Elfos contra Goblins), y un sistema de juego por fases mucho más claro.
+          Las miniaturas de plástico empezaron a dominar las cajas de inicio. El hobby se hacía
+          más accesible — y Games Workshop lo sabía.</p>
+        </div>
+
+      </div>
+
+      <!-- Quinta edición FEATURED -->
+      <div class="era-header" style="margin-top: var(--sp-7);">
+        <h3 class="era-title" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">⭐ 5ª EDICIÓN — LA MÍA</h3>
+        <span class="era-badge">1996 – 2000</span>
+      </div>
+
+      <div class="edition-card featured reveal" id="ed5" style="--ed-color: var(--accent-warn);">
+        <div class="edition-card-header">
+          <div>
+            <span class="edition-num">5ª</span>
+            <span class="edition-year"> · 1996</span>
+            <div class="edition-name">QUINTA EDICIÓN — EL RENACIMIENTO</div>
+            <div style="margin-top:var(--sp-2);">
+              <span class="tag gold">⭐ MI EDICIÓN</span>
+              <span class="tag" style="margin-left:var(--sp-2);">BRETONIA vs HOMBRES LAGARTO</span>
+            </div>
+          </div>
+          <span class="edition-box-tag">Caja Inicio: Bretonia / Lizardmen</span>
+        </div>
+        <div class="edition-card-body">
+
+          <div class="edition-sub">
+            <span class="edition-sub-label gold">▶ LA CAJA QUE LO CAMBIÓ TODO</span>
+            <p>La Quinta Edición llegó en 1996 con una de las cajas de inicio más icónicas de toda la historia
+            del hobby. Por primera vez, los dos ejércitos del starter eran <strong>completamente diferentes en
+            estilo y estética</strong>: la caballería caballeresca de Bretonia frente a los reptilianos
+            guerreros Saurus de los Hombres Lagarto. Un contraste visual perfecto. Fue esa caja la que
+            me introdujo en el hobby — y la que definió mi ejército para siempre.</p>
+          </div>
+
+          <div class="edition-sub">
+            <span class="edition-sub-label gold">▶ NOVEDADES CLAVE DE LA EDICIÓN</span>
+            <p>La Quinta Edición formalizó el sistema de Army Books individuales para cada ejército,
+            estableció el <strong>Mago como unidad dedicada con su propia fase</strong> de magia (con las
+            icónicas cartas de conjuro en lugar de los dados de ediciones posteriores — literal cartas
+            de cartón que podías jugar como un TCG primitivo), refinó la tabla de heridas y resistencia
+            que persiste hasta hoy, y dio a Bretonia y los Hombres Lagarto sus primeros libros de ejército
+            propios con reglas únicas. La estética artística de esta edición es puro John Blanche y los
+            ilustradores de los 90 de GW — oscura, detallada, medieval y fantástica a partes iguales.</p>
+          </div>
+
+          <div class="edition-sub">
+            <span class="edition-sub-label blue">▶ EL SISTEMA DE MAGIA CON CARTAS</span>
+            <p>Uno de los elementos más recordados y queridos de la 5ª edición fue el sistema de magia
+            basado en <strong>mazos de cartas físicas</strong>. Cada ejército tenía acceso a diferentes
+            lores de magia, y los conjuros se lanzaban jugando cartas de tu mazo. El mago contrario podía
+            contrarrestar con sus propias cartas de disipación. Era casi un juego dentro del juego —
+            con la colección de cartas añadiendo otra capa de hobby. Las cartas tenían ilustraciones únicas
+            y eran en sí mismas objetos coleccionables. Un sistema que ediciones posteriores abandonaron
+            en favor de dados, perdiendo parte de esa magia táctil.</p>
+          </div>
+
+          <div class="highlight-box">
+            <span class="highlight-box-label">⭐ RECUERDO PERSONAL</span>
+            <span class="highlight-box-title">La primera partida — Sala de estar convertida en campo de batalla</span>
+            <p class="highlight-box-detail">Mi amigo y yo tardamos una semana en leer el reglamento. La primera
+            partida duró cinco horas, con el manual abierto en la página de turno de magia durante veinte
+            minutos porque ninguno de los dos entendía cómo funcionaba. Mis caballeros cargaron, él los
+            esperó con sus Saurus, y nos aplastó. Fue el mejor momento del año.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Grid de ediciones 6ª-8ª -->
+      <div class="era-header" style="margin-top: var(--sp-7);">
+        <h3 class="era-title" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">📖 LAS EDICIONES POSTERIORES — 6ª A 8ª</h3>
+        <span class="era-badge">2000 – 2014</span>
+      </div>
+
+      <div class="grid-2 stagger">
+
+        <!-- ── 6ª Edición ── -->
+        <div class="edition-card reveal" id="ed6" style="--ed-color: var(--accent-tertiary);">
+          <div class="edition-card-header">
+            <div>
+              <span class="edition-num" style="color:var(--accent-tertiary);text-shadow:var(--glow-blue);">6ª</span>
+              <span class="edition-year"> · 2000</span>
+              <div class="edition-name">SEXTA EDICIÓN — EL REEQUILIBRIO</div>
+            </div>
+            <span class="edition-box-tag">Imperio vs Caos</span>
+          </div>
+          <div class="edition-card-body">
+
+            <div class="edition-sub">
+              <span class="edition-sub-label blue">▶ CAMBIOS PRINCIPALES</span>
+              <p>La 6ª Edición marcó un punto de inflexión importante: el sistema de cartas de magia fue
+              abandonado en favor de los <strong>dados de magia</strong> — una bolsa de dados que se lanzaban
+              para generar poder y disipación en la fase mágica. Más aleatorio, más rápido, y con menos
+              interacción táctica entre mazos. Fue un cambio divisivo que muchos veteranos de la 5ª
+              lamentaron, pero que hizo el juego más accesible.</p>
+            </div>
+
+            <div class="edition-sub">
+              <span class="edition-sub-label gold">▶ STORM OF CHAOS (2004)</span>
+              <p>La gran campaña narrativa de la 6ª edición fue Storm of Chaos en 2004 — la primera invasión
+              de Archaon, el Señor del Fin de los Tiempos. Una campaña global con resultados
+              determinados por partidas reales de jugadores de todo el mundo. Se supone que el Caos debía
+              ser derrotado narrativamente, pero las partidas dieron una victoria al Caos que GW ignoró
+              en favor del trasfondo previsto. El primer gran ejemplo de la tensión entre narrativa
+              de jugadores y narrativa de empresa.</p>
+            </div>
+
+            <div class="edition-sub">
+              <span class="edition-sub-label blue">▶ LA CAJA</span>
+              <p>Imperio contra las fuerzas del Caos — la caja de inicio más "oscura" visualmente de todas
+              las ediciones. Los guerreros caóticos con sus armaduras demoníacas frente a los soldados del
+              Imperio con sus arcabuces y alabardas. Una estética que capturaba perfectamente el carácter
+              grimdark medieval del Viejo Mundo.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── 7ª Edición ── -->
+        <div class="edition-card reveal" id="ed7" style="--ed-color: var(--accent-primary);">
+          <div class="edition-card-header">
+            <div>
+              <span class="edition-num" style="color:var(--accent-primary);text-shadow:var(--glow-green);">7ª</span>
+              <span class="edition-year"> · 2006</span>
+              <div class="edition-name">SÉPTIMA EDICIÓN — EL TORNEO</div>
+            </div>
+            <span class="edition-box-tag">Skull Pass: Enanos / Goblins Nocturnos</span>
+          </div>
+          <div class="edition-card-body">
+
+            <div class="edition-sub">
+              <span class="edition-sub-label green">▶ LA EDICIÓN MÁS EQUILIBRADA</span>
+              <p>La 7ª edición es considerada por muchos jugadores veteranos como la más equilibrada
+              y jugable de toda la historia del juego. Las reglas refinaron el combate, los modificadores
+              de resolución de combate se ajustaron para evitar el snowball extremo, y el sistema de magia
+              encontró un equilibrio razonable entre potencia y controlabilidad. Las listas de torneo
+              de esta edición eran competitivas sin ser absurdas.</p>
+            </div>
+
+            <div class="edition-sub">
+              <span class="edition-sub-label gold">▶ BATTLE FOR SKULL PASS</span>
+              <p>La caja de inicio — <em>Batallón de Paso del Cráneo</em> — fue un éxito masivo. Enanos
+              del Viejo Mundo contra Goblins Nocturnos en un escenario de paso de montaña. Miniaturas
+              fantásticas, reglas simplificadas de introducción, y un precio accesible que llevó a una
+              nueva generación de jugadores al hobby. Muchos jugadores de los 2000s recuerdan esa caja
+              como su punto de entrada.</p>
+            </div>
+
+            <div class="edition-sub">
+              <span class="edition-sub-label blue">▶ WARHAMMER ONLINE (2008)</span>
+              <p>Durante la era de la 7ª edición, Games Workshop licenció el universo para un MMO:
+              <em>Warhammer Online: Age of Reckoning</em> (2008). Un juego que prometió mucho, tuvo un
+              lanzamiento sólido, y fue perdiendo jugadores a favor de World of Warcraft hasta su cierre
+              en 2013. Para muchos fans del hobby, fue la primera vez que vieron el Viejo Mundo en
+              tres dimensiones — y recordó que la ambientación era más rica de lo que cualquier
+              videojuego podía capturar del todo.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── 8ª Edición ── -->
+        <div class="edition-card reveal" id="ed8" style="--ed-color: var(--accent-secondary);">
+          <div class="edition-card-header">
+            <div>
+              <span class="edition-num" style="color:var(--accent-secondary);text-shadow:var(--glow-pink);">8ª</span>
+              <span class="edition-year"> · 2010</span>
+              <div class="edition-name">OCTAVA EDICIÓN — EL COLOSO</div>
+            </div>
+            <span class="edition-box-tag">Island of Blood: Skaven / Altos Elfos</span>
+          </div>
+          <div class="edition-card-body">
+
+            <div class="edition-sub">
+              <span class="edition-sub-label pink">▶ LA MAYOR REVISIÓN DESDE LA 4ª</span>
+              <p>La 8ª Edición fue la revisión más radical desde la 4ª. El libro era enorme, las reglas
+              habían cambiado en múltiples puntos fundamentales, y el juego se inclinó hacia el espectáculo
+              y la épica pura. <strong>Cargas aleatorias</strong> — la distancia de carga se determinaba
+              con dados, eliminando la gestión precisa de distancias que definió ediciones anteriores.
+              El sistema de <em>Step Up</em> — las primeras filas que morían en combate podían seguir
+              atacando antes de ser retiradas — cambió radicalmente el cálculo de combate.</p>
+            </div>
+
+            <div class="edition-sub">
+              <span class="edition-sub-label gold">▶ MAGIA CATASTRÓFICA</span>
+              <p>La fase de magia de 8ª es la más poderosa y la más peligrosa de toda la historia del juego.
+              Los <em>Vientos de la Magia</em> determinaban cuántos dados de poder había disponibles en cada
+              turno — desde 2 hasta 12. Con 12 dados, un mago poderoso podía lanzar hechizos que devastaban
+              ejércitos enteros. <em>Dwellers Below</em> (iniciativa o muerte para toda la unidad),
+              <em>Infernal Gateway</em>, <em>Purple Sun</em>... hechizos que podían decidir una partida
+              en una sola tirada. Glorioso y desequilibrado a partes iguales.</p>
+            </div>
+
+            <div class="edition-sub">
+              <span class="edition-sub-label pink">▶ EL LEGADO</span>
+              <p>8ª Edición es la última edición "completa" de Warhammer Fantasy Battle. Los suplementos
+              de los últimos años de vida — <em>Tamurkhan</em>, <em>Monstrous Arcanum</em>, los Libros
+              de Batallas — añadieron una riqueza enorme al juego. Y fue la edición que llevó directamente
+              al <em>End Times</em>, los suplementos narrativos que destruyeron el Viejo Mundo. Sin 8ª,
+              no habría fin — y sin el fin, no habría resurrección.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Placeholder / Tourneys context -->
+        <div style="display:flex; align-items:center; justify-content:center; border: 3px dashed #1e1e1e; padding: var(--sp-6); color: var(--text-dim); font-family: var(--font-secondary); font-size: 17px; text-align:center; background:var(--bg-card);" class="reveal">
+          <div>
+            <div style="font-family:var(--font-primary);font-size:0.4rem;color:#333;margin-bottom:var(--sp-3);">// 32 AÑOS DE HISTORIA</div>
+            Ocho ediciones. Cada una con su generación de jugadores, sus listas rotas, sus momentos épicos
+            y sus debates interminables sobre qué edición era "la mejor de verdad". La respuesta correcta
+            siempre es la primera que jugaste.
+          </div>
+        </div>
+
+      </div><!-- /grid ediciones -->
+
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 3 — LOS EJÉRCITOS
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="ejercitos" style="padding-top: var(--sp-7);">
+    <div class="container">
+
+      <div class="section-label">⚔ LOS EJÉRCITOS DEL VIEJO MUNDO</div>
+      <h2 class="section-title" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">TODAS LAS RAZAS DEL WARHAMMER FANTASY</h2>
+
+      <div class="quote-card reveal">
+        <p>
+          Una de las grandes fortalezas de Warhammer Fantasy Battle era la diversidad radical de sus ejércitos.
+          Desde la caballería medieval de Bretonia hasta las plagas maquinales de los Skaven,
+          pasando por los dinosaurios-guerrero de los Hombres Lagarto o los no-muertos egipcios de los Reyes
+          de las Tumbas. Cada ejército tenía su propia personalidad, su propio estilo de juego, su propia
+          estética artística, y su propio tipo de jugador. No existía un ejército objetivamente superior —
+          <strong>existía el ejército correcto para cada persona.</strong>
+        </p>
+      </div>
+
+      <!-- ── GRUPO: FUERZAS DEL ORDEN ── -->
+      <div class="army-group-header reveal">
+        <span class="army-group-title" style="color:var(--accent-tertiary);text-shadow:var(--glow-blue);">🛡 FUERZAS DEL ORDEN</span>
+        <span class="era-badge" style="border-color:var(--accent-tertiary);color:var(--accent-tertiary);">ORDER</span>
+      </div>
+
+      <div class="grid-3 stagger">
+
+        <!-- Bretonia ⭐ -->
+        <div class="army-card my-army reveal" style="--army-color: var(--accent-warn);">
+          <div class="army-card-header">
+            <span class="army-name">🛡 BRETONIA</span>
+            <span class="army-alignment mine">⭐ MI EJÉRCITO</span>
+          </div>
+          <div class="army-card-body">
+            <div class="army-img-container" data-army="bretonia">
+              <img src="assets/img/bretonia.jpg"
+                   alt="Bretonia — Warhammer Fantasy Battle"
+                   class="army-img">
+            </div>
+
+            <p class="army-desc">La nación medieval-artúrica del Viejo Mundo. Caballería pesada como alma
+            del ejército, campesinos como apoyo. El Código de Caballería y la Dama del Lago como centro
+            espiritual. Mecánicamente: cargas devastadoras, impacto de caballería, y un carisma visual
+            inigualable en el campo de batalla.</p>
+            <div class="army-units">
+              <span class="army-unit-tag">Caballeros del Grial</span>
+              <span class="army-unit-tag">Caballeros Andantes</span>
+              <span class="army-unit-tag">Pegasos Celestiales</span>
+              <span class="army-unit-tag">Trebuchet</span>
+              <span class="army-unit-tag">Damiselas</span>
+              <span class="army-unit-tag">Hombres de Armas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imperio -->
+        <div class="army-card reveal" style="--army-color: var(--accent-warn);">
+          <div class="army-card-header">
+            <span class="army-name">⚙ EL IMPERIO</span>
+            <span class="army-alignment order">ORDEN</span>
+          </div>
+          <div class="army-card-body">
+            <div class="army-img-container" data-army="imperio">
+              <img src="assets/img/el_imperio.jpg"
+                   alt="El Imperio — Warhammer Fantasy Battle"
+                   class="army-img">
+            </div>
+
+            <p class="army-desc">Inspirado en el Sacro Imperio Romano Germánico del siglo XVI, con
+            arcabuces, pistoleros, alabarderos y los icónicos Tanques de Vapor de los Ingenieros.
+            El ejército humano más completo: infantería, caballería, artillería y magia en partes iguales.
+            El ejército de Karl Franz y Balthasar Gelt.</p>
+            <div class="army-units">
+              <span class="army-unit-tag">Tanque de Vapor</span>
+              <span class="army-unit-tag">Arcabuceros</span>
+              <span class="army-unit-tag">Caballeros del Imperio</span>
+              <span class="army-unit-tag">Gran Cañón</span>
+              <span class="army-unit-tag">Colegios de Magia</span>
+              <span class="army-unit-tag">Flagelantes</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enanos -->
+        <div class="army-card reveal" style="--army-color: var(--accent-warn);">
+          <div class="army-card-header">
+            <span class="army-name">⛏ ENANOS</span>
+            <span class="army-alignment order">ORDEN</span>
+          </div>
+          <div class="army-card-body">
+            <div class="army-img-container" data-army="enanos">
+              <img src="assets/img/enanos.jpg"
+                   alt="Enanos — Warhammer Fantasy Battle"
+                   class="army-img">
+            </div>
+
+            <p class="army-desc">Los mejores artesanos y soldados del Viejo Mundo. Sin magia propia
+            (tienen rúnicas) pero con la mejor infantería y artillería del juego. Nunca olvidan una ofensa
+            — el Libro de Rencores es la religión. Lento, resistente, y devastador cuando el enemigo se
+            acerca. El ejército favorito de los jugadores más pacientes.</p>
+            <div class="army-units">
+              <span class="army-unit-tag">Rompecráneo</span>
+              <span class="army-unit-tag">Portarrunas</span>
+              <span class="army-unit-tag">Gyrocóptero</span>
+              <span class="army-unit-tag">Órgano de Fuego</span>
+              <span class="army-unit-tag">Ironbreakers</span>
+              <span class="army-unit-tag">Longbeards</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Altos Elfos -->
+        <div class="army-card reveal" style="--army-color: var(--accent-secondary);">
+          <div class="army-card-header">
+            <span class="army-name">✨ ALTOS ELFOS</span>
+            <span class="army-alignment order">ORDEN</span>
+          </div>
+          <div class="army-card-body">
+            <div class="army-img-container" data-army="altos-elfos">
+              <img src="assets/img/altos_elfos.jpg"
+                   alt="Altos Elfos — Warhammer Fantasy Battle"
+                   class="army-img">
+            </div>
+
+            <p class="army-desc">Los elfos de Ulthuan, la isla central del mundo. La raza más mágica
+            y más elegante visualmente. Sus guerreros son élite absoluta — pocos en número pero superiores
+            en casi todas las estadísticas. La Guardia del Fénix, los Príncipes del Dragón, los Lanceros
+            de la Guardia del Mar. El ejército más caro de pintar y el más satisfactorio de ver terminado.</p>
+            <div class="army-units">
+              <span class="army-unit-tag">Guardia del Fénix</span>
+              <span class="army-unit-tag">Príncipe del Dragón</span>
+              <span class="army-unit-tag">Fénix de Llama Ardiente</span>
+              <span class="army-unit-tag">Archers de Lothern</span>
+              <span class="army-unit-tag">Archmages</span>
+              <span class="army-unit-tag">Sisters of Avelorn</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Elfos Silvanos -->
+        <div class="army-card reveal" style="--army-color: var(--accent-primary);">
+          <div class="army-card-header">
+            <span class="army-name">🌿 ELFOS SILVANOS</span>
+            <span class="army-alignment order">ORDEN</span>
+          </div>
+          <div class="army-card-body">
+            <div class="army-img-container" data-army="elfos-silvanos">
+              <img src="assets/img/elfos_silvanos.jpg"
+                   alt="Elfos Silvanos — Warhammer Fantasy Battle"
+                   class="army-img">
+            </div>
+
+            <p class="army-desc">Los guardianes del bosque sagrado de Athel Loren. El ejército más difícil
+            de jugar correctamente — sin armadura pesada, sin caballería estándar, fundamentalmente basado
+            en hostigadores, arqueros y emboscadas. Pero con los Bailarines de Guerra, los Hombres Árbol
+            y el Hombre Árbol Anciano como unidades absolutamente icónicas del juego.</p>
+            <div class="army-units">
+              <span class="army-unit-tag">Bailarines de Guerra</span>
+              <span class="army-unit-tag">Hombre Árbol Anciano</span>
+              <span class="army-unit-tag">Jinetes de Guilda</span>
+              <span class="army-unit-tag">Arqueros Gladiadores</span>
+              <span class="army-unit-tag">Drayads</span>
+              <span class="army-unit-tag">Orión</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hombres Lagarto -->
+        <div class="army-card reveal" style="--army-color: var(--accent-tertiary);">
+          <div class="army-card-header">
+            <span class="army-name">🦎 HOMBRES LAGARTO</span>
+            <span class="army-alignment order">ORDEN</span>
+          </div>
+          <div class="army-card-body">
+            <div class="army-img-container" data-army="hombres-lagarto">
+              <img src="assets/img/hombres_lagarto.jpg"
+                   alt="Hombres Lagarto — Warhammer Fantasy Battle"
+                   class="army-img">
+            </div>
+
+            <p class="army-desc">Los guardianes más antiguos del Viejo Mundo, creaciones de los Antiguos
+            para proteger el orden cósmico. Los Slann Maga-Sacerdotes son los magos más poderosos de toda
+            la ambientación. Sus Guerreros Saurus son los mejores bloques de infantería por puntos. El ejército
+            de mi amigo — y el que más veces me aplastó en partida.</p>
+            <div class="army-units">
+              <span class="army-unit-tag">Slann Maga-Sacerdote</span>
+              <span class="army-unit-tag">Guerreros Saurus</span>
+              <span class="army-unit-tag">Kroxigor</span>
+              <span class="army-unit-tag">Skinks con Cerbatana</span>
+              <span class="army-unit-tag">Salamandras</span>
+              <span class="army-unit-tag">Stegadon</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /grid orden -->
+
+      <!-- ── GRUPO: FUERZAS DEL CAOS ── -->
+      <div class="army-group-header reveal" style="margin-top: var(--sp-6);">
+        <span class="army-group-title" style="color:#cc4400;">🔥 FUERZAS DEL CAOS</span>
+        <span class="era-badge" style="border-color:#cc4400;color:#cc4400;">CHAOS</span>
+      </div>
+
+      <div class="grid-3 stagger">
+
+        <!-- Guerreros del Caos -->
+        <div class="army-card reveal" style="--army-color: var(--accent-danger);">
+          <div class="army-card-header">
+            <span class="army-name">💀 GUERREROS DEL CAOS</span>
+            <span class="army-alignment chaos">CAOS</span>
+          </div>
+          <div class="army-card-body">
+            <div class="army-img-container" data-army="guerreros-caos">
+              <img src="assets/img/guerreros_del_caos.jpg"
+                   alt="Guerreros del Caos — Warhammer Fantasy Battle"
+                   class="army-img">
+            </div>
+
+            <p class="army-desc">Los campeones mortales de los Dioses del Caos. Guerreros con las mejores
+            estadísticas de toda la infantería del juego, armadura pesada, y marcas de los cuatro Dioses
+            (Khorne, Nurgle, Tzeentch, Slaanesh). Pocos modelos, altísimo coste en puntos, y una presencia
+            en mesa que intimida antes de mover. Archaon lidera la horda al fin del mundo.</p>
+            <div class="army-units">
+              <span class="army-unit-tag">Guerreros del Caos</span>
+              <span class="army-unit-tag">Caballeros del Caos</span>
+              <span class="army-unit-tag">Trolls del Caos</span>
+              <span class="army-unit-tag">Dragones Ogros</span>
+              <span class="army-unit-tag">Archaon</span>
+              <span class="army-unit-tag">Hellcannon</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Demonios del Caos -->
+        <div class="army-card reveal" style="--army-color: var(--accent-secondary);">
+          <div class="army-card-header">
+            <span class="army-name">👿 DEMONIOS DEL CAOS</span>
+            <span class="army-alignment chaos">CAOS</span>
+          </div>
+          <div class="army-card-body">
+            <div class="army-img-container" data-army="demonios-caos">
+              <img src="assets/img/demonios_del_caos.jpg"
+                   alt="Demonios del Caos — Warhammer Fantasy Battle"
+                   class="army-img">
+            </div>
+
+            <p class="army-desc">Las manifestaciones físicas de los cuatro Dioses en el mundo mortal.
+            Bloodletters de Khorne, Plaguebearers de Nurgle, Pink Horrors de Tzeentch, Daemonettes
+            de Slaanesh. Un ejército sin necesidad de comer, sin moral, con reglas especiales únicas
+            y una vulnerabilidad especial a ciertos tipos de magia. El ejército más caótico en todos
+            los sentidos.</p>
+            <div class="army-units">
+              <span class="army-unit-tag">Bloodthirster</span>
+              <span class="army-unit-tag">Bloodletters</span>
+              <span class="army-unit-tag">Great Unclean One</span>
+              <span class="army-unit-tag">Plaguebearers</span>
+              <span class="army-unit-tag">Lord of Change</span>
+              <span class="army-unit-tag">Pink Horrors</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bestias del Caos -->
+        <div class="army-card reveal" style="--army-color: var(--accent-primary);">
+          <div class="army-card-header">
+            <span class="army-name">🐐 BESTIAS DEL CAOS</span>
+            <span class="army-alignment chaos">CAOS</span>
+          </div>
+          <div class="army-card-body">
+            <div class="army-img-container" data-army="bestias-caos">
+              <img src="assets/img/bestias_del_caos.jpg"
+                   alt="Bestias del Caos — Warhammer Fantasy Battle"
+                   class="army-img">
+            </div>
+
+            <p class="army-desc">Las mutaciones bestiales del Caos — mitad hombre, mitad animal, todo
+            terror. Gorscornos, Ungors, Minotauros, Razorgors. Ejército de horda con hostigadores masivos
+            y unidades de choque de altísimo impacto. Salen de los bosques, atacan en manada y desaparecen.
+            El ejército más guerrilla de todos los ejércitos del Caos.</p>
+            <div class="army-units">
+              <span class="army-unit-tag">Gorgón</span>
+              <span class="army-unit-tag">Minotauros</span>
+              <span class="army-unit-tag">Razorgors</span>
+              <span class="army-unit-tag">Ghorgón</span>
+              <span class="army-unit-tag">Gor Herd</span>
+              <span class="army-unit-tag">Bestigors</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Elfos Oscuros -->
+        <div class="army-card reveal" style="--army-color: var(--accent-secondary);">
+          <div class="army-card-header">
+            <span class="army-name">🗡 ELFOS OSCUROS</span>
+            <span class="army-alignment chaos">CAOS</span>
+          </div>
+          <div class="army-card-body">
+            <div class="army-img-container" data-army="elfos-oscuros">
+              <img src="assets/img/elfos_oscuros.png"
+                   alt="Elfos Oscuros — Warhammer Fantasy Battle"
+                   class="army-img">
+            </div>
+
+            <p class="army-desc">Los elfos caídos de Naggaroth — crueles, hábiles y sin piedad. Brujas
+            Elfas bailando en éxtasis de sangre, Caballeros de Frío en sus monturas reptilianas,
+            Shade hostigadores en las sombras. Elfos de élite con mejor armadura que los Silvanos
+            pero idéntica fragilidad. El ejército más agresivo y de élite del lado del Caos.</p>
+            <div class="army-units">
+              <span class="army-unit-tag">Brujas Elfas</span>
+              <span class="army-unit-tag">Caballeros Frío</span>
+              <span class="army-unit-tag">Shades</span>
+              <span class="army-unit-tag">Black Guards</span>
+              <span class="army-unit-tag">Hydra</span>
+              <span class="army-unit-tag">Malekith</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enanos del Caos -->
+        <div class="army-card reveal" style="--army-color: var(--accent-danger);">
+          <div class="army-card-header">
+            <span class="army-name">🔨 ENANOS DEL CAOS</span>
+            <span class="army-alignment chaos">CAOS</span>
+          </div>
+          <div class="army-card-body">
+            <div class="army-img-container" data-army="enanos-caos">
+              <img src="assets/img/enanos_del_caos.jpg"
+                   alt="Enanos del Caos — Warhammer Fantasy Battle"
+                   class="army-img">
+            </div>
+
+            <p class="army-desc">Los enanos corruptos del oscuro oriente de Zharr-Naggrund, adoradores
+            del dios-toro Hashut. Combinan la dureza característica enana con la tecnología de
+            esclavitud y guerra industrial del Caos. Sin un Army Book oficial en 8ª edición (solo
+            el suplemento Tamurkhan), pero con una de las estéticas más impresionantes de todo el hobby.</p>
+            <div class="army-units">
+              <span class="army-unit-tag">Infernal Guard</span>
+              <span class="army-unit-tag">Bull Centaurs</span>
+              <span class="army-unit-tag">Destroyer</span>
+              <span class="army-unit-tag">Magma Cannon</span>
+              <span class="army-unit-tag">Hobgoblin Cutthroats</span>
+              <span class="army-unit-tag">Daemonsmith</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skaven -->
+        <div class="army-card reveal" style="--army-color: var(--accent-primary);">
+          <div class="army-card-header">
+            <span class="army-name">🐀 SKAVEN</span>
+            <span class="army-alignment chaos">CAOS</span>
+          </div>
+          <div class="army-card-body">
+            <div class="army-img-container" data-army="skavens">
+              <img src="assets/img/skavens.jpg"
+                   alt="Skaven — Warhammer Fantasy Battle"
+                   class="army-img">
+            </div>
+
+            <p class="army-desc">Los hombres rata del Bajo Imperio. Viven bajo todas las ciudades del
+            Viejo Mundo en una red de túneles que se extiende por todo el continente. Ejército de horda
+            masiva — mueren por miles pero en masa son imparables. La Piedra Bruja verde alimenta su
+            tecnología imposible: el Cañón de Jezzail, el Rat-Ogre, la Abominación del Pozo del Infierno.</p>
+            <div class="army-units">
+              <span class="army-unit-tag">Stormvermin</span>
+              <span class="army-unit-tag">Hell Pit Abomination</span>
+              <span class="army-unit-tag">Rat Ogres</span>
+              <span class="army-unit-tag">Doomwheel</span>
+              <span class="army-unit-tag">Plague Monks</span>
+              <span class="army-unit-tag">Queek</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /grid caos -->
+
+      <!-- ── GRUPO: LOS NO MUERTOS ── -->
+      <div class="army-group-header reveal" style="margin-top: var(--sp-6);">
+        <span class="army-group-title" style="color:var(--accent-primary);text-shadow:var(--glow-green);">💀 LOS NO MUERTOS Y LOS ANTIGUOS</span>
+        <span class="era-badge" style="border-color:var(--accent-primary);color:var(--accent-primary);">DEATH / NEUTRAL</span>
+      </div>
+
+      <div class="grid-3 stagger">
+
+        <!-- Condes Vampiro -->
+        <div class="army-card reveal" style="--army-color: var(--accent-primary);">
+          <div class="army-card-header">
+            <span class="army-name">🧛 CONDES VAMPIRO</span>
+            <span class="army-alignment death">MUERTE</span>
+          </div>
+          <div class="army-card-body">
+            <div class="army-img-container" data-army="condes-vampiro">
+              <img src="assets/img/condes_vampiro.jpg"
+                   alt="Condes Vampiro — Warhammer Fantasy Battle"
+                   class="army-img">
+            </div>
+
+            <p class="army-desc">Los señores de la muerte y sus huestes de no-muertos. Vampiros como
+            generales y campeones, esqueletos y zombies como masa de infantería, Banshees, Fantasmas
+            y el Trono del Coven como carros especiales. El ejército nunca necesita huir — los no-muertos
+            se reagrupan automáticamente. La Nigromancia como lore de magia dedicado.</p>
+            <div class="army-units">
+              <span class="army-unit-tag">Caballería Negra</span>
+              <span class="army-unit-tag">Carro de la Muerte</span>
+              <span class="army-unit-tag">Vampiro Lord</span>
+              <span class="army-unit-tag">Banshee</span>
+              <span class="army-unit-tag">Terrorgheist</span>
+              <span class="army-unit-tag">Mannfred</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reyes de las Tumbas -->
+        <div class="army-card reveal" style="--army-color: var(--accent-warn);">
+          <div class="army-card-header">
+            <span class="army-name">🪬 REYES DE LAS TUMBAS</span>
+            <span class="army-alignment death">MUERTE</span>
+          </div>
+          <div class="army-card-body">
+            <div class="army-img-container" data-army="reyes-funerarios">
+              <img src="assets/img/reyes_funerarios.jpg"
+                   alt="Reyes de las Tumbas — Warhammer Fantasy Battle"
+                   class="army-img">
+            </div>
+
+            <p class="army-desc">Los faraones no-muertos de Khemri, el antiguo Egipto del Viejo Mundo.
+            A diferencia de los Condes Vampiro, los Reyes de las Tumbas son orgullosos reyes que se
+            niegan a ser meros instrumentos de terror. Constructs de hueso animado, escarabajos de
+            guerra, carros de hueso y una magia única de invocación pasiva. Estéticamente impresionantes
+            y tácticamente únicos.</p>
+            <div class="army-units">
+              <span class="army-unit-tag">Necrosphinx</span>
+              <span class="army-unit-tag">Hierotitan</span>
+              <span class="army-unit-tag">Ushabti</span>
+              <span class="army-unit-tag">Carro de Carros</span>
+              <span class="army-unit-tag">Casket of Souls</span>
+              <span class="army-unit-tag">Settra</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Orcos y Goblins -->
+        <div class="army-card reveal" style="--army-color: var(--accent-primary);">
+          <div class="army-card-header">
+            <span class="army-name">🟢 ORCOS Y GOBLINS</span>
+            <span class="army-alignment destruct">DESTRUCCIÓN</span>
+          </div>
+          <div class="army-card-body">
+            <div class="army-img-container" data-army="orcos">
+              <img src="assets/img/orcos.jpg"
+                   alt="Orcos y Goblins — Warhammer Fantasy Battle"
+                   class="army-img">
+            </div>
+
+            <p class="army-desc">El WAAAGH! interminable. Verdepieles de todos los tamaños desde el
+            Orco Negro grande como un troll hasta el Squig cabalgado por un Goblin Nocturno. El ejército
+            más impredecible del juego — con la mecánica de WAAAGH! y los fanáticos goblins que pueden
+            destruir sus propias unidades. Nunca aburren. El Gigante es una de las miniaturas más icónicas
+            de todo el hobby.</p>
+            <div class="army-units">
+              <span class="army-unit-tag">Orcos Negros</span>
+              <span class="army-unit-tag">Fanáticos Goblins</span>
+              <span class="army-unit-tag">Spider Riders</span>
+              <span class="army-unit-tag">Carros de Guerre</span>
+              <span class="army-unit-tag">Gigante</span>
+              <span class="army-unit-tag">Grimgor Ironhide</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reinos Ogros -->
+        <div class="army-card reveal" style="--army-color: var(--accent-warn);">
+          <div class="army-card-header">
+            <span class="army-name">🏔 REINOS OGROS</span>
+            <span class="army-alignment neutral">NEUTRAL</span>
+          </div>
+          <div class="army-card-body">
+            <div class="army-img-container" data-army="reinos-ogros">
+              <img src="assets/img/reinos_ogros.jpg"
+                   alt="Reinos Ogros — Warhammer Fantasy Battle"
+                   class="army-img">
+            </div>
+
+            <p class="army-desc">Los mercenarios del Viejo Mundo por excelencia. Ogros gigantes que
+            comen todo lo que se ponga a su alcance — incluyendo a sus propios aliados si los dioses
+            de la Carne lo permiten. Mournfang Cavalry como carga devastadora, Stonehorns como monstruos
+            bestiales, Butchers como magos-cocineros que canalizan la magia del Caos con recetas
+            macabras. Poco numerosos pero devastadores en cuerpo a cuerpo.</p>
+            <div class="army-units">
+              <span class="army-unit-tag">Mournfang Cavalry</span>
+              <span class="army-unit-tag">Stonehorn</span>
+              <span class="army-unit-tag">Butcher</span>
+              <span class="army-unit-tag">Ironblaster</span>
+              <span class="army-unit-tag">Thundertusk</span>
+              <span class="army-unit-tag">Golgfag</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dogs of War / Kislev mention -->
+        <div style="grid-column: span 2;" class="reveal">
+          <div class="lore-box" style="border-color: #2a2a2a;">
+            <span class="lore-box-title" style="font-size:0.45rem;">📜 EJÉRCITOS MENORES Y ESPECIALES</span>
+            <p><strong>Dogs of War / Mercenarios</strong> — Regimientos de Renombre con nombres, trasfondo
+            y reglas únicas. Activos principalmente en 3ª-6ª edición, los mercenarios eran unidades
+            especiales contratables por cualquier ejército. Pikemen de Tilea, artilleros de Stirland,
+            Grudgebringers de los Enanos... cada regimiento era casi un personaje propio. Nunca tuvieron
+            un Army Book completo de 7ª u 8ª, pero siguen siendo recordados con enorme cariño.</p>
+            <p><strong>Kislev</strong> — La nación eslava al norte del Imperio, guardiana de la Gran
+            Muralla contra las hordas del Caos. Nunca tuvo un Army Book oficial en el juego principal —
+            solo apareció como ejército aliado en el suplemento Storm of Chaos (2004). Sus Winged
+            Lancers y Gryphon Legion eran unidades icónicas. Kislev regresó finalmente como ejército
+            completo en <em>Warhammer: The Old World</em> de 2024, con miniaturas nuevas y Army Book propio.</p>
+          </div>
+        </div>
+
+      </div><!-- /grid muertos y neutrales -->
+
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 4 — EL FIN DE LOS TIEMPOS
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="fin-tiempos" style="padding-top: var(--sp-7);">
+    <div class="container">
+
+      <div class="section-label red">💀 EL FIN DE LOS TIEMPOS</div>
+      <h2 class="section-title" style="color:var(--wh-red);text-shadow:var(--glow-red);">2014–2015 — LA DESTRUCCIÓN DEL VIEJO MUNDO</h2>
+
+      <div class="whf-section-img-wrap whf-img-endtimes reveal">
+        <img
+          src="assets/img/warhammer_partida_2.jpg"
+          alt="El Fin de los Tiempos — La Destrucción del Viejo Mundo"
+          class="whf-section-img"
+        >
+      </div>
+
+      <!-- Big end times block -->
+      <div class="endtimes-box reveal">
+        <span class="endtimes-box-title">EL FIN QUE NADIE ESPERABA</span>
+        <p>
+          A finales de 2014, Games Workshop tomó una decisión sin precedentes en la historia del hobby:
+          <strong>destruir narrativamente el mundo de Warhammer Fantasy Battle</strong>. No fue un reboot
+          silencioso, ni una actualización de trasfondo. Fue una serie de cinco suplementos narrativos —
+          El Fin de los Tiempos — en los que los Cuatro Dioses del Caos triunfaban, el Viejo Mundo se
+          fragmentaba y ardía, y todos los personajes que habíamos conocido durante treinta años
+          morían, se transformaban, o desaparecían.
+        </p>
+        <p>
+          La respuesta de la comunidad fue de impacto total. Para muchos jugadores, Warhammer Fantasy
+          no era solo un juego de tablero — era el mundo en el que habían invertido años de hobby,
+          dinero, tiempo y amor. Sus ejércitos tenían trasfondo. Sus personajes tenían historias. Y de
+          repente todo eso se eliminaba para dar paso a <strong>Age of Sigmar</strong>, el sucesor que
+          llegó en 2015 con reglas de una página, minis redondas y un universo completamente diferente.
+        </p>
+        <p>
+          El debate sobre si El Fin de los Tiempos fue una buena o mala decisión empresarial sigue
+          activo hoy. Lo que es indudable es que fue el final de una era del hobby — y que el impacto
+          emocional en la comunidad fue real, profundo, y completamente subestimado por Games Workshop
+          en el momento. El Viejo Mundo no era solo un escenario. Era un lugar querido. Y lo quemaron.
+        </p>
+      </div>
+
+      <!-- Chronicles grid -->
+      <div class="era-header">
+        <h3 class="era-title" style="color:var(--wh-red);text-shadow:var(--glow-red);">📕 LOS CINCO LIBROS DEL FIN</h3>
+        <span class="era-badge">2014 – 2015</span>
+      </div>
+
+      <div class="grid-3 stagger">
+
+        <div class="chronicle-card reveal">
+          <div class="chronicle-card-header">
+            <span class="chronicle-num">I</span>
+            <span class="chronicle-title">NAGASH<br/>EL RETORNO DEL SEÑOR DE LOS NO MUERTOS</span>
+          </div>
+          <div class="chronicle-card-body">
+            <p>El primer libro del fin. Nagash — el archimago de la muerte, el ser que inventó la
+            nigromancia, el enemigo más antiguo del mundo — regresa de entre los muertos por primera
+            vez en milenios. La respuesta de todos los ejércitos del orden es insuficiente. Nagash
+            toma la Ciudad de los Muertos. La muerte empieza a perder su significado.</p>
+          </div>
+        </div>
+
+        <div class="chronicle-card reveal">
+          <div class="chronicle-card-header">
+            <span class="chronicle-num">II</span>
+            <span class="chronicle-title">GLOTTKIN<br/>EL CAOS DEVORA EL IMPERIO</span>
+          </div>
+          <div class="chronicle-card-body">
+            <p>La horda de Nurgle encabezada por los hermanos Glott invade el Imperio con una devastación
+            sin precedentes. Altdorf cae. El río Reik se convierte en veneno verde. Karl Franz muere
+            y es resucitado por Ghal Maraz como algo más que un hombre. El Imperio nunca volverá
+            a ser lo que era.</p>
+          </div>
+        </div>
+
+        <div class="chronicle-card reveal">
+          <div class="chronicle-card-header">
+            <span class="chronicle-num">III</span>
+            <span class="chronicle-title">KHAINE<br/>LA GUERRA ÉLFICA</span>
+          </div>
+          <div class="chronicle-card-body">
+            <p>Malekith — el eterno pretendiente al trono élfico — finalmente pasa la Llama de Asuryan
+            y es coronado como el legítimo Rey Eterno. Tyrion, poseído por Khaine el Dios de la Muerte,
+            se convierte en el Avatar de Khaine. Dos fuerzas élficas se destruyen mutuamente mientras
+            el mundo arde. El horror del fratricidio élfico definitivo.</p>
+          </div>
+        </div>
+
+        <div class="chronicle-card reveal">
+          <div class="chronicle-card-header">
+            <span class="chronicle-num">IV</span>
+            <span class="chronicle-title">THANQUOL<br/>LOS SKAVEN INVADEN TODO</span>
+          </div>
+          <div class="chronicle-card-body">
+            <p>Los Skaven desatan su gran plan de conquista global simultánea — atacando todas las
+            ciudades importantes del Viejo Mundo al mismo tiempo usando sus túneles del Bajo Imperio.
+            Lustria cae. Los Hombres Lagarto son destruidos. La gran intriga Skaven de siglos cristaliza
+            en el momento más dramático posible: cuando el mundo ya está arrodillado.</p>
+          </div>
+        </div>
+
+        <div class="chronicle-card reveal">
+          <div class="chronicle-card-header">
+            <span class="chronicle-num">V</span>
+            <span class="chronicle-title">ARCHAON<br/>EL FIN DE LOS TIEMPOS</span>
+          </div>
+          <div class="chronicle-card-body">
+            <p>Archaon, el Señor del Fin de los Tiempos, abre los ocho Vórtices del Caos. El mundo
+            se fragmenta. Los Dioses del Caos triunfan. El Viejo Mundo deja de existir como realidad
+            coherente. Los fragmentos del mundo flotan en el Caos eterno. En esos fragmentos, los
+            supervivientes buscarán un nuevo hogar en los Reinos Mortales. Age of Sigmar puede comenzar.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:center;justify-content:center;border:2px dashed #2a1a1a;padding:var(--sp-5);background:var(--bg-card);text-align:center;" class="reveal">
+          <div>
+            <div style="font-family:var(--font-primary);font-size:0.35rem;color:#440000;margin-bottom:var(--sp-3);">// VALAR MORGHULIS</div>
+            <div style="font-family:var(--font-secondary);font-size:17px;color:var(--text-dim);line-height:1.7;">
+              Treinta y dos años de trasfondo. Miles de ejércitos pintados. Millones de partidas jugadas.
+              Quemado en cinco libros de 200 páginas.
+              <br/><br/>
+              <strong style="color:#cc4400;">El Viejo Mundo merece más que esto.</strong>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /grid chronicles -->
+
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 5 — THE OLD WORLD (2024)
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="old-world" style="padding-top: var(--sp-7);">
+    <div class="container">
+
+      <div class="section-label blue">🌍 THE OLD WORLD — EL REGRESO</div>
+      <h2 class="section-title" style="color:var(--accent-tertiary);text-shadow:var(--glow-blue);">2024 — EL VIEJO MUNDO VUELVE</h2>
+
+      <div class="whf-section-img-wrap whf-img-oldworld reveal">
+        <img
+          src="assets/img/warhammer_partida_3.jpg"
+          alt="Warhammer: The Old World 2024 — El Regreso"
+          class="whf-section-img"
+        >
+      </div>
+
+      <div class="oldworld-box reveal">
+        <h3 style="font-family:var(--font-primary);font-size:clamp(0.6rem,1.8vw,0.9rem);color:var(--accent-tertiary);text-shadow:var(--glow-blue);margin-bottom:var(--sp-4);position:relative;z-index:1;">
+          WARHAMMER: THE OLD WORLD
+        </h3>
+        <p>En enero de 2024, Games Workshop hizo lo que la comunidad llevaba años pidiendo en voz baja:
+        <strong>resucitó Warhammer Fantasy Battle</strong>. No como un juego narrativo, no como una
+        expansión de Age of Sigmar — sino como un juego de miniatura de rank-and-flank completo, con
+        sus propias reglas, sus propios Army Books y su propio espacio en el catálogo. El Viejo Mundo
+        no había muerto del todo. Solo estaba esperando.</p>
+        <p>El lanzamiento inicial de <em>Warhammer: The Old World</em> incluyó dos ejércitos clave en
+        el starter set: <strong>Reino de Bretonia</strong> contra <strong>Reyes de las Tumbas de Khemri</strong>.
+        Que Bretonia fuera uno de los dos ejércitos de lanzamiento fue recibido como un gesto deliberado
+        hacia los jugadores veteranos — el ejército más asociado a la 5ª edición, el punto de entrada
+        de toda una generación, volvía al frente desde el primer día. Para quienes empezamos con esa
+        caja de caballeros y reptilianos en 1996, fue como recibir una carta de bienvenida a casa.</p>
+        <p>El juego está ambientado en una era histórica anterior al "presente" de las ediciones clásicas —
+        los tiempos de Magnus el Piadoso y las guerras que moldearon el Imperio moderno. Es un Viejo
+        Mundo reconocible pero con espacio para nuevas historias. Las miniaturas son compatibles con
+        las antiguas (el escalado es el mismo), los ejércitos siguen siendo rank-and-flank, y las
+        reglas recogen lo mejor de ediciones anteriores sin la hipercomplejidad de la 8ª. No es exactamente
+        el juego de antes — es algo nuevo construido sobre ese amor. Y por ahora, funciona.</p>
+        <p>Para quienes guardamos las cajas en el armario cuando llegó Age of Sigmar y juramos que
+        algún día volveríamos a sacarlas, <strong>The Old World es esa promesa cumplida</strong>.
+        El Viejo Mundo nunca muere realmente. Solo hiberna entre ediciones. Y despierta cuando más
+        lo necesitamos.</p>
+      </div>
+
+      <div class="grid-2 stagger" style="margin-top: var(--sp-5);">
+
+        <div class="lore-box reveal">
+          <span class="lore-box-title">⚔ EJÉRCITOS EN EL LANZAMIENTO</span>
+          <p>El lanzamiento de 2024 incluyó Army Books para: <strong>Reino de Bretonia</strong>,
+          <strong>Reinos de las Tumbas de Khemri</strong>, Legiones del Imperio de los Altos Elfos
+          de Ulthuan, y las Fuerzas del Caos (Warriors of Chaos combinados con Beastmen).
+          Games Workshop anunció un calendario de lanzamiento por fases para incluir gradualmente
+          el resto de ejércitos clásicos. Los Enanos, los Orcos & Goblins, el Imperio y Kislev
+          (¡por fin con Army Book propio!) estaban en el roadmap de los primeros años.</p>
+          <p>Las miniaturas del lanzamiento incluían rediseños de algunos clásicos y reediciones
+          de miniaturas de metal antiguas en nuevo plástico. Para los coleccionistas, The Old World
+          permitía también usar los ejércitos de plástico de ediciones anteriores — un gesto de
+          respeto hacia la comunidad que había mantenido el juego vivo en torneos independientes
+          durante los nueve años de silencio.</p>
+        </div>
+
+        <div class="lore-box reveal">
+          <span class="lore-box-title">🎲 ¿CÓMO SE JUEGA?</span>
+          <p>Warhammer: The Old World recupera la esencia del rank-and-flank — unidades en formación
+          de filas y columnas, ángulos de visión, flanqueos decisivos, y la importancia de la geometría
+          del campo de batalla. Las cargas aleatorias de 8ª edición han sido suavizadas. La magia
+          es potente pero más controlable. El sistema de resolución de combate por flanqueo y moral
+          vuelve a tener peso real.</p>
+          <p>Lo que más gusta a los veteranos es que el juego <strong>requiere pensar antes de mover</strong>.
+          No hay recursos generados que se gasten por turno, no hay mecánicas de puntos de acción.
+          Es Warhammer clásico: mueve, dispara, carga, resuelve cuerpo a cuerpo, comprueba moral.
+          Cuatro fases. La misma filosofía de juego desde 1987, refinada en cuatro décadas de experiencia.</p>
+        </div>
+
+      </div>
+
+      <!-- Closing card -->
+      <div class="card reveal" style="border-color:var(--accent-warn); box-shadow: 4px 4px 0 var(--accent-warn); margin-top: var(--sp-7);">
+        <h3 class="card-title" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">⚔ POUR LA DAME — POR LA DAMA</h3>
+        <div class="card-body">
+          <p>Desde 1996, con 12 años y una caja de quinta edición bajo el brazo, Bretonia ha sido mi ejército.
+          No el más fácil, no el más fuerte, no el más popular en torneos. Pero el que tiene caballeros.
+          El que tiene pegasos. El que tiene una diosa en el lago y caballeros que hacen votos de honor.
+          En un hobby lleno de ejércitos de esqueletos, hombres rata y guerreros del caos,
+          yo elegí el de la caballería noble. No me arrepiento.</p>
+          <p style="margin-top:var(--sp-3);">Treinta años después, esos caballeros vuelven a estar en catálogo. The Old World existe.
+          El Viejo Mundo respira de nuevo. <strong>Pour la Dame.</strong></p>
+          <div style="display:flex; flex-wrap:wrap; gap:var(--sp-2); margin-top:var(--sp-4);">
+            <span class="tag gold">5ª EDICIÓN · 1996</span>
+            <span class="tag">BRETONIA — MI EJÉRCITO</span>
+            <span class="tag blue">THE OLD WORLD 2024</span>
+            <span class="tag" style="border-color:var(--wh-red);color:var(--wh-red);">RIP VIEJO MUNDO 2015</span>
+            <span class="tag green">REGRESA EN 2024</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="index.html" class="btn btn-small btn-gold">🏠 VOLVER AL INICIO</a>
+          <a href="got.html"   class="btn btn-small" style="border-color:var(--accent-tertiary);color:var(--accent-tertiary);">🐉 VER GOT</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ─── Footer ──────────────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="gamedev.html">GameDev</a></li>
+      <li><a href="gaming.html">Gaming</a></li>
+      <li><a href="esports.html">Esports</a></li>
+      <li><a href="got.html">GoT</a></li>
+      <li><a href="warhammer.html">Warhammer</a></li>
+      <li><a href="social.html">Social</a></li>
+      <li><a href="java.html">Java</a></li>
+    </ul>
+    <p>⚔ FREAKONIA — KARLETE</p>
+    <p style="color:#444;">HECHO CON AMOR PIXELADO Y DEMASIADAS BEBIDAS ENERGÉTICAS</p>
+    <p style="color:#333;">◄ INSERT COIN ►</p>
+
+    <div class="footer-legal">
+      <div class="pixel-divider"></div>
+      <p class="footer-copyright">
+        © 2025 FREAKONIA — KARLETE. ALL RIGHTS RESERVED.
+      </p>
+      <p class="footer-trademark">
+        FREAKONIA™ IS A REGISTERED PERSONAL BRAND.
+        ALL CONTENT, DESIGNS, GAME CONCEPTS AND ORIGINAL TEXTS
+        ON THIS SITE ARE THE EXCLUSIVE PROPERTY OF THEIR AUTHOR.
+        UNAUTHORIZED REPRODUCTION, DISTRIBUTION OR USE OF ANY
+        CONTENT IS STRICTLY PROHIBITED WITHOUT PRIOR WRITTEN PERMISSION.
+      </p>
+      <p class="footer-notice">
+        ⚠ THIS SITE CONTAINS STRONG OPINIONS ABOUT VIDEO GAMES,
+        FANTASY LORE AND BASKETBALL. READER DISCRETION IS ADVISED.
+        NO GOBLINS WERE HARMED IN THE MAKING OF THIS WEBSITE.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="js/main.js"></script>
+</body>
+</html>

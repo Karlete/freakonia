@@ -1,0 +1,592 @@
+/* ── magic.css — Estilos específicos de magic.html ── */
+
+/* ── Imagen de sección ── */
+.magic-section-img-wrap {
+  width: 100%;
+  margin: 1.5rem 0 2.5rem 0;
+  border: 4px solid var(--accent-secondary);
+  box-shadow: 0 0 16px var(--accent-secondary),
+              0 0 32px rgba(255, 0, 255, 0.3);
+  overflow: hidden;
+  /* SIN border-radius */
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.magic-section-img-wrap:hover {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 24px var(--accent-primary),
+              0 0 48px rgba(0, 255, 65, 0.3);
+}
+
+.magic-section-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+  /* SIN border-radius */
+}
+
+.magic-section-img-wrap:hover .magic-section-img {
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .magic-section-img-wrap {
+    margin: 1rem 0 1.5rem 0;
+  }
+}
+
+/* ── Magic accent vars ── */
+:root {
+  --mtg-pink: var(--accent-secondary);
+  --mtg-gold: var(--accent-warn);
+  --glow-mtg: 0 0 8px #ff00ff, 0 0 24px #ff00ff55;
+}
+
+/* ── Page header ── */
+.page-header-magic {
+  background: var(--bg-surface);
+  border-bottom: 4px solid var(--accent-secondary);
+  padding: var(--sp-7) 0 var(--sp-6);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header-magic::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(255,0,255,0.08) 0%, transparent 50%),
+    linear-gradient(225deg, rgba(0,255,65,0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.page-header-magic::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 4px;
+  background: linear-gradient(90deg,
+    var(--accent-secondary) 0%,
+    var(--accent-primary)   30%,
+    var(--accent-secondary) 60%,
+    var(--accent-primary)   100%);
+}
+
+.page-header-magic .container { position: relative; z-index: 1; }
+
+.page-header-pre {
+  font-family: var(--font-primary);
+  font-size: 0.5rem;
+  color: var(--accent-secondary);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: var(--sp-3);
+}
+
+.page-header-title {
+  font-family: var(--font-primary);
+  font-size: clamp(1rem, 3.5vw, 2rem);
+  color: var(--text-bright);
+  text-shadow: var(--glow-pink);
+  margin-bottom: var(--sp-3);
+}
+
+.page-header-sub {
+  font-family: var(--font-secondary);
+  font-size: 22px;
+  color: var(--text-dim);
+  margin-bottom: 0;
+}
+
+/* ── Section label strip ── */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-3);
+  font-family: var(--font-primary);
+  font-size: 0.55rem;
+  color: #000;
+  background: var(--accent-secondary);
+  padding: var(--sp-2) var(--sp-4);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--sp-5);
+}
+
+.section-label.gold  { background: var(--accent-warn);      color: #000; }
+.section-label.green { background: var(--accent-primary);   color: #000; }
+.section-label.blue  { background: var(--accent-tertiary);  color: #000; }
+.section-label.dim   { background: #333; color: var(--text-dim); }
+
+/* ── Section quick nav ── */
+.section-quicknav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  margin: var(--sp-5) 0 var(--sp-6);
+}
+
+.section-quicknav a {
+  font-family: var(--font-primary);
+  font-size: 0.4rem;
+  color: var(--text-dim);
+  border: 2px solid #333;
+  padding: var(--sp-2) var(--sp-3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: color 0.1s, border-color 0.1s, box-shadow 0.1s;
+}
+
+.section-quicknav a:hover {
+  color: var(--accent-secondary);
+  border-color: var(--accent-secondary);
+  box-shadow: var(--glow-pink);
+}
+
+/* ── MTG pillar boxes (4 pilares del juego) ── */
+.mtg-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: var(--sp-5);
+}
+
+.mtg-pillar {
+  border: 4px solid var(--accent-secondary);
+  background: var(--bg-card);
+  padding: 1.5rem;
+  position: relative;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.mtg-pillar:hover {
+  border-color: var(--accent-primary);
+  box-shadow: var(--glow-green);
+}
+
+.mtg-pillar-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: var(--sp-3);
+}
+
+.mtg-pillar-title {
+  font-family: var(--font-primary);
+  font-size: 0.5rem;
+  color: var(--accent-secondary);
+  text-shadow: var(--glow-pink);
+  display: block;
+  margin-bottom: var(--sp-3);
+}
+
+.mtg-pillar p {
+  font-family: var(--font-secondary);
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+/* ── Personal story card ── */
+.personal-story {
+  background: var(--bg-card);
+  border: 4px solid var(--accent-secondary);
+  box-shadow: 0 0 0 1px var(--accent-secondary), var(--glow-mtg);
+  padding: var(--sp-6);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: var(--sp-6);
+}
+
+.personal-story::before {
+  content: '✨';
+  position: absolute;
+  top: var(--sp-4);
+  right: var(--sp-5);
+  font-size: 5rem;
+  opacity: 0.04;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.personal-story-header {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-5);
+  padding-bottom: var(--sp-4);
+  border-bottom: 2px solid #222;
+}
+
+.personal-story-icon {
+  font-size: 3.5rem;
+  flex-shrink: 0;
+}
+
+.personal-story-meta { flex: 1; }
+
+.personal-story-title {
+  font-family: var(--font-primary);
+  font-size: clamp(0.55rem, 1.5vw, 0.75rem);
+  color: var(--accent-secondary);
+  text-shadow: var(--glow-pink);
+  display: block;
+  margin-bottom: var(--sp-2);
+}
+
+.personal-story-subtitle {
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  color: var(--text-dim);
+}
+
+.personal-story p {
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.personal-story p + p { margin-top: var(--sp-4); }
+
+.personal-story-badge {
+  display: inline-block;
+  margin-top: var(--sp-5);
+  background: var(--accent-secondary);
+  color: #000;
+  font-family: var(--font-primary);
+  font-size: 0.4rem;
+  padding: var(--sp-2) var(--sp-4);
+  letter-spacing: 1px;
+}
+
+/* ── Quote card ── */
+.quote-card {
+  background: var(--bg-card);
+  border: 2px solid #2a2a2a;
+  padding: var(--sp-5) var(--sp-6);
+  position: relative;
+  margin-top: var(--sp-5);
+}
+
+.quote-card::before {
+  content: '"';
+  position: absolute;
+  top: var(--sp-2);
+  left: var(--sp-4);
+  font-family: var(--font-secondary);
+  font-size: 5rem;
+  color: var(--accent-secondary);
+  opacity: 0.15;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.quote-card p {
+  font-family: var(--font-secondary);
+  font-size: 20px;
+  line-height: 1.8;
+  position: relative;
+  z-index: 1;
+  color: var(--text);
+  font-style: italic;
+}
+
+.quote-attribution {
+  font-family: var(--font-primary);
+  font-size: 0.38rem;
+  color: var(--text-dim);
+  margin-top: var(--sp-3);
+  display: block;
+}
+
+/* ── Lore / intro card ── */
+.lore-box {
+  background: var(--bg-card);
+  border: 2px solid #2a2a2a;
+  padding: var(--sp-5);
+}
+
+.lore-box-title {
+  font-family: var(--font-primary);
+  font-size: 0.5rem;
+  color: var(--accent-secondary);
+  text-shadow: var(--glow-pink);
+  margin-bottom: var(--sp-4);
+  display: block;
+}
+
+.lore-box p {
+  font-family: var(--font-secondary);
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.lore-box p + p { margin-top: var(--sp-3); }
+
+/* ── Edition cards ── */
+.editions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: var(--sp-5);
+}
+
+.edition-card {
+  border: 4px solid var(--set-color, var(--accent-primary));
+  background: var(--bg-card);
+  padding: 0;
+  position: relative;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.edition-card:hover {
+  box-shadow: 0 0 16px var(--set-color, var(--accent-primary));
+}
+
+.edition-card-head {
+  background: color-mix(in srgb, var(--set-color, var(--accent-primary)) 12%, transparent);
+  padding: var(--sp-3) var(--sp-4);
+  border-bottom: 2px solid var(--set-color, var(--accent-primary));
+}
+
+.edition-card-body {
+  padding: var(--sp-4) var(--sp-4);
+}
+
+.set-name {
+  font-family: var(--font-primary);
+  font-size: 0.5rem;
+  color: var(--set-color, var(--accent-primary));
+  display: block;
+  line-height: 1.5;
+}
+
+.set-date {
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  color: var(--text-dim);
+  display: block;
+  margin-top: 2px;
+}
+
+.set-cards-count {
+  font-family: var(--font-secondary);
+  font-size: 15px;
+  color: var(--text-dim);
+  display: block;
+  margin-top: var(--sp-2);
+}
+
+.set-desc {
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  margin-top: var(--sp-3);
+}
+
+.set-highlight {
+  font-family: var(--font-secondary);
+  font-size: 15px;
+  color: var(--accent-warn);
+  border-left: 3px solid var(--accent-warn);
+  padding-left: var(--sp-3);
+  margin-top: var(--sp-3);
+  display: block;
+}
+
+/* ── Special set badge ── */
+.set-badge {
+  position: absolute;
+  top: -13px;
+  right: 8px;
+  background: var(--accent-secondary);
+  color: #000;
+  font-family: var(--font-primary);
+  font-size: 0.32rem;
+  padding: 3px 7px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.set-badge.gold {
+  background: var(--accent-warn);
+  color: #000;
+}
+
+/* ── Color groups ── */
+.mana-colors {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--sp-3);
+  margin-top: var(--sp-5);
+}
+
+.mana-color-box {
+  background: var(--bg-card);
+  border: 3px solid var(--mana-color, #444);
+  padding: var(--sp-4) var(--sp-3);
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+
+.mana-color-box:hover {
+  box-shadow: 0 0 12px var(--mana-color, #444);
+}
+
+.mana-icon {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: var(--sp-2);
+}
+
+.mana-name {
+  font-family: var(--font-primary);
+  font-size: 0.38rem;
+  color: var(--mana-color, #ccc);
+  display: block;
+  margin-bottom: var(--sp-2);
+}
+
+.mana-theme {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  color: var(--text-dim);
+  display: block;
+}
+
+/* ── Collection closing box ── */
+.collection-box {
+  background: var(--bg-card);
+  border: 4px solid var(--accent-secondary);
+  padding: var(--sp-6);
+  position: relative;
+  overflow: hidden;
+}
+
+.collection-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,0,255,0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.collection-box p {
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text);
+  position: relative;
+  z-index: 1;
+}
+
+.collection-box p + p { margin-top: var(--sp-3); }
+
+.collection-stat {
+  margin: var(--sp-5) 0;
+  position: relative;
+  z-index: 1;
+}
+
+.collection-stat-label {
+  font-family: var(--font-primary);
+  font-size: 0.42rem;
+  color: var(--text-dim);
+  margin-bottom: var(--sp-2);
+  display: flex;
+  justify-content: space-between;
+}
+
+.collection-note {
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  color: var(--accent-secondary);
+  text-shadow: var(--glow-pink);
+  border-left: 4px solid var(--accent-secondary);
+  padding-left: var(--sp-4);
+  margin: var(--sp-5) 0;
+  display: block;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Era group header ── */
+.era-header {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  margin: var(--sp-7) 0 var(--sp-4);
+  padding-bottom: var(--sp-3);
+  border-bottom: 2px solid #222;
+}
+
+.era-title {
+  font-family: var(--font-primary);
+  font-size: clamp(0.45rem, 1.2vw, 0.65rem);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  flex: 1;
+}
+
+.era-badge {
+  font-family: var(--font-primary);
+  font-size: 0.38rem;
+  color: var(--text-dim);
+  border: 1px solid #333;
+  padding: 3px 8px;
+  text-transform: uppercase;
+}
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .editions-grid { grid-template-columns: repeat(2, 1fr); }
+  .mtg-pillars-grid { grid-template-columns: 1fr; }
+  .mana-colors { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .editions-grid { grid-template-columns: 1fr; }
+  .mana-colors { grid-template-columns: repeat(2, 1fr); }
+  .personal-story { padding: var(--sp-4); }
+  .personal-story-header { flex-direction: column; gap: var(--sp-3); }
+  .personal-story-icon { font-size: 2.5rem; }
+  .collection-box { padding: var(--sp-4); }
+  .quote-card { padding: var(--sp-4); }
+}
+
+/* ── Footer legal ── */
+.footer-legal {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.footer-copyright {
+  font-family: var(--font-primary);
+  font-size: 0.4rem;
+  color: var(--accent-primary);
+  margin-bottom: 0.8rem;
+}
+.footer-trademark {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-notice {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}

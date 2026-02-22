@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Freakonia — Noticias. Actualidad friki sin filtros: GOT, gaming, esports, gamedev y más." />
+  <title>Noticias — Freakonia</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/news.css" />
+</head>
+<body>
+
+<!-- CRT overlay -->
+<div class="crt-overlay" aria-hidden="true"></div>
+
+<!-- ─── Navigation ─────────────────────────────────────────────────────── -->
+<nav class="navbar" role="navigation" aria-label="Navegación principal">
+  <div class="container">
+    <a href="index.html" class="nav-brand">⚔ FREAKONIA</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">▼ MENU</button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html"     class="nav-link">🏠 Inicio</a></li>
+      <li><a href="gamedev.html"   class="nav-link">🎮 GameDev</a></li>
+      <li><a href="gaming.html"    class="nav-link">🕹 Gaming</a></li>
+      <li><a href="esports.html"   class="nav-link">🏆 Esports</a></li>
+      <li><a href="got.html"       class="nav-link">🐉 GoT</a></li>
+      <li><a href="warhammer.html" class="nav-link">⚙ Warhammer</a></li>
+      <li><a href="magic.html"     class="nav-link">✨ MtG</a></li>
+      <li><a href="rol.html"       class="nav-link">🎲 Rol</a></li>
+      <li><a href="nba.html"       class="nav-link">🏀 NBA</a></li>
+      <li><a href="java.html"      class="nav-link">☕ Java</a></li>
+      <li><a href="social.html"    class="nav-link">📡 Social</a></li>
+      <li><a href="news.html"      class="nav-link active">📰 News</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ─── Page Header ─────────────────────────────────────────────────────── -->
+<div class="page-header">
+  <div class="container">
+    <p class="page-header-pre">📰 FREAKONIA</p>
+    <h1 class="page-header-title">NOTICIAS</h1>
+    <p class="page-header-sub">Actualidad friki · Sin filtros · Con opinión</p>
+    <div class="stats-row">
+      <div class="stat-box">
+        <span class="stat-value" id="newsCount">1</span>
+        <span class="stat-label">NOTICIAS</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-value">2026</span>
+        <span class="stat-label">TEMPORADA</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-value">5</span>
+        <span class="stat-label">CATEGORÍAS</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+
+    <!-- SEARCH + FILTER BAR -->
+    <div class="news-controls">
+
+      <!-- Search -->
+      <div class="news-search-wrap">
+        <span class="news-search-icon">🔍</span>
+        <input
+          type="text"
+          id="newsSearch"
+          class="news-search-input"
+          placeholder="BUSCAR NOTICIA..."
+          autocomplete="off"
+        >
+      </div>
+
+      <!-- Category filters -->
+      <div class="news-filters" id="newsFilters">
+        <button class="news-filter-btn active" data-filter="all">
+          ALL
+        </button>
+        <button class="news-filter-btn" data-filter="got">
+          🐉 GOT
+        </button>
+        <button class="news-filter-btn" data-filter="gaming">
+          🎮 GAMING
+        </button>
+        <button class="news-filter-btn" data-filter="esports">
+          🏆 ESPORTS
+        </button>
+        <button class="news-filter-btn" data-filter="gamedev">
+          ⚙ GAMEDEV
+        </button>
+        <button class="news-filter-btn" data-filter="misc">
+          ⭐ MISC
+        </button>
+      </div>
+
+    </div>
+
+    <!-- NO RESULTS MESSAGE -->
+    <div class="news-no-results" id="newsNoResults" style="display:none">
+      <p>// NO SE ENCONTRARON NOTICIAS</p>
+    </div>
+
+    <!-- NEWS GRID -->
+    <!--
+      HOW TO ADD NEW ARTICLES:
+      Copy one .news-card block and change:
+      - data-category: got | gaming | esports | gamedev | misc
+      - data-title: article title in lowercase for search
+      - .news-card-cat: category badge text
+      - .news-card-date: publication date
+      - .news-card-title: article title
+      - .news-card-img src: image path
+      - .news-card-excerpt: short summary
+      - .news-card-full: full article content
+      - .news-card-tags: relevant tags
+      Articles are shown newest first — add new ones at the TOP
+    -->
+    <div class="news-grid" id="newsGrid">
+
+      <!-- ============================================
+           ARTICLE 1 — House of the Dragon S3
+           ============================================ -->
+      <article
+        class="news-card reveal"
+        data-category="got"
+        data-title="house of the dragon temporada 3 trailer fecha estreno junio 2026 batalla del gullet"
+      >
+        <div class="news-card-header">
+          <span class="news-card-cat news-cat--got">🐉 GOT</span>
+          <span class="news-card-date">22 · FEB · 2026</span>
+        </div>
+
+        <div class="news-card-img-wrap">
+          <img
+            src="assets/img/house_of_the_dragon_s3.jpg"
+            alt="House of the Dragon — Temporada 3"
+            class="news-card-img"
+            onerror="this.parentElement.style.display='none'"
+          >
+        </div>
+
+        <div class="news-card-body">
+          <h2 class="news-card-title">
+            HOUSE OF THE DRAGON T3 — YA HAY TRÁILER Y FECHA
+          </h2>
+
+          <p class="news-card-excerpt">
+            La guerra de los dragones vuelve en junio de 2026.
+            HBO acaba de soltar el primer tráiler oficial y confirma
+            que la Batalla del Gullet llegará por fin a la pantalla.
+          </p>
+
+          <!-- Expandable full content -->
+          <div class="news-card-full" style="display:none">
+            <p>
+La temporada 1 de House of the Dragon tenía su gracia, ¿eh? Sangre, incesto Targaryen bien dosificado, dragones que
+molaban y un Paddy Considine que se comía la pantalla como un abuelo cabreado con la vida. No era perfecta, pero te
+dejaba con ganas de más. Pues bien: llegó la temporada 2 y los guionistas debieron de decirse: "¿Y si la cagamos a lo
+grande? ¡Venga, inventemos por doquier y a ver qué pasa!"
+            </p>
+            <p>
+Porque, madre mía, qué demencial fue todo. Ser Criston Cole asesinando a gente importante sin consecuencias aparentes:
+mata a uno en una boda delante de todo el mundo, luego liquida a otro consejero como quien pela una patata, y el tío
+sigue de Mano del Rey, de Lord Comandante y de lo que le salga de los cojones. ¿Dónde está la justicia westerosi? ¿En el
+cajón de "ya lo arreglamos en la temporada 3"?
+            </p>
+            <p>
+            Y luego las reinas, Rhaenyra y Alicent, viéndose cara a cara varias veces como si fueran dos amigas quedando para un
+            café después del pilates. "Oye, guapa, perdona que mataran a tu hijo/nieto, pero ¿tomamos algo y hablamos de paz?". Han
+            asesinado a hijos y nietos de ambas, hay una guerra civil que está dejando Westeros como un coladero de sangre, y ellas
+            ahí, confidencias en el Sept o en Dragonstone, quedando tan amigas. ¿En serio? ¿Dónde quedó el odio visceral, el veneno,
+            la venganza Targaryen? Esto no es Juego de Tronos, esto es The Real Housewives of King's Landing.
+            </p>
+<p>
+            Y no olvidemos al primogénito Velaryon... ¡el puto Laenor sobrevive! Finge su muerte en la temporada 1 (un invento de
+            los guionistas que ya olía raro), se pira a Essos con su novio a vivir la vida loca, y en la 2 ni rastro, pero Seasmoke
+            anda por ahí buscando nuevo jinete como si nada. ¿Y Corlys y Rhaenys? ¿No se enteran de que su hijo está vivo tomando
+            mojitos en Braavos? ¿O es que les da igual? Un desastre logístico y emocional.
+            En fin, la temporada 2 fue un festival de incoherencias, cambios absurdos del libro y decisiones que parecen tomadas en
+            una borrachera colectiva de los showrunners. La 1 prometía fuego y sangre; la 2 nos dio humo, bostezos y un "pero ¿qué
+            coño?" cada dos por tres.
+            ¿Renovamos para la 3? Claro, porque somos masoquistas y queremos ver cómo la cagan más todavía. Pero, por favor, que
+            alguien avise a George R.R. Martin: que saque la escopeta de perdigones y les dé caña antes de que conviertan Poniente
+            en una sitcom de dragones.
+</p>
+
+          </div>
+
+          <!-- Read more toggle -->
+          <button class="news-read-more" data-expanded="false">
+            ▶ LEER MÁS
+          </button>
+
+        </div>
+
+        <div class="news-card-footer">
+          <div class="news-card-tags">
+            <span class="tag">House of the Dragon</span>
+            <span class="tag">HBO</span>
+            <span class="tag">Targaryens</span>
+            <span class="tag">Batalla del Gullet</span>
+            <span class="tag">2026</span>
+          </div>
+        </div>
+
+      </article>
+
+      <!-- ADD NEW ARTICLES ABOVE THIS COMMENT -->
+
+    </div><!-- end news-grid -->
+  </div><!-- end container -->
+
+</main>
+
+<!-- ─── Footer ──────────────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="gamedev.html">GameDev</a></li>
+      <li><a href="gaming.html">Gaming</a></li>
+      <li><a href="esports.html">Esports</a></li>
+      <li><a href="got.html">GoT</a></li>
+      <li><a href="warhammer.html">Warhammer</a></li>
+      <li><a href="magic.html">MtG</a></li>
+      <li><a href="rol.html">Rol</a></li>
+      <li><a href="nba.html">NBA</a></li>
+      <li><a href="java.html">Java</a></li>
+      <li><a href="social.html">Social</a></li>
+      <li><a href="news.html">News</a></li>
+    </ul>
+    <p>⚔ FREAKONIA — KARLETE</p>
+    <p style="color:#444;">HECHO CON AMOR PIXELADO Y DEMASIADAS BEBIDAS ENERGÉTICAS</p>
+    <p style="color:#333;">◄ INSERT COIN ►</p>
+
+    <div class="footer-legal">
+      <div class="pixel-divider"></div>
+      <p class="footer-copyright">
+        © 2025 FREAKONIA — KARLETE. ALL RIGHTS RESERVED.
+      </p>
+      <p class="footer-trademark">
+        FREAKONIA™ IS A REGISTERED PERSONAL BRAND.
+        ALL CONTENT, DESIGNS, GAME CONCEPTS AND ORIGINAL TEXTS
+        ON THIS SITE ARE THE EXCLUSIVE PROPERTY OF THEIR AUTHOR.
+        UNAUTHORIZED REPRODUCTION, DISTRIBUTION OR USE OF ANY
+        CONTENT IS STRICTLY PROHIBITED WITHOUT PRIOR WRITTEN PERMISSION.
+      </p>
+      <p class="footer-notice">
+        ⚠ THIS SITE CONTAINS STRONG OPINIONS ABOUT VIDEO GAMES,
+        FANTASY LORE AND BASKETBALL. READER DISCRETION IS ADVISED.
+        NO GOBLINS WERE HARMED IN THE MAKING OF THIS WEBSITE.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/news.js"></script>
+</body>
+</html>

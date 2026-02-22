@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Freakonia — Rol de Mesa. MERP, Stormbringer, Cthulhu y Star Wars d6 con JOC Internacional. Una defensa del rol de los 90 y una colección de libros inencontrables." />
+  <title>Rol de Mesa — Freakonia</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/rol.css" />
+
+  <style>
+    /* ── Rol accent vars ── */
+    :root {
+      --rol-gold:   var(--accent-warn);
+      --rol-blue:   var(--accent-tertiary);
+      --rol-chaos:  #cc0000;
+      --glow-chaos: 0 0 8px #cc0000, 0 0 20px #cc000055;
+    }
+
+    /* ── Page header ── */
+    .page-header-rol {
+      background: var(--bg-surface);
+      border-bottom: 4px solid var(--accent-warn);
+      padding: var(--sp-7) 0 var(--sp-6);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header-rol::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(255,204,0,0.08) 0%, transparent 50%),
+        linear-gradient(225deg, rgba(0,191,255,0.05) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .page-header-rol::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%; height: 4px;
+      background: linear-gradient(90deg,
+        var(--accent-warn)     0%,
+        var(--accent-tertiary) 35%,
+        var(--accent-warn)     65%,
+        var(--accent-tertiary) 100%);
+    }
+
+    .page-header-rol .container { position: relative; z-index: 1; }
+
+    .page-header-pre {
+      font-family: var(--font-primary);
+      font-size: 0.5rem;
+      color: var(--accent-warn);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: var(--sp-3);
+    }
+
+    .page-header-title {
+      font-family: var(--font-primary);
+      font-size: clamp(1.2rem, 4vw, 2.4rem);
+      color: var(--text-bright);
+      text-shadow: var(--glow-gold);
+      margin-bottom: var(--sp-3);
+    }
+
+    .page-header-sub {
+      font-family: var(--font-secondary);
+      font-size: 22px;
+      color: var(--text-dim);
+      margin-bottom: 0;
+    }
+
+    /* ── Section label strip ── */
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-3);
+      font-family: var(--font-primary);
+      font-size: 0.55rem;
+      color: #000;
+      background: var(--accent-warn);
+      padding: var(--sp-2) var(--sp-4);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: var(--sp-5);
+    }
+
+    .section-label.blue   { background: var(--accent-tertiary);  color: #000; }
+    .section-label.green  { background: var(--accent-primary);   color: #000; }
+    .section-label.pink   { background: var(--accent-secondary); color: #fff; }
+    .section-label.chaos  { background: var(--rol-chaos);        color: #fff; }
+    .section-label.dim    { background: #333; color: var(--text-dim); }
+
+    /* ── Section quick nav ── */
+    .section-quicknav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--sp-3);
+      margin: var(--sp-5) 0 var(--sp-6);
+    }
+
+    .section-quicknav a {
+      font-family: var(--font-primary);
+      font-size: 0.4rem;
+      color: var(--text-dim);
+      border: 2px solid #333;
+      padding: var(--sp-2) var(--sp-3);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
+      transition: color 0.1s, border-color 0.1s, box-shadow 0.1s;
+    }
+
+    .section-quicknav a:hover {
+      color: var(--accent-warn);
+      border-color: var(--accent-warn);
+      box-shadow: var(--glow-gold);
+    }
+
+    /* ── Lore / intro box ── */
+    .lore-box {
+      background: var(--bg-card);
+      border: 2px solid #2a2a2a;
+      padding: var(--sp-5);
+    }
+
+    .lore-box-title {
+      font-family: var(--font-primary);
+      font-size: 0.5rem;
+      color: var(--accent-warn);
+      text-shadow: var(--glow-gold);
+      margin-bottom: var(--sp-4);
+      display: block;
+    }
+
+    .lore-box p {
+      font-family: var(--font-secondary);
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--text);
+    }
+
+    .lore-box p + p { margin-top: var(--sp-3); }
+
+    /* ── Quote card ── */
+    .quote-card {
+      background: var(--bg-card);
+      border: 4px solid var(--accent-warn);
+      box-shadow: var(--glow-gold);
+      padding: var(--sp-5) var(--sp-6);
+      position: relative;
+      margin-top: var(--sp-5);
+    }
+
+    .quote-card::before {
+      content: '"';
+      position: absolute;
+      top: var(--sp-2);
+      left: var(--sp-4);
+      font-family: var(--font-secondary);
+      font-size: 5rem;
+      color: var(--accent-warn);
+      opacity: 0.12;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .quote-card p {
+      font-family: var(--font-secondary);
+      font-size: 20px;
+      line-height: 1.8;
+      position: relative;
+      z-index: 1;
+      color: var(--text);
+      font-style: italic;
+    }
+
+    .quote-attribution {
+      font-family: var(--font-primary);
+      font-size: 0.38rem;
+      color: var(--text-dim);
+      margin-top: var(--sp-3);
+      display: block;
+    }
+
+    /* ── Quote card final (special closing) ── */
+    .quote-card-final {
+      background: var(--bg-card);
+      border: 4px solid var(--accent-warn);
+      box-shadow: 0 0 0 1px var(--accent-warn), var(--glow-gold);
+      padding: var(--sp-6);
+      position: relative;
+      text-align: center;
+      margin-top: var(--sp-6);
+    }
+
+    .quote-card-final p {
+      font-family: var(--font-secondary);
+      font-size: 22px;
+      line-height: 1.8;
+      color: var(--text-bright);
+      font-style: italic;
+    }
+
+    /* ── Publisher card (JOC Internacional) ── */
+    .publisher-card {
+      border: 4px solid var(--accent-warn);
+      background: var(--bg-card);
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+
+    .publisher-card::before {
+      content: "JOC";
+      position: absolute;
+      top: -14px;
+      left: 16px;
+      background: var(--accent-warn);
+      color: var(--bg);
+      font-family: var(--font-primary);
+      font-size: 0.5rem;
+      padding: 2px 8px;
+    }
+
+    .publisher-card:hover {
+      box-shadow: var(--glow-gold);
+    }
+
+    .publisher-card-title {
+      font-family: var(--font-primary);
+      font-size: clamp(0.55rem, 1.5vw, 0.75rem);
+      color: var(--accent-warn);
+      text-shadow: var(--glow-gold);
+      margin-bottom: var(--sp-4);
+      display: block;
+      padding-top: var(--sp-2);
+    }
+
+    .publisher-card p {
+      font-family: var(--font-secondary);
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--text);
+    }
+
+    .publisher-card p + p { margin-top: var(--sp-3); }
+
+    .publisher-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--sp-3);
+      margin-top: var(--sp-5);
+      padding-top: var(--sp-4);
+      border-top: 1px solid #2a2a2a;
+    }
+
+    .publisher-stat {
+      background: #1e1e1e;
+      border: 1px solid #333;
+      padding: var(--sp-3) var(--sp-4);
+      text-align: center;
+    }
+
+    .publisher-stat-value {
+      font-family: var(--font-primary);
+      font-size: 0.55rem;
+      color: var(--accent-warn);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .publisher-stat-label {
+      font-family: var(--font-secondary);
+      font-size: 15px;
+      color: var(--text-dim);
+      display: block;
+    }
+
+    .publisher-tragedy {
+      margin-top: var(--sp-5);
+      background: #1a0000;
+      border: 2px solid var(--rol-chaos);
+      padding: var(--sp-4) var(--sp-5);
+    }
+
+    .publisher-tragedy p {
+      font-family: var(--font-secondary);
+      font-size: 17px;
+      color: #ffaaaa;
+      line-height: 1.7;
+    }
+
+    .publisher-tragedy-label {
+      font-family: var(--font-primary);
+      font-size: 0.4rem;
+      color: var(--rol-chaos);
+      display: block;
+      margin-bottom: var(--sp-3);
+    }
+
+    /* ── Collection items (libros propios) ── */
+    .collection-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: var(--sp-5);
+    }
+
+    .collection-item {
+      border: 4px solid var(--accent-primary);
+      background: var(--bg-card);
+      padding: 1.5rem;
+      position: relative;
+      transition: box-shadow 0.2s;
+    }
+
+    .collection-item:hover {
+      box-shadow: var(--glow-green);
+    }
+
+    .owned-badge {
+      position: absolute;
+      top: -12px;
+      right: 8px;
+      background: var(--accent-primary);
+      color: var(--bg);
+      font-family: var(--font-primary);
+      font-size: 0.32rem;
+      padding: 2px 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .collection-item-icon {
+      font-size: 2.5rem;
+      display: block;
+      margin-bottom: var(--sp-3);
+    }
+
+    .collection-item-title {
+      font-family: var(--font-primary);
+      font-size: 0.5rem;
+      color: var(--accent-primary);
+      text-shadow: var(--glow-green);
+      display: block;
+      margin-bottom: var(--sp-2);
+      line-height: 1.6;
+    }
+
+    .collection-item-meta {
+      font-family: var(--font-secondary);
+      font-size: 15px;
+      color: var(--text-dim);
+      display: block;
+      margin-bottom: var(--sp-3);
+    }
+
+    .collection-item p {
+      font-family: var(--font-secondary);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text);
+    }
+
+    .collection-item-value {
+      display: inline-block;
+      margin-top: var(--sp-4);
+      font-family: var(--font-primary);
+      font-size: 0.38rem;
+      color: var(--accent-warn);
+      border: 1px solid var(--accent-warn);
+      padding: 3px 8px;
+    }
+
+    /* ── RPG System blocks ── */
+    .rpg-systems-list {
+      margin-top: var(--sp-6);
+    }
+
+    .rpg-system {
+      border-left: 6px solid var(--system-color, var(--accent-primary));
+      padding-left: 1.5rem;
+      margin-bottom: var(--sp-7);
+      position: relative;
+    }
+
+    .rpg-system-header {
+      display: flex;
+      align-items: baseline;
+      gap: var(--sp-4);
+      margin-bottom: var(--sp-4);
+      padding-bottom: var(--sp-3);
+      border-bottom: 1px solid #1e1e1e;
+    }
+
+    .rpg-system-title {
+      font-family: var(--font-primary);
+      font-size: clamp(0.5rem, 1.4vw, 0.7rem);
+      color: var(--system-color, var(--accent-primary));
+      line-height: 1.5;
+    }
+
+    .rpg-system-year {
+      font-family: var(--font-secondary);
+      font-size: 18px;
+      color: var(--text-dim);
+      white-space: nowrap;
+    }
+
+    .rpg-system-body p {
+      font-family: var(--font-secondary);
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--text);
+    }
+
+    .rpg-system-body p + p { margin-top: var(--sp-3); }
+
+    .rpg-system-note {
+      background: #111;
+      border-left: 3px solid var(--system-color, var(--accent-primary));
+      padding: var(--sp-3) var(--sp-4);
+      margin-top: var(--sp-4);
+      font-family: var(--font-secondary);
+      font-size: 17px;
+      color: var(--text-dim);
+      font-style: italic;
+    }
+
+    /* ── Supplement cards ── */
+    .supplements-title {
+      font-family: var(--font-primary);
+      font-size: 0.42rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: var(--sp-5) 0 var(--sp-3);
+      display: block;
+    }
+
+    .supplements-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--sp-3);
+      margin-top: var(--sp-3);
+    }
+
+    .supplement-card {
+      border: 2px solid var(--system-color, var(--accent-primary));
+      background: var(--bg-card);
+      padding: var(--sp-3) var(--sp-4);
+      transition: background 0.1s, box-shadow 0.1s;
+      cursor: default;
+    }
+
+    .supplement-card:hover {
+      background: var(--bg-surface);
+      box-shadow: 0 0 8px var(--system-color, var(--accent-primary));
+    }
+
+    .supplement-card-name {
+      font-family: var(--font-secondary);
+      font-size: 17px;
+      color: var(--text);
+      display: block;
+      line-height: 1.4;
+    }
+
+    .supplement-year {
+      font-family: var(--font-secondary);
+      font-size: 14px;
+      color: var(--text-dim);
+      display: block;
+      margin-top: 2px;
+    }
+
+    /* ── Closing narrative section ── */
+    .closing-narrative {
+      background: var(--bg-card);
+      border: 4px solid var(--accent-warn);
+      box-shadow: 0 0 0 1px var(--accent-warn), var(--glow-gold);
+      padding: var(--sp-6);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .closing-narrative::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,204,0,0.04) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .closing-narrative p {
+      font-family: var(--font-secondary);
+      font-size: 19px;
+      line-height: 1.9;
+      color: var(--text);
+      position: relative;
+      z-index: 1;
+    }
+
+    .closing-narrative p + p { margin-top: var(--sp-4); }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .collection-grid  { grid-template-columns: repeat(2, 1fr); }
+      .supplements-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 640px) {
+      .collection-grid  { grid-template-columns: 1fr; }
+      .supplements-grid { grid-template-columns: 1fr; }
+      .publisher-card   { padding: var(--sp-5) var(--sp-4); }
+      .publisher-stats  { flex-direction: column; }
+      .rpg-system       { padding-left: var(--sp-4); }
+      .closing-narrative { padding: var(--sp-4); }
+      .quote-card       { padding: var(--sp-4); }
+    }
+
+    /* ── Footer legal ── */
+    .footer-legal {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+    .footer-copyright {
+      font-family: var(--font-primary);
+      font-size: 0.4rem;
+      color: var(--accent-primary);
+      margin-bottom: 0.8rem;
+    }
+    .footer-trademark {
+      font-family: var(--font-secondary);
+      font-size: 14px;
+      color: #555;
+      line-height: 1.5;
+      margin-bottom: 0.5rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .footer-notice {
+      font-family: var(--font-secondary);
+      font-size: 14px;
+      color: #444;
+      line-height: 1.5;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+
+<!-- CRT overlay -->
+<div class="crt-overlay" aria-hidden="true"></div>
+
+<!-- ─── Navigation ─────────────────────────────────────────────────────── -->
+<nav class="navbar" role="navigation" aria-label="Navegación principal">
+  <div class="container">
+    <a href="index.html" class="nav-brand">⚔ FREAKONIA</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">▼ MENU</button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html"     class="nav-link">🏠 Inicio</a></li>
+      <li><a href="gamedev.html"   class="nav-link">🎮 GameDev</a></li>
+      <li><a href="gaming.html"    class="nav-link">🕹 Gaming</a></li>
+      <li><a href="esports.html"   class="nav-link">🏆 Esports</a></li>
+      <li><a href="got.html"       class="nav-link">🐉 GoT</a></li>
+      <li><a href="warhammer.html" class="nav-link">⚙ Warhammer</a></li>
+      <li><a href="magic.html"     class="nav-link">✨ MtG</a></li>
+      <li><a href="rol.html"       class="nav-link active">🎲 Rol</a></li>
+      <li><a href="nba.html"       class="nav-link">🏀 NBA</a></li>
+      <li><a href="java.html"      class="nav-link">☕ Java</a></li>
+      <li><a href="social.html"    class="nav-link">📡 Social</a></li>
+      <li><a href="news.html"      class="nav-link">📰 News</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ─── Page Header ─────────────────────────────────────────────────────── -->
+<header class="page-header-rol">
+  <div class="container">
+    <p class="page-header-pre">🎲 JOC INTERNACIONAL · AÑOS 90</p>
+    <h1 class="page-header-title">🎲 ROL DE MESA</h1>
+    <p class="page-header-sub">"Imaginación, dados y madrugadas — sin pantallas, sin filtros"</p>
+  </div>
+</header>
+
+<main>
+
+  <!-- ─── Hero image ─────────────────────────────────────────────────── -->
+  <div class="rol-hero-img-wrap">
+    <img
+      src="assets/img/mesa_rol.jpg"
+      alt="Freakonia — Rol de Mesa"
+      class="rol-hero-img"
+    >
+  </div>
+
+  <!-- ─── Stats overview ──────────────────────────────────────────────── -->
+  <section class="section" style="padding-top: var(--sp-7); padding-bottom: var(--sp-5);">
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">1989</span>
+          <span class="stat-label">JOC lanza MERP</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--accent-tertiary);text-shadow:var(--glow-blue);">14-18</span>
+          <span class="stat-label">Nuestra edad de oro</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--accent-primary);text-shadow:var(--glow-green);">4</span>
+          <span class="stat-label">Sistemas · MERP · Storm · Cthu · SW</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">∞</span>
+          <span class="stat-label">Partidas épicas jugadas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ─── Quick nav ────────────────────────────────────────────────────── -->
+  <section class="section" style="padding-top: var(--sp-5); padding-bottom: var(--sp-4);">
+    <div class="container">
+      <nav class="section-quicknav" aria-label="Saltar a sección">
+        <span style="font-family:var(--font-primary);font-size:0.4rem;color:var(--text-dim);align-self:center;">▶ IR A:</span>
+        <a href="#defensa">🎲 El Rol en los 90</a>
+        <a href="#joc">📚 JOC Internacional</a>
+        <a href="#coleccion">💎 Mi Colección</a>
+        <a href="#sistemas">⚔ Los Sistemas</a>
+        <a href="#mesa">🍺 La Mesa</a>
+      </nav>
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 1 — EL ROL EN LOS 90: UNA DEFENSA
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="defensa" style="padding-top: var(--sp-7);">
+    <div class="container">
+
+      <div class="section-label">🎲 UNA DEFENSA NECESARIA</div>
+      <h2 class="section-title" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">EL ROL EN LOS 90</h2>
+
+      <div class="lore-box reveal" style="border-color: var(--accent-warn);">
+        <span class="lore-box-title">// KARLETE — JUGADORA DE ROL DESDE LOS 14 AÑOS</span>
+        <p>
+          Jugábamos de los 14 a los 18 años. Partidas largas, campañas que duraban semanas,
+          sesiones hasta las tantas con amigos de verdad. Sin pantallas. Sin notificaciones.
+          Solo dados, libros, imaginación y la voz del máster montando mundos enteros
+          desde cero.
+        </p>
+        <p>
+          El rol tenía mala fama injusta. La sociedad de los 90 intentó demonizarlo:
+          que si los frikis, que si era peligroso, que si te alejaba de la realidad.
+          La realidad era exactamente la contraria. El rol nos reunía en torno a una mesa,
+          nos hacía hablar, cooperar, crear historias, resolver problemas en grupo.
+          Todo ventajas. Todo sano. Socializar. Puro tejido social antes de que eso se pusiera de moda.
+        </p>
+        <p>
+          Esta página es un homenaje a esa época y a la editorial que lo hizo posible
+          en España: JOC Internacional. Gracias a ellos, Tolkien, Lovecraft, Moorcock
+          y la galaxia muy, muy lejana llegaron a las mesas de Cáceres.
+        </p>
+      </div>
+
+      <div class="quote-card reveal">
+        <p>💬 "Mientras nos tachaban de raros, estábamos aprendiendo narrativa,
+        trabajo en equipo e improvisación. Sin saberlo."</p>
+        <span class="quote-attribution">— Karlete, reivindicando el rol de los 90</span>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: var(--sp-7) var(--sp-5) 0;" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 2 — JOC INTERNACIONAL
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="joc" style="padding-top: var(--sp-7);">
+    <div class="container">
+
+      <div class="section-label gold">📚 LA EDITORIAL QUE LO CAMBIÓ TODO</div>
+      <h2 class="section-title" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">JOC INTERNACIONAL</h2>
+
+      <div class="publisher-card reveal">
+        <span class="publisher-card-title">JOC INTERNACIONAL S.A. — BARCELONA, 1985–1998</span>
+        <p>
+          JOC Internacional fue la editorial española pionera del rol. Fundada en Barcelona,
+          fueron los primeros en traducir y publicar los grandes sistemas de juego de rol
+          americanos y británicos al castellano y al catalán, haciendo accesible toda una
+          cultura friki que de otro modo habría quedado reservada a quien leyera inglés.
+        </p>
+        <p>
+          Su catálogo fue monumental: El Señor de los Anillos (MERP), La Llamada de Cthulhu,
+          Stormbringer, Star Wars d6, RuneQuest, Paranoia, Rolemaster... Cada libro era una
+          ventana a un mundo nuevo, con traducciones cuidadas, ilustraciones de primer nivel
+          y una maquetación que convertía cada manual en un objeto de culto.
+        </p>
+        <p>
+          Hoy, sus libros son piezas de coleccionista. El manual básico de MERP puede
+          alcanzar los 200€ en Wallapop. La Llamada de Cthulhu de JOC supera los 100€.
+          Stormbringer no tiene precio fijo porque simplemente no aparece. Los que los
+          tenemos los guardamos como lo que son: reliquias de una edad de oro irrepetible.
+        </p>
+
+        <div class="publisher-stats">
+          <div class="publisher-stat">
+            <span class="publisher-stat-value">1985</span>
+            <span class="publisher-stat-label">Fundación</span>
+          </div>
+          <div class="publisher-stat">
+            <span class="publisher-stat-value">10+</span>
+            <span class="publisher-stat-label">Sistemas publicados</span>
+          </div>
+          <div class="publisher-stat">
+            <span class="publisher-stat-value">100+</span>
+            <span class="publisher-stat-label">Títulos en catálogo</span>
+          </div>
+          <div class="publisher-stat">
+            <span class="publisher-stat-value">1998</span>
+            <span class="publisher-stat-label">Cierre · Suspensión de pagos</span>
+          </div>
+        </div>
+
+        <div class="publisher-tragedy">
+          <span class="publisher-tragedy-label">💀 EL FINAL: EL SEÑOR DE LOS ANILLOS JCC (1995)</span>
+          <p>
+            El detonante del cierre fue el juego de cartas coleccionable de El Señor de los Anillos
+            (1995). JOC produjo 30 millones de cartas apostando por replicar el fenómeno Magic:
+            The Gathering. La apuesta fue demasiado grande: las ventas no alcanzaron las
+            expectativas, el stock enterró la empresa en deudas y en 1998 llegó la suspensión
+            de pagos. Una editorial legendaria desapareció por un solo proyecto sobreproducido.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: var(--sp-7) var(--sp-5) 0;" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 3 — MI COLECCIÓN
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="coleccion" style="padding-top: var(--sp-7);">
+    <div class="container">
+
+      <div class="section-label green">💎 JOYAS DESCATALOGADAS</div>
+      <h2 class="section-title" style="color:var(--accent-primary);text-shadow:var(--glow-green);">MI COLECCIÓN</h2>
+
+      <div class="lore-box reveal" style="margin-bottom: var(--sp-5);">
+        <span class="lore-box-title" style="color:var(--accent-primary);text-shadow:var(--glow-green);">// EN MI ESTANTERÍA, HOY</span>
+        <p>
+          De toda aquella época dorada, conservo algunas joyas que el tiempo ha convertido
+          en auténticas piezas de coleccionista. Libros descatalogadísimos, inencontrables,
+          que huelen a los 90 cada vez que los abres. Papel envejecido, ilustraciones que
+          siguen siendo magistrales y reglas que me sé de memoria aunque ya no las juegue.
+        </p>
+        <p>
+          No se venden. No se prestan. Se guardan.
+        </p>
+      </div>
+
+      <div class="collection-grid stagger">
+
+        <!-- Stormbringer -->
+        <div class="collection-item reveal">
+          <div class="owned-badge">✓ LO TENGO</div>
+          <span class="collection-item-icon">💀</span>
+          <span class="collection-item-title">STORMBRINGER / ELRIC</span>
+          <span class="collection-item-meta">JOC Internacional · 1990 · Colección completa</span>
+          <p>
+            Conservo todos los libros publicados por JOC para Stormbringer.
+            Una colección completa que hoy es prácticamente imposible de reunir.
+            El manual básico, los suplementos... todo.
+          </p>
+          <span class="collection-item-value">💰 VALOR: IMPAGABLE</span>
+        </div>
+
+        <!-- Cthulhu -->
+        <div class="collection-item reveal">
+          <div class="owned-badge">✓ LO TENGO</div>
+          <span class="collection-item-icon">🐙</span>
+          <span class="collection-item-title">LA LLAMADA DE CTHULHU</span>
+          <span class="collection-item-meta">JOC Internacional · 1988 · Manual básico</span>
+          <p>
+            El manual básico de la primera gran traducción de Chaosium al español.
+            Uno de los libros de rol más influyentes jamás publicados en castellano,
+            y una de las piezas más buscadas por los coleccionistas actuales.
+          </p>
+          <span class="collection-item-value">💰 VALOR: +100€</span>
+        </div>
+
+        <!-- MERP -->
+        <div class="collection-item reveal">
+          <div class="owned-badge">✓ LO TENGO</div>
+          <span class="collection-item-icon">🧙</span>
+          <span class="collection-item-title">EL SEÑOR DE LOS ANILLOS · MERP</span>
+          <span class="collection-item-meta">JOC Internacional · 1989 · Manual básico</span>
+          <p>
+            La puerta de entrada a la Tierra Media de Tolkien para miles de jugadores
+            españoles. Arte de Angus McBride en cada página. Un objeto de arte además
+            de un juego. Hoy cotiza entre 100 y 200€ en el mercado de segunda mano.
+          </p>
+          <span class="collection-item-value">💰 VALOR: 100–200€</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: var(--sp-7) var(--sp-5) 0;" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 4 — LOS SISTEMAS: CUATRO MUNDOS, UNA MESA
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="sistemas" style="padding-top: var(--sp-7); padding-bottom: var(--sp-5);">
+    <div class="container">
+
+      <div class="section-label blue">⚔ CUATRO MUNDOS, UNA MESA</div>
+      <h2 class="section-title" style="color:var(--accent-tertiary);text-shadow:var(--glow-blue);">LOS SISTEMAS</h2>
+
+      <div class="rpg-systems-list">
+
+        <!-- ── MERP ─────────────────────────────────────────────────────── -->
+        <div class="rpg-system reveal" style="--system-color: var(--accent-primary);">
+          <div class="rpg-system-header">
+            <span class="rpg-system-title">🧙 EL SEÑOR DE LOS ANILLOS — MERP</span>
+            <span class="rpg-system-year">JOC · 1989 · d100</span>
+          </div>
+          <div class="rol-books-grid rol-books-grid--2col" data-rpg="lotr">
+            <div class="rol-book-wrap">
+              <img src="assets/img/LOTR_1.jpg"
+                   alt="El Señor de los Anillos JOC" class="rol-book-img">
+              <span class="rol-book-caption">EL SEÑOR DE LOS ANILLOS</span>
+            </div>
+            <div class="rol-book-wrap">
+              <img src="assets/img/LOTR_2.jpg"
+                   alt="El Señor de los Anillos JOC" class="rol-book-img">
+              <span class="rol-book-caption">SUPLEMENTO</span>
+            </div>
+          </div>
+          <div class="rpg-system-body">
+            <p>
+              Middle-Earth Role Playing, adaptado por JOC en 1989 a partir del sistema
+              de Iron Crown Enterprises. Un sistema d100 donde la creación de personaje
+              era un viaje en sí mismo: elegías raza tolkieniana —hobbit, enano, elfo,
+              hombre de Gondor, númenóreano— y cada una definía tu cosmovisión del juego.
+            </p>
+            <p>
+              El combate era táctico, con tablas de resolución en hexágonos y un sistema
+              de críticos que lo hacía brutalmente realista. La magia era poderosa pero
+              peligrosa: lanzar un hechizo agotaba al personaje y un fallo podía ser
+              catastrófico. Todo en consonancia con el lore de Tolkien, donde la magia
+              es excepcional y reservada a los grandes.
+            </p>
+            <p>
+              El arte de Angus McBride convierte cada suplemento en un libro ilustrado
+              de la Tierra Media. Más de 40 suplementos publicados: regiones enteras
+              detalladas con mapas, historias, PNJs y aventuras. Una enciclopedia viva
+              de la Tierra Media.
+            </p>
+            <div class="rpg-system-note">
+              📖 El manual básico de JOC cotiza actualmente entre 100 y 200€ en wallapop
+              y mercados de segunda mano. Piezas de coleccionista muy buscadas.
+            </div>
+          </div>
+          <span class="supplements-title">// SUPLEMENTOS DESTACADOS</span>
+          <div class="supplements-grid stagger">
+            <div class="supplement-card" style="--system-color: var(--accent-primary);">
+              <span class="supplement-card-name">Lórien</span>
+              <span class="supplement-year">JOC · 1990</span>
+            </div>
+            <div class="supplement-card" style="--system-color: var(--accent-primary);">
+              <span class="supplement-card-name">Las Puertas de Mordor</span>
+              <span class="supplement-year">JOC · 1991</span>
+            </div>
+            <div class="supplement-card" style="--system-color: var(--accent-primary);">
+              <span class="supplement-card-name">Minas Tirith</span>
+              <span class="supplement-year">JOC · 1992</span>
+            </div>
+            <div class="supplement-card" style="--system-color: var(--accent-primary);">
+              <span class="supplement-card-name">Personajes de la Tierra Media</span>
+              <span class="supplement-year">JOC · 1990</span>
+            </div>
+            <div class="supplement-card" style="--system-color: var(--accent-primary);">
+              <span class="supplement-card-name">Gorgoroth</span>
+              <span class="supplement-year">JOC · 1993</span>
+            </div>
+            <div class="supplement-card" style="--system-color: var(--accent-primary);">
+              <span class="supplement-card-name">El Imperio del Rey Brujo</span>
+              <span class="supplement-year">JOC · 1992</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── STORMBRINGER ──────────────────────────────────────────────── -->
+        <div class="rpg-system reveal" style="--system-color: #cc0000;">
+          <div class="rpg-system-header">
+            <span class="rpg-system-title" style="color:#cc0000;text-shadow:var(--glow-chaos);">💀 STORMBRINGER — ELRIC DE MELNIBONÉ</span>
+            <span class="rpg-system-year">JOC · 1990 · BRP (Basic Roleplaying)</span>
+          </div>
+          <div class="rol-books-grid" data-rpg="stormbringer">
+            <div class="rol-book-wrap">
+              <img src="assets/img/STORMBRINGER.jpg"
+                   alt="Stormbringer" class="rol-book-img">
+              <span class="rol-book-caption">STORMBRINGER</span>
+            </div>
+            <div class="rol-book-wrap">
+              <img src="assets/img/OCTOGONO.jpg"
+                   alt="El Octógono de la Oscuridad" class="rol-book-img">
+              <span class="rol-book-caption">EL OCTÓGONO</span>
+            </div>
+            <div class="rol-book-wrap">
+              <img src="assets/img/HECHICEROS.jpg"
+                   alt="Hechiceros" class="rol-book-img">
+              <span class="rol-book-caption">HECHICEROS</span>
+            </div>
+            <div class="rol-book-wrap">
+              <img src="assets/img/EL_LOBO_BLANCO.jpg"
+                   alt="El Lobo Blanco" class="rol-book-img">
+              <span class="rol-book-caption">EL LOBO BLANCO</span>
+            </div>
+            <div class="rol-book-wrap">
+              <img src="assets/img/EL_CANTO_INFERNAL.jpg"
+                   alt="El Canto Infernal" class="rol-book-img">
+              <span class="rol-book-caption">EL CANTO INFERNAL</span>
+            </div>
+            <div class="rol-book-wrap">
+              <img src="assets/img/DEMONIOS_Y_MAGIA.jpg"
+                   alt="Demonios y Magia" class="rol-book-img">
+              <span class="rol-book-caption">DEMONIOS Y MAGIA</span>
+            </div>
+          </div>
+          <div class="rpg-system-body">
+            <p>
+              Basado en la saga de Michael Moorcock: Elric, el último emperor albino de
+              Melniboné, albino y enfermo, dependiente de la espada demoníaca Stormbringer
+              que chupa las almas de sus víctimas para alimentar a su portador. Antihéroe
+              definitivo, maldición y poder en la misma hoja de acero negro.
+            </p>
+            <p>
+              JOC publicó la adaptación de la 4ª edición Chaosium en 1990, con el sistema
+              BRP (Basic Roleplaying) que también usa Cthulhu. Magia mediante invocación de
+              Señores del Caos o de la Ley, moral gris, consecuencias reales de cada
+              decisión. No había héroes claros en Stormbringer — solo supervivientes más
+              o menos comprometidos con fuerzas que los superaban.
+            </p>
+            <p>
+              Las ilustraciones fueron obra de Das Pastoras, artista que luego haría
+              portadas para cómics de Jodorowsky. Una estética oscura, visceral y única
+              que ningún otro juego de rol de la época igualaba.
+            </p>
+            <div class="rpg-system-note" style="border-left-color: #cc0000; color: #ffaaaa;">
+              💀 Conservo TODOS los libros publicados por JOC para Stormbringer.
+              Una colección completa que hoy es prácticamente imposible de reunir —
+              cada título aparece rarísimamente y a precios desorbitados.
+              Tambien tengo apuntes y cambios en el sistema de juego que hice durante las partidas, adaptándolo a nuestro estilo de juego,
+              y haciendolo menos mortal, ya que el juego estaba demasiado desbalanceado.
+               Un tesoro personal.
+            </div>
+          </div>
+          <span class="supplements-title">// SUPLEMENTOS PUBLICADOS POR JOC</span>
+          <div class="supplements-grid stagger">
+            <div class="supplement-card" style="--system-color: #cc0000;">
+              <span class="supplement-card-name">Demonios y Magia</span>
+              <span class="supplement-year">JOC · 1991</span>
+            </div>
+            <div class="supplement-card" style="--system-color: #cc0000;">
+              <span class="supplement-card-name">El Octógono del Caos</span>
+              <span class="supplement-year">JOC · 1991</span>
+            </div>
+            <div class="supplement-card" style="--system-color: #cc0000;">
+              <span class="supplement-card-name">El Lobo Blanco</span>
+              <span class="supplement-year">JOC · 1992</span>
+            </div>
+            <div class="supplement-card" style="--system-color: #cc0000;">
+              <span class="supplement-card-name">Hechiceros de Pan Tang</span>
+              <span class="supplement-year">JOC · 1992</span>
+            </div>
+            <div class="supplement-card" style="--system-color: #cc0000;">
+              <span class="supplement-card-name">Elric!</span>
+              <span class="supplement-year">JOC · 1994</span>
+            </div>
+            <div class="supplement-card" style="--system-color: #cc0000;">
+              <span class="supplement-card-name">El canto infernal</span>
+              <span class="supplement-year">JOC · 1991</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── CTHULHU ────────────────────────────────────────────────────── -->
+        <div class="rpg-system reveal" style="--system-color: var(--accent-secondary);">
+          <div class="rpg-system-header">
+            <span class="rpg-system-title" style="color:var(--accent-secondary);text-shadow:var(--glow-pink);">🐙 LA LLAMADA DE CTHULHU</span>
+            <span class="rpg-system-year">JOC · 1988 · BRP + Sanity</span>
+          </div>
+          <div class="rol-books-grid rol-books-grid--2col" data-rpg="cthulhu">
+            <div class="rol-book-wrap">
+              <img src="assets/img/CTHULHU_1.jpg"
+                   alt="La Llamada de Cthulhu" class="rol-book-img">
+              <span class="rol-book-caption">LA LLAMADA DE CTHULHU</span>
+            </div>
+            <div class="rol-book-wrap">
+              <img src="assets/img/CTHULHU_2.jpg"
+                   alt="La Llamada de Cthulhu" class="rol-book-img">
+              <span class="rol-book-caption">SUPLEMENTO</span>
+            </div>
+          </div>
+          <div class="rpg-system-body">
+            <p>
+              El primer gran éxito de JOC Internacional, publicado en 1988 como traducción
+              de la 3ª edición Chaosium. Investigadores en los años 20 enfrentando los
+              Mitos de Lovecraft: cultistas, dioses cósmicos indiferentes, grimorios
+              prohibidos y la verdad que destruye la mente antes que el cuerpo.
+            </p>
+            <p>
+              El sistema BRP aquí añade la mecánica de Sanity — la cordura como recurso
+              no renovable que se va perdiendo cada vez que los personajes se acercan
+              demasiado a lo que no debería existir. No hay combate heroico en Cthulhu:
+              hay narrativa, investigación, atmósfera de terror cósmico y la certeza de
+              que los personajes son insignificantes ante lo que van descubriendo.
+            </p>
+            <p>
+              Fue reimpreso ocho veces por JOC, con más de 14 suplementos publicados.
+              La popularidad del juego era enorme entre los roleros españoles de los 90.
+            </p>
+            <div class="rpg-system-note" style="border-left-color: var(--accent-secondary); color: var(--text-dim);">
+              🐙 Conservo el manual básico de JOC — hoy cotiza por encima de los 100€
+              en el mercado de segunda mano. Reimpreso 8 veces, nunca suficiente.
+            </div>
+          </div>
+          <span class="supplements-title">// SUPLEMENTOS DESTACADOS</span>
+          <div class="supplements-grid stagger">
+            <div class="supplement-card" style="--system-color: var(--accent-secondary);">
+              <span class="supplement-card-name">Las Máscaras de Nyarlathotep</span>
+              <span class="supplement-year">JOC · 1990</span>
+            </div>
+            <div class="supplement-card" style="--system-color: var(--accent-secondary);">
+              <span class="supplement-card-name">Las Sombras de Yog-Sothoth</span>
+              <span class="supplement-year">JOC · 1989</span>
+            </div>
+            <div class="supplement-card" style="--system-color: var(--accent-secondary);">
+              <span class="supplement-card-name">Secretos de Arkham</span>
+              <span class="supplement-year">JOC · 1991</span>
+            </div>
+            <div class="supplement-card" style="--system-color: var(--accent-secondary);">
+              <span class="supplement-card-name">Piel de Toro</span>
+              <span class="supplement-year">JOC · 1992</span>
+            </div>
+            <div class="supplement-card" style="--system-color: var(--accent-secondary);">
+              <span class="supplement-card-name">Terror Austral</span>
+              <span class="supplement-year">JOC · 1993</span>
+            </div>
+            <div class="supplement-card" style="--system-color: var(--accent-secondary);">
+              <span class="supplement-card-name">Las Tierras del Sueño</span>
+              <span class="supplement-year">JOC · 1994</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── STAR WARS d6 ───────────────────────────────────────────────── -->
+        <div class="rpg-system reveal" style="--system-color: var(--accent-tertiary);">
+          <div class="rpg-system-header">
+            <span class="rpg-system-title">⚡ STAR WARS D6 — WEST END GAMES</span>
+            <span class="rpg-system-year">JOC · 1990 · D6 System</span>
+          </div>
+          <div class="rpg-system-body">
+            <p>
+              JOC traduce el juego de West End Games en 1990, llevando a la galaxia muy,
+              muy lejana a las mesas españolas. El sistema de dados de 6 caras (D6 System)
+              era elegante e intuitivo: cada habilidad tenía un número de dados que lanzabas,
+              y sumabas el resultado. Sin tablas complicadas, sin percentiles, sin fórmulas.
+              Solo dados y acción.
+            </p>
+            <p>
+              Ambientado antes del Universo Expandido oficial, dejaba libertad absoluta
+              para crear héroes propios en la galaxia de la Alianza Rebelde. La Fuerza
+              funcionaba como habilidad, con los puntos de Fuerza como recurso limitado
+              y las consecuencias del Lado Oscuro siempre al acecho.
+            </p>
+            <p>
+              La tapa negra con Luke, Leia, Han y Vader se convirtió en una imagen icónica
+              en las estanterías de los frikis españoles. Fue un éxito inmediato que generó
+              guías, campañas y suplementos hasta 1997, cuando expiró la licencia.
+            </p>
+          </div>
+          <span class="supplements-title">// SUPLEMENTOS Y CAMPAÑAS</span>
+          <div class="supplements-grid stagger">
+            <div class="supplement-card" style="--system-color: var(--accent-tertiary);">
+              <span class="supplement-card-name">Comando Shantipole</span>
+              <span class="supplement-year">JOC · 1991</span>
+            </div>
+            <div class="supplement-card" style="--system-color: var(--accent-tertiary);">
+              <span class="supplement-card-name">Cacería Humana en Tatooine</span>
+              <span class="supplement-year">JOC · 1991</span>
+            </div>
+            <div class="supplement-card" style="--system-color: var(--accent-tertiary);">
+              <span class="supplement-card-name">Guía del Imperio</span>
+              <span class="supplement-year">JOC · 1992</span>
+            </div>
+            <div class="supplement-card" style="--system-color: var(--accent-tertiary);">
+              <span class="supplement-card-name">El Guardián Oscuro</span>
+              <span class="supplement-year">JOC · 1993</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 5 — LA MESA, LOS DADOS Y LOS AMIGOS
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="mesa" style="padding-top: var(--sp-7); padding-bottom: var(--sp-7);">
+    <div class="container">
+
+      <div class="section-label">🍺 EL CIERRE</div>
+      <h2 class="section-title" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">LA MESA, LOS DADOS Y LOS AMIGOS</h2>
+
+      <div class="closing-narrative reveal">
+        <p>
+          Fue mi hermano el que me inició en el rol. Me creó un personaje de Stormbringer, me explicó las reglas básicas 
+          y me invitó a la mesa. Tenía unos 12 o 13 años, los libros desplegados sobre la mesa
+          y él ejerciendo de máster. Así empezaba la magia. No había wi-fi que
+          perder ni batería que cargar. Solo imaginación, papel y la voz de alguien
+          construyendo un mundo en tiempo real. Mi hermano construia aventuras de una forma increíble.
+        </p>
+        <p>
+          Discutíamos jugadas, nos reíamos de las tiradas desastrosas, vivíamos historias
+          que nunca se grabaron pero nunca se olvidaron. Cada campaña era única porque
+          la generaban las decisiones de personas reales, sentadas alrededor de una mesa,
+          en tiempo real. Sin algoritmos, sin partidas guardadas, sin reinicios.
+        </p>
+        <p>
+          Luego nos enganchamos todos los amigos. Y cada uno se hizo DJ de un juego distinto,
+          así podiamos rotar entre sistemas y ambientaciones. A veces nos juntábamos 8 o 10 personas en una misma campaña, 
+          con personajes que se conocían, se odiaban, se aliaban, se traicionaban...jajaj ya habia troles por entonces.
+          Bendita Colins en Caceres con sus salones enormes para jugar libremente y sin que nadie te molestara. 
+          Era como vivir una serie de televisión pero sin guión, sin cámaras, sin efectos especiales. 
+          Solo tú, tus amigos y un puñado de dados decidiendo el destino de vuestros personajes.
+        </p>
+        <p>
+          Treinta años después, esos libros siguen en mi estantería. Descatalogados,
+          inencontrables, con olor a otra época. Los abro de vez en cuando y todo vuelve:
+          las sesiones largas, las discusiones sobre reglas, los personajes que todavía
+          recuerdo con nombre y apellidos aunque nunca existieron. 
+          También recuerdo el Aquelarre, El Paranoia, el Runequest... pero esos no los tengo, pero sí que jugamos alguna vez.
+        </p>
+      </div>
+
+      <div class="quote-card-final reveal">
+        <p>🎲 "El rol no te alejaba de la realidad.<br>
+        Te enseñaba a construir otras realidades —<br>
+        y eso, sin saberlo, era un superpoder."</p>
+      </div>
+
+      <div style="margin-top: var(--sp-6); display:flex; flex-wrap:wrap; gap:var(--sp-3);">
+        <a href="magic.html"  class="btn btn-gold">🃏 VER MAGIC: THE GATHERING</a>
+        <a href="gaming.html" class="btn btn-blue">🕹 VER GAMING HISTORY</a>
+        <a href="index.html"  class="btn btn-small">🏠 VOLVER AL INICIO</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ─── Footer ──────────────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="gamedev.html">GameDev</a></li>
+      <li><a href="gaming.html">Gaming</a></li>
+      <li><a href="esports.html">Esports</a></li>
+      <li><a href="got.html">GoT</a></li>
+      <li><a href="warhammer.html">Warhammer</a></li>
+      <li><a href="magic.html">MtG</a></li>
+      <li><a href="rol.html">Rol</a></li>
+      <li><a href="social.html">Social</a></li>
+      <li><a href="java.html">Java</a></li>
+    </ul>
+    <p>⚔ FREAKONIA — KARLETE</p>
+    <p style="color:#444;">HECHO CON AMOR PIXELADO Y DEMASIADAS BEBIDAS ENERGÉTICAS</p>
+    <p style="color:#333;">◄ INSERT COIN ►</p>
+
+    <div class="footer-legal">
+      <div class="pixel-divider"></div>
+      <p class="footer-copyright">
+        © 2025 FREAKONIA — KARLETE. ALL RIGHTS RESERVED.
+      </p>
+      <p class="footer-trademark">
+        FREAKONIA™ IS A REGISTERED PERSONAL BRAND.
+        ALL CONTENT, DESIGNS, GAME CONCEPTS AND ORIGINAL TEXTS
+        ON THIS SITE ARE THE EXCLUSIVE PROPERTY OF THEIR AUTHOR.
+        UNAUTHORIZED REPRODUCTION, DISTRIBUTION OR USE OF ANY
+        CONTENT IS STRICTLY PROHIBITED WITHOUT PRIOR WRITTEN PERMISSION.
+      </p>
+      <p class="footer-notice">
+        ⚠ THIS SITE CONTAINS STRONG OPINIONS ABOUT VIDEO GAMES,
+        FANTASY LORE AND BASKETBALL. READER DISCRETION IS ADVISED.
+        NO GOBLINS WERE HARMED IN THE MAKING OF THIS WEBSITE.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

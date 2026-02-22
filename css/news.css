@@ -1,0 +1,266 @@
+/* ============================================
+   news.css — Blog/news page styles
+   Freakonia — El Reino Friki
+   ============================================ */
+
+/* Search + filter controls */
+.news-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0 2.5rem 0;
+}
+
+.news-search-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 4px solid var(--accent-primary);
+  background: var(--bg-card);
+  padding: 0.5rem 1rem;
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+}
+
+.news-search-wrap:focus-within {
+  border-color: var(--accent-secondary);
+  box-shadow: 0 0 16px rgba(255, 0, 255, 0.3);
+}
+
+.news-search-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.news-search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--font-primary);
+  font-size: 0.5rem;
+  color: var(--text-bright);
+  caret-color: var(--accent-primary);
+  letter-spacing: 0.05em;
+}
+
+.news-search-input::placeholder {
+  color: var(--text-dim);
+}
+
+/* Filter buttons */
+.news-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.news-filter-btn {
+  font-family: var(--font-primary);
+  font-size: 0.4rem;
+  color: var(--text-dim);
+  background: transparent;
+  border: 4px solid var(--text-dim);
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.05em;
+  /* NO border-radius */
+}
+
+.news-filter-btn:hover {
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 8px rgba(0, 255, 65, 0.3);
+}
+
+.news-filter-btn.active {
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  background: rgba(0, 255, 65, 0.08);
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+}
+
+/* No results */
+.news-no-results {
+  text-align: center;
+  padding: 3rem;
+  font-family: var(--font-primary);
+  font-size: 0.5rem;
+  color: var(--text-dim);
+  border: 4px solid var(--text-dim);
+}
+
+/* Hidden cards */
+.news-card.news-hidden {
+  display: none;
+}
+
+/* News grid */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* News card */
+.news-card {
+  background: var(--bg-card);
+  border: 4px solid var(--accent-primary);
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  /* NO border-radius */
+}
+
+.news-card:hover {
+  border-color: var(--accent-secondary);
+  box-shadow: 0 0 16px rgba(255, 0, 255, 0.3);
+}
+
+/* Card header */
+.news-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid var(--accent-primary);
+}
+
+.news-card-cat {
+  font-family: var(--font-primary);
+  font-size: 0.4rem;
+  padding: 0.3rem 0.6rem;
+  border: 2px solid;
+  /* NO border-radius */
+}
+
+/* Category colors */
+.news-cat--got {
+  color: #cc2200;
+  border-color: #cc2200;
+  background: rgba(204, 34, 0, 0.1);
+}
+.news-cat--gaming {
+  color: var(--accent-tertiary);
+  border-color: var(--accent-tertiary);
+  background: rgba(0, 191, 255, 0.1);
+}
+.news-cat--esports {
+  color: var(--accent-warn);
+  border-color: var(--accent-warn);
+  background: rgba(255, 204, 0, 0.1);
+}
+.news-cat--gamedev {
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  background: rgba(0, 255, 65, 0.1);
+}
+.news-cat--misc {
+  color: var(--accent-secondary);
+  border-color: var(--accent-secondary);
+  background: rgba(255, 0, 255, 0.1);
+}
+
+.news-card-date {
+  font-family: var(--font-primary);
+  font-size: 0.35rem;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+}
+
+/* Card image */
+.news-card-img-wrap {
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 2px solid var(--accent-primary);
+  max-height: 220px;
+}
+
+.news-card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  transition: transform 0.4s ease;
+  /* NO border-radius */
+}
+
+.news-card:hover .news-card-img {
+  transform: scale(1.03);
+}
+
+/* Card body */
+.news-card-body {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.news-card-title {
+  font-family: var(--font-primary);
+  font-size: 0.5rem;
+  color: var(--accent-primary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.news-card-excerpt {
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  color: var(--text);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.news-card-full p {
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  color: var(--text);
+  line-height: 1.6;
+  margin: 0 0 0.75rem 0;
+}
+
+/* Read more button */
+.news-read-more {
+  font-family: var(--font-primary);
+  font-size: 0.4rem;
+  color: var(--accent-primary);
+  background: transparent;
+  border: 2px solid var(--accent-primary);
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: all 0.2s ease;
+  margin-top: auto;
+  /* NO border-radius */
+}
+
+.news-read-more:hover {
+  color: var(--accent-secondary);
+  border-color: var(--accent-secondary);
+  box-shadow: 0 0 8px rgba(255, 0, 255, 0.3);
+}
+
+/* Card footer */
+.news-card-footer {
+  padding: 0.75rem 1rem;
+  border-top: 2px solid var(--accent-primary);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+  .news-filters {
+    gap: 0.4rem;
+  }
+  .news-filter-btn {
+    font-size: 0.35rem;
+    padding: 0.3rem 0.5rem;
+  }
+}

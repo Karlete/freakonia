@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Freakonia — Sitio personal de fandom y desarrollo indie. Pixel art, gaming retro, Game of Thrones, Warhammer y más." />
+  <title>Freakonia</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+
+</head>
+<body>
+
+<!-- CRT overlay -->
+<div class="crt-overlay" aria-hidden="true"></div>
+
+<!-- ─── Navigation ─────────────────────────────────────────────────────── -->
+<nav class="navbar" role="navigation" aria-label="Navegación principal">
+  <div class="container">
+    <a href="index.html" class="nav-brand">⚔ FREAKONIA</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" data-i18n-aria="nav.toggleAria">▼ MENU</button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html"      class="nav-link" data-i18n="nav.home">🏠 Inicio</a></li>
+      <li><a href="gamedev.html"    class="nav-link" data-i18n="nav.gamedev">🎮 GameDev</a></li>
+      <li><a href="gaming.html"     class="nav-link" data-i18n="nav.gaming">🕹 Gaming</a></li>
+      <li><a href="esports.html"    class="nav-link" data-i18n="nav.esports">🏆 Esports</a></li>
+      <li><a href="got.html"        class="nav-link" data-i18n="nav.got">🐉 GoT</a></li>
+      <li><a href="warhammer.html"  class="nav-link" data-i18n="nav.warhammer">⚙ Warhammer</a></li>
+      <li><a href="magic.html"      class="nav-link" data-i18n="nav.magic">✨ MtG</a></li>
+      <li><a href="rol.html"        class="nav-link" data-i18n="nav.rol">🎲 Rol</a></li>
+      <li><a href="nba.html"        class="nav-link">🏀 NBA</a></li>
+      <li><a href="java.html"      class="nav-link">☕ Java</a></li>
+      <li><a href="social.html"     class="nav-link" data-i18n="nav.social">📡 Social</a></li>
+      <li><a href="news.html"      class="nav-link">📰 News</a></li>
+      <li>
+        <button class="lang-toggle" id="lang-toggle" aria-label="Cambiar idioma" title="Switch language / Cambiar idioma">
+          🌐 EN
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ─── Hero ───────────────────────────────────────────────────────────── -->
+<section class="hero">
+  <!-- Background decorations -->
+  <div class="hero-bg-grid" aria-hidden="true"></div>
+  <div class="hero-bg-vignette" aria-hidden="true"></div>
+
+  <!-- Falling pixel particles -->
+  <div class="pixel-particles" aria-hidden="true">
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-text">
+      <p class="hero-pre" data-i18n="hero.pre">// JUGADOR UNO HA ENTRADO AL JUEGO</p>
+
+      <h1 class="hero-title">
+        FREAK<span class="line-accent">ONIA</span>
+      </h1>
+
+      <p class="hero-tagline cursor-blink" id="hero-tagline"></p>
+
+      <div class="hero-actions">
+        <a href="gamedev.html" class="btn"           data-i18n="hero.btnGames">🎮 MIS JUEGOS</a>
+        <a href="gaming.html"  class="btn btn-pink"  data-i18n="hero.btnGaming">🕹 HISTORIAL GAMER</a>
+        <a href="got.html"     class="btn btn-gold"  data-i18n="hero.btnGot">🐉 GOT</a>
+      </div>
+    </div>
+
+    <!-- Pixel art character (CSS-drawn) -->
+    <div class="hero-sprite-wrap" aria-hidden="true">
+      <div class="pixel-char">
+        <!-- Row 1: hair top -->
+        <div class="p _"></div><div class="p K"></div><div class="p K"></div><div class="p K"></div><div class="p K"></div><div class="p K"></div><div class="p K"></div><div class="p K"></div><div class="p _"></div><div class="p _"></div>
+        <!-- Row 2: hair -->
+        <div class="p K"></div><div class="p K"></div><div class="p H"></div><div class="p H"></div><div class="p H"></div><div class="p H"></div><div class="p H"></div><div class="p K"></div><div class="p K"></div><div class="p _"></div>
+        <!-- Row 3: face -->
+        <div class="p K"></div><div class="p H"></div><div class="p H"></div><div class="p H"></div><div class="p H"></div><div class="p H"></div><div class="p H"></div><div class="p H"></div><div class="p K"></div><div class="p _"></div>
+        <!-- Row 4: eyes -->
+        <div class="p _"></div><div class="p H"></div><div class="p K"></div><div class="p H"></div><div class="p H"></div><div class="p H"></div><div class="p K"></div><div class="p H"></div><div class="p _"></div><div class="p _"></div>
+        <!-- Row 5: nose/mouth -->
+        <div class="p _"></div><div class="p H"></div><div class="p H"></div><div class="p H"></div><div class="p h"></div><div class="p H"></div><div class="p H"></div><div class="p H"></div><div class="p _"></div><div class="p _"></div>
+        <!-- Row 6: shoulders -->
+        <div class="p A"></div><div class="p A"></div><div class="p A"></div><div class="p A"></div><div class="p A"></div><div class="p A"></div><div class="p A"></div><div class="p A"></div><div class="p A"></div><div class="p _"></div>
+        <!-- Row 7: torso -->
+        <div class="p a"></div><div class="p A"></div><div class="p S"></div><div class="p A"></div><div class="p A"></div><div class="p A"></div><div class="p S"></div><div class="p A"></div><div class="p a"></div><div class="p _"></div>
+        <!-- Row 8: torso 2 -->
+        <div class="p a"></div><div class="p A"></div><div class="p A"></div><div class="p E"></div><div class="p A"></div><div class="p A"></div><div class="p E"></div><div class="p A"></div><div class="p a"></div><div class="p _"></div>
+        <!-- Row 9: belt -->
+        <div class="p _"></div><div class="p A"></div><div class="p a"></div><div class="p a"></div><div class="p a"></div><div class="p a"></div><div class="p a"></div><div class="p A"></div><div class="p _"></div><div class="p _"></div>
+        <!-- Row 10: legs -->
+        <div class="p _"></div><div class="p a"></div><div class="p A"></div><div class="p _"></div><div class="p _"></div><div class="p _"></div><div class="p A"></div><div class="p a"></div><div class="p _"></div><div class="p _"></div>
+        <!-- Row 11: boots -->
+        <div class="p _"></div><div class="p K"></div><div class="p K"></div><div class="p _"></div><div class="p _"></div><div class="p _"></div><div class="p K"></div><div class="p K"></div><div class="p _"></div><div class="p _"></div>
+      </div>
+      <span class="sprite-name">SANPRIETO</span>
+      <span class="sprite-level" data-i18n="hero.spriteLevel">NVL 99 GAMER</span>
+
+      <!-- HP bar -->
+      <div class="bar-container" style="width:120px;">
+        <div class="bar-label">
+          <span>HP</span>
+          <span>99/99</span>
+        </div>
+        <div class="bar-track">
+          <div class="bar-fill green" data-fill="99"></div>
+        </div>
+      </div>
+
+      <!-- XP bar -->
+      <div class="bar-container" style="width:120px;">
+        <div class="bar-label">
+          <span>XP</span>
+          <span>MAX</span>
+        </div>
+        <div class="bar-track">
+          <div class="bar-fill pink" data-fill="88"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main>
+  <!-- ─── About ─────────────────────────────────────────────────────────── -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title" data-i18n="about.title">SOBRE MÍ</h2>
+      <hr class="pixel-divider" />
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p data-i18n="about.p1">
+            Bienvenido a <strong>Freakonia</strong> — mi rincón personal en internet donde
+            la historia del gaming, la obsesión por el fandom y el desarrollo indie se fusionan.
+          </p>
+          <p data-i18n="about.p2">
+            Soy <strong>Karlete</strong>, y la historia viene de lejos: todo empezó con el <strong>Doom</strong>
+            en casa de mi primo siendo un renacuajo. De ahí vinieron Alex Kid, Sonic, <strong>Super Mario World</strong>,
+            Mortal Kombat y todas las arcades del mundo; la <strong>Game Boy</strong> con Super Mario Land 2,
+            y la <strong>Master System 2</strong>, mi primera consola propia. Con la <strong>Super Nintendo</strong>
+            y la <strong>PlayStation</strong> llegaron Tomb Raider, los <strong>Final Fantasy</strong>,
+            PES, NBA Live y NBA 2K. Y luego el PC — y con él, las tardes interminables en el mítico
+            ciber <strong>Death Match</strong> de Cáceres, donde con toda la pandilla del pueblo le dábamos
+            caña al <strong>Action Quake 2</strong>, Counter-Strike y <strong>Diablo 2</strong>.
+            Luego vinieron StarCraft, Unreal, Gothic, Fallout, <strong>Heroes of Might and Magic</strong> del II al V,
+            Oblivion, Skyrim con mil mods instalados... y ya saben cómo termina esto:
+            <strong>League of Legends</strong> y <strong>Dead by Daylight</strong>.
+            Aunque ya no los juego, lo juro — hoy me limito a ver competitivo y a fingir que aún podría. ¡Así que dale, que allá voy!
+          </p>
+          <p data-i18n="about.p3">
+            Pero el friquismo no se queda solo en los videojuegos. Soy fan acérrima de
+            <strong>Juego de Tronos</strong> — los libros y la serie hasta la sexta temporada;
+            las dos últimas, en este sitio, jamás existieron. También le he dado mucha caña al
+            <strong>Warhammer Fantasy</strong> y al rol de mesa: <strong>El Señor de los Anillos</strong>,
+            <strong>Stormbringer</strong>, <strong>La Llamada de Cthulhu</strong>... y todavía conservo
+            mi colección de cartas de <strong>Magic: The Gathering</strong>.
+            Sí, el friquismo me invade y me alegra que así sea.
+          </p>
+          <p data-i18n="about.p4">
+            Cuando no estoy viendo pros hacer lo que yo solía hacer, estoy construyendo —
+            actualmente desarrollando <strong>Fallen Valkyrie</strong>, un Metroidvania 2D en Unity.
+          </p>
+          <div class="hero-actions" style="margin-top: var(--sp-5);">
+            <a href="gamedev.html" class="btn btn-small"          data-i18n="about.btnProjects">📁 MIS PROYECTOS</a>
+            <a href="gaming.html"  class="btn btn-small btn-pink" data-i18n="about.btnHistory">🎮 MI HISTORIAL</a>
+          </div>
+        </div>
+
+        <div class="about-stats reveal">
+          <!-- Skill bars -->
+          <div class="bar-container">
+            <div class="bar-label"><span>GAME DEV</span><span>78%</span></div>
+            <div class="bar-track"><div class="bar-fill green" data-fill="78"></div></div>
+          </div>
+          <div class="bar-container">
+            <div class="bar-label"><span>BLENDER</span><span>65%</span></div>
+            <div class="bar-track"><div class="bar-fill pink" data-fill="65"></div></div>
+          </div>
+          <div class="bar-container">
+            <div class="bar-label"><span>LoL RANK</span><span>BROMURO DE SODIO III</span></div>
+            <div class="bar-track"><div class="bar-fill gold" data-fill="22"></div></div>
+          </div>
+          <div class="bar-container">
+            <div class="bar-label"><span data-i18n="about.statLoreLabel">FANÁTICO LORE</span><span>99%</span></div>
+            <div class="bar-track"><div class="bar-fill blue" data-fill="99"></div></div>
+          </div>
+          <div class="bar-container">
+            <div class="bar-label"><span>DBD HOURS</span><span data-i18n="about.statDbdVal">MUY POCAS</span></div>
+            <div class="bar-track"><div class="bar-fill green" data-fill="8"></div></div>
+          </div>
+
+          <div class="stats-row" style="margin-top:var(--sp-4);">
+            <div class="stat-box">
+              <span class="stat-value">5+</span>
+              <span class="stat-label" data-i18n="about.statConsoles">Consolas</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-value">∞</span>
+              <span class="stat-label" data-i18n="about.statHours">Horas Épicas</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-value">1</span>
+              <span class="stat-label" data-i18n="about.statWip">Juego en Dev</span>
+            </div>
+          </div>
+
+          <div style="margin: 2rem 0; text-align: center;">
+            <img
+              src="assets/img/habitacion_gamer.gif"
+              alt="Habitación gamer pixel art"
+              style="
+                width: 100%;
+                max-width: 500px;
+                border: 4px solid var(--accent-secondary);
+                box-shadow: var(--glow-pink);
+                display: block;
+                margin: 0 auto;
+                image-rendering: pixelated;
+              "
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ─── Navigation Hub ────────────────────────────────────────────────── -->
+  <section class="section" id="hub">
+    <div class="container">
+      <h2 class="section-title center" data-i18n="hub.title">ELIGE TU DESTINO</h2>
+
+      <div class="destino-banner-wrap">
+        <img
+          src="assets/img/freakonia_background.png"
+          alt="Freakonia — El Reino Friki"
+          class="destino-banner-img"
+        >
+      </div>
+
+      <div class="nav-hub stagger">
+        <a href="gamedev.html" class="nav-hub-item reveal">
+          <span class="nav-hub-icon">🎮</span>
+          <span class="nav-hub-label">GAME DEV</span>
+          <span class="nav-hub-desc" data-i18n="hub.gamedev">Proyectos indie, Fallen Valkyrie y devlogs</span>
+        </a>
+        <a href="gaming.html" class="nav-hub-item reveal">
+          <span class="nav-hub-icon">🕹</span>
+          <span class="nav-hub-label">GAMING</span>
+          <span class="nav-hub-desc" data-i18n="hub.gaming">Historial de consolas desde SMS2 hasta PC</span>
+        </a>
+        <a href="esports.html" class="nav-hub-item reveal">
+          <span class="nav-hub-icon">🏆</span>
+          <span class="nav-hub-label">ESPORTS</span>
+          <span class="nav-hub-desc" data-i18n="hub.esports">LoL competitivo, DBD y noticias</span>
+        </a>
+        <a href="got.html" class="nav-hub-item reveal">
+          <span class="nav-hub-icon">🐉</span>
+          <span class="nav-hub-label">GAME OF THRONES</span>
+          <span class="nav-hub-desc" data-i18n="hub.got">Libros ASOIAF, serie y teorías</span>
+        </a>
+        <a href="warhammer.html" class="nav-hub-item reveal">
+          <span class="nav-hub-icon">⚙</span>
+          <span class="nav-hub-label">WARHAMMER</span>
+          <span class="nav-hub-desc" data-i18n="hub.warhammer">40K, Age of Sigmar y galería de pintura</span>
+        </a>
+        <a href="magic.html" class="nav-hub-item reveal">
+          <span class="nav-hub-icon">✨</span>
+          <span class="nav-hub-label">MAGIC: THE GATHERING</span>
+          <span class="nav-hub-desc" data-i18n="hub.magic">Mazos, cartas favoritas y colecciones</span>
+        </a>
+        <a href="rol.html" class="nav-hub-item reveal">
+          <span class="nav-hub-icon">🎲</span>
+          <span class="nav-hub-label" data-i18n="hub.rolLabel">ROL</span>
+          <span class="nav-hub-desc" data-i18n="hub.rol">LOTR, Stormbringer, Cthulhu y más</span>
+        </a>
+        <a href="nba.html" class="nav-hub-item reveal">
+          <span class="nav-hub-icon">🏀</span>
+          <span class="nav-hub-label">NBA</span>
+          <span class="nav-hub-desc">Kobe, LeBron, fantasy y la Taberna del Boxscore</span>
+        </a>
+        <a href="java.html" class="nav-hub-item reveal">
+          <span class="nav-hub-icon">☕</span>
+          <span class="nav-hub-label">JAVA</span>
+          <span class="nav-hub-desc" data-i18n="hub.java">Desarrollo profesional, JavaDevBible y más</span>
+        </a>
+        <a href="social.html" class="nav-hub-item reveal">
+          <span class="nav-hub-icon">📡</span>
+          <span class="nav-hub-label">SOCIAL HUB</span>
+          <span class="nav-hub-desc" data-i18n="hub.social">Feed de YouTube y Twitter/X</span>
+        </a>
+        <a href="news.html" class="nav-hub-item reveal">
+          <span class="nav-hub-icon">📰</span>
+          <span class="nav-hub-label">NEWS</span>
+          <span class="nav-hub-desc">Noticias, opinión y actualidad friki</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ─── Current project spotlight ────────────────────────────────────── -->
+  <section class="section" id="featured">
+    <div class="container">
+      <h2 class="section-title" data-i18n="featured.currentTitle">PROYECTO ACTUAL</h2>
+
+      <div class="card reveal" style="max-width: 700px; margin-bottom: var(--sp-6);">
+        <div style="display:flex; align-items:center; gap: var(--sp-4); margin-bottom: var(--sp-4); flex-wrap:wrap;">
+          <span style="font-size:3rem;">⚔</span>
+          <div>
+            <span class="status-badge wip" style="margin-bottom:var(--sp-2);" data-i18n="featured.inDev">EN DESARROLLO</span>
+            <h3 class="card-title" style="margin-bottom:0;">FALLEN VALKYRIE</h3>
+          </div>
+        </div>
+        <div class="card-body">
+          <p data-i18n="featured.fallenDesc">
+            Un Metroidvania 2D ambientado en un mundo agonizante donde una guerrera caída debe
+            recuperar su poder perdido a través de ruinas olvidadas y dioses corrompidos.
+            Construido en <strong>Unity</strong> con pixel art artesanal.
+          </p>
+          <div style="display:flex; flex-wrap:wrap; gap: var(--sp-1); margin-bottom: var(--sp-4);">
+            <span class="tag">METROIDVANIA</span>
+            <span class="tag blue">UNITY</span>
+            <span class="tag pink">PIXEL ART</span>
+            <span class="tag gold" data-i18n="tag.action">ACCIÓN</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="gamedev.html" class="btn btn-small" data-i18n="featured.btnSeeMore">🎮 VER MÁS</a>
+          <span style="font-family:var(--font-primary);font-size:0.5rem;color:var(--text-dim);" data-i18n="featured.estRelease">LANZAMIENTO EST.: POR DEFINIR</span>
+        </div>
+      </div>
+
+      <h2 class="section-title" style="margin-top: var(--sp-7);" data-i18n="featured.finishedTitle">PROYECTOS TERMINADOS</h2>
+
+      <div class="grid-2 stagger" style="max-width: 700px;">
+
+        <!-- Samurai Kitchen -->
+        <div class="game-card reveal">
+          <img src="assets/img/Samurai Kitchen Screenshot.jpg" alt="Samurai Kitchen screenshot" class="game-card-thumb" />
+          <div class="game-card-body">
+            <h3 class="game-card-title">SAMURAI KITCHEN</h3>
+            <p class="game-card-desc" data-i18n="games.samuraiDesc">
+              Un caótico juego de cocina con giro samurái. Corta, sirve y sobrevive la hora punta de la cena con precisión de katana.
+            </p>
+            <div class="game-card-tags">
+              <span class="tag gold" data-i18n="tag.released">PUBLICADO</span>
+              <span class="tag pink" data-i18n="tag.cooking">COCINA</span>
+              <span class="tag blue">ARCADE</span>
+            </div>
+          </div>
+          <div class="game-card-footer">
+            <span class="status-badge done" data-i18n="tag.done">TERMINADO</span>
+            <a href="https://sanprieto.itch.io/samurai-kitchen" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-pink">
+              🎮 ITCH.IO
+            </a>
+          </div>
+        </div>
+
+        <!-- Stars Lander -->
+        <div class="game-card reveal">
+          <img src="assets/img/Starslander screenshot.jpg" alt="Stars Lander screenshot" class="game-card-thumb" />
+          <div class="game-card-body">
+            <h3 class="game-card-title">STARS LANDER</h3>
+            <p class="game-card-desc" data-i18n="games.starsDesc">
+              Un lander espacial de inspiración retro. Navega campos gravitacionales y aterriza sin explotar. Más difícil de lo que parece.
+            </p>
+            <div class="game-card-tags">
+              <span class="tag gold" data-i18n="tag.released">PUBLICADO</span>
+              <span class="tag" data-i18n="tag.space">ESPACIO</span>
+              <span class="tag blue" data-i18n="tag.physics">FÍSICA</span>
+            </div>
+          </div>
+          <div class="game-card-footer">
+            <span class="status-badge done" data-i18n="tag.done">TERMINADO</span>
+            <a href="https://sanprieto.itch.io/starslander" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-pink">
+              🎮 ITCH.IO
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Social Quick Links ─────────────────────────────────────────────── -->
+  <section class="section reveal">
+    <div class="container">
+      <h2 class="section-title center">📡 ENCUÉNTRAME EN LA RED</h2>
+      <div class="pixel-divider"></div>
+
+      <p style="font-family: var(--font-secondary); font-size: 20px;
+                color: var(--text); text-align: center; margin-bottom: 2rem;">
+        Sígueme, escríbeme o juega a mis juegos. Todo está a un clic.
+      </p>
+
+      <div class="social-quick-grid stagger">
+
+        <a href="https://www.youtube.com/@sanprieto" target="_blank"
+           class="social-quick-card reveal"
+           style="--card-color: #ff0000">
+          <span class="social-card-icon">▶</span>
+          <span class="social-card-name">YOUTUBE</span>
+          <span class="social-card-handle">@sanprieto</span>
+        </a>
+
+        <a href="https://x.com/SanprietoG" target="_blank"
+           class="social-quick-card reveal"
+           style="--card-color: #ffffff">
+          <span class="social-card-icon">✖</span>
+          <span class="social-card-name">X / TWITTER</span>
+          <span class="social-card-handle">@SanprietoG</span>
+        </a>
+
+        <a href="https://sanprieto.itch.io/" target="_blank"
+           class="social-quick-card reveal"
+           style="--card-color: #fa5c5c">
+          <span class="social-card-icon">🕹</span>
+          <span class="social-card-name">ITCH.IO</span>
+          <span class="social-card-handle">sanprieto.itch.io</span>
+        </a>
+
+        <a href="https://www.twitch.tv/sanprieto" target="_blank"
+           class="social-quick-card reveal"
+           style="--card-color: #9147ff">
+          <span class="social-card-icon">📺</span>
+          <span class="social-card-name">TWITCH</span>
+          <span class="social-card-handle">twitch.tv/sanprieto</span>
+        </a>
+
+        <a href="mailto:sanprietogamer@gmail.com"
+           class="social-quick-card reveal"
+           style="--card-color: var(--accent-primary)">
+          <span class="social-card-icon">✉</span>
+          <span class="social-card-name">EMAIL</span>
+          <span class="social-card-handle">sanprietogamer@gmail.com</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ─── Footer ──────────────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="index.html"    data-i18n="nav.home2">Inicio</a></li>
+      <li><a href="gamedev.html">GameDev</a></li>
+      <li><a href="gaming.html">Gaming</a></li>
+      <li><a href="got.html">GoT</a></li>
+      <li><a href="social.html">Social</a></li>
+      <li><a href="java.html">Java</a></li>
+    </ul>
+    <p>⚔ FREAKONIA — KARLETE</p>
+    <p style="color:#444;" data-i18n="footer.made">HECHO CON AMOR PIXELADO Y DEMASIADAS BEBIDAS ENERGÉTICAS</p>
+    <p style="color:#333;">◄ INSERT COIN ►</p>
+
+    <div class="footer-legal">
+      <div class="pixel-divider"></div>
+      <p class="footer-copyright">
+        © 2025 FREAKONIA — KARLETE. ALL RIGHTS RESERVED.
+      </p>
+      <p class="footer-trademark">
+        FREAKONIA™ IS A REGISTERED PERSONAL BRAND.
+        ALL CONTENT, DESIGNS, GAME CONCEPTS AND ORIGINAL TEXTS
+        ON THIS SITE ARE THE EXCLUSIVE PROPERTY OF THEIR AUTHOR.
+        UNAUTHORIZED REPRODUCTION, DISTRIBUTION OR USE OF ANY
+        CONTENT IS STRICTLY PROHIBITED WITHOUT PRIOR WRITTEN PERMISSION.
+      </p>
+      <p class="footer-notice">
+        ⚠ THIS SITE CONTAINS STRONG OPINIONS ABOUT VIDEO GAMES,
+        FANTASY LORE AND BASKETBALL. READER DISCRETION IS ADVISED.
+        NO GOBLINS WERE HARMED IN THE MAKING OF THIS WEBSITE.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="js/main.js"></script>
+<script>
+  // ─── i18n translations ────────────────────────────────────────────────
+  const translations = {
+    es: {
+      'nav.home':         '🏠 Inicio',
+      'nav.home2':        'Inicio',
+      'nav.gamedev':      '🎮 GameDev',
+      'nav.gaming':       '🕹 Gaming',
+      'nav.esports':      '🏆 Esports',
+      'nav.got':          '🐉 GoT',
+      'nav.warhammer':    '⚙ Warhammer',
+      'nav.magic':        '✨ MtG',
+      'nav.rol':          '🎲 Rol',
+      'nav.social':       '📡 Social',
+      'nav.toggleAria':   'Abrir menú',
+      'hero.pre':         '// JUGADOR UNO HA ENTRADO AL JUEGO',
+      'hero.btnGames':    '🎮 MIS JUEGOS',
+      'hero.btnGaming':   '🕹 HISTORIAL GAMER',
+      'hero.btnGot':      '🐉 GOT',
+      'hero.spriteLevel': 'NVL 99 GAMER',
+      'about.title':      'SOBRE MÍ',
+      'about.p1':         'Bienvenido a <strong>Freakonia</strong> — mi rincón personal en internet donde la historia del gaming, la obsesión por el fandom y el desarrollo indie se fusionan.',
+      'about.p2':         'Soy <strong>Karlete</strong>, y la historia viene de lejos: todo empezó con el <strong>Doom</strong> en casa de mi primo siendo un renacuajo. De ahí vinieron Alex Kid, Sonic, <strong>Super Mario World</strong>, Mortal Kombat y todas las arcades del mundo; la <strong>Game Boy</strong> con Super Mario Land 2, y la <strong>Master System 2</strong>, mi primera consola propia. Con la <strong>Super Nintendo</strong> y la <strong>PlayStation</strong> llegaron Tomb Raider, los <strong>Final Fantasy</strong>, PES, NBA Live y NBA 2K. Y luego el PC — y con él, las tardes interminables en el mítico ciber <strong>Death Match</strong> de Cáceres, donde con toda la pandilla del pueblo le dábamos caña al <strong>Action Quake 2</strong>, Counter-Strike y <strong>Diablo 2</strong>. Luego vinieron StarCraft, Unreal, Gothic, Fallout, <strong>Heroes of Might and Magic</strong> del II al V, Oblivion, Skyrim con mil mods instalados... y ya saben cómo termina esto: <strong>League of Legends</strong> y <strong>Dead by Daylight</strong>. Aunque ya no los juego, lo juro — hoy me limito a ver competitivo y a fingir que aún podría. ¡Así que dale, que allá voy!',
+      'about.p3':         'Pero el friquismo no se queda solo en los videojuegos. Soy fan acérrima de <strong>Juego de Tronos</strong> — los libros y la serie hasta la sexta temporada; las dos últimas, en este sitio, jamás existieron. También le he dado mucha caña al <strong>Warhammer Fantasy</strong> y al rol de mesa: <strong>El Señor de los Anillos</strong>, <strong>Stormbringer</strong>, <strong>La Llamada de Cthulhu</strong>... y todavía conservo mi colección de cartas de <strong>Magic: The Gathering</strong>. Sí, el friquismo me invade y me alegra que así sea.',
+      'about.p4':         'Cuando no estoy viendo pros hacer lo que yo solía hacer, estoy construyendo — actualmente desarrollando <strong>Fallen Valkyrie</strong>, un Metroidvania 2D en Unity.',
+      'about.btnProjects':'📁 MIS PROYECTOS',
+      'about.btnHistory': '🎮 MI HISTORIAL',
+      'about.statLoreLabel': 'FANÁTICO LORE',
+      'about.statDbdVal': 'UNAS POCAS',
+      'about.statConsoles':'Consolas',
+      'about.statHours':  'Horas Épicas',
+      'about.statWip':    'Juego en Dev',
+      'hub.title':        'ELIGE TU DESTINO',
+      'hub.gamedev':      'Proyectos indie, Fallen Valkyrie y devlogs',
+      'hub.gaming':       'Historial de consolas desde SMS2 hasta PC',
+      'hub.esports':      'LoL competitivo, DBD y noticias',
+      'hub.got':          'Libros ASOIAF, serie y teorías',
+      'hub.warhammer':    '40K, Age of Sigmar y galería de pintura',
+      'hub.magic':        'Mazos, cartas favoritas y colecciones',
+      'hub.rolLabel':     'ROL',
+      'hub.rol':          'LOTR, Stormbringer, Cthulhu y más',
+      'hub.java':         'Desarrollo profesional, JavaDevBible y más',
+      'hub.social':       'Feed de YouTube y Twitter/X',
+      'featured.currentTitle': 'PROYECTO ACTUAL',
+      'featured.inDev':   'EN DESARROLLO',
+      'featured.fallenDesc': 'Un Metroidvania 2D ambientado en un mundo agonizante donde una guerrera caída debe recuperar su poder perdido a través de ruinas olvidadas y dioses corrompidos. Construido en <strong>Unity</strong> con pixel art artesanal.',
+      'featured.btnSeeMore':  '🎮 VER MÁS',
+      'featured.estRelease':  'LANZAMIENTO EST.: POR DEFINIR',
+      'featured.finishedTitle': 'PROYECTOS TERMINADOS',
+      'games.samuraiDesc': 'Un caótico juego de cocina con giro samurái. Corta, sirve y sobrevive la hora punta de la cena con precisión de katana.',
+      'games.starsDesc':   'Un lander espacial de inspiración retro. Navega campos gravitacionales y aterriza sin explotar. Más difícil de lo que parece.',
+      'tag.action':        'ACCIÓN',
+      'tag.released':      'PUBLICADO',
+      'tag.cooking':       'COCINA',
+      'tag.done':          'TERMINADO',
+      'tag.space':         'ESPACIO',
+      'tag.physics':       'FÍSICA',
+      'footer.made':       'HECHO CON AMOR PIXELADO Y DEMASIADAS BEBIDAS ENERGÉTICAS',
+    },
+    en: {
+      'nav.home':         '🏠 Home',
+      'nav.home2':        'Home',
+      'nav.gamedev':      '🎮 GameDev',
+      'nav.gaming':       '🕹 Gaming',
+      'nav.esports':      '🏆 Esports',
+      'nav.got':          '🐉 GoT',
+      'nav.warhammer':    '⚙ Warhammer',
+      'nav.magic':        '✨ MtG',
+      'nav.rol':          '🎲 RPG',
+      'nav.social':       '📡 Social',
+      'nav.toggleAria':   'Toggle menu',
+      'hero.pre':         '// PLAYER ONE HAS ENTERED THE GAME',
+      'hero.btnGames':    '🎮 MY GAMES',
+      'hero.btnGaming':   '🕹 GAMING HISTORY',
+      'hero.btnGot':      '🐉 GOT',
+      'hero.spriteLevel': 'LVL 99 GAMER',
+      'about.title':      'ABOUT ME',
+      'about.p1':         'Welcome to <strong>Freakonia</strong> — my personal corner of the internet where gaming history, fandom obsession, and indie game development collide.',
+      'about.p2':         "I'm <strong>Karlete</strong>, and my gaming story goes way back — it all started with <strong>Doom</strong> at my cousin's house as a kid. From there came Alex Kid, Sonic, <strong>Super Mario World</strong>, Mortal Kombat and every arcade machine in sight; the <strong>Game Boy</strong> with Super Mario Land 2, and the <strong>Master System 2</strong>, my first very own console. With the <strong>Super Nintendo</strong> and the <strong>PlayStation</strong> came Tomb Raider, the <strong>Final Fantasy</strong> series, PES, NBA Live and NBA 2K. Then the PC — and with it, endless afternoons at the legendary <strong>Death Match</strong> cybercafé in Cáceres, where the whole crew from town would gather for <strong>Action Quake 2</strong>, Counter-Strike and <strong>Diablo 2</strong>. After that came StarCraft, Unreal, Gothic, Fallout, <strong>Heroes of Might and Magic</strong> II through V, Oblivion, Skyrim with a thousand mods... and you know how this ends: <strong>League of Legends</strong> and <strong>Dead by Daylight</strong>. I don't play them anymore, I swear — these days I stick to watching competitive and pretending I could still play. So here we go!",
+      'about.p3':         "But the geekery doesn't stop at video games. I'm a hardcore <strong>Game of Thrones</strong> fan — the books and the show up to season six; the last two seasons, on this site, never happened. I've also put serious time into <strong>Warhammer Fantasy</strong> and tabletop RPGs: <strong>Lord of the Rings</strong>, <strong>Stormbringer</strong>, <strong>Call of Cthulhu</strong>... and I still have my <strong>Magic: The Gathering</strong> card collection. Yes, the geekery runs deep — and I wouldn't have it any other way.",
+      'about.p4':         "When I'm not watching pros do what I used to do, I'm building — currently developing <strong>Fallen Valkyrie</strong>, a 2D Metroidvania in Unity.",
+      'about.btnProjects':'📁 MY PROJECTS',
+      'about.btnHistory': '🎮 MY HISTORY',
+      'about.statLoreLabel': 'LORE NERD',
+      'about.statDbdVal': 'A FEW',
+      'about.statConsoles':'Consoles',
+      'about.statHours':  'Epic Hours',
+      'about.statWip':    'Game WIP',
+      'hub.title':        'SELECT YOUR DESTINATION',
+      'hub.gamedev':      'Indie projects, Fallen Valkyrie & devlogs',
+      'hub.gaming':       'Console history from SMS2 to PC',
+      'hub.esports':      'LoL competitive, DBD and news',
+      'hub.got':          'ASOIAF books, series & theories',
+      'hub.warhammer':    '40K, Age of Sigmar & painting',
+      'hub.magic':        'Decks, cards & collections',
+      'hub.rolLabel':     'RPG',
+      'hub.rol':          'LOTR, Stormbringer, Cthulhu & more',
+      'hub.java':         'Professional dev, JavaDevBible & more',
+      'hub.social':       'YouTube & Twitter/X feed',
+      'featured.currentTitle': 'CURRENT PROJECT',
+      'featured.inDev':   'IN DEVELOPMENT',
+      'featured.fallenDesc': 'A 2D Metroidvania set in a dying world where a fallen warrior must reclaim her lost power through forgotten ruins and corrupted gods. Built in <strong>Unity</strong> with hand-crafted pixel art.',
+      'featured.btnSeeMore':  '🎮 SEE MORE',
+      'featured.estRelease':  'EST. RELEASE: TBD',
+      'featured.finishedTitle': 'FINISHED PROJECTS',
+      'games.samuraiDesc': 'A chaotic cooking game with a samurai twist. Chop, serve and survive the dinner rush with blade precision.',
+      'games.starsDesc':   'A retro-inspired space lander. Navigate gravitational fields and touch down without blowing up. Easier said than done.',
+      'tag.action':        'ACTION',
+      'tag.released':      'RELEASED',
+      'tag.cooking':       'COOKING',
+      'tag.done':          'DONE',
+      'tag.space':         'SPACE',
+      'tag.physics':       'PHYSICS',
+      'footer.made':       'MADE WITH PIXEL LOVE & TOO MANY ENERGY DRINKS',
+    },
+  };
+
+  const taglines = {
+    es: [
+      'GAMER. DESARROLLADOR. FANÁTICO DEL LORE.',
+      'MASTER SYSTEM → PC → GAME DEV',
+      'LOL BROMURO DE SODIO IV | DBD ESPECTADOR',
+      'EL INVIERNO LLEGARÁ... ALGÚN DÍA.',
+    ],
+    en: [
+      'GAMER. DEVELOPER. LORE NERD.',
+      'MASTER SYSTEM → PC → GAME DEV',
+      'LOL SODIUM BROMIDE IV | DBD SPECTATOR',
+      'WINTER IS COMING... EVENTUALLY.',
+    ],
+  };
+
+  // ─── Language engine ──────────────────────────────────────────────────
+  let currentLang = localStorage.getItem('sp-lang') || 'es';
+  let taglineIndex = 0;
+  let taglineTimer = null;
+  const taglineEl = document.getElementById('hero-tagline');
+  const langToggleBtn = document.getElementById('lang-toggle');
+
+  function applyLang(lang) {
+    const t = translations[lang];
+    // Update all data-i18n elements (innerHTML so <strong> works)
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (t[key] !== undefined) el.innerHTML = t[key];
+    });
+    // Update html lang attribute
+    document.documentElement.lang = lang;
+    // Update toggle button label
+    langToggleBtn.textContent = lang === 'es' ? '🌐 EN' : '🌐 ES';
+    langToggleBtn.title = lang === 'es' ? 'Switch to English' : 'Cambiar a Español';
+    // Restart tagline in new language
+    restartTagline(lang);
+  }
+
+  function restartTagline(lang) {
+    if (taglineTimer) clearTimeout(taglineTimer);
+    if (taglineEl._typewriterAbort) taglineEl._typewriterAbort = true;
+    taglineIndex = 0;
+    taglineEl.textContent = '';
+    setTimeout(() => cycleTagline(lang), 100);
+  }
+
+  function cycleTagline(lang) {
+    const lines = taglines[lang];
+    typeWriter(taglineEl, lines[taglineIndex], 55, () => {
+      taglineIndex = (taglineIndex + 1) % lines.length;
+      taglineTimer = setTimeout(() => cycleTagline(lang), 2500);
+    });
+  }
+
+  langToggleBtn.addEventListener('click', () => {
+    currentLang = currentLang === 'es' ? 'en' : 'es';
+    localStorage.setItem('sp-lang', currentLang);
+    applyLang(currentLang);
+  });
+
+  // Init
+  applyLang(currentLang);
+</script>
+</body>
+</html>

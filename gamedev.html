@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Freakonia — Game Dev. Juegos publicados y proyectos en desarrollo por Karlete." />
+  <title>Game Dev — Freakonia</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/gamedev.css" />
+</head>
+<body>
+
+<!-- CRT overlay -->
+<div class="crt-overlay" aria-hidden="true"></div>
+
+<!-- ─── Navigation ─────────────────────────────────────────────────────── -->
+<nav class="navbar" role="navigation" aria-label="Navegación principal">
+  <div class="container">
+    <a href="index.html" class="nav-brand">⚔ FREAKONIA</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">▼ MENU</button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html"     class="nav-link">🏠 Inicio</a></li>
+      <li><a href="gamedev.html"   class="nav-link active">🎮 GameDev</a></li>
+      <li><a href="gaming.html"    class="nav-link">🕹 Gaming</a></li>
+      <li><a href="esports.html"   class="nav-link">🏆 Esports</a></li>
+      <li><a href="got.html"       class="nav-link">🐉 GoT</a></li>
+      <li><a href="warhammer.html" class="nav-link">⚙ Warhammer</a></li>
+      <li><a href="magic.html"     class="nav-link">✨ MtG</a></li>
+      <li><a href="rol.html"       class="nav-link">🎲 Rol</a></li>
+      <li><a href="nba.html"       class="nav-link">🏀 NBA</a></li>
+      <li><a href="java.html"      class="nav-link">☕ Java</a></li>
+      <li><a href="social.html"    class="nav-link">📡 Social</a></li>
+      <li><a href="news.html"      class="nav-link">📰 News</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ─── Page Header ─────────────────────────────────────────────────────── -->
+<header class="page-header-gamedev">
+  <div class="container">
+    <p class="page-header-pre">// KARLETE.EXE — MODO CREADOR ACTIVADO</p>
+    <h1 class="page-header-title">🎮 GAME DEV</h1>
+    <p class="page-header-sub">Proyectos indie — de la mente al juego, un píxel a la vez.</p>
+  </div>
+</header>
+
+<main>
+
+  <!-- ─── Stats overview ─────────────────────────────────────────────────── -->
+  <section class="section" style="padding-top: var(--sp-7); padding-bottom: var(--sp-5);">
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat-box reveal">
+          <span class="stat-value">2</span>
+          <span class="stat-label">Juegos Publicados</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value">1</span>
+          <span class="stat-label">En Desarrollo</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--accent-tertiary);text-shadow:var(--glow-blue);">Unity</span>
+          <span class="stat-label">Motor Principal</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--accent-secondary);text-shadow:var(--glow-pink);">itch.io</span>
+          <span class="stat-label">Plataforma</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <div class="gamedev-hero-img-wrap reveal">
+    <img
+      src="assets/img/unity.jpg"
+      alt="Unity — Motor de desarrollo de juegos"
+      class="gamedev-hero-img"
+    >
+    <div class="gamedev-hero-overlay">
+      <span class="gamedev-hero-label">⚙ POWERED BY UNITY</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 0 — ORIGEN / HISTORIA
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="origin">
+    <div class="container">
+
+      <div class="section-label" style="background:var(--accent-tertiary);">📖 MI HISTORIA</div>
+      <h2 class="section-title" style="color:var(--accent-tertiary);text-shadow:var(--glow-blue);">CÓMO EMPEZÓ TODO</h2>
+
+      <div class="card reveal" style="max-width:860px; border-color:var(--accent-tertiary); box-shadow: 4px 4px 0 var(--accent-tertiary);">
+
+        <p style="font-size:20px; line-height:1.8; margin-bottom:var(--sp-5);">
+          Después de tantos años jugando, de repente me picó la curiosidad por saber cómo se
+          programan los videojuegos y descubrí <strong style="color:var(--accent-tertiary);">Unity</strong>.
+          Empecé viendo tutoriales y me enganché enseguida. Ahora siempre que tengo tiempo le meto horas sin pensarlo dos veces.
+        </p>
+
+        <!-- Tutorial creators -->
+        <div style="margin-bottom:var(--sp-5);">
+          <p style="font-family:var(--font-primary);font-size:0.5rem;color:var(--text-dim);margin-bottom:var(--sp-3);">
+            ▶ APRENDÍ CON
+          </p>
+          <div style="display:flex; flex-wrap:wrap; gap:var(--sp-2);">
+            <span class="tag blue">Alva Majo</span>
+            <span class="tag blue">DevAlen</span>
+            <span class="tag blue">AlexDev</span>
+            <span class="tag blue">Imphenzia</span>
+            <span class="tag blue">CodeMonkey</span>
+            <span class="tag blue">Jonathan Weinberger</span>
+          </div>
+        </div>
+
+        <p style="font-size:20px; line-height:1.8; margin-bottom:var(--sp-5);">
+          Por ahora tengo dos juegos pequeños publicados en <strong>Itch.io</strong>, pero hay
+          más en camino. Además del Metroidvania — que es el proyecto grande y llevará su tiempo —,
+          tengo varios proyectos más que solo necesitan pulido final antes de publicarse:
+          un juego de naves espaciales al estilo clásico y otro tipo <strong>Arkanoid</strong>.
+          ¡Ojalá pudiera dedicarme al game dev a tiempo completo! Sería lo suyo.
+        </p>
+
+        <!-- Future projects teaser -->
+        <div style="background:var(--bg-surface); border:2px solid #333; padding:var(--sp-4); margin-bottom:var(--sp-2);">
+          <p style="font-family:var(--font-primary);font-size:0.5rem;color:var(--text-dim);margin-bottom:var(--sp-3);">
+            ▶ PRÓXIMAMENTE EN ITCH.IO
+          </p>
+          <div style="display:flex; flex-wrap:wrap; gap:var(--sp-2);">
+            <span class="tag" style="border-color:#444;color:#555;">🚀 Juego de Naves — <em style="color:#444;">En pulido</em></span>
+            <span class="tag" style="border-color:#444;color:#555;">🧱 Arkanoid-like — <em style="color:#444;">En pulido</em></span>
+            <span class="tag gold">⚔ Fallen Valkyrie — En desarrollo</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 1 — JUEGOS PUBLICADOS
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="published">
+    <div class="container">
+
+      <div class="section-label">✔ JUEGOS PUBLICADOS</div>
+      <h2 class="section-title">CATÁLOGO PUBLICADO</h2>
+
+      <!--
+        ┌─────────────────────────────────────────────────────────────┐
+        │  Para añadir un nuevo juego publicado, copia el bloque      │
+        │  <div class="game-card-full reveal"> ... </div>             │
+        │  dentro del <div class="grid-2 stagger"> de abajo.          │
+        └─────────────────────────────────────────────────────────────┘
+      -->
+      <div class="grid-2 stagger">
+
+        <!-- ── JUEGO 1: SAMURAI KITCHEN ─────────────────────────────── -->
+        <div class="game-card-full reveal">
+          <img
+            src="assets/img/Samurai Kitchen Screenshot.jpg"
+            alt="Samurai Kitchen — captura de pantalla"
+            class="game-card-thumb"
+          />
+          <div class="game-card-full-body">
+            <div class="game-card-full-header">
+              <h3 class="game-card-full-title">🍱 Samurai Kitchen</h3>
+              <span class="status-badge done">PUBLICADO</span>
+            </div>
+
+            <div style="display:flex; flex-wrap:wrap; gap:var(--sp-1); margin-bottom:var(--sp-4);">
+              <span class="tag gold">PUBLICADO</span>
+              <span class="tag pink">COCINA</span>
+              <span class="tag blue">ARCADE</span>
+              <span class="tag">2D</span>
+            </div>
+
+            <p class="game-card-full-desc">
+              Un caótico juego de cocina con giro samurái. Corta ingredientes, sirve platos y
+              sobrevive a la frenética hora punta de la cena — todo con la precisión de una katana.
+              Velocidad, ritmo y un buen ojo son tu única salvación.
+            </p>
+
+            <p class="game-card-full-meta">Motor: <span>Unity</span> &nbsp;·&nbsp; Arte: <span>Pixel Art 2D</span> &nbsp;·&nbsp; Plataforma: <span>PC / Web</span></p>
+
+            <div class="game-card-full-footer">
+              <a
+                href="https://sanprieto.itch.io/samurai-kitchen"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-pink"
+              >🎮 JUGAR EN ITCH.IO</a>
+              <span style="font-family:var(--font-primary);font-size:0.45rem;color:var(--text-dim);">PC / WEB</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── JUEGO 2: STARS LANDER ─────────────────────────────────── -->
+        <div class="game-card-full reveal">
+          <img
+            src="assets/img/Starslander screenshot.jpg"
+            alt="Stars Lander — captura de pantalla"
+            class="game-card-thumb"
+          />
+          <div class="game-card-full-body">
+            <div class="game-card-full-header">
+              <h3 class="game-card-full-title">🚀 Stars Lander</h3>
+              <span class="status-badge done">PUBLICADO</span>
+            </div>
+
+            <div style="display:flex; flex-wrap:wrap; gap:var(--sp-1); margin-bottom:var(--sp-4);">
+              <span class="tag gold">PUBLICADO</span>
+              <span class="tag">ESPACIO</span>
+              <span class="tag blue">FÍSICA</span>
+              <span class="tag">2D</span>
+            </div>
+
+            <p class="game-card-full-desc">
+              Un lander espacial de inspiración retro clásica. Navega campos gravitacionales,
+              gestiona el combustible y aterriza suavemente en la plataforma sin convertirte en
+              chatarra espacial. Más fácil de decir que de hacer.
+            </p>
+
+            <p class="game-card-full-meta">Motor: <span>Unity</span> &nbsp;·&nbsp; Arte: <span>Pixel Art 2D</span> &nbsp;·&nbsp; Plataforma: <span>PC / Web</span></p>
+
+            <div class="game-card-full-footer">
+              <a
+                href="https://sanprieto.itch.io/starslander"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-pink"
+              >🎮 JUGAR EN ITCH.IO</a>
+              <span style="font-family:var(--font-primary);font-size:0.45rem;color:var(--text-dim);">PC / WEB</span>
+            </div>
+          </div>
+        </div>
+
+        <!--
+          ┌────────────────────────────────────────────────────────────┐
+          │  PRÓXIMO JUEGO — copia y pega este bloque cuando tengas   │
+          │  un nuevo juego publicado y rellena los datos.             │
+          └────────────────────────────────────────────────────────────┘
+
+          <div class="game-card-full reveal">
+            <div class="game-card-thumb-placeholder">🎮</div>
+            <div class="game-card-full-body">
+              <div class="game-card-full-header">
+                <h3 class="game-card-full-title">TÍTULO DEL JUEGO</h3>
+                <span class="status-badge done">PUBLICADO</span>
+              </div>
+              <div style="display:flex; flex-wrap:wrap; gap:var(--sp-1); margin-bottom:var(--sp-4);">
+                <span class="tag gold">PUBLICADO</span>
+                <span class="tag pink">GÉNERO</span>
+              </div>
+              <p class="game-card-full-desc">Descripción del juego...</p>
+              <p class="game-card-full-meta">Motor: <span>Unity</span> · Arte: <span>Pixel Art</span></p>
+              <div class="game-card-full-footer">
+                <a href="TU_LINK_ITCHIO" target="_blank" rel="noopener noreferrer" class="btn btn-pink">🎮 JUGAR EN ITCH.IO</a>
+              </div>
+            </div>
+          </div>
+        -->
+
+      </div><!-- /grid-2 -->
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 2 — EN DESARROLLO
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="wip">
+    <div class="container">
+
+      <div class="section-label gold">⚙ EN DESARROLLO</div>
+      <h2 class="section-title" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">PROYECTO ACTUAL</h2>
+
+      <!--
+        ┌─────────────────────────────────────────────────────────────┐
+        │  Para añadir otro juego en desarrollo, copia el bloque      │
+        │  <div class="wip-spotlight reveal"> ... </div>              │
+        │  debajo del actual y rellena los datos.                     │
+        └─────────────────────────────────────────────────────────────┘
+      -->
+
+      <!-- ── WIP: FALLEN VALKYRIE ───────────────────────────────────────── -->
+      <div class="wip-spotlight reveal">
+
+        <!-- Header -->
+        <div class="wip-spotlight-header">
+          <div class="wip-spotlight-icon">⚔</div>
+          <div class="wip-spotlight-heading">
+            <div style="display:flex; align-items:center; gap:var(--sp-3); flex-wrap:wrap; margin-bottom:var(--sp-2);">
+              <span class="status-badge wip">EN DESARROLLO</span>
+              <span style="font-family:var(--font-primary);font-size:0.45rem;color:var(--text-dim);">EST. LANZAMIENTO: TBD</span>
+            </div>
+            <h2 class="wip-spotlight-title">FALLEN VALKYRIE</h2>
+            <p class="wip-spotlight-sub">Metroidvania 2D · Unity · Pixel Art</p>
+          </div>
+        </div>
+
+        <!-- Body: main + sidebar -->
+        <div class="wip-spotlight-body">
+
+          <!-- Main content -->
+          <div class="wip-spotlight-main">
+
+            <div style="display:flex; flex-wrap:wrap; gap:var(--sp-1); margin-bottom:var(--sp-5);">
+              <span class="tag gold">EN DESARROLLO</span>
+              <span class="tag">METROIDVANIA</span>
+              <span class="tag blue">UNITY</span>
+              <span class="tag pink">PIXEL ART</span>
+              <span class="tag">ACCIÓN</span>
+              <span class="tag">AVENTURA</span>
+            </div>
+
+            <p class="wip-spotlight-desc">
+              Un Metroidvania 2D ambientado en un mundo agonizante donde una guerrera caída
+              debe recuperar su poder perdido a través de ruinas olvidadas y dioses corrompidos.
+              Cada zona del mapa desvela nuevas mecánicas, secretos y habilidades que amplían
+              progresivamente el acceso al mundo.
+            </p>
+            <p class="wip-spotlight-desc">
+              Construido en <strong>Unity</strong> con pixel art artesanal cuadro a cuadro.
+              El diseño de niveles mezcla exploración no lineal, combate fluido y
+              una narrativa ambiental contada a través del escenario.
+            </p>
+
+            <h4 style="color:var(--accent-warn); margin-bottom:var(--sp-3); font-size:0.55rem;">
+              ▶ CARACTERÍSTICAS PLANEADAS
+            </h4>
+            <ul class="feature-list">
+              <li class="done">Sistema de movimiento y dash</li>
+              <li class="done">Mecánica de combate cuerpo a cuerpo</li>
+              <li class="done">Primer área jugable — Las Ruinas</li>
+              <li>Sistema de habilidades desbloqueables</li>
+              <li>Jefes con patrones de IA únicos</li>
+              <li>Mapa interactivo y sistema de guardado</li>
+              <li>Banda sonora original</li>
+              <li>Múltiples zonas: Ruinas · Catacumbas · Templo Corrompido · Cielo Caído</li>
+            </ul>
+
+          </div>
+
+          <!-- Sidebar -->
+          <div class="wip-spotlight-sidebar">
+
+            <!-- Dev progress -->
+            <div class="dev-progress-wrap">
+              <div class="dev-progress-label">
+                <span>PROGRESO GENERAL</span>
+                <span style="color:var(--accent-warn);">35%</span>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill gold" data-fill="35"></div>
+              </div>
+            </div>
+
+            <div class="bar-container" style="margin-bottom:var(--sp-2);">
+              <div class="bar-label"><span>DISEÑO</span><span>60%</span></div>
+              <div class="bar-track"><div class="bar-fill green" data-fill="60"></div></div>
+            </div>
+            <div class="bar-container" style="margin-bottom:var(--sp-2);">
+              <div class="bar-label"><span>PROGRAMACIÓN</span><span>40%</span></div>
+              <div class="bar-track"><div class="bar-fill blue" data-fill="40"></div></div>
+            </div>
+            <div class="bar-container" style="margin-bottom:var(--sp-5);">
+              <div class="bar-label"><span>ARTE</span><span>25%</span></div>
+              <div class="bar-track"><div class="bar-fill pink" data-fill="25"></div></div>
+            </div>
+
+            <!-- Info rows -->
+            <div class="info-row">
+              <span class="info-row-label">Motor</span>
+              <span class="info-row-value">Unity 2D</span>
+            </div>
+            <div class="info-row">
+              <span class="info-row-label">Género</span>
+              <span class="info-row-value">Metroidvania</span>
+            </div>
+            <div class="info-row">
+              <span class="info-row-label">Arte</span>
+              <span class="info-row-value">Pixel Art manual</span>
+            </div>
+            <div class="info-row">
+              <span class="info-row-label">Plataforma obj.</span>
+              <span class="info-row-value">PC · Web</span>
+            </div>
+            <div class="info-row">
+              <span class="info-row-label">Lanzamiento</span>
+              <span class="info-row-value" style="color:var(--accent-warn);">TBD</span>
+            </div>
+
+            <div style="margin-top: var(--sp-5);">
+              <a href="index.html#featured" class="btn btn-gold btn-block">⚔ VER EN INICIO</a>
+            </div>
+
+          </div>
+        </div><!-- /wip-spotlight-body -->
+      </div><!-- /wip-spotlight -->
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ─── Footer ──────────────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="gamedev.html">GameDev</a></li>
+      <li><a href="gaming.html">Gaming</a></li>
+      <li><a href="got.html">GoT</a></li>
+      <li><a href="social.html">Social</a></li>
+      <li><a href="java.html">Java</a></li>
+    </ul>
+    <p>⚔ FREAKONIA — KARLETE</p>
+    <p style="color:#444;">HECHO CON AMOR PIXELADO Y DEMASIADAS BEBIDAS ENERGÉTICAS</p>
+    <p style="color:#333;">◄ INSERT COIN ►</p>
+
+    <div class="footer-legal">
+      <div class="pixel-divider"></div>
+      <p class="footer-copyright">
+        © 2025 FREAKONIA — KARLETE. ALL RIGHTS RESERVED.
+      </p>
+      <p class="footer-trademark">
+        FREAKONIA™ IS A REGISTERED PERSONAL BRAND.
+        ALL CONTENT, DESIGNS, GAME CONCEPTS AND ORIGINAL TEXTS
+        ON THIS SITE ARE THE EXCLUSIVE PROPERTY OF THEIR AUTHOR.
+        UNAUTHORIZED REPRODUCTION, DISTRIBUTION OR USE OF ANY
+        CONTENT IS STRICTLY PROHIBITED WITHOUT PRIOR WRITTEN PERMISSION.
+      </p>
+      <p class="footer-notice">
+        ⚠ THIS SITE CONTAINS STRONG OPINIONS ABOUT VIDEO GAMES,
+        FANTASY LORE AND BASKETBALL. READER DISCRETION IS ADVISED.
+        NO GOBLINS WERE HARMED IN THE MAKING OF THIS WEBSITE.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="js/main.js"></script>
+</body>
+</html>

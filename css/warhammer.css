@@ -1,0 +1,845 @@
+/* ============================================
+   warhammer.css — Specific styles for warhammer.html
+   Freakonia — El Reino Friki
+   ============================================ */
+
+/* ── Warhammer accent vars ── */
+:root {
+  --wh-gold:  var(--accent-warn);
+  --wh-red:   #990000;
+  --glow-red: 0 0 8px #990000, 0 0 20px #990000;
+}
+
+/* ── Page header ── */
+.page-header-warhammer {
+  background: var(--bg-surface);
+  border-bottom: 4px solid var(--accent-warn);
+  padding: var(--sp-7) 0 var(--sp-6);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header-warhammer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(255,204,0,0.07) 0%, transparent 50%),
+    linear-gradient(225deg, rgba(153,0,0,0.06) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.page-header-warhammer::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 4px;
+  background: linear-gradient(90deg,
+    var(--accent-warn)  0%,
+    #cc4400             30%,
+    var(--accent-warn)  60%,
+    #cc4400             100%);
+}
+
+.page-header-warhammer .container { position: relative; z-index: 1; }
+
+.page-header-pre {
+  font-family: var(--font-primary);
+  font-size: 0.5rem;
+  color: var(--accent-warn);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: var(--sp-3);
+}
+
+.page-header-title {
+  font-family: var(--font-primary);
+  font-size: clamp(1.2rem, 4vw, 2.2rem);
+  color: var(--text-bright);
+  text-shadow: var(--glow-gold);
+  margin-bottom: var(--sp-3);
+}
+
+.page-header-sub {
+  font-family: var(--font-secondary);
+  font-size: 22px;
+  color: var(--text-dim);
+  margin-bottom: 0;
+}
+
+/* ── Section label strip ── */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-3);
+  font-family: var(--font-primary);
+  font-size: 0.55rem;
+  color: #000;
+  background: var(--accent-warn);
+  padding: var(--sp-2) var(--sp-4);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--sp-5);
+}
+
+.section-label.red   { background: var(--wh-red);            color: #fff; }
+.section-label.green { background: var(--accent-primary);    color: #000; }
+.section-label.blue  { background: var(--accent-tertiary);   color: #000; }
+.section-label.pink  { background: var(--accent-secondary);  color: #fff; }
+.section-label.dim   { background: #333; color: var(--text-dim); }
+
+/* ── Quote card ── */
+.quote-card {
+  background: var(--bg-card);
+  border: var(--border-dim);
+  padding: var(--sp-5) var(--sp-6);
+  position: relative;
+  margin-bottom: var(--sp-5);
+}
+
+.quote-card::before {
+  content: '"';
+  position: absolute;
+  top: var(--sp-2);
+  left: var(--sp-4);
+  font-family: var(--font-secondary);
+  font-size: 5rem;
+  color: var(--accent-warn);
+  opacity: 0.15;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.quote-card p { font-size: 19px; line-height: 1.8; position: relative; z-index: 1; }
+
+/* ── Section quick nav ── */
+.section-quicknav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  margin: var(--sp-5) 0 var(--sp-6);
+}
+
+.section-quicknav a {
+  font-family: var(--font-primary);
+  font-size: 0.4rem;
+  color: var(--text-dim);
+  border: 2px solid #333;
+  padding: var(--sp-2) var(--sp-3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: color 0.1s, border-color 0.1s, box-shadow 0.1s;
+}
+
+.section-quicknav a:hover {
+  color: var(--accent-warn);
+  border-color: var(--accent-warn);
+  box-shadow: var(--glow-gold);
+}
+
+.section-quicknav a.red:hover {
+  color: #cc4400;
+  border-color: #cc4400;
+  box-shadow: 0 0 8px #cc4400, 0 0 20px #cc4400;
+}
+
+/* ── Era header ── */
+.era-header {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  margin: var(--sp-7) 0 var(--sp-5);
+  padding-bottom: var(--sp-3);
+  border-bottom: 2px solid #222;
+}
+
+.era-title {
+  font-family: var(--font-primary);
+  font-size: clamp(0.5rem, 1.5vw, 0.75rem);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  flex: 1;
+}
+
+.era-badge {
+  font-family: var(--font-primary);
+  font-size: 0.4rem;
+  color: var(--text-dim);
+  border: 1px solid #333;
+  padding: 3px 8px;
+  text-transform: uppercase;
+}
+
+/* ── Personal story card ── */
+.personal-story {
+  background: var(--bg-card);
+  border: 4px solid var(--accent-warn);
+  box-shadow: 0 0 0 1px var(--accent-warn), var(--glow-gold);
+  padding: var(--sp-6);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: var(--sp-6);
+}
+
+.personal-story::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,204,0,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.personal-story-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-5);
+  position: relative;
+  z-index: 1;
+  margin-bottom: var(--sp-5);
+}
+
+.personal-story-icon {
+  font-size: 3.5rem;
+  line-height: 1;
+  filter: drop-shadow(0 0 10px var(--accent-warn));
+  flex-shrink: 0;
+}
+
+.personal-story-meta {}
+
+.personal-story-label {
+  font-family: var(--font-primary);
+  font-size: 0.45rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: var(--sp-2);
+}
+
+.personal-story-title {
+  font-family: var(--font-primary);
+  font-size: clamp(0.7rem, 2.5vw, 1.1rem);
+  color: var(--accent-warn);
+  text-shadow: var(--glow-gold);
+  display: block;
+  margin-bottom: var(--sp-2);
+  line-height: 1.4;
+}
+
+.personal-story-date {
+  font-family: var(--font-secondary);
+  font-size: 19px;
+  color: var(--text-dim);
+}
+
+.personal-story-body {
+  position: relative;
+  z-index: 1;
+}
+
+.personal-story-body p {
+  font-family: var(--font-secondary);
+  font-size: 19px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.personal-story-body p + p { margin-top: var(--sp-4); }
+
+/* ── Personal story gallery ── */
+.whf-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.whf-gallery-img-wrap {
+  display: flex;
+  flex-direction: column;
+  border: 4px solid var(--accent-warn);
+  box-shadow: 0 0 14px var(--accent-warn),
+              0 0 28px rgba(255, 204, 0, 0.3);
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.whf-gallery-img-wrap:hover {
+  border-color: var(--accent-secondary);
+  box-shadow: 0 0 20px var(--accent-secondary),
+              0 0 40px rgba(255, 0, 255, 0.3);
+}
+
+.whf-gallery-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.whf-gallery-caption {
+  display: block;
+  font-family: var(--font-primary);
+  font-size: 0.45rem;
+  color: var(--accent-warn);
+  text-align: center;
+  padding: 0.5rem;
+  background: var(--bg-surface);
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .whf-gallery { grid-template-columns: 1fr; }
+  .whf-gallery-img { height: 220px; }
+}
+
+/* ── Edition card ── */
+.edition-card {
+  background: var(--bg-card);
+  border: 2px solid #252525;
+  overflow: hidden;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  display: flex;
+  flex-direction: column;
+}
+
+.edition-card:hover {
+  border-color: var(--ed-color, var(--accent-warn));
+  box-shadow: 0 0 0 1px var(--ed-color, var(--accent-warn)),
+              0 0 8px  var(--ed-color, var(--accent-warn)),
+              0 0 20px var(--ed-color, var(--accent-warn));
+}
+
+.edition-card.featured {
+  border: 3px solid var(--accent-warn);
+  box-shadow: 0 0 0 1px var(--accent-warn), var(--glow-gold);
+}
+
+.edition-card-header {
+  background: var(--bg-surface);
+  border-bottom: 2px solid #252525;
+  padding: var(--sp-4) var(--sp-5);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+}
+
+.edition-card:hover .edition-card-header,
+.edition-card.featured .edition-card-header {
+  border-bottom-color: var(--ed-color, var(--accent-warn));
+}
+
+.edition-num {
+  font-family: var(--font-primary);
+  font-size: clamp(1rem, 3vw, 1.6rem);
+  color: var(--accent-warn);
+  text-shadow: var(--glow-gold);
+  line-height: 1;
+}
+
+.edition-year {
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  color: var(--text-dim);
+}
+
+.edition-name {
+  font-family: var(--font-primary);
+  font-size: clamp(0.4rem, 1.2vw, 0.58rem);
+  color: var(--text-bright);
+  line-height: 1.5;
+  margin-top: var(--sp-2);
+}
+
+.edition-box-tag {
+  font-family: var(--font-primary);
+  font-size: 0.38rem;
+  padding: 3px 8px;
+  border: 1px solid #444;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+.edition-card-body {
+  padding: var(--sp-4) var(--sp-5);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.edition-sub { border-left: 3px solid #2a2a2a; padding-left: var(--sp-4); }
+
+.edition-sub-label {
+  font-family: var(--font-primary);
+  font-size: 0.42rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: var(--sp-2);
+}
+
+.edition-sub-label.gold  { color: var(--accent-warn);      }
+.edition-sub-label.red   { color: #cc4400;                 }
+.edition-sub-label.blue  { color: var(--accent-tertiary);  }
+.edition-sub-label.green { color: var(--accent-primary);   }
+.edition-sub-label.pink  { color: var(--accent-secondary); }
+
+.edition-sub p { font-size: 16px; line-height: 1.6; margin: 0; }
+
+/* ── Highlight box ── */
+.highlight-box {
+  background: var(--bg-surface);
+  border: 2px solid var(--accent-warn);
+  padding: var(--sp-3) var(--sp-4);
+  margin-top: var(--sp-1);
+}
+
+.highlight-box-label {
+  font-family: var(--font-primary);
+  font-size: 0.4rem;
+  color: var(--accent-warn);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: var(--sp-1);
+}
+
+.highlight-box-title {
+  font-family: var(--font-primary);
+  font-size: 0.5rem;
+  color: var(--text-bright);
+  display: block;
+  margin-bottom: var(--sp-1);
+  line-height: 1.5;
+}
+
+.highlight-box-detail {
+  font-family: var(--font-secondary);
+  font-size: 15px;
+  color: var(--text-dim);
+  margin: 0;
+}
+
+/* ── End Times box (dramatic red) ── */
+.endtimes-box {
+  background: var(--bg-card);
+  border: 4px solid var(--wh-red);
+  box-shadow: 0 0 0 1px var(--wh-red), var(--glow-red);
+  padding: var(--sp-5) var(--sp-6);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: var(--sp-5);
+}
+
+.endtimes-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(153,0,0,0.07) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.endtimes-box-title {
+  font-family: var(--font-primary);
+  font-size: clamp(0.6rem, 2vw, 1rem);
+  color: var(--wh-red);
+  text-shadow: var(--glow-red);
+  display: block;
+  margin-bottom: var(--sp-4);
+  position: relative;
+  z-index: 1;
+}
+
+.endtimes-box p {
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text);
+  position: relative;
+  z-index: 1;
+}
+
+.endtimes-box p + p { margin-top: var(--sp-3); }
+
+/* ── End Times chronicle cards ── */
+.chronicle-card {
+  background: var(--bg-card);
+  border: 2px solid #2a1a1a;
+  overflow: hidden;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.chronicle-card:hover {
+  border-color: var(--wh-red);
+  box-shadow: 0 0 0 1px var(--wh-red), var(--glow-red);
+}
+
+.chronicle-card-header {
+  background: rgba(153,0,0,0.08);
+  border-bottom: 2px solid #2a1a1a;
+  padding: var(--sp-3) var(--sp-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-2);
+}
+
+.chronicle-num {
+  font-family: var(--font-primary);
+  font-size: 0.7rem;
+  color: var(--wh-red);
+  text-shadow: var(--glow-red);
+}
+
+.chronicle-title {
+  font-family: var(--font-primary);
+  font-size: 0.42rem;
+  color: var(--text-bright);
+  line-height: 1.4;
+}
+
+.chronicle-card-body {
+  padding: var(--sp-3) var(--sp-4);
+}
+
+.chronicle-card-body p {
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-dim);
+}
+
+/* ── Army card ── */
+.army-card {
+  background: var(--bg-card);
+  border: 2px solid #252525;
+  overflow: hidden;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  display: flex;
+  flex-direction: column;
+}
+
+.army-card:hover {
+  border-color: var(--army-color, var(--accent-warn));
+  box-shadow: 0 0 0 1px var(--army-color, var(--accent-warn)),
+              0 0 8px  var(--army-color, var(--accent-warn)),
+              0 0 20px var(--army-color, var(--accent-warn));
+}
+
+/* Bretonnia featured */
+.army-card.my-army {
+  border: 2px solid var(--accent-warn);
+  box-shadow: 0 0 0 1px var(--accent-warn);
+}
+
+.army-card-header {
+  background: var(--bg-surface);
+  border-bottom: 2px solid #252525;
+  padding: var(--sp-3) var(--sp-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-2);
+  flex-wrap: wrap;
+}
+
+.army-card:hover .army-card-header {
+  border-bottom-color: var(--army-color, var(--accent-warn));
+}
+
+.army-card.my-army .army-card-header {
+  border-bottom-color: var(--accent-warn);
+  background: rgba(255,204,0,0.05);
+}
+
+.army-name {
+  font-family: var(--font-primary);
+  font-size: 0.44rem;
+  color: var(--text-bright);
+  line-height: 1.4;
+}
+
+.army-alignment {
+  font-family: var(--font-primary);
+  font-size: 0.34rem;
+  padding: 2px 6px;
+  border: 1px solid #333;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.army-alignment.order   { border-color: var(--accent-tertiary); color: var(--accent-tertiary); }
+.army-alignment.chaos   { border-color: #cc4400;               color: #cc4400; }
+.army-alignment.death   { border-color: var(--accent-primary);  color: var(--accent-primary);  }
+.army-alignment.destruct{ border-color: var(--accent-secondary);color: var(--accent-secondary);}
+.army-alignment.neutral { border-color: #555; color: #999; }
+.army-alignment.mine    { border-color: var(--accent-warn); color: var(--accent-warn); background: rgba(255,204,0,0.08); }
+
+.army-card-body {
+  padding: var(--sp-3) var(--sp-4);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+/* ── Army card images ── */
+.army-img-container {
+  width: 100%;
+  margin: 0.25rem 0 0.25rem 0;
+  border: 4px solid var(--accent-primary);
+  overflow: hidden;
+}
+
+.army-card:hover .army-img-container {
+  border-color: var(--army-color, var(--accent-warn));
+}
+
+.army-card.my-army .army-img-container {
+  border-color: var(--accent-warn);
+}
+
+.army-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  image-rendering: auto;
+}
+
+@media (max-width: 768px) {
+  .army-img { height: 150px; }
+}
+
+/* ── Per-army object-position overrides ── */
+[data-army="bretonia"]       .army-img { object-position: center 30%; }
+[data-army="imperio"]        .army-img { object-position: center bottom; }
+[data-army="enanos"]         .army-img { object-position: center bottom; }
+[data-army="altos-elfos"]    .army-img { object-position: center center; }
+[data-army="elfos-silvanos"] .army-img { object-position: center center; }
+[data-army="hombres-lagarto"].army-img { object-position: center bottom; }
+[data-army="guerreros-caos"] .army-img { object-position: center center; }
+[data-army="demonios-caos"]  .army-img { object-position: center center; }
+[data-army="bestias-caos"]   .army-img { object-position: center center; }
+[data-army="elfos-oscuros"]  .army-img { object-position: center center; }
+[data-army="enanos-caos"]    .army-img { object-position: center center; }
+[data-army="skavens"]        .army-img { object-position: center bottom; }
+[data-army="condes-vampiro"] .army-img { object-position: center center; }
+[data-army="reyes-funerarios"].army-img{ object-position: center center; }
+[data-army="orcos"]          .army-img { object-position: center center; }
+[data-army="reinos-ogros"]   .army-img { object-position: center center; }
+
+.army-desc {
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  flex: 1;
+}
+
+.army-units { display: flex; flex-wrap: wrap; gap: 4px; }
+
+.army-unit-tag {
+  font-family: var(--font-primary);
+  font-size: 0.32rem;
+  padding: 2px 5px;
+  border: 1px solid #2a2a2a;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── Lore box ── */
+.lore-box {
+  background: var(--bg-card);
+  border: 2px solid #2a2a2a;
+  padding: var(--sp-5);
+}
+
+.lore-box-title {
+  font-family: var(--font-primary);
+  font-size: 0.5rem;
+  color: var(--accent-warn);
+  text-shadow: var(--glow-gold);
+  margin-bottom: var(--sp-4);
+  display: block;
+}
+
+.lore-box p {
+  font-family: var(--font-secondary);
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.lore-box p + p { margin-top: var(--sp-3); }
+
+/* ── Old World revival box ── */
+.oldworld-box {
+  background: var(--bg-card);
+  border: 4px solid var(--accent-tertiary);
+  box-shadow: 0 0 0 1px var(--accent-tertiary), var(--glow-blue);
+  padding: var(--sp-5) var(--sp-6);
+  position: relative;
+  overflow: hidden;
+}
+
+.oldworld-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,191,255,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.oldworld-box p {
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text);
+  position: relative;
+  z-index: 1;
+}
+
+.oldworld-box p + p { margin-top: var(--sp-3); }
+
+/* ── Army group header ── */
+.army-group-header {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  margin: var(--sp-6) 0 var(--sp-4);
+  padding-bottom: var(--sp-2);
+  border-bottom: 1px solid #1e1e1e;
+}
+
+.army-group-title {
+  font-family: var(--font-primary);
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .personal-story-header { flex-direction: column; gap: var(--sp-3); }
+  .personal-story-icon { font-size: 2.5rem; }
+}
+
+@media (max-width: 640px) {
+  .personal-story { padding: var(--sp-4); }
+  .edition-card-body { padding: var(--sp-3) var(--sp-4); }
+  .endtimes-box { padding: var(--sp-4); }
+  .quote-card { padding: var(--sp-4); }
+}
+
+/* ── Footer legal ── */
+.footer-legal {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.footer-copyright {
+  font-family: var(--font-primary);
+  font-size: 0.4rem;
+  color: var(--accent-primary);
+  margin-bottom: 0.8rem;
+}
+.footer-trademark {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-notice {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── Section images ── */
+.whf-section-img-wrap {
+  width: 100%;
+  margin: 1.5rem 0 2.5rem 0;
+  border: 4px solid;
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whf-section-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.whf-section-img-wrap:hover .whf-section-img {
+  transform: scale(1.02);
+}
+
+/* Ediciones — var(--accent-warn) gold #ffcc00 */
+.whf-img-ediciones {
+  border-color: var(--accent-warn);
+  box-shadow: 0 0 16px var(--accent-warn),
+              0 0 32px rgba(255, 204, 0, 0.30);
+}
+
+.whf-img-ediciones:hover {
+  border-color: #ffe066;
+  box-shadow: 0 0 24px #ffe066,
+              0 0 48px rgba(255, 224, 102, 0.40);
+}
+
+/* End Times — var(--wh-red) #990000 */
+.whf-img-endtimes {
+  border-color: var(--wh-red);
+  box-shadow: 0 0 16px #990000,
+              0 0 32px rgba(153, 0, 0, 0.30);
+}
+
+.whf-img-endtimes:hover {
+  border-color: #cc0000;
+  box-shadow: 0 0 24px #cc0000,
+              0 0 48px rgba(204, 0, 0, 0.40);
+}
+
+/* Old World — var(--accent-tertiary) #00bfff */
+.whf-img-oldworld {
+  border-color: var(--accent-tertiary);
+  box-shadow: 0 0 16px var(--accent-tertiary),
+              0 0 32px rgba(0, 191, 255, 0.30);
+}
+
+.whf-img-oldworld:hover {
+  border-color: #66d9ff;
+  box-shadow: 0 0 24px #66d9ff,
+              0 0 48px rgba(102, 217, 255, 0.40);
+}
+
+@media (max-width: 768px) {
+  .whf-section-img { height: 220px; }
+}

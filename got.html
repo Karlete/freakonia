@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Freakonia — Game of Thrones. A Song of Ice and Fire, George R.R. Martin y la serie de HBO." />
+  <title>Game of Thrones — Freakonia</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/got.css" />
+
+</head>
+<body>
+
+<!-- CRT overlay -->
+<div class="crt-overlay" aria-hidden="true"></div>
+
+<!-- ─── Navigation ─────────────────────────────────────────────────────── -->
+<nav class="navbar" role="navigation" aria-label="Navegación principal">
+  <div class="container">
+    <a href="index.html" class="nav-brand">⚔ FREAKONIA</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">▼ MENU</button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html"     class="nav-link">🏠 Inicio</a></li>
+      <li><a href="gamedev.html"   class="nav-link">🎮 GameDev</a></li>
+      <li><a href="gaming.html"    class="nav-link">🕹 Gaming</a></li>
+      <li><a href="esports.html"   class="nav-link">🏆 Esports</a></li>
+      <li><a href="got.html"       class="nav-link active">🐉 GoT</a></li>
+      <li><a href="warhammer.html" class="nav-link">⚙ Warhammer</a></li>
+      <li><a href="magic.html"     class="nav-link">✨ MtG</a></li>
+      <li><a href="rol.html"       class="nav-link">🎲 Rol</a></li>
+      <li><a href="nba.html"       class="nav-link">🏀 NBA</a></li>
+      <li><a href="java.html"      class="nav-link">☕ Java</a></li>
+      <li><a href="social.html"    class="nav-link">📡 Social</a></li>
+      <li><a href="news.html"      class="nav-link">📰 News</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ─── Page Header ─────────────────────────────────────────────────────── -->
+<header class="page-header-got">
+  <div class="container">
+    <p class="page-header-pre">// VALAR MORGHULIS — VALAR DOHAERIS</p>
+    <h1 class="page-header-title">🐉 GAME OF THRONES</h1>
+    <p class="page-header-sub">A Song of Ice and Fire · George R.R. Martin · La serie que lo cambió todo</p>
+  </div>
+</header>
+
+<main>
+
+  <!-- ─── Stats overview ──────────────────────────────────────────────── -->
+  <section class="section" style="padding-top: var(--sp-7); padding-bottom: var(--sp-5);">
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--got-red);text-shadow:var(--glow-red);">5</span>
+          <span class="stat-label">Libros Publicados</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">8</span>
+          <span class="stat-label">Temporadas HBO</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value">15</span>
+          <span class="stat-label">Años Sin TWoW</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--accent-tertiary);text-shadow:var(--glow-blue);">S1–S6</span>
+          <span class="stat-label">Vista y Amada</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ─── Quick nav ────────────────────────────────────────────────────── -->
+  <section class="section" style="padding-top: var(--sp-5); padding-bottom: var(--sp-4);">
+    <div class="container">
+      <nav class="section-quicknav" aria-label="Saltar a sección">
+        <span style="font-family:var(--font-primary);font-size:0.4rem;color:var(--text-dim);align-self:center;">▶ IR A:</span>
+        <a href="#libros" class="gold">📚 Libros ASOIAF</a>
+        <a href="#autor"  class="gold">✍ El Autor</a>
+        <a href="#serie">📺 La Serie HBO</a>
+        <a href="#temporadas-oro">T1–T6</a>
+        <a href="#temporadas-caida">T7–T8</a>
+        <a href="#spinoffs">Spinoffs</a>
+      </nav>
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 1 — EL AUTOR Y LOS LIBROS
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="libros" style="padding-top: var(--sp-7);">
+    <div class="container">
+
+      <div class="section-label">📚 LIBROS — A SONG OF ICE AND FIRE</div>
+      <h2 class="section-title" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">LA SAGA QUE REINVENTÓ LA FANTASÍA</h2>
+
+      <div class="got-section-img-wrap">
+        <img
+          src="assets/img/juego_de_tronos.jpg"
+          alt="Game of Thrones — A Song of Ice and Fire"
+          class="got-section-img"
+          style="height: 800px;"
+        >
+      </div>
+
+      <!-- Intro quote -->
+      <div class="quote-card reveal">
+        <p>
+          A Song of Ice and Fire no es solo fantasía. Es un relato de poder, traición y consecuencias donde los héroes mueren,
+          los villanos tienen razones comprensibles, y los grises morales están en cada página. George R.R. Martin
+          construyó un mundo con <strong>miles de años de historia inventada</strong>, familias nobiliarias con genealogías
+          completas, religiones múltiples y continentes enteros con sus propias culturas. Westeros, Essos, los Dothraki,
+          los Faceless Men, los Caminantes Blancos — todo tiene lore que no cabe en las novelas.
+          <strong>Es la obra maestra de la fantasía épica moderna y la fuente de la que bebe la serie de HBO.</strong>
+        </p>
+      </div>
+
+      <!-- ── Autor ── -->
+      <div id="autor" class="author-bio reveal">
+        <div class="author-bio-grid">
+          <div class="author-icon">✍</div>
+          <div class="author-info">
+            <span class="author-label">▶ GEORGE RAYMOND RICHARD MARTIN</span>
+            <span class="author-name">EL DIOS QUE MATA PERSONAJES</span>
+            <div class="author-bio-text">
+              <div class="martin-img-wrap">
+                <img
+                  src="assets/img/martin.jpg"
+                  alt="George R.R. Martin — El Dios que Mata Personajes"
+                  class="martin-img"
+                >
+              </div>
+              <p>
+                Nacido el 20 de septiembre de 1948 en Bayonne, Nueva Jersey. Martin es escritor americano de
+                ciencia ficción, fantasía oscura y horror. Antes de convertirse en el autor más famoso de la
+                fantasía moderna, trabajó durante los años 80 como productor y guionista para la televisión —
+                incluyendo la serie <em>The Twilight Zone</em>. Esa experiencia televisiva explica su habilidad
+                para construir tramas complejas con múltiples arcos y su tendencia a
+                <strong>"hacer lo que la tele no podía permitirse"</strong>: matar personajes principales,
+                subvertir expectativas y mostrar consecuencias reales de la violencia y el poder.
+              </p>
+              <p>
+                Martin es famoso por varios rasgos de autor: primero, por la brutalidad narrativa de matar
+                protagonistas cuando menos lo esperas — la técnica del "kill your darlings" llevada al extremo.
+                Segundo, por el nivel de detalle absurdo de su worldbuilding: los libros de lore como
+                <em>The World of Ice and Fire</em> o <em>Fire &amp; Blood</em> son casi académicos en su
+                aproximación a la historia ficticia de Westeros. Y tercero — tristemente — por su velocidad
+                de escritura. O más bien, la falta de ella.
+              </p>
+              <p>
+                <em>A Dance with Dragons</em>, el quinto libro, se publicó en 2011. Estamos en 2026 y
+                <strong>The Winds of Winter lleva 15 años "casi listo"</strong>. Martin ha prometido múltiples
+                veces que está trabajando en él. Los fans hemos aprendido a existir en un estado de aceptación
+                zen: puede que salga, puede que no. Mientras tanto, GRRM escribió el lore de
+                <em>Elden Ring</em> con FromSoftware, dos volúmenes de <em>Fire &amp; Blood</em>,
+                <em>The World of Ice and Fire</em>, y produce los spinoffs para HBO. Todos los hombres deben
+                esperar.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Books section header ── -->
+      <div class="era-header">
+        <h3 class="era-title" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">📖 A SONG OF ICE AND FIRE — LOS CINCO LIBROS</h3>
+        <span class="era-badge">1996 – 2011</span>
+      </div>
+
+      <div class="grid-2 stagger">
+
+        <!-- ── Libro I ── -->
+        <div class="book-card reveal" id="libro-1" style="--book-color: var(--accent-warn);">
+          <div class="book-card-header">
+            <div>
+              <span class="book-number">I</span>
+              <span class="book-year"> · 1996</span>
+              <div class="book-title">A GAME OF THRONES</div>
+              <div style="margin-top:var(--sp-2);"><span class="book-status published">✔ PUBLICADO</span></div>
+            </div>
+            <span class="book-pages">694 págs.</span>
+          </div>
+          <div class="book-card-body">
+
+            <div class="book-cover-wrap">
+              <img src="assets/img/a_game_of_thrones.jpg" alt="A Game of Thrones — A Song of Ice and Fire" class="book-cover-img">
+            </div>
+
+            <div class="book-sub">
+              <span class="book-sub-label gold">▶ SINOPSIS</span>
+              <p>La muerte del lord Jon Arryn desencadena una crisis que rompe el equilibrio del reino. Ned Stark,
+              Lord de Invernalia, es nombrado Mano del Rey y viaja a la corte. Lo que encuentra en Desembarco del Rey
+              es un nido de víboras donde nadie es lo que parece. Mientras tanto, al otro lado del mar Angosto, los
+              últimos Targaryen planean su retorno, y en el Norte algo antiguo y helado despierta tras siglos de silencio.</p>
+            </div>
+
+            <div class="book-sub">
+              <span class="book-sub-label gold">▶ PERSONAJES CLAVE</span>
+              <div class="char-strip">
+                <span class="char-tag">Eddard Stark</span>
+                <span class="char-tag">Tyrion Lannister</span>
+                <span class="char-tag">Daenerys</span>
+                <span class="char-tag">Jon Snow</span>
+                <span class="char-tag">Cersei</span>
+                <span class="char-tag">Bran</span>
+              </div>
+              <p style="margin-top:var(--sp-2);">El libro presenta más de veinte POVs que se irán expandiendo a
+              lo largo de la saga. Ned Stark como protagonista inicial — honesto, recto, y por eso, condenado.</p>
+            </div>
+
+            <div class="book-sub">
+              <span class="book-sub-label blue">▶ LO QUE CAMBIA LA FANTASÍA</span>
+              <p>La muerte de Ned Stark en el capítulo 57. Un protagonista claro ejecutado en la plaza pública
+              en el primer libro. Martin rompió con todos los convenios del género en una sola escena.
+              La fantasía ya no sería lo mismo después de ese momento.</p>
+            </div>
+
+            <div class="key-moment">
+              <span class="key-moment-label">💀 MOMENTO CLAVE</span>
+              <span class="key-moment-title">"Eddard Stark es culpable de traición"</span>
+              <p class="key-moment-detail">El momento que redefine las expectativas del lector. El protagonista
+              puede morir. Nadie está a salvo. Esta es la promesa que Martin hace al principio — y la cumple
+              durante cinco libros sin piedad.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── Libro II ── -->
+        <div class="book-card reveal" id="libro-2" style="--book-color: var(--accent-tertiary);">
+          <div class="book-card-header">
+            <div>
+              <span class="book-number" style="color:var(--accent-tertiary);text-shadow:var(--glow-blue);">II</span>
+              <span class="book-year"> · 1998</span>
+              <div class="book-title">A CLASH OF KINGS</div>
+              <div style="margin-top:var(--sp-2);"><span class="book-status published">✔ PUBLICADO</span></div>
+            </div>
+            <span class="book-pages">761 págs.</span>
+          </div>
+          <div class="book-card-body">
+
+            <div class="book-cover-wrap">
+              <img src="assets/img/A CLASH OF KINGS.jpg" alt="A Clash of Kings — A Song of Ice and Fire" class="book-cover-img">
+            </div>
+
+            <div class="book-sub">
+              <span class="book-sub-label blue">▶ SINOPSIS</span>
+              <p>Con el reino fragmentado, cinco reyes reclaman el Trono de Hierro simultáneamente: Joffrey,
+              Stannis, Renly, Robb Stark y Balon Greyjoy. La Guerra de los Cinco Reyes desgarra Westeros.
+              En el mar Angosto, Daenerys lidera un khalesar destrozado por los desiertos de Qarth.
+              Theon Greyjoy toma una decisión que definirá su destino. Jon Snow cruza el Muro hacia lo desconocido.</p>
+            </div>
+
+            <div class="book-sub">
+              <span class="book-sub-label gold">▶ PERSONAJES CLAVE</span>
+              <div class="char-strip">
+                <span class="char-tag">Stannis Baratheon</span>
+                <span class="char-tag">Tyrion</span>
+                <span class="char-tag">Theon Greyjoy</span>
+                <span class="char-tag">Melisandre</span>
+                <span class="char-tag">Davos Seaworth</span>
+              </div>
+              <p style="margin-top:var(--sp-2);">Stannis Baratheon se establece como el rey más complejo
+              y moralmente ambiguo. Tyrion como Mano del Rey brilla en toda su inteligencia política.
+              El contraste entre ambos define el libro.</p>
+            </div>
+
+            <div class="book-sub">
+              <span class="book-sub-label blue">▶ HIGHLIGHTS</span>
+              <p>La Batalla del Aguasnegras es el primer gran set-piece bélico de la saga — un capítulo
+              completo desde el POV de Tyrion, con fuego valyrio destruyendo la flota de Stannis. La magia
+              empieza a volver a Westeros: los primeros dragones de Daenerys y la sombra asesina de Stannis
+              nacida de Melisandre marcan el inicio del retorno de algo muy antiguo.</p>
+            </div>
+
+            <div class="key-moment">
+              <span class="key-moment-label">🔥 MOMENTO CLAVE</span>
+              <span class="key-moment-title">Batalla del Aguasnegras — El Fuego Valyrio</span>
+              <p class="key-moment-detail">Una batalla naval en plena noche con cadenas, fuego valyrio y la
+              sombra asesina de Stannis. El capítulo más cinematográfico escrito por Martin hasta ese momento —
+              y el que demuestra que la guerra en ASOIAF tiene consecuencias reales.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── Libro III ── -->
+        <div class="book-card reveal" id="libro-3" style="--book-color: var(--got-red);">
+          <div class="book-card-header">
+            <div>
+              <span class="book-number" style="color:var(--got-red);text-shadow:var(--glow-red);">III</span>
+              <span class="book-year"> · 2000</span>
+              <div class="book-title">A STORM OF SWORDS</div>
+              <div style="margin-top:var(--sp-2);"><span class="book-status published">✔ PUBLICADO</span></div>
+            </div>
+            <span class="book-pages">973 págs.</span>
+          </div>
+          <div class="book-card-body">
+
+            <div class="book-cover-wrap">
+              <img src="assets/img/A STORM OF SWORDS.jpg" alt="A Storm of Swords — A Song of Ice and Fire" class="book-cover-img">
+            </div>
+
+            <div class="book-sub">
+              <span class="book-sub-label red">▶ SINOPSIS</span>
+              <p>Considerado unánimemente el mejor libro de la saga. La Guerra de los Cinco Reyes se acerca
+              a su punto de inflexión con consecuencias devastadoras. Robb Stark organiza su ejército con la
+              victoria en la mano. Joffrey se casa. Jon Snow infiltra a los salvajes. Jaime Lannister, sin
+              su mano derecha, empieza a convertirse en un personaje completamente diferente.</p>
+            </div>
+
+            <div class="book-sub">
+              <span class="book-sub-label gold">▶ PERSONAJES CLAVE</span>
+              <div class="char-strip">
+                <span class="char-tag">Robb Stark</span>
+                <span class="char-tag">Jaime Lannister</span>
+                <span class="char-tag">Arya Stark</span>
+                <span class="char-tag">Oberyn Martell</span>
+                <span class="char-tag">Joffrey</span>
+                <span class="char-tag">Sansa</span>
+              </div>
+              <p style="margin-top:var(--sp-2);">Jaime Lannister, el personaje que todos odiaban en el libro I,
+              se convierte en uno de los más interesantes y complejos de toda la saga gracias a su arco de
+              redención a través del sufrimiento y la pérdida.</p>
+            </div>
+
+            <div class="book-sub">
+              <span class="book-sub-label red">▶ POR QUÉ ES EL MEJOR</span>
+              <p>Tiene DOS bodas legendarias (la Roja y la Púrpura), el duelo Oberyn vs La Montaña, la primera
+              insinuación real de la teoría R+L=J, el juicio de Tyrion, la escena de Arya y el Perro cruzando
+              el Gemelo, y el cliffhanger de Tyrion en el epílogo. Es un libro entero de momentos épicos
+              encadenados sin respiro.</p>
+            </div>
+
+            <div class="key-moment">
+              <span class="key-moment-label">🔴 MOMENTO CLAVE</span>
+              <span class="key-moment-title">LA BODA ROJA</span>
+              <p class="key-moment-detail">El evento más traumático de la literatura de fantasía moderna.
+              Robb Stark, Catelyn y 3.500 soldados masacrados durante un festín. Walder Frey. Los Bolton.
+              "The Rains of Castamere" suena y el lector no puede creer lo que está leyendo. Un momento
+              de crueldad calculada que redefine el género para siempre.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── Libro IV ── -->
+        <div class="book-card reveal" id="libro-4" style="--book-color: var(--accent-secondary);">
+          <div class="book-card-header">
+            <div>
+              <span class="book-number" style="color:var(--accent-secondary);text-shadow:var(--glow-pink);">IV</span>
+              <span class="book-year"> · 2005</span>
+              <div class="book-title">A FEAST FOR CROWS</div>
+              <div style="margin-top:var(--sp-2);"><span class="book-status published">✔ PUBLICADO</span></div>
+            </div>
+            <span class="book-pages">753 págs.</span>
+          </div>
+          <div class="book-card-body">
+
+            <div class="book-cover-wrap">
+              <img src="assets/img/A FEAST FOR CROWS.jpg" alt="A Feast for Crows — A Song of Ice and Fire" class="book-cover-img">
+            </div>
+
+            <div class="book-sub">
+              <span class="book-sub-label pink">▶ SINOPSIS</span>
+              <p>Después del caos de la Boda Roja, Westeros intenta reconstruirse sobre sus cenizas. El libro
+              se centra en los territorios occidentales: Cersei asumiendo el poder en Desembarco del Rey,
+              Jaime llevando su redemption arc hacia el final de la guerra, Brienne en su búsqueda imposible,
+              y Sansa escondida como Alayne Stone bajo la tutela de Meñique.</p>
+            </div>
+
+            <div class="book-sub">
+              <span class="book-sub-label gold">▶ PERSONAJES CLAVE</span>
+              <div class="char-strip">
+                <span class="char-tag">Cersei Lannister</span>
+                <span class="char-tag">Jaime Lannister</span>
+                <span class="char-tag">Brienne de Tarth</span>
+                <span class="char-tag">Sansa / Alayne</span>
+                <span class="char-tag">Samwell Tarly</span>
+              </div>
+              <p style="margin-top:var(--sp-2);">El libro da por primera vez un capítulo POV a Cersei,
+              lo que transforma radicalmente nuestra percepción de ella. Verla desde dentro revela
+              una mente paranoica, brillante y autodestructiva a partes iguales.</p>
+            </div>
+
+            <div class="book-sub">
+              <span class="book-sub-label blue">▶ EL LIBRO DIVIDIDO</span>
+              <p>Martin escribió tanto que dividió el material en dos libros por zonas geográficas:
+              AFeFC cubre el oeste, ADwD cubre el este y el norte. Jon, Daenerys, Tyrion y Bran no aparecen
+              en este libro. Es el más criticado de la saga precisamente por eso — aunque contiene los
+              mejores POVs de Cersei y el arco de Jaime más rico de toda la serie.</p>
+            </div>
+
+            <div class="key-moment">
+              <span class="key-moment-label">👑 MOMENTO CLAVE</span>
+              <span class="key-moment-title">El Paseo de la Vergüenza de Cersei</span>
+              <p class="key-moment-detail">Cersei, caída en desgracia ante los Gorriones Militantes,
+              realiza el paseo de vergüenza por las calles de Desembarco del Rey. Un momento brutal
+              que humaniza al personaje más odiado de la saga y le da una dimensión trágica que
+              nadie esperaba.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── Libro V ── -->
+        <div class="book-card reveal" id="libro-5" style="--book-color: var(--accent-primary);">
+          <div class="book-card-header">
+            <div>
+              <span class="book-number" style="color:var(--accent-primary);text-shadow:var(--glow-green);">V</span>
+              <span class="book-year"> · 2011</span>
+              <div class="book-title">A DANCE WITH DRAGONS</div>
+              <div style="margin-top:var(--sp-2);"><span class="book-status published">✔ PUBLICADO</span></div>
+            </div>
+            <span class="book-pages">1056 págs.</span>
+          </div>
+          <div class="book-card-body">
+
+            <div class="book-cover-wrap">
+              <img src="assets/img/A DANCE WITH DRAGONS.JPG" alt="A Dance with Dragons — A Song of Ice and Fire" class="book-cover-img">
+            </div>
+
+            <div class="book-sub">
+              <span class="book-sub-label green">▶ SINOPSIS</span>
+              <p>El libro paralelo a AFeFC — mismo período temporal pero en el Norte y Essos. Jon Snow,
+              comandante de la Guardia de la Noche, intenta mantener la paz entre los salvajes y sus
+              hermanos. Daenerys gobierna Meereen con tres dragones incontrolables. Tyrion, huido de
+              Westeros, viaja hacia el Este buscando propósito. Stannis prepara su avance contra los Bolton.</p>
+            </div>
+
+            <div class="book-sub">
+              <span class="book-sub-label gold">▶ PERSONAJES CLAVE</span>
+              <div class="char-strip">
+                <span class="char-tag">Jon Snow</span>
+                <span class="char-tag">Daenerys</span>
+                <span class="char-tag">Tyrion</span>
+                <span class="char-tag">Bran</span>
+                <span class="char-tag">Stannis</span>
+                <span class="char-tag">Theon / Ramsay</span>
+              </div>
+              <p style="margin-top:var(--sp-2);">La trama de Daenerys en Meereen es la más criticada del
+              libro — el llamado "meereenese knot". Jon Snow alcanza su cénit como comandante antes de
+              un final absolutamente abrupto que lleva 15 años sin resolverse.</p>
+            </div>
+
+            <div class="book-sub">
+              <span class="book-sub-label blue">▶ EL CLIFFHANGER</span>
+              <p>El libro termina con Jon Snow apuñalado por sus propios hermanos de la Guardia de la Noche.
+              Desde 2011, los fans esperan The Winds of Winter para saber qué pasó. La serie de HBO
+              resolvió el cliffhanger en 2016, pero los libros siguen en pausa — y el Jon de la página
+              puede tener un destino completamente diferente al de la pantalla.</p>
+            </div>
+
+            <div class="key-moment">
+              <span class="key-moment-label">❄ MOMENTO CLAVE</span>
+              <span class="key-moment-title">Jon Snow — "Traidor"</span>
+              <p class="key-moment-detail">La traición de los hermanos de la Guardia de la Noche.
+              "Ghost" es la última palabra. El cliffhanger más largo de la historia de la fantasía épica
+              moderna — 15 años y contando sin resolución en los libros.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── Libro VI — The Winds of Winter ── -->
+        <div class="book-card reveal" id="libro-6" style="--book-color: var(--got-red);">
+          <div class="book-card-header">
+            <div>
+              <span class="book-number" style="color:var(--got-red);text-shadow:var(--glow-red);">VI</span>
+              <span class="book-year"> · ???</span>
+              <div class="book-title">THE WINDS OF WINTER</div>
+              <div style="margin-top:var(--sp-2);"><span class="book-status waiting">⏳ ESPERANDO DESDE 2011</span></div>
+            </div>
+            <span class="book-pages">??? págs.</span>
+          </div>
+          <div class="book-card-body">
+
+            <div class="book-cover-wrap">
+              <img src="assets/img/THE WINDS OF WINTER.jpg" alt="The Winds of Winter — A Song of Ice and Fire" class="book-cover-img">
+            </div>
+
+            <div class="book-sub">
+              <span class="book-sub-label red">▶ LO QUE SABEMOS</span>
+              <p>Martin ha publicado extractos sueltos: el capítulo de Arianne en el Viento del Amanecer,
+              el de Tyrion en la batalla de los gladiadores, el capítulo "Mercy" de Arya. Sabemos que el
+              libro arranca donde terminaron todos los cliffhangers de ADwD simultáneamente. El invierno
+              ha llegado. Los dragones vuelan. El ejército de muertos avanza. La danza de dragones
+              empieza de verdad.</p>
+            </div>
+
+            <div class="book-sub">
+              <span class="book-sub-label gold">▶ LOS 15 AÑOS DE PROMESAS</span>
+              <p>En 2012, Martin prometió que "pronto". En 2015, dijo que esperaba terminar antes de que
+              la serie llegara a ese arco — no lo hizo. En 2020, reconoció que era el libro más difícil
+              que había escrito nunca. En 2023, dijo que progresaba. En 2024, que seguía progresando.
+              Los fans hemos desarrollado mecanismos de defensa psicológicos para sobrevivir la espera.</p>
+            </div>
+
+            <div class="book-sub">
+              <span class="book-sub-label blue">▶ LO QUE NOS PROMETIÓ</span>
+              <p>Más giros de guión, resolución de la conspiración de Aegon "Faux" Targaryen, la campaña
+              de Stannis en el Norte, la gran batalla de Meereen, la revelación de Jon (que conocemos por
+              la serie pero que tendrá más matices), y el avance real del invierno y los Otros hacia
+              el Sur. Siete relatos principales convergiendo.</p>
+            </div>
+
+            <div class="key-moment" style="border-color:var(--got-red);">
+              <span class="key-moment-label" style="color:var(--got-red);">⏳ ESTADO ACTUAL — 2026</span>
+              <span class="key-moment-title">15 años. Contando.</span>
+              <p class="key-moment-detail">2011 → 2026. Mientras tanto, GRRM escribió el lore de Elden Ring
+              con FromSoftware, dos volúmenes de Fire &amp; Blood, The World of Ice and Fire, y produce
+              spinoffs para HBO. El debate fandom sobre si terminará la saga está oficialmente superado —
+              ahora simplemente disfrutamos del viaje mientras esperamos.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div><!-- /grid libros -->
+
+      <!-- ── Lore boxes ── -->
+      <div class="era-header" style="margin-top: var(--sp-7);">
+        <h3 class="era-title" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">🏰 EL MUNDO DE HIELO Y FUEGO</h3>
+        <span class="era-badge">WESTEROS · ESSOS · SOTHORYOS</span>
+      </div>
+
+      <div class="grid-2 stagger">
+
+        <div class="lore-box reveal">
+          <span class="lore-box-title">🏰 LAS GRANDES CASAS</span>
+          <p>El sistema de casas nobiliarias de Westeros funciona como un tablero de ajedrez con piezas que
+          se mueven, traicionan y aliansen en cada libro. Las siete grandes regiones tienen su propia historia
+          milenaria, sigilo, palabras y personalidad. Los Stark del Norte, leales hasta la tumba. Los Lannister
+          del Oeste, siempre pagando sus deudas. Los Targaryen exiliados con sus dragones. Los Baratheon en
+          guerra consigo mismos. Los Tyrell con su política de miel y rosas. Los Martell esperando su
+          venganza en silencio. Los Tully del río, los Arryn del cielo, los Greyjoy del mar.</p>
+          <div class="house-strip">
+            <span class="house-tag">🐺 Stark</span>
+            <span class="house-tag">🦁 Lannister</span>
+            <span class="house-tag">🐉 Targaryen</span>
+            <span class="house-tag">🦌 Baratheon</span>
+            <span class="house-tag">🌹 Tyrell</span>
+            <span class="house-tag">🐍 Martell</span>
+            <span class="house-tag">🐟 Tully</span>
+            <span class="house-tag">🦅 Arryn</span>
+            <span class="house-tag">🐙 Greyjoy</span>
+          </div>
+        </div>
+
+        <div class="lore-box reveal">
+          <span class="lore-box-title">❄ LOS TEMAS DE LA SAGA</span>
+          <p>ASOIAF no es fantasía escapista de bien contra mal. Martin deconstruye los tropos del género:
+          el caballero honorable muere porque ser honorable en un mundo deshonesto es una condena de muerte.
+          El poder corrompe, siempre, sin excepción. La historia la escriben los que sobreviven, no los que
+          merecen. Los "villanos" tienen sus razones. Los "héroes" cometen atrocidades.</p>
+          <p>El título — "canción de hielo y fuego" — refleja la dualidad central: el invierno desde el Norte
+          (los Otros, la muerte, el frío) y el fuego del Este (los dragones, la magia, el caos). Stark y
+          Targaryen. El frío de la lógica y el calor de la ambición. Y el tiempo que se acaba: el verano
+          interminable llega a su fin, y el invierno real dura generaciones enteras.</p>
+        </div>
+
+        <div class="lore-box reveal">
+          <span class="lore-box-title">🐉 LA MAGIA Y LOS DRAGONES</span>
+          <p>La magia en ASOIAF es sutil al principio y va creciendo a medida que el mundo "recuerda" que
+          existía. Los dragones de Daenerys son los primeros en siglos. Los Caminantes Blancos pertenecen
+          a otra era. Los greenseers, los wargs, el fuego valyrio, los shadowbinders de Asshai — todo forma
+          parte de un sistema deliberadamente misterioso y peligroso. La magia siempre tiene un precio.</p>
+          <p>Los dragones son el símbolo más potente de la saga: poder puro, incontrolable, que amplifica
+          tanto la gloria como la destrucción de quien los monta. Daenerys los cría como hijos y descubre
+          que tener poder de destrucción absoluta no significa saber qué hacer con él — una lección que
+          la serie explotará en sus últimas temporadas.</p>
+        </div>
+
+        <div class="lore-box reveal">
+          <span class="lore-box-title">⚔ R+L=J — LA TEORÍA</span>
+          <p>La teoría más famosa del fandom: Rhaegar Targaryen + Lyanna Stark = Jon Snow. Jon no sería
+          bastardo de Ned Stark sino hijo legítimo del príncipe Targaryen y la hermana de Ned. Las pistas
+          están sembradas desde el primer libro: el sueño de la torre de Bran, las insinuaciones de Ned,
+          la obsesión de Rhaegar con la profecía del "príncipe prometido".</p>
+          <p>Los libros no confirman explícitamente la teoría (la serie lo hizo en S6/S7), pero las pistas
+          son tan numerosas que prácticamente toda la comunidad la tiene por cierta. Si es correcta,
+          significa que Jon tiene más derecho al Trono de Hierro que Daenerys — con implicaciones enormes
+          para los dos libros que quedan por escribir.</p>
+        </div>
+
+      </div><!-- /grid lore -->
+
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 2 — LA SERIE DE HBO
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="serie" style="padding-top: var(--sp-7);">
+    <div class="container">
+
+      <div class="section-label red">📺 LA SERIE DE HBO</div>
+      <h2 class="section-title" style="color:var(--got-red);text-shadow:var(--glow-red);">GAME OF THRONES — 8 TEMPORADAS</h2>
+
+      <div class="got-serie-img-wrap">
+        <img
+          src="assets/img/got_la_serie.jpg"
+          alt="Game of Thrones — La Serie HBO 8 Temporadas"
+          class="got-serie-img"
+        >
+      </div>
+
+      <!-- Intro quote -->
+      <div class="quote-card reveal">
+        <p>
+          La adaptación de HBO es, durante sus primeras seis temporadas, una de las mejores adaptaciones
+          televisivas de la historia. David Benioff y D.B. Weiss tomaron los libros de Martin y los
+          tradujeron a imágenes con un respeto y fidelidad que pocas veces se ve en el género. El casting
+          fue prácticamente perfecto: Peter Dinklage como Tyrion, Charles Dance como Tywin, Lena Headey
+          como Cersei — personajes que ya eran excepcionales en papel y que la actuación elevó aún más.
+          <strong>Hasta la temporada 6, la serie fue televisión de primer nivel mundial.</strong>
+          Lo que vino después es otra historia — y también merece ser contado.
+        </p>
+      </div>
+
+      <!-- Stats serie -->
+      <div class="stats-row" style="margin-bottom: var(--sp-6);">
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--got-red);text-shadow:var(--glow-red);">2011</span>
+          <span class="stat-label">Estreno HBO</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">73</span>
+          <span class="stat-label">Episodios Totales</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value">59</span>
+          <span class="stat-label">Emmy Awards</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--accent-secondary);text-shadow:var(--glow-pink);">1M+</span>
+          <span class="stat-label">Firmas para Reescribir S8</span>
+        </div>
+      </div>
+
+      <!-- ── Temporadas de oro T1–T6 ── -->
+      <div id="temporadas-oro" class="era-header">
+        <h3 class="era-title" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">🏆 LA ERA DORADA — TEMPORADAS 1 A 6</h3>
+        <span class="era-badge">2011 – 2016</span>
+      </div>
+
+      <div class="grid-2 stagger">
+
+        <!-- ── T1 ── -->
+        <div class="tv-card reveal" id="t1" style="--tv-accent: var(--accent-warn);">
+          <div class="tv-card-header">
+            <div>
+              <span class="tv-season-num" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">T1</span>
+              <span class="tv-year"> · 2011 · 10 episodios</span>
+            </div>
+            <span class="tag gold">FUNDACIONAL</span>
+          </div>
+          <div class="tv-card-body">
+
+            <div class="tv-sub">
+              <span class="tv-sub-label gold">▶ SINOPSIS</span>
+              <p>Adaptación casi página por página del primer libro. Sean Bean como Eddard Stark establece
+              el tono moral de toda la serie: hay personajes honestos en Westeros, y eso los pone en peligro
+              de muerte inmediata. La temporada culmina con la ejecución de Ned y el nacimiento de los
+              dragones de Daenerys — dos imágenes que definen el universo entero.</p>
+            </div>
+
+            <div class="tv-sub">
+              <span class="tv-sub-label gold">▶ EL CASTING</span>
+              <div class="char-strip">
+                <span class="char-tag">Sean Bean — Ned</span>
+                <span class="char-tag">Peter Dinklage — Tyrion</span>
+                <span class="char-tag">Lena Headey — Cersei</span>
+                <span class="char-tag">Jack Gleeson — Joffrey</span>
+              </div>
+              <p style="margin-top:var(--sp-2);">Jack Gleeson como Joffrey Baratheon fue un descubrimiento
+              único: un villano construido para ser odiado con precisión quirúrgica. El público literalmente
+              odiaba al actor en la vida real — el mayor cumplido posible para una actuación de personaje
+              desagradable.</p>
+            </div>
+
+            <div class="tv-sub">
+              <span class="tv-sub-label blue">▶ "BAELOR" — EL EPISODIO 9</span>
+              <p>Ned Stark en el estrado. El público en los cines gritando "no lo van a hacer". Lo hacen.
+              La televisión de fantasía no volvería a ser lo mismo. El episodio 9 se convirtió desde ese
+              momento en un sello de calidad garantizado de la serie — el penúltimo episodio siempre
+              era donde ocurría lo impensable.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── T2 ── -->
+        <div class="tv-card reveal" id="t2" style="--tv-accent: var(--accent-warn);">
+          <div class="tv-card-header">
+            <div>
+              <span class="tv-season-num" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">T2</span>
+              <span class="tv-year"> · 2012 · 10 episodios</span>
+            </div>
+            <span class="tag gold">BLACKWATER</span>
+          </div>
+          <div class="tv-card-body">
+
+            <div class="tv-sub">
+              <span class="tv-sub-label gold">▶ SINOPSIS</span>
+              <p>La Guerra de los Cinco Reyes en pantalla. Stannis Baratheon asedia Desembarco del Rey
+              mientras Tyrion como Mano del Rey demuestra ser el personaje más inteligente de toda la
+              serie. Daenerys en Qarth. Y las memorables escenas de Arya en Harrenhal bajo la tutela
+              de Tywin — material nuevo de la serie que funciona perfectamente.</p>
+            </div>
+
+            <div class="tv-sub">
+              <span class="tv-sub-label gold">▶ "BLACKWATER" — EPISODIO 9</span>
+              <p>La Batalla del Aguasnegras filmada como un episodio cinematográfico completo. El fuego
+              valyrio en pantalla — verde brillante destruyendo la flota de Stannis. Tyrion liderando la
+              defensa con su famoso discurso. La llegada de Tywin en el último momento. El episodio más
+              caro de televisión hasta ese momento y el que justificó el presupuesto entero de la serie.</p>
+            </div>
+
+            <div class="tv-sub">
+              <span class="tv-sub-label blue">▶ ADICIONES DE LA SERIE</span>
+              <p>Las conversaciones entre Tywin (Charles Dance en su cénit interpretativo) y Arya en
+              Harrenhal son material original de la serie, sin base en los libros — y sin embargo
+              son algunas de las escenas más memorables de toda la producción. La química entre ambos
+              actores es irrepetible.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── T3 ── -->
+        <div class="tv-card reveal" id="t3" style="--tv-accent: var(--got-red);">
+          <div class="tv-card-header">
+            <div>
+              <span class="tv-season-num">T3</span>
+              <span class="tv-year"> · 2013 · 10 episodios</span>
+            </div>
+            <span class="tag" style="background:rgba(204,34,0,0.15);border-color:var(--got-red);color:var(--got-red);">BODA ROJA</span>
+          </div>
+          <div class="tv-card-body">
+
+            <div class="tv-sub">
+              <span class="tv-sub-label red">▶ SINOPSIS</span>
+              <p>La temporada que el mundo entero habla. Primera mitad de A Storm of Swords. Daenerys
+              libera esclavos y consigue un ejército. Jon Snow infiltra a los salvajes. Jaime Lannister
+              pierde la mano y empieza su redemption arc. Y en el episodio 9, el mundo arde con algo
+              que los lectores de los libros llevaban años esperando con terror.</p>
+            </div>
+
+            <div class="tv-sub">
+              <span class="tv-sub-label red">▶ EL FENÓMENO CULTURAL</span>
+              <p>Los videos de reacción a la Boda Roja se convirtieron en un fenómeno de internet.
+              Las personas que habían leído los libros grabaron a familiares y amigos viendo el episodio —
+              sus caras de horror se volvieron virales globalmente. "The Rains of Castamere" se coló en
+              la cultura popular como símbolo definitivo de traición narrativa.</p>
+            </div>
+
+            <div class="tv-sub">
+              <span class="tv-sub-label red">▶ "THE RAINS OF CASTAMERE"</span>
+              <p>Episodio 9. Robb Stark, Catelyn, Talisa embarazada y 3.500 soldados masacrados en una boda.
+              La música empieza a sonar. Catelyn vio lo que venía. El espectador tardó unos segundos más
+              en comprender. Fue televisión transformadora — el momento en que una generación entera de
+              espectadores aprendió que en esta serie nadie estaba a salvo.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── T4 ── -->
+        <div class="tv-card reveal" id="t4" style="--tv-accent: var(--accent-secondary);">
+          <div class="tv-card-header">
+            <div>
+              <span class="tv-season-num" style="color:var(--accent-secondary);text-shadow:var(--glow-pink);">T4</span>
+              <span class="tv-year"> · 2014 · 10 episodios</span>
+            </div>
+            <span class="tag pink">BODA PÚRPURA</span>
+          </div>
+          <div class="tv-card-body">
+
+            <div class="tv-sub">
+              <span class="tv-sub-label pink">▶ SINOPSIS</span>
+              <p>Si T3 tuvo la Boda Roja, T4 tiene la Boda Púrpura, el duelo del siglo y la caída definitiva
+              de Joffrey. Tyrion juzgado por el asesinato de Joffrey. Peter Dinklage en el discurso del
+              juicio — una de las mejores actuaciones de la historia de la televisión. Jon Snow defiende el
+              Muro. Arya empieza su camino hacia el oeste con el Perro.</p>
+            </div>
+
+            <div class="tv-sub">
+              <span class="tv-sub-label pink">▶ "THE MOUNTAIN AND THE VIPER"</span>
+              <p>El duelo entre Oberyn Martell (Pedro Pascal) y La Montaña (Hafþór Björnsson). Oberyn era
+              el nuevo favorito del público — carismático, vengativo, brillante. La resolución del duelo
+              es uno de los momentos más brutales e impactantes de toda la serie. Pascal tardó años en
+              superar haber rodado esa secuencia. El público lo vio venir y aun así no pudo creerlo.</p>
+            </div>
+
+            <div class="tv-sub">
+              <span class="tv-sub-label gold">▶ EL DISCURSO DE TYRION</span>
+              <p>"I wish I was the monster you think I am." Peter Dinklage ganó el Emmy de Mejor Actor
+              de Reparto por el juicio de Tyrion. Un personaje roto enfrentando un sistema completamente
+              injusto y decidiendo dejar de fingir que puede ganarlo — elegir la dignidad sobre
+              la supervivencia. Televisión de altísimo nivel.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── T5 ── -->
+        <div class="tv-card reveal" id="t5" style="--tv-accent: var(--accent-tertiary);">
+          <div class="tv-card-header">
+            <div>
+              <span class="tv-season-num" style="color:var(--accent-tertiary);text-shadow:var(--glow-blue);">T5</span>
+              <span class="tv-year"> · 2015 · 10 episodios</span>
+            </div>
+            <span class="tag blue">HARDHOME</span>
+          </div>
+          <div class="tv-card-body">
+
+            <div class="tv-sub">
+              <span class="tv-sub-label blue">▶ SINOPSIS</span>
+              <p>La serie empieza a separarse de los libros — Martin no había publicado los capítulos
+              correspondientes. La temporada genera controversia con ciertas adaptaciones, pero produce
+              el episodio más impactante en términos de acción pura hasta entonces: Hardhome,
+              la primera aparición seria de los Caminantes Blancos como amenaza real y aterradora.</p>
+            </div>
+
+            <div class="tv-sub">
+              <span class="tv-sub-label blue">▶ "HARDHOME" — EL EPISODIO</span>
+              <p>Jon Snow y Tormund negocian con los salvajes cuando el ejército de muertos ataca sin
+              previo aviso. Lo que sigue es una secuencia de acción de 20 minutos filmada como cine de
+              terror. El Rey de la Noche levantando a los muertos al final — en silencio, mirando a Jon.
+              Jon descubriendo que el acero valyrio puede matar Caminantes. El momento en que la amenaza
+              del Norte dejó de ser abstracta.</p>
+            </div>
+
+            <div class="tv-sub">
+              <span class="tv-sub-label gold">▶ EL PASEO DE CERSEI</span>
+              <p>Lena Headey filmó uno de los momentos más difíciles de la serie — el paseo de vergüenza
+              de Cersei a través de las calles de Desembarco del Rey. Una actuación puramente física y
+              emocional que muestra el colapso y la determinación simultáneos del personaje. Con doble
+              de cuerpo para el desnudo, pero Headey en primer plano en todo momento.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── T6 ── -->
+        <div class="tv-card reveal" id="t6" style="--tv-accent: var(--accent-primary);">
+          <div class="tv-card-header">
+            <div>
+              <span class="tv-season-num" style="color:var(--accent-primary);text-shadow:var(--glow-green);">T6</span>
+              <span class="tv-year"> · 2016 · 10 episodios</span>
+            </div>
+            <span class="tag green">HOLD THE DOOR</span>
+          </div>
+          <div class="tv-card-body">
+
+            <div class="tv-sub">
+              <span class="tv-sub-label green">▶ SINOPSIS</span>
+              <p>La temporada más espectacular. Completamente por delante de los libros. Jon Snow resucita.
+              Daenerys consolida su poder en Essos. Cersei destruye el Sept de Baelor con fuego valyrio.
+              La Batalla de los Bastardos. La revelación definitiva de R+L=J. Hodor.
+              Una temporada que empezó como adaptación y se convirtió en su propio monstruo cinematográfico.</p>
+            </div>
+
+            <div class="tv-sub">
+              <span class="tv-sub-label green">▶ "BATTLE OF THE BASTARDS"</span>
+              <p>Jon Snow vs Ramsay Bolton por Winterfell. Filmada durante 25 días con 500 extras, 70 caballos
+              y 600 personas de producción. La carga de caballería, el cerco de los Bolton, Kit Harington
+              casi muriendo aplastado entre extras. El Índex de Sansa apareciendo en el momento exacto.
+              El episodio bélico más épico de la televisión hasta ese momento — y posiblemente de siempre.</p>
+            </div>
+
+            <div class="tv-sub">
+              <span class="tv-sub-label green">▶ HODOR — HOLD THE DOOR</span>
+              <p>"Hodor" tenía una sola palabra. Lleva toda la serie siendo el personaje más querido,
+              más simpático, más inocente de todos. La T6 revela que "Hodor" es la contracción de
+              "Hold the Door" — la orden que Bran le da en una visión del pasado y que destruye la
+              mente del joven Wylis en el presente. Un loop temporal que convierte su muerte en
+              la tragedia más pura y devastadora de toda la serie.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div><!-- /grid temporadas de oro -->
+
+      <!-- ── Temporadas de la caída T7–T8 ── -->
+      <div id="temporadas-caida" class="era-header" style="margin-top: var(--sp-7);">
+        <h3 class="era-title" style="color:var(--accent-secondary);text-shadow:var(--glow-pink);">💔 LA CAÍDA — TEMPORADAS 7 Y 8</h3>
+        <span class="era-badge">2017 – 2019</span>
+      </div>
+
+      <div class="quote-card reveal" style="border-color: var(--accent-secondary);">
+        <p>
+          Las temporadas 7 y 8 son objeto de debate permanente en el fandom. Con el material de Martin
+          agotado, Benioff y Weiss aceleraron la narrativa hasta hacerla incoherente en momentos.
+          Los personajes tomaron decisiones que contradecían años de construcción. Los tiempos de viaje
+          se volvieron convenientes en lugar de lógicos. El drama político que definió las primeras
+          temporadas se simplificó hasta la caricatura.
+          <strong>La serie que tardó 6 años en construir algo majestuoso tardó 2 temporadas en derrumbarlo.</strong>
+          No fue un desastre total — hubo momentos brillantes — pero la caída fue real y el fandom
+          no lo ha olvidado.
+        </p>
+      </div>
+
+      <div class="grid-2 stagger">
+
+        <!-- ── T7 ── -->
+        <div class="tv-card reveal" id="t7" style="--tv-accent: var(--accent-secondary);">
+          <div class="tv-card-header">
+            <div>
+              <span class="tv-season-num" style="color:var(--accent-secondary);text-shadow:var(--glow-pink);">T7</span>
+              <span class="tv-year"> · 2017 · 7 episodios</span>
+            </div>
+            <span class="tag pink">VELOCIDAD MÁXIMA</span>
+          </div>
+          <div class="tv-card-body">
+
+            <div class="tv-sub">
+              <span class="tv-sub-label pink">▶ LO QUE PASÓ</span>
+              <p>Reducida a 7 episodios por decisión de los showrunners, la temporada comprimió arcos que
+              necesitaban más espacio. El encuentro entre Jon y Daenerys. La captura de un Caminante al
+              norte del Muro — la famosa expedición que requiere un salto de lógica de transporte
+              descomunal. La traición y muerte de Meñique. Cersei fingiendo aliarse con el ejército combinado.</p>
+            </div>
+
+            <div class="tv-sub">
+              <span class="tv-sub-label blue">▶ LO BUENO</span>
+              <p>El campo de loot de los Lannister atacado por Daenerys y Drogon. La escena del fuego
+              valyrio vs una línea de escudos medievales es cinematográficamente impactante y espectacular.
+              La confirmación completa de R+L=J a través de la visión de Sam y Bran. La muerte de Meñique
+              a manos de Sansa y Arya — una resolución satisfactoria para años de manipulación.</p>
+            </div>
+
+            <div class="tv-sub">
+              <span class="tv-sub-label pink">▶ EL PROBLEMA</span>
+              <p>Los personajes empezaron a moverse a velocidad de guión en lugar de velocidad de mundo.
+              Gendry corriendo como Flash para enviar un cuervo. Cuervos llegando en segundos entre
+              continentes. Jon capturado y rescatado en horas con dragones que viajan de Dragonstone
+              al Muro en tiempo record. El drama político que definió la serie se simplificó hasta
+              la caricatura en demasiados momentos.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── T8 ── -->
+        <div class="tv-card reveal" id="t8" style="--tv-accent: var(--accent-secondary);">
+          <div class="tv-card-header">
+            <div>
+              <span class="tv-season-num" style="color:var(--accent-secondary);text-shadow:var(--glow-pink);">T8</span>
+              <span class="tv-year"> · 2019 · 6 episodios</span>
+            </div>
+            <span class="tag pink">EL FINAL DIVISIVO</span>
+          </div>
+          <div class="tv-card-body">
+
+            <div class="tv-sub">
+              <span class="tv-sub-label pink">▶ LA CONTROVERSIA</span>
+              <p>Seis episodios para cerrar una saga de ocho años. El arco de Daenerys hacia la "locura"
+              era temáticamente defensible, pero el ritmo de dos temporadas no permitió creer en la
+              evolución. La resolución del Rey de la Noche fue considerada por muchos una resolución
+              anticlimática para el antagonista principal de toda la saga. Bran como rey — una elección
+              que la mayoría no entendió ni compartió.</p>
+            </div>
+
+            <div class="tv-sub">
+              <span class="tv-sub-label blue">▶ "THE LONG NIGHT" — EP. 3</span>
+              <p>La batalla de Winterfell contra el ejército de los muertos. 55 noches de rodaje, la
+              secuencia más cara de la historia televisiva hasta entonces. La oscuridad del episodio
+              generó controversia técnica. Arya matando al Rey de la Noche fue cinematográficamente
+              potente — aunque dividió al fandom sobre si era el desenlace correcto para la amenaza
+              más antigua de la saga.</p>
+            </div>
+
+            <div class="tv-sub">
+              <span class="tv-sub-label pink">▶ EL LEGADO</span>
+              <p>La petición de fans para reescribir la T8 superó el millón de firmas — sin precedente
+              en la historia del entretenimiento. HBO canceló los proyectos posteriores de Benioff y Weiss.
+              Sin embargo, la serie sigue siendo la más premiada de la historia televisiva con 59 Emmy,
+              incluyendo los de la polémica última temporada. Un legado contradictorio que el tiempo
+              está juzgando con más matices de los que hubo en 2019.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div><!-- /grid caída -->
+
+      <!-- ── Spinoffs ── -->
+      <div id="spinoffs" class="era-header" style="margin-top: var(--sp-7);">
+        <h3 class="era-title" style="color:var(--accent-tertiary);text-shadow:var(--glow-blue);">🐉 SPINOFFS Y EL UNIVERSO EN EXPANSIÓN</h3>
+        <span class="era-badge">2022 – PRESENTE</span>
+      </div>
+
+      <div class="grid-2 stagger">
+
+        <div class="lore-box reveal">
+          <span class="lore-box-title">🔥 HOUSE OF THE DRAGON (2022–)</span>
+          <p>La precuela centrada en la Danza de Dragones — la guerra civil Targaryen 200 años antes de GoT.
+          Basada en <em>Fire &amp; Blood</em> de GRRM. House of the Dragon recuperó la confianza del fandom
+          con una primera temporada sólida, bien actuada y fiel al espíritu político de las mejores temporadas
+          de GoT. Más dragones en pantalla que en toda la serie original, y el mismo juego sucio de poder.</p>
+          <p>La Temporada 2 (2024) amplió el conflicto con el elenco dual — Targaryens de Dragonstone vs
+          Targaryens en el Trono — añadiendo la complejidad moral que GoT tardío perdió.
+          Actualmente en producción la Temporada 3.</p>
+          <div class="house-strip" style="margin-top:var(--sp-3);">
+            <span class="house-tag">Rhaenyra Targaryen</span>
+            <span class="house-tag">Alicent Hightower</span>
+            <span class="house-tag">Daemon Targaryen</span>
+            <span class="house-tag">Viserys I</span>
+          </div>
+        </div>
+
+        <div class="lore-box reveal">
+          <span class="lore-box-title">⚔ A KNIGHT OF THE SEVEN KINGDOMS (2025)</span>
+          <p>La adaptación de los <em>Tales of Dunk and Egg</em> — las novelas cortas de GRRM ambientadas
+          90 años antes de GoT, protagonizadas por el gran maestre Aemon de joven (Egg) y su caballero
+          protector Dunk (Ser Duncan el Grande). Una historia más pequeña, más personal, con menos dragones
+          y más sobre el honor y el deber en un mundo corrupto.</p>
+          <p>Un cambio de tono refrescante dentro del universo: más cercano a la intimidad de las novelas
+          cortas originales que al épico de escala continental de GoT. Recibida con críticas generalmente
+          positivas en su primera temporada.</p>
+        </div>
+
+      </div><!-- /grid spinoffs -->
+
+      <!-- ── Cierre ── -->
+      <div class="card reveal" style="border-color:var(--got-red); box-shadow: 4px 4px 0 var(--got-red); margin-top: var(--sp-7);">
+        <h3 class="card-title" style="color:var(--got-red);text-shadow:var(--glow-red);">🐉 VALAR MORGHULIS</h3>
+        <div class="card-body">
+          <p>Todos los hombres deben morir. Y todos los personajes que amamos en ASOIAF corren ese riesgo en
+          cualquier página. Eso es lo que hace que el miedo sea real, el drama sea urgente y las victorias sean
+          significativas. Una saga imperfecta en su parte televisiva final, pero cuya primera mitad — tanto
+          en libro como en pantalla — está entre lo mejor que el género de la fantasía épica ha producido jamás.</p>
+          <p style="margin-top:var(--sp-3);">Mientras esperamos <em>The Winds of Winter</em>...
+          <strong>Valar Dohaeris. Todos los hombres deben servir.</strong></p>
+          <div style="display:flex; flex-wrap:wrap; gap:var(--sp-2); margin-top:var(--sp-4);">
+            <span class="tag">5 LIBROS LEÍDOS</span>
+            <span class="tag gold">S1–S6 VISTAS</span>
+            <span class="tag" style="border-color:var(--got-red);color:var(--got-red);">15 AÑOS SIN TWOW</span>
+            <span class="tag blue">HOTD SEGUIDA</span>
+            <span class="tag green">R+L=J CONFIRMADO</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="index.html" class="btn btn-small" style="border-color:var(--got-red);color:var(--got-red);">🏠 VOLVER AL INICIO</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ─── Footer ──────────────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="gamedev.html">GameDev</a></li>
+      <li><a href="gaming.html">Gaming</a></li>
+      <li><a href="esports.html">Esports</a></li>
+      <li><a href="got.html">GoT</a></li>
+      <li><a href="social.html">Social</a></li>
+      <li><a href="java.html">Java</a></li>
+    </ul>
+    <p>⚔ FREAKONIA — KARLETE</p>
+    <p style="color:#444;">HECHO CON AMOR PIXELADO Y DEMASIADAS BEBIDAS ENERGÉTICAS</p>
+    <p style="color:#333;">◄ INSERT COIN ►</p>
+
+    <div class="footer-legal">
+      <div class="pixel-divider"></div>
+      <p class="footer-copyright">
+        © 2025 FREAKONIA — KARLETE. ALL RIGHTS RESERVED.
+      </p>
+      <p class="footer-trademark">
+        FREAKONIA™ IS A REGISTERED PERSONAL BRAND.
+        ALL CONTENT, DESIGNS, GAME CONCEPTS AND ORIGINAL TEXTS
+        ON THIS SITE ARE THE EXCLUSIVE PROPERTY OF THEIR AUTHOR.
+        UNAUTHORIZED REPRODUCTION, DISTRIBUTION OR USE OF ANY
+        CONTENT IS STRICTLY PROHIBITED WITHOUT PRIOR WRITTEN PERMISSION.
+      </p>
+      <p class="footer-notice">
+        ⚠ THIS SITE CONTAINS STRONG OPINIONS ABOUT VIDEO GAMES,
+        FANTASY LORE AND BASKETBALL. READER DISCRETION IS ADVISED.
+        NO GOBLINS WERE HARMED IN THE MAKING OF THIS WEBSITE.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="js/main.js"></script>
+</body>
+</html>

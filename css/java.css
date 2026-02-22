@@ -1,0 +1,405 @@
+/* java.css — Java Dev page — only styles NOT already in components.css / main.css */
+
+/* ─── Page Header ─────────────────────────────────────────────────────────── */
+.page-header-java {
+  background: var(--bg-surface);
+  border-bottom: 4px solid var(--accent-tertiary);
+  padding: var(--sp-7) 0 var(--sp-6);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header-java::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(0,191,255,0.10) 0%, transparent 50%),
+    linear-gradient(225deg, rgba(0,191,255,0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.page-header-java::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 4px;
+  background: linear-gradient(90deg,
+    var(--accent-tertiary) 0%,
+    var(--accent-warn)     35%,
+    var(--accent-tertiary) 65%,
+    var(--accent-warn)     100%);
+}
+
+.page-header-java .container { position: relative; z-index: 1; }
+
+.page-header-pre {
+  font-family: var(--font-primary);
+  font-size: 0.5rem;
+  color: var(--accent-tertiary);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: var(--sp-3);
+}
+
+.page-header-title {
+  font-family: var(--font-primary);
+  font-size: clamp(1.2rem, 4vw, 2.4rem);
+  color: var(--text-bright);
+  text-shadow: var(--glow-blue);
+  margin-bottom: var(--sp-3);
+}
+
+.page-header-sub {
+  font-family: var(--font-secondary);
+  font-size: 22px;
+  color: var(--text-dim);
+  margin-bottom: 0;
+}
+
+/* ─── Section label strip ─────────────────────────────────────────────────── */
+/* (defined inline in other pages — centralised here for java.html) */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-3);
+  font-family: var(--font-primary);
+  font-size: 0.55rem;
+  color: #000;
+  background: var(--accent-primary);
+  padding: var(--sp-2) var(--sp-4);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--sp-5);
+}
+
+.section-label.pink { background: var(--accent-secondary); color: #fff; }
+.section-label.gold { background: var(--accent-warn);      color: #000; }
+.section-label.blue { background: var(--accent-tertiary);  color: #000; }
+.section-label.dim  { background: #333; color: var(--text-dim); }
+.section-label.teal { background: #0f5a66; color: #5dd6e8; border: 2px solid #198395; }
+
+/* ─── Personal story card (blue accent) ──────────────────────────────────── */
+.java-story-card {
+  background: var(--bg-card);
+  border: 4px solid var(--accent-tertiary);
+  box-shadow: var(--glow-blue);
+  padding: var(--sp-6);
+}
+
+.java-story-card p {
+  font-family: var(--font-secondary);
+  font-size: 19px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.java-story-card p + p { margin-top: var(--sp-3); }
+
+/* ─── Why Java — 3-column grid ───────────────────────────────────────────── */
+.java-why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: var(--sp-5);
+}
+
+.java-why-card {
+  background: var(--bg-card);
+  border: 4px solid var(--accent-tertiary);
+  padding: var(--sp-5) var(--sp-4);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.java-why-card:hover {
+  border-color: var(--accent-secondary);
+  box-shadow: var(--glow-pink);
+}
+
+.java-why-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+  display: block;
+  filter: drop-shadow(0 0 6px var(--accent-tertiary));
+}
+
+.java-why-title {
+  font-family: var(--font-primary);
+  font-size: 0.5rem;
+  color: var(--accent-tertiary);
+  line-height: 1.6;
+}
+
+.java-why-text {
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* ─── Timeline ───────────────────────────────────────────────────────────── */
+.java-timeline {
+  border-left: 4px solid var(--accent-tertiary);
+  margin-left: 1rem;
+  margin-top: var(--sp-5);
+}
+
+.java-timeline-item {
+  position: relative;
+  padding: var(--sp-4) 0 var(--sp-4) var(--sp-6);
+  border-bottom: 1px solid #222;
+}
+
+.java-timeline-item:last-child {
+  border-bottom: none;
+}
+
+/* Square marker (no border-radius) */
+.java-timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: calc(var(--sp-4) + 2px);
+  width: 12px;
+  height: 12px;
+  background: var(--accent-tertiary);
+  box-shadow: 0 0 8px var(--accent-tertiary);
+}
+
+.java-timeline-year {
+  display: block;
+  font-family: var(--font-primary);
+  font-size: 0.5rem;
+  color: var(--accent-warn);
+  text-shadow: var(--glow-gold);
+  margin-bottom: var(--sp-2);
+}
+
+.java-timeline-text {
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.java-timeline-text strong {
+  color: var(--accent-tertiary);
+}
+
+/* ─── JavaDevBible section heading overrides ─────────────────────────────── */
+/* Inline style on h2 handles color; only ::before needs a CSS rule */
+.javadevbible-section .section-title::before {
+  color: #1eb8d0;
+}
+
+/* The gradient underline ::after also comes from main.css — override to teal */
+.javadevbible-section .section-title::after {
+  background: linear-gradient(90deg, #198395 0%, #1eb8d0 50%, transparent 100%);
+}
+
+/* ─── JavaDevBible spotlight card — paleta teal #198395 ──────────────────── */
+.javadevbible-spotlight {
+  background: var(--bg-card);
+  border: 4px solid #198395;
+  box-shadow: 0 0 12px #198395, 0 0 28px rgba(25, 131, 149, 0.4);
+  padding: var(--sp-6) var(--sp-7);
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  max-width: 900px;
+  margin: var(--sp-5) auto 0;
+}
+
+.javadevbible-spotlight::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(25, 131, 149, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.javadevbible-spotlight:hover {
+  border-color: #1eb8d0;
+  box-shadow: 0 0 20px #1eb8d0, 0 0 48px rgba(30, 184, 208, 0.5);
+}
+
+.javadevbible-badge {
+  display: inline-block;
+  background: #0f5a66;
+  color: #5dd6e8;
+  border: 2px solid #198395;
+  font-family: var(--font-primary);
+  font-size: 0.38rem;
+  padding: 4px 12px;
+  margin-bottom: var(--sp-4);
+  letter-spacing: 2px;
+}
+
+.javadevbible-title {
+  display: block;
+  font-family: var(--font-primary);
+  font-size: clamp(0.7rem, 2vw, 1.1rem);
+  color: #198395;
+  text-shadow: 0 0 10px #198395, 0 0 20px rgba(25, 131, 149, 0.5);
+  margin-bottom: var(--sp-4);
+  line-height: 1.4;
+}
+
+.javadevbible-spotlight p {
+  font-family: var(--font-secondary);
+  font-size: 19px;
+  line-height: 1.8;
+  color: var(--text);
+  position: relative;
+  z-index: 1;
+}
+
+.javadevbible-spotlight p + p { margin-top: var(--sp-3); }
+
+.javadevbible-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: var(--sp-5);
+  position: relative;
+  z-index: 1;
+}
+
+.javadevbible-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: var(--sp-4);
+  position: relative;
+  z-index: 1;
+}
+
+.javadevbible-tag {
+  border: 2px solid #198395;
+  color: #1eb8d0;
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  padding: 3px 10px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.javadevbible-tag:hover {
+  background: #198395;
+  color: #ffffff;
+}
+
+/* ─── Teal button — CTA primario de JavaDevBible ─────────────────────────── */
+.btn.btn-teal {
+  color: #198395;
+  border-color: #198395;
+  box-shadow: 4px 4px 0 #198395;
+}
+
+.btn.btn-teal:hover {
+  background: rgba(25, 131, 149, 0.12);
+  color: #1eb8d0;
+  border-color: #1eb8d0;
+  box-shadow: 4px 4px 0 #1eb8d0, 0 0 20px rgba(30, 184, 208, 0.5);
+  text-shadow: 0 0 8px #1eb8d0;
+}
+
+.btn.btn-teal:active { box-shadow: none; }
+
+/* ─── Footer legal (shared pattern, sourced from other pages) ────────────── */
+.footer-legal {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.footer-copyright {
+  font-family: var(--font-primary);
+  font-size: 0.4rem;
+  color: var(--accent-primary);
+  margin-bottom: 0.8rem;
+}
+
+.footer-trademark {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-notice {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ─── JavaDevBible screenshot ────────────────────────────────────────────── */
+.jdb-screenshot {
+  width: 100%;
+  margin: 1.5rem 0;
+  border: 4px solid #198395;
+  box-shadow: 0 0 12px #198395, 0 0 28px rgba(25, 131, 149, 0.4);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.jdb-screenshot:hover {
+  box-shadow: 0 0 20px #1eb8d0, 0 0 48px rgba(30, 184, 208, 0.5);
+}
+
+.jdb-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ─── Stat boxes — vertical centering fix ────────────────────────────────── */
+/* components.css defines .stat-box without flex; override here for this page */
+.page-header-java .stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 110px;
+  gap: 8px;
+  padding: var(--sp-4);
+  box-sizing: border-box;
+}
+
+.page-header-java .stat-value {
+  display: block;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
+.page-header-java .stat-label {
+  display: block;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .java-why-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .java-why-grid { grid-template-columns: 1fr; }
+  .javadevbible-spotlight { padding: var(--sp-5) var(--sp-4); }
+  .java-story-card { padding: var(--sp-4); }
+}

@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Freakonia — Social Hub. YouTube, X/Twitter, itch.io, Twitch y contacto. Todos los rincones digitales de Karlete en un solo lugar." />
+  <title>Social Hub — Freakonia</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+
+  <style>
+    /* ── Page header ── */
+    .page-header-social {
+      background: var(--bg-surface);
+      border-bottom: 4px solid var(--accent-primary);
+      padding: var(--sp-7) 0 var(--sp-6);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header-social::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(0,255,65,0.08) 0%, transparent 50%),
+        linear-gradient(225deg, rgba(255,0,255,0.06) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .page-header-social::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%; height: 4px;
+      background: linear-gradient(90deg,
+        var(--accent-primary)   0%,
+        var(--accent-secondary) 35%,
+        var(--accent-primary)   65%,
+        var(--accent-secondary) 100%);
+    }
+
+    .page-header-social .container { position: relative; z-index: 1; }
+
+    .page-header-pre {
+      font-family: var(--font-primary);
+      font-size: 0.5rem;
+      color: var(--accent-primary);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: var(--sp-3);
+    }
+
+    .page-header-title {
+      font-family: var(--font-primary);
+      font-size: clamp(1.2rem, 4vw, 2.4rem);
+      color: var(--text-bright);
+      text-shadow: var(--glow-green);
+      margin-bottom: var(--sp-3);
+    }
+
+    .page-header-sub {
+      font-family: var(--font-secondary);
+      font-size: 22px;
+      color: var(--text-dim);
+      margin-bottom: 0;
+    }
+
+    /* ── Section label strip ── */
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-3);
+      font-family: var(--font-primary);
+      font-size: 0.55rem;
+      color: #000;
+      background: var(--accent-primary);
+      padding: var(--sp-2) var(--sp-4);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: var(--sp-5);
+    }
+
+    .section-label.pink { background: var(--accent-secondary); color: #fff; }
+    .section-label.gold { background: var(--accent-warn);      color: #000; }
+    .section-label.blue { background: var(--accent-tertiary);  color: #000; }
+    .section-label.dim  { background: #333; color: var(--text-dim); }
+
+    /* ── Intro card ── */
+    .intro-card {
+      background: var(--bg-card);
+      border: 4px solid var(--accent-secondary);
+      box-shadow: var(--glow-pink);
+      padding: var(--sp-5) var(--sp-6);
+      margin-bottom: var(--sp-6);
+    }
+
+    .intro-card p {
+      font-family: var(--font-secondary);
+      font-size: 19px;
+      line-height: 1.8;
+      color: var(--text);
+    }
+
+    .intro-card p + p { margin-top: var(--sp-3); }
+
+    /* ══════════════════════════════════════════
+       PLATFORM HUB — componente principal
+    ══════════════════════════════════════════ */
+    .platform-hub {
+      border: 4px solid var(--platform-color, var(--accent-primary));
+      background: var(--bg-card);
+      padding: 0;
+      margin-bottom: 3rem;
+      position: relative;
+      transition: box-shadow 0.3s;
+      overflow: hidden;
+    }
+
+    .platform-hub::before {
+      content: "";
+      display: block;
+      height: 6px;
+      background: var(--platform-color, var(--accent-primary));
+      width: 100%;
+    }
+
+    .platform-hub:hover {
+      box-shadow: 0 0 24px var(--platform-color, var(--accent-primary)),
+                  0 0 48px color-mix(in srgb,
+                  var(--platform-color, var(--accent-primary)) 30%, transparent);
+    }
+
+    .platform-hub-inner {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 0;
+    }
+
+    /* ── Platform identity (left column) ── */
+    .platform-identity {
+      border-right: 4px solid var(--platform-color, var(--accent-primary));
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      background: color-mix(in srgb,
+        var(--platform-color, var(--accent-primary)) 8%, var(--bg-card));
+      text-align: center;
+    }
+
+    .platform-icon {
+      font-size: 3rem;
+      line-height: 1;
+      filter: drop-shadow(0 0 8px var(--platform-color, var(--accent-primary)));
+    }
+
+    .platform-name {
+      font-family: var(--font-primary);
+      font-size: 0.55rem;
+      color: var(--platform-color, var(--accent-primary));
+      text-shadow: 0 0 8px var(--platform-color, var(--accent-primary));
+    }
+
+    .platform-handle {
+      font-family: var(--font-secondary);
+      font-size: 18px;
+      color: var(--text-dim);
+    }
+
+    /* ── Status badges ── */
+    .status-live {
+      background: var(--accent-primary);
+      color: var(--bg);
+      font-family: var(--font-primary);
+      font-size: 0.35rem;
+      padding: 3px 8px;
+      animation: pixel-pulse 2s infinite;
+    }
+
+    .status-soon {
+      background: var(--accent-warn);
+      color: var(--bg);
+      font-family: var(--font-primary);
+      font-size: 0.35rem;
+      padding: 3px 8px;
+    }
+
+    .status-wip {
+      background: var(--accent-secondary);
+      color: var(--bg);
+      font-family: var(--font-primary);
+      font-size: 0.35rem;
+      padding: 3px 8px;
+    }
+
+    /* ── Platform content (right column) ── */
+    .platform-content {
+      padding: 2rem;
+    }
+
+    .platform-content-title {
+      font-family: var(--font-primary);
+      font-size: 0.5rem;
+      color: var(--platform-color, var(--accent-primary));
+      margin-bottom: var(--sp-4);
+      display: block;
+      line-height: 1.5;
+    }
+
+    .platform-content p {
+      font-family: var(--font-secondary);
+      font-size: 18px;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .platform-content p + p { margin-top: var(--sp-3); }
+
+    /* ── Content tags (qué encontrarás) ── */
+    .content-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .content-tag {
+      border: 2px solid var(--platform-color, var(--accent-primary));
+      color: var(--platform-color, var(--accent-primary));
+      font-family: var(--font-secondary);
+      font-size: 16px;
+      padding: 3px 10px;
+    }
+
+    /* ── Mini game row (itch.io) ── */
+    .mini-game-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .mini-game-card {
+      border: 2px solid var(--platform-color, #fa5c5c);
+      padding: 0.6rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg);
+    }
+
+    .mini-game-title {
+      font-family: var(--font-primary);
+      font-size: 0.38rem;
+      color: var(--platform-color, #fa5c5c);
+      line-height: 1.5;
+    }
+
+    .mini-game-tag {
+      font-family: var(--font-secondary);
+      font-size: 15px;
+      color: var(--accent-primary);
+    }
+
+    /* ── Twitch teaser box ── */
+    .teaser-box {
+      border: 4px solid var(--platform-color, #9147ff);
+      background: var(--bg);
+      padding: 1rem 1.5rem;
+      margin-top: 1.2rem;
+      position: relative;
+    }
+
+    .teaser-box::before {
+      content: "PRIMER DIRECTO ANUNCIADO";
+      position: absolute;
+      top: -13px;
+      left: 12px;
+      background: #9147ff;
+      color: #fff;
+      font-family: var(--font-primary);
+      font-size: 0.32rem;
+      padding: 2px 8px;
+    }
+
+    .teaser-box-content {
+      font-family: var(--font-primary);
+      font-size: 0.42rem;
+      color: #9147ff;
+      display: block;
+      margin-bottom: var(--sp-2);
+      line-height: 1.6;
+    }
+
+    .teaser-box p {
+      font-family: var(--font-secondary);
+      font-size: 16px;
+      color: var(--text-dim);
+      margin-top: var(--sp-2);
+    }
+
+    /* ── Contact hub (email — full width centered) ── */
+    .contact-hub {
+      border: 4px solid var(--accent-primary);
+      background: var(--bg-card);
+      padding: 3rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+      margin-bottom: 3rem;
+    }
+
+    .contact-hub::before {
+      content: "";
+      display: block;
+      height: 6px;
+      background: var(--accent-primary);
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .contact-hub:hover { box-shadow: var(--glow-green); }
+
+    .contact-icon {
+      font-size: 2.5rem;
+      display: block;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 0 8px var(--accent-primary));
+    }
+
+    .contact-title {
+      font-family: var(--font-primary);
+      font-size: clamp(0.45rem, 1.5vw, 0.65rem);
+      color: var(--accent-primary);
+      text-shadow: var(--glow-green);
+      display: block;
+      margin-bottom: var(--sp-4);
+    }
+
+    .contact-hub p {
+      font-family: var(--font-secondary);
+      font-size: 18px;
+      color: var(--text);
+      line-height: 1.7;
+      max-width: 600px;
+      margin: 0 auto var(--sp-4);
+    }
+
+    .contact-address {
+      font-family: var(--font-primary);
+      font-size: clamp(0.4rem, 1.2vw, 0.55rem);
+      color: var(--accent-primary);
+      text-shadow: 0 0 8px var(--accent-primary);
+      display: block;
+      margin: var(--sp-4) 0;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── Quick links grid (bottom) ── */
+    .quick-links-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .quick-link {
+      border: 2px solid var(--link-color, var(--accent-primary));
+      padding: 1rem 0.5rem;
+      text-align: center;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      transition: box-shadow 0.2s, background 0.2s;
+      background: var(--bg-card);
+    }
+
+    .quick-link:hover {
+      background: var(--bg-surface);
+      box-shadow: 0 0 12px var(--link-color, var(--accent-primary));
+    }
+
+    .quick-link-icon {
+      font-size: 1.5rem;
+    }
+
+    .quick-link-name {
+      font-family: var(--font-primary);
+      font-size: 0.35rem;
+      color: var(--link-color, var(--accent-primary));
+    }
+
+    .quick-link-url {
+      font-family: var(--font-secondary);
+      font-size: 13px;
+      color: var(--text-dim);
+      word-break: break-all;
+    }
+
+    /* ── Stats row fix (contenido largo: @SanprietoG, PRÓXIMO) ── */
+    .stats-row .stat-box {
+      min-height: 110px;
+      height: auto;
+      padding: 1.2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-sizing: border-box;
+      word-break: break-word;
+      overflow: visible;
+    }
+
+    .stats-row .stat-box .stat-value {
+      word-break: break-all;
+      white-space: normal;
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    .stats-row .stat-box .stat-label {
+      white-space: normal;
+      text-align: center;
+      line-height: 1.4;
+      margin-top: 0.4rem;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .quick-links-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .platform-hub-inner {
+        grid-template-columns: 1fr;
+      }
+      .platform-identity {
+        border-right: none;
+        border-bottom: 4px solid var(--platform-color, var(--accent-primary));
+        padding: 1.5rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .quick-links-grid   { grid-template-columns: repeat(2, 1fr); }
+      .mini-game-row      { grid-template-columns: 1fr; }
+      .platform-content   { padding: var(--sp-4); }
+      .contact-hub        { padding: var(--sp-5) var(--sp-4); }
+      .intro-card         { padding: var(--sp-4); }
+    }
+
+    /* ── Footer legal ── */
+    .footer-legal {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+    .footer-copyright {
+      font-family: var(--font-primary);
+      font-size: 0.4rem;
+      color: var(--accent-primary);
+      margin-bottom: 0.8rem;
+    }
+    .footer-trademark {
+      font-family: var(--font-secondary);
+      font-size: 14px;
+      color: #555;
+      line-height: 1.5;
+      margin-bottom: 0.5rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .footer-notice {
+      font-family: var(--font-secondary);
+      font-size: 14px;
+      color: #444;
+      line-height: 1.5;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+
+<!-- CRT overlay -->
+<div class="crt-overlay" aria-hidden="true"></div>
+
+<!-- ─── Navigation ─────────────────────────────────────────────────────── -->
+<nav class="navbar" role="navigation" aria-label="Navegación principal">
+  <div class="container">
+    <a href="index.html" class="nav-brand">⚔ FREAKONIA</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">▼ MENU</button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html"     class="nav-link">🏠 Inicio</a></li>
+      <li><a href="gamedev.html"   class="nav-link">🎮 GameDev</a></li>
+      <li><a href="gaming.html"    class="nav-link">🕹 Gaming</a></li>
+      <li><a href="esports.html"   class="nav-link">🏆 Esports</a></li>
+      <li><a href="got.html"       class="nav-link">🐉 GoT</a></li>
+      <li><a href="warhammer.html" class="nav-link">⚙ Warhammer</a></li>
+      <li><a href="magic.html"     class="nav-link">✨ MtG</a></li>
+      <li><a href="rol.html"       class="nav-link">🎲 Rol</a></li>
+      <li><a href="nba.html"       class="nav-link">🏀 NBA</a></li>
+      <li><a href="java.html"      class="nav-link">☕ Java</a></li>
+      <li><a href="social.html"    class="nav-link active">📡 Social</a></li>
+      <li><a href="news.html"      class="nav-link">📰 News</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ─── Page Header ─────────────────────────────────────────────────────── -->
+<header class="page-header-social">
+  <div class="container">
+    <p class="page-header-pre">📡 ENCUÉNTRAME EN LA RED</p>
+    <h1 class="page-header-title">📡 SOCIAL HUB</h1>
+    <p class="page-header-sub">"Hay que morir... Pero de risa!"</p>
+  </div>
+</header>
+
+<main>
+
+  <!-- ─── Stats overview ──────────────────────────────────────────────── -->
+  <section class="section" style="padding-top: var(--sp-7); padding-bottom: var(--sp-5);">
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--accent-primary);text-shadow:var(--glow-green);">5</span>
+          <span class="stat-label">Plataformas activas</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--text-bright);font-size:clamp(0.5rem,1.2vw,0.7rem);">@SanprietoG</span>
+          <span class="stat-label">En X / Twitter</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">2025</span>
+          <span class="stat-label">Año de relanzamiento</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:#fa5c5c;">UNITY</span>
+          <span class="stat-label">Juegos en itch.io</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:#9147ff;">PRÓXIMO</span>
+          <span class="stat-label">Directo en Twitch</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ─── Intro ────────────────────────────────────────────────────────── -->
+  <section class="section" style="padding-top: var(--sp-6); padding-bottom: var(--sp-5);">
+    <div class="container">
+      <div class="intro-card reveal">
+        <p>
+          Llevo años creando cosas en silencio: juegos, opiniones, recuerdos de frikismo
+          sin filtro. Esta web es el hub central, pero el contenido vive repartido por la red.
+        </p>
+        <p>
+          Aquí tienes todos mis rincones digitales — desde los juegos que publico en itch.io
+          hasta el canal de YouTube que voy a resucitar con energía renovada, pasando por X
+          para las reflexiones breves y Twitch, que está a punto de arrancar.
+        </p>
+        <p>
+          Sígueme donde quieras. O en todos. No me quejo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       PLATAFORMAS
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" style="padding-top: var(--sp-7); padding-bottom: var(--sp-5);">
+    <div class="container">
+
+      <div class="section-label">📡 MIS PLATAFORMAS</div>
+      <h2 class="section-title" style="color:var(--accent-primary);text-shadow:var(--glow-green);">DÓNDE ENCONTRARME</h2>
+
+      <!-- ── 1. YOUTUBE ─────────────────────────────────────────────────── -->
+      <div class="platform-hub reveal" style="--platform-color: #ff0000;">
+        <div class="platform-hub-inner">
+          <div class="platform-identity">
+            <span class="platform-icon">▶</span>
+            <span class="platform-name">YOUTUBE</span>
+            <span class="platform-handle">@sanprieto</span>
+            <span class="platform-handle" style="font-size:15px;">youtube.com/@sanprieto</span>
+            <span class="status-wip">RELANZANDO</span>
+            <a href="https://www.youtube.com/@sanprieto"
+               class="btn btn-pink btn-small"
+               target="_blank" rel="noopener noreferrer">▶ VER CANAL</a>
+          </div>
+          <div class="platform-content">
+            <span class="platform-content-title">CANAL GAMING — DE VUELTA</span>
+            <p>
+              Tengo un canal de YouTube desde hace tiempo, pero ha estado bastante dormido.
+              Eso está a punto de cambiar. Con la web ya en marcha, el plan es empezar a subir
+              contenido friki variado de verdad: gaming, gamedev, nostalgia, análisis sin
+              pretensiones y todo lo que surja.
+            </p>
+            <p>
+              Es el canal generalista: todo lo que no cabe en un formato específico acaba aquí.
+              Suscríbete antes de que empiece a subir — así luego puedes decir que estabas
+              desde el principio.
+            </p>
+            <div class="content-tags stagger">
+              <span class="content-tag">🎮 Gaming</span>
+              <span class="content-tag">👾 GameDev</span>
+              <span class="content-tag">📼 Nostalgia</span>
+              <span class="content-tag">🎲 Frikismo</span>
+              <span class="content-tag">🔜 Próximamente</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 2. X / TWITTER ────────────────────────────────────────────── -->
+      <div class="platform-hub reveal" style="--platform-color: #ffffff;">
+        <div class="platform-hub-inner">
+          <div class="platform-identity">
+            <span class="platform-icon">✖</span>
+            <span class="platform-name">X / TWITTER</span>
+            <span class="platform-handle">@SanprietoG</span>
+            <span class="platform-handle" style="font-size:15px;">x.com/SanprietoG</span>
+            <span class="status-live">● ACTIVO</span>
+            <a href="https://x.com/SanprietoG"
+               class="btn btn-small"
+               target="_blank" rel="noopener noreferrer">➜ SEGUIR EN X</a>
+          </div>
+          <div class="platform-content">
+            <span class="platform-content-title">PENSAMIENTOS EN 280 CARACTERES</span>
+            <p>
+              X es mi red de ruido blanco productivo. Por ahí suelto lo que no da para un vídeo
+              pero sí para un tuit: actualizaciones de los juegos que estoy desarrollando en Unity,
+              memes del LoL que solo entiende quien ha sufrido el Abismo del Invocador, cositas de
+              gaming retro y la nostalgia de los 90 que a veces no puedo evitar.
+            </p>
+            <p>
+              Sin algoritmo de por medio, sin producción, sin guión. Solo lo que pienso en el
+              momento. El formato más honesto.
+            </p>
+            <div class="content-tags stagger">
+              <span class="content-tag">🎮 GameDev</span>
+              <span class="content-tag">😂 Memes LoL</span>
+              <span class="content-tag">👾 Gaming</span>
+              <span class="content-tag">📟 Nostalgia 90s</span>
+              <span class="content-tag">🔧 Unity dev</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 3. ITCH.IO ─────────────────────────────────────────────────── -->
+      <div class="platform-hub reveal" style="--platform-color: #fa5c5c;">
+        <div class="platform-hub-inner">
+          <div class="platform-identity">
+            <span class="platform-icon">🕹</span>
+            <span class="platform-name">ITCH.IO</span>
+            <span class="platform-handle">sanprieto.itch.io</span>
+            <span class="platform-handle" style="font-size:15px;">sanprieto.itch.io</span>
+            <span class="status-live">● 2 PUBLICADOS</span>
+            <a href="https://sanprieto.itch.io/"
+               class="btn btn-pink btn-small"
+               target="_blank" rel="noopener noreferrer">🕹 VER JUEGOS</a>
+          </div>
+          <div class="platform-content">
+            <span class="platform-content-title">MIS JUEGOS — HECHOS EN UNITY</span>
+            <p>
+              Itch.io es donde viven los juegos que he creado. Dos publicados hasta ahora
+              —Samurai Kitchen y Stars Lander— y Fallen Valkyrie en desarrollo activo. Todos
+              hechos desde cero en Unity 2D, aprendiendo, rompiendo cosas, arreglándolas
+              y publicando igual.
+            </p>
+            <p>
+              Pásate, juega, y si algo te gusta, un comentario vale más que mil descargas
+              para seguir motivado.
+            </p>
+            <div class="content-tags stagger">
+              <span class="content-tag">⚔️ Samurai Kitchen</span>
+              <span class="content-tag">🚀 Stars Lander</span>
+              <span class="content-tag">🏰 Fallen Valkyrie WIP</span>
+              <span class="content-tag">🔧 Unity 2D</span>
+              <span class="content-tag">👾 Indie</span>
+            </div>
+            <div class="mini-game-row">
+              <div class="mini-game-card">
+                <span class="mini-game-title">SAMURAI KITCHEN</span>
+                <span class="mini-game-tag">Publicado ✓</span>
+              </div>
+              <div class="mini-game-card">
+                <span class="mini-game-title">STARS LANDER</span>
+                <span class="mini-game-tag">Publicado ✓</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 4. TWITCH ──────────────────────────────────────────────────── -->
+      <div class="platform-hub reveal" style="--platform-color: #9147ff;">
+        <div class="platform-hub-inner">
+          <div class="platform-identity">
+            <span class="platform-icon">🎙</span>
+            <span class="platform-name">TWITCH</span>
+            <span class="platform-handle">sanprieto</span>
+            <span class="platform-handle" style="font-size:15px;">twitch.tv/sanprieto</span>
+            <span class="status-soon">⏳ MUY PRONTO</span>
+            <a href="https://www.twitch.tv/sanprieto"
+               class="btn btn-blue btn-small"
+               target="_blank" rel="noopener noreferrer">📺 VER CANAL</a>
+          </div>
+          <div class="platform-content">
+            <span class="platform-content-title">DIRECTOS — ARRANCANDO EN BREVE</span>
+            <p>
+              Twitch es el siguiente paso. Todavía no he hecho ningún directo, pero el plan
+              está claro: en cuanto la web esté publicada, empiezo.
+            </p>
+            <p>
+              Sígueme en Twitch ya para que te avise cuando arranque. No te quiero perder
+              cuando pulse el botón de "Ir en directo" por primera vez.
+            </p>
+            <div class="content-tags stagger">
+              <span class="content-tag" style="--platform-color:#9147ff;">🔜 Próximamente</span>
+              <span class="content-tag" style="--platform-color:#9147ff;">🎮 FFVII con mods</span>
+              <span class="content-tag" style="--platform-color:#9147ff;">📜 Retradución</span>
+              <span class="content-tag" style="--platform-color:#9147ff;">🎙 Directos</span>
+              <span class="content-tag" style="--platform-color:#9147ff;">📼 → YouTube</span>
+            </div>
+            <div class="teaser-box">
+              <span class="teaser-box-content">🎮 FINAL FANTASY VII — VERSIÓN MODS + RETRADUCIÓN</span>
+              <p>"El clásico de clásicos. Como debe jugarse. Completo."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ── 5. EMAIL / CONTACTO ──────────────────────────────────────────── -->
+  <section class="section" style="padding-top: var(--sp-7);">
+    <div class="container">
+
+      <div class="section-label">✉ CONTACTO DIRECTO</div>
+      <h2 class="section-title" style="color:var(--accent-primary);text-shadow:var(--glow-green);">¿TIENES ALGO QUE DECIRME?</h2>
+
+      <div class="contact-hub reveal">
+        <span class="contact-icon">✉</span>
+        <span class="contact-title">EMAIL — LÍNEA DIRECTA</span>
+        <p>
+          ¿Tienes algo que decirme? ¿Una colaboración, una pregunta sobre los juegos,
+          feedback, o simplemente quieres hablar de frikismo? Escríbeme. Leo todos
+          los mensajes.
+        </p>
+        <span class="contact-address">sanprietogamer@gmail.com</span>
+        <a href="mailto:sanprietogamer@gmail.com" class="btn" style="font-size:0.45rem;">✉ ESCRIBIR UN EMAIL</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN FINAL — TODOS LOS LINKS EN UN VISTAZO
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" style="padding-top: var(--sp-6); padding-bottom: var(--sp-7);">
+    <div class="container">
+
+      <div class="section-label dim">⚡ ACCESO RÁPIDO</div>
+      <h2 class="section-title" style="color:var(--accent-primary);text-shadow:var(--glow-green);">TODOS LOS LINKS</h2>
+
+      <div class="quick-links-grid stagger">
+        <a class="quick-link reveal"
+           href="https://www.youtube.com/@sanprieto"
+           target="_blank" rel="noopener noreferrer"
+           style="--link-color: #ff0000;">
+          <span class="quick-link-icon">▶</span>
+          <span class="quick-link-name">YOUTUBE</span>
+          <span class="quick-link-url">youtube.com/@sanprieto</span>
+        </a>
+        <a class="quick-link reveal"
+           href="https://x.com/SanprietoG"
+           target="_blank" rel="noopener noreferrer"
+           style="--link-color: #ffffff;">
+          <span class="quick-link-icon">✖</span>
+          <span class="quick-link-name">X / TWITTER</span>
+          <span class="quick-link-url">x.com/SanprietoG</span>
+        </a>
+        <a class="quick-link reveal"
+           href="https://sanprieto.itch.io/"
+           target="_blank" rel="noopener noreferrer"
+           style="--link-color: #fa5c5c;">
+          <span class="quick-link-icon">🕹</span>
+          <span class="quick-link-name">ITCH.IO</span>
+          <span class="quick-link-url">sanprieto.itch.io</span>
+        </a>
+        <a class="quick-link reveal"
+           href="https://www.twitch.tv/sanprieto"
+           target="_blank" rel="noopener noreferrer"
+           style="--link-color: #9147ff;">
+          <span class="quick-link-icon">🎙</span>
+          <span class="quick-link-name">TWITCH</span>
+          <span class="quick-link-url">twitch.tv/sanprieto</span>
+        </a>
+        <a class="quick-link reveal"
+           href="mailto:sanprietogamer@gmail.com"
+           style="--link-color: var(--accent-primary);">
+          <span class="quick-link-icon">✉</span>
+          <span class="quick-link-name">EMAIL</span>
+          <span class="quick-link-url">sanprietogamer@gmail.com</span>
+        </a>
+      </div>
+
+      <div style="margin-top: var(--sp-7); display:flex; flex-wrap:wrap; gap:var(--sp-3);">
+        <a href="index.html"    class="btn">🏠 VOLVER AL INICIO</a>
+        <a href="gamedev.html"  class="btn btn-pink btn-small">🎮 VER GAMEDEV</a>
+        <a href="nba.html"      class="btn btn-gold btn-small">🏀 VER NBA</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ─── Footer ──────────────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="gamedev.html">GameDev</a></li>
+      <li><a href="gaming.html">Gaming</a></li>
+      <li><a href="esports.html">Esports</a></li>
+      <li><a href="got.html">GoT</a></li>
+      <li><a href="warhammer.html">Warhammer</a></li>
+      <li><a href="magic.html">MtG</a></li>
+      <li><a href="rol.html">Rol</a></li>
+      <li><a href="social.html">Social</a></li>
+      <li><a href="nba.html">NBA</a></li>
+      <li><a href="java.html">Java</a></li>
+    </ul>
+    <p>⚔ FREAKONIA — KARLETE</p>
+    <p style="color:#444;">HECHO CON AMOR PIXELADO Y DEMASIADAS BEBIDAS ENERGÉTICAS</p>
+    <p style="color:#333;">◄ INSERT COIN ►</p>
+
+    <div class="footer-legal">
+      <div class="pixel-divider"></div>
+      <p class="footer-copyright">
+        © 2025 FREAKONIA — KARLETE. ALL RIGHTS RESERVED.
+      </p>
+      <p class="footer-trademark">
+        FREAKONIA™ IS A REGISTERED PERSONAL BRAND.
+        ALL CONTENT, DESIGNS, GAME CONCEPTS AND ORIGINAL TEXTS
+        ON THIS SITE ARE THE EXCLUSIVE PROPERTY OF THEIR AUTHOR.
+        UNAUTHORIZED REPRODUCTION, DISTRIBUTION OR USE OF ANY
+        CONTENT IS STRICTLY PROHIBITED WITHOUT PRIOR WRITTEN PERMISSION.
+      </p>
+      <p class="footer-notice">
+        ⚠ THIS SITE CONTAINS STRONG OPINIONS ABOUT VIDEO GAMES,
+        FANTASY LORE AND BASKETBALL. READER DISCRETION IS ADVISED.
+        NO GOBLINS WERE HARMED IN THE MAKING OF THIS WEBSITE.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

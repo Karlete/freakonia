@@ -1,0 +1,688 @@
+/* ============================================
+   rol.css — Specific styles for rol.html
+   Freakonia — El Reino Friki
+   ============================================ */
+
+/* ── Rol accent vars ── */
+:root {
+  --rol-gold:   var(--accent-warn);
+  --rol-blue:   var(--accent-tertiary);
+  --rol-chaos:  #cc0000;
+  --glow-chaos: 0 0 8px #cc0000, 0 0 20px #cc000055;
+}
+
+/* ── Page header ── */
+.page-header-rol {
+  background: var(--bg-surface);
+  border-bottom: 4px solid var(--accent-warn);
+  padding: var(--sp-7) 0 var(--sp-6);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header-rol::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(255,204,0,0.08) 0%, transparent 50%),
+    linear-gradient(225deg, rgba(0,191,255,0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.page-header-rol::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 4px;
+  background: linear-gradient(90deg,
+    var(--accent-warn)     0%,
+    var(--accent-tertiary) 35%,
+    var(--accent-warn)     65%,
+    var(--accent-tertiary) 100%);
+}
+
+.page-header-rol .container { position: relative; z-index: 1; }
+
+.page-header-pre {
+  font-family: var(--font-primary);
+  font-size: 0.5rem;
+  color: var(--accent-warn);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: var(--sp-3);
+}
+
+.page-header-title {
+  font-family: var(--font-primary);
+  font-size: clamp(1.2rem, 4vw, 2.4rem);
+  color: var(--text-bright);
+  text-shadow: var(--glow-gold);
+  margin-bottom: var(--sp-3);
+}
+
+.page-header-sub {
+  font-family: var(--font-secondary);
+  font-size: 22px;
+  color: var(--text-dim);
+  margin-bottom: 0;
+}
+
+/* ── Section label strip ── */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-3);
+  font-family: var(--font-primary);
+  font-size: 0.55rem;
+  color: #000;
+  background: var(--accent-warn);
+  padding: var(--sp-2) var(--sp-4);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--sp-5);
+}
+
+.section-label.blue   { background: var(--accent-tertiary);  color: #000; }
+.section-label.green  { background: var(--accent-primary);   color: #000; }
+.section-label.pink   { background: var(--accent-secondary); color: #fff; }
+.section-label.chaos  { background: var(--rol-chaos);        color: #fff; }
+.section-label.dim    { background: #333; color: var(--text-dim); }
+
+/* ── Section quick nav ── */
+.section-quicknav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  margin: var(--sp-5) 0 var(--sp-6);
+}
+
+.section-quicknav a {
+  font-family: var(--font-primary);
+  font-size: 0.4rem;
+  color: var(--text-dim);
+  border: 2px solid #333;
+  padding: var(--sp-2) var(--sp-3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: color 0.1s, border-color 0.1s, box-shadow 0.1s;
+}
+
+.section-quicknav a:hover {
+  color: var(--accent-warn);
+  border-color: var(--accent-warn);
+  box-shadow: var(--glow-gold);
+}
+
+/* ── Lore / intro box ── */
+.lore-box {
+  background: var(--bg-card);
+  border: 2px solid #2a2a2a;
+  padding: var(--sp-5);
+}
+
+.lore-box-title {
+  font-family: var(--font-primary);
+  font-size: 0.5rem;
+  color: var(--accent-warn);
+  text-shadow: var(--glow-gold);
+  margin-bottom: var(--sp-4);
+  display: block;
+}
+
+.lore-box p {
+  font-family: var(--font-secondary);
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.lore-box p + p { margin-top: var(--sp-3); }
+
+/* ── Quote card ── */
+.quote-card {
+  background: var(--bg-card);
+  border: 4px solid var(--accent-warn);
+  box-shadow: var(--glow-gold);
+  padding: var(--sp-5) var(--sp-6);
+  position: relative;
+  margin-top: var(--sp-5);
+}
+
+.quote-card::before {
+  content: '"';
+  position: absolute;
+  top: var(--sp-2);
+  left: var(--sp-4);
+  font-family: var(--font-secondary);
+  font-size: 5rem;
+  color: var(--accent-warn);
+  opacity: 0.12;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.quote-card p {
+  font-family: var(--font-secondary);
+  font-size: 20px;
+  line-height: 1.8;
+  position: relative;
+  z-index: 1;
+  color: var(--text);
+  font-style: italic;
+}
+
+.quote-attribution {
+  font-family: var(--font-primary);
+  font-size: 0.38rem;
+  color: var(--text-dim);
+  margin-top: var(--sp-3);
+  display: block;
+}
+
+/* ── Quote card final (special closing) ── */
+.quote-card-final {
+  background: var(--bg-card);
+  border: 4px solid var(--accent-warn);
+  box-shadow: 0 0 0 1px var(--accent-warn), var(--glow-gold);
+  padding: var(--sp-6);
+  position: relative;
+  text-align: center;
+  margin-top: var(--sp-6);
+}
+
+.quote-card-final p {
+  font-family: var(--font-secondary);
+  font-size: 22px;
+  line-height: 1.8;
+  color: var(--text-bright);
+  font-style: italic;
+}
+
+/* ── Publisher card (JOC Internacional) ── */
+.publisher-card {
+  border: 4px solid var(--accent-warn);
+  background: var(--bg-card);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.publisher-card::before {
+  content: "JOC";
+  position: absolute;
+  top: -14px;
+  left: 16px;
+  background: var(--accent-warn);
+  color: var(--bg);
+  font-family: var(--font-primary);
+  font-size: 0.5rem;
+  padding: 2px 8px;
+}
+
+.publisher-card:hover {
+  box-shadow: var(--glow-gold);
+}
+
+.publisher-card-title {
+  font-family: var(--font-primary);
+  font-size: clamp(0.55rem, 1.5vw, 0.75rem);
+  color: var(--accent-warn);
+  text-shadow: var(--glow-gold);
+  margin-bottom: var(--sp-4);
+  display: block;
+  padding-top: var(--sp-2);
+}
+
+.publisher-card p {
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.publisher-card p + p { margin-top: var(--sp-3); }
+
+.publisher-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  margin-top: var(--sp-5);
+  padding-top: var(--sp-4);
+  border-top: 1px solid #2a2a2a;
+}
+
+.publisher-stat {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  padding: var(--sp-3) var(--sp-4);
+  text-align: center;
+}
+
+.publisher-stat-value {
+  font-family: var(--font-primary);
+  font-size: 0.55rem;
+  color: var(--accent-warn);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.publisher-stat-label {
+  font-family: var(--font-secondary);
+  font-size: 15px;
+  color: var(--text-dim);
+  display: block;
+}
+
+.publisher-tragedy {
+  margin-top: var(--sp-5);
+  background: #1a0000;
+  border: 2px solid var(--rol-chaos);
+  padding: var(--sp-4) var(--sp-5);
+}
+
+.publisher-tragedy p {
+  font-family: var(--font-secondary);
+  font-size: 17px;
+  color: #ffaaaa;
+  line-height: 1.7;
+}
+
+.publisher-tragedy-label {
+  font-family: var(--font-primary);
+  font-size: 0.4rem;
+  color: var(--rol-chaos);
+  display: block;
+  margin-bottom: var(--sp-3);
+}
+
+/* ── Collection items (libros propios) ── */
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: var(--sp-5);
+}
+
+.collection-item {
+  border: 4px solid var(--accent-primary);
+  background: var(--bg-card);
+  padding: 1.5rem;
+  position: relative;
+  transition: box-shadow 0.2s;
+}
+
+.collection-item:hover {
+  box-shadow: var(--glow-green);
+}
+
+.owned-badge {
+  position: absolute;
+  top: -12px;
+  right: 8px;
+  background: var(--accent-primary);
+  color: var(--bg);
+  font-family: var(--font-primary);
+  font-size: 0.32rem;
+  padding: 2px 6px;
+  letter-spacing: 0.5px;
+}
+
+.collection-item-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: var(--sp-3);
+}
+
+.collection-item-title {
+  font-family: var(--font-primary);
+  font-size: 0.5rem;
+  color: var(--accent-primary);
+  text-shadow: var(--glow-green);
+  display: block;
+  margin-bottom: var(--sp-2);
+  line-height: 1.6;
+}
+
+.collection-item-meta {
+  font-family: var(--font-secondary);
+  font-size: 15px;
+  color: var(--text-dim);
+  display: block;
+  margin-bottom: var(--sp-3);
+}
+
+.collection-item p {
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.collection-item-value {
+  display: inline-block;
+  margin-top: var(--sp-4);
+  font-family: var(--font-primary);
+  font-size: 0.38rem;
+  color: var(--accent-warn);
+  border: 1px solid var(--accent-warn);
+  padding: 3px 8px;
+}
+
+/* ── RPG System blocks ── */
+.rpg-systems-list {
+  margin-top: var(--sp-6);
+}
+
+.rpg-system {
+  border-left: 6px solid var(--system-color, var(--accent-primary));
+  padding-left: 1.5rem;
+  margin-bottom: var(--sp-7);
+  position: relative;
+}
+
+.rpg-system-header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-4);
+  padding-bottom: var(--sp-3);
+  border-bottom: 1px solid #1e1e1e;
+}
+
+.rpg-system-title {
+  font-family: var(--font-primary);
+  font-size: clamp(0.5rem, 1.4vw, 0.7rem);
+  color: var(--system-color, var(--accent-primary));
+  line-height: 1.5;
+}
+
+.rpg-system-year {
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+.rpg-system-body p {
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.rpg-system-body p + p { margin-top: var(--sp-3); }
+
+.rpg-system-note {
+  background: #111;
+  border-left: 3px solid var(--system-color, var(--accent-primary));
+  padding: var(--sp-3) var(--sp-4);
+  margin-top: var(--sp-4);
+  font-family: var(--font-secondary);
+  font-size: 17px;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+/* ── Supplement cards ── */
+.supplements-title {
+  font-family: var(--font-primary);
+  font-size: 0.42rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: var(--sp-5) 0 var(--sp-3);
+  display: block;
+}
+
+.supplements-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-3);
+  margin-top: var(--sp-3);
+}
+
+.supplement-card {
+  border: 2px solid var(--system-color, var(--accent-primary));
+  background: var(--bg-card);
+  padding: var(--sp-3) var(--sp-4);
+  transition: background 0.1s, box-shadow 0.1s;
+  cursor: default;
+}
+
+.supplement-card:hover {
+  background: var(--bg-surface);
+  box-shadow: 0 0 8px var(--system-color, var(--accent-primary));
+}
+
+.supplement-card-name {
+  font-family: var(--font-secondary);
+  font-size: 17px;
+  color: var(--text);
+  display: block;
+  line-height: 1.4;
+}
+
+.supplement-year {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  color: var(--text-dim);
+  display: block;
+  margin-top: 2px;
+}
+
+/* ── Closing narrative section ── */
+.closing-narrative {
+  background: var(--bg-card);
+  border: 4px solid var(--accent-warn);
+  box-shadow: 0 0 0 1px var(--accent-warn), var(--glow-gold);
+  padding: var(--sp-6);
+  position: relative;
+  overflow: hidden;
+}
+
+.closing-narrative::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,204,0,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.closing-narrative p {
+  font-family: var(--font-secondary);
+  font-size: 19px;
+  line-height: 1.9;
+  color: var(--text);
+  position: relative;
+  z-index: 1;
+}
+
+.closing-narrative p + p { margin-top: var(--sp-4); }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .collection-grid  { grid-template-columns: repeat(2, 1fr); }
+  .supplements-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .collection-grid  { grid-template-columns: 1fr; }
+  .supplements-grid { grid-template-columns: 1fr; }
+  .publisher-card   { padding: var(--sp-5) var(--sp-4); }
+  .publisher-stats  { flex-direction: column; }
+  .rpg-system       { padding-left: var(--sp-4); }
+  .closing-narrative { padding: var(--sp-4); }
+  .quote-card       { padding: var(--sp-4); }
+}
+
+/* ── Hero image ── */
+.rol-hero-img-wrap {
+  width: 100%;
+  margin: 2rem 0 3rem 0;
+  border: 4px solid var(--accent-warn);
+  box-shadow: 0 0 16px var(--accent-warn),
+              0 0 32px rgba(255, 204, 0, 0.3);
+  overflow: hidden;
+}
+
+.rol-hero-img-wrap:hover {
+  box-shadow: 0 0 24px var(--accent-warn),
+              0 0 48px rgba(255, 204, 0, 0.4);
+}
+
+.rol-hero-img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.rol-hero-img-wrap:hover .rol-hero-img {
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .rol-hero-img {
+    height: 260px;
+  }
+}
+
+/* ── Book covers grid ── */
+.rol-books-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.rol-books-grid--2col {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 600px;
+}
+
+/* Base — no fixed color, set per section */
+.rol-book-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 4px solid;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Stormbringer — #cc0000 */
+[data-rpg="stormbringer"] .rol-book-wrap {
+  border-color: #cc0000;
+  box-shadow: 0 0 10px #cc0000,
+              0 0 20px rgba(204, 0, 0, 0.2);
+}
+[data-rpg="stormbringer"] .rol-book-wrap:hover {
+  border-color: #ff3333;
+  box-shadow: 0 0 16px #ff3333,
+              0 0 32px rgba(255, 51, 51, 0.3);
+}
+[data-rpg="stormbringer"] .rol-book-caption {
+  color: #cc0000;
+}
+
+/* Cthulhu — var(--accent-secondary) = #ff00ff */
+[data-rpg="cthulhu"] .rol-book-wrap {
+  border-color: var(--accent-secondary);
+  box-shadow: 0 0 10px var(--accent-secondary),
+              0 0 20px rgba(255, 0, 255, 0.2);
+}
+[data-rpg="cthulhu"] .rol-book-wrap:hover {
+  border-color: #ff66ff;
+  box-shadow: 0 0 16px #ff66ff,
+              0 0 32px rgba(255, 102, 255, 0.3);
+}
+[data-rpg="cthulhu"] .rol-book-caption {
+  color: var(--accent-secondary);
+}
+
+/* Señor de los Anillos — var(--accent-primary) = #00ff41 */
+[data-rpg="lotr"] .rol-book-wrap {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 10px var(--accent-primary),
+              0 0 20px rgba(0, 255, 65, 0.2);
+}
+[data-rpg="lotr"] .rol-book-wrap:hover {
+  border-color: #44ff6e;
+  box-shadow: 0 0 16px #44ff6e,
+              0 0 32px rgba(68, 255, 110, 0.3);
+}
+[data-rpg="lotr"] .rol-book-caption {
+  color: var(--accent-primary);
+}
+
+.rol-book-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.rol-book-wrap:hover .rol-book-img {
+  transform: scale(1.03);
+}
+
+.rol-book-caption {
+  display: block;
+  font-family: var(--font-primary);
+  font-size: 0.4rem;
+  text-align: center;
+  padding: 0.4rem;
+  background: var(--bg-card);
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .rol-books-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .rol-books-grid--2col {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+  .rol-book-img {
+    height: 200px;
+  }
+}
+
+/* ── Footer legal ── */
+.footer-legal {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.footer-copyright {
+  font-family: var(--font-primary);
+  font-size: 0.4rem;
+  color: var(--accent-primary);
+  margin-bottom: 0.8rem;
+}
+.footer-trademark {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-notice {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}

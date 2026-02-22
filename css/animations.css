@@ -1,0 +1,261 @@
+/* animations.css — CRT effects, pixel animations, keyframes */
+
+/* ─── Keyframes ──────────────────────────────────────────────────────────── */
+
+/* Float up (click particles) */
+@keyframes floatUp {
+  0%   { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-40px) scale(0.5); opacity: 0; }
+}
+
+/* Blink (cursor / status lights) */
+@keyframes blink {
+  0%, 49%  { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* Glow pulse */
+@keyframes glowPulse {
+  0%, 100% { text-shadow: var(--glow-green); }
+  50%      { text-shadow: 0 0 4px var(--accent-primary); }
+}
+
+/* Glow pulse pink */
+@keyframes glowPulsePink {
+  0%, 100% { text-shadow: var(--glow-pink); }
+  50%      { text-shadow: 0 0 4px var(--accent-secondary); }
+}
+
+/* Scanline sweep */
+@keyframes scanlineSweep {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+/* Pixel walk right (sprite sheet simulation) */
+@keyframes walkRight {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(calc(100vw + 100px)); }
+}
+
+/* Idle float */
+@keyframes idleFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+/* Slide in from left */
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); opacity: 0; }
+  to   { transform: translateX(0);     opacity: 1; }
+}
+
+/* Slide in from right */
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+/* Slide in from bottom */
+@keyframes slideInUp {
+  from { transform: translateY(32px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* Flicker / glitch */
+@keyframes flicker {
+  0%   { opacity: 1; }
+  5%   { opacity: 0.8; }
+  10%  { opacity: 1; }
+  15%  { opacity: 0.6; }
+  20%  { opacity: 1; }
+  55%  { opacity: 1; }
+  60%  { opacity: 0.9; }
+  65%  { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+/* Horizontal glitch offset */
+@keyframes glitchX {
+  0%, 100% { clip-path: inset(0 0 100% 0); transform: translateX(0); }
+  20%      { clip-path: inset(20% 0 60% 0); transform: translateX(-4px); }
+  40%      { clip-path: inset(50% 0 30% 0); transform: translateX(4px); }
+  60%      { clip-path: inset(70% 0 10% 0); transform: translateX(-2px); }
+  80%      { clip-path: inset(10% 0 80% 0); transform: translateX(2px); }
+}
+
+/* Pixel bounce */
+@keyframes pixelBounce {
+  0%, 100% { transform: translateY(0); }
+  25%      { transform: translateY(-12px); }
+  50%      { transform: translateY(0); }
+  75%      { transform: translateY(-6px); }
+}
+
+/* Spin (loading) */
+@keyframes pixelSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Matrix rain drop */
+@keyframes rainDrop {
+  0%   { transform: translateY(-20px); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+/* CRT turn-on */
+@keyframes crtOn {
+  0%   { transform: scaleY(0.01) scaleX(1); opacity: 0; filter: brightness(10); }
+  30%  { transform: scaleY(1) scaleX(1);    opacity: 1; filter: brightness(3); }
+  100% { transform: scaleY(1) scaleX(1);    opacity: 1; filter: brightness(1); }
+}
+
+/* RGB shift (chromatic aberration) */
+@keyframes rgbShift {
+  0%, 100% {
+    text-shadow: -2px 0 var(--accent-secondary), 2px 0 var(--accent-tertiary);
+  }
+  50% {
+    text-shadow: 2px 0 var(--accent-secondary), -2px 0 var(--accent-tertiary);
+  }
+}
+
+/* Wipe in */
+@keyframes wipeIn {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0% 0 0); }
+}
+
+/* ─── Utility animation classes ──────────────────────────────────────────── */
+.anim-blink          { animation: blink 1s step-end infinite; }
+.anim-glow-pulse     { animation: glowPulse 2s ease-in-out infinite; }
+.anim-glow-pink      { animation: glowPulsePink 2s ease-in-out infinite; }
+.anim-float          { animation: idleFloat 3s ease-in-out infinite; }
+.anim-flicker        { animation: flicker 4s linear infinite; }
+.anim-bounce         { animation: pixelBounce 0.6s steps(4) infinite; }
+.anim-spin           { animation: pixelSpin 1s steps(8) infinite; }
+.anim-slide-up       { animation: slideInUp 0.4s ease-out both; }
+.anim-slide-left     { animation: slideInLeft 0.4s ease-out both; }
+.anim-slide-right    { animation: slideInRight 0.4s ease-out both; }
+.anim-wipe           { animation: wipeIn 0.5s ease-out both; }
+.anim-crt-on         { animation: crtOn 0.5s ease-out both; }
+.anim-rgb-shift      { animation: rgbShift 1.5s ease-in-out infinite; }
+
+/* ─── Glitch text effect ─────────────────────────────────────────────────── */
+.glitch {
+  position: relative;
+  color: var(--text-bright);
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+}
+
+.glitch::before {
+  color: var(--accent-secondary);
+  animation: glitchX 3s infinite linear;
+  animation-delay: 0.1s;
+}
+
+.glitch::after {
+  color: var(--accent-tertiary);
+  animation: glitchX 3s infinite linear;
+  animation-delay: 0.3s;
+}
+
+/* ─── Scanline sweep overlay (individual element) ────────────────────────── */
+.scanline-sweep::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  height: 4px;
+  background: rgba(0, 255, 65, 0.15);
+  animation: scanlineSweep 3s linear infinite;
+  pointer-events: none;
+}
+
+/* ─── Pixel sprite (CSS sprite character) ────────────────────────────────── */
+.pixel-sprite {
+  display: inline-block;
+  image-rendering: pixelated;
+  animation: idleFloat 3s ease-in-out infinite;
+}
+
+/* ─── Blinking cursor ────────────────────────────────────────────────────── */
+.cursor-blink::after {
+  content: '█';
+  color: var(--accent-primary);
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
+}
+
+/* ─── Loading spinner (pixel style) ─────────────────────────────────────── */
+.pixel-loader {
+  font-family: var(--font-primary);
+  font-size: 0.7rem;
+  color: var(--accent-primary);
+  display: inline-flex;
+  gap: var(--sp-3);
+  align-items: center;
+}
+
+.pixel-loader::before {
+  content: '◐';
+  animation: pixelSpin 0.8s steps(4) infinite;
+}
+
+/* ─── Neon border pulse ──────────────────────────────────────────────────── */
+.neon-border-pulse {
+  animation: neonBorderPulse 2s ease-in-out infinite;
+}
+
+@keyframes neonBorderPulse {
+  0%, 100% { box-shadow: 0 0 4px var(--accent-primary), 0 0 12px var(--accent-primary); }
+  50%      { box-shadow: 0 0 2px var(--accent-primary); }
+}
+
+/* ─── Hero pixel particles (CSS only, no JS) ─────────────────────────────── */
+.pixel-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.pixel-particles span {
+  position: absolute;
+  width: 4px; height: 4px;
+  background: var(--accent-primary);
+  animation: rainDrop linear infinite;
+}
+
+/* Auto-stagger for up to 20 spans */
+.pixel-particles span:nth-child(1)  { left: 5%;  animation-duration: 4s;   animation-delay: 0s; }
+.pixel-particles span:nth-child(2)  { left: 12%; animation-duration: 5.5s; animation-delay: 1s; }
+.pixel-particles span:nth-child(3)  { left: 20%; animation-duration: 3.5s; animation-delay: 2s; background: var(--accent-secondary); }
+.pixel-particles span:nth-child(4)  { left: 28%; animation-duration: 6s;   animation-delay: 0.5s; }
+.pixel-particles span:nth-child(5)  { left: 36%; animation-duration: 4.5s; animation-delay: 1.5s; background: var(--accent-tertiary); }
+.pixel-particles span:nth-child(6)  { left: 45%; animation-duration: 5s;   animation-delay: 0.2s; }
+.pixel-particles span:nth-child(7)  { left: 55%; animation-duration: 3.8s; animation-delay: 2.5s; background: var(--accent-secondary); }
+.pixel-particles span:nth-child(8)  { left: 63%; animation-duration: 6.2s; animation-delay: 0.8s; }
+.pixel-particles span:nth-child(9)  { left: 72%; animation-duration: 4.2s; animation-delay: 1.8s; background: var(--accent-tertiary); }
+.pixel-particles span:nth-child(10) { left: 80%; animation-duration: 5.5s; animation-delay: 3s; }
+.pixel-particles span:nth-child(11) { left: 88%; animation-duration: 3.6s; animation-delay: 0.4s; background: var(--accent-secondary); }
+.pixel-particles span:nth-child(12) { left: 93%; animation-duration: 4.8s; animation-delay: 2.2s; }
+
+/* ─── Animate staggered delays for grid children ─────────────────────────── */
+.stagger > *:nth-child(1)  { animation-delay: 0.0s; }
+.stagger > *:nth-child(2)  { animation-delay: 0.05s; }
+.stagger > *:nth-child(3)  { animation-delay: 0.10s; }
+.stagger > *:nth-child(4)  { animation-delay: 0.15s; }
+.stagger > *:nth-child(5)  { animation-delay: 0.20s; }
+.stagger > *:nth-child(6)  { animation-delay: 0.25s; }
+.stagger > *:nth-child(7)  { animation-delay: 0.30s; }
+.stagger > *:nth-child(8)  { animation-delay: 0.35s; }

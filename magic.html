@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Freakonia — Magic: The Gathering. De las mesas de Cánovas a Tempest. La historia de una jugadora de los 90 con su colección intacta." />
+  <title>Magic: The Gathering — Freakonia</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/magic.css" />
+
+</head>
+<body>
+
+<!-- CRT overlay -->
+<div class="crt-overlay" aria-hidden="true"></div>
+
+<!-- ─── Navigation ─────────────────────────────────────────────────────── -->
+<nav class="navbar" role="navigation" aria-label="Navegación principal">
+  <div class="container">
+    <a href="index.html" class="nav-brand">⚔ FREAKONIA</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">▼ MENU</button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html"     class="nav-link">🏠 Inicio</a></li>
+      <li><a href="gamedev.html"   class="nav-link">🎮 GameDev</a></li>
+      <li><a href="gaming.html"    class="nav-link">🕹 Gaming</a></li>
+      <li><a href="esports.html"   class="nav-link">🏆 Esports</a></li>
+      <li><a href="got.html"       class="nav-link">🐉 GoT</a></li>
+      <li><a href="warhammer.html" class="nav-link">⚙ Warhammer</a></li>
+      <li><a href="magic.html"     class="nav-link active">✨ MtG</a></li>
+      <li><a href="rol.html"       class="nav-link">🎲 Rol</a></li>
+      <li><a href="nba.html"       class="nav-link">🏀 NBA</a></li>
+      <li><a href="java.html"      class="nav-link">☕ Java</a></li>
+      <li><a href="social.html"    class="nav-link">📡 Social</a></li>
+      <li><a href="news.html"      class="nav-link">📰 News</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ─── Page Header ─────────────────────────────────────────────────────── -->
+<header class="page-header-magic">
+  <div class="container">
+    <p class="page-header-pre">✨ COLECCIONABLE</p>
+    <h1 class="page-header-title">✨ MAGIC: THE GATHERING</h1>
+    <p class="page-header-sub">"De las mesas de Cánovas al polvo de la colección"</p>
+  </div>
+</header>
+
+<main>
+
+  <!-- ─── Stats overview ──────────────────────────────────────────────── -->
+  <section class="section" style="padding-top: var(--sp-7); padding-bottom: var(--sp-5);">
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--accent-secondary);text-shadow:var(--glow-pink);">1993</span>
+          <span class="stat-label">Año de Nacimiento MTG</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">1996</span>
+          <span class="stat-label">Mi Primer Mazo</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--accent-primary);text-shadow:var(--glow-green);">ICE AGE</span>
+          <span class="stat-label">Set de Inicio</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--accent-tertiary);text-shadow:var(--glow-blue);">TEMPEST</span>
+          <span class="stat-label">Mi Era Activa</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ─── Quick nav ────────────────────────────────────────────────────── -->
+  <section class="section" style="padding-top: var(--sp-5); padding-bottom: var(--sp-4);">
+    <div class="container">
+      <nav class="section-quicknav" aria-label="Saltar a sección">
+        <span style="font-family:var(--font-primary);font-size:0.4rem;color:var(--text-dim);align-self:center;">▶ IR A:</span>
+        <a href="#que-es">✨ Qué es Magic</a>
+        <a href="#pilares">🃏 Los Pilares</a>
+        <a href="#historia">🏟 Mi Historia</a>
+        <a href="#ediciones">📖 Las Ediciones</a>
+        <a href="#coleccion">💎 La Colección</a>
+      </nav>
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 1 — ¿QUÉ ES MAGIC?
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="que-es" style="padding-top: var(--sp-7);">
+    <div class="container">
+
+      <div class="section-label">✨ EL JUEGO DE CARTAS DEFINITIVO</div>
+      <h2 class="section-title" style="color:var(--accent-secondary);text-shadow:var(--glow-pink);">¿QUÉ ES MAGIC: THE GATHERING?</h2>
+
+      <div class="magic-section-img-wrap">
+        <img
+          src="assets/img/magic_azul.jpg"
+          alt="Magic: The Gathering — ¿Qué es Magic?"
+          class="magic-section-img"
+        >
+      </div>
+
+      <!-- Intro lore box -->
+      <div class="lore-box reveal" style="border-color: var(--accent-secondary); margin-bottom: var(--sp-5);">
+        <span class="lore-box-title">// ORIGEN: 1993 · RICHARD GARFIELD · WIZARDS OF THE COAST</span>
+        <p>
+          Magic: The Gathering nació en 1993 de la mente del matemático Richard Garfield,
+          publicado por Wizards of the Coast. Fue el primer juego de cartas coleccionable de la
+          historia y lo cambió todo: de repente, las cartas no eran solo cromos, eran herramientas
+          de estrategia que formaban parte de un universo fantástico enorme.
+        </p>
+        <p>
+          Dos magos se enfrentan en un duelo usando mazos de cartas que representan hechizos,
+          criaturas, artefactos y tierras de cinco colores mágicos. El objetivo es reducir los
+          20 puntos de vida del rival a cero. Sencillo en concepto, infinito en profundidad.
+        </p>
+        <p>
+          Con más de 20.000 cartas únicas publicadas a lo largo de su historia y millones de
+          jugadores en todo el mundo, Magic es el juego de cartas coleccionable más influyente
+          jamás creado. Y en 1996, llegó a las mesas del cibercafé Cánovas de Cáceres.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 2 — LOS CUATRO PILARES
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="pilares" style="padding-top: var(--sp-6); padding-bottom: var(--sp-7);">
+    <div class="container">
+
+      <div class="section-label gold">⚡ CÓMO FUNCIONA EL JUEGO</div>
+      <h2 class="section-title" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">LOS CUATRO PILARES</h2>
+
+      <div class="magic-section-img-wrap">
+        <img
+          src="assets/img/magic_artefactos.jpg"
+          alt="Magic: The Gathering — Los Cuatro Pilares"
+          class="magic-section-img"
+        >
+      </div>
+
+      <div class="mtg-pillars-grid stagger">
+
+        <div class="mtg-pillar reveal">
+          <span class="mtg-pillar-icon">🃏</span>
+          <span class="mtg-pillar-title">EL MAZO</span>
+          <p>
+            Cada jugador construye su mazo de al menos 60 cartas elegidas estratégicamente de
+            su colección. Las cartas se dividen en tierras (que generan maná), criaturas,
+            hechizos instantáneos, conjuros, encantamientos y artefactos. Con más de 20.000
+            cartas únicas en la historia del juego, las combinaciones son prácticamente infinitas.
+            Construir el mazo perfecto es ya en sí mismo un arte.
+          </p>
+        </div>
+
+        <div class="mtg-pillar reveal">
+          <span class="mtg-pillar-icon">⚡</span>
+          <span class="mtg-pillar-title">EL MANÁ: LOS 5 COLORES</span>
+          <p>
+            El maná es el recurso fundamental del juego. Las tierras lo generan y los hechizos
+            lo consumen. Pero no todo el maná es igual: existen cinco colores con filosofías
+            propias. Blanco (orden, protección, ejércitos), Azul (control, magia, truco),
+            Negro (poder a cualquier precio, muerte, ambición), Rojo (caos, fuego, velocidad)
+            y Verde (naturaleza, criaturas grandes, crecimiento). Tu color define tu estilo
+            de juego y tu personalidad como mago.
+          </p>
+        </div>
+
+        <div class="mtg-pillar reveal">
+          <span class="mtg-pillar-icon">⚔️</span>
+          <span class="mtg-pillar-title">EL COMBATE</span>
+          <p>
+            Cada turno sigue una secuencia de fases: descanso, robas cartas, juegas tierras,
+            lanzas hechizos, declaras atacantes y el rival declara bloqueadores. Las criaturas
+            combaten con su fuerza y resistencia. Lo que parece simple se convierte en un
+            ajedrez de decisiones al microsegundo: ¿ataco ahora o espero? ¿bloqueo y pierdo
+            mi criatura? ¿guardo el instantáneo para responder? Cada partida es una historia
+            diferente.
+          </p>
+        </div>
+
+        <div class="mtg-pillar reveal">
+          <span class="mtg-pillar-icon">🌍</span>
+          <span class="mtg-pillar-title">EL MULTIVERSO</span>
+          <p>
+            Magic no es solo mecánicas — es un universo rico con miles de años de historia.
+            Los planos son mundos distintos (Dominaria el clásico, Ravnica la ciudad gremial,
+            Zendikar el mundo de las ruinas), y los Planeswalkers son hechiceros capaces de
+            viajar entre ellos. El lore se cuenta a través de las propias cartas: cada ilustración,
+            cada texto de ambientación en cursiva, es un fragmento de una historia enorme.
+            En los 90, todo empezaba en Dominaria.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Los 5 colores de maná visual -->
+      <h3 style="font-family:var(--font-primary);font-size:0.55rem;color:var(--text-dim);margin-top:var(--sp-7);margin-bottom:var(--sp-2);text-transform:uppercase;">// LOS 5 COLORES DE MANÁ</h3>
+      <div class="mana-colors stagger">
+        <div class="mana-color-box reveal" style="--mana-color: #f5f5dc;">
+          <span class="mana-icon">☀️</span>
+          <span class="mana-name">BLANCO</span>
+          <span class="mana-theme">Orden · Luz · Ejércitos</span>
+        </div>
+        <div class="mana-color-box reveal" style="--mana-color: #00bfff;">
+          <span class="mana-icon">💧</span>
+          <span class="mana-name">AZUL</span>
+          <span class="mana-theme">Control · Magia · Engaño</span>
+        </div>
+        <div class="mana-color-box reveal" style="--mana-color: #888;">
+          <span class="mana-icon">💀</span>
+          <span class="mana-name">NEGRO</span>
+          <span class="mana-theme">Poder · Muerte · Ambición</span>
+        </div>
+        <div class="mana-color-box reveal" style="--mana-color: #ff4400;">
+          <span class="mana-icon">🔥</span>
+          <span class="mana-name">ROJO</span>
+          <span class="mana-theme">Caos · Fuego · Velocidad</span>
+        </div>
+        <div class="mana-color-box reveal" style="--mana-color: #00ff41;">
+          <span class="mana-icon">🌿</span>
+          <span class="mana-name">VERDE</span>
+          <span class="mana-theme">Naturaleza · Bestias · Fuerza</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 3 — MI HISTORIA CON MAGIC
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="historia" style="padding-top: var(--sp-7);">
+    <div class="container">
+
+      <div class="section-label">🏟 MI HISTORIA CON MAGIC</div>
+      <h2 class="section-title" style="color:var(--accent-secondary);text-shadow:var(--glow-pink);">CÁNOVAS 1996 — LAS MESAS DEL FRIKI</h2>
+
+      <div class="magic-section-img-wrap">
+        <img
+          src="assets/img/magic_doradas.jpg"
+          alt="Magic: The Gathering — Mi Historia con Magic"
+          class="magic-section-img"
+        >
+      </div>
+
+      <!-- Big personal story card -->
+      <div class="personal-story reveal">
+        <div class="personal-story-header">
+          <div class="personal-story-icon">🃏</div>
+          <div class="personal-story-meta">
+            <span class="personal-story-title">KARLETE — JUGADORA DE LOS 90</span>
+            <span class="personal-story-subtitle">Cánovas · Deathmatch · Cáceres · 1996–1997</span>
+          </div>
+        </div>
+
+        <p>
+          Fue en el grupo de frikis del instituto. Siempre había algo nuevo que descubrir:
+          videojuegos, rol, y entonces llegó Magic. Los fines de semana se convirtieron en
+          mesas largas llenas de cartas, reglas discutidas a gritos, intercambios de sobres
+          y esa tensión única de ver qué carta salía de un sobre recién abierto.
+          Era 1996 y Magic estaba en su era más pura.
+        </p>
+        <p>
+          Organizábamos torneos caseros donde todos poníamos lo mejor que teníamos. No había
+          grandes premios, solo el orgullo de ganar y los derechos de fardar durante una semana.
+          El intercambio de cartas era una economía entera: una rara potente podía valer
+          varias cartas infrecuentes, y la negociación era parte del juego.
+          Aprendí a valorar lo que tenía y a construir mazos con los recursos disponibles.
+        </p>
+        <p>
+          El ambiente del Deathmatch —el ciber de Cáceres donde también jugábamos a
+          Counter-Strike con el clan MDK los viernes— tenía algo especial. Entrábamos,
+          nos sentábamos en las mesas del fondo y durante horas mezclábamos partidas de
+          Magic con los headshots en LAN. Era la escena gamer local de Cáceres en estado puro:
+          pequeña, intensa y con una energía imposible de reproducir.
+        </p>
+
+        <div class="quote-card">
+          <p>"Adrenalina de Magic seguida de headshots en LAN. ¡Puro vicio gamer de los 90!"</p>
+          <span class="quote-attribution">— Karlete, sobre los viernes en Deathmatch</span>
+        </div>
+
+        <div class="personal-story-badge">🃏 COLECCIÓN CONSERVADA HASTA TEMPEST</div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 4 — LAS EDICIONES (Alpha → Tempest)
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="ediciones" style="padding-top: var(--sp-7); padding-bottom: var(--sp-7);">
+    <div class="container">
+
+      <div class="section-label blue">📖 LA HISTORIA DEL JUEGO EN CARTAS</div>
+      <h2 class="section-title" style="color:var(--accent-tertiary);text-shadow:var(--glow-blue);">LAS EDICIONES: DE ALPHA A TEMPEST</h2>
+
+      <div class="magic-section-img-wrap">
+        <img
+          src="assets/img/magic_verde.jpg"
+          alt="Magic: The Gathering — Las Ediciones"
+          class="magic-section-img"
+        >
+      </div>
+
+      <div class="lore-box reveal" style="margin-bottom: var(--sp-6);">
+        <span class="lore-box-title">// 1993–1997: LA ERA CLÁSICA DE MAGIC</span>
+        <p>
+          Este repaso cubre los sets publicados desde los orígenes del juego hasta Tempest
+          en 1997, la última expansión que jugué activamente. Son los años en que Magic
+          construyó sus cimientos, estableció las reglas del género y creó algunas de las
+          cartas más legendarias e icónicas de toda la historia del juego.
+        </p>
+        <p>
+          Las cartas de esta era tienen una estética y una filosofía únicos: ilustraciones oscuras
+          y detalladas, textos de ambientación crípticos y poderes muchas veces rotos por los
+          estándares actuales. Las Black Lotus, los Moxes, las Dual Lands... estos sets
+          son la prehistoria dorada de Magic.
+        </p>
+      </div>
+
+      <!-- ERA 1: SETS BASE — Alpha, Beta, Unlimited, Revised -->
+      <div class="era-header">
+        <span class="era-title" style="color:var(--accent-primary);text-shadow:var(--glow-green);">■ SETS BASE — EL COMIENZO</span>
+        <span class="era-badge">1993–1994</span>
+      </div>
+
+      <div class="editions-grid">
+
+        <div class="edition-card reveal" style="--set-color: var(--accent-primary);">
+          <div class="edition-card-head">
+            <span class="set-name">LIMITED EDITION ALPHA</span>
+            <span class="set-date">Agosto 1993 · 295 cartas</span>
+          </div>
+          <div class="edition-card-body">
+            <p class="set-desc">
+              El origen absoluto. Solo 2.600 ejemplares impresos. Contiene los errores
+              originales de diseño, esquinas redondeadas distintas y algunas cartas que
+              nunca se volverían a ver igual. Prácticamente imposible de conseguir hoy.
+            </p>
+            <span class="set-highlight">⭐ Black Lotus · Ancestral Recall · Mox Sapphire</span>
+          </div>
+        </div>
+
+        <div class="edition-card reveal" style="--set-color: var(--accent-primary);">
+          <div class="edition-card-head">
+            <span class="set-name">LIMITED EDITION BETA</span>
+            <span class="set-date">Octubre 1993 · 302 cartas</span>
+          </div>
+          <div class="edition-card-body">
+            <p class="set-desc">
+              Corrige algunos errores de Alpha y añade cartas faltantes. Sigue siendo
+              extremadamente raro. Las impresiones de Beta son reconocibles por las esquinas
+              más cuadradas que Alpha pero distintas a las ediciones posteriores.
+            </p>
+            <span class="set-highlight">⭐ Los mismos Power 9 · Copy Artifact · Timetwister</span>
+          </div>
+        </div>
+
+        <div class="edition-card reveal" style="--set-color: var(--accent-primary);">
+          <div class="edition-card-head">
+            <span class="set-name">UNLIMITED EDITION</span>
+            <span class="set-date">Diciembre 1993 · 302 cartas</span>
+          </div>
+          <div class="edition-card-body">
+            <p class="set-desc">
+              Primera tirada masiva. Mismo contenido que Beta pero con bordes blancos
+              en las cartas en lugar de los bordes negros posteriores. La primera
+              edición que muchos jugadores pudieron conseguir de verdad.
+            </p>
+            <span class="set-highlight">⭐ Bordes blancos icónicos · Primer Magic accesible</span>
+          </div>
+        </div>
+
+        <div class="edition-card reveal" style="--set-color: var(--accent-primary);">
+          <div class="edition-card-head">
+            <span class="set-name">REVISED EDITION (3ª ED.)</span>
+            <span class="set-date">Abril 1994 · 306 cartas</span>
+          </div>
+          <div class="edition-card-body">
+            <p class="set-desc">
+              El primer set realmente masivo. Eliminó algunas cartas rotas, añadió otras
+              de expansiones anteriores. Los bordes blancos seguían presentes.
+              Es el set base que la mayoría de europeos conocieron primero.
+            </p>
+            <span class="set-highlight">⭐ Dual Lands · Wrath of God · Counterspell clásico</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ERA 2: EXPANSIONES TEMPRANAS -->
+      <div class="era-header">
+        <span class="era-title" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">■ EXPANSIONES TEMPRANAS</span>
+        <span class="era-badge">1993–1994</span>
+      </div>
+
+      <div class="editions-grid">
+
+        <div class="edition-card reveal" style="--set-color: var(--accent-warn);">
+          <div class="edition-card-head">
+            <span class="set-name">ARABIAN NIGHTS</span>
+            <span class="set-date">Diciembre 1993 · 92 cartas</span>
+          </div>
+          <div class="edition-card-body">
+            <p class="set-desc">
+              Primera expansión de la historia, ambientada en Las Mil y Una Noches.
+              Introdujo mecánicas nuevas y una estética completamente diferente.
+              Pequeña pero históricamente crucial.
+            </p>
+            <span class="set-highlight">⭐ Library of Alexandria · Bazaar of Baghdad · Shahrazad</span>
+          </div>
+        </div>
+
+        <div class="edition-card reveal" style="--set-color: var(--accent-warn);">
+          <div class="edition-card-head">
+            <span class="set-name">ANTIQUITIES</span>
+            <span class="set-date">Marzo 1994 · 100 cartas</span>
+          </div>
+          <div class="edition-card-body">
+            <p class="set-desc">
+              Ambientada en la guerra entre los hermanos Urza y Mishra. Primera expansión
+              de lore continuo en Magic. Introdujo los artefactos como tema central
+              y sentó las bases del Multiverso.
+            </p>
+            <span class="set-highlight">⭐ Mishra's Workshop · Candelabra of Tawnos · Urza's lore</span>
+          </div>
+        </div>
+
+        <div class="edition-card reveal" style="--set-color: var(--accent-warn);">
+          <div class="edition-card-head">
+            <span class="set-name">LEGENDS</span>
+            <span class="set-date">Junio 1994 · 310 cartas</span>
+          </div>
+          <div class="edition-card-body">
+            <p class="set-desc">
+              Introdujo las criaturas legendarias —un subtipo únicos que marcó el lore
+              para siempre. Primera aparición de los Multicolores. Set enorme y caótico
+              con algunas de las cartas más complicadas del juego.
+            </p>
+            <span class="set-highlight">⭐ Karakas · The Tabernacle · Primeras legendarias</span>
+          </div>
+        </div>
+
+        <div class="edition-card reveal" style="--set-color: var(--accent-warn);">
+          <div class="edition-card-head">
+            <span class="set-name">THE DARK</span>
+            <span class="set-date">Agosto 1994 · 119 cartas</span>
+          </div>
+          <div class="edition-card-body">
+            <p class="set-desc">
+              Ambientación oscura y medieval. Mucho más pequeño que sus predecesores
+              pero con una estética sombría única. Introdujo la mecánica de sacrificio
+              como recurso estratégico.
+            </p>
+            <span class="set-highlight">⭐ Ball Lightning · Blood Moon · Maze of Ith</span>
+          </div>
+        </div>
+
+        <div class="edition-card reveal" style="--set-color: var(--accent-warn);">
+          <div class="edition-card-head">
+            <span class="set-name">FALLEN EMPIRES</span>
+            <span class="set-date">Noviembre 1994 · 187 cartas</span>
+          </div>
+          <div class="edition-card-body">
+            <p class="set-desc">
+              Set de las razas olvidadas: Homaridas, Thallids, Orggs... Muy sobreproducido,
+              lo que lo convirtió en el set más fácil de encontrar de su época.
+              Las cartas se vendían en bolsas de basura literalmente.
+            </p>
+            <span class="set-highlight">⭐ Hymn to Tourach · Order of the Ebon Hand · Thrulls</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ERA 3: ERA CLÁSICA MEDIA -->
+      <div class="era-header">
+        <span class="era-title" style="color:var(--accent-secondary);text-shadow:var(--glow-pink);">■ ERA CLÁSICA MEDIA</span>
+        <span class="era-badge">1995–1996</span>
+      </div>
+
+      <div class="editions-grid">
+
+        <div class="edition-card reveal" style="--set-color: var(--accent-secondary);">
+          <div class="edition-card-head">
+            <span class="set-name">FOURTH EDITION</span>
+            <span class="set-date">Abril 1995 · 378 cartas</span>
+          </div>
+          <div class="edition-card-body">
+            <p class="set-desc">
+              El primer set base con bordes negros. Enorme selección de cartas de ediciones
+              anteriores re-impresas. El set estándar de entrada para muchos jugadores
+              europeos durante años.
+            </p>
+            <span class="set-highlight">⭐ Primer set base con bordes negros · Serra Angel</span>
+          </div>
+        </div>
+
+        <div class="edition-card reveal" style="--set-color: var(--accent-secondary); position: relative;">
+          <div class="set-badge">⭐ MI ENTRADA</div>
+          <div class="edition-card-head" style="border-color: var(--accent-secondary);">
+            <span class="set-name">ICE AGE</span>
+            <span class="set-date">Junio 1995 · 383 cartas</span>
+          </div>
+          <div class="edition-card-body">
+            <p class="set-desc">
+              La Era de Hielo: un mundo post-apocalíptico cubierto de nieve tras la
+              explosión de maná de la guerra de los hermanos. Introdujo la mecánica de
+              Cumulative Upkeep y los terrenos de nieve. El set donde empezó todo para
+              Karlete: estética oscura, criaturas épicas y un ambiente único inigualable.
+            </p>
+            <span class="set-highlight">⭐ Necropotence · Brainstorm · Dark Ritual · Polar Kraken</span>
+          </div>
+        </div>
+
+        <div class="edition-card reveal" style="--set-color: var(--accent-secondary);">
+          <div class="edition-card-head">
+            <span class="set-name">CHRONICLES</span>
+            <span class="set-date">Julio 1995 · 116 cartas</span>
+          </div>
+          <div class="edition-card-body">
+            <p class="set-desc">
+              Re-impresión de cartas difíciles de encontrar de Arabian Nights, Antiquities,
+              Legends y The Dark. Muy polémica en su momento: los coleccionistas lo odiaron
+              porque devaluó cartas raras. Pero hizo el juego más accesible.
+            </p>
+            <span class="set-highlight">⭐ Polémica de las re-impresiones · Mayor accesibilidad</span>
+          </div>
+        </div>
+
+        <div class="edition-card reveal" style="--set-color: var(--accent-secondary);">
+          <div class="edition-card-head">
+            <span class="set-name">HOMELANDS</span>
+            <span class="set-date">Octubre 1995 · 140 cartas</span>
+          </div>
+          <div class="edition-card-body">
+            <p class="set-desc">
+              Ambientado en el plano de Ulgrotha con el misterioso Serra Angel's Homelands.
+              Considerado uno de los sets más débiles de la era clásica. Las cartas eran
+              poco potentes pero el lore de Feroz y la Baronia era interesante.
+            </p>
+            <span class="set-highlight">⭐ Lore de Ulgrotha · Sengir Vampire · An-Havva Township</span>
+          </div>
+        </div>
+
+        <div class="edition-card reveal" style="--set-color: var(--accent-secondary);">
+          <div class="edition-card-head">
+            <span class="set-name">ALLIANCES</span>
+            <span class="set-date">Junio 1996 · 199 cartas</span>
+          </div>
+          <div class="edition-card-body">
+            <p class="set-desc">
+              Continuación del bloque Ice Age. Las grandes alianzas se forman para combatir
+              la amenaza del invierno eterno. Uno de los sets más potentes de la era con
+              cartas que siguen siendo legales en formatos competitivos hoy.
+            </p>
+            <span class="set-highlight">⭐ Force of Will · Gorilla Shaman · Elvish Spirit Guide</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ERA 4: BLOQUE MIRAGE EN ADELANTE -->
+      <div class="era-header">
+        <span class="era-title" style="color:var(--accent-tertiary);text-shadow:var(--glow-blue);">■ BLOQUE MIRAGE — EL NUEVO MUNDO</span>
+        <span class="era-badge">1996–1997</span>
+      </div>
+
+      <div class="editions-grid">
+
+        <div class="edition-card reveal" style="--set-color: var(--accent-tertiary);">
+          <div class="edition-card-head">
+            <span class="set-name">MIRAGE</span>
+            <span class="set-date">Octubre 1996 · 350 cartas</span>
+          </div>
+          <div class="edition-card-body">
+            <p class="set-desc">
+              Transporta el juego al continente de Jamuraa, inspirado en el África subsahariana.
+              Primer set diseñado desde cero con continuidad de lore. Introdujo los Phasing
+              (cartas que aparecen y desaparecen) y el Flanking.
+            </p>
+            <span class="set-highlight">⭐ Vampiric Tutor · City of Brass · Lion's Eye Diamond</span>
+          </div>
+        </div>
+
+        <div class="edition-card reveal" style="--set-color: var(--accent-tertiary);">
+          <div class="edition-card-head">
+            <span class="set-name">VISIONS</span>
+            <span class="set-date">Febrero 1997 · 167 cartas</span>
+          </div>
+          <div class="edition-card-body">
+            <p class="set-desc">
+              Segunda parte del bloque Mirage. Continuó la historia de Jamuraa con las
+              profecías de Urza. Set pequeño pero con cartas muy potentes que se usarían
+              en torneos durante años.
+            </p>
+            <span class="set-highlight">⭐ Null Rod · Frenetic Efreet · Mangara of Corondor</span>
+          </div>
+        </div>
+
+        <div class="edition-card reveal" style="--set-color: var(--accent-tertiary);">
+          <div class="edition-card-head">
+            <span class="set-name">FIFTH EDITION</span>
+            <span class="set-date">Marzo 1997 · 449 cartas</span>
+          </div>
+          <div class="edition-card-body">
+            <p class="set-desc">
+              El set base más grande hasta la fecha. Nueva maquetación de los textos de
+              las cartas, marco más limpio. Prácticamente un manual completo del juego
+              en forma de cartas coleccionables.
+            </p>
+            <span class="set-highlight">⭐ Set base más completo · Nueva diagramación de cartas</span>
+          </div>
+        </div>
+
+        <div class="edition-card reveal" style="--set-color: var(--accent-tertiary);">
+          <div class="edition-card-head">
+            <span class="set-name">WEATHERLIGHT</span>
+            <span class="set-date">Junio 1997 · 167 cartas</span>
+          </div>
+          <div class="edition-card-body">
+            <p class="set-desc">
+              Introdujo la nave Weatherlight y su tripulación: Gerrard, Mirri, Hanna, Squee...
+              Fue el inicio del lore continuo moderno de Magic. A partir de aquí, cada set
+              contaría una historia conectada.
+            </p>
+            <span class="set-highlight">⭐ La nave Weatherlight · Gerrard · Inicio del lore moderno</span>
+          </div>
+        </div>
+
+        <div class="edition-card reveal" style="--set-color: var(--accent-tertiary); position: relative;">
+          <div class="set-badge gold">🏁 ÚLTIMA ERA</div>
+          <div class="edition-card-head" style="border-color: var(--accent-warn);">
+            <span class="set-name" style="color:var(--accent-warn);">TEMPEST</span>
+            <span class="set-date">Octubre 1997 · 350 cartas</span>
+          </div>
+          <div class="edition-card-body">
+            <p class="set-desc">
+              El bloque Tempest transporta al Weatherlight al plano de Rath, gobernado
+              por el maligno Volrath. Introdujo la mecánica de Shadow —criaturas que solo
+              pueden bloquear a otras con Shadow— y los Slivers en su primera aparición.
+              El último set de la era activa de Karlete.
+            </p>
+            <span class="set-highlight">⭐ Grindstone · Scroll Rack · Whispers of the Muse · Slivers</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 5 — LA COLECCIÓN
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="coleccion" style="padding-top: var(--sp-7); padding-bottom: var(--sp-7);">
+    <div class="container">
+
+      <div class="section-label gold">💎 EL TESORO DE LOS 90</div>
+      <h2 class="section-title" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">LA COLECCIÓN</h2>
+
+      <div class="magic-section-img-wrap">
+        <img
+          src="assets/img/magic_negro.jpg"
+          alt="Magic: The Gathering — La Colección"
+          class="magic-section-img"
+        >
+      </div>
+
+      <div class="collection-box reveal">
+        <p>
+          Cuando dejé de jugar activamente a Magic, vendí gran parte de las cartas pero mantengo aun una pequeña colección 
+          de cartas por cada color abarcando las ediciones que jugué, hasta tempest.Esas cartas de Ice Age, Alliances, Mirage y Tempest
+          siguen existiendo en un archivador, intactas, con sus ilustraciones oscuras y sus
+          textos en castellano o en inglés según de qué sobre venían.
+        </p>
+        <p>
+          Conservar esa colección es conservar una parte de los años 90 que ya no existe.
+          El Centro de Cánovas cerró, despues del Death Match y ya se fue toda la magia. El grupo de frikis se dispersó. 
+          Counter-Strike evolucionó y dejó atrás aquellas LAN con monitores CRT. Pero las cartas siguen ahí,
+          con el olor a papel y plástico de sobre recién abierto grabado en la memoria.
+        </p>
+
+        <!-- Barra de colección -->
+        <div class="collection-stat">
+          <div class="collection-stat-label">
+            <span>🃏 CARTAS EN COLECCIÓN</span>
+            <span style="color:var(--accent-secondary);">400s — ALPHA → TEMPEST</span>
+          </div>
+          <div class="bar-container">
+            <div class="bar-track">
+              <div class="bar-fill pink" data-fill="20" style="width:0%"></div>
+            </div>
+          </div>
+          <div style="font-family:var(--font-secondary);font-size:15px;color:var(--text-dim);margin-top:var(--sp-2);">
+            Colección de la era clásica · Sets desde V + expansiones hasta Tempest
+          </div>
+        </div>
+
+        <span class="collection-note">
+          "Esta página es un homenaje a esa era dorada, antes de que el juego se masificara del todo."
+        </span>
+
+        <p>
+          Magic: The Gathering de los 90 era otro mundo. Sin internet, sin guías online,
+          sin TCGPlayer para calcular precios. Solo el instinto, los amigos, los sobres
+          abiertos con emoción genuina y las partidas que se alargaban hasta que el cibercafé
+          cerraba. Eso es lo que estas cartas representan: un tiempo irrepetible.
+        </p>
+
+        <!-- Cierre: botones a otros fandoms -->
+        <div style="margin-top: var(--sp-6); display:flex; flex-wrap:wrap; gap:var(--sp-3);">
+          <a href="warhammer.html" class="btn btn-gold">⚔ VER WARHAMMER</a>
+          <a href="got.html"       class="btn btn-small" style="border-color:var(--accent-tertiary);color:var(--accent-tertiary);">🐉 VER GOT</a>
+          <a href="rol.html"       class="btn btn-pink btn-small">🎲 VER ROL</a>
+          <a href="index.html"     class="btn btn-small">🏠 VOLVER AL INICIO</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ─── Footer ──────────────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="gamedev.html">GameDev</a></li>
+      <li><a href="gaming.html">Gaming</a></li>
+      <li><a href="esports.html">Esports</a></li>
+      <li><a href="got.html">GoT</a></li>
+      <li><a href="warhammer.html">Warhammer</a></li>
+      <li><a href="magic.html">MtG</a></li>
+      <li><a href="rol.html">Rol</a></li>
+      <li><a href="social.html">Social</a></li>
+      <li><a href="java.html">Java</a></li>
+    </ul>
+    <p>⚔ FREAKONIA — KARLETE</p>
+    <p style="color:#444;">HECHO CON AMOR PIXELADO Y DEMASIADAS BEBIDAS ENERGÉTICAS</p>
+    <p style="color:#333;">◄ INSERT COIN ►</p>
+
+    <div class="footer-legal">
+      <div class="pixel-divider"></div>
+      <p class="footer-copyright">
+        © 2025 FREAKONIA — KARLETE. ALL RIGHTS RESERVED.
+      </p>
+      <p class="footer-trademark">
+        FREAKONIA™ IS A REGISTERED PERSONAL BRAND.
+        ALL CONTENT, DESIGNS, GAME CONCEPTS AND ORIGINAL TEXTS
+        ON THIS SITE ARE THE EXCLUSIVE PROPERTY OF THEIR AUTHOR.
+        UNAUTHORIZED REPRODUCTION, DISTRIBUTION OR USE OF ANY
+        CONTENT IS STRICTLY PROHIBITED WITHOUT PRIOR WRITTEN PERMISSION.
+      </p>
+      <p class="footer-notice">
+        ⚠ THIS SITE CONTAINS STRONG OPINIONS ABOUT VIDEO GAMES,
+        FANTASY LORE AND BASKETBALL. READER DISCRETION IS ADVISED.
+        NO GOBLINS WERE HARMED IN THE MAKING OF THIS WEBSITE.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

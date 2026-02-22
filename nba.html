@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Freakonia — NBA. De Kobe a LeBron, el Slam Dunk de 2016, el fantasy sin anillo y La Taberna del Boxscore. 25 años viendo el mejor baloncesto del mundo." />
+  <title>NBA — Freakonia</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+
+  <style>
+    /* ── NBA accent vars ── */
+    :root {
+      --nba-gold:  var(--accent-warn);
+      --nba-pink:  var(--accent-secondary);
+      --nba-blue:  var(--accent-tertiary);
+    }
+
+    /* ── Page header ── */
+    .page-header-nba {
+      background: var(--bg-surface);
+      border-bottom: 4px solid var(--accent-warn);
+      padding: var(--sp-7) 0 var(--sp-6);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header-nba::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(255,204,0,0.09) 0%, transparent 50%),
+        linear-gradient(225deg, rgba(255,0,255,0.06) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .page-header-nba::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%; height: 4px;
+      background: linear-gradient(90deg,
+        var(--accent-warn)      0%,
+        var(--accent-secondary) 35%,
+        var(--accent-warn)      65%,
+        var(--accent-secondary) 100%);
+    }
+
+    .page-header-nba .container { position: relative; z-index: 1; }
+
+    .page-header-pre {
+      font-family: var(--font-primary);
+      font-size: 0.5rem;
+      color: var(--accent-warn);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: var(--sp-3);
+    }
+
+    .page-header-title {
+      font-family: var(--font-primary);
+      font-size: clamp(1.8rem, 6vw, 3.5rem);
+      color: var(--text-bright);
+      text-shadow: var(--glow-gold);
+      margin-bottom: var(--sp-3);
+    }
+
+    .page-header-sub {
+      font-family: var(--font-secondary);
+      font-size: 22px;
+      color: var(--text-dim);
+      margin-bottom: 0;
+    }
+
+    /* ── Section label strip ── */
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-3);
+      font-family: var(--font-primary);
+      font-size: 0.55rem;
+      color: #000;
+      background: var(--accent-warn);
+      padding: var(--sp-2) var(--sp-4);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: var(--sp-5);
+    }
+
+    .section-label.pink  { background: var(--accent-secondary); color: #fff; }
+    .section-label.green { background: var(--accent-primary);   color: #000; }
+    .section-label.blue  { background: var(--accent-tertiary);  color: #000; }
+    .section-label.dim   { background: #333; color: var(--text-dim); }
+
+    /* ── Section quick nav ── */
+    .section-quicknav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--sp-3);
+      margin: var(--sp-5) 0 var(--sp-6);
+    }
+
+    .section-quicknav a {
+      font-family: var(--font-primary);
+      font-size: 0.4rem;
+      color: var(--text-dim);
+      border: 2px solid #333;
+      padding: var(--sp-2) var(--sp-3);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
+      transition: color 0.1s, border-color 0.1s, box-shadow 0.1s;
+    }
+
+    .section-quicknav a:hover {
+      color: var(--accent-warn);
+      border-color: var(--accent-warn);
+      box-shadow: var(--glow-gold);
+    }
+
+    /* ── Lore / intro box ── */
+    .lore-box {
+      background: var(--bg-card);
+      border: 2px solid #2a2a2a;
+      padding: var(--sp-5);
+    }
+
+    .lore-box p {
+      font-family: var(--font-secondary);
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--text);
+    }
+
+    .lore-box p + p { margin-top: var(--sp-3); }
+
+    /* ── Quote card ── */
+    .quote-card {
+      background: var(--bg-card);
+      border: 4px solid var(--accent-warn);
+      box-shadow: var(--glow-gold);
+      padding: var(--sp-5) var(--sp-6);
+      position: relative;
+      margin-top: var(--sp-5);
+    }
+
+    .quote-card.pink {
+      border-color: var(--accent-secondary);
+      box-shadow: var(--glow-pink);
+    }
+
+    .quote-card.green {
+      border-color: var(--accent-primary);
+      box-shadow: var(--glow-green);
+    }
+
+    .quote-card::before {
+      content: '"';
+      position: absolute;
+      top: var(--sp-2);
+      left: var(--sp-4);
+      font-family: var(--font-secondary);
+      font-size: 5rem;
+      color: var(--accent-warn);
+      opacity: 0.12;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .quote-card.pink::before { color: var(--accent-secondary); }
+    .quote-card.green::before { color: var(--accent-primary); }
+
+    .quote-card p {
+      font-family: var(--font-secondary);
+      font-size: 20px;
+      line-height: 1.8;
+      position: relative;
+      z-index: 1;
+      color: var(--text);
+      font-style: italic;
+    }
+
+    .quote-attribution {
+      font-family: var(--font-primary);
+      font-size: 0.38rem;
+      color: var(--text-dim);
+      margin-top: var(--sp-3);
+      display: block;
+    }
+
+    /* ── Player tribute (Kobe / LeBron) ── */
+    .player-tribute {
+      border: 4px solid var(--tribute-color, var(--accent-secondary));
+      background: var(--bg-card);
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      position: relative;
+      transition: box-shadow 0.2s;
+    }
+
+    .player-tribute:hover {
+      box-shadow: 0 0 20px var(--tribute-color, var(--accent-secondary));
+    }
+
+    .player-tribute::before {
+      content: "LEYENDA";
+      position: absolute;
+      top: -14px;
+      left: 16px;
+      background: var(--tribute-color, var(--accent-secondary));
+      color: var(--bg);
+      font-family: var(--font-primary);
+      font-size: 0.4rem;
+      padding: 2px 8px;
+    }
+
+    .player-stats {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-3);
+    }
+
+    .player-stat-row {
+      background: #1a1a1a;
+      border-left: 3px solid var(--tribute-color, var(--accent-secondary));
+      padding: var(--sp-2) var(--sp-3);
+    }
+
+    .player-stat-value {
+      font-family: var(--font-primary);
+      font-size: 0.42rem;
+      color: var(--tribute-color, var(--accent-secondary));
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .player-stat-label {
+      font-family: var(--font-secondary);
+      font-size: 15px;
+      color: var(--text-dim);
+      display: block;
+    }
+
+    .player-tribute-text p {
+      font-family: var(--font-secondary);
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--text);
+    }
+
+    .player-tribute-text p + p { margin-top: var(--sp-4); }
+
+    .player-badge {
+      display: inline-block;
+      margin-top: var(--sp-5);
+      background: var(--tribute-color, var(--accent-secondary));
+      color: var(--bg);
+      font-family: var(--font-primary);
+      font-size: 0.38rem;
+      padding: var(--sp-2) var(--sp-4);
+      letter-spacing: 1px;
+    }
+
+    /* ── Slam Dunk Event ── */
+    .dunk-event {
+      border: 4px solid var(--accent-warn);
+      background: var(--bg-card);
+      padding: 2rem;
+      position: relative;
+    }
+
+    .dunk-event-badge {
+      position: absolute;
+      top: -14px;
+      left: 16px;
+      background: var(--accent-warn);
+      color: var(--bg);
+      font-family: var(--font-primary);
+      font-size: 0.4rem;
+      padding: 2px 8px;
+    }
+
+    .dunk-event-title {
+      font-family: var(--font-primary);
+      font-size: clamp(0.5rem, 1.5vw, 0.65rem);
+      color: var(--accent-warn);
+      text-shadow: var(--glow-gold);
+      display: block;
+      margin-bottom: var(--sp-4);
+      padding-top: var(--sp-2);
+    }
+
+    .dunk-event p {
+      font-family: var(--font-secondary);
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--text);
+    }
+
+    .dunk-event p + p { margin-top: var(--sp-3); }
+
+    .dunk-contender {
+      margin-top: var(--sp-5);
+      padding: var(--sp-4) var(--sp-5);
+      background: #111;
+      border-left: 4px solid var(--contender-color, var(--accent-warn));
+    }
+
+    .dunk-contender-name {
+      font-family: var(--font-primary);
+      font-size: 0.5rem;
+      color: var(--contender-color, var(--accent-warn));
+      display: block;
+      margin-bottom: var(--sp-3);
+    }
+
+    .dunk-contender p {
+      font-family: var(--font-secondary);
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--text);
+      margin-top: 0;
+    }
+
+    .dunk-verdict {
+      border: 4px solid var(--accent-warn);
+      background: var(--bg);
+      padding: 1.2rem 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .dunk-verdict-title {
+      font-family: var(--font-primary);
+      font-size: 0.45rem;
+      color: var(--accent-warn);
+      text-shadow: var(--glow-gold);
+      display: block;
+      margin-bottom: var(--sp-3);
+    }
+
+    .dunk-verdict ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .dunk-verdict ul li {
+      font-family: var(--font-secondary);
+      font-size: 17px;
+      color: var(--accent-warn);
+      padding: var(--sp-1) 0;
+      border-bottom: 1px solid #1a1a1a;
+    }
+
+    .dunk-verdict ul li:last-child { border-bottom: none; }
+
+    /* ── Memory card (inline override) ── */
+    .memory-card {
+      background: var(--bg-card);
+      border: 4px solid var(--memory-color, var(--accent-primary));
+      padding: var(--sp-5);
+      position: relative;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+
+    .memory-card:hover {
+      box-shadow: 0 0 16px var(--memory-color, var(--accent-primary));
+    }
+
+    .memory-card-title {
+      font-family: var(--font-primary);
+      font-size: 0.45rem;
+      color: var(--memory-color, var(--accent-primary));
+      display: block;
+      margin-bottom: var(--sp-3);
+      line-height: 1.6;
+    }
+
+    .memory-card p {
+      font-family: var(--font-secondary);
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--text);
+    }
+
+    /* ── Channel card ── */
+    .channel-card {
+      border: 4px solid var(--accent-primary);
+      background: var(--bg-card);
+      padding: 2rem;
+      position: relative;
+      text-align: center;
+      transition: box-shadow 0.2s;
+      overflow: hidden;
+    }
+
+    .channel-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,255,65,0.04) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .channel-card:hover {
+      box-shadow: var(--glow-green);
+    }
+
+    .channel-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent-primary);
+      color: var(--bg);
+      font-family: var(--font-primary);
+      font-size: 0.38rem;
+      padding: 3px 10px;
+      white-space: nowrap;
+    }
+
+    .channel-name {
+      font-family: var(--font-primary);
+      font-size: clamp(0.45rem, 1.5vw, 0.65rem);
+      color: var(--accent-primary);
+      text-shadow: var(--glow-green);
+      display: block;
+      margin-bottom: var(--sp-4);
+      padding-top: var(--sp-2);
+      line-height: 1.6;
+    }
+
+    .channel-url {
+      font-family: var(--font-secondary);
+      font-size: 18px;
+      color: var(--text-dim);
+      display: block;
+      margin-bottom: var(--sp-4);
+    }
+
+    .channel-card p {
+      font-family: var(--font-secondary);
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--text);
+      position: relative;
+      z-index: 1;
+      margin-bottom: var(--sp-4);
+    }
+
+    .channel-subtag {
+      font-family: var(--font-secondary);
+      font-size: 16px;
+      color: var(--text-dim);
+      display: block;
+      margin-top: var(--sp-3);
+    }
+
+    /* ── Fantasy card ── */
+    .fantasy-card {
+      border: 4px solid var(--accent-warn);
+      background: var(--bg-card);
+      padding: var(--sp-5) var(--sp-6);
+      position: relative;
+      font-family: var(--font-secondary);
+      margin-top: var(--sp-5);
+    }
+
+    .fantasy-card-badge {
+      position: absolute;
+      top: -14px;
+      right: 12px;
+      background: #660000;
+      color: #ff4444;
+      font-family: var(--font-primary);
+      font-size: 0.32rem;
+      padding: 3px 8px;
+      border: 1px solid #ff4444;
+    }
+
+    .fantasy-card-title {
+      font-family: var(--font-primary);
+      font-size: 0.5rem;
+      color: var(--accent-warn);
+      text-shadow: var(--glow-gold);
+      display: block;
+      margin-bottom: var(--sp-4);
+    }
+
+    .fantasy-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .fantasy-table td {
+      font-family: var(--font-secondary);
+      font-size: 17px;
+      color: var(--text);
+      padding: var(--sp-2) var(--sp-3);
+      border-bottom: 1px solid #1e1e1e;
+    }
+
+    .fantasy-table td:first-child {
+      color: var(--text-dim);
+      width: 55%;
+    }
+
+    .fantasy-table td:last-child {
+      color: var(--text-bright);
+      text-align: right;
+    }
+
+    .fantasy-table tr.highlight td {
+      color: #ff4444;
+    }
+
+    .fantasy-table tr.highlight td:first-child {
+      color: #ff4444;
+    }
+
+    .fantasy-bar-label {
+      font-family: var(--font-primary);
+      font-size: 0.38rem;
+      color: var(--text-dim);
+      margin-top: var(--sp-5);
+      margin-bottom: var(--sp-2);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* ── Current era stat boxes ── */
+    .era-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--sp-4);
+      margin-top: var(--sp-5);
+    }
+
+    .era-stat-box {
+      background: var(--bg-card);
+      border: 4px solid var(--box-color, var(--accent-warn));
+      padding: var(--sp-5);
+      text-align: center;
+      transition: box-shadow 0.2s;
+    }
+
+    .era-stat-box:hover {
+      box-shadow: 0 0 16px var(--box-color, var(--accent-warn));
+    }
+
+    .era-stat-value {
+      font-family: var(--font-primary);
+      font-size: clamp(0.5rem, 1.5vw, 0.65rem);
+      color: var(--box-color, var(--accent-warn));
+      display: block;
+      margin-bottom: var(--sp-3);
+      line-height: 1.4;
+    }
+
+    .era-stat-label {
+      font-family: var(--font-secondary);
+      font-size: 16px;
+      color: var(--text-dim);
+      display: block;
+    }
+
+    /* ── Dunk contest grid ── */
+    .dunk-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: var(--sp-5);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .player-tribute        { grid-template-columns: 1fr; }
+      .dunk-grid             { grid-template-columns: 1fr; }
+      .era-stats             { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .dunk-event            { padding: var(--sp-4); }
+      .channel-card          { padding: var(--sp-4); }
+      .fantasy-card          { padding: var(--sp-4); }
+      .player-tribute        { padding: var(--sp-4); }
+      .quote-card            { padding: var(--sp-4); }
+    }
+
+    /* ── Footer legal ── */
+    .footer-legal {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+    .footer-copyright {
+      font-family: var(--font-primary);
+      font-size: 0.4rem;
+      color: var(--accent-primary);
+      margin-bottom: 0.8rem;
+    }
+    .footer-trademark {
+      font-family: var(--font-secondary);
+      font-size: 14px;
+      color: #555;
+      line-height: 1.5;
+      margin-bottom: 0.5rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .footer-notice {
+      font-family: var(--font-secondary);
+      font-size: 14px;
+      color: #444;
+      line-height: 1.5;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ── Taberna image ── */
+    .taberna-img-link {
+      display: block;
+      text-decoration: none;
+      margin-bottom: 1.5rem;
+    }
+
+    .taberna-img-wrap {
+      position: relative;
+      width: 100%;
+      border: 4px solid var(--accent-primary);
+      box-shadow: 0 0 14px var(--accent-primary),
+                  0 0 28px rgba(0, 255, 65, 0.3);
+      overflow: hidden;
+    }
+
+    .taberna-img-wrap:hover {
+      border-color: var(--accent-secondary);
+      box-shadow: 0 0 20px var(--accent-secondary),
+                  0 0 40px rgba(255, 0, 255, 0.4);
+    }
+
+    .taberna-img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .taberna-img-wrap:hover .taberna-img {
+      transform: scale(1.03);
+    }
+
+    .taberna-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .taberna-img-wrap:hover .taberna-img-overlay {
+      opacity: 1;
+    }
+
+    .taberna-play-btn {
+      font-family: var(--font-primary);
+      font-size: 0.5rem;
+      color: var(--accent-primary);
+      text-shadow: var(--glow-green);
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 640px) {
+      .taberna-img { height: 220px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- CRT overlay -->
+<div class="crt-overlay" aria-hidden="true"></div>
+
+<!-- ─── Navigation ─────────────────────────────────────────────────────── -->
+<nav class="navbar" role="navigation" aria-label="Navegación principal">
+  <div class="container">
+    <a href="index.html" class="nav-brand">⚔ FREAKONIA</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">▼ MENU</button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html"     class="nav-link">🏠 Inicio</a></li>
+      <li><a href="gamedev.html"   class="nav-link">🎮 GameDev</a></li>
+      <li><a href="gaming.html"    class="nav-link">🕹 Gaming</a></li>
+      <li><a href="esports.html"   class="nav-link">🏆 Esports</a></li>
+      <li><a href="got.html"       class="nav-link">🐉 GoT</a></li>
+      <li><a href="warhammer.html" class="nav-link">⚙ Warhammer</a></li>
+      <li><a href="magic.html"     class="nav-link">✨ MtG</a></li>
+      <li><a href="rol.html"       class="nav-link">🎲 Rol</a></li>
+      <li><a href="nba.html"       class="nav-link active">🏀 NBA</a></li>
+      <li><a href="java.html"      class="nav-link">☕ Java</a></li>
+      <li><a href="social.html"    class="nav-link">📡 Social</a></li>
+      <li><a href="news.html"      class="nav-link">📰 News</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ─── Page Header ─────────────────────────────────────────────────────── -->
+<header class="page-header-nba">
+  <div class="container">
+    <p class="page-header-pre">🏀 DESDE EL AÑO 2000</p>
+    <h1 class="page-header-title">🏀 NBA</h1>
+    <p class="page-header-sub">"De Kobe a LeBron — 25 años viendo el mejor baloncesto del mundo"</p>
+  </div>
+</header>
+
+<main>
+
+  <!-- ─── Stats overview ──────────────────────────────────────────────── -->
+  <section class="section" style="padding-top: var(--sp-7); padding-bottom: var(--sp-5);">
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">2000</span>
+          <span class="stat-label">Mi primer año NBA</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--accent-secondary);text-shadow:var(--glow-pink);">KOBE</span>
+          <span class="stat-label">Mi estrella de referencia</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--accent-primary);text-shadow:var(--glow-green);">14</span>
+          <span class="stat-label">Años de Fantasy con los colegas</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:#ff4444;">0</span>
+          <span class="stat-label">Anillos del Fantasy ganados 😭</span>
+        </div>
+        <div class="stat-box reveal">
+          <span class="stat-value" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">2016</span>
+          <span class="stat-label">Mejor Slam Dunk Contest ever</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ─── Quick nav ────────────────────────────────────────────────────── -->
+  <section class="section" style="padding-top: var(--sp-5); padding-bottom: var(--sp-4);">
+    <div class="container">
+      <nav class="section-quicknav" aria-label="Saltar a sección">
+        <span style="font-family:var(--font-primary);font-size:0.4rem;color:var(--text-dim);align-self:center;">▶ IR A:</span>
+        <a href="#canal">🎙 Mi Canal</a>
+        <a href="#origen">🏀 Mi origen</a>
+        <a href="#kobe">💜 Kobe</a>
+        <a href="#lebron">💚 LeBron</a>
+        <a href="#dunk">🔥 Slam Dunk 2016</a>
+        <a href="#nbalive">🎮 NBA Live</a>
+        <a href="#allstar">🌙 All-Star Nights</a>
+        <a href="#fantasy">🏆 El Fantasy</a>
+        <a href="#hoy">📅 NBA Hoy</a>
+      </nav>
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 1 — LA TABERNA DEL BOXSCORE
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="canal" style="padding-top: var(--sp-7);">
+    <div class="container">
+
+      <div class="section-label green">🎙 MI CANAL DE NBA</div>
+      <h2 class="section-title" style="color:var(--accent-primary);text-shadow:var(--glow-green);">LA TABERNA DEL BOXSCORE</h2>
+
+      <div class="channel-card reveal">
+        <div class="channel-badge">▶ YOUTUBE · 2025</div>
+        <span class="channel-name">🎙 LA TABERNA DEL BOXSCORE</span>
+        <span class="channel-url">youtube.com/@Latabernadelboxscore</span>
+
+        <a href="https://www.youtube.com/@Latabernadelboxscore"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="taberna-img-link">
+          <div class="taberna-img-wrap">
+            <img
+              src="assets/img/la_taberna_del_boxscore.jpg"
+              alt="La Taberna del Boxscore — Canal de YouTube NBA"
+              class="taberna-img"
+            >
+            <div class="taberna-img-overlay">
+              <span class="taberna-play-btn">▶ VER CANAL</span>
+            </div>
+          </div>
+        </a>
+
+        <p>
+          En 2025 decidí dar el paso que llevaba tiempo rondándome: crear un espacio propio
+          para hablar de NBA. Así nació La Taberna del Boxscore, mi canal de YouTube donde
+          cada semana me pongo a dar la chapa sobre la actualidad de la liga.
+        </p>
+        <p>
+          Resúmenes semanales, análisis sin complicaciones, opiniones propias y el tono de
+          alguien que lleva 25 años siguiendo esto con pasión real. Sin pretensiones de gran
+          medio —solo una aficionada de toda la vida con ganas de compartir lo que ve y
+          lo que piensa.
+        </p>
+        <a href="https://www.youtube.com/@Latabernadelboxscore" class="btn btn-pink" target="_blank" rel="noopener noreferrer">▶ VER EL CANAL</a>
+        <span class="channel-subtag">Resúmenes semanales · Actualidad NBA · Temporada 2025-26</span>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: var(--sp-7) var(--sp-5) 0;" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 2 — CÓMO ME ENAMORÉ DE LA NBA
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="origen" style="padding-top: var(--sp-7);">
+    <div class="container">
+
+      <div class="section-label">🏀 EL AÑO CERO</div>
+      <h2 class="section-title" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">CÓMO ME ENAMORÉ DE LA NBA</h2>
+
+      <div class="lore-box reveal">
+        <p>
+          El año 2000 fue mi año cero. Los Lakers acababan de ganar el primero de tres títulos
+          consecutivos, Phil Jackson orquestaba el triángulo ofensivo y había un chico de
+          21 años que jugaba con una arrogancia tan absoluta, tan despiadada, que era
+          imposible no quedarse mirando. Se llamaba Kobe Bean Bryant. Y desde esa primera
+          temporada que seguí en serio, fue mi jugador.
+        </p>
+        <p>
+          No era el más querido. La gente lo amaba u odiaba, sin término medio. Yo estaba
+          en el primer grupo sin dudarlo. Su mentalidad Mamba —esa obsesión casi enfermiza
+          por ser el mejor cada noche— me enganchó para siempre a este deporte. Cada partido
+          era un estudio de cómo se construye la grandeza a base de trabajo, repetición
+          y voluntad de hierro.
+        </p>
+        <p>
+          Lo seguí durante toda su carrera. Los cinco anillos, el MVP del All-Star 2002,
+          los 81 puntos contra los Raptors en 2006 —la segunda mejor actuación individual
+          de la historia tras los 100 de Wilt. El back-to-back con Pau Gasol. Y luego el
+          adiós de 2016, con 60 puntos en el último partido de su carrera, porque Kobe
+          nunca se iba a despedir siendo menos que Kobe.
+        </p>
+      </div>
+
+      <div class="quote-card pink reveal">
+        <p>💜 "La mentalidad Mamba no es solo baloncesto. Es negarse a aceptar que el límite existe."</p>
+        <span class="quote-attribution">— Kobe Bryant</span>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: var(--sp-7) var(--sp-5) 0;" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 2 — KOBE BRYANT: MI JUGADOR
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="kobe" style="padding-top: var(--sp-7);">
+    <div class="container">
+
+      <div class="section-label pink">💜 HOMENAJE</div>
+      <h2 class="section-title" style="color:var(--accent-secondary);text-shadow:var(--glow-pink);">KOBE BRYANT: MI JUGADOR</h2>
+
+      <div class="player-tribute reveal" style="--tribute-color: var(--accent-secondary);">
+        <div class="player-stats">
+          <div class="player-stat-row" style="--tribute-color: var(--accent-secondary);">
+            <span class="player-stat-value">5</span>
+            <span class="player-stat-label">Anillos NBA (2000 · 01 · 02 · 09 · 10)</span>
+          </div>
+          <div class="player-stat-row" style="--tribute-color: var(--accent-secondary);">
+            <span class="player-stat-value">1</span>
+            <span class="player-stat-label">MVP Temporada Regular (2007-08)</span>
+          </div>
+          <div class="player-stat-row" style="--tribute-color: var(--accent-secondary);">
+            <span class="player-stat-value">18</span>
+            <span class="player-stat-label">Convocatorias al All-Star</span>
+          </div>
+          <div class="player-stat-row" style="--tribute-color: var(--accent-secondary);">
+            <span class="player-stat-value">81 PTS</span>
+            <span class="player-stat-label">vs Toronto Raptors · 22 enero 2006</span>
+          </div>
+          <div class="player-stat-row" style="--tribute-color: var(--accent-secondary);">
+            <span class="player-stat-value">33.643</span>
+            <span class="player-stat-label">Puntos en carrera (4º histórico)</span>
+          </div>
+          <div class="player-stat-row" style="--tribute-color: var(--accent-secondary);">
+            <span class="player-stat-value">20</span>
+            <span class="player-stat-label">Temporadas — TODAS con los Lakers</span>
+          </div>
+        </div>
+
+        <div class="player-tribute-text">
+          <p>
+            Hay jugadores que ves y disfrutas. Y hay jugadores que te marcan. Kobe fue de
+            los segundos. No te pedía que lo quisieras —te retaba a que lo comprendieras.
+            Y cuando lo comprendías, ya no podías dejar de verlo.
+          </p>
+          <p>
+            El modo en que estudiaba a sus rivales, cómo improvisaba soluciones en tiempo
+            real, cómo pedía el balón en el momento más difícil porque precisamente ese
+            momento era el que él había ensayado mil veces. No había suerte en el juego
+            de Kobe. Solo preparación convertida en arte.
+          </p>
+          <p>
+            Perderlo el 26 de enero de 2020 fue uno de esos golpes que no te esperas
+            aunque el mundo lleve años recordándote que nadie es eterno. El helicóptero,
+            la niebla, Gianna. Ese día la NBA dejó de ser solo un deporte por un momento.
+            Y los que lo seguíamos desde el principio perdimos algo que va más allá del
+            deporte.
+          </p>
+          <div class="player-badge" style="--tribute-color: var(--accent-secondary);">#8 · #24 · MAMBA FOREVER</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: var(--sp-7) var(--sp-5) 0;" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 3 — Y LUEGO LLEGÓ LEBRON
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="lebron" style="padding-top: var(--sp-7);">
+    <div class="container">
+
+      <div class="section-label green">💚 EL DEBATE CERRADO</div>
+      <h2 class="section-title" style="color:var(--accent-primary);text-shadow:var(--glow-green);">Y LUEGO LLEGÓ LEBRON</h2>
+
+      <div class="lore-box reveal">
+        <p>
+          Cuando Kobe se retiró, la NBA necesitaba un sucesor de la narrativa. LeBron James
+          llevaba ya más de una década siendo el mejor jugador del mundo —pero sin Kobe en
+          activo, el debate se cerró por defecto y por mérito propio.
+        </p>
+        <p>
+          Yo tardé en rendirme. Era de los que ponía a Kobe por encima en el GOAT debate,
+          y en cierto modo sigo creyendo que compararlos es casi injusto porque son grandezas
+          de naturaleza diferente. Pero con el paso de los años y los datos acumulándose,
+          hay un argumento que se vuelve imposible de ignorar: LeBron James es el mejor
+          jugador que ha existido en términos absolutos.
+        </p>
+        <p>
+          Cuatro anillos con tres franquicias distintas. El único jugador en la historia
+          de la NBA con más de 40.000 puntos. Veinte temporadas siendo un All-Star de
+          primer nivel. Un atleta que desafió literalmente al tiempo durante dos décadas
+          enteras. Y sigue jugando, con su propio hijo en la liga, escribiendo un capítulo
+          de la historia del deporte que no tiene precedente.
+        </p>
+      </div>
+
+      <div class="quote-card green reveal">
+        <p>💚 "No se trata de ser el más grande de tu generación. Se trata de serlo de todas."</p>
+        <span class="quote-attribution">— La lógica LeBron</span>
+      </div>
+
+      <div class="player-tribute reveal" style="--tribute-color: var(--accent-primary); margin-top: var(--sp-6);">
+        <div class="player-stats">
+          <div class="player-stat-row" style="--tribute-color: var(--accent-primary);">
+            <span class="player-stat-value">4</span>
+            <span class="player-stat-label">Anillos (2012 · 13 · 16 · 20)</span>
+          </div>
+          <div class="player-stat-row" style="--tribute-color: var(--accent-primary);">
+            <span class="player-stat-value">4</span>
+            <span class="player-stat-label">MVP Temporada Regular</span>
+          </div>
+          <div class="player-stat-row" style="--tribute-color: var(--accent-primary);">
+            <span class="player-stat-value">20</span>
+            <span class="player-stat-label">Convocatorias al All-Star</span>
+          </div>
+          <div class="player-stat-row" style="--tribute-color: var(--accent-primary);">
+            <span class="player-stat-value">40.000+</span>
+            <span class="player-stat-label">Puntos en carrera — Récord histórico</span>
+          </div>
+          <div class="player-stat-row" style="--tribute-color: var(--accent-primary);">
+            <span class="player-stat-value">3</span>
+            <span class="player-stat-label">MVP Finals con 3 franquicias distintas</span>
+          </div>
+          <div class="player-stat-row" style="--tribute-color: var(--accent-primary);">
+            <span class="player-stat-value">ACTIVO</span>
+            <span class="player-stat-label">2024-25 · Jugando junto a Bronny James</span>
+          </div>
+        </div>
+
+        <div class="player-tribute-text">
+          <p>
+            Heat, Cavaliers, Lakers. Tres franquicias distintas, cuatro títulos, cuatro MVP
+            de las Finales. No hay precedente para lo que LeBron ha hecho en este deporte.
+            Cada vez que parecía que el tiempo lo alcanzaría, encontraba una nueva forma de
+            reinventarse y seguir siendo el mejor o uno de los mejores de la liga.
+          </p>
+          <p>
+            El capítulo de Bryce y Bronny en los Lakers es algo que ningún guionista de
+            Hollywood se habría atrevido a escribir por miedo a que sonara inverosímil.
+            Un padre jugando junto a su hijo en la mejor liga del mundo.
+            Eso solo le pasa a LeBron.
+          </p>
+          <div class="player-badge" style="--tribute-color: var(--accent-primary);">THE KING · EL MAYOR DE TODOS LOS TIEMPOS</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: var(--sp-7) var(--sp-5) 0;" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 4 — EL MEJOR SLAM DUNK CONTEST: 2016
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="dunk" style="padding-top: var(--sp-7);">
+    <div class="container">
+
+      <div class="section-label">🔥 HISTORIA EN DIRECTO</div>
+      <h2 class="section-title" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">EL MEJOR SLAM DUNK CONTEST DE LA HISTORIA</h2>
+
+      <div class="dunk-event reveal">
+        <div class="dunk-event-badge">ALL-STAR 2016 · TORONTO</div>
+        <span class="dunk-event-title">LAVINE VS GORDON — TORONTO 2016</span>
+        <p>
+          Hay eventos que se viven en directo y te das cuenta, mientras ocurren, de que
+          estás viendo historia. El Concurso de Mates del All-Star 2016 en Toronto fue uno
+          de esos momentos. Zach LaVine contra Aaron Gordon. Dos noches encadenadas de
+          locura aérea que redefinieron lo que un cuerpo humano puede hacer con un balón
+          de baloncesto y una canasta.
+        </p>
+
+        <div class="dunk-grid">
+
+          <div class="dunk-contender" style="--contender-color: var(--accent-tertiary);">
+            <span class="dunk-contender-name">⚡ ZACH LAVINE — EL GANADOR</span>
+            <p>
+              LaVine llegó como favorito y entendió perfectamente su papel. Cada mate,
+              un experimento de geometría imposible. Entre el vuelo y el aro parecía
+              que el tiempo se pausaba. Entró todos sus mates en el primer intento —sin
+              repeticiones, sin fallos, sin margen de error. Ganó el concurso con una
+              frialdad que asustaba. Un punto de referencia absoluto para cualquier
+              concurso futuro.
+            </p>
+          </div>
+
+          <div class="dunk-contender" style="--contender-color: var(--accent-secondary);">
+            <span class="dunk-contender-name">💜 AARON GORDON — LA VÍCTIMA MÁS INJUSTA</span>
+            <p>
+              Gordon fue la víctima más injusta de la historia del concurso. Hizo mates
+              que, en cualquier otro año, habrían sido el mejor de la historia. Y el que
+              definió la noche —quizás el mate más absurdo jamás filmado— fue sobre Stuff,
+              la mascota de los Orlando Magic. Gordon cogió el balón en el aire desde la
+              cabeza de Stuff mientras este lo sostenía erguido, se lo pasó por debajo
+              del cuerpo, entre las piernas, y lo metió. Primer intento. Puntuación
+              perfecta. Y aun así, perdió.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="quote-card reveal" style="margin-top: var(--sp-5);">
+          <p>🏆 "Gordon metió el mate del siglo. LaVine ganó el concurso. La historia les da el empate — y razón a los dos."</p>
+        </div>
+
+        <div class="dunk-verdict">
+          <span class="dunk-verdict-title">▶ VEREDICTO: MEJOR CONCURSO DE LA HISTORIA</span>
+          <ul>
+            <li>↳ Dos finalistas de nivel histórico simultáneo</li>
+            <li>↳ Todos los mates entrados al primer intento</li>
+            <li>↳ Ningún mate por debajo de 47 puntos</li>
+            <li>↳ Gordon: el mate de la mascota — imposible convertido en perfecto</li>
+            <li>↳ LaVine: ganador oficial, leyenda igualmente</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: var(--sp-7) var(--sp-5) 0;" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 5 — NBA LIVE EN LA PLAY
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="nbalive" style="padding-top: var(--sp-7);">
+    <div class="container">
+
+      <div class="section-label blue">🎮 PIXELES Y MADRUGADAS</div>
+      <h2 class="section-title" style="color:var(--accent-tertiary);text-shadow:var(--glow-blue);">NBA LIVE EN LA PLAY</h2>
+
+      <div class="lore-box reveal">
+        <p>
+          Antes de seguir la NBA en serio, la jugábamos. NBA Live en PlayStation —allá por
+          2005, con los colegas, quemando tardes enteras y alguna madrugada que otra.
+          La franquicia definitiva de basket en consola de esa generación: los controles
+          fluidos, las animaciones que entonces nos parecían hiperrealistas, y la satisfacción
+          absoluta de clavar un triple en el último segundo contra un amigo que llevaba
+          mirándote las manos para adivinar la jugada.
+        </p>
+        <p>
+          Jugábamos temporadas, playoffs caseros, apuestas de orgullo que nunca se cobraban.
+          NBA Live fue la puerta trasera por la que muchos entramos al basket real: te
+          aprendes los rosters, los nombres, las mecánicas del juego, y un día te pones
+          a ver un partido de verdad y ya sabes quién es quién. Así funciona.
+        </p>
+      </div>
+
+      <div style="max-width: 360px; margin-top: var(--sp-5);">
+        <div class="memory-card reveal" style="--memory-color: var(--accent-warn);">
+          <span class="memory-card-title">🎮 NBA LIVE EN PS · ~2005</span>
+          <p>"Hasta quemarlo con los colegas. Playoffs caseros, apuestas de orgullo y la puerta de entrada al basket real."</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: var(--sp-7) var(--sp-5) 0;" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 6 — ALL-STAR NIGHTS
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="allstar" style="padding-top: var(--sp-7);">
+    <div class="container">
+
+      <div class="section-label">🌙 TRADICIÓN SAGRADA</div>
+      <h2 class="section-title" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">ALL-STAR NIGHTS: BIRRAS Y MADRUGADAS</h2>
+
+      <div class="lore-box reveal">
+        <p>
+          Durante años, el All-Star fue una tradición sagrada. No veías el partido solo y
+          en tu casa —te reunías. Siempre los mismos: los colegas de toda la vida, el salón
+          de alguien, algo de picar y las birras del protocolo. El partido empezaba pasada
+          la medianoche, hora española, y ahí estábamos, luchando contra el sueño hasta
+          las 3 o las 4 de la madrugada viendo el mejor espectáculo de baloncesto del año.
+        </p>
+        <p>
+          El All-Star de la NBA es otra cosa. No es un partido normal ni pretende serlo.
+          Es teatro, talento puro sin defensas, mates imposibles, triples desde el logo
+          y jugadores que se divierten de verdad en la pista. Combinado con buena compañía
+          y hora de madrugada, se convierte en una experiencia que tiene mucho de ritual.
+        </p>
+        <p>
+          Esas noches son de las que uno recuerda. El basket como excusa perfecta para
+          juntarse, reírse y perder el sueño sin arrepentirse.
+        </p>
+      </div>
+
+      <div style="max-width: 400px; margin-top: var(--sp-5);">
+        <div class="memory-card reveal" style="--memory-color: var(--accent-tertiary);">
+          <span class="memory-card-title">🌙 ALL-STAR NIGHTS · TRADICIÓN ANUAL</span>
+          <p>"Madrugadas, colegas, birras y basket puro. El ritual que nunca falla desde hace 20 años."</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <hr class="pixel-divider" style="margin: var(--sp-7) var(--sp-5) 0;" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 8 — EL FANTASY
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="fantasy" style="padding-top: var(--sp-7);">
+    <div class="container">
+
+      <div class="section-label">🏆 14 AÑOS DE SUFRIMIENTO</div>
+      <h2 class="section-title" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">EL FANTASY: 14 AÑOS SIN GANAR EL ANILLO</h2>
+
+      <div class="lore-box reveal">
+        <p>
+          Catorce años. El mismo grupo de amigos, siempre los mismos, cada temporada
+          poniendo dinero sobre la mesa para que el ganador se lleve el premio gordo —el
+          Anillo del Fantasy, trofeo moral y económico de incalculable valor emocional.
+        </p>
+        <p>
+          Catorce años de draft estratégico, de estudiar lesiones a las dos de la madrugada,
+          de hacer trades que parecen geniales y acaban siendo un desastre, de rezar porque
+          tu base favorito no se tuerza un tobillo en el último cuarto de un partido
+          sin importancia.
+        </p>
+        <p>
+          No es que no lo intente. Es que hay una fuerza cósmica, un karma específico del
+          fantasy basket, que conspira activamente contra mí. Cada año tengo mi teoría de
+          por qué este va a ser el año. Cada año, el universo me responde con una lesión
+          en el primer mes, un trade que se cae y un rival que puntúa 200 en una semana.
+          Pero ahí sigo. Porque el fantasy no es solo ganar —es el grupo, los mensajes
+          a deshoras, los insultos cariñosos cuando alguien ficha a tu jugador antes que
+          tú, y la esperanza renovada cada octubre de que este año, por fin, sea diferente.
+        </p>
+      </div>
+
+      <div class="fantasy-card reveal">
+        <div class="fantasy-card-badge">💀 SIN ANILLO DESDE 2011</div>
+        <span class="fantasy-card-title">🏆 FANTASY NBA — LIGA PRIVADA · ESTADÍSTICAS VITALES</span>
+        <table class="fantasy-table">
+          <tr>
+            <td>Temporadas jugadas</td>
+            <td>14</td>
+          </tr>
+          <tr class="highlight">
+            <td>Anillos del Fantasy conseguidos</td>
+            <td>0 &nbsp;← YO</td>
+          </tr>
+          <tr>
+            <td>Probabilidad de ganar este año</td>
+            <td>estadísticamente posible</td>
+          </tr>
+          <tr>
+            <td>Lesiones clave sufridas</td>
+            <td>demasiadas para contarlas</td>
+          </tr>
+          <tr>
+            <td>Mejor trade del año</td>
+            <td>siempre el que hace otro</td>
+          </tr>
+          <tr>
+            <td>Peor draft recordado</td>
+            <td>todos los míos</td>
+          </tr>
+          <tr class="highlight">
+            <td>Estado actual</td>
+            <td>OPTIMISMO RENOVADO (mentira)</td>
+          </tr>
+        </table>
+
+        <div class="fantasy-bar-label">
+          <span>Progreso hacia el Anillo del Fantasy</span>
+          <span style="color:var(--accent-secondary);">3% — Eterno candidato</span>
+        </div>
+        <div class="bar-container">
+          <div class="bar-track">
+            <div class="bar-fill pink" data-fill="3" style="width:0%"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: var(--sp-7) var(--sp-5) 0;" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 9 — LA NBA HOY: 2025-26
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="hoy" style="padding-top: var(--sp-7); padding-bottom: var(--sp-7);">
+    <div class="container">
+
+      <div class="section-label blue">📅 TEMPORADA 2025-26</div>
+      <h2 class="section-title" style="color:var(--accent-tertiary);text-shadow:var(--glow-blue);">LA NBA HOY</h2>
+
+      <div class="lore-box reveal">
+        <p>
+          La NBA de 2025 es la liga más global, más mediática y más competitiva de su historia.
+          LeBron sigue desafiando el tiempo, las nuevas generaciones de Luka Dončić,
+          Shai Gilgeous-Alexander, Victor Wembanyama y Jayson Tatum pelean por el trono,
+          y el deporte del baloncesto profesional nunca ha tenido más ojos del mundo
+          puestos encima.
+        </p>
+        <p>
+          Yo sigo aquí. Con mi canal, con el fantasy, con el All-Star como tradición sagrada
+          y con la certeza de que, tarde o temprano, el anillo llegará.
+        </p>
+      </div>
+
+      <div class="era-stats stagger" style="margin-top: var(--sp-6);">
+        <div class="era-stat-box reveal" style="--box-color: var(--accent-primary);">
+          <span class="era-stat-value">WEMBY</span>
+          <span class="era-stat-label">La nueva era — Victor Wembanyama</span>
+        </div>
+        <div class="era-stat-box reveal" style="--box-color: var(--accent-tertiary);">
+          <span class="era-stat-value">LUKA</span>
+          <span class="era-stat-label">El heredero europeo — Dončić</span>
+        </div>
+        <div class="era-stat-box reveal" style="--box-color: var(--accent-warn);">
+          <span class="era-stat-value">SGA</span>
+          <span class="era-stat-label">El más completo — Gilgeous-Alexander</span>
+        </div>
+      </div>
+
+      <div style="margin-top: var(--sp-6); display:flex; flex-wrap:wrap; gap:var(--sp-3);">
+        <a href="https://www.youtube.com/@Latabernadelboxscore" class="btn btn-pink" target="_blank" rel="noopener noreferrer">🎙 VER LA TABERNA DEL BOXSCORE</a>
+        <a href="gaming.html"  class="btn btn-gold btn-small">🕹 VER GAMING</a>
+        <a href="esports.html" class="btn btn-blue btn-small">🏆 VER ESPORTS</a>
+        <a href="index.html"   class="btn btn-small">🏠 INICIO</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ─── Footer ──────────────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="gamedev.html">GameDev</a></li>
+      <li><a href="gaming.html">Gaming</a></li>
+      <li><a href="esports.html">Esports</a></li>
+      <li><a href="got.html">GoT</a></li>
+      <li><a href="warhammer.html">Warhammer</a></li>
+      <li><a href="magic.html">MtG</a></li>
+      <li><a href="rol.html">Rol</a></li>
+      <li><a href="social.html">Social</a></li>
+      <li><a href="nba.html">NBA</a></li>
+      <li><a href="java.html">Java</a></li>
+    </ul>
+    <p>⚔ FREAKONIA — KARLETE</p>
+    <p style="color:#444;">HECHO CON AMOR PIXELADO Y DEMASIADAS BEBIDAS ENERGÉTICAS</p>
+    <p style="color:#333;">◄ INSERT COIN ►</p>
+
+    <div class="footer-legal">
+      <div class="pixel-divider"></div>
+      <p class="footer-copyright">
+        © 2025 FREAKONIA — KARLETE. ALL RIGHTS RESERVED.
+      </p>
+      <p class="footer-trademark">
+        FREAKONIA™ IS A REGISTERED PERSONAL BRAND.
+        ALL CONTENT, DESIGNS, GAME CONCEPTS AND ORIGINAL TEXTS
+        ON THIS SITE ARE THE EXCLUSIVE PROPERTY OF THEIR AUTHOR.
+        UNAUTHORIZED REPRODUCTION, DISTRIBUTION OR USE OF ANY
+        CONTENT IS STRICTLY PROHIBITED WITHOUT PRIOR WRITTEN PERMISSION.
+      </p>
+      <p class="footer-notice">
+        ⚠ THIS SITE CONTAINS STRONG OPINIONS ABOUT VIDEO GAMES,
+        FANTASY LORE AND BASKETBALL. READER DISCRETION IS ADVISED.
+        NO GOBLINS WERE HARMED IN THE MAKING OF THIS WEBSITE.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

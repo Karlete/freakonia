@@ -1,0 +1,458 @@
+/* ============================================
+   gamedev.css — Specific styles for gamedev.html
+   Freakonia — El Reino Friki
+   ============================================ */
+
+/* ── GameDev page styles ── */
+
+/* ── Page header accent strip ── */
+.page-header-gamedev {
+  background: var(--bg-surface);
+  border-bottom: var(--border);
+  padding: var(--sp-7) 0 var(--sp-6);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header-gamedev::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(0,255,65,0.06) 0%, transparent 55%),
+    linear-gradient(225deg, rgba(255,0,255,0.04) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.page-header-gamedev::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 4px;
+  background: linear-gradient(90deg,
+    var(--accent-primary) 0%,
+    var(--accent-secondary) 50%,
+    var(--accent-tertiary) 100%);
+}
+
+.page-header-gamedev .container {
+  position: relative;
+  z-index: 1;
+}
+
+.page-header-pre {
+  font-family: var(--font-primary);
+  font-size: 0.5rem;
+  color: var(--accent-secondary);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: var(--sp-3);
+}
+
+.page-header-title {
+  font-family: var(--font-primary);
+  font-size: clamp(1.2rem, 4vw, 2.2rem);
+  color: var(--text-bright);
+  text-shadow: var(--glow-green);
+  margin-bottom: var(--sp-3);
+}
+
+.page-header-sub {
+  font-family: var(--font-secondary);
+  font-size: 22px;
+  color: var(--text-dim);
+  margin-bottom: 0;
+}
+
+/* ── Section label strip ── */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-3);
+  font-family: var(--font-primary);
+  font-size: 0.55rem;
+  color: var(--bg);
+  background: var(--accent-primary);
+  padding: var(--sp-2) var(--sp-4);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--sp-6);
+}
+
+.section-label.pink {
+  background: var(--accent-secondary);
+}
+
+.section-label.gold {
+  background: var(--accent-warn);
+  color: #000;
+}
+
+/* ── Big published game cards ── */
+.game-card-full {
+  background: var(--bg-card);
+  border: var(--border);
+  overflow: hidden;
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-card-full:hover {
+  border-color: var(--accent-secondary);
+  box-shadow: var(--glow-pink);
+  transform: translate(-3px, -3px);
+}
+
+.game-card-full .game-card-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-bottom: var(--border);
+  image-rendering: auto;
+}
+
+.game-card-full .game-card-thumb-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #111 25%, #1a1a2e 100%);
+  border-bottom: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+}
+
+.game-card-full-body {
+  padding: var(--sp-5) var(--sp-6);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-card-full-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-4);
+}
+
+.game-card-full-title {
+  font-family: var(--font-primary);
+  font-size: clamp(0.7rem, 2vw, 1rem);
+  color: var(--text-bright);
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.game-card-full-desc {
+  font-family: var(--font-secondary);
+  font-size: 19px;
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: var(--sp-4);
+  flex: 1;
+}
+
+.game-card-full-meta {
+  font-family: var(--font-primary);
+  font-size: 0.45rem;
+  color: var(--text-dim);
+  margin-bottom: var(--sp-2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.game-card-full-meta span {
+  color: var(--accent-primary);
+}
+
+.game-card-full-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  padding-top: var(--sp-4);
+  border-top: 2px solid #222;
+  margin-top: var(--sp-4);
+}
+
+/* ── WIP Spotlight card ── */
+.wip-spotlight {
+  background: var(--bg-card);
+  border: 4px solid var(--accent-warn);
+  box-shadow: 0 0 0 1px var(--accent-warn), var(--glow-gold);
+  overflow: hidden;
+  position: relative;
+}
+
+.wip-spotlight::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(255,204,0,0.04) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.wip-spotlight-header {
+  background: var(--bg-surface);
+  border-bottom: 4px solid var(--accent-warn);
+  padding: var(--sp-5) var(--sp-6);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-5);
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.wip-spotlight-icon {
+  font-size: 4rem;
+  line-height: 1;
+  filter: drop-shadow(0 0 12px var(--accent-warn));
+}
+
+.wip-spotlight-heading { flex: 1; }
+
+.wip-spotlight-title {
+  font-family: var(--font-primary);
+  font-size: clamp(0.9rem, 3vw, 1.5rem);
+  color: var(--text-bright);
+  text-shadow: var(--glow-gold);
+  text-transform: uppercase;
+  margin-bottom: var(--sp-2);
+}
+
+.wip-spotlight-sub {
+  font-family: var(--font-secondary);
+  font-size: 20px;
+  color: var(--accent-warn);
+  margin-bottom: 0;
+}
+
+.wip-spotlight-body {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.wip-spotlight-main {
+  padding: var(--sp-6);
+  border-right: 2px solid #222;
+}
+
+.wip-spotlight-sidebar {
+  padding: var(--sp-6);
+  background: rgba(0,0,0,0.2);
+}
+
+.wip-spotlight-desc {
+  font-family: var(--font-secondary);
+  font-size: 20px;
+  color: var(--text);
+  line-height: 1.7;
+  margin-bottom: var(--sp-5);
+}
+
+/* Feature checklist */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: var(--sp-5);
+}
+
+.feature-list li {
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  color: var(--text);
+  padding: var(--sp-2) 0;
+  border-bottom: 1px solid #1e1e1e;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.feature-list li::before {
+  content: '▶';
+  font-family: var(--font-primary);
+  font-size: 0.4rem;
+  color: var(--accent-warn);
+  flex-shrink: 0;
+}
+
+.feature-list li.done { color: var(--accent-primary); }
+.feature-list li.done::before { content: '✔'; color: var(--accent-primary); }
+
+/* Sidebar info rows */
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--sp-3) 0;
+  border-bottom: 1px solid #1e1e1e;
+  gap: var(--sp-2);
+}
+
+.info-row-label {
+  font-family: var(--font-primary);
+  font-size: 0.45rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+.info-row-value {
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  color: var(--text-bright);
+  text-align: right;
+}
+
+/* Dev progress bar */
+.dev-progress-wrap {
+  margin: var(--sp-5) 0;
+}
+
+.dev-progress-label {
+  font-family: var(--font-primary);
+  font-size: 0.45rem;
+  color: var(--accent-warn);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--sp-2);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Add more WIP games hint */
+.add-game-hint {
+  border: 4px dashed #333;
+  padding: var(--sp-7) var(--sp-6);
+  text-align: center;
+  margin-top: var(--sp-5);
+  transition: border-color 0.2s;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .wip-spotlight-body {
+    grid-template-columns: 1fr;
+  }
+  .wip-spotlight-sidebar {
+    border-top: 2px solid #222;
+    border-right: none;
+  }
+  .wip-spotlight-main {
+    border-right: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .game-card-full-body {
+    padding: var(--sp-4);
+  }
+  .wip-spotlight-header {
+    padding: var(--sp-4);
+  }
+  .wip-spotlight-main,
+  .wip-spotlight-sidebar {
+    padding: var(--sp-4);
+  }
+}
+
+/* ── Footer legal ── */
+.footer-legal {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.footer-copyright {
+  font-family: var(--font-primary);
+  font-size: 0.4rem;
+  color: var(--accent-primary);
+  margin-bottom: 0.8rem;
+}
+.footer-trademark {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-notice {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── Unity hero image ── */
+.gamedev-hero-img-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 3rem auto 3rem auto;
+  border: 4px solid var(--accent-primary);
+  box-shadow: 0 0 20px var(--accent-primary),
+              0 0 40px rgba(0, 255, 65, 0.3);
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gamedev-hero-img-wrap:hover {
+  border-color: var(--accent-secondary);
+  box-shadow: 0 0 28px var(--accent-secondary),
+              0 0 56px rgba(255, 0, 255, 0.3);
+}
+
+.gamedev-hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gamedev-hero-img-wrap:hover .gamedev-hero-img {
+  transform: scale(1.02);
+}
+
+.gamedev-hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    transparent 100%
+  );
+}
+
+.gamedev-hero-label {
+  font-family: var(--font-primary);
+  font-size: 0.55rem;
+  color: var(--accent-primary);
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 10px var(--accent-primary);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.gamedev-hero-img-wrap:hover .gamedev-hero-label {
+  color: var(--accent-secondary);
+  text-shadow: 0 0 10px var(--accent-secondary);
+}
+
+@media (max-width: 768px) {
+  .gamedev-hero-img { width: 100%; }
+}
