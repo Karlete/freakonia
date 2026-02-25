@@ -15,6 +15,10 @@
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/components.css" />
   <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/news.css" />
+
+  <!-- News data (global NEWS_DATA array) -->
+  <script src="js/news-data.js"></script>
 
 
   <!-- Open Graph / WhatsApp / Telegram -->
@@ -153,6 +157,31 @@
 </section>
 
 <main>
+  <!-- ─── ¿Qué se cuece? — News Preview Slider ───────────────────────── -->
+  <section class="section news-preview-section" id="que-se-cuece">
+    <div class="container">
+      <h2 class="section-title">&gt; &#191;QU&#201; SE CUECE?</h2>
+      <p class="news-preview-sub">// últimas noticias del frikiverse //</p>
+      <div class="pixel-divider"></div>
+
+      <div class="news-slider-wrapper">
+        <button class="slider-arrow slider-prev" aria-label="Anterior">&#9668;</button>
+        <div class="news-slider-track" id="news-slider-track">
+          <!-- cards generadas por JS -->
+        </div>
+        <button class="slider-arrow slider-next" aria-label="Siguiente">&#9658;</button>
+      </div>
+
+      <div class="slider-dots" id="slider-dots">
+        <!-- dots generados por JS -->
+      </div>
+
+      <div class="news-preview-cta">
+        <a href="news.html" class="btn btn-pink btn-block">&gt;&gt; VER TODAS LAS NOTICIAS</a>
+      </div>
+    </div>
+  </section>
+
   <!-- ─── About ─────────────────────────────────────────────────────────── -->
   <section class="section" id="about">
     <div class="container">
@@ -177,16 +206,16 @@
             Luego vinieron StarCraft, Unreal, Gothic, Fallout, <strong>Heroes of Might and Magic</strong> del II al V,
             Oblivion, Skyrim con mil mods instalados... y ya saben cómo termina esto:
             <strong>League of Legends</strong> y <strong>Dead by Daylight</strong>.
-            Aunque ya no los juego, lo juro — hoy me limito a ver competitivo y a fingir que aún podría. ¡Así que dale, que allá voy!
+            Aunque ya no los juego, lo juro jajaj — hoy me limito a ver competitivo y a fingir que aún podría. ¡Así que dale, que allé voy!
           </p>
           <p data-i18n="about.p3">
-            Pero el friquismo no se queda solo en los videojuegos. Soy fan acérrima de
+            Pero el frikismo no se queda solo en los videojuegos. Soy fan acérrimo de
             <strong>Juego de Tronos</strong> — los libros y la serie hasta la sexta temporada;
             las dos últimas, en este sitio, jamás existieron. También le he dado mucha caña al
             <strong>Warhammer Fantasy</strong> y al rol de mesa: <strong>El Señor de los Anillos</strong>,
             <strong>Stormbringer</strong>, <strong>La Llamada de Cthulhu</strong>... y todavía conservo
             mi colección de cartas de <strong>Magic: The Gathering</strong>.
-            Sí, el friquismo me invade y me alegra que así sea.
+            Sí, el frikismo me invade y me alegra que así sea.
           </p>
           <p data-i18n="about.p4">
             Cuando no estoy viendo pros hacer lo que yo solía hacer, estoy construyendo —
@@ -537,7 +566,7 @@
       'about.title':      'SOBRE MÍ',
       'about.p1':         'Bienvenido a <strong>Freakonia</strong> — mi rincón personal en internet donde la historia del gaming, la obsesión por el fandom y el desarrollo indie se fusionan.',
       'about.p2':         'Soy <strong>Karlete</strong>, y la historia viene de lejos: todo empezó con el <strong>Doom</strong> en casa de mi primo siendo un renacuajo. De ahí vinieron Alex Kid, Sonic, <strong>Super Mario World</strong>, Mortal Kombat y todas las arcades del mundo; la <strong>Game Boy</strong> con Super Mario Land 2, y la <strong>Master System 2</strong>, mi primera consola propia. Con la <strong>Super Nintendo</strong> y la <strong>PlayStation</strong> llegaron Tomb Raider, los <strong>Final Fantasy</strong>, PES, NBA Live y NBA 2K. Y luego el PC — y con él, las tardes interminables en el mítico ciber <strong>Death Match</strong> de Cáceres, donde con toda la pandilla del pueblo le dábamos caña al <strong>Action Quake 2</strong>, Counter-Strike y <strong>Diablo 2</strong>. Luego vinieron StarCraft, Unreal, Gothic, Fallout, <strong>Heroes of Might and Magic</strong> del II al V, Oblivion, Skyrim con mil mods instalados... y ya saben cómo termina esto: <strong>League of Legends</strong> y <strong>Dead by Daylight</strong>. Aunque ya no los juego, lo juro — hoy me limito a ver competitivo y a fingir que aún podría. ¡Así que dale, que allá voy!',
-      'about.p3':         'Pero el friquismo no se queda solo en los videojuegos. Soy fan acérrima de <strong>Juego de Tronos</strong> — los libros y la serie hasta la sexta temporada; las dos últimas, en este sitio, jamás existieron. También le he dado mucha caña al <strong>Warhammer Fantasy</strong> y al rol de mesa: <strong>El Señor de los Anillos</strong>, <strong>Stormbringer</strong>, <strong>La Llamada de Cthulhu</strong>... y todavía conservo mi colección de cartas de <strong>Magic: The Gathering</strong>. Sí, el friquismo me invade y me alegra que así sea.',
+      'about.p3':         'Pero el friquismo no se queda solo en los videojuegos. Soy fan acérrimo de <strong>Juego de Tronos</strong> — los libros y la serie hasta la sexta temporada; las dos últimas, en este sitio, jamás existieron. También le he dado mucha caña al <strong>Warhammer Fantasy</strong> y al rol de mesa: <strong>El Señor de los Anillos</strong>, <strong>Stormbringer</strong>, <strong>La Llamada de Cthulhu</strong>... y todavía conservo mi colección de cartas de <strong>Magic: The Gathering</strong>. Sí, el friquismo me invade y me alegra que así sea.',
       'about.p4':         'Cuando no estoy viendo pros hacer lo que yo solía hacer, estoy construyendo — actualmente desarrollando <strong>Fallen Valkyrie</strong>, un Metroidvania 2D en Unity.',
       'about.btnProjects':'📁 MIS PROYECTOS',
       'about.btnHistory': '🎮 MI HISTORIAL',
@@ -693,6 +722,99 @@
 
   // Init
   applyLang(currentLang);
+</script>
+
+<!-- ── News Preview Slider ──────────────────────────────────────────── -->
+<script>
+(function () {
+  var section  = document.getElementById('que-se-cuece');
+  var track    = document.getElementById('news-slider-track');
+  var dotsWrap = document.getElementById('slider-dots');
+  var prevBtn  = document.querySelector('.slider-prev');
+  var nextBtn  = document.querySelector('.slider-next');
+
+  if (!section || !track || typeof NEWS_DATA === 'undefined' || !NEWS_DATA.length) {
+    if (section) section.style.display = 'none';
+    return;
+  }
+
+  /* Sort by date descending */
+  function parseDate(d) {
+    var p = d.split('/');
+    return new Date(+p[2], +p[1] - 1, +p[0]);
+  }
+  var sorted = NEWS_DATA.slice().sort(function (a, b) {
+    return parseDate(b.date) - parseDate(a.date);
+  });
+  var items = sorted.slice(0, 6);
+
+  /* Build preview cards */
+  items.forEach(function (n) {
+    var card = document.createElement('article');
+    card.className = 'news-preview-card';
+    card.style.setProperty('--news-accent', n.accent || '#00ff41');
+    var href = n.url || n.page || 'news.html';
+    var isExternal = !!n.url;
+    card.innerHTML =
+      '<div class="news-preview-header">' +
+        '<span class="news-topic-badge">' + n.emoji + ' ' + (n.badgeLabel || n.topic).toUpperCase() + '</span>' +
+        '<span class="news-date">' + n.date + '</span>' +
+      '</div>' +
+      '<h3 class="news-preview-title">' + n.title + '</h3>' +
+      '<p class="news-preview-body">' + n.summary + '</p>' +
+      '<a href="' + href + '"' + (isExternal ? ' target="_blank" rel="noopener"' : '') +
+        ' class="btn btn-small">&gt;&gt; LEER</a>';
+    track.appendChild(card);
+  });
+
+  var currentPage = 0;
+
+  function perPage()     { return window.innerWidth >= 768 ? 3 : 1; }
+  function totalPages()  { return Math.ceil(items.length / perPage()); }
+
+  function updateSlider() {
+    var pp    = perPage();
+    var total = totalPages();
+    if (currentPage >= total) currentPage = total - 1;
+
+    var cards = track.querySelectorAll('.news-preview-card');
+    var start = currentPage * pp;
+    var end   = start + pp;
+    cards.forEach(function (c, i) {
+      c.style.display = (i >= start && i < end) ? '' : 'none';
+    });
+
+    /* Dots */
+    dotsWrap.innerHTML = '';
+    for (var i = 0; i < total; i++) {
+      var dot = document.createElement('button');
+      dot.className = 'dot' + (i === currentPage ? ' active' : '');
+      dot.setAttribute('aria-label', 'Página ' + (i + 1));
+      (function (p) {
+        dot.addEventListener('click', function () { currentPage = p; updateSlider(); });
+      })(i);
+      dotsWrap.appendChild(dot);
+    }
+
+    prevBtn.disabled = currentPage === 0;
+    nextBtn.disabled = currentPage >= total - 1;
+  }
+
+  prevBtn.addEventListener('click', function () {
+    if (currentPage > 0) { currentPage--; updateSlider(); }
+  });
+  nextBtn.addEventListener('click', function () {
+    if (currentPage < totalPages() - 1) { currentPage++; updateSlider(); }
+  });
+
+  var resizeTimer;
+  window.addEventListener('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () { currentPage = 0; updateSlider(); }, 200);
+  });
+
+  updateSlider();
+})();
 </script>
 </body>
 </html>

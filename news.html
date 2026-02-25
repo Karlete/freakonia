@@ -17,6 +17,9 @@
   <link rel="stylesheet" href="css/animations.css" />
   <link rel="stylesheet" href="css/news.css" />
 
+  <!-- News data — must load before render script -->
+  <script src="js/news-data.js"></script>
+
   <!-- Open Graph / WhatsApp / Telegram -->
   <meta property="og:type"         content="website">
   <meta property="og:site_name"    content="Freakonia">
@@ -133,114 +136,11 @@
       <p>// NO SE ENCONTRARON NOTICIAS</p>
     </div>
 
-    <!-- NEWS GRID -->
-    <!--
-      HOW TO ADD NEW ARTICLES:
-      Copy one .news-card block and change:
-      - data-category: got | gaming | esports | gamedev | misc
-      - data-title: article title in lowercase for search
-      - .news-card-cat: category badge text
-      - .news-card-date: publication date
-      - .news-card-title: article title
-      - .news-card-img src: image path
-      - .news-card-excerpt: short summary
-      - .news-card-full: full article content
-      - .news-card-tags: relevant tags
-      Articles are shown newest first — add new ones at the TOP
-    -->
-    <div class="news-grid" id="newsGrid">
+    <!-- NEWS GRID — populated from js/news-data.js via renderNews() below -->
+    <div class="news-grid" id="newsGrid"></div><!-- end news-grid -->
 
-      <!-- ============================================
-           ARTICLE 1 — House of the Dragon S3
-           ============================================ -->
-      <article
-        class="news-card reveal"
-        data-category="got"
-        data-title="house of the dragon temporada 3 trailer fecha estreno junio 2026 batalla del gullet"
-      >
-        <div class="news-card-header">
-          <span class="news-card-cat news-cat--got">🐉 GOT</span>
-          <span class="news-card-date">22 · FEB · 2026</span>
-        </div>
+    <div class="news-pagination" id="news-pagination"></div>
 
-        <div class="news-card-img-wrap">
-          <img
-            src="assets/img/house_of_the_dragon_s3.jpg"
-            alt="House of the Dragon — Temporada 3"
-            class="news-card-img"
-            onerror="this.parentElement.style.display='none'"
-          >
-        </div>
-
-        <div class="news-card-body">
-          <h2 class="news-card-title">
-            HOUSE OF THE DRAGON T3 — YA HAY TRÁILER Y FECHA
-          </h2>
-
-          <p class="news-card-excerpt">
-            La guerra de los dragones vuelve en junio de 2026.
-            HBO acaba de soltar el primer tráiler oficial y confirma
-            que la Batalla del Gullet llegará por fin a la pantalla.
-          </p>
-
-          <!-- Expandable full content -->
-          <div class="news-card-full" style="display:none">
-            <p>
-La temporada 1 de House of the Dragon tenía su gracia, ¿eh? Sangre, incesto Targaryen bien dosificado, dragones que
-molaban y un Paddy Considine que se comía la pantalla como un abuelo cabreado con la vida. No era perfecta, pero te
-dejaba con ganas de más. Pues bien: llegó la temporada 2 y los guionistas debieron de decirse: "¿Y si la cagamos a lo
-grande? ¡Venga, inventemos por doquier y a ver qué pasa!"
-            </p>
-            <p>
-Porque, madre mía, qué demencial fue todo. Ser Criston Cole asesinando a gente importante sin consecuencias aparentes:
-mata a uno en una boda delante de todo el mundo, luego liquida a otro consejero como quien pela una patata, y el tío
-sigue de Mano del Rey, de Lord Comandante y de lo que le salga de los cojones. ¿Dónde está la justicia westerosi? ¿En el
-cajón de "ya lo arreglamos en la temporada 3"?
-            </p>
-            <p>
-            Y luego las reinas, Rhaenyra y Alicent, viéndose cara a cara varias veces como si fueran dos amigas quedando para un
-            café después del pilates. "Oye, guapa, perdona que mataran a tu hijo/nieto, pero ¿tomamos algo y hablamos de paz?". Han
-            asesinado a hijos y nietos de ambas, hay una guerra civil que está dejando Westeros como un coladero de sangre, y ellas
-            ahí, confidencias en el Sept o en Dragonstone, quedando tan amigas. ¿En serio? ¿Dónde quedó el odio visceral, el veneno,
-            la venganza Targaryen? Esto no es Juego de Tronos, esto es The Real Housewives of King's Landing.
-            </p>
-<p>
-            Y no olvidemos al primogénito Velaryon... ¡el puto Laenor sobrevive! Finge su muerte en la temporada 1 (un invento de
-            los guionistas que ya olía raro), se pira a Essos con su novio a vivir la vida loca, y en la 2 ni rastro, pero Seasmoke
-            anda por ahí buscando nuevo jinete como si nada. ¿Y Corlys y Rhaenys? ¿No se enteran de que su hijo está vivo tomando
-            mojitos en Braavos? ¿O es que les da igual? Un desastre logístico y emocional.
-            En fin, la temporada 2 fue un festival de incoherencias, cambios absurdos del libro y decisiones que parecen tomadas en
-            una borrachera colectiva de los showrunners. La 1 prometía fuego y sangre; la 2 nos dio humo, bostezos y un "pero ¿qué
-            coño?" cada dos por tres.
-            ¿Renovamos para la 3? Claro, porque somos masoquistas y queremos ver cómo la cagan más todavía. Pero, por favor, que
-            alguien avise a George R.R. Martin: que saque la escopeta de perdigones y les dé caña antes de que conviertan Poniente
-            en una sitcom de dragones.
-</p>
-
-          </div>
-
-          <!-- Read more toggle -->
-          <button class="news-read-more" data-expanded="false">
-            ▶ LEER MÁS
-          </button>
-
-        </div>
-
-        <div class="news-card-footer">
-          <div class="news-card-tags">
-            <span class="tag">House of the Dragon</span>
-            <span class="tag">HBO</span>
-            <span class="tag">Targaryens</span>
-            <span class="tag">Batalla del Gullet</span>
-            <span class="tag">2026</span>
-          </div>
-        </div>
-
-      </article>
-
-      <!-- ADD NEW ARTICLES ABOVE THIS COMMENT -->
-
-    </div><!-- end news-grid -->
   </div><!-- end container -->
 
 </main>
@@ -288,6 +188,168 @@ cajón de "ya lo arreglamos en la temporada 3"?
 </footer>
 
 <script src="js/main.js"></script>
+<script>
+/* ── RENDER NEWS FROM NEWS_DATA ────────────────────────────────── */
+function renderNews() {
+  var grid = document.getElementById('newsGrid');
+  if (!grid) return;
+
+  /* double-render guard */
+  if (grid.children.length > 0) return;
+
+  if (typeof NEWS_DATA === 'undefined' || NEWS_DATA.length === 0) {
+    grid.innerHTML = '<p class="no-news">// Sin noticias todav\u00eda. Vuelve pronto. //</p>';
+    document.getElementById('newsCount').textContent = '0';
+    return;
+  }
+
+  /* sort newest first (DD/MM/YYYY) */
+  var sorted = NEWS_DATA.slice().sort(function (a, b) {
+    var pa = a.date.split('/'), pb = b.date.split('/');
+    return new Date(+pb[2], +pb[1]-1, +pb[0]) - new Date(+pa[2], +pa[1]-1, +pa[0]);
+  });
+
+  var MONTHS = ['ENE','FEB','MAR','ABR','MAY','JUN','JUL','AGO','SEP','OCT','NOV','DIC'];
+
+  function fmtDate(d) {
+    var p = d.split('/');
+    return p[0] + ' \u00b7 ' + MONTHS[+p[1] - 1] + ' \u00b7 ' + p[2];
+  }
+
+  function renderCard(n) {
+    var cat   = n.category || n.topic;
+    var badge = n.badgeLabel || n.topic.toUpperCase();
+    var searchText = (n.title + ' ' + (n.tags || []).join(' ') + ' ' + n.topic).toLowerCase();
+
+    var imgHtml = n.img
+      ? '<div class="news-card-img-wrap"><img src="' + n.img + '" alt="' + n.title + '" class="news-card-img" onerror="this.parentElement.style.display=\'none\'"></div>'
+      : '';
+
+    var fullHtml = (n.full && n.full.length)
+      ? '<div class="news-card-full" style="display:none">' +
+          n.full.map(function (p) { return '<p>' + p + '</p>'; }).join('') +
+        '</div><button class="news-read-more" data-expanded="false">\u25b6 LEER M\u00c1S</button>'
+      : '';
+
+    var tagsHtml = (n.tags || []).map(function (t) {
+      return '<span class="tag">' + t + '</span>';
+    }).join('');
+
+    var linksHtml = '';
+    if (n.url || n.page) {
+      linksHtml = '<div style="display:flex;gap:0.5rem;margin-top:0.75rem;flex-wrap:wrap;">';
+      if (n.url)  linksHtml += '<a href="' + n.url + '" target="_blank" rel="noopener" class="btn btn-small">&gt;&gt; FUENTE</a>';
+      if (n.page) linksHtml += '<a href="' + n.page + '" class="btn btn-small btn-pink">&gt;&gt; IR A ' + (n.pageLabel || badge) + '</a>';
+      linksHtml += '</div>';
+    }
+
+    var sourceHtml = n.source
+      ? '<p class="news-source">fuente: <a href="' + n.url + '" target="_blank" rel="noopener">' + n.source + '</a></p>'
+      : '';
+
+    return '<article class="news-card" data-category="' + cat + '" data-title="' + searchText + '">'
+      + '<div class="news-card-header">'
+      +   '<span class="news-card-cat news-cat--' + cat + '">' + n.emoji + ' ' + badge + '</span>'
+      +   '<span class="news-card-date">' + fmtDate(n.date) + '</span>'
+      + '</div>'
+      + imgHtml
+      + '<div class="news-card-body">'
+      +   '<h2 class="news-card-title">' + n.title + '</h2>'
+      +   '<p class="news-card-excerpt">' + n.summary + '</p>'
+      +   fullHtml
+      + '</div>'
+      + '<div class="news-card-footer">'
+      +   '<div class="news-card-tags">' + tagsHtml + '</div>'
+      +   linksHtml
+      + '</div>'
+      + sourceHtml
+      + '</article>';
+  }
+
+  sorted.forEach(function (n) {
+    grid.insertAdjacentHTML('beforeend', renderCard(n));
+  });
+
+  var countEl = document.getElementById('newsCount');
+  if (countEl) countEl.textContent = sorted.length;
+}
+
+/* run synchronously so news.js finds .news-card elements */
+renderNews();
+
+/* safety net if DOM wasn't ready (edge case) */
+document.addEventListener('DOMContentLoaded', renderNews);
+</script>
 <script src="js/news.js"></script>
+<script>
+/* ── PAGINATION ────────────────────────────────────────────────── */
+(function () {
+  var ITEMS_PER_PAGE = 9;
+  var grid    = document.getElementById('newsGrid');
+  var pagWrap = document.getElementById('news-pagination');
+  var section = document.querySelector('main') || document.body;
+  var currentPage = 1;
+  var rafId;
+
+  function getFilteredCards() {
+    if (!grid) return [];
+    return Array.from(grid.querySelectorAll('.news-card:not(.news-hidden)'));
+  }
+
+  function renderButtons(total, cur) {
+    if (!pagWrap) return;
+    var pages = Math.ceil(total / ITEMS_PER_PAGE);
+    pagWrap.innerHTML = '';
+    if (pages <= 1) return;
+    for (var i = 1; i <= pages; i++) {
+      var btn = document.createElement('button');
+      btn.className = 'page-btn' + (i === cur ? ' active' : '');
+      btn.dataset.page = i;
+      btn.textContent = i;
+      btn.addEventListener('click', (function (p) {
+        return function () { goToPage(p); };
+      })(i));
+      pagWrap.appendChild(btn);
+    }
+  }
+
+  function applyPagination() {
+    var cards = getFilteredCards();
+    var start = (currentPage - 1) * ITEMS_PER_PAGE;
+    var end   = start + ITEMS_PER_PAGE;
+    /* reset inline display for all filtered cards */
+    cards.forEach(function (c) { c.style.display = ''; });
+    /* hide cards outside current page window */
+    cards.forEach(function (c, i) {
+      if (i < start || i >= end) c.style.display = 'none';
+    });
+    renderButtons(cards.length, currentPage);
+  }
+
+  function goToPage(p) {
+    currentPage = p;
+    applyPagination();
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  /* Watch news.js filter changes via class mutations */
+  if (grid && window.MutationObserver) {
+    var observer = new MutationObserver(function () {
+      cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(function () {
+        currentPage = 1;
+        applyPagination();
+      });
+    });
+    grid.querySelectorAll('.news-card').forEach(function (card) {
+      observer.observe(card, { attributes: true, attributeFilter: ['class'] });
+    });
+  }
+
+  applyPagination();
+})();
+</script>
 </body>
 </html>
+
+<!-- NEWS_TRACKER moved to js/news-data.js -->

@@ -1,6 +1,6 @@
 # estado.md — Project State Tracker
 
-Last updated: 2026-02-21 (sesión 11)
+Last updated: 2026-02-25 (sesión 17)
 
 ---
 
@@ -87,19 +87,30 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 <li><a href="nba.html"       class="nav-link">🏀 NBA</a></li>
 <li><a href="java.html"      class="nav-link">☕ Java</a></li>
 <li><a href="social.html"    class="nav-link">📡 Social</a></li>
+<li><a href="news.html"      class="nav-link">📰 News</a></li>
 ```
 > Añadir clase `active` al link de la página actual.
-> ✅ Nav y footer actualizados en todas las páginas (NBA: sesión 7, Java: sesión 9).
+> ✅ Nav y footer actualizados en todas las páginas (NBA: sesión 7, Java: sesión 9, News: sesión 12).
 
 ---
 
 ## Current Phase
-🏁 Phase 2: COMPLETO — index ✅ · gamedev ✅ · gaming ✅ · esports ✅ · got ✅ · warhammer ✅ · magic ✅ · rol ✅ · nba ✅ · social ✅ · java ✅
+🚀 Phase 3: PUBLICADA — index ✅ · gamedev ✅ · gaming ✅ · esports ✅ · got ✅ · warhammer ✅ · magic ✅ · rol ✅ · nba ✅ · social ✅ · java ✅ · news ✅
 
-**Todas las páginas construidas.** Siguiente fase: deploy a GitHub Pages.
-**Sesión 11 (2026-02-21):** renombrado de marca "SanprietoThrone" → "FREAKONIA" en los 11 HTML + imágenes de sección en magic.html + fix hero-title + banner destino en index.
+**Web completa y publicada en producción.**
+- 🌐 URL: **https://freakonia.com**
+- 📦 Repo: **https://github.com/Karlete/freakonia**
+- ⚙️ Deploy: GitHub Pages (rama `main`, raíz `/`)
 
-⚠️ PENDIENTE: renombrar carpeta física `D:\Dev\SanprietoThrone` → `D:\Dev\Freakonia` (hacerlo manualmente, la sesión la tenía bloqueada).
+**Sesión 17 (2026-02-25):** BUG FIX — news cards invisibles (opacity:0 permanente). Causa: scrollReveal() en main.js registra .reveal antes de que renderNews() cree las cards. Fix: eliminada clase "reveal" de las news-cards dinámicas en renderNews(); las cards aparecen visibles de inmediato al no heredar opacity:0.
+**Sesión 16 (2026-02-25):** BUG FIX — news.html mostraba grid vacío tras refactor data-driven. Causa: news-data.js cargaba en body en vez de en head. Fix: news-data.js movido a head + render IIFE reescrito como función named renderNews() con guard anti-doble-render, check defensivo NEWS_DATA, sort por fecha desc, fallback .no-news, y llamada síncrona antes de news.js.
+**Sesión 15 (2026-02-25):** sección "¿Qué se cuece?" añadida a index.html (slider 3-up desktop / 1-up mobile, dots, arrows) + CSS slider en news.css + NEWS_TRACKER movido a news-data.js.
+**Sesión 14 (2026-02-25):** news refactorizado a arquitectura data-driven (js/news-data.js + renderCard()) + campo source + .news-source CSS.
+**Sesión 13 (2026-02-25):** 3 nuevas noticias en news.html (esports: LEC Versus 2026 Finals Barcelona · gaming: God of War trilogy remakes · misc/magic: Lorwyn Eclipsed MTG) + sistema de paginación (9 por página, inline JS + CSS) + NEWS_TRACKER inicializado.
+**Sesión 12 (2026-02-22):** portadas de libros en rol.html + colores por sección + hero image + news.html completa + git init + push + OG/Twitter meta tags en las 12 páginas + imagen OG optimizada.
+**Sesión 11 (2026-02-21):** renombrado de marca "SanprietoThrone" → "FREAKONIA" + imágenes magic.html + fix hero-title + banner destino index.
+
+✅ Carpeta física renombrada a `D:\Dev\Freakonia`.
 
 ---
 
@@ -316,7 +327,7 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 - Nav y footer propagados a todas las páginas existentes en la misma sesión
 - Componentes en `css/java.css`: `.java-story-card`, `.java-why-grid`, `.java-why-card`, `.java-timeline`, `.java-timeline-item`, `.java-timeline-year`, `.java-timeline-text`, `.javadevbible-spotlight`, `.javadevbible-badge`, `.javadevbible-title`, `.jdb-screenshot`, `.jdb-img`, `.btn-teal`, `.section-label.teal`
 
-### ✅ rol.html — COMPLETO (sesión 2026-02-19)
+### ✅ rol.html — COMPLETO + MEJORADO (sesión 12)
 - Page header: gradiente dorado/azul, acento `--accent-warn` dominante + `--accent-tertiary` secundario
 - Stats row: `1989` (JOC lanza MERP) · `14-18` (edad de oro) · `4 SISTEMAS` · `∞ PARTIDAS`
 - Quick-nav: El Rol en los 90 / JOC Internacional / Mi Colección / Los Sistemas / La Mesa
@@ -330,8 +341,43 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
   - La Llamada de Cthulhu (magenta `--accent-secondary`): BRP+Sanity, años 20, 6 supplement-cards
   - Star Wars d6 (azul `--accent-tertiary`): WEG/JOC, D6 System, tapa negra icónica, 4 supplement-cards
 - **Sección 5 (La Mesa):** `.closing-narrative` + `.quote-card-final` centrado con borde/glow dorado + CTA buttons
+- **[Sesión 12] Hero image:** `mesa_rol.jpg` full-width tras el page header — borde/glow dorado, 480px escritorio / 260px móvil
+- **[Sesión 12] Portadas de libros RPG:** grids de imágenes en 3 sistemas:
+  - Stormbringer → grid 3 col · 6 portadas · borde/glow rojo `#cc0000` · `data-rpg="stormbringer"`
+  - Cthulhu → grid 2 col · 2 portadas · borde/glow magenta · `data-rpg="cthulhu"`
+  - LOTR/MERP → grid 2 col · 2 portadas · borde/glow verde · `data-rpg="lotr"`
+  - Colores de borde y caption sincronizados con el color del título de cada sección
+- CSS externo en `css/rol.css` (enlazado en `<head>`)
 - Karlete: jugó rol de los 14 a los 18 años; conserva Stormbringer completo + Cthulhu básico + MERP básico
-- Componentes: `.publisher-card`, `.publisher-tragedy`, `.publisher-stats`, `.collection-item`, `.owned-badge`, `.rpg-system`, `.supplement-card`, `.closing-narrative`, `.quote-card-final`
+- Componentes: `.publisher-card`, `.publisher-tragedy`, `.publisher-stats`, `.collection-item`, `.owned-badge`, `.rpg-system`, `.supplement-card`, `.closing-narrative`, `.quote-card-final`, `.rol-hero-img-wrap`, `.rol-books-grid`, `.rol-book-wrap`, `.rol-book-img`, `.rol-book-caption`
+
+### ✅ news.html — COMPLETO (sesión 12)
+- Page header: acento verde (`--accent-primary`) dominante, tagline "ACTUALIDAD FRIKI EN TIEMPO REAL"
+- Stats row: contador dinámico de noticias · año 2026 · 5 categorías
+- Búsqueda por texto en título y cuerpo del artículo — `<input>` con actualización en tiempo real
+- Filtros por categoría: `all` · `got` · `gaming` · `esports` · `gamedev` · `misc`
+- Grid `.news-grid` responsive: `auto-fill, minmax(340px, 1fr)` — 1 col en móvil
+- Primera noticia: **House of the Dragon T3** (categoría `got`)
+  - Expandible con toggle "Leer más / Leer menos" — `.news-card-full` oculto por defecto
+  - `data-category="got"` · `data-title="..."` para filtrado/búsqueda
+  - Imagen con `onerror` fallback (oculta el wrapper si la imagen no carga)
+- CSS externo en `css/news.css` (enlazado en `<head>`)
+- JS en `js/news.js` — IIFE con `applyFilters()`, `updateCount()`, toggle read-more
+- Badge color por categoría: got→rojo `#cc2200` · gaming→azul tertiary · esports→dorado warn · gamedev→verde primary · misc→magenta secondary
+- Nav activo en `news.html` · link 📰 News propagado a las 12 páginas en sesión 12
+- Componentes CSS: `.news-search-wrap`, `.news-filter-btn`, `.news-grid`, `.news-card`, `.news-card-full`, `.news-cat--[categoría]`, `.news-read-more`, `.news-source`
+
+### Arquitectura news (a partir de sesión 14)
+- `js/news-data.js` — array `NEWS_DATA` con todos los artículos
+- `news.html` carga `news-data.js` → script inline `renderCard()` rellena `#newsGrid` antes de que `news.js` inicialice
+- Las cards se generan dinámicamente; el HTML de `#newsGrid` ya NO tiene artículos hardcodeados
+
+### Estructura news card (obligatoria a partir de ahora)
+
+Campos requeridos en NEWS_DATA: `id`, `topic`, `category`, `emoji`, `badgeLabel`, `title`, `summary`, `full[]`, `date` (DD/MM/YYYY), `url`, `page`, `pageLabel`, `accent`, `source` (dominio limpio sin https:// ni www.), `img`, `tags[]`
+
+La card siempre termina con `.news-source` mostrando el dominio de la fuente como enlace a la URL original.
+Si no hay fuente externa (`source: ''`), el elemento `.news-source` no se renderiza.
 
 ---
 
@@ -349,6 +395,11 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 - [x] `java.html` + `css/java.css` — ✅ Completo (sesión 9)
 - [x] Actualizar nav+footer de todas las páginas con enlace NBA ✅ (sesión 7)
 - [x] Actualizar nav+footer de todas las páginas con enlace Java ✅ (sesión 9)
+- [x] `news.html` — ✅ Completo (sesión 12)
+- [x] Actualizar nav de todas las páginas con enlace News ✅ (sesión 12)
+- [x] Deploy a GitHub Pages ✅ (sesión 12) — live en https://karlete.github.io/freakonia
+- [x] README.md + .gitignore creados ✅ (sesión 12)
+- [x] OG/Twitter meta tags en las 12 páginas ✅ (sesión 12)
 
 ### Contenido pendiente (propietario: Karlete)
 - [ ] YouTube video IDs → añadir a `js/youtube.js` array YOUTUBE_VIDEOS
@@ -363,12 +414,108 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 ### Técnico pendiente
 - [ ] Favicon (icono pixel art 32x32)
 - [ ] Test layout móvil en dispositivos reales
-- [ ] Deploy a GitHub Pages
+- [x] Deploy a GitHub Pages ✅ (sesión 12)
 - [ ] Considerar añadir i18n a gamedev.html y resto de páginas
 
 ---
 
 ## Session Notes
+
+### 2026-02-25 — Session 17
+- **news.html — BUG FIX: news cards invisibles (opacity:0 permanente):**
+  - Causa: `scrollReveal()` en `js/main.js` es una IIFE que registra todos los `.reveal` al cargarse
+  - `main.js` carga antes del bloque render — cuando `scrollReveal()` corre, `renderNews()` aún no ha creado las cards
+  - Las cards se renderizan con `class="news-card reveal"` pero el observer nunca las observa → quedan a `opacity: 0` para siempre
+  - Fix (STEP 3 del task.md): eliminada clase `reveal` del template de `renderCard()` en `news.html`
+  - Sin la clase `reveal`, no aplica `opacity: 0` y las cards son visibles de inmediato
+  - Las cards de news están en viewport al cargar, no necesitan animación de scroll
+  - `js/main.js` sin cambios — no se expuso `initReveal` globalmente (innecesario con este fix)
+
+### 2026-02-25 — Session 16
+- **news.html — BUG FIX: grid vacío tras refactor data-driven:**
+  - Causa raíz: `<script src="js/news-data.js">` cargaba en `<body>` (línea ~191) en vez de en `<head>`
+  - En sesiones anteriores se añadió el script al `<head>` pero quedó el duplicado en body
+  - Fix 1: `news-data.js` en `<head>` (ya presente desde sesión anterior) + eliminado el duplicado de body
+  - Fix 2: render IIFE reescrito como función named `renderNews()` con:
+    - Guard anti-doble-render: `if (grid.children.length > 0) return;`
+    - Check defensivo: `typeof NEWS_DATA === 'undefined' || NEWS_DATA.length === 0` → mensaje fallback `.no-news`
+    - Sort por fecha descendente (DD/MM/YYYY) antes de renderizar
+    - Llamada síncrona `renderNews()` antes de `<script src="js/news.js">` (para que news.js capture `.news-card`)
+    - `DOMContentLoaded` como safety net (guard previene doble render)
+    - Actualización del contador `#newsCount` con el total de artículos
+- **estado.md:** actualizado sesión 16
+
+### 2026-02-25 — Session 15
+- **index.html — sección `#que-se-cuece` añadida:**
+  - Ubicación: justo antes de `<section id="about">` (dentro de `<main>`)
+  - Slider con botones ◄ ► · dots paginables · CTA "VER TODAS LAS NOTICIAS" → news.html
+  - Desktop (≥768px): 3 cards a la vez → 2 páginas (de 6 items)
+  - Mobile (<768px): 1 card a la vez → hasta 6 páginas
+  - JS inline: ordena NEWS_DATA por fecha desc · toma los 6 más recientes · oculta la sección si NEWS_DATA vacío · re-pagina en resize
+  - Cada card: `--news-accent` inline → badge coloreado, border y glow por accent del topic
+  - `<script src="js/news-data.js">` añadido al `<head>` de index.html (síncrono, necesario antes del slider JS)
+  - `<link rel="stylesheet" href="css/news.css" />` añadido al `<head>` de index.html
+- **css/news.css — estilos de slider añadidos:**
+  - `.news-preview-section`, `.news-preview-sub`, `.news-slider-wrapper`, `.slider-arrow` (hover rosa, disabled opacidad 0.3)
+  - `.news-slider-track` (grid 3-col desktop / 1-col mobile)
+  - `.news-preview-card` (280px, flex column, border `--news-accent`, hover glow)
+  - `.news-preview-header`, `.news-topic-badge`, `.news-date`, `.news-preview-title`, `.news-preview-body`
+  - `.slider-dots`, `.dot`, `.dot.active`, `.news-preview-cta`
+- **NEWS_TRACKER movido:** de `news.html` a `js/news-data.js` (como comentario JS al final del array)
+
+### 2026-02-25 — Session 14
+- **news.html — migración a arquitectura data-driven:**
+  - `js/news-data.js` creado con array `NEWS_DATA` (4 artículos: esports/gaming/magic/got)
+  - Campos por objeto: id, topic, category, emoji, badgeLabel, title, summary, full[], date, url, page, pageLabel, accent, source, img, tags[]
+  - `source`: dominio limpio (ej. `liquipedia.net`, `merca20.com`, `magic.wizards.com`)
+  - GOT article: source/url vacíos (contenido original sin fuente externa)
+  - `news.html`: `#newsGrid` ahora vacío en HTML; script inline `renderCard()` lo rellena dinámicamente
+  - Script cargado ANTES de `news.js` para que los `.news-card` existan cuando news.js inicializa listeners
+  - `renderCard()` genera la estructura completa: header, img-wrap, body (title+excerpt+full+read-more), footer (tags+links), `.news-source`
+- **css/news.css — `.news-source` añadido:**
+  - `font-family: var(--font-secondary)` · `font-size: 14px` · `color: var(--text-dim)` · `text-align: right`
+  - Enlace con underline → hover verde `var(--accent-primary)`
+- **estado.md — documentada nueva estructura obligatoria:**
+  - Sección "Arquitectura news" + "Estructura news card (obligatoria a partir de ahora)" añadidas
+
+### 2026-02-25 — Session 13
+- **news.html — 3 noticias nuevas añadidas:**
+  - 🏆 ESPORTS: LEC Versus 2026 Finals en Barcelona (27 feb – 1 mar) · Karmine Corp líder · G2/Fnatic séptimo/octavo · First Stand clasificatorio · fuente: Liquipedia
+  - 🕹 GAMING: God of War 1, 2 y 3 Remake confirmados en State of Play 2026 · fuente: Merca20
+  - ✨ MTG (misc): Magic regresa a Lorwyn 18 años después con Lorwyn Eclipsed (23 ene 2026) · preview 2026 lineup (Hobbit, Marvel, Star Trek) · fuente: Wizards oficial
+  - Artículos ordenados: más reciente primero (25/02, 24/02, 23/02, 22/02)
+  - Footer con botones >> FUENTE (link externo) + >> IR A SECCIÓN (link interno) en los 3 artículos nuevos
+- **news.html — sistema de paginación:**
+  - Máximo 9 noticias por página; botones `.page-btn` numerados pixel art
+  - Inline `<script>` IIFE con MutationObserver para sincronizar con filtros de news.js
+  - `<div class="news-pagination" id="news-pagination">` añadido entre news-grid y fin del container
+  - CSS `.news-pagination`, `.page-btn`, `.page-btn.active`, `.page-btn:hover` añadidos en `css/news.css`
+- **NEWS_TRACKER inicializado** al final de news.html: `used_topics: ["got","esports","gaming","magic"]`, last_update: 2026-02-25
+  - Próxima sesión: topics disponibles → gamedev · warhammer · rol
+
+### 2026-02-22 — Session 12
+- **rol.html — portadas de libros RPG:** 3 grids de imágenes añadidos en la sección "Los Sistemas"
+  - Stormbringer: grid 3 col · 6 portadas (STORMBRINGER, OCTOGONO, HECHICEROS, EL_LOBO_BLANCO, EL_CANTO_INFERNAL, DEMONIOS_Y_MAGIA) · borde/glow rojo `#cc0000` · `data-rpg="stormbringer"`
+  - Cthulhu: grid 2 col · 2 portadas (CTHULHU_1, CTHULHU_2) · borde/glow magenta · `data-rpg="cthulhu"`
+  - LOTR/MERP: grid 2 col · 2 portadas (LOTR_1, LOTR_2) · borde/glow verde · `data-rpg="lotr"`
+  - Colores por sección via CSS attribute selectors `[data-rpg="X"] .rol-book-wrap` — caption sincronizado con color de sección
+  - `css/rol.css` creado y enlazado en `<head>` de rol.html
+- **rol.html — hero image:** `mesa_rol.jpg` full-width tras el page header — borde/glow dorado `--accent-warn` · 480px escritorio / 260px móvil · scale(1.02) hover
+- **news.html — nueva página completa:**
+  - Búsqueda por texto + filtrado por categoría (got/gaming/esports/gamedev/misc)
+  - Primera noticia: House of the Dragon T3 (junio 2026, Batalla del Gullet)
+  - `css/news.css` + `js/news.js` (IIFE con applyFilters, updateCount, read-more toggle)
+  - Link 📰 News propagado al nav de las 12 páginas
+  - Card de News añadida al hub "ELIGE TU DESTINO" en index.html
+- **Git — repositorio inicializado y publicado:**
+  - `git init` + `.gitignore` + `README.md` creados
+  - Initial commit: 106 archivos — push a https://github.com/Karlete/freakonia
+  - Web live en https://karlete.github.io/freakonia · dominio: https://freakonia.com
+- **OG/Twitter meta tags:** 14 meta tags por página añadidos a las 12 páginas HTML
+  - og:image → `https://freakonia.com/assets/img/og_image.jpg` (1200×630)
+  - Título y descripción únicos por página; og:locale es_ES · twitter:site @SanprietoG
+  - index.html: título optimizado 50-60 chars, descripción 110-160 chars
+- **commit.md:** creado y completado con el changelog completo de sesión 12
 
 ### 2026-02-21 — Session 11
 - **RENOMBRADO WEB: "SanprietoThrone" → "FREAKONIA"** en los 11 archivos HTML
@@ -512,3 +659,20 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 
 ### 2026-02-15 — Session 1
 - Phase 1 completo: scaffolding, design system CSS, JS utils, index.html base
+
+---
+
+## Estado Final — WEB TERMINADA Y PUBLICADA
+
+**Freakonia está completa y en producción desde el 22 de febrero de 2026.**
+
+- 🌐 **URL:** https://freakonia.com
+- 📦 **Repo:** https://github.com/Karlete/freakonia
+- ⚙️ **Deploy:** GitHub Pages (rama `main`, raíz `/`)
+- 📄 **Páginas:** 12 páginas HTML completas (index, gamedev, gaming, esports, got, warhammer, magic, rol, nba, social, java, news)
+
+A partir de la sesión 12, el trabajo en Freakonia pasa a **modo mantenimiento mínimo**:
+- Corrección de bugs y pequeños ajustes de diseño
+- Nuevos artículos en la sección `news.html`
+- Añadir imágenes nuevas a cualquier sección existente
+- No se planean nuevas páginas ni cambios estructurales mayores
