@@ -1,6 +1,6 @@
 # estado.md — Project State Tracker
 
-Last updated: 2026-02-25 (sesión 17)
+Last updated: 2026-02-25 (sesión 18)
 
 ---
 
@@ -94,6 +94,31 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 
 ---
 
+## ▶ PRÓXIMA SESIÓN — Leer esto primero
+
+### Estado actual del sistema de noticias (news)
+- `js/news-data.js` — array `NEWS_DATA` con 4 artículos. **Añadir nuevos artículos AQUÍ, al principio del array (más reciente primero).**
+- `news.html` — renderizado dinámico vía `renderNews()`. No tocar el grid HTML.
+- `index.html` — slider "¿Qué se cuece?" lee automáticamente `NEWS_DATA`. No requiere cambios al añadir noticias.
+
+### NEWS_TRACKER — temas usados
+```json
+{"used_topics": ["got", "esports", "gaming", "magic"], "last_update": "2026-02-25"}
+```
+**Próximos temas disponibles:** `gamedev` · `warhammer` · `rol` · `nba`
+
+### Cómo añadir una noticia nueva
+1. Abrir `js/news-data.js`
+2. Insertar nuevo objeto al principio del array (antes del `// ── ARTICLE 1`)
+3. Seguir la estructura obligatoria: `id, topic, category, emoji, badgeLabel, title, summary, full[], date (DD/MM/YYYY), url, page, pageLabel, accent, source, img, tags[]`
+4. Actualizar el comentario `NEWS_TRACKER` al final del archivo
+5. Añadir imagen en `assets/img/` si la hay
+
+### Bugs conocidos / pendientes
+- Ninguno activo. Todo funcionando en producción a fecha 2026-02-25.
+
+---
+
 ## Current Phase
 🚀 Phase 3: PUBLICADA — index ✅ · gamedev ✅ · gaming ✅ · esports ✅ · got ✅ · warhammer ✅ · magic ✅ · rol ✅ · nba ✅ · social ✅ · java ✅ · news ✅
 
@@ -102,6 +127,7 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 - 📦 Repo: **https://github.com/Karlete/freakonia**
 - ⚙️ Deploy: GitHub Pages (rama `main`, raíz `/`)
 
+**Sesión 18 (2026-02-25):** commit + push de toda la arquitectura news (sesiones 13–17) a GitHub. 5 archivos · 799 inserciones · commit 7d736f2. Web actualizada en producción.
 **Sesión 17 (2026-02-25):** BUG FIX — news cards invisibles (opacity:0 permanente). Causa: scrollReveal() en main.js registra .reveal antes de que renderNews() cree las cards. Fix: eliminada clase "reveal" de las news-cards dinámicas en renderNews(); las cards aparecen visibles de inmediato al no heredar opacity:0.
 **Sesión 16 (2026-02-25):** BUG FIX — news.html mostraba grid vacío tras refactor data-driven. Causa: news-data.js cargaba en body en vez de en head. Fix: news-data.js movido a head + render IIFE reescrito como función named renderNews() con guard anti-doble-render, check defensivo NEWS_DATA, sort por fecha desc, fallback .no-news, y llamada síncrona antes de news.js.
 **Sesión 15 (2026-02-25):** sección "¿Qué se cuece?" añadida a index.html (slider 3-up desktop / 1-up mobile, dots, arrows) + CSS slider en news.css + NEWS_TRACKER movido a news-data.js.

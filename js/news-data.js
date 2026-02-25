@@ -10,6 +10,26 @@
 
 var NEWS_DATA = [
 
+  // ── ARTICLE 5 ───────────────────────────────────────────────────
+  {
+    id:         'noticia-ffvii-remaster-2026',
+    topic:      'gaming',
+    category:   'gaming',
+    emoji:      '\uD83D\uDD79',
+    badgeLabel: 'GAMING',
+    title:      'Final Fantasy VII vuelve a PC... con m\u00e1s caos que Meteor',
+    summary:    'Square Enix ha relanzado el FF7 original en Steam y GOG con modo velocidad x3, sin encuentros aleatorios, mejoras de batalla y autoguardado. Gratis para due\u00f1os del port de 2013. El problema: sali\u00f3 sin ejecutable, lleva reviews \u2018Mostly Negative\u2019 y los mods de 7th Heaven a\u00fan no son compatibles. Cl\u00e1sico Square.',
+    full:       [],
+    date:       '25/02/2026',
+    url:        'https://insider-gaming.com/final-fantasy-7-re-release-launches-to-mostly-negative-reviews-on-steam/',
+    page:       'gaming.html',
+    pageLabel:  'GAMING',
+    accent:     '#00bfff',
+    source:     'insider-gaming.com',
+    img:        '',
+    tags:       ['Final Fantasy VII', 'Square Enix', 'Steam', 'GOG', 'Remaster', 'PC']
+  },
+
   // ── ARTICLE 1 ───────────────────────────────────────────────────
   {
     id: 1,
@@ -109,5 +129,5 @@ var NEWS_DATA = [
 
 ];
 
-// NEWS_TRACKER: {"used_topics":["got","esports","gaming","magic"],"last_update":"2026-02-25"}
-// Next session available topics: gamedev · warhammer · rol
+// NEWS_TRACKER: {"used_topics":["got","esports","gaming","magic","gaming"],"last_update":"2026-02-25"}
+// Next session available topics: gamedev · warhammer · rol · nba
