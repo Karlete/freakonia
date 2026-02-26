@@ -10,6 +10,66 @@
 
 var NEWS_DATA = [
 
+  // ── ARTICLE 8 ───────────────────────────────────────────────────
+  {
+    id:         'noticia-coc-arkham-2026',
+    topic:      'misc',
+    category:   'misc',
+    emoji:      '\uD83C\uDFB2',
+    badgeLabel: 'ROL',
+    title:      'Call of Cthulhu: Arkham llega en tapa dura \u2014 290 localizaciones de la ciudad de Lovecraft',
+    summary:    'Chaosium public\u00f3 el 22 de febrero la edici\u00f3n en tapa dura a todo color de \u201cCall of Cthulhu: Arkham\u201d, el manual definitivo de la ciudad m\u00e1s ic\u00f3nica del Mito. El tomo cubre 290 localizaciones repartidas en 9 barrios, m\u00e1s de 80 PNJs detallados y dos mapas p\u00f3ster de la ciudad \u2014uno para jugadores y otro para el Guardiam con informaci\u00f3n oculta. Los pedidos desde chaosium.com incluyen el PDF sin coste adicional.',
+    full:       [],
+    date:       '26/02/2026',
+    url:        'https://www.chaosium.com/blogcall-of-cthulhu-arkham-will-be-released-in-full-color-hardcover-on-february-22nd/',
+    page:       'rol.html',
+    pageLabel:  'ROL',
+    accent:     '#9933ff',
+    source:     'chaosium.com',
+    img:        '',
+    tags:       ['Call of Cthulhu', 'Arkham', 'Chaosium', 'Rol de Mesa', 'Lovecraft', 'Tapa Dura']
+  },
+
+  // ── ARTICLE 7 ───────────────────────────────────────────────────
+  {
+    id:         'noticia-warhammer-gran-cathay-2026',
+    topic:      'misc',
+    category:   'misc',
+    emoji:      '\u2699',
+    badgeLabel: 'WARHAMMER',
+    title:      'Gran Cathay refuerza la Gran Muralla \u2014 Nuevas miniaturas para The Old World',
+    summary:    'Games Workshop abre preventas el 28 de febrero para \u201cDefenders of the Great Bastion\u201d, el nuevo set de refuerzo de Gran Cathay para Warhammer: The Old World. El pack trae Astromancers, Soldados Campesinos, Equipos de Ca\u00f1\u00f3n Grulla y Fusileros de Granizo de Hierro, m\u00e1s un Arcane Journal de 48 p\u00e1ginas con reglas, trasfondo y la batalla de Nan-Li. Llega a tiendas el 14 de marzo.',
+    full:       [],
+    date:       '26/02/2026',
+    url:        'https://www.warhammer-community.com/en-gb/articles/lyzpUdEz/saturday-pre-orders-warhammer-the-old-world/',
+    page:       'warhammer.html',
+    pageLabel:  'WARHAMMER',
+    accent:     '#cc2200',
+    source:     'warhammer-community.com',
+    img:        '',
+    tags:       ['Warhammer', 'The Old World', 'Gran Cathay', 'Games Workshop', 'Miniaturas', 'Preventas']
+  },
+
+  // ── ARTICLE 6 ───────────────────────────────────────────────────
+  {
+    id:         'noticia-unity-ia-gdc-2026',
+    topic:      'gamedev',
+    category:   'gamedev',
+    emoji:      '\uD83C\uDFAE',
+    badgeLabel: 'GAMEDEV',
+    title:      'Unity anuncia IA que genera juegos completos desde texto \u2014 sin programar',
+    summary:    'El CEO de Unity Matthew Bromberg confirm\u00f3 que la compa\u00f1\u00eda presentar\u00e1 en la GDC 2026 una Beta de IA que permite generar juegos casuales completos usando texto en lenguaje natural, sin escribir una sola l\u00ednea de c\u00f3digo. El sistema es accesible desde el navegador y combina el contexto del proyecto Unity con modelos de IA externos. Una apuesta que redefine qui\u00e9n puede hacer videojuegos... y que ya levanta ampollas entre los devs de siempre.',
+    full:       [],
+    date:       '26/02/2026',
+    url:        'https://www.gamedeveloper.com/programming/unity-says-its-ai-tech-will-soon-be-able-to-prompt-full-casual-games-into-existence-',
+    page:       'gamedev.html',
+    pageLabel:  'GAMEDEV',
+    accent:     '#00ff41',
+    source:     'gamedeveloper.com',
+    img:        '',
+    tags:       ['Unity', 'Inteligencia Artificial', 'GDC 2026', 'Gamedev', 'IA Generativa', 'Casual Games']
+  },
+
   // ── ARTICLE 5 ───────────────────────────────────────────────────
   {
     id:         'noticia-ffvii-remaster-2026',
@@ -129,5 +189,5 @@ var NEWS_DATA = [
 
 ];
 
-// NEWS_TRACKER: {"used_topics":["got","esports","gaming","magic","gaming"],"last_update":"2026-02-25"}
-// Next session available topics: gamedev · warhammer · rol · nba
+// NEWS_TRACKER: {"used_topics":["got","esports","gaming","magic","gaming","gamedev","warhammer","rol"],"last_update":"2026-02-26"}
+// Next session available topics: nba · got · gaming · esports

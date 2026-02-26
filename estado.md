@@ -1,6 +1,6 @@
 # estado.md — Project State Tracker
 
-Last updated: 2026-02-25 (sesión 18)
+Last updated: 2026-02-26 (sesión 19)
 
 ---
 
@@ -51,7 +51,7 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 - `java.html` + `css/java.css` → `.page-header-java`, `.section-label` (y variantes .pink/.gold/.blue/.dim/.teal), `.java-story-card`, `.java-why-grid`, `.java-why-card`, `.java-timeline`, `.java-timeline-item`, `.java-timeline-year`, `.java-timeline-text`, `.javadevbible-spotlight`, `.javadevbible-badge`, `.javadevbible-title`, `.javadevbible-btns`, `.javadevbible-tags`, `.javadevbible-tag`, `.jdb-screenshot`, `.jdb-img`, `.btn-teal`
 - `magic.html` → `.mtg-pillar`, `.edition-card`, `.mana-color-box`, `.collection-box`, `.set-badge`, `.personal-story`, `.lore-box`, `.quote-card`, `.section-quicknav`
 - `rol.html` → `.publisher-card`, `.publisher-tragedy`, `.publisher-stats`, `.collection-item`, `.owned-badge`, `.rpg-system`, `.supplement-card`, `.closing-narrative`, `.quote-card-final`, `.lore-box`, `.quote-card`, `.section-quicknav`
-- `nba.html` → `.player-tribute`, `.player-stats`, `.player-stat-row`, `.player-badge`, `.dunk-event`, `.dunk-contender`, `.dunk-verdict`, `.dunk-grid`, `.channel-card`, `.taberna-img-link`, `.taberna-img-wrap`, `.taberna-img`, `.taberna-img-overlay`, `.taberna-play-btn`, `.fantasy-card`, `.fantasy-table`, `.memory-card`, `.era-stats`, `.era-stat-box`, `.lore-box`, `.quote-card`, `.section-quicknav`
+- `nba.html` → `.player-tribute`, `.player-stats`, `.player-stat-row`, `.player-badge`, `.dunk-event`, `.dunk-contender`, `.dunk-verdict`, `.dunk-grid`, `.dunk-gif`, `.channel-card`, `.taberna-img-link`, `.taberna-img-wrap`, `.taberna-img`, `.taberna-img-overlay`, `.taberna-play-btn`, `.fantasy-card`, `.fantasy-table`, `.memory-card`, `.era-stats`, `.era-stat-box`, `.lore-box`, `.quote-card`, `.section-quicknav`, `.nba-hero-text`, `.nba-hero-visual`, `.nba-hero-img`, `.section-img-nba`, `.section-media-row`
 - `gaming.html` → `.memory-card`, `.platform-header`
 - `esports.html` → `.season-card`, `.section-quicknav`
 
@@ -97,7 +97,7 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 ## ▶ PRÓXIMA SESIÓN — Leer esto primero
 
 ### Estado actual del sistema de noticias (news)
-- `js/news-data.js` — array `NEWS_DATA` con 4 artículos. **Añadir nuevos artículos AQUÍ, al principio del array (más reciente primero).**
+- `js/news-data.js` — array `NEWS_DATA` con 8 artículos. **Añadir nuevos artículos AQUÍ, al principio del array (más reciente primero).**
 - `news.html` — renderizado dinámico vía `renderNews()`. No tocar el grid HTML.
 - `index.html` — slider "¿Qué se cuece?" lee automáticamente `NEWS_DATA`. No requiere cambios al añadir noticias.
 
@@ -105,7 +105,7 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 ```json
 {"used_topics": ["got", "esports", "gaming", "magic"], "last_update": "2026-02-25"}
 ```
-**Próximos temas disponibles:** `gamedev` · `warhammer` · `rol` · `nba`
+**Próximos temas disponibles:** `nba` · `got` · `gaming` · `esports`
 
 ### Cómo añadir una noticia nueva
 1. Abrir `js/news-data.js`
@@ -127,6 +127,7 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 - 📦 Repo: **https://github.com/Karlete/freakonia**
 - ⚙️ Deploy: GitHub Pages (rama `main`, raíz `/`)
 
+**Sesión 19 (2026-02-26):** 3 noticias nuevas en `js/news-data.js` (Warhammer: Gran Cathay · Rol: CoC Arkham · GameDev: Unity IA GDC2026). nba.html: hero image `nba_pixels.png` con layout 2 columnas; GIFs LaVine + Gordon x2 con `.dunk-gif`; 3 imágenes de sección (nbalive/allstars2006/fantasyhoops) con `.section-img-nba`; flex row `.section-media-row` en NBA Live y All-Star. Commit + push a main.
 **Sesión 18 (2026-02-25):** commit + push de toda la arquitectura news (sesiones 13–17) a GitHub. 5 archivos · 799 inserciones · commit 7d736f2. Web actualizada en producción.
 **Sesión 17 (2026-02-25):** BUG FIX — news cards invisibles (opacity:0 permanente). Causa: scrollReveal() en main.js registra .reveal antes de que renderNews() cree las cards. Fix: eliminada clase "reveal" de las news-cards dinámicas en renderNews(); las cards aparecen visibles de inmediato al no heredar opacity:0.
 **Sesión 16 (2026-02-25):** BUG FIX — news.html mostraba grid vacío tras refactor data-driven. Causa: news-data.js cargaba en body en vez de en head. Fix: news-data.js movido a head + render IIFE reescrito como función named renderNews() con guard anti-doble-render, check defensivo NEWS_DATA, sort por fecha desc, fallback .no-news, y llamada síncrona antes de news.js.
@@ -315,10 +316,11 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 - Componentes: `.platform-hub`, `.platform-identity`, `.platform-content`, `.status-live`, `.status-soon`, `.status-wip`, `.content-tags`, `.content-tag`, `.mini-game-row`, `.mini-game-card`, `.teaser-box`, `.contact-hub`, `.quick-links-grid`, `.quick-link`, `.intro-card`
 - Karlete: YouTube @sanprieto (relanzando), X @SanprietoG (activo), itch.io sanprieto.itch.io (2 juegos), Twitch sanprieto (pronto, primer directo: FFVII), email sanprietogamer@gmail.com
 
-### ✅ nba.html — COMPLETO + MEJORADO (sesión 10) — nav propagado a todas las páginas ✅
+### ✅ nba.html — COMPLETO + MEJORADO (sesión 19) — nav propagado a todas las páginas ✅
 - Page header: gradiente dorado/magenta, acento `--accent-warn` dominante
 - Stats row: `2000` · `KOBE` · `14 AÑOS` (fantasy) · `0` anillos · `2016` (Slam Dunk)
 - Quick-nav: 9 anclajes — `#canal` en primera posición (sesión 10)
+- **Hero image (sesión 19):** layout 2 columnas — texto izquierda + `assets/img/nba_pixels.png` derecha (`.nba-hero-text` + `.nba-hero-visual` + `.nba-hero-img`) — flex en `.page-header-nba .container`
 - **Sección 1 (La Taberna del Boxscore):** `.channel-card` verde — MOVIDA al top (sesión 10)
   - Imagen `assets/img/la_taberna_del_boxscore.jpg` enlazada a YouTube con overlay oscuro + `▶ VER CANAL`
   - Borde/glow verde en reposo → magenta en hover · scale(1.03) en imagen · height 380px
@@ -456,6 +458,31 @@ Si no hay fuente externa (`source: ''`), el elemento `.news-source` no se render
   - Sin la clase `reveal`, no aplica `opacity: 0` y las cards son visibles de inmediato
   - Las cards de news están en viewport al cargar, no necesitan animación de scroll
   - `js/main.js` sin cambios — no se expuso `initReveal` globalmente (innecesario con este fix)
+
+### 2026-02-26 — Session 19
+- **js/news-data.js — 3 artículos nuevos añadidos al top del array (total: 8):**
+  - `noticia-coc-arkham-2026` · categoría misc · badge ROL · accent `#9933ff` · fuente chaosium.com
+  - `noticia-warhammer-gran-cathay-2026` · categoría misc · badge WARHAMMER · accent `#cc2200` · fuente warhammer-community.com
+  - `noticia-unity-ia-gdc-2026` · categoría gamedev · badge GAMEDEV · accent `#00ff41` · fuente gamedeveloper.com
+  - NEWS_TRACKER actualizado: topics usados += gamedev · warhammer · rol · próximos: nba · got · gaming · esports
+- **nba.html — hero image:**
+  - `.page-header-nba .container` convertido a flex row (display:flex + gap)
+  - Texto existente envuelto en `.nba-hero-text` (flex:1)
+  - `assets/img/nba_pixels.png` añadido en `.nba-hero-visual` (flex: 0 0 320px) con clase `.nba-hero-img`
+- **nba.html — GIFs Slam Dunk 2016:**
+  - `.dunk-gif` CSS añadido al `<style>` (display:block · 480px · border verde · pixelated)
+  - `assets/img/lavine.gif` tras `</div>` del bloque ZACH LAVINE
+  - `assets/img/gordon_dunk1.gif` tras `</div>` del bloque AARON GORDON
+  - `assets/img/gordon_dunk2.gif` tras `</div>` del bloque `.dunk-verdict`
+- **nba.html — imágenes de sección:**
+  - `.section-img-nba` CSS: 360px max-width · 280px max-height · object-fit cover · border verde
+  - `assets/img/nbalive.jpg` tras lore-box de "NBA LIVE EN LA PLAY"
+  - `assets/img/allstars2006.jpg` tras lore-box de "ALL-STAR NIGHTS"
+  - `assets/img/fantasyhoops.jpg` tras lore-box de "EL FANTASY" (inline style: 1024px / max-height 400px)
+- **nba.html — `.section-media-row` flex wrapper:**
+  - NBA Live y All-Star: img + memory-card envueltos en `<div class="section-media-row">`
+  - `.section-media-row`: flex row · gap 1.5rem · responsive column a ≤700px
+- **estado.md:** actualizado sesión 19
 
 ### 2026-02-25 — Session 16
 - **news.html — BUG FIX: grid vacío tras refactor data-driven:**

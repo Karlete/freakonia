@@ -55,7 +55,18 @@
         var(--accent-secondary) 100%);
     }
 
-    .page-header-nba .container { position: relative; z-index: 1; }
+    .page-header-nba .container { position: relative; z-index: 1; display: flex; align-items: center; gap: var(--sp-6); }
+
+    .nba-hero-text  { flex: 1; }
+    .nba-hero-visual { flex: 0 0 320px; }
+
+    .nba-hero-img {
+      display: block;
+      max-width: 100%;
+      width: 100%;
+      border: 4px solid var(--accent-primary);
+      image-rendering: pixelated;
+    }
 
     .page-header-pre {
       font-family: var(--font-primary);
@@ -364,6 +375,59 @@
     }
 
     .dunk-verdict ul li:last-child { border-bottom: none; }
+
+    .section-img-nba {
+      display: block;
+      max-width: 360px;
+      width: 100%;
+      max-height: 280px;
+      object-fit: cover;
+      object-position: center top;
+      margin: 1.5rem auto 2rem;
+      border: 4px solid var(--accent-primary);
+      image-rendering: auto;
+    }
+
+    @media (max-width: 600px) {
+      .section-img-nba {
+        max-width: 100%;
+        max-height: 220px;
+      }
+    }
+
+    .section-media-row {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 1.5rem;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .section-media-row .section-img-nba {
+      margin: 0;
+      flex-shrink: 0;
+      width: 320px;
+      max-height: 260px;
+      object-fit: cover;
+    }
+
+    @media (max-width: 700px) {
+      .section-media-row {
+        flex-direction: column;
+      }
+      .section-media-row .section-img-nba {
+        width: 100%;
+      }
+    }
+
+    .dunk-gif {
+      display: block;
+      max-width: 100%;
+      width: 480px;
+      margin: 1rem auto 2rem;
+      border: 4px solid var(--accent-primary);
+      image-rendering: pixelated;
+    }
 
     /* ── Memory card (inline override) ── */
     .memory-card {
@@ -741,9 +805,14 @@
 <!-- ─── Page Header ─────────────────────────────────────────────────────── -->
 <header class="page-header-nba">
   <div class="container">
-    <p class="page-header-pre">🏀 DESDE EL AÑO 2000</p>
-    <h1 class="page-header-title">🏀 NBA</h1>
-    <p class="page-header-sub">"De Kobe a LeBron — 25 años viendo el mejor baloncesto del mundo"</p>
+    <div class="nba-hero-text">
+      <p class="page-header-pre">🏀 DESDE EL AÑO 2000</p>
+      <h1 class="page-header-title">🏀 NBA</h1>
+      <p class="page-header-sub">"De Kobe a LeBron — 25 años viendo el mejor baloncesto del mundo"</p>
+    </div>
+    <div class="nba-hero-visual">
+      <img src="assets/img/nba_pixels.png" alt="NBA Pixel Art" class="nba-hero-img">
+    </div>
   </div>
 </header>
 
@@ -835,10 +904,15 @@
           cada semana me pongo a dar la chapa sobre la actualidad de la liga.
         </p>
         <p>
-          Resúmenes semanales, análisis sin complicaciones, opiniones propias y el tono de
-          alguien que lleva 25 años siguiendo esto con pasión real. Sin pretensiones de gran
-          medio —solo una aficionada de toda la vida con ganas de compartir lo que ve y
-          lo que piensa.
+          Resúmenes semanales, análisis lamentables, opiniones que a nadie le importan y el tono siempre en broma
+           de alguien que lleva 25 años siguiendo esto con pasión real. Sin pretensiones ninguna, festival del humor,
+           seguidor de los lakers pero no me ato a nada ni nadie.
+           Adalid en la lucha contra los inventores del baloncesto, qué gran epoca aquella de los guarriors y como me gustaba
+           ir contra corriente de todo el mundo.
+           Increible pero cierto, desde la tabla de marca, pasando por el foro de as, hispanos nba, nbamaniacs y ahora foro de 
+           reddit nba en español y canal propio!
+
+           A PASTAR!
         </p>
         <a href="https://www.youtube.com/@Latabernadelboxscore" class="btn btn-pink" target="_blank" rel="noopener noreferrer">▶ VER EL CANAL</a>
         <span class="channel-subtag">Resúmenes semanales · Actualidad NBA · Temporada 2025-26</span>
@@ -860,25 +934,31 @@
 
       <div class="lore-box reveal">
         <p>
-          El año 2000 fue mi año cero. Los Lakers acababan de ganar el primero de tres títulos
-          consecutivos, Phil Jackson orquestaba el triángulo ofensivo y había un chico de
-          21 años que jugaba con una arrogancia tan absoluta, tan despiadada, que era
-          imposible no quedarse mirando. Se llamaba Kobe Bean Bryant. Y desde esa primera
-          temporada que seguí en serio, fue mi jugador.
+          El año 2000 fue mi año cero. Siempre me gustó el baloncesto, y no solo verlo tambien
+          practicarlo. Socio del Caceres que vivió el ascenso a la ACB, que vivio partidos en 
+          la CALDERA ASESINA, que era el pabellon del CACERES en ACB, donde se duplicaba cada 
+          partido la capacidad real de la cantidad de gente que ibamos a animar.
+          Luego encima basket en vena desde el colegio , la universidad y luego ya de veterano
+          jugando y yendo a jugar en pueblos de la extremadura profunda.
+
+          Me picaron a tope con la NBA todos los compis del instituto porque eran todos unos fiebres,
+          nuestra epoca fue la de Iverson, Kobe, chocolate blanco, Steeeeeevi (nash) y todo ese elenco
+          maravilloso de la primera decada del 2000.
         </p>
         <p>
-          No era el más querido. La gente lo amaba u odiaba, sin término medio. Yo estaba
-          en el primer grupo sin dudarlo. Su mentalidad Mamba —esa obsesión casi enfermiza
-          por ser el mejor cada noche— me enganchó para siempre a este deporte. Cada partido
-          era un estudio de cómo se construye la grandeza a base de trabajo, repetición
-          y voluntad de hierro.
-        </p>
-        <p>
-          Lo seguí durante toda su carrera. Los cinco anillos, el MVP del All-Star 2002,
-          los 81 puntos contra los Raptors en 2006 —la segunda mejor actuación individual
-          de la historia tras los 100 de Wilt. El back-to-back con Pau Gasol. Y luego el
-          adiós de 2016, con 60 puntos en el último partido de su carrera, porque Kobe
-          nunca se iba a despedir siendo menos que Kobe.
+          Mi camiseta original con el 8 de kobe, aun la conservo que ya es decir, alguna mas ahi todavia
+          aunque a veces las pillamos de los chinos claro esta jajajja
+
+          Algun que otro cromo cayó pero nunca completé ninguna de las colecciones miticas que habia entonces,
+          pero conozco a alguno que aun los conserva bien!
+
+          Luego ya tuve una epoca un poco de despegue y me volvi a enganchar con la llegada de PAU GASOL a los Lakers, que fue un poco el empujon definitivo para que me volviera a enganchar
+           a la NBA despues de una epoca de bajon en la que no veia nada, y luego ya con la llegada de LeBron y la era moderna pues ya no he podido despegarme ni un segundo de esto.
+
+           Y desde la era de los inventores del baloncesto, que es como yo llamo a la epoca de los guarriors, disfrute en 2016 del mejor anillo de la historia remontando un 3-1 a los mejores de la historia, 
+           y luego ya con la llegada de LeBron a lakers ... hasta nuestros dias!
+           
+           Bendita NBA!
         </p>
       </div>
 
@@ -893,163 +973,12 @@
   <hr class="pixel-divider" style="margin: var(--sp-7) var(--sp-5) 0;" />
 
   <!-- ═══════════════════════════════════════════════════════════════════════
-       SECCIÓN 2 — KOBE BRYANT: MI JUGADOR
-  ════════════════════════════════════════════════════════════════════════ -->
-  <section class="section" id="kobe" style="padding-top: var(--sp-7);">
-    <div class="container">
-
-      <div class="section-label pink">💜 HOMENAJE</div>
-      <h2 class="section-title" style="color:var(--accent-secondary);text-shadow:var(--glow-pink);">KOBE BRYANT: MI JUGADOR</h2>
-
-      <div class="player-tribute reveal" style="--tribute-color: var(--accent-secondary);">
-        <div class="player-stats">
-          <div class="player-stat-row" style="--tribute-color: var(--accent-secondary);">
-            <span class="player-stat-value">5</span>
-            <span class="player-stat-label">Anillos NBA (2000 · 01 · 02 · 09 · 10)</span>
-          </div>
-          <div class="player-stat-row" style="--tribute-color: var(--accent-secondary);">
-            <span class="player-stat-value">1</span>
-            <span class="player-stat-label">MVP Temporada Regular (2007-08)</span>
-          </div>
-          <div class="player-stat-row" style="--tribute-color: var(--accent-secondary);">
-            <span class="player-stat-value">18</span>
-            <span class="player-stat-label">Convocatorias al All-Star</span>
-          </div>
-          <div class="player-stat-row" style="--tribute-color: var(--accent-secondary);">
-            <span class="player-stat-value">81 PTS</span>
-            <span class="player-stat-label">vs Toronto Raptors · 22 enero 2006</span>
-          </div>
-          <div class="player-stat-row" style="--tribute-color: var(--accent-secondary);">
-            <span class="player-stat-value">33.643</span>
-            <span class="player-stat-label">Puntos en carrera (4º histórico)</span>
-          </div>
-          <div class="player-stat-row" style="--tribute-color: var(--accent-secondary);">
-            <span class="player-stat-value">20</span>
-            <span class="player-stat-label">Temporadas — TODAS con los Lakers</span>
-          </div>
-        </div>
-
-        <div class="player-tribute-text">
-          <p>
-            Hay jugadores que ves y disfrutas. Y hay jugadores que te marcan. Kobe fue de
-            los segundos. No te pedía que lo quisieras —te retaba a que lo comprendieras.
-            Y cuando lo comprendías, ya no podías dejar de verlo.
-          </p>
-          <p>
-            El modo en que estudiaba a sus rivales, cómo improvisaba soluciones en tiempo
-            real, cómo pedía el balón en el momento más difícil porque precisamente ese
-            momento era el que él había ensayado mil veces. No había suerte en el juego
-            de Kobe. Solo preparación convertida en arte.
-          </p>
-          <p>
-            Perderlo el 26 de enero de 2020 fue uno de esos golpes que no te esperas
-            aunque el mundo lleve años recordándote que nadie es eterno. El helicóptero,
-            la niebla, Gianna. Ese día la NBA dejó de ser solo un deporte por un momento.
-            Y los que lo seguíamos desde el principio perdimos algo que va más allá del
-            deporte.
-          </p>
-          <div class="player-badge" style="--tribute-color: var(--accent-secondary);">#8 · #24 · MAMBA FOREVER</div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <hr class="pixel-divider" style="margin: var(--sp-7) var(--sp-5) 0;" />
-
-  <!-- ═══════════════════════════════════════════════════════════════════════
-       SECCIÓN 3 — Y LUEGO LLEGÓ LEBRON
-  ════════════════════════════════════════════════════════════════════════ -->
-  <section class="section" id="lebron" style="padding-top: var(--sp-7);">
-    <div class="container">
-
-      <div class="section-label green">💚 EL DEBATE CERRADO</div>
-      <h2 class="section-title" style="color:var(--accent-primary);text-shadow:var(--glow-green);">Y LUEGO LLEGÓ LEBRON</h2>
-
-      <div class="lore-box reveal">
-        <p>
-          Cuando Kobe se retiró, la NBA necesitaba un sucesor de la narrativa. LeBron James
-          llevaba ya más de una década siendo el mejor jugador del mundo —pero sin Kobe en
-          activo, el debate se cerró por defecto y por mérito propio.
-        </p>
-        <p>
-          Yo tardé en rendirme. Era de los que ponía a Kobe por encima en el GOAT debate,
-          y en cierto modo sigo creyendo que compararlos es casi injusto porque son grandezas
-          de naturaleza diferente. Pero con el paso de los años y los datos acumulándose,
-          hay un argumento que se vuelve imposible de ignorar: LeBron James es el mejor
-          jugador que ha existido en términos absolutos.
-        </p>
-        <p>
-          Cuatro anillos con tres franquicias distintas. El único jugador en la historia
-          de la NBA con más de 40.000 puntos. Veinte temporadas siendo un All-Star de
-          primer nivel. Un atleta que desafió literalmente al tiempo durante dos décadas
-          enteras. Y sigue jugando, con su propio hijo en la liga, escribiendo un capítulo
-          de la historia del deporte que no tiene precedente.
-        </p>
-      </div>
-
-      <div class="quote-card green reveal">
-        <p>💚 "No se trata de ser el más grande de tu generación. Se trata de serlo de todas."</p>
-        <span class="quote-attribution">— La lógica LeBron</span>
-      </div>
-
-      <div class="player-tribute reveal" style="--tribute-color: var(--accent-primary); margin-top: var(--sp-6);">
-        <div class="player-stats">
-          <div class="player-stat-row" style="--tribute-color: var(--accent-primary);">
-            <span class="player-stat-value">4</span>
-            <span class="player-stat-label">Anillos (2012 · 13 · 16 · 20)</span>
-          </div>
-          <div class="player-stat-row" style="--tribute-color: var(--accent-primary);">
-            <span class="player-stat-value">4</span>
-            <span class="player-stat-label">MVP Temporada Regular</span>
-          </div>
-          <div class="player-stat-row" style="--tribute-color: var(--accent-primary);">
-            <span class="player-stat-value">20</span>
-            <span class="player-stat-label">Convocatorias al All-Star</span>
-          </div>
-          <div class="player-stat-row" style="--tribute-color: var(--accent-primary);">
-            <span class="player-stat-value">40.000+</span>
-            <span class="player-stat-label">Puntos en carrera — Récord histórico</span>
-          </div>
-          <div class="player-stat-row" style="--tribute-color: var(--accent-primary);">
-            <span class="player-stat-value">3</span>
-            <span class="player-stat-label">MVP Finals con 3 franquicias distintas</span>
-          </div>
-          <div class="player-stat-row" style="--tribute-color: var(--accent-primary);">
-            <span class="player-stat-value">ACTIVO</span>
-            <span class="player-stat-label">2024-25 · Jugando junto a Bronny James</span>
-          </div>
-        </div>
-
-        <div class="player-tribute-text">
-          <p>
-            Heat, Cavaliers, Lakers. Tres franquicias distintas, cuatro títulos, cuatro MVP
-            de las Finales. No hay precedente para lo que LeBron ha hecho en este deporte.
-            Cada vez que parecía que el tiempo lo alcanzaría, encontraba una nueva forma de
-            reinventarse y seguir siendo el mejor o uno de los mejores de la liga.
-          </p>
-          <p>
-            El capítulo de Bryce y Bronny en los Lakers es algo que ningún guionista de
-            Hollywood se habría atrevido a escribir por miedo a que sonara inverosímil.
-            Un padre jugando junto a su hijo en la mejor liga del mundo.
-            Eso solo le pasa a LeBron.
-          </p>
-          <div class="player-badge" style="--tribute-color: var(--accent-primary);">THE KING · EL MAYOR DE TODOS LOS TIEMPOS</div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <hr class="pixel-divider" style="margin: var(--sp-7) var(--sp-5) 0;" />
-
-  <!-- ═══════════════════════════════════════════════════════════════════════
-       SECCIÓN 4 — EL MEJOR SLAM DUNK CONTEST: 2016
+       SECCIÓN 2 — EL MEJOR SLAM DUNK CONTEST: 2016
   ════════════════════════════════════════════════════════════════════════ -->
   <section class="section" id="dunk" style="padding-top: var(--sp-7);">
     <div class="container">
 
-      <div class="section-label">🔥 HISTORIA EN DIRECTO</div>
+      <div class="section-label">🔥 ROBO HISTORICO EN DIRECTO</div>
       <h2 class="section-title" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">EL MEJOR SLAM DUNK CONTEST DE LA HISTORIA</h2>
 
       <div class="dunk-event reveal">
@@ -1076,6 +1005,7 @@
               concurso futuro.
             </p>
           </div>
+          <img src="assets/img/lavine.gif" alt="Zach LaVine dunk" class="dunk-gif">
 
           <div class="dunk-contender" style="--contender-color: var(--accent-secondary);">
             <span class="dunk-contender-name">💜 AARON GORDON — LA VÍCTIMA MÁS INJUSTA</span>
@@ -1089,6 +1019,7 @@
               perfecta. Y aun así, perdió.
             </p>
           </div>
+          <img src="assets/img/gordon_dunk1.gif" alt="Aaron Gordon dunk 1" class="dunk-gif">
 
         </div>
 
@@ -1106,6 +1037,7 @@
             <li>↳ LaVine: ganador oficial, leyenda igualmente</li>
           </ul>
         </div>
+        <img src="assets/img/gordon_dunk2.gif" alt="Aaron Gordon dunk 2" class="dunk-gif">
 
       </div>
 
@@ -1115,7 +1047,7 @@
   <hr class="pixel-divider" style="margin: var(--sp-7) var(--sp-5) 0;" />
 
   <!-- ═══════════════════════════════════════════════════════════════════════
-       SECCIÓN 5 — NBA LIVE EN LA PLAY
+       SECCIÓN 3 — NBA LIVE Y 2K EN LA PLAY
   ════════════════════════════════════════════════════════════════════════ -->
   <section class="section" id="nbalive" style="padding-top: var(--sp-7);">
     <div class="container">
@@ -1125,25 +1057,25 @@
 
       <div class="lore-box reveal">
         <p>
-          Antes de seguir la NBA en serio, la jugábamos. NBA Live en PlayStation —allá por
-          2005, con los colegas, quemando tardes enteras y alguna madrugada que otra.
-          La franquicia definitiva de basket en consola de esa generación: los controles
-          fluidos, las animaciones que entonces nos parecían hiperrealistas, y la satisfacción
-          absoluta de clavar un triple en el último segundo contra un amigo que llevaba
-          mirándote las manos para adivinar la jugada.
-        </p>
-        <p>
-          Jugábamos temporadas, playoffs caseros, apuestas de orgullo que nunca se cobraban.
-          NBA Live fue la puerta trasera por la que muchos entramos al basket real: te
-          aprendes los rosters, los nombres, las mecánicas del juego, y un día te pones
-          a ver un partido de verdad y ya sabes quién es quién. Así funciona.
+          Antes de seguir la NBA en serio, la jugábamos. NBA Live 2005, despues el 2006 en PlayStation2 —allá por
+          2005, con los colegas, quemando tardes enteras y alguna madrugada que otra. Y no era lo unico que se quemaba
+          como buenos hijos del humo que eramos!
+
+          El juego tenia muchisima calidad para la epoca que era, y si pillabamos multitap, con 4 y 5 jugadores incluso a la 
+          vez, aquello era vicio maximo. Si incluso llegabamos a hacernos Drafts y cada uno tenia su equipo hecho a gusto y 
+          antojo! qué buena epoca! baloncesto!
+
+          BOOOOOM en tu cara, vaya mate!
         </p>
       </div>
+      <div class="section-media-row">
+        <img src="assets/img/nbalive.jpg" alt="NBA Live en la Play" class="section-img-nba">
 
-      <div style="max-width: 360px; margin-top: var(--sp-5);">
-        <div class="memory-card reveal" style="--memory-color: var(--accent-warn);">
-          <span class="memory-card-title">🎮 NBA LIVE EN PS · ~2005</span>
-          <p>"Hasta quemarlo con los colegas. Playoffs caseros, apuestas de orgullo y la puerta de entrada al basket real."</p>
+        <div style="max-width: 360px; margin-top: var(--sp-5);">
+          <div class="memory-card reveal" style="--memory-color: var(--accent-warn);">
+            <span class="memory-card-title">🎮 NBA LIVE EN PS · ~2005</span>
+            <p>"Hasta quemarlo con los colegas. Playoffs caseros, apuestas de orgullo y la puerta de entrada al basket real."</p>
+          </div>
         </div>
       </div>
 
@@ -1158,14 +1090,14 @@
   <section class="section" id="allstar" style="padding-top: var(--sp-7);">
     <div class="container">
 
-      <div class="section-label">🌙 TRADICIÓN SAGRADA</div>
-      <h2 class="section-title" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">ALL-STAR NIGHTS: BIRRAS Y MADRUGADAS</h2>
+      <div class="section-label">🌙 TRADICIÓN SAGRADA, HISTORIA VIVA</div>
+      <h2 class="section-title" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">ALL-STAR NIGHTS: BIRRAS, TROCOLOS Y MADRUGADAS</h2>
 
       <div class="lore-box reveal">
         <p>
           Durante años, el All-Star fue una tradición sagrada. No veías el partido solo y
           en tu casa —te reunías. Siempre los mismos: los colegas de toda la vida, el salón
-          de alguien, algo de picar y las birras del protocolo. El partido empezaba pasada
+          de alguien, el campo de alguien, comida para gordos y las birras del protocolo. El partido empezaba pasada
           la medianoche, hora española, y ahí estábamos, luchando contra el sueño hasta
           las 3 o las 4 de la madrugada viendo el mejor espectáculo de baloncesto del año.
         </p>
@@ -1177,14 +1109,18 @@
         </p>
         <p>
           Esas noches son de las que uno recuerda. El basket como excusa perfecta para
-          juntarse, reírse y perder el sueño sin arrepentirse.
+          juntarse, reírse y perder el sueño sin arrepentirse. Mas de 5 años seguidos quedando para ver el All-Star,
+          qué locura de noche Daimiel! por qué todos los jugones sonrien igual!
         </p>
       </div>
+      <div class="section-media-row">
+        <img src="assets/img/allstars2006.jpg" alt="All-Star 2006" class="section-img-nba">
 
-      <div style="max-width: 400px; margin-top: var(--sp-5);">
-        <div class="memory-card reveal" style="--memory-color: var(--accent-tertiary);">
-          <span class="memory-card-title">🌙 ALL-STAR NIGHTS · TRADICIÓN ANUAL</span>
-          <p>"Madrugadas, colegas, birras y basket puro. El ritual que nunca falla desde hace 20 años."</p>
+        <div style="max-width: 400px; margin-top: var(--sp-5);">
+          <div class="memory-card reveal" style="--memory-color: var(--accent-tertiary);">
+            <span class="memory-card-title">🌙 ALL-STAR NIGHTS · TRADICIÓN ANUAL</span>
+            <p>"Madrugadas, colegas, birras y basket puro. El ritual que nunca falla desde hace 20 años."</p>
+          </div>
         </div>
       </div>
 
@@ -1200,7 +1136,7 @@
   <section class="section" id="fantasy" style="padding-top: var(--sp-7);">
     <div class="container">
 
-      <div class="section-label">🏆 14 AÑOS DE SUFRIMIENTO</div>
+      <div class="section-label">🏆 14 AÑOS DE SUFRIMIENTO, LA INTRASCENDENCIA</div>
       <h2 class="section-title" style="color:var(--accent-warn);text-shadow:var(--glow-gold);">EL FANTASY: 14 AÑOS SIN GANAR EL ANILLO</h2>
 
       <div class="lore-box reveal">
@@ -1210,21 +1146,24 @@
           Anillo del Fantasy, trofeo moral y económico de incalculable valor emocional.
         </p>
         <p>
-          Catorce años de draft estratégico, de estudiar lesiones a las dos de la madrugada,
-          de hacer trades que parecen geniales y acaban siendo un desastre, de rezar porque
-          tu base favorito no se tuerza un tobillo en el último cuarto de un partido
+          Catorce años de draft estratégico, de estudiar lesiones,
+          de hacer trades que parecen geniales y acaban siendo un desastre, algunos INFAMES
+           de rezar porque tu base favorito no se tuerza un tobillo en el último cuarto de un partido
           sin importancia.
-        </p>
+        </p> 
         <p>
           No es que no lo intente. Es que hay una fuerza cósmica, un karma específico del
           fantasy basket, que conspira activamente contra mí. Cada año tengo mi teoría de
           por qué este va a ser el año. Cada año, el universo me responde con una lesión
           en el primer mes, un trade que se cae y un rival que puntúa 200 en una semana.
-          Pero ahí sigo. Porque el fantasy no es solo ganar —es el grupo, los mensajes
+          Pero ahí sigo. Porque el fantasy no es solo ganar —es el <b>GRUPO, GALLINERO FANTASY</b>, los mensajes
           a deshoras, los insultos cariñosos cuando alguien ficha a tu jugador antes que
           tú, y la esperanza renovada cada octubre de que este año, por fin, sea diferente.
         </p>
       </div>
+<img src="assets/img/fantasyhoops.jpg" alt="Fantasy Hoops" class="section-img-nba"
+  style="width: 1024px;max-width: 1300px;max-height:400px;">
+
 
       <div class="fantasy-card reveal">
         <div class="fantasy-card-badge">💀 SIN ANILLO DESDE 2011</div>
