@@ -544,6 +544,23 @@
 <!-- JS -->
 <script src="js/main.js"></script>
 <script>
+  // ─── typeWriter fallback (por si main.js no carga, ej. proxy corporativo) ──
+    if (typeof typeWriter === 'undefined') {
+      window.typeWriter = function (el, text, speed, callback) {
+        speed = speed || 60;
+        let i = 0;
+        el.textContent = '';
+        el.style.visibility = 'visible';
+        (function tick() {
+          if (i < text.length) {
+            el.textContent += text[i++];
+            setTimeout(tick, speed);
+          } else if (callback) {
+            callback();
+          }
+        })();
+      };
+    }
   // ─── i18n translations ────────────────────────────────────────────────
   const translations = {
     es: {
