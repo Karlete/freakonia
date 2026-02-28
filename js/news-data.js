@@ -10,6 +10,153 @@
 
 var NEWS_DATA = [
 
+  // ── ARTICLE 14 ──────────────────────────────────────────────────
+  {
+    id:         'noticia-nba-allstar-2026',
+    topic:      'nba',
+    category:   'misc',
+    emoji:      '🏀',
+    badgeLabel: 'NBA',
+    title:      'NBA ALL-STAR 2026 — LOS ÁNGELES SE RINDE ANTE LA ÉLITE DEL BASKET',
+    summary:    'El All-Star 2026 en el Intuit Dome de Los Ángeles ha sido uno de los mejores fines de semana de las estrellas en años. Nuevo formato, Lillard ganando su tercer concurso de triples y Edwards dominando el partido principal. Esto es lo que hay que ver.',
+    full:       [
+      'El fin de semana del 13 al 15 de febrero en el Intuit Dome de Inglewood, California reunió a lo mejor de la NBA bajo un formato completamente renovado: tres equipos (USA Stars, USA Stripes y World) en lugar del clásico Este vs Oeste. Y reconozco que era escéptica con el cambio, pero funcionó mejor de lo esperado.',
+      'En el partido estelar, Anthony Edwards y Tyrese Maxey lideraron a las USA Stars y se llevaron el título. Más allá del resultado, el espectáculo fue lo que importaba: Luka Doncic en Los Ángeles de titular del Oeste, Giannis acumulando su décimo All-Star consecutivo, y Cade Cunningham recordándonos que Detroit está de vuelta.',
+      'Pero lo del sábado fue especial. Damian Lillard ganó el Concurso de Triples por tercera vez en su carrera. Tres veces. En un torneo donde participan los mejores tiradores del planeta. Y luego está Keshad Johnson ganando el Slam Dunk con consistencia frente a la espectacularidad de su rival. La polémica estaba servida.',
+      'Con los playoffs acercándose en abril, este All-Star ha sido el último respiro antes de que empiece la guerra de verdad. Los Cavaliers siguen siendo el equipo más sólido del Este. En el Oeste, Jokic y los Nuggets no van a regalar nada. Va a ser un final de temporada brutal.'
+    ],
+    date:       '28/02/2026',
+    url:        'https://www.nba.com/allstar/2026',
+    page:       'nba.html',
+    pageLabel:  'IR A NBA',
+    accent:     '#ffcc00',
+    source:     'nba.com',
+    img:        'assets/img/nba_allstar_2026.jpg',
+    tags:       ['NBA', 'All-Star 2026', 'Lillard', 'Anthony Edwards', 'Los Ángeles']
+  },
+
+  // ── ARTICLE 13 ──────────────────────────────────────────────────
+  {
+    id:         'noticia-lec-versus-2026-final-barcelona',
+    topic:      'esports',
+    category:   'esports',
+    emoji:      '🏆',
+    badgeLabel: 'ESPORTS',
+    title:      'LEC VERSUS 2026 — FINAL EN BARCELONA Y G2 AL BORDE DEL ABISMO',
+    summary:    'Los playoffs del LEC Versus 2026 están siendo un caos glorioso. Karmine Corp lidera, G2 y Fnatic han llegado a cuartos desde abajo, y la final se jugará en Barcelona. Europa está que arde.',
+    full:       [
+      'La fase regular del LEC Versus 2026 terminó con Karmine Corp como campeón en solitario, seguido de NAVI —la gran revelación de esta temporada— y un Team Vitality completamente renovado con Humanoid en el mid. Hasta aquí todo bastante bien. Pero la noticia de verdad es otra: G2 Esports y Fnatic, séptimos y octavos. El peor resultado de ambas organizaciones en muchísimo tiempo.',
+      'Los playoffs se disputaron del 16 de febrero al 1 de marzo en formato double elimination, con la gran final presencial en Barcelona. Tres equipos españoles clasificaron: GIANTX, Team Heretics y Movistar KOI, aunque ninguno lo tuvo fácil. G2 ya ha barrido a KOI 3-0 en el winners bracket y busca la redención después de una fase regular muy por debajo de sus estándares.',
+      'El ganador de esta LEC Versus se clasifica directamente al First Stand 2026, el primer torneo internacional del año. Eso convierte estos playoffs en algo más que un torneo de inicio de temporada: hay puntos internacionales en juego y la presión es máxima para todos. Especialmente para G2, que necesita demostrar que lo de la fase regular fue un accidente.',
+      'Como espectadora crónica de la LEC desde la S1, lo de NAVI me tiene flipada. Una organización nueva en el ecosistema europeo que llega, arrasa en la fase regular y se pone en el mapa internacional. Eso es exactamente el tipo de historia que hace grande a esta liga. La final en Barcelona va a ser un espectáculo.'
+    ],
+    date:       '28/02/2026',
+    url:        'https://lolesports.com/es-ES/leagues/lec',
+    page:       'esports.html',
+    pageLabel:  'IR A ESPORTS',
+    accent:     '#ffcc00',
+    source:     'lolesports.com',
+    img:        'assets/img/lec_versus_2026.jpg',
+    tags:       ['LEC', 'G2 Esports', 'Karmine Corp', 'GIANTX', 'First Stand 2026']
+  },
+
+  // ── ARTICLE 12 ──────────────────────────────────────────────────
+  {
+    id:         'noticia-god-of-war-trilogy-remake-2026',
+    topic:      'gaming',
+    category:   'gaming',
+    emoji:      '🎮',
+    badgeLabel: 'GAMING',
+    title:      'GOD OF WAR TRILOGY REMAKE Y SONS OF SPARTA — KRATOS LO HA VUELTO A HACER',
+    summary:    'El State of Play del 12 de febrero fue una locura. Santa Monica anunció el God of War Trilogy Remake, lanzó por sorpresa Sons of Sparta ese mismo día, y el internet entero explotó. Kratos sigue mandando.',
+    full:       [
+      'El State of Play del 12 de febrero de 2026 ha sido uno de esos eventos que se recuerdan. Sony cerró el evento con dos anuncios de God of War en una misma noche, algo que nadie esperaba: por un lado, el God of War Trilogy Remake en desarrollo; por otro, un shadowdrop inmediato con God of War: Sons of Sparta ya disponible en PS5 ese mismo día.',
+      'Sons of Sparta es una aventura 2D con estética pixel art desarrollada por Mega Cat Studios junto a Santa Monica, que narra la juventud de Kratos y su hermano Deimos en el agoge espartano. El juego ha tenido polémica con su modo cooperativo —la comunidad se sintió engañada con la implementación inicial— pero el estudio ya ha añadido gratis el modo "Foso de Agonías" para jugar en pareja desde el inicio.',
+      'Lo que de verdad ha hecho explotar las redes es el Trilogy Remake. Los tres juegos clásicos de PS2 y PS3 con gráficos modernos y, según ha filtrado el actor de voz, un nuevo sistema de combate. El propio T.C. Carson —la voz del Kratos original— fue quien anunció el proyecto en el State of Play. El desarrollo está en fases tempranas, así que puede que no lo veamos hasta 2027 o 2028.',
+      'Personalmente, la trilogía griega es la que más me marcó. El God of War de PS2 era pura fantasía de poder sin filtros, y ver eso con el motor gráfico actual y el sistema de combate moderno es algo que no sabía que necesitaba hasta que lo anunciaron. Eso sí, espero que mantengan la brutalidad del original. Kratos griego no tiene tiempo para momentos emotivos con su hijo. Kratos griego destruye dioses.'
+    ],
+    date:       '28/02/2026',
+    url:        'https://www.eurogamer.es/sony-anuncia-god-of-war-trilogy-remake-y-god-of-war-sons-of-sparta',
+    page:       'gaming.html',
+    pageLabel:  'IR A GAMING',
+    accent:     '#00ff41',
+    source:     'eurogamer.es',
+    img:        'assets/img/god_of_war_trilogy_remake.jpg',
+    tags:       ['God of War', 'PlayStation', 'Remake', 'Santa Monica', 'Sons of Sparta']
+  },
+
+  // ── ARTICLE 11 ──────────────────────────────────────────────────
+  {
+    id:         'noticia-lec-versus-finals-barcelona-2026',
+    topic:      'esports',
+    category:   'esports',
+    emoji:      '🏆',
+    badgeLabel: 'ESPORTS',
+    title:      'LEC VERSUS FINALS EN BARCELONA — G2 ESPERA EN LA FINAL, EL LOWER BRACKET LO DECIDE TODO HOY',
+    summary:    'Los LEC Versus Finals 2026 están ardiendo en el Olímpic Arena de Badalona. G2 Esports aplastó a Movistar KOI 3-0 en la Upper Final y espera en la Grand Final del domingo. Karmine Corp, que barrió a GIANTX el viernes, se juega hoy el billete a la final en el Lower. Barcelona huele a Summoner\'s Rift.',
+    full:       [
+      'Si el viernes publicábamos que el LEC Versus se decidía este fin de semana en Barcelona, hoy toca actualización en caliente desde el sofá, con el monitor pegado al stream y el café frío de tanto no levantarme. G2 Esports se clasificó para la Grand Final del domingo aplastando a Movistar KOI en la Upper Bracket Final con un contundente 3-0 que no dejó resquicio a la duda. Los veteranos siguen teniendo colmillo cuando el torneo aprieta de verdad.',
+      'El cuadro del Lower está siendo una auténtica carnicería de nervios. Karmine Corp, que barrió a GIANTX 3-0 el viernes sin despeinarse, se enfrenta hoy sábado 28 a Movistar KOI en el Lower Bracket Final. Quien gane llega a la Grand Final del domingo para medirse con G2. Dos equipos que arrastran la presión de sus comunidades, un formato sin red de seguridad y el billete a First Stand en São Paulo como premio máximo para el ganador.',
+      'La escena española está representada de lujo este fin de semana: GIANTX estuvo ahí hasta el viernes, Movistar KOI lucha hoy por meterse en la final. Barcelona como sede es un acierto enorme y se nota en el ambiente de las retransmisiones. Sea quien sea el rival de G2 el domingo, tenemos Grand Final con sabor europeo de primera. ¿Podrá Karmine Corp mantener su dominio de toda la temporada regular o el viejo rey G2 cierra el ciclo con título? Yo ya tengo la mantita, los snacks y las expectativas a tope.'
+    ],
+    date:       '28/02/2026',
+    url:        'https://lolesports.com/en-US/tournament/115548424304940735/overview',
+    page:       'esports.html',
+    pageLabel:  'ESPORTS',
+    accent:     '#ffcc00',
+    source:     'lolesports.com',
+    img:        '',
+    tags:       ['LEC', 'Versus 2026', 'Barcelona', 'G2 Esports', 'Karmine Corp', 'First Stand']
+  },
+
+  // ── ARTICLE 10 ──────────────────────────────────────────────────
+  {
+    id:         'noticia-re9-requiem-2026',
+    topic:      'gaming',
+    category:   'gaming',
+    emoji:      '🎮',
+    badgeLabel: 'GAMING',
+    title:      'RESIDENT EVIL 9: REQUIEM YA ESTÁ EN LA CALLE — Y LOS SPOILERS SE ESPARCEN COMO EL T-VIRUS',
+    summary:    'El 27 de febrero Capcom lanzó Resident Evil 9: Requiem en PS5, Xbox Series, PC y Nintendo Switch 2. Leon Kennedy vuelve a una Raccoon City post-nuclear junto a Grace Ashcroft, nueva protagonista e hija de Alyssa de RE7. Las copias anticipadas ya circulaban días antes y los foros están minados. Modo avión activado.',
+    full:       [
+      'Capcom ha conseguido algo que parecía difícil después de Resident Evil 8 Village: volver a generar hype masivo antes del lanzamiento. RE9 Requiem llegó ayer, 27 de febrero, a PS5, Xbox Series X|S, PC y Nintendo Switch 2 simultáneamente. La premisa es sencillamente deliciosa: Raccoon City, la ciudad que todos recordamos como el escenario donde todo se fue al traste en RE2 y RE3, ha sido destruida por bombardeos nucleares y sirve ahora de escenario post-apocalíptico para una nueva pesadilla de Capcom.',
+      'La protagonista es Grace Ashcroft, investigadora del FBI e hija de Alyssa, la periodista de Resident Evil 7. Capcom mete aquí un hilo de lore que conecta la saga de una manera que no esperaba nadie y que, según los poquísimos agraciados con copias anticipadas, tiene mucho más peso narrativo de lo habitual en la franquicia. Leon Kennedy también aparece. La combinación pinta bien sobre el papel, aunque "pinta bien sobre el papel" también lo podría haber dicho alguien antes de RE6 y ya sabemos cómo terminó aquello.',
+      'El problema del día de lanzamiento: los spoilers. Copias anticipadas en circulación desde días antes, capturas filtradas por todas partes y un livestream en Twitch que duró unos veinte minutos antes de que Capcom lo cortara de raíz. Si tienes pendiente jugar Requiem y aún no has empezado, pon internet en modo avión directamente. Los foros están siendo un campo minado. Personalmente estoy al borde del estado de emergencia friki total hasta que pueda meterle unas horitas esta misma tarde.'
+    ],
+    date:       '28/02/2026',
+    url:        'https://www.3djuegos.com/juegos/resident-evil-9-requiem/',
+    page:       'gaming.html',
+    pageLabel:  'GAMING',
+    accent:     '#00bfff',
+    source:     '3djuegos.com',
+    img:        '',
+    tags:       ['Resident Evil 9', 'Requiem', 'Capcom', 'PS5', 'Leon Kennedy', 'Raccoon City']
+  },
+
+  // ── ARTICLE 9 ───────────────────────────────────────────────────
+  {
+    id:         'noticia-hotd-s3-trailer-2026',
+    topic:      'got',
+    category:   'got',
+    emoji:      '🐉',
+    badgeLabel: 'GOT',
+    title:      'HOUSE OF THE DRAGON T3 — TRÁILER BRUTAL, PERO MARTIN DICE QUE YA NO ES SU HISTORIA',
+    summary:    'El primer tráiler de la temporada 3 de La Casa del Dragón está aquí y es visualmente espectacular: la Batalla del Gullet por fin se acerca. El problema: George R.R. Martin acaba de declarar públicamente que "esto ya no es mi historia". Drama dentro y fuera de la pantalla. Junio 2026 llega cargado de polémica.',
+    full:       [
+      'El tráiler mola. Lo digo con sinceridad, y mira que después de la temporada 2 —ese festival de incoherencias épicas que analizamos con detalle en esta web— no tenía muchas ganas de ilusionarme. Y sin embargo ahí está: dragones sobrevolando el Gullet, batallas navales que prometen ser de las más épicas de toda la saga, personajes que por fin parecen estar en el lugar correcto de la historia. El actor Abubakar Salim ya adelantó que rodar la Batalla del Gullet fue "uno de los momentos más locos de su carrera". Las expectativas están calibradas al alza. Junio 2026 no puede llegar pronto.',
+      'Pero entonces llega George R.R. Martin y lo suelta con toda la frialdad del mundo: "Esto ya no es mi historia." Brutal. El hombre que construyó Poniente viendo cómo Ryan Condal y su equipo siguen tomando decisiones que se alejan cada vez más de los libros ha decidido desvincularse públicamente de la tercera temporada. Esto no es un problemilla. Es un problemón mayúsculo, porque lo que diferencia a las buenas adaptaciones de las malas es precisamente que el creador pueda reconocerse en ellas.',
+      '¿Puede ser la temporada 3 buena aunque Martin la repudie? Técnicamente, sí. Pero el sabor agridulce que deja esa noticia es innegable. Ojalá Condal haya aprendido de los errores de la 2: Criston Cole matando gente impunemente, las reinas quedando a cafés con las rivales que liquidaron a sus hijos, las invenciones peregrinas que salen de la nada. La Batalla del Gullet tiene que ser la mayor set-piece de acción dragoneril de la historia de la televisión. Si no lo es, el fandom sabrá muy bien a quién pasarle la factura. Y pista: no es a George.'
+    ],
+    date:       '28/02/2026',
+    url:        'https://www.3djuegos.com/tv-series/noticias/nuevo-trailer-casa-dragon-espectacular-problema-que-serie-tiene-enemigo-casa',
+    page:       'got.html',
+    pageLabel:  'GOT',
+    accent:     '#cc2200',
+    source:     '3djuegos.com',
+    img:        '',
+    tags:       ['House of the Dragon', 'HBO', 'Temporada 3', 'George R.R. Martin', 'Batalla del Gullet', '2026']
+  },
+
   // ── ARTICLE 8 ───────────────────────────────────────────────────
   {
     id:         'noticia-coc-arkham-2026',
@@ -189,5 +336,5 @@ var NEWS_DATA = [
 
 ];
 
-// NEWS_TRACKER: {"used_topics":["got","esports","gaming","magic","gaming","gamedev","warhammer","rol"],"last_update":"2026-02-26"}
-// Next session available topics: nba · got · gaming · esports
+// NEWS_TRACKER: {"used_topics":["got","esports","gaming","magic","gaming","gamedev","warhammer","rol","got","gaming","esports","nba","esports","gaming"],"last_update":"2026-02-28"}
+// Next session available topics: got · gaming · esports · gamedev · warhammer
