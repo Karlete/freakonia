@@ -103,4 +103,4 @@ Owner: Karlete | Stack: HTML5, CSS3, Vanilla JS | Host: GitHub Pages
 
 ## Fuentes de noticias
 
-Antes de buscar noticias o novedades para cualquier sección del proyecto, leer `news_sources.md` y consultar las fuentes de la categoría correspondiente.
+Antes de buscar noticias o novedades para cualquier sección del proyecto, leer `news_source.md` y consultar las fuentes de la categoría correspondiente.

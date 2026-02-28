@@ -10,6 +10,31 @@
 
 var NEWS_DATA = [
 
+  // ── ARTICLE 15 ──────────────────────────────────────────────────
+  {
+    id:         'noticia-lec-versus-final-badalona-2026',
+    topic:      'esports',
+    category:   'esports',
+    emoji:      '🏆',
+    badgeLabel: 'ESPORTS',
+    title:      'LEC VERSUS 2026 — MAÑANA G2 VS EL QUE GANE EL KOI-KC DE HOY EN BADALONA',
+    summary:    'Las finales del LEC Versus 2026 están ardiendo en Badalona. G2 ya espera en la gran final del domingo tras arrasar en el winners bracket. Hoy sábado se decide quién le planta cara: Movistar KOI o Karmine Corp.',
+    full:       [
+      'El Olimpic Arena de Badalona es este fin de semana la capital europea del League of Legends, y el ambiente está al rojo vivo. G2 Esports ya está instalado en la gran final del domingo 1 de marzo después de barrer a Movistar KOI por un contundente 3-0 en el winners bracket. SkewMond está intratable en estos playoffs y Caps sigue demostrando que en 2026 sigue siendo de los mejores mids de Europa.',
+      'Ayer viernes arrancaron las finales presenciales con Karmine Corp aplastando a GIANTX 3-0. Los malagueños se despiden del split con un top 4 histórico para la organización, pero KC no dio ninguna opción. Caliste en modo carry, Yike recordándonos por qué ganó varias LEC, y una propuesta de juego muy superior a la del conjunto español.',
+      'Hoy sábado a las 17:00 se juega el partido más importante de la semana: Movistar KOI contra Karmine Corp, semifinal del losers bracket. El que gane se cita con G2 mañana domingo en la gran final. El que pierda se va a casa. KOI juega prácticamente en casa ante su público de Badalona, pero KC viene de un 3-0 limpio y con la moral por las nubes. Va a ser una serie brutal.',
+      'El ganador de esta LEC Versus se clasifica al First Stand 2026 en Brasil, el primer torneo internacional del año. Tres equipos con posibilidades reales, una sola plaza. G2 lleva semanas siendo el mejor equipo de Europa en estos playoffs, pero en un Bo5 presencial con la afición empujando, cualquier cosa puede pasar. La final del domingo puede ser un clásico. O puede ser otro 3-0 de G2. Con SkewMond así, casi lo prefiero ver que anticiparlo.'
+    ],
+    date:       '28/02/2026',
+    url:        'https://lolesports.com/es-ES/leagues/lec',
+    page:       'esports.html',
+    pageLabel:  'IR A ESPORTS',
+    accent:     '#ffcc00',
+    source:     'lolesports.com',
+    img:        'assets/img/lec_versus_2026.jpg',
+    tags:       ['LEC', 'G2 Esports', 'Movistar KOI', 'Karmine Corp', 'Badalona', 'First Stand 2026']
+  },
+
   // ── ARTICLE 14 ──────────────────────────────────────────────────
   {
     id:         'noticia-nba-allstar-2026',
@@ -35,31 +60,6 @@ var NEWS_DATA = [
     tags:       ['NBA', 'All-Star 2026', 'Lillard', 'Anthony Edwards', 'Los Ángeles']
   },
 
-  // ── ARTICLE 13 ──────────────────────────────────────────────────
-  {
-    id:         'noticia-lec-versus-2026-final-barcelona',
-    topic:      'esports',
-    category:   'esports',
-    emoji:      '🏆',
-    badgeLabel: 'ESPORTS',
-    title:      'LEC VERSUS 2026 — FINAL EN BARCELONA Y G2 AL BORDE DEL ABISMO',
-    summary:    'Los playoffs del LEC Versus 2026 están siendo un caos glorioso. Karmine Corp lidera, G2 y Fnatic han llegado a cuartos desde abajo, y la final se jugará en Barcelona. Europa está que arde.',
-    full:       [
-      'La fase regular del LEC Versus 2026 terminó con Karmine Corp como campeón en solitario, seguido de NAVI —la gran revelación de esta temporada— y un Team Vitality completamente renovado con Humanoid en el mid. Hasta aquí todo bastante bien. Pero la noticia de verdad es otra: G2 Esports y Fnatic, séptimos y octavos. El peor resultado de ambas organizaciones en muchísimo tiempo.',
-      'Los playoffs se disputaron del 16 de febrero al 1 de marzo en formato double elimination, con la gran final presencial en Barcelona. Tres equipos españoles clasificaron: GIANTX, Team Heretics y Movistar KOI, aunque ninguno lo tuvo fácil. G2 ya ha barrido a KOI 3-0 en el winners bracket y busca la redención después de una fase regular muy por debajo de sus estándares.',
-      'El ganador de esta LEC Versus se clasifica directamente al First Stand 2026, el primer torneo internacional del año. Eso convierte estos playoffs en algo más que un torneo de inicio de temporada: hay puntos internacionales en juego y la presión es máxima para todos. Especialmente para G2, que necesita demostrar que lo de la fase regular fue un accidente.',
-      'Como espectadora crónica de la LEC desde la S1, lo de NAVI me tiene flipada. Una organización nueva en el ecosistema europeo que llega, arrasa en la fase regular y se pone en el mapa internacional. Eso es exactamente el tipo de historia que hace grande a esta liga. La final en Barcelona va a ser un espectáculo.'
-    ],
-    date:       '28/02/2026',
-    url:        'https://lolesports.com/es-ES/leagues/lec',
-    page:       'esports.html',
-    pageLabel:  'IR A ESPORTS',
-    accent:     '#ffcc00',
-    source:     'lolesports.com',
-    img:        'assets/img/lec_versus_2026.jpg',
-    tags:       ['LEC', 'G2 Esports', 'Karmine Corp', 'GIANTX', 'First Stand 2026']
-  },
-
   // ── ARTICLE 12 ──────────────────────────────────────────────────
   {
     id:         'noticia-god-of-war-trilogy-remake-2026',
@@ -83,30 +83,6 @@ var NEWS_DATA = [
     source:     'eurogamer.es',
     img:        'assets/img/god_of_war_trilogy_remake.jpg',
     tags:       ['God of War', 'PlayStation', 'Remake', 'Santa Monica', 'Sons of Sparta']
-  },
-
-  // ── ARTICLE 11 ──────────────────────────────────────────────────
-  {
-    id:         'noticia-lec-versus-finals-barcelona-2026',
-    topic:      'esports',
-    category:   'esports',
-    emoji:      '🏆',
-    badgeLabel: 'ESPORTS',
-    title:      'LEC VERSUS FINALS EN BARCELONA — G2 ESPERA EN LA FINAL, EL LOWER BRACKET LO DECIDE TODO HOY',
-    summary:    'Los LEC Versus Finals 2026 están ardiendo en el Olímpic Arena de Badalona. G2 Esports aplastó a Movistar KOI 3-0 en la Upper Final y espera en la Grand Final del domingo. Karmine Corp, que barrió a GIANTX el viernes, se juega hoy el billete a la final en el Lower. Barcelona huele a Summoner\'s Rift.',
-    full:       [
-      'Si el viernes publicábamos que el LEC Versus se decidía este fin de semana en Barcelona, hoy toca actualización en caliente desde el sofá, con el monitor pegado al stream y el café frío de tanto no levantarme. G2 Esports se clasificó para la Grand Final del domingo aplastando a Movistar KOI en la Upper Bracket Final con un contundente 3-0 que no dejó resquicio a la duda. Los veteranos siguen teniendo colmillo cuando el torneo aprieta de verdad.',
-      'El cuadro del Lower está siendo una auténtica carnicería de nervios. Karmine Corp, que barrió a GIANTX 3-0 el viernes sin despeinarse, se enfrenta hoy sábado 28 a Movistar KOI en el Lower Bracket Final. Quien gane llega a la Grand Final del domingo para medirse con G2. Dos equipos que arrastran la presión de sus comunidades, un formato sin red de seguridad y el billete a First Stand en São Paulo como premio máximo para el ganador.',
-      'La escena española está representada de lujo este fin de semana: GIANTX estuvo ahí hasta el viernes, Movistar KOI lucha hoy por meterse en la final. Barcelona como sede es un acierto enorme y se nota en el ambiente de las retransmisiones. Sea quien sea el rival de G2 el domingo, tenemos Grand Final con sabor europeo de primera. ¿Podrá Karmine Corp mantener su dominio de toda la temporada regular o el viejo rey G2 cierra el ciclo con título? Yo ya tengo la mantita, los snacks y las expectativas a tope.'
-    ],
-    date:       '28/02/2026',
-    url:        'https://lolesports.com/en-US/tournament/115548424304940735/overview',
-    page:       'esports.html',
-    pageLabel:  'ESPORTS',
-    accent:     '#ffcc00',
-    source:     'lolesports.com',
-    img:        '',
-    tags:       ['LEC', 'Versus 2026', 'Barcelona', 'G2 Esports', 'Karmine Corp', 'First Stand']
   },
 
   // ── ARTICLE 10 ──────────────────────────────────────────────────
@@ -237,30 +213,6 @@ var NEWS_DATA = [
     tags:       ['Final Fantasy VII', 'Square Enix', 'Steam', 'GOG', 'Remaster', 'PC']
   },
 
-  // ── ARTICLE 1 ───────────────────────────────────────────────────
-  {
-    id: 1,
-    topic:      'esports',
-    category:   'esports',
-    emoji:      '🏆',
-    badgeLabel: 'ESPORTS',
-    title:      'LEC VERSUS 2026 \u2014 FINAL EN BARCELONA ESTE FIN DE SEMANA',
-    summary:    'La LEC llega a su cl\u00edmax: los playoffs del LEC Versus 2026 se deciden en Barcelona del 27 de febrero al 1 de marzo. Karmine Corp lidera, G2 y Fnatic llegan por los pelos. El primer clasificado a First Stand ya huele a polvo de Summoner\u2019s Rift.',
-    full: [
-      'El LEC Versus 2026 ha resultado ser la temporada de invierno m\u00e1s sorprendente que se recuerda. El formato completamente nuevo \u2014que invita a equipos de ligas regionales europeas a medirse con los diez grandes franquiciados\u2014 ha tra\u00eddo revelaciones may\u00fasculas. Karmine Corp domin\u00f3 la fase regular sin discusi\u00f3n, con NAVI como la gran sorpresa del invierno. Hasta aqu\u00ed, bien.',
-      'Pero el verdadero titular lo escribieron G2 Esports y Fnatic, acabando s\u00e9ptimos y octavos respectivamente en la fase regular. Para quienes llevamos a\u00f1os viendo a estos dos colossos repartirse los t\u00edtulos europeos como si fuera una tradici\u00f3n familiar, verlos en esa posici\u00f3n produce casi v\u00e9rtigo. Y eso sin mencionar que tres equipos espa\u00f1oles clasificaron a playoffs: GIANTX, Team Heretics y Movistar KOI. La escena espa\u00f1ola en su mejor momento.',
-      'Este fin de semana Barcelona es la capital del LoL competitivo europeo. El ganador va directo a First Stand 2026, el primer evento internacional de la temporada. G2 ya barri\u00f3 3-0 a Movistar KOI en cuartos, demostrando que los veteranos a\u00fan tienen colmillo cuando m\u00e1s importa. \u00bfPodr\u00e1 Karmine Corp mantener su dominio o el viejo orden europeo contraataca?'
-    ],
-    date:       '25/02/2026',
-    url:        'https://liquipedia.net/leagueoflegends/LEC/2026/Versus',
-    page:       'esports.html',
-    pageLabel:  'ESPORTS',
-    accent:     '#ffcc00',
-    source:     'liquipedia.net',
-    img:        'assets/img/lec_versus_2026.jpg',
-    tags:       ['LEC', 'Versus 2026', 'Barcelona', 'Karmine Corp', 'G2 Esports', 'First Stand']
-  },
-
   // ── ARTICLE 2 ───────────────────────────────────────────────────
   {
     id: 2,
@@ -336,5 +288,5 @@ var NEWS_DATA = [
 
 ];
 
-// NEWS_TRACKER: {"used_topics":["got","esports","gaming","magic","gaming","gamedev","warhammer","rol","got","gaming","esports","nba","esports","gaming"],"last_update":"2026-02-28"}
-// Next session available topics: got · gaming · esports · gamedev · warhammer
+// NEWS_TRACKER: {"used_topics":["got","esports","gaming","magic","gaming","gamedev","warhammer","rol","got","gaming","esports","nba","esports","gaming","esports"],"last_update":"2026-02-28"}
+// Next session available topics: got · gaming · gamedev · warhammer · nba
