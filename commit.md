@@ -2,6 +2,79 @@
 
 ---
 
+## Sesión 25 — 2026-03-01
+
+### fix+feat(index): PayPal URL fix + hero patron button
+
+- **index.html:** Fixed PayPal URL placeholder → `https://www.paypal.me/sanprietogamer/5`
+- **index.html:** Added `🏅 PIXEL PATRON` anchor button (`.btn.btn-gold.btn-small`) inside `hero-sprite-wrap`, after XP bar closing `</div>`, linking to `#pixel-patron`.
+- **index.html:** Added `<style>` block with `@keyframes patron-btn-pulse` (gold glow pulse) before `</body>`.
+
+---
+
+## Sesión 24 — 2026-03-01
+
+### feat(index): Pixel Patron Rain system
+
+- **New file:** `js/pixels-data.js` — PIXEL_DONORS array with 4 initial patrons (RIKI, MERCHAND, KAWAI_BI, KARLETE). Inline docs for intensity levels and color rotation.
+- **New file:** `css/pixels.css` — All styles for patron rain system: canvas, hero-shield, achievement card, counter, intensity bar, donor list, how-it-works grid. No border-radius, all design system variables.
+- **New file:** `js/pixels-rain.js` — Canvas animation loop: donor names fall from top with neon glow in their assigned colors. Builds drop pool proportionally. Updates UI (counter, intensity bar, donor list) via `updatePatronUI()` on DOMContentLoaded.
+- **index.html (head):** Added `<link css/pixels.css>` after news.css. Added `<script js/pixels-data.js>` after news-data.js.
+- **index.html (body):** Added `<canvas id="patron-rain-canvas">` after `.crt-overlay`. Added `.hero-shield` as first child of `.hero-content`.
+- **index.html:** New `<section id="pixel-patron">` inserted between hero `</section>` and `<main>` — achievement card, donor list, how-it-works grid.
+- **index.html (body end):** Added `<script js/pixels-rain.js>` before `</body>`.
+
+---
+
+## Sesión 23 — 2026-02-28
+
+### css/news.css — Bug fix: Leer más expandía todas las cards de la fila
+- **Problema:** Al hacer clic en "LEER MÁS" de una card, todas las cards de la misma fila del grid se expandían visualmente en altura.
+- **Causa:** `align-items: stretch` (comportamiento por defecto de CSS grid) iguala la altura de todos los items de cada fila al más alto.
+- **Fix:** Añadido `align-items: start` a `.news-grid` en `css/news.css` (línea 104). Cada card ahora solo ocupa su propia altura.
+- Commit: `fix(news): add align-items:start to .news-grid to fix Leer más bug`
+- Push a `origin/main` ✅
+
+---
+
+## Sesión 22 — 2026-02-28
+
+### js/news-data.js — Limpieza artículos LEC duplicados
+- Eliminados 3 artículos de esports/LEC Versus 2026 redundantes o desactualizados:
+  - `noticia-lec-versus-2026-final-barcelona` (sesión 21 — enfoque erróneo)
+  - `noticia-lec-versus-finals-barcelona-2026` (sesión 20 — desactualizado)
+  - `id: 1` (sesión 13 — previa a playoffs, ya caducado)
+- Insertado 1 artículo definitivo al top del array:
+  - `noticia-lec-versus-final-badalona-2026` — estado actual del sábado 28: G2 en final del domingo, KOI vs KC semifinal lower 17:00. Fuente: lolesports.com
+- NEWS_TRACKER actualizado.
+- Commit: `fix(news): replace duplicate LEC articles with single updated article`
+
+---
+
+## Sesión 21 — 2026-02-28
+
+### js/news-data.js — 3 artículos pre-escritos (NBA · Esports · Gaming)
+- Insertados al top del array (artículos 12, 13, 14):
+  - **NBA** `noticia-nba-allstar-2026` — All-Star 2026 en el Intuit Dome de LA. Nuevo formato 3 equipos, Lillard 3er concurso de triples, Edwards MVP. Fuente: nba.com
+  - **ESPORTS** `noticia-lec-versus-2026-final-barcelona` — LEC Versus 2026 playoffs, G2 y Fnatic séptimos y octavos, final en Barcelona. Fuente: lolesports.com
+  - **GAMING** `noticia-god-of-war-trilogy-remake-2026` — State of Play 12/02: GoW Trilogy Remake anunciado + shadowdrop Sons of Sparta (Mega Cat Studios). Fuente: eurogamer.es
+- NEWS_TRACKER actualizado: `nba`, `esports`, `gaming` añadidos a used_topics.
+- Commit: `feat: 3 new articles (nba/esports/gaming) + tracker updated`
+
+---
+
+## Sesión 20 — 2026-02-28
+
+### js/news-data.js — 3 artículos nuevos buscados desde fuentes
+- Búsqueda real con web_search + web_fetch en fuentes de `news_source.md`.
+- Insertados al top del array (artículos 9, 10, 11):
+  - **GOT** `noticia-hotd-s3-trailer-2026` — Tráiler HotD T3: Batalla del Gullet, junio 2026. George R.R. Martin: "ya no es mi historia". Fuente: 3djuegos.com
+  - **GAMING** `noticia-re9-requiem-2026` — RE9 Requiem lanzado 27/02 en PS5/Xbox/PC/Switch2. Grace Ashcroft + Leon, Raccoon City post-nuclear. Spoilers filtrando. Fuente: 3djuegos.com
+  - **ESPORTS** `noticia-lec-versus-finals-barcelona-2026` — LEC Versus Finals en Badalona: G2 3-0 KOI en upper, KC vs GIANTX 3-0, hoy KOI vs KC. Fuente: lolesports.com
+- NEWS_TRACKER actualizado: `got`, `gaming`, `esports` añadidos.
+
+---
+
 ## Sesión 12 — 2026-02-22
 
 ### rol.html — Imágenes de portadas de libros RPG

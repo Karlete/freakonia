@@ -16,9 +16,11 @@
   <link rel="stylesheet" href="css/components.css" />
   <link rel="stylesheet" href="css/animations.css" />
   <link rel="stylesheet" href="css/news.css" />
+  <link rel="stylesheet" href="css/pixels.css" />
 
   <!-- News data (global NEWS_DATA array) -->
   <script src="js/news-data.js"></script>
+  <script src="js/pixels-data.js"></script>
 
 
   <!-- Open Graph / WhatsApp / Telegram -->
@@ -44,6 +46,7 @@
 
 <!-- CRT overlay -->
 <div class="crt-overlay" aria-hidden="true"></div>
+<canvas id="patron-rain-canvas" aria-hidden="true"></canvas>
 
 <!-- ─── Navigation ─────────────────────────────────────────────────────── -->
 <nav class="navbar" role="navigation" aria-label="Navegación principal">
@@ -86,6 +89,7 @@
   </div>
 
   <div class="hero-content">
+    <div class="hero-shield" aria-hidden="true"></div>
     <div class="hero-text">
       <p class="hero-pre" data-i18n="hero.pre">// JUGADOR UNO HA ENTRADO AL JUEGO</p>
 
@@ -150,6 +154,116 @@
         </div>
         <div class="bar-track">
           <div class="bar-fill pink" data-fill="88"></div>
+        </div>
+      </div>
+      <!-- Pixel Patron anchor button -->
+      <a
+        href="#pixel-patron"
+        class="btn btn-gold btn-small"
+        style="margin-top:0.75rem;animation:patron-btn-pulse 2s ease-in-out infinite;display:inline-block;text-align:center;"
+        title="Aparece en la lluvia de Freakonia"
+      >
+        🏅 PIXEL PATRON
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Pixel Patron Rain ────────────────────────────────────────────────── -->
+<section class="section" id="pixel-patron">
+  <div
+    class="container"
+    style="display:flex;flex-direction:column;align-items:center;gap:2rem;"
+  >
+    <div style="text-align:center;">
+      <h2 class="section-title">&gt; PIXEL PATRON RAIN</h2>
+      <div class="pixel-divider"></div>
+    </div>
+
+    <!-- Achievement card -->
+    <div class="patron-achievement-card">
+      <div class="patron-achievement-icon">🏅</div>
+      <div class="patron-achievement-title">[ PIXEL PATRON ]</div>
+      <div class="patron-achievement-desc">
+        Dona 5€ y tu nombre caerá para siempre en la lluvia de Freakonia.<br />
+        A más patrons, más densa la tormenta.<br />
+        <strong
+          style="color:var(--accent-warn);font-family:var(--font-primary);font-size:0.55rem;display:block;margin-top:0.5rem;"
+        >
+          Tu nombre. Tu pixel. Tu legado.
+        </strong>
+      </div>
+
+      <div class="patron-counter">
+        <div class="patron-counter-number" id="patron-count">0</div>
+        <div class="patron-counter-label">
+          <strong>PIXEL PATRONS</strong>
+          han donado 5€ y viven en la lluvia
+        </div>
+      </div>
+
+      <div class="patron-intensity">
+        <div class="patron-intensity-label">
+          INTENSIDAD DE LLUVIA
+          <span id="patron-intensity-label">SILENCIOSA</span>
+        </div>
+        <div class="bar-track">
+          <div
+            class="bar-fill green"
+            id="patron-intensity-bar"
+            style="width:2%;transition:width 0.8s ease;"
+          ></div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+        <a
+          href="https://www.paypal.me/sanprietogamer/5"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-gold"
+        >
+          💳 DONAR 5€ VÍA PAYPAL
+        </a>
+      </div>
+    </div>
+
+    <!-- Donor list -->
+    <div class="patron-donor-list-wrap">
+      <div class="patron-donor-list-header">
+        ▶ PIXEL PATRONS EN LA LLUVIA
+        <span id="patron-list-count">0 registrados</span>
+      </div>
+      <div class="patron-donor-scroll" id="patron-donor-list">
+        <div
+          style="padding:1.2rem;text-align:center;font-family:var(--font-secondary);color:var(--text-dim);font-size:1.1rem;"
+        >
+          ¡Sé el primero en aparecer en la lluvia!
+        </div>
+      </div>
+    </div>
+
+    <!-- How it works -->
+    <div class="patron-how-grid">
+      <div class="patron-how-card">
+        <div class="patron-how-num">01</div>
+        <div class="patron-how-title">DONAS 5€</div>
+        <div class="patron-how-desc">
+          Vía PayPal. Pon tu nick en el concepto del pago.
+        </div>
+      </div>
+      <div class="patron-how-card">
+        <div class="patron-how-num">02</div>
+        <div class="patron-how-title">RECIBES EMAIL</div>
+        <div class="patron-how-desc">
+          Karlete confirma que eres Pixel Patron oficial de Freakonia.
+        </div>
+      </div>
+      <div class="patron-how-card">
+        <div class="patron-how-num">03</div>
+        <div class="patron-how-title">TU NOMBRE CAE</div>
+        <div class="patron-how-desc">
+          Tu nick aparece en la lluvia de la portada. Para siempre.
         </div>
       </div>
     </div>
@@ -833,5 +947,21 @@
   updateSlider();
 })();
 </script>
+<style>
+@keyframes patron-btn-pulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 6px var(--accent-warn),
+      0 0 12px rgba(255, 204, 0, 0.3);
+  }
+  50% {
+    box-shadow:
+      0 0 14px var(--accent-warn),
+      0 0 28px rgba(255, 204, 0, 0.6);
+  }
+}
+</style>
+<script src="js/pixels-rain.js"></script>
 </body>
 </html>

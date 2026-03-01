@@ -1,6 +1,6 @@
 # estado.md — Project State Tracker
 
-Last updated: 2026-02-26 (sesión 19)
+Last updated: 2026-03-01 (sesión 25)
 
 ---
 
@@ -97,15 +97,32 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 ## ▶ PRÓXIMA SESIÓN — Leer esto primero
 
 ### Estado actual del sistema de noticias (news)
-- `js/news-data.js` — array `NEWS_DATA` con 8 artículos. **Añadir nuevos artículos AQUÍ, al principio del array (más reciente primero).**
+- `js/news-data.js` — array `NEWS_DATA` con **12 artículos**. **Añadir nuevos artículos AQUÍ, al principio del array (más reciente primero).**
 - `news.html` — renderizado dinámico vía `renderNews()`. No tocar el grid HTML.
 - `index.html` — slider "¿Qué se cuece?" lee automáticamente `NEWS_DATA`. No requiere cambios al añadir noticias.
+- `css/news.css` — `.news-grid` tiene `align-items: start` (fix bug Leer más).
 
 ### NEWS_TRACKER — temas usados
 ```json
-{"used_topics": ["got", "esports", "gaming", "magic"], "last_update": "2026-02-25"}
+{"used_topics":["got","esports","gaming","magic","gaming","gamedev","warhammer","rol","got","gaming","esports","nba","esports","gaming","esports"],"last_update":"2026-02-28"}
 ```
-**Próximos temas disponibles:** `nba` · `got` · `gaming` · `esports`
+**Próximos temas disponibles:** `got` · `gaming` · `gamedev` · `warhammer` · `nba`
+
+### IDs de artículos actuales en NEWS_DATA (para evitar duplicados)
+| # | id | topic | fecha |
+|---|---|---|---|
+| 15 | `noticia-lec-versus-final-badalona-2026` | esports | 28/02/2026 |
+| 14 | `noticia-nba-allstar-2026` | nba | 28/02/2026 |
+| 12 | `noticia-god-of-war-trilogy-remake-2026` | gaming | 28/02/2026 |
+| 10 | `noticia-re9-requiem-2026` | gaming | 28/02/2026 |
+| 9  | `noticia-hotd-s3-trailer-2026` | got | 28/02/2026 |
+| 8  | `noticia-coc-arkham-2026` | misc/rol | 26/02/2026 |
+| 7  | `noticia-warhammer-gran-cathay-2026` | misc/warhammer | 26/02/2026 |
+| 6  | `noticia-unity-ia-gdc-2026` | gamedev | 26/02/2026 |
+| 5  | `noticia-ffvii-remaster-2026` | gaming | 25/02/2026 |
+| 4  | `id:4` | got | 22/02/2026 |
+| 3  | `id:3` | magic | 23/02/2026 |
+| 2  | `id:2` | gaming | 24/02/2026 |
 
 ### Cómo añadir una noticia nueva
 1. Abrir `js/news-data.js`
@@ -115,7 +132,10 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 5. Añadir imagen en `assets/img/` si la hay
 
 ### Bugs conocidos / pendientes
-- Ninguno activo. Todo funcionando en producción a fecha 2026-02-25.
+- Ninguno activo. Todo funcionando en producción a fecha 2026-02-28.
+
+### Bugs resueltos (histórico)
+- **2026-02-28 sesión 23:** `.news-grid` expandía todas las cards de una fila al hacer "Leer más" en una. Fix: `align-items: start` en `.news-grid` en `css/news.css`.
 
 ---
 
@@ -127,6 +147,11 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 - 📦 Repo: **https://github.com/Karlete/freakonia**
 - ⚙️ Deploy: GitHub Pages (rama `main`, raíz `/`)
 
+**Sesión 25 (2026-03-01):** Pixel Patron Rain — nueva feature completa en index.html: js/pixels-data.js creado — array PIXEL_DONORS con 4 donantes seed: KARLETE · KAWAI_BI · MERCHAND · RIKI. js/pixels-rain.js creado — canvas con lluvia de nombres sobre el fondo, independiente de los píxeles existentes. css/pixels.css creado — estilos de la sección Pixel Patron (achievement card, contador, barra intensidad, donor list, how-it-works grid). index.html: canvas #patron-rain-canvas añadido tras el crt-overlay. index.html: .hero-shield añadido dentro de .hero-content — panel rgba(0,0,0,0.20) que evita solapamiento visual de nombres con título/sprite/botones. index.html: sección #pixel-patron añadida entre hero y main — achievement card dorada, contador de patrons, barra de intensidad (SILENCIOSA→DILUVIO), lista de donantes, grid "cómo funciona". index.html: botón 🏅 PIXEL PATRON dorado pulsante añadido bajo las barras HP/XP del sprite — anchor scroll a #pixel-patron. PayPal URL configurada: https://www.paypal.me/sanprietogamer/5. Flujo de actualización: donante paga 5€ · incluye nick en concepto PayPal · Karlete añade objeto a PIXEL_DONORS · git push → nombre aparece en lluvia en producción. 5 niveles de intensidad de lluvia: SILENCIOSA (0) · GOTAS (1–3) · LLOVIZNA (4–10) · LLUVIA (11–25) · TORMENTA (26–50) · DILUVIO ⚡ (51+). Colores de nombres: verde #00ff41 · magenta #ff00ff · azul #00bfff · dorado #ffcc00 (Karlete).
+**Sesión 23 (2026-02-28):** BUG FIX — `.news-grid` expandía cards al hacer "Leer más". Fix: `align-items: start` en `css/news.css`. Push a main. Todos los .md actualizados.
+**Sesión 22 (2026-02-28):** LEC cleanup — eliminados 3 artículos duplicados de esports/LEC Versus 2026 (`noticia-lec-versus-2026-final-barcelona`, `noticia-lec-versus-finals-barcelona-2026`, `id:1`). Sustituidos por 1 artículo definitivo `noticia-lec-versus-final-badalona-2026` con contenido actualizado al sábado 28 (KOI vs KC semifinal lower, G2 espera en final). NEWS_TRACKER actualizado.
+**Sesión 21 (2026-02-28):** 3 artículos pre-escritos insertados en `js/news-data.js` (NBA: All-Star 2026 LA · Esports: LEC Versus 2026 final Barcelona · Gaming: GoW Trilogy Remake + Sons of Sparta). Commit `feat: 3 new articles (nba/esports/gaming) + tracker updated`.
+**Sesión 20 (2026-02-28):** 3 artículos nuevos en `js/news-data.js` buscados desde cero (GOT: HotD T3 tráiler + Martin drama · Gaming: RE9 Requiem lanzamiento · Esports: LEC Versus Finals en vivo). Fuentes: 3djuegos.com · lolesports.com. NEWS_TRACKER actualizado.
 **Sesión 19 (2026-02-26):** 3 noticias nuevas en `js/news-data.js` (Warhammer: Gran Cathay · Rol: CoC Arkham · GameDev: Unity IA GDC2026). nba.html: hero image `nba_pixels.png` con layout 2 columnas; GIFs LaVine + Gordon x2 con `.dunk-gif`; 3 imágenes de sección (nbalive/allstars2006/fantasyhoops) con `.section-img-nba`; flex row `.section-media-row` en NBA Live y All-Star. Commit + push a main.
 **Sesión 18 (2026-02-25):** commit + push de toda la arquitectura news (sesiones 13–17) a GitHub. 5 archivos · 799 inserciones · commit 7d736f2. Web actualizada en producción.
 **Sesión 17 (2026-02-25):** BUG FIX — news cards invisibles (opacity:0 permanente). Causa: scrollReveal() en main.js registra .reveal antes de que renderNews() cree las cards. Fix: eliminada clase "reveal" de las news-cards dinámicas en renderNews(); las cards aparecen visibles de inmediato al no heredar opacity:0.
@@ -153,11 +178,14 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 - [x] `css/main.css` — Variables, reset, tipografía, layout helpers, section-title, pixel-divider, tags, status-badges, page-header, scroll-reveal base, responsive breakpoints
 - [x] `css/components.css` — Navbar (desktop + mobile), buttons (green/pink/blue/gold/small/block), cards, game-cards, video-cards, tweet-cards, HP/XP bars, platform-headers, footer, nav-hub, stat-boxes, alerts
 - [x] `css/animations.css` — 15+ keyframes, utility classes, glitch text, pixel particles, cursor blink, pixel loader, stagger delays
+- [x] `css/pixels.css` — estilos Pixel Patron section · achievement card · contador · barra intensidad · donor list · how-grid
 
 ### JS Utilities (js/)
 - [x] `js/main.js` — Nav active state, mobile toggle, CRT flicker, pixel cursor trail, scroll-reveal (IntersectionObserver), typeWriter util, XP/HP bar animation, click particle burst
 - [x] `js/youtube.js` — `buildVideoCard()` + `renderVideoCards()`, YOUTUBE_VIDEOS array ready to fill
 - [x] `js/twitter.js` — Twitter embed (dark theme) + manual tweet card fallback, TWITTER_HANDLE placeholder
+- [x] `js/pixels-data.js` — PIXEL_DONORS array · 4 donantes seed · comentario de flujo de actualización
+- [x] `js/pixels-rain.js` — canvas lluvia de nombres · velocidad lenta · glow neon por color · pool proporcional al número de donantes
 
 ### Assets
 - [x] `assets/img/Samurai Kitchen Screenshot.jpg`
@@ -188,6 +216,7 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
   - Stars Lander    → https://sanprieto.itch.io/starslander
 - i18n ES/EN completo con localStorage (tecla toggle en nav)
 - Footer
+- Pixel Patron Rain (sesión 25): lluvia de nombres de donantes sobre el hero · .hero-shield semitransparente · sección #pixel-patron con achievement card · botón anchor dorado pulsante bajo sprite · PayPal paypal.me/sanprietogamer/5 · flujo: email PayPal → añadir nick a js/pixels-data.js → git push
 
 ### ✅ gamedev.html — COMPLETO
 - Page header con pre-text, título y subtítulo
