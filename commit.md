@@ -2,6 +2,26 @@
 
 ---
 
+## Sesión 27 — 2026-03-01
+
+### fix(index): extend patron rain canvas to cover hero + pixel-patron sections
+
+- **index.html:** Wrapped `<section class="hero">` and `<section id="pixel-patron">` inside `<div class="patron-rain-wrap">`. Canvas moved out of `.hero` to be first child of `.patron-rain-wrap`. Closing `</div><!-- end .patron-rain-wrap -->` placed after pixel-patron `</section>` and before `<main>`.
+- **css/pixels.css:** Added `.patron-rain-wrap { position: relative; overflow: hidden; }` rule before the canvas rule. Canvas remains `position: absolute; inset: 0`.
+- **js/pixels-rain.js:** No change needed — `resize()` already reads `canvas.parentElement` dimensions, which now correctly refers to `.patron-rain-wrap`.
+
+---
+
+## Sesión 26 — 2026-03-01
+
+### fix(index): confine patron rain canvas to hero section only
+
+- **index.html:** Removed `<canvas>` from after `.crt-overlay` (was body-level). Moved it as first child inside `<section class="hero">`.
+- **css/pixels.css:** Changed `#patron-rain-canvas` from `position: fixed` to `position: absolute` (hero already has `position: relative` in main.css).
+- **js/pixels-rain.js:** `resize()` now uses `canvas.parentElement.offsetWidth/offsetHeight` instead of `window.innerWidth/innerHeight` so the canvas fills the hero exactly.
+
+---
+
 ## Sesión 25 — 2026-03-01
 
 ### fix+feat(index): PayPal URL fix + hero patron button

@@ -1,6 +1,12 @@
+/* ─── Shared rain container wrapping hero + pixel-patron ───────────────── */
+.patron-rain-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
 /* ─── Patron Rain Canvas ───────────────────────────────────────────────── */
 #patron-rain-canvas {
-  position: fixed;
+  position: absolute;
   inset: 0;
   z-index: 1;
   pointer-events: none;

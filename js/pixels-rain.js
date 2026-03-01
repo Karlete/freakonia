@@ -19,8 +19,9 @@
     nameDrops = [];
 
   function resize() {
-    W = canvas.width = window.innerWidth;
-    H = canvas.height = window.innerHeight;
+    const parent = canvas.parentElement;
+    W = canvas.width = parent ? parent.offsetWidth : window.innerWidth;
+    H = canvas.height = parent ? parent.offsetHeight : window.innerHeight;
   }
   resize();
   window.addEventListener("resize", resize);

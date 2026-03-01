@@ -478,6 +478,10 @@ Si no hay fuente externa (`source: ''`), el elemento `.news-source` no se render
 
 ## Session Notes
 
+### 2026-03-01 — Session 20
+- Fix lluvia (sesión 20b): canvas movido de posición fixed a absolute dentro de .patron-rain-wrap
+- .patron-rain-wrap envuelve hero + sección #pixel-patron — lluvia cubre ambas secciones y se corta exactamente antes de `<main>`
+
 ### 2026-02-25 — Session 17
 - **news.html — BUG FIX: news cards invisibles (opacity:0 permanente):**
   - Causa: `scrollReveal()` en `js/main.js` es una IIFE que registra todos los `.reveal` al cargarse
