@@ -10,6 +10,78 @@
 
 var NEWS_DATA = [
 
+  // ── ARTICLE 18 ──────────────────────────────────────────────────
+  {
+    id:         'noticia-g2-lec-versus-2026',
+    topic:      'esports',
+    category:   'esports',
+    emoji:      '🏆',
+    badgeLabel: 'ESPORTS',
+    title:      'G2 Esports: campeones de la LEC Versus 2026 en Badalona',
+    summary:    'Los Samurais vencen a Karmine Corp en un épico 3-2 en la gran final celebrada en Badalona. Caps nombrado MVP con su decimosexto título en la LEC. G2 clasifica al First Stand 2026 en São Paulo.',
+    full:       [
+      'La gran final de la LEC Versus 2026 se disputó en Badalona ante más de 15.000 espectadores. G2 Esports salió dominando con un rápido 2-0 gracias a drafts creativos y un control impecable de objetivos. Parecía una victoria cómoda, pero Karmine Corp no se rindió.',
+      'KC remontó en los juegos 3 y 4 con una actuación increíble de Canna, cuya engage milagrosa en el juego 4 forzó el Silver Scrapes. El quinto mapa duró 46 minutos y mantuvo al pabellón en vilo hasta el final. G2 cerró la serie con una composición de fuerte CC y acumulando dragones y Barón.',
+      'Rasmus \'Caps\' Winther fue nombrado MVP de la final por séptima vez, extendiendo su récord como el jugador más laureado de la historia del LEC con 16 títulos domésticos. Con esta victoria, G2 conquista su decimoctavo título europeo y se clasifica para el First Stand 2026 en São Paulo (16–22 de marzo), donde se medirá a Gen.G, BNK FEARX, LOUD y otros representantes mundiales.'
+    ],
+    date:       '01/03/2026',
+    url:        'https://esports.gg/news/league-of-legends/g2-esports-lec-versus-winner/',
+    page:       'esports.html',
+    pageLabel:  '>> VER ESPORTS',
+    accent:     '#C89B3C',
+    source:     'esports.gg',
+    img:        '',
+    tags:       ['G2 Esports', 'LEC Versus', 'Karmine Corp', 'Caps MVP', 'First Stand 2026']
+  },
+
+  // ── ARTICLE 17 ──────────────────────────────────────────────────
+  {
+    id:         'noticia-hotd-t3-trailer-2026',
+    topic:      'got',
+    category:   'got',
+    emoji:      '🐉',
+    badgeLabel: 'HOUSE OF THE DRAGON',
+    title:      'House of the Dragon T3: tráiler oficial y estreno en junio 2026',
+    summary:    'HBO lanza el primer tráiler oficial de la tercera temporada con la Batalla del Gaznate, dragones en combate masivo y Rhaenyra más poderosa que nunca. Estreno confirmado en junio 2026 en HBO Max.',
+    full:       [
+      'El 19 de febrero de 2026, HBO lanzó el tráiler oficial de la temporada 3 de House of the Dragon, y el fandom de Poniente estalló. Las imágenes muestran la tan esperada Batalla del Gaznate, uno de los enfrentamientos navales más brutales del canon ASOIAF, con dragones surcando los cielos mientras las flotas arden.',
+      'La temporada arranca con Aemond Targaryen en el Trono de Hierro tras la caída de su hermano Aegon. Alicent Hightower, en un giro impactante, abandona en secreto Desembarco del Rey y lo entrega a Rhaenyra. El lema promocional \'Del fuego nace la oscuridad\' resume perfectamente el tono que se viene.',
+      'La temporada contará con 8 episodios y llegará a HBO Max en junio de 2026, siendo la penúltima de la serie (ya hay T4 confirmada para 2028). Una nota agridulce: GRRM no participó en esta temporada por desacuerdos creativos con el showrunner Ryan Condal. Sea como sea, la Danza de los Dragones está a punto de llegar a su punto álgido.'
+    ],
+    date:       '19/02/2026',
+    url:        'https://cnnespanol.cnn.com/2026/02/19/entretenimiento/trailer-house-of-dragon-temporada-3-orix',
+    page:       'got.html',
+    pageLabel:  '>> VER GOT',
+    accent:     '#cc2200',
+    source:     'cnnespanol.cnn.com',
+    img:        '',
+    tags:       ['House of the Dragon', 'Temporada 3', 'HBO', 'Batalla del Gaznate', 'ASOIAF']
+  },
+
+  // ── ARTICLE 16 ──────────────────────────────────────────────────
+  {
+    id:         'noticia-spurs-racha-2026',
+    topic:      'nba',
+    category:   'nba',
+    emoji:      '🏀',
+    badgeLabel: 'NBA',
+    title:      'Los Spurs encadenan 11 victorias seguidas antes de caer ante los Knicks',
+    summary:    'San Antonio sorprende a la NBA con su mejor racha de la temporada. Los Knickerbockers, liderados por Mikal Bridges con 25 puntos, ponen fin al partido más esperado del fin de semana.',
+    full:       [
+      'Los San Antonio Spurs han sido la gran sorpresa de la temporada regular NBA 2025-26. El equipo texano encadenó 11 victorias consecutivas, una racha que no tenía desde hace años y que ha obligado a todos a tomarles en serio de cara a los playoffs.',
+      'La racha llegó a su fin el 1 de marzo ante los New York Knickerbockers en lo que se convirtió en uno de los duelos más seguidos de la jornada. Mikal Bridges fue el verdugo definitivo con 25 puntos y 5 robos de balón, sellando la victoria local en lo que fue un partidazo.',
+      'Con la temporada regular llegando a su recta final (acaba el 12 de abril), la lucha por los playoffs se intensifica. Detroit Pistons, de los peores de la liga hace apenas dos temporadas, lidera actualmente el Este. Mientras tanto, la zona oeste sigue siendo un polvorín con OKC Thunder y Boston Celtics como candidatos al título. Los playoffs llegan en menos de 6 semanas.'
+    ],
+    date:       '01/03/2026',
+    url:        'https://www.nbamaniacs.com/noticias/',
+    page:       'nba.html',
+    pageLabel:  '>> VER NBA',
+    accent:     '#ffcc00',
+    source:     'nbamaniacs.com',
+    img:        '',
+    tags:       ['San Antonio Spurs', 'New York Knicks', 'Mikal Bridges', 'NBA 2026', 'Playoffs']
+  },
+
   // ── ARTICLE 15 ──────────────────────────────────────────────────
   {
     id:         'noticia-lec-versus-final-badalona-2026',
@@ -288,5 +360,7 @@ var NEWS_DATA = [
 
 ];
 
-// NEWS_TRACKER: {"used_topics":["got","esports","gaming","magic","gaming","gamedev","warhammer","rol","got","gaming","esports","nba","esports","gaming","esports"],"last_update":"2026-02-28"}
-// Next session available topics: got · gaming · gamedev · warhammer · nba
+// NEWS_TRACKER
+// used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba"]
+// last_update: "2026-03-02"
+// next_available: ["got", "gaming", "esports"]

@@ -2,6 +2,18 @@
 
 ---
 
+## Sesión 28 — 2026-03-02
+
+### feat(news): 3 new articles — esports/got/nba + tracker updated
+
+- **js/news-data.js:** Inserted 3 new articles at TOP of NEWS_DATA (articles 16–18):
+  - Art. 18 `noticia-g2-lec-versus-2026` — Esports: G2 campeones LEC Versus 2026, 3-2 vs KC, Caps MVP (16 títulos), First Stand 2026 São Paulo. accent #C89B3C. Source: esports.gg.
+  - Art. 17 `noticia-hotd-t3-trailer-2026` — GOT: HotD T3 tráiler oficial CNN Español, Batalla del Gaznate, Aemond en trono, Alicent traición, estreno junio 2026 HBO Max. accent #cc2200. Source: cnnespanol.cnn.com.
+  - Art. 16 `noticia-spurs-racha-2026` — NBA: Spurs 11 victorias seguidas, caen vs Knicks con Mikal Bridges 25pts+5rob. Contexto playoffs: Detroit lidera Este, OKC/Boston candidatos. accent #ffcc00. Source: nbamaniacs.com.
+- **js/news-data.js:** NEWS_TRACKER updated — last_update: 2026-03-02, next_available: got/gaming/esports.
+
+---
+
 ## Sesión 27 — 2026-03-01
 
 ### fix(index): extend patron rain canvas to cover hero + pixel-patron sections

@@ -1,6 +1,6 @@
 # estado.md — Project State Tracker
 
-Last updated: 2026-03-01 (sesión 25)
+Last updated: 2026-03-02 (sesión 28)
 
 ---
 
@@ -97,20 +97,23 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 ## ▶ PRÓXIMA SESIÓN — Leer esto primero
 
 ### Estado actual del sistema de noticias (news)
-- `js/news-data.js` — array `NEWS_DATA` con **12 artículos**. **Añadir nuevos artículos AQUÍ, al principio del array (más reciente primero).**
+- `js/news-data.js` — array `NEWS_DATA` con **15 artículos**. **Añadir nuevos artículos AQUÍ, al principio del array (más reciente primero).**
 - `news.html` — renderizado dinámico vía `renderNews()`. No tocar el grid HTML.
 - `index.html` — slider "¿Qué se cuece?" lee automáticamente `NEWS_DATA`. No requiere cambios al añadir noticias.
 - `css/news.css` — `.news-grid` tiene `align-items: start` (fix bug Leer más).
 
 ### NEWS_TRACKER — temas usados
 ```json
-{"used_topics":["got","esports","gaming","magic","gaming","gamedev","warhammer","rol","got","gaming","esports","nba","esports","gaming","esports"],"last_update":"2026-02-28"}
+{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba"],"last_update":"2026-03-02"}
 ```
-**Próximos temas disponibles:** `got` · `gaming` · `gamedev` · `warhammer` · `nba`
+**Próximos temas disponibles:** `got` · `gaming` · `esports`
 
 ### IDs de artículos actuales en NEWS_DATA (para evitar duplicados)
 | # | id | topic | fecha |
 |---|---|---|---|
+| 18 | `noticia-g2-lec-versus-2026` | esports | 01/03/2026 |
+| 17 | `noticia-hotd-t3-trailer-2026` | got | 19/02/2026 |
+| 16 | `noticia-spurs-racha-2026` | nba | 01/03/2026 |
 | 15 | `noticia-lec-versus-final-badalona-2026` | esports | 28/02/2026 |
 | 14 | `noticia-nba-allstar-2026` | nba | 28/02/2026 |
 | 12 | `noticia-god-of-war-trilogy-remake-2026` | gaming | 28/02/2026 |
@@ -147,6 +150,7 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 - 📦 Repo: **https://github.com/Karlete/freakonia**
 - ⚙️ Deploy: GitHub Pages (rama `main`, raíz `/`)
 
+**Sesión 28 (2026-03-02):** 3 nuevos artículos insertados al TOP de NEWS_DATA en `js/news-data.js`: Esports (noticia-g2-lec-versus-2026 · G2 campeones LEC Versus 3-2 vs KC · Caps MVP · First Stand 2026) · GOT (noticia-hotd-t3-trailer-2026 · HotD T3 tráiler CNN · Batalla del Gaznate · junio 2026) · NBA (noticia-spurs-racha-2026 · Spurs 11 victorias + caída vs Knicks · Mikal Bridges 25pts). NEWS_TRACKER actualizado: last_update 2026-03-02, next_available got/gaming/esports. Estado.md y commit.md actualizados. Push a main.
 **Sesión 25 (2026-03-01):** Pixel Patron Rain — nueva feature completa en index.html: js/pixels-data.js creado — array PIXEL_DONORS con 4 donantes seed: KARLETE · KAWAI_BI · MERCHAND · RIKI. js/pixels-rain.js creado — canvas con lluvia de nombres sobre el fondo, independiente de los píxeles existentes. css/pixels.css creado — estilos de la sección Pixel Patron (achievement card, contador, barra intensidad, donor list, how-it-works grid). index.html: canvas #patron-rain-canvas añadido tras el crt-overlay. index.html: .hero-shield añadido dentro de .hero-content — panel rgba(0,0,0,0.20) que evita solapamiento visual de nombres con título/sprite/botones. index.html: sección #pixel-patron añadida entre hero y main — achievement card dorada, contador de patrons, barra de intensidad (SILENCIOSA→DILUVIO), lista de donantes, grid "cómo funciona". index.html: botón 🏅 PIXEL PATRON dorado pulsante añadido bajo las barras HP/XP del sprite — anchor scroll a #pixel-patron. PayPal URL configurada: https://www.paypal.me/sanprietogamer/5. Flujo de actualización: donante paga 5€ · incluye nick en concepto PayPal · Karlete añade objeto a PIXEL_DONORS · git push → nombre aparece en lluvia en producción. 5 niveles de intensidad de lluvia: SILENCIOSA (0) · GOTAS (1–3) · LLOVIZNA (4–10) · LLUVIA (11–25) · TORMENTA (26–50) · DILUVIO ⚡ (51+). Colores de nombres: verde #00ff41 · magenta #ff00ff · azul #00bfff · dorado #ffcc00 (Karlete).
 **Sesión 23 (2026-02-28):** BUG FIX — `.news-grid` expandía cards al hacer "Leer más". Fix: `align-items: start` en `css/news.css`. Push a main. Todos los .md actualizados.
 **Sesión 22 (2026-02-28):** LEC cleanup — eliminados 3 artículos duplicados de esports/LEC Versus 2026 (`noticia-lec-versus-2026-final-barcelona`, `noticia-lec-versus-finals-barcelona-2026`, `id:1`). Sustituidos por 1 artículo definitivo `noticia-lec-versus-final-badalona-2026` con contenido actualizado al sábado 28 (KOI vs KC semifinal lower, G2 espera en final). NEWS_TRACKER actualizado.
