@@ -2,6 +2,20 @@
 
 ---
 
+## Sesión 29 — 2026-03-04
+
+### feat(news): 3 new articles — gaming/warhammer/esports + tracker updated
+
+- **js/news-data.js:** Inserted 3 new articles at TOP of NEWS_DATA (articles 19–21):
+  - Art. 21 `noticia-fatal-frame-2-remake-2026` — Gaming: Fatal Frame II Crimson Butterfly Remake, 12/03 en PS5/XSX/Switch2/PC. Camera Obscura renovada. accent #00bfff. Source: infobae.com.
+  - Art. 20 `noticia-tow-gran-cathay-defenders-2026` — Warhammer: Defenders of the Great Bastion (53 minis Gran Cathay · The Old World), lanzamiento 14/03. accent #ffcc00. Source: spikeybits.com.
+  - Art. 19 `noticia-lyon-lcs-lockin-2026` — Esports: LYON campeones LCS Lock-In 2026, 3-1 vs Cloud9, Inspired MVP, First Stand São Paulo. accent #C89B3C. Source: esportsinsider.com.
+- **NEWS_TRACKER** actualizado: last_update 2026-03-04, next_available got/nba/magic/rol.
+- **estado.md:** Last updated sesión 29, NEWS_TRACKER fecha, session log añadido.
+- **MEMORY.md:** Current news state actualizado (18 artículos, art. 21, next_available).
+
+---
+
 ## Sesión 28 — 2026-03-02
 
 ### feat(news): 3 new articles — esports/got/nba + tracker updated

@@ -10,6 +10,78 @@
 
 var NEWS_DATA = [
 
+  // ── ARTICLE 21 ──────────────────────────────────────────────────
+  {
+    id:         'noticia-fatal-frame-2-remake-2026',
+    topic:      'gaming',
+    category:   'gaming',
+    emoji:      '🕹',
+    badgeLabel: 'GAMING',
+    title:      'Fatal Frame II: Crimson Butterfly Remake llega el 12 de marzo con terror japonés renovado',
+    summary:    'El clásico de terror psicológico de 2003 vuelve completamente renovado en PS5, Xbox Series, Switch 2 y PC. La Camera Obscura regresa con gráficos modernos para uno de los juegos de terror más influyentes de la PS2.',
+    full:       [
+      'Si hay un juego que definió el terror japonés en la PS2, ese fue Fatal Frame II: Crimson Butterfly. El 12 de marzo de 2026 llega el remake completo a PS5, Xbox Series X/S, Nintendo Switch 2 y PC, con gráficos renovados desde cero pero manteniendo toda la esencia del original de 2003.',
+      'El juego sigue a las gemelas Mio y Mayu Amakura atrapadas en una aldea maldita donde los fantasmas solo pueden ser vencidos fotografiándolos con la Camera Obscura. El remake conserva la estructura original pero actualiza modelos de personajes, iluminación y controles, sin perder ni un gramo del terror psicológico que lo hizo legendario.',
+      'Para los fans del terror de la era PS2 —esa época dorada que también incluía Silent Hill 2 y el Resident Evil 4 original— este remake es una celebración y una prueba de que el terror japonés nunca fue sustituido, solo aletargado. El State of Play de febrero 2026 confirmó también remakes de la trilogía original de God of War, dejando claro que la nostalgia de los 2000s está más viva que nunca.'
+    ],
+    date:       '02/03/2026',
+    url:        'https://www.infobae.com/tecno/2026/03/02/asi-queda-el-calendario-de-estrenos-de-xbox-en-marzo-rpgs-shooters-y-clasicos-renovados/',
+    page:       'gaming.html',
+    pageLabel:  '>> VER GAMING',
+    accent:     '#00bfff',
+    source:     'infobae.com',
+    img:        '',
+    tags:       ['Fatal Frame II', 'Crimson Butterfly', 'Remake', 'Terror japonés', 'PS5', 'Switch 2']
+  },
+
+  // ── ARTICLE 20 ──────────────────────────────────────────────────
+  {
+    id:         'noticia-tow-gran-cathay-defenders-2026',
+    topic:      'warhammer',
+    category:   'misc',
+    emoji:      '⚙',
+    badgeLabel: 'WARHAMMER',
+    title:      'The Old World: llegan los Defensores de la Gran Muralla de Cathay el 14 de marzo',
+    summary:    'Games Workshop lanza el 14 de marzo el set \'Defenders of the Great Bastion\', 53 miniaturas de Gran Cathay para Warhammer: The Old World. Astromancers, Crane Guns y una legión de infantería lista para la batalla.',
+    full:       [
+      'Warhammer: The Old World sigue en plena forma en su tercer año de vida, y marzo trae una de las novedades más esperadas: el set \'Defenders of the Great Bastion\' de Gran Cathay llega el 14 de marzo con 53 miniaturas pensadas para completar y reforzar el ejército del lejano oriente.',
+      'El set incluye Astromancers de la Corte Celestial (los magos-estrella del lore Cathay), Crane Gun Teams para dar fuego de largo alcance, Iron Hail Gunners con sus trabucos de corto rango, y Peasant Levy para llenar las líneas de infantería y hacer sufrir al enemigo en cuerpo a cuerpo. Una caja pensada para montar una línea de fuego completa.',
+      'Gran Cathay fue el ejército estrella de The Old World en 2025, con su propio Arcane Journal y un trasfondo riquísimo. Este refuerzo de 2026 consolida al ejército como uno de los más completos del juego, y abre la puerta a nuevas tácticas de gunline que van a hacer sufrir a más de un Guerrero del Caos en la mesa.'
+    ],
+    date:       '02/03/2026',
+    url:        'https://spikeybits.com/old-world-new-releases-roadmap-previews/',
+    page:       'warhammer.html',
+    pageLabel:  '>> VER WARHAMMER',
+    accent:     '#ffcc00',
+    source:     'spikeybits.com',
+    img:        '',
+    tags:       ['Gran Cathay', 'The Old World', 'Defenders of the Great Bastion', 'Games Workshop', 'Warhammer Fantasy']
+  },
+
+  // ── ARTICLE 19 ──────────────────────────────────────────────────
+  {
+    id:         'noticia-lyon-lcs-lockin-2026',
+    topic:      'esports',
+    category:   'esports',
+    emoji:      '🏆',
+    badgeLabel: 'ESPORTS',
+    title:      'LYON se corona campeón del LCS Lock-In 2026 y va al First Stand',
+    summary:    'La organización mexicana LYON remonta desde el lower bracket para ganar el primer torneo del año en Norteamérica, superando a Cloud9 en la final. El jungler Inspired, MVP indiscutible.',
+    full:       [
+      'El LCS vuelve como liga independiente en 2026 después del experimento de la LTA, y su primer torneo, el Lock-In, lo ha ganado LYON, la organización mexicana que llegó desde la liga latinoamericana. El equipo arrancó la temporada con problemas de visado y cambios de roster de última hora, pero en los playoffs lo dieron todo.',
+      'Cloud9 había arrasado durante toda la fase de grupos y era el favorito absoluto para la final. Sin embargo, LYON salió superior, solo cayó en el primer mapa y remontó para ganar 3-1 una serie que no tuvo rival. El jungler polaco Kacper \'Inspired\' Słoma fue el MVP indiscutible de la final, con una presión de mapa constante que dejó a C9 sin respuesta.',
+      'Con esta victoria, LYON se convierte en el representante de Norteamérica para el First Stand 2026 en São Paulo (16–22 de marzo), el primer torneo internacional del año, donde se enfrentará a G2 (LEC), Gen.G (LCK) y los clasificados de la LPL. Una historia de remontada que ya es parte de la historia del LCS.'
+    ],
+    date:       '01/03/2026',
+    url:        'https://esportsinsider.com/2026/03/lyon-crowned-2026-lcs-lock-in-champion',
+    page:       'esports.html',
+    pageLabel:  '>> VER ESPORTS',
+    accent:     '#C89B3C',
+    source:     'esportsinsider.com',
+    img:        '',
+    tags:       ['LYON', 'LCS Lock-In 2026', 'Cloud9', 'Inspired MVP', 'First Stand 2026']
+  },
+
   // ── ARTICLE 18 ──────────────────────────────────────────────────
   {
     id:         'noticia-g2-lec-versus-2026',
@@ -362,5 +434,5 @@ var NEWS_DATA = [
 
 // NEWS_TRACKER
 // used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba"]
-// last_update: "2026-03-02"
-// next_available: ["got", "gaming", "esports"]
+// last_update: "2026-03-04"
+// next_available: ["got", "nba", "magic", "rol"]

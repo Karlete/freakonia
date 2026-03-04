@@ -1,6 +1,6 @@
 # estado.md — Project State Tracker
 
-Last updated: 2026-03-02 (sesión 28)
+Last updated: 2026-03-04 (sesión 29)
 
 ---
 
@@ -104,7 +104,7 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 
 ### NEWS_TRACKER — temas usados
 ```json
-{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba"],"last_update":"2026-03-02"}
+{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba"],"last_update":"2026-03-04"}
 ```
 **Próximos temas disponibles:** `got` · `gaming` · `esports`
 
@@ -150,6 +150,7 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 - 📦 Repo: **https://github.com/Karlete/freakonia**
 - ⚙️ Deploy: GitHub Pages (rama `main`, raíz `/`)
 
+**Sesión 29 (2026-03-04):** 3 nuevos artículos insertados al TOP de NEWS_DATA en `js/news-data.js`: Gaming (noticia-fatal-frame-2-remake-2026 · Fatal Frame II Crimson Butterfly Remake 12/03 en PS5/XSX/Switch2/PC) · Warhammer (noticia-tow-gran-cathay-defenders-2026 · Defenders of the Great Bastion 53 minis · 14/03) · Esports (noticia-lyon-lcs-lockin-2026 · LYON campeones LCS Lock-In 2026 · Inspired MVP · First Stand). NEWS_TRACKER actualizado: last_update 2026-03-04, next_available got/nba/magic/rol. Estado.md y commit.md actualizados. Push a main.
 **Sesión 28 (2026-03-02):** 3 nuevos artículos insertados al TOP de NEWS_DATA en `js/news-data.js`: Esports (noticia-g2-lec-versus-2026 · G2 campeones LEC Versus 3-2 vs KC · Caps MVP · First Stand 2026) · GOT (noticia-hotd-t3-trailer-2026 · HotD T3 tráiler CNN · Batalla del Gaznate · junio 2026) · NBA (noticia-spurs-racha-2026 · Spurs 11 victorias + caída vs Knicks · Mikal Bridges 25pts). NEWS_TRACKER actualizado: last_update 2026-03-02, next_available got/gaming/esports. Estado.md y commit.md actualizados. Push a main.
 **Sesión 25 (2026-03-01):** Pixel Patron Rain — nueva feature completa en index.html: js/pixels-data.js creado — array PIXEL_DONORS con 4 donantes seed: KARLETE · KAWAI_BI · MERCHAND · RIKI. js/pixels-rain.js creado — canvas con lluvia de nombres sobre el fondo, independiente de los píxeles existentes. css/pixels.css creado — estilos de la sección Pixel Patron (achievement card, contador, barra intensidad, donor list, how-it-works grid). index.html: canvas #patron-rain-canvas añadido tras el crt-overlay. index.html: .hero-shield añadido dentro de .hero-content — panel rgba(0,0,0,0.20) que evita solapamiento visual de nombres con título/sprite/botones. index.html: sección #pixel-patron añadida entre hero y main — achievement card dorada, contador de patrons, barra de intensidad (SILENCIOSA→DILUVIO), lista de donantes, grid "cómo funciona". index.html: botón 🏅 PIXEL PATRON dorado pulsante añadido bajo las barras HP/XP del sprite — anchor scroll a #pixel-patron. PayPal URL configurada: https://www.paypal.me/sanprietogamer/5. Flujo de actualización: donante paga 5€ · incluye nick en concepto PayPal · Karlete añade objeto a PIXEL_DONORS · git push → nombre aparece en lluvia en producción. 5 niveles de intensidad de lluvia: SILENCIOSA (0) · GOTAS (1–3) · LLOVIZNA (4–10) · LLUVIA (11–25) · TORMENTA (26–50) · DILUVIO ⚡ (51+). Colores de nombres: verde #00ff41 · magenta #ff00ff · azul #00bfff · dorado #ffcc00 (Karlete).
 **Sesión 23 (2026-02-28):** BUG FIX — `.news-grid` expandía cards al hacer "Leer más". Fix: `align-items: start` en `css/news.css`. Push a main. Todos los .md actualizados.
