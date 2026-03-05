@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="description" content="Devlog de Fallen Valkyrie — 2D RPG en Unity desarrollado por Karlete. Crónica de su construcción: sesiones, avances y aprendizajes." />
+  <title>Fallen Valkyrie Devlog — Freakonia | GameDev por Karlete</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+
+  <style>
+    /* ── Page Header — Fallen Valkyrie ── */
+    .page-header-fv {
+      background: var(--bg-surface);
+      border-bottom: 4px solid var(--accent-secondary);
+      padding: var(--sp-7) 0 var(--sp-6);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header-fv::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(255,0,255,0.07) 0%, transparent 55%),
+        linear-gradient(225deg, rgba(0,255,65,0.04) 0%, transparent 55%);
+      pointer-events: none;
+    }
+
+    .page-header-fv::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%; height: 4px;
+      background: linear-gradient(90deg,
+        var(--accent-secondary) 0%,
+        var(--accent-primary) 50%,
+        var(--accent-secondary) 100%);
+    }
+
+    .page-header-fv .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .fv-header-pre {
+      font-family: var(--font-primary);
+      font-size: 0.45rem;
+      color: var(--accent-secondary);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: var(--sp-3);
+    }
+
+    .fv-header-title {
+      font-family: var(--font-primary);
+      font-size: clamp(1.4rem, 5vw, 2.8rem);
+      color: var(--text-bright);
+      text-shadow: 0 0 20px var(--accent-secondary), 0 0 40px rgba(255,0,255,0.4);
+      margin-bottom: var(--sp-2);
+    }
+
+    .fv-header-sub {
+      font-family: var(--font-secondary);
+      font-size: 24px;
+      color: var(--text-dim);
+      margin-bottom: var(--sp-5);
+    }
+
+    /* Stats row inside header */
+    .fv-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: var(--sp-3);
+      margin-top: var(--sp-5);
+    }
+
+    .fv-stat-box {
+      background: rgba(0,0,0,0.4);
+      border: 2px solid var(--accent-secondary);
+      padding: var(--sp-3) var(--sp-4);
+      text-align: center;
+    }
+
+    .fv-stat-label {
+      font-family: var(--font-primary);
+      font-size: 0.38rem;
+      color: var(--accent-secondary);
+      display: block;
+      margin-bottom: var(--sp-2);
+      letter-spacing: 1px;
+    }
+
+    .fv-stat-value {
+      font-family: var(--font-secondary);
+      font-size: 20px;
+      color: var(--accent-primary);
+    }
+
+    /* ── Section titles ── */
+    .fv-section-title {
+      font-family: var(--font-primary);
+      font-size: clamp(0.6rem, 2vw, 0.9rem);
+      margin-bottom: var(--sp-2);
+    }
+
+    .fv-section-sub {
+      font-family: var(--font-secondary);
+      font-size: 20px;
+      color: var(--text-dim);
+      margin-bottom: var(--sp-6);
+    }
+
+    /* ── Lore box (credits section) ── */
+    .lore-box {
+      background: var(--bg-card);
+      border: 2px solid #2a2a2a;
+      padding: var(--sp-5);
+      position: relative;
+    }
+
+    .lore-box.gold-border {
+      border-color: var(--accent-warn);
+      box-shadow: 0 0 0 1px rgba(255,204,0,0.15), 4px 4px 0 rgba(255,204,0,0.2);
+    }
+
+    .lore-box-title {
+      font-family: var(--font-primary);
+      font-size: 0.5rem;
+      color: var(--accent-warn);
+      text-shadow: 0 0 12px rgba(255,204,0,0.6);
+      margin-bottom: var(--sp-4);
+      display: block;
+    }
+
+    .lore-box p {
+      font-family: var(--font-secondary);
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--text);
+    }
+
+    .lore-box p + p { margin-top: var(--sp-3); }
+
+    /* ── Credit tag ── */
+    .credit-tag {
+      display: inline-block;
+      background: var(--accent-warn);
+      color: #000;
+      font-family: var(--font-primary);
+      font-size: 0.45rem;
+      padding: 4px 10px;
+      margin-top: var(--sp-4);
+      text-decoration: none;
+    }
+
+    .credit-tag:hover {
+      background: #e6b800;
+      box-shadow: 2px 2px 0 rgba(0,0,0,0.4);
+    }
+
+    /* ── Global progress bar ── */
+    .bar-container {
+      margin-bottom: var(--sp-6);
+    }
+
+    .bar-label-row {
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-primary);
+      font-size: 0.4rem;
+      color: var(--text-dim);
+      margin-bottom: var(--sp-2);
+    }
+
+    .bar-label-row .bar-pct {
+      color: var(--accent-secondary);
+    }
+
+    /* ── Devlog Summary Card ── */
+    .devlog-summary {
+      background: var(--bg-card);
+      border: 4px solid var(--accent-warn);
+      box-shadow: 4px 4px 0 rgba(255,204,0,0.2);
+      padding: 2rem;
+      position: relative;
+      margin-bottom: var(--sp-7);
+    }
+
+    .summary-badge {
+      position: absolute;
+      top: -2px;
+      right: var(--sp-5);
+      background: var(--accent-warn);
+      color: #000;
+      font-family: var(--font-primary);
+      font-size: 0.38rem;
+      padding: 4px 10px;
+    }
+
+    .summary-title {
+      font-family: var(--font-primary);
+      font-size: 0.6rem;
+      color: var(--accent-warn);
+      margin-bottom: var(--sp-3);
+    }
+
+    .summary-date {
+      font-family: var(--font-primary);
+      font-size: 0.35rem;
+      color: var(--text-dim);
+      margin-bottom: var(--sp-4);
+      display: block;
+    }
+
+    .summary-body {
+      font-family: var(--font-secondary);
+      font-size: 18px;
+      color: var(--text-dim);
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: var(--sp-4);
+    }
+
+    .summary-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--sp-2);
+      margin-top: var(--sp-3);
+    }
+
+    /* ── Devlog img placeholder ── */
+    .devlog-img-placeholder {
+      width: 100%;
+      height: 200px;
+      border: 2px dashed var(--text-dim);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-dim);
+      font-family: var(--font-secondary);
+      font-size: 18px;
+      margin-bottom: var(--sp-4);
+      background: var(--bg);
+    }
+
+    /* ── Devlog empty state ── */
+    .devlog-empty {
+      text-align: center;
+      padding: 3rem;
+      color: var(--text-dim);
+      font-family: var(--font-secondary);
+      font-size: 22px;
+    }
+
+    .devlog-cursor {
+      display: inline-block;
+      animation: blink 1s step-end infinite;
+      color: var(--accent-primary);
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0; }
+    }
+
+    /* ── Devlog Entry Card ── */
+    .devlog-entry {
+      background: var(--bg-card);
+      border-left: 4px solid var(--accent-primary);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .devlog-entry:hover {
+      border-color: var(--accent-secondary);
+      box-shadow: -4px 0 12px rgba(255,0,255,0.2), 0 0 20px rgba(255,0,255,0.08);
+    }
+
+    .devlog-entry-header {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--sp-2);
+      margin-bottom: var(--sp-4);
+    }
+
+    .devlog-date {
+      font-family: var(--font-primary);
+      font-size: 0.5rem;
+      background: var(--accent-primary);
+      color: #000;
+      padding: 4px 8px;
+      display: inline-block;
+    }
+
+    .devlog-num {
+      font-family: var(--font-primary);
+      font-size: 0.4rem;
+      color: var(--text-dim);
+      margin-left: var(--sp-2);
+    }
+
+    .devlog-img {
+      width: 100%;
+      max-height: 320px;
+      object-fit: cover;
+      border: 4px solid var(--accent-primary);
+      display: block;
+      margin-bottom: var(--sp-4);
+    }
+
+    .devlog-title {
+      font-family: var(--font-primary);
+      font-size: 0.7rem;
+      color: var(--accent-primary);
+      margin: 0 0 var(--sp-3);
+    }
+
+    .devlog-desc {
+      font-family: var(--font-secondary);
+      font-size: 20px;
+      color: var(--text);
+      line-height: 1.6;
+      margin-bottom: var(--sp-4);
+    }
+
+    .devlog-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--sp-1);
+    }
+
+    .devlog-tag {
+      font-family: var(--font-secondary);
+      font-size: 16px;
+      border: 2px solid var(--accent-tertiary);
+      color: var(--accent-tertiary);
+      padding: 2px 8px;
+      display: inline-block;
+      margin: 2px;
+    }
+
+    /* ── Section label pill ── */
+    .fv-section-label {
+      display: inline-block;
+      font-family: var(--font-primary);
+      font-size: 0.5rem;
+      padding: var(--sp-2) var(--sp-4);
+      color: #000;
+      margin-bottom: var(--sp-4);
+      letter-spacing: 2px;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      .fv-stats { grid-template-columns: repeat(2, 1fr); }
+      .devlog-summary { padding: 1.2rem; }
+    }
+  </style>
+
+</head>
+<body>
+
+<!-- CRT overlay -->
+<div class="crt-overlay" aria-hidden="true"></div>
+
+<!-- ─── Navigation ─────────────────────────────────────────────────────── -->
+<nav class="navbar" role="navigation" aria-label="Navegación principal">
+  <div class="container">
+    <a href="index.html" class="nav-brand">⚔ FREAKONIA</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">▼ MENU</button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html"          class="nav-link">🏠 Inicio</a></li>
+      <li class="nav-dropdown">
+        <span class="nav-link nav-dropdown-toggle">🎮 GameDev ▾</span>
+        <ul class="nav-submenu">
+          <li><a href="gamedev.html">🎮 GameDev</a></li>
+          <li><a href="fallen-valkyrie.html">📓 FV Devlog</a></li>
+        </ul>
+      </li>
+      <li><a href="gaming.html"         class="nav-link">🕹 Gaming</a></li>
+      <li><a href="esports.html"        class="nav-link">🏆 Esports</a></li>
+      <li><a href="got.html"            class="nav-link">🐉 GoT</a></li>
+      <li><a href="warhammer.html"      class="nav-link">⚙ Warhammer</a></li>
+      <li><a href="magic.html"          class="nav-link">✨ MtG</a></li>
+      <li><a href="rol.html"            class="nav-link">🎲 Rol</a></li>
+      <li><a href="nba.html"            class="nav-link">🏀 NBA</a></li>
+      <li><a href="java.html"           class="nav-link">☕ Java</a></li>
+      <li><a href="social.html"         class="nav-link">📡 Social</a></li>
+      <li><a href="news.html"           class="nav-link">📰 News</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ─── Page Header ─────────────────────────────────────────────────────── -->
+<header class="page-header-fv">
+  <div class="container">
+    <p class="fv-header-pre">▶ GAMEDEV / FALLEN VALKYRIE</p>
+    <h1 class="fv-header-title">DEVLOG</h1>
+    <p class="fv-header-sub">Crónica de una valkiria en construcción</p>
+
+    <div class="fv-stats">
+      <div class="fv-stat-box">
+        <span class="fv-stat-label">ENGINE</span>
+        <span class="fv-stat-value">UNITY</span>
+      </div>
+      <div class="fv-stat-box">
+        <span class="fv-stat-label">GÉNERO</span>
+        <span class="fv-stat-value">2D RPG</span>
+      </div>
+      <div class="fv-stat-box">
+        <span class="fv-stat-label">ESTADO</span>
+        <span class="fv-stat-value">EN DESARROLLO</span>
+      </div>
+      <div class="fv-stat-box">
+        <span class="fv-stat-label">PROGRESO</span>
+        <span class="fv-stat-value" style="color:var(--accent-secondary);">10%</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 1 — CRÉDITOS DEL PROYECTO
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="creditos">
+    <div class="container">
+
+      <span class="fv-section-label" style="background:var(--accent-warn);">📚 CRÉDITOS DEL PROYECTO</span>
+      <h2 class="fv-section-title" style="color:var(--accent-warn); text-shadow: 0 0 12px rgba(255,204,0,0.6); margin-bottom: var(--sp-6);">ORIGEN Y ATRIBUCIÓN</h2>
+
+      <div class="lore-box gold-border reveal" style="max-width: 860px;">
+        <span class="lore-box-title">⚠ ESTE JUEGO NACE DE UN APRENDIZAJE</span>
+
+        <p>
+          Estoy siguiendo el curso de Unity 2D RPG de <strong style="color:var(--accent-warn);">AlexDev</strong> en Udemy
+          para aprender las bases del desarrollo de RPGs en Unity. Una vez termine el curso, utilizaré el conocimiento adquirido
+          y los assets reutilizables — combinados con recursos de itch.io — para construir <strong>Fallen Valkyrie</strong>
+          como un juego propio y original. Mis conocimientos estan orientados a juegos como los que ya he publicado en itchio,
+          un juego de naves de habilidad en 2D y un simulador en 3D de gestion de cocina en la que preparas platos de sushi.
+          Ademas tengo pendientes de publicar otro shooter de naves 2D y un juego tipo arkanoid. 
+          Fallen Valkyrie es mi primer intento de hacer un RPG, y estoy emocionada por el proceso de aprendizaje que esto implica.
+        </p>
+        <p>
+          Todo el crédito y respeto para <strong style="color:var(--accent-warn);">AlexDev</strong> por el excelente material de enseñanza.
+          Este devlog existe para documentar el proceso con honestidad: de alumna a creadora.
+        </p>
+
+        <a
+          href="https://www.udemy.com/course/2d-rpg-alexdev/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="credit-tag"
+        >📚 CURSO: ALEXDEV — UNITY 2D RPG (UDEMY)</a>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 2 — ESTADO ACTUAL
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="estado">
+    <div class="container">
+
+      <span class="fv-section-label" style="background:var(--accent-primary);">⚙ ESTADO ACTUAL</span>
+      <h2 class="fv-section-title" style="color:var(--accent-primary); text-shadow: var(--glow-green); margin-bottom: var(--sp-4);">¿DÓNDE ESTAMOS?</h2>
+
+      <!-- Global progress bar -->
+      <div class="bar-container reveal" style="max-width:860px;">
+        <div class="bar-label-row">
+          <span>PROGRESO GLOBAL</span>
+          <span class="bar-pct">10%</span>
+        </div>
+        <div class="bar-track">
+          <div class="bar-fill pink" data-fill="10"></div>
+        </div>
+      </div>
+
+      <!-- Devlog Summary Card -->
+      <div class="devlog-summary reveal">
+        <span class="summary-badge">📋 RESUMEN INICIAL</span>
+
+        <h3 class="summary-title">LO QUE HAY HECHO HASTA AQUÍ</h3>
+        <span class="summary-date">HASTA HOY · 05/03/2026</span>
+
+        <img src="assets/img/estado_actual_FV.jpg"
+             alt="Estado actual de Fallen Valkyrie"
+             class="devlog-img"
+             onerror="this.parentElement.style.display='none'">
+
+        <p class="summary-body">
+          Llevo un tiempo robando horas al día para avanzar en este proyecto.
+          De momento tengo bastante trabajo hecho en la lógica de la protagonista:
+          movimiento completo, máquina de estados, salto, dash, deslizamiento por
+          paredes y ataque. También tengo casi terminado el tilemap del primer nivel
+          y estoy cerrando los ajustes del primer enemigo: un esqueleto.
+        </p>
+
+        <div class="summary-tags">
+          <span class="devlog-tag">Player Movement</span>
+          <span class="devlog-tag">State Machine</span>
+          <span class="devlog-tag">Jump</span>
+          <span class="devlog-tag">Dash</span>
+          <span class="devlog-tag">Wall Slide</span>
+          <span class="devlog-tag">Attack</span>
+          <span class="devlog-tag">Tilemap Lv1</span>
+          <span class="devlog-tag">Enemy: Skeleton</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 3 — SESIONES DE DESARROLLO
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="sesiones">
+    <div class="container">
+
+      <span class="fv-section-label" style="background:var(--accent-secondary);">📝 SESIONES DE DESARROLLO</span>
+      <h2 class="fv-section-title" style="color:var(--accent-secondary); text-shadow: var(--glow-pink); margin-bottom: var(--sp-2);">DIARIO DE DESARROLLO</h2>
+      <p class="fv-section-sub">Las pequeñas victorias cuentan. Cada línea de código es un paso.</p>
+
+      <!-- Empty state — visible until real entries are added -->
+      <div class="devlog-empty">
+        ▸ LAS PRIMERAS ENTRADAS DEL DIARIO ESTÁN EN CAMINO...
+        <span class="devlog-cursor">█</span>
+      </div>
+
+      <!-- DEVLOG ENTRIES — Add new entries here, newest first -->
+
+      <!-- EXAMPLE START -->
+      <!--
+        ENTRADA DE EJEMPLO — Copia esta estructura para cada sesión real.
+        Elimina o reemplaza este bloque cuando añadas entradas reales.
+        Elimina también el div.devlog-empty de arriba cuando haya entradas.
+
+      <div class="devlog-entry reveal">
+
+        <div class="devlog-entry-header">
+          <span class="devlog-date">05/03/2026</span>
+          <span class="devlog-num">#001</span>
+        </div>
+
+        <img
+          src=""
+          alt="Sesión 001 — captura"
+          class="devlog-img"
+          onerror="this.parentElement.removeChild(this)"
+        />
+
+        <h3 class="devlog-title">TÍTULO DE LA SESIÓN</h3>
+
+        <p class="devlog-desc">
+          Descripción de lo que se hizo en esta sesión: mecánicas implementadas,
+          problemas encontrados, soluciones descubiertas, aprendizajes.
+          Tan larga o corta como haga falta.
+        </p>
+
+        <div class="devlog-tags">
+          <span class="devlog-tag">Etiqueta 1</span>
+          <span class="devlog-tag">Etiqueta 2</span>
+          <span class="devlog-tag">Etiqueta 3</span>
+        </div>
+
+      </div>
+      -->
+      <!-- EXAMPLE END -->
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ─── Footer ──────────────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="gamedev.html">GameDev</a></li>
+      <li><a href="gaming.html">Gaming</a></li>
+      <li><a href="got.html">GoT</a></li>
+      <li><a href="social.html">Social</a></li>
+      <li><a href="java.html">Java</a></li>
+    </ul>
+    <p>⚔ FREAKONIA — KARLETE</p>
+    <p style="color:#444;">HECHO CON AMOR PIXELADO Y DEMASIADAS BEBIDAS ENERGÉTICAS</p>
+    <p style="color:#333;">◄ INSERT COIN ►</p>
+
+    <div class="footer-legal">
+      <div class="pixel-divider"></div>
+      <p class="footer-copyright">
+        © 2025 FREAKONIA — KARLETE. ALL RIGHTS RESERVED.
+      </p>
+      <p class="footer-trademark">
+        FREAKONIA™ IS A REGISTERED PERSONAL BRAND.
+        ALL CONTENT, DESIGNS, GAME CONCEPTS AND ORIGINAL TEXTS
+        ON THIS SITE ARE THE EXCLUSIVE PROPERTY OF THEIR AUTHOR.
+        UNAUTHORIZED REPRODUCTION, DISTRIBUTION OR USE OF ANY
+        CONTENT IS STRICTLY PROHIBITED WITHOUT PRIOR WRITTEN PERMISSION.
+      </p>
+      <p class="footer-notice">
+        ⚠ THIS SITE CONTAINS STRONG OPINIONS ABOUT VIDEO GAMES,
+        FANTASY LORE AND BASKETBALL. READER DISCRETION IS ADVISED.
+        NO GOBLINS WERE HARMED IN THE MAKING OF THIS WEBSITE.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="js/main.js"></script>
+</body>
+</html>
