@@ -5,8 +5,17 @@
   const path = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-link').forEach(link => {
     const href = link.getAttribute('href');
-    if (href === path || (path === '' && href === 'index.html')) {
+    if (href && (href === path || (path === '' && href === 'index.html'))) {
       link.classList.add('active');
+    }
+  });
+  // Highlight dropdown parent when a submenu link matches the current page
+  document.querySelectorAll('.nav-submenu a').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && (href === path || (path === '' && href === 'index.html'))) {
+      link.classList.add('active');
+      const toggle = link.closest('.nav-dropdown')?.querySelector('.nav-dropdown-toggle');
+      if (toggle) toggle.classList.add('active');
     }
   });
 })();
@@ -21,6 +30,16 @@ if (navToggle && navMenu) {
     navToggle.textContent = navMenu.classList.contains('open') ? '▲ MENU' : '▼ MENU';
   });
 }
+
+// ─── Dropdown nav toggle (mobile) ──────────────────────────────────────────
+document.querySelectorAll('.nav-dropdown-toggle').forEach(toggle => {
+  toggle.addEventListener('click', () => {
+    if (window.innerWidth <= 900) {
+      const dropdown = toggle.closest('.nav-dropdown');
+      if (dropdown) dropdown.classList.toggle('open');
+    }
+  });
+});
 
 // ─── CRT flicker (subtle random opacity dip) ──────────────────────────────
 function crtFlicker() {

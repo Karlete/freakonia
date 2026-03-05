@@ -58,7 +58,13 @@
     <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">▼ MENU</button>
     <ul class="nav-menu" id="nav-menu">
       <li><a href="index.html"     class="nav-link">🏠 Inicio</a></li>
-      <li><a href="gamedev.html"   class="nav-link">🎮 GameDev</a></li>
+      <li class="nav-dropdown">
+        <span class="nav-link nav-dropdown-toggle">🎮 GameDev ▾</span>
+        <ul class="nav-submenu">
+          <li><a href="gamedev.html">🎮 GameDev</a></li>
+          <li><a href="fallen-valkyrie.html">📓 FV Devlog</a></li>
+        </ul>
+      </li>
       <li><a href="gaming.html"    class="nav-link">🕹 Gaming</a></li>
       <li><a href="esports.html"   class="nav-link">🏆 Esports</a></li>
       <li><a href="got.html"       class="nav-link">🐉 GoT</a></li>
