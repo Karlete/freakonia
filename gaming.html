@@ -18,6 +18,162 @@
   <link rel="stylesheet" href="css/gaming.css" />
 
 
+  <style>
+    /* ── @SANPRIETO — Mi Canal de Gaming (scoped to #canal) ── */
+    #canal .channel-card {
+      border: 4px solid var(--accent-primary);
+      background: var(--bg-card);
+      padding: 2rem;
+      position: relative;
+      text-align: center;
+      transition: box-shadow 0.2s;
+      overflow: hidden;
+    }
+
+    #canal .channel-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,255,65,0.04) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    #canal .channel-card:hover {
+      box-shadow: var(--glow-green);
+    }
+
+    #canal .channel-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent-primary);
+      color: var(--bg);
+      font-family: var(--font-primary);
+      font-size: 0.38rem;
+      padding: 3px 10px;
+      white-space: nowrap;
+    }
+
+    #canal .channel-name {
+      font-family: var(--font-primary);
+      font-size: clamp(0.45rem, 1.5vw, 0.65rem);
+      color: var(--accent-secondary);
+      text-shadow: var(--glow-pink);
+      display: block;
+      margin-bottom: var(--sp-4);
+      padding-top: var(--sp-2);
+      line-height: 1.6;
+    }
+
+    #canal .channel-url {
+      font-family: var(--font-secondary);
+      font-size: 18px;
+      color: var(--text-dim);
+      display: block;
+      margin-bottom: var(--sp-4);
+    }
+
+    #canal .channel-card p {
+      font-family: var(--font-secondary);
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--text);
+      position: relative;
+      z-index: 1;
+      margin-bottom: var(--sp-4);
+    }
+
+    #canal .channel-subtag {
+      font-family: var(--font-secondary);
+      font-size: 16px;
+      color: var(--text-dim);
+      display: block;
+      margin-top: var(--sp-3);
+    }
+
+    #canal .status-soon {
+      display: inline-block;
+      font-family: var(--font-primary);
+      font-size: 0.38rem;
+      color: var(--accent-warn);
+      border: 2px solid var(--accent-warn);
+      padding: 4px 10px;
+      margin-bottom: var(--sp-5);
+    }
+
+    #canal .taberna-img-link {
+      display: block;
+      text-decoration: none;
+      margin-bottom: var(--sp-5);
+    }
+
+    #canal .taberna-img-wrap {
+      position: relative;
+      width: 100%;
+      border: 4px solid var(--accent-primary);
+      overflow: hidden;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    #canal .taberna-img-wrap:hover {
+      border-color: var(--accent-secondary);
+      box-shadow: 0 0 20px var(--accent-secondary),
+                  0 0 40px rgba(255,0,255,0.2);
+    }
+
+    #canal .taberna-img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s;
+    }
+
+    #canal .taberna-img-wrap:hover .taberna-img {
+      transform: scale(1.03);
+    }
+
+    #canal .taberna-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    #canal .taberna-img-wrap:hover .taberna-img-overlay {
+      opacity: 1;
+    }
+
+    #canal .taberna-play-btn {
+      font-family: var(--font-primary);
+      font-size: 0.5rem;
+      color: var(--accent-secondary);
+      text-shadow: var(--glow-pink);
+      letter-spacing: 2px;
+    }
+
+    #canal .canal-tags {
+      font-family: var(--font-secondary);
+      font-size: 18px;
+      color: var(--text-dim);
+      margin: var(--sp-4) 0;
+    }
+
+    .platform-quicknav a.yt {
+      color: var(--accent-secondary);
+      border-color: var(--accent-secondary);
+    }
+
+    @media (max-width: 640px) {
+      #canal .taberna-img { height: 220px; }
+    }
+  </style>
+
   <!-- Open Graph / WhatsApp / Telegram -->
   <meta property="og:type"         content="website">
   <meta property="og:site_name"    content="Freakonia">
@@ -100,12 +256,56 @@
       <!-- Quick platform navigation -->
       <nav class="platform-quicknav" aria-label="Saltar a plataforma">
         <span style="font-family:var(--font-primary);font-size:0.45rem;color:var(--text-dim);align-self:center;">▶ IR A:</span>
+        <a href="#canal"         class="yt">📺 MI CANAL</a>
         <a href="#master-system" class="sms">📺 MASTER SYSTEM II</a>
         <a href="#game-boy"      class="gb">🎮 GAME BOY</a>
         <a href="#super-nintendo" class="snes">🟣 SUPER NINTENDO</a>
         <a href="#playstation-1" class="ps1">💿 PLAYSTATION 1</a>
         <a href="#pc"            class="pc">💻 PC</a>
       </nav>
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECCIÓN 0 — MI CANAL DE GAMING: @SANPRIETO
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="canal">
+    <div class="container">
+
+      <div class="section-label pink">📺 MI CANAL DE GAMING</div>
+      <h2 class="section-title" style="color:var(--accent-secondary);text-shadow:var(--glow-pink);">@SANPRIETO</h2>
+
+      <div class="channel-card reveal">
+        <div class="channel-badge">▶ YOUTUBE · GAMING</div>
+        <span class="channel-name">📺 @SANPRIETO</span>
+        <span class="channel-url">youtube.com/@sanprieto</span>
+
+        <span class="status-soon">⏳ REBRANDING EN CURSO</span>
+
+        <!-- TODO: replace with @sanprieto channel banner -->
+        <a href="https://www.youtube.com/@sanprieto"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="taberna-img-link">
+          <div class="taberna-img-wrap">
+<img src="assets/img/canal_gaming.jpg" alt="@SANPRIETO — Canal de YouTube Gaming" class="taberna-img"
+  style="object-fit: fill;">
+            <div class="taberna-img-overlay">
+              <span class="taberna-play-btn">▶ VER CANAL</span>
+            </div>
+          </div>
+        </a>
+
+        <p>En 2026 decidí reflotar el canal con una nueva identidad. @sanprieto será el espacio donde junto gaming retro, nostalgia de los 90, desarrollo indie con Unity y todo lo que forma parte de Freakonia en formato vídeo.
+           Homenajes, gameplays completos, análisis sin pretensiones y mucho amor por los píxeles.</p>
+
+        <div class="canal-tags">Gaming Retro · Nostalgia 90s · GameDev · Unity · Freakonia</div>
+
+        <a href="https://www.youtube.com/@sanprieto" class="btn btn-pink" target="_blank" rel="noopener noreferrer">▶ VER CANAL</a>
+      </div>
+
     </div>
   </section>
 

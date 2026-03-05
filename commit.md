@@ -2,6 +2,18 @@
 
 ---
 
+## Sesión 30 — 2026-03-05
+
+### feat(gaming): add @SANPRIETO YouTube channel section to gaming.html
+
+- **gaming.html:** Added inline `<style>` block with `#canal`-scoped CSS for channel-card components (reusing nba.html pattern: `.channel-card`, `.taberna-img-link/wrap/img/overlay`, `.taberna-play-btn`, `.status-soon`, `.canal-tags`)
+- **gaming.html:** Added `#canal` as first quick-nav anchor in `.platform-quicknav` (class `yt`, pink/magenta color)
+- **gaming.html:** Added `<section id="canal">` before `#master-system`, with: section-label pink "MI CANAL DE GAMING", title @SANPRIETO, status badge "⏳ REBRANDING EN CURSO" (gold), placeholder image `la_taberna_del_boxscore.jpg` (TODO comment for banner), description VT323, tags row, pink CTA button
+- **estado.md:** Last updated sesión 30
+- **commit.md:** Session log added
+
+---
+
 ## Sesión 29 — 2026-03-04
 
 ### feat(news): 3 new articles — gaming/warhammer/esports + tracker updated
