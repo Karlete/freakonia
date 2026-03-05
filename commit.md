@@ -2,6 +2,28 @@
 
 ---
 
+## Sesión 31 — 2026-03-05
+
+### feat(seo): full technical SEO audit + favicons + manifest + sitemap
+
+- **favicon.ico** + **assets/icons/**: pixel-art "F" favicon in 5 sizes (16, 32, 180, 192, 512px) generated via Node.js raw PNG binary (_gen_favicons.js)
+- **site.webmanifest**: PWA manifest with name/short_name/theme_color/background_color/icons
+- **robots.txt**: allow all + sitemap reference
+- **sitemap.xml**: all 12 pages, lastmod 2026-03-05, priority 1.0/0.8
+- **All 12 HTML pages** (index/gamedev/gaming/esports/got/warhammer/magic/rol/nba/social/java/news):
+  - Unique `<title>` tags expanded to 50-60 chars
+  - Unique `<meta name="description">` improved to 110-160 chars
+  - Favicon link block added (ico + png 32 + png 16 + apple-touch-icon)
+  - `<link rel="manifest" href="/site.webmanifest">` added
+  - `<link rel="canonical">` added per page
+  - `loading="lazy"` added to all below-fold `<img>` tags
+  - `fetchpriority="high"` added to hero image on gamedev.html
+  - `rel="noopener noreferrer"` ensured on all external links
+- **estado.md**: updated sesión 31
+- **commit.md**: session log added
+
+---
+
 ## Sesión 30 — 2026-03-05
 
 ### feat(gaming): add @SANPRIETO YouTube channel section to gaming.html

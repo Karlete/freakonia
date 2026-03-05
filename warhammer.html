@@ -3,8 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Freakonia — Warhammer Fantasy. El Viejo Mundo, Bretonia, ediciones, ejércitos y la historia de una niña de 12 años con una caja de quinta edición." />
-  <title>Warhammer Fantasy — Freakonia</title>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="description" content="Sección dedicada a Warhammer 40.000 y Age of Sigmar. Miniaturas, lore grimdark y galería de pintura de Karlete." />
+  <title>Warhammer — Freakonia | 40K, Age of Sigmar y Pintura</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -858,6 +865,8 @@
       .whf-section-img { height: 220px; }
     }
   </style>
+  <link rel="canonical" href="https://freakonia.com/warhammer.html">
+
 
   <!-- Open Graph / WhatsApp / Telegram -->
   <meta property="og:type"         content="website">
@@ -981,7 +990,7 @@
 
         <div class="whf-gallery">
           <div class="whf-gallery-img-wrap">
-            <img
+            <img fetchpriority="high"
               src="assets/img/warhammer_caja_quinta_edicion.jpg"
               alt="Caja Quinta Edición Warhammer Fantasy Battle 1996"
               class="whf-gallery-img"
@@ -989,7 +998,7 @@
             <span class="whf-gallery-caption">Quinta Edición — 1996</span>
           </div>
           <div class="whf-gallery-img-wrap">
-            <img
+            <img loading="lazy"
               src="assets/img/miniaturas_caja.jpg"
               alt="Miniaturas incluidas en la caja de Quinta Edición"
               class="whf-gallery-img"
@@ -1059,7 +1068,7 @@
       </div>
 
       <div class="reveal" style="margin-bottom: var(--sp-6);">
-        <img
+        <img loading="lazy"
           src="assets/img/Bretonnia_background.JPG"
           alt="Bretonia — Caballeros del Viejo Mundo"
           style="width:100%; display:block; border: 4px solid var(--accent-warn); box-shadow: 0 0 0 1px var(--accent-warn), var(--glow-gold);"
@@ -1153,7 +1162,7 @@
       </div>
 
       <div class="whf-section-img-wrap whf-img-ediciones reveal">
-        <img
+        <img loading="lazy"
           src="assets/img/warhammer_partida_1.jpg"
           alt="Partida de Warhammer Fantasy Battle — Las Ediciones"
           class="whf-section-img"
@@ -1451,7 +1460,7 @@
           </div>
           <div class="army-card-body">
             <div class="army-img-container" data-army="bretonia">
-              <img src="assets/img/bretonia.jpg"
+              <img loading="lazy" src="assets/img/bretonia.jpg"
                    alt="Bretonia — Warhammer Fantasy Battle"
                    class="army-img">
             </div>
@@ -1479,7 +1488,7 @@
           </div>
           <div class="army-card-body">
             <div class="army-img-container" data-army="imperio">
-              <img src="assets/img/el_imperio.jpg"
+              <img loading="lazy" src="assets/img/el_imperio.jpg"
                    alt="El Imperio — Warhammer Fantasy Battle"
                    class="army-img">
             </div>
@@ -1507,7 +1516,7 @@
           </div>
           <div class="army-card-body">
             <div class="army-img-container" data-army="enanos">
-              <img src="assets/img/enanos.jpg"
+              <img loading="lazy" src="assets/img/enanos.jpg"
                    alt="Enanos — Warhammer Fantasy Battle"
                    class="army-img">
             </div>
@@ -1535,7 +1544,7 @@
           </div>
           <div class="army-card-body">
             <div class="army-img-container" data-army="altos-elfos">
-              <img src="assets/img/altos_elfos.jpg"
+              <img loading="lazy" src="assets/img/altos_elfos.jpg"
                    alt="Altos Elfos — Warhammer Fantasy Battle"
                    class="army-img">
             </div>
@@ -1563,7 +1572,7 @@
           </div>
           <div class="army-card-body">
             <div class="army-img-container" data-army="elfos-silvanos">
-              <img src="assets/img/elfos_silvanos.jpg"
+              <img loading="lazy" src="assets/img/elfos_silvanos.jpg"
                    alt="Elfos Silvanos — Warhammer Fantasy Battle"
                    class="army-img">
             </div>
@@ -1591,7 +1600,7 @@
           </div>
           <div class="army-card-body">
             <div class="army-img-container" data-army="hombres-lagarto">
-              <img src="assets/img/hombres_lagarto.jpg"
+              <img loading="lazy" src="assets/img/hombres_lagarto.jpg"
                    alt="Hombres Lagarto — Warhammer Fantasy Battle"
                    class="army-img">
             </div>
@@ -1629,7 +1638,7 @@
           </div>
           <div class="army-card-body">
             <div class="army-img-container" data-army="guerreros-caos">
-              <img src="assets/img/guerreros_del_caos.jpg"
+              <img loading="lazy" src="assets/img/guerreros_del_caos.jpg"
                    alt="Guerreros del Caos — Warhammer Fantasy Battle"
                    class="army-img">
             </div>
@@ -1657,7 +1666,7 @@
           </div>
           <div class="army-card-body">
             <div class="army-img-container" data-army="demonios-caos">
-              <img src="assets/img/demonios_del_caos.jpg"
+              <img loading="lazy" src="assets/img/demonios_del_caos.jpg"
                    alt="Demonios del Caos — Warhammer Fantasy Battle"
                    class="army-img">
             </div>
@@ -1686,7 +1695,7 @@
           </div>
           <div class="army-card-body">
             <div class="army-img-container" data-army="bestias-caos">
-              <img src="assets/img/bestias_del_caos.jpg"
+              <img loading="lazy" src="assets/img/bestias_del_caos.jpg"
                    alt="Bestias del Caos — Warhammer Fantasy Battle"
                    class="army-img">
             </div>
@@ -1714,7 +1723,7 @@
           </div>
           <div class="army-card-body">
             <div class="army-img-container" data-army="elfos-oscuros">
-              <img src="assets/img/elfos_oscuros.png"
+              <img loading="lazy" src="assets/img/elfos_oscuros.png"
                    alt="Elfos Oscuros — Warhammer Fantasy Battle"
                    class="army-img">
             </div>
@@ -1742,7 +1751,7 @@
           </div>
           <div class="army-card-body">
             <div class="army-img-container" data-army="enanos-caos">
-              <img src="assets/img/enanos_del_caos.jpg"
+              <img loading="lazy" src="assets/img/enanos_del_caos.jpg"
                    alt="Enanos del Caos — Warhammer Fantasy Battle"
                    class="army-img">
             </div>
@@ -1770,7 +1779,7 @@
           </div>
           <div class="army-card-body">
             <div class="army-img-container" data-army="skavens">
-              <img src="assets/img/skavens.jpg"
+              <img loading="lazy" src="assets/img/skavens.jpg"
                    alt="Skaven — Warhammer Fantasy Battle"
                    class="army-img">
             </div>
@@ -1808,7 +1817,7 @@
           </div>
           <div class="army-card-body">
             <div class="army-img-container" data-army="condes-vampiro">
-              <img src="assets/img/condes_vampiro.jpg"
+              <img loading="lazy" src="assets/img/condes_vampiro.jpg"
                    alt="Condes Vampiro — Warhammer Fantasy Battle"
                    class="army-img">
             </div>
@@ -1836,7 +1845,7 @@
           </div>
           <div class="army-card-body">
             <div class="army-img-container" data-army="reyes-funerarios">
-              <img src="assets/img/reyes_funerarios.jpg"
+              <img loading="lazy" src="assets/img/reyes_funerarios.jpg"
                    alt="Reyes de las Tumbas — Warhammer Fantasy Battle"
                    class="army-img">
             </div>
@@ -1865,7 +1874,7 @@
           </div>
           <div class="army-card-body">
             <div class="army-img-container" data-army="orcos">
-              <img src="assets/img/orcos.jpg"
+              <img loading="lazy" src="assets/img/orcos.jpg"
                    alt="Orcos y Goblins — Warhammer Fantasy Battle"
                    class="army-img">
             </div>
@@ -1894,7 +1903,7 @@
           </div>
           <div class="army-card-body">
             <div class="army-img-container" data-army="reinos-ogros">
-              <img src="assets/img/reinos_ogros.jpg"
+              <img loading="lazy" src="assets/img/reinos_ogros.jpg"
                    alt="Reinos Ogros — Warhammer Fantasy Battle"
                    class="army-img">
             </div>
@@ -1949,7 +1958,7 @@
       <h2 class="section-title" style="color:var(--wh-red);text-shadow:var(--glow-red);">2014–2015 — LA DESTRUCCIÓN DEL VIEJO MUNDO</h2>
 
       <div class="whf-section-img-wrap whf-img-endtimes reveal">
-        <img
+        <img loading="lazy"
           src="assets/img/warhammer_partida_2.jpg"
           alt="El Fin de los Tiempos — La Destrucción del Viejo Mundo"
           class="whf-section-img"
@@ -2084,7 +2093,7 @@
       <h2 class="section-title" style="color:var(--accent-tertiary);text-shadow:var(--glow-blue);">2024 — EL VIEJO MUNDO VUELVE</h2>
 
       <div class="whf-section-img-wrap whf-img-oldworld reveal">
-        <img
+        <img loading="lazy"
           src="assets/img/warhammer_partida_3.jpg"
           alt="Warhammer: The Old World 2024 — El Regreso"
           class="whf-section-img"
