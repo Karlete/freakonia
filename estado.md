@@ -1,6 +1,6 @@
 # estado.md — Project State Tracker
 
-Last updated: 2026-03-05 (sesión 31)
+Last updated: 2026-03-05 (sesión 34)
 
 ---
 
@@ -77,7 +77,13 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 ### Nav — lista completa de links (copiar en cada página nueva)
 ```html
 <li><a href="index.html"     class="nav-link">🏠 Inicio</a></li>
-<li><a href="gamedev.html"   class="nav-link">🎮 GameDev</a></li>
+<li class="nav-dropdown">
+  <span class="nav-link nav-dropdown-toggle">🎮 GameDev ▾</span>
+  <ul class="nav-submenu">
+    <li><a href="gamedev.html">🎮 GameDev</a></li>
+    <li><a href="fallen-valkyrie.html">📓 FV Devlog</a></li>
+  </ul>
+</li>
 <li><a href="gaming.html"    class="nav-link">🕹 Gaming</a></li>
 <li><a href="esports.html"   class="nav-link">🏆 Esports</a></li>
 <li><a href="got.html"       class="nav-link">🐉 GoT</a></li>
@@ -89,8 +95,8 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 <li><a href="social.html"    class="nav-link">📡 Social</a></li>
 <li><a href="news.html"      class="nav-link">📰 News</a></li>
 ```
-> Añadir clase `active` al link de la página actual.
-> ✅ Nav y footer actualizados en todas las páginas (NBA: sesión 7, Java: sesión 9, News: sesión 12).
+> "🎮 GameDev" es un dropdown. Desktop: hover muestra el submenu. Mobile: click en el toggle abre/cierra. El active state lo gestiona `setActiveNav()` en main.js — no añadir clase `active` a mano en el toggle.
+> ✅ Nav actualizada en todas las páginas (sesión 33). Dropdown styles en `css/components.css`.
 
 ---
 
@@ -143,13 +149,16 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 ---
 
 ## Current Phase
-🚀 Phase 3: PUBLICADA — index ✅ · gamedev ✅ · gaming ✅ · esports ✅ · got ✅ · warhammer ✅ · magic ✅ · rol ✅ · nba ✅ · social ✅ · java ✅ · news ✅
+🚀 Phase 3: PUBLICADA — index ✅ · gamedev ✅ · fallen-valkyrie ✅ · gaming ✅ · esports ✅ · got ✅ · warhammer ✅ · magic ✅ · rol ✅ · nba ✅ · social ✅ · java ✅ · news ✅
 
 **Web completa y publicada en producción.**
 - 🌐 URL: **https://freakonia.com**
 - 📦 Repo: **https://github.com/Karlete/freakonia**
 - ⚙️ Deploy: GitHub Pages (rama `main`, raíz `/`)
 
+**Sesión 34 (2026-03-05):** Estado actual de fallen-valkyrie.html rellenado con contenido real: imagen `estado_actual_FV.jpg` encima del texto, cuerpo en primera persona (movimiento completo, máquina de estados, salto, dash, wall slide, ataque, tilemap lv1, esqueleto primer enemigo), 8 `.devlog-tag` pills (Player Movement · State Machine · Jump · Dash · Wall Slide · Attack · Tilemap Lv1 · Enemy: Skeleton). Push a main.
+**Sesión 33 (2026-03-05):** Navbar "🎮 GameDev" convertido a dropdown en las 13 páginas HTML. CSS: `.nav-dropdown`, `.nav-dropdown-toggle`, `.nav-submenu` añadidos a `css/components.css` (hover en desktop, `.open` toggle en mobile). JS: `setActiveNav()` actualizado para detectar submenu links y destacar el toggle padre; nuevo listener de click para mobile dropdown en `js/main.js`. GameDev ya no es un `<a>` directo — el submenu tiene gamedev.html y fallen-valkyrie.html. Push a main.
+**Sesión 32 (2026-03-05):** Nueva página `fallen-valkyrie.html` — devlog/progress page de Fallen Valkyrie (2D RPG Unity). Header magenta con 4 stat boxes. Sección #creditos con lore-box gold y .credit-tag enlazando al curso AlexDev en Udemy. Sección #estado con barra de progreso 10% (pink) y .devlog-summary card. Sección #sesiones con empty state visible + template de entrada en comentarios. Inline `<style>` con todos los componentes específicos (`.devlog-entry`, `.devlog-summary`, `.devlog-tag`, etc.). gamedev.html: botón "▶ VER DEVLOG" (btn-pink) enlazando a fallen-valkyrie.html en el spotlight de Fallen Valkyrie. Push a main.
 **Sesión 29 (2026-03-04):** 3 nuevos artículos insertados al TOP de NEWS_DATA en `js/news-data.js`: Gaming (noticia-fatal-frame-2-remake-2026 · Fatal Frame II Crimson Butterfly Remake 12/03 en PS5/XSX/Switch2/PC) · Warhammer (noticia-tow-gran-cathay-defenders-2026 · Defenders of the Great Bastion 53 minis · 14/03) · Esports (noticia-lyon-lcs-lockin-2026 · LYON campeones LCS Lock-In 2026 · Inspired MVP · First Stand). NEWS_TRACKER actualizado: last_update 2026-03-04, next_available got/nba/magic/rol. Estado.md y commit.md actualizados. Push a main.
 **Sesión 28 (2026-03-02):** 3 nuevos artículos insertados al TOP de NEWS_DATA en `js/news-data.js`: Esports (noticia-g2-lec-versus-2026 · G2 campeones LEC Versus 3-2 vs KC · Caps MVP · First Stand 2026) · GOT (noticia-hotd-t3-trailer-2026 · HotD T3 tráiler CNN · Batalla del Gaznate · junio 2026) · NBA (noticia-spurs-racha-2026 · Spurs 11 victorias + caída vs Knicks · Mikal Bridges 25pts). NEWS_TRACKER actualizado: last_update 2026-03-02, next_available got/gaming/esports. Estado.md y commit.md actualizados. Push a main.
 **Sesión 25 (2026-03-01):** Pixel Patron Rain — nueva feature completa en index.html: js/pixels-data.js creado — array PIXEL_DONORS con 4 donantes seed: KARLETE · KAWAI_BI · MERCHAND · RIKI. js/pixels-rain.js creado — canvas con lluvia de nombres sobre el fondo, independiente de los píxeles existentes. css/pixels.css creado — estilos de la sección Pixel Patron (achievement card, contador, barra intensidad, donor list, how-it-works grid). index.html: canvas #patron-rain-canvas añadido tras el crt-overlay. index.html: .hero-shield añadido dentro de .hero-content — panel rgba(0,0,0,0.20) que evita solapamiento visual de nombres con título/sprite/botones. index.html: sección #pixel-patron añadida entre hero y main — achievement card dorada, contador de patrons, barra de intensidad (SILENCIOSA→DILUVIO), lista de donantes, grid "cómo funciona". index.html: botón 🏅 PIXEL PATRON dorado pulsante añadido bajo las barras HP/XP del sprite — anchor scroll a #pixel-patron. PayPal URL configurada: https://www.paypal.me/sanprietogamer/5. Flujo de actualización: donante paga 5€ · incluye nick en concepto PayPal · Karlete añade objeto a PIXEL_DONORS · git push → nombre aparece en lluvia en producción. 5 niveles de intensidad de lluvia: SILENCIOSA (0) · GOTAS (1–3) · LLOVIZNA (4–10) · LLUVIA (11–25) · TORMENTA (26–50) · DILUVIO ⚡ (51+). Colores de nombres: verde #00ff41 · magenta #ff00ff · azul #00bfff · dorado #ffcc00 (Karlete).
@@ -181,7 +190,7 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 
 ### CSS Design System (css/)
 - [x] `css/main.css` — Variables, reset, tipografía, layout helpers, section-title, pixel-divider, tags, status-badges, page-header, scroll-reveal base, responsive breakpoints
-- [x] `css/components.css` — Navbar (desktop + mobile), buttons (green/pink/blue/gold/small/block), cards, game-cards, video-cards, tweet-cards, HP/XP bars, platform-headers, footer, nav-hub, stat-boxes, alerts
+- [x] `css/components.css` — Navbar (desktop + mobile), **nav dropdown** (`.nav-dropdown` / `.nav-dropdown-toggle` / `.nav-submenu` — sesión 33), buttons (green/pink/blue/gold/small/block), cards, game-cards, video-cards, tweet-cards, HP/XP bars, platform-headers, footer, nav-hub, stat-boxes, alerts
 - [x] `css/animations.css` — 15+ keyframes, utility classes, glitch text, pixel particles, cursor blink, pixel loader, stagger delays
 - [x] `css/pixels.css` — estilos Pixel Patron section · achievement card · contador · barra intensidad · donor list · how-grid
 
@@ -243,6 +252,19 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
   - Feature checklist (✔ done / ▶ pending)
   - Info sidebar: motor, género, plataforma, lanzamiento TBD
   - Escalable: añadir más WIP cards debajo siguiendo comentario HTML
+  - **Botón "▶ VER DEVLOG"** (btn-pink) → fallen-valkyrie.html (sesión 32)
+
+### ✅ fallen-valkyrie.html — COMPLETO (sesión 32–34)
+- Child page de gamedev.html — devlog/progress page de Fallen Valkyrie (2D RPG Unity)
+- Header magenta con pre-text "▶ GAMEDEV / FALLEN VALKYRIE", título "DEVLOG", 4 stat boxes
+- Sección #creditos: lore-box gold-border con atribución a AlexDev/Udemy, `.credit-tag` enlazable
+- Sección #estado: barra progreso global 10% (pink fill) + `.devlog-summary` card con:
+  - Screenshot real `assets/img/estado_actual_FV.jpg` (onerror oculta el wrapper)
+  - Cuerpo primera persona con estado real del proyecto (movimiento, FSM, salto, dash, wall slide, ataque, tilemap, esqueleto)
+  - 8 `.devlog-tag` pills
+- Sección #sesiones: `.devlog-empty` visible + template en comentarios `<!-- EXAMPLE START/END -->`
+- Todos los estilos inline en `<style>` — sin archivo CSS externo propio
+- **Para añadir una entrada de sesión:** copiar el bloque comentado en #sesiones, rellenar fecha/num/título/desc/tags, eliminar `.devlog-empty` cuando haya al menos una entrada real
 
 ### ✅ gaming.html — COMPLETO
 - Page header con gradiente multicolor (azul → verde → rosa → dorado)

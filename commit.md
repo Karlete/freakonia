@@ -2,6 +2,45 @@
 
 ---
 
+## Sesión 34 — 2026-03-05
+
+### feat(fallen-valkyrie): fill estado actual with real content + screenshot
+
+- **fallen-valkyrie.html** (sección #estado › `.devlog-summary`):
+  - `<div class="devlog-img-placeholder">` reemplazado por `<img src="assets/img/estado_actual_FV.jpg" class="devlog-img" onerror="this.parentElement.style.display='none'">` (imagen sobre el texto)
+  - Cuerpo `.summary-body` rellenado con texto real en primera persona: movimiento completo, máquina de estados, salto, dash, deslizamiento por paredes, ataque, tilemap lv1, primer enemigo esqueleto
+  - Tags actualizados: 8 `.devlog-tag` pills — Player Movement · State Machine · Jump · Dash · Wall Slide · Attack · Tilemap Lv1 · Enemy: Skeleton (antes eran 4 `.tag.blue` genéricos)
+- **assets/img/estado_actual_FV.jpg**: screenshot real de Fallen Valkyrie en desarrollo
+
+---
+
+## Sesión 33 — 2026-03-05
+
+### feat(nav): GameDev dropdown with FV Devlog submenu on all pages
+
+- **css/components.css**: nuevas reglas `.nav-dropdown` (position:relative), `.nav-dropdown-toggle` (cursor:pointer), `.nav-submenu` (absolute, bg-surface, 4px solid accent-primary, VT323 links). Desktop: hover muestra submenu via CSS. Mobile: static + border-left, visible con `.open` class
+- **js/main.js**: `setActiveNav()` extendido — también itera `.nav-submenu a` y si el href coincide con la página actual, añade `.active` al link y `.active` al `.nav-dropdown-toggle` padre. Nuevo listener de click en `.nav-dropdown-toggle` para toggle de `.open` en mobile (solo si `window.innerWidth <= 900`)
+- **13 HTML pages** (index, gamedev, gaming, esports, got, warhammer, magic, rol, nba, java, social, news, fallen-valkyrie): item `<li><a href="gamedev.html" class="nav-link">` reemplazado por `<li class="nav-dropdown">` con toggle `<span>` y submenu con gamedev.html + fallen-valkyrie.html
+- **gamedev.html**: botón `.btn.btn-pink` "▶ VER DEVLOG" → fallen-valkyrie.html añadido tras la feature checklist del spotlight Fallen Valkyrie
+
+---
+
+## Sesión 32 — 2026-03-05
+
+### feat(gamedev): create fallen-valkyrie.html devlog page
+
+- **fallen-valkyrie.html** (nueva página):
+  - `<head>`: favicons estándar, Google Fonts, css/main.css + css/components.css + css/animations.css, inline `<style>` con todos los componentes específicos
+  - **Header** `.page-header-fv`: magenta dominant, gradiente bg, pre-text "▶ GAMEDEV / FALLEN VALKYRIE", H1 "DEVLOG", subtítulo VT323, 4 stat boxes (ENGINE/GÉNERO/ESTADO/PROGRESO)
+  - **Sección #creditos**: `.fv-section-label` gold, `.lore-box.gold-border` con `.lore-box-title` "⚠ ESTE JUEGO NACE DE UN APRENDIZAJE", texto en primera persona con atribución a AlexDev, `.credit-tag` (link a curso Udemy, abre en nueva pestaña, Press Start 2P, bg accent-warn, color #000)
+  - **Sección #estado**: `.bar-container` barra PROGRESO GLOBAL 10% (`.bar-fill.pink`, `data-fill="10"`), `.devlog-summary` card con `.summary-badge` "📋 RESUMEN INICIAL", título, fecha badge, placeholder imagen, cuerpo placeholder, 4 tags placeholder
+  - **Sección #sesiones**: `.devlog-empty` visible con `.devlog-cursor` parpadeante, comentario `<!-- DEVLOG ENTRIES -->`, template de entrada completo entre `<!-- EXAMPLE START -->` / `<!-- EXAMPLE END -->`
+  - Footer y `<script src="js/main.js">` estándar
+  - Componentes inline definidos: `.page-header-fv`, `.fv-stats`, `.fv-stat-box`, `.lore-box`, `.credit-tag`, `.devlog-summary`, `.summary-badge`, `.devlog-entry`, `.devlog-date`, `.devlog-num`, `.devlog-img`, `.devlog-img-placeholder`, `.devlog-empty`, `.devlog-tag`, `.fv-section-label`
+- **estado.md** + **commit.md** + **task.md**: actualizados
+
+---
+
 ## Sesión 31 — 2026-03-05
 
 ### feat(seo): full technical SEO audit + favicons + manifest + sitemap
