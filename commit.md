@@ -2,6 +2,18 @@
 
 ---
 
+## Sesión 35 — 2026-03-06
+
+### feat(news): add 3 new articles (magic/warhammer/esports) + tracker updated
+
+- **js/news-data.js** — 3 artículos insertados al TOP del array NEWS_DATA (artículos 22, 23, 24):
+  - **Artículo 24** `noticia-mtg-tmnt-2026` (magic · 06/03/2026): Magic: The Gathering × TMNT Universes Beyond — sale hoy. Mecánicas sneak/disappear, arte Kevin Eastman, Commander 5 colores Turtle Power!, Secret Lair TubuLair.
+  - **Artículo 23** `noticia-tow-gran-cathay-defenders-2026` (warhammer · 14/03/2026): The Old World Defenders of the Great Bastion — 53 minis Gran Cathay: Astromancers, Crane Guns, Iron Hail Gunners, Peasant Levy.
+  - **Artículo 22** `noticia-lec-spring-2026-formato` (esports · 06/03/2026): LEC Spring Split 2026 — eliminan Bo1, vuelven Bo3 regular + Bo5 playoffs, 2 roadtrips (MKOI España, KC Francia), finalistas clasifican al MSI en Daejeon.
+- **js/news-data.js** — NEWS_TRACKER actualizado: `last_update: "2026-03-06"`, `next_available: ["got", "nba", "rol"]`
+
+---
+
 ## Sesión 34 — 2026-03-05
 
 ### feat(fallen-valkyrie): fill estado actual with real content + screenshot

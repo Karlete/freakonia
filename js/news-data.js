@@ -10,6 +10,78 @@
 
 var NEWS_DATA = [
 
+  // ── ARTICLE 24 ──────────────────────────────────────────────────
+  {
+    id: "noticia-mtg-tmnt-2026",
+    topic: "magic",
+    category: "misc",
+    emoji: "✨",
+    badgeLabel: "MAGIC",
+    title: "Magic: The Gathering × Tortugas Ninja — El set radical sale hoy, 6 de marzo",
+    summary: "Wizards of the Coast lanza hoy el set Universes Beyond de las Tortugas Ninja. Arte de Kevin Eastman, el creador original del cómic, mecánicas nuevas y un Commander deck de cinco colores. Cowabunga.",
+    full: [
+      "Magic: The Gathering | Teenage Mutant Ninja Turtles llega hoy 6 de marzo a tiendas físicas y MTG Arena. El set introduce a Leonardo, Donatello, Raphael y Michelangelo como legendarias, junto a Shredder, Krang, April O'Neil y hasta los Foot Soldiers. Las cartas de arte de los sobres de coleccionista recuperan ilustraciones directamente sacadas del cómic original de los 80.",
+      "El set introduce dos nuevas mecánicas: sneak, una variante del ninjutsu que permite colarse en combate de forma más agresiva, y disappear, ligada a la pizza y a los ratos que habitan las cloacas. Hay 20 cartas de 'source material' con ilustraciones del cómic original firmadas por Kevin Eastman, algunas con sello de autógrafo del propio artista.",
+      "Junto al set principal llega Turtle Power!, el mazo de Commander de cinco colores, y el Secret Lair Totally TubuLair Superdrop. Para Magic veterans como yo que llevan sin coleccionar desde los 90, ver estas licencias tan distintas al juego original siempre genera debate. Pero hay que reconocer que el set tiene una energía tremenda y la nostalgia de las TMNT es universal."
+    ],
+    date: "06/03/2026",
+    url: "https://magic.wizards.com/es/news",
+    page: "magic.html",
+    pageLabel: ">> IR A MAGIC",
+    accent: "#ff00ff",
+    source: "magic.wizards.com",
+    img: "",
+    tags: ["Magic", "TMNT", "Universes Beyond", "Commander", "2026"]
+  },
+
+  // ── ARTICLE 23 ──────────────────────────────────────────────────
+  {
+    id: "noticia-tow-gran-cathay-defenders-2026",
+    topic: "warhammer",
+    category: "misc",
+    emoji: "⚙️",
+    badgeLabel: "WARHAMMER",
+    title: "The Old World: Defenders of the Great Bastion llega el 14 de marzo — 53 minis de Gran Cathay",
+    summary: "Games Workshop lanza el 14 de marzo la caja de refuerzo Defenders of the Great Bastion para Gran Cathay. 53 miniaturas: Astromancers, Crane Guns, Iron Hail Gunners y Peasant Levy.",
+    full: [
+      "El 14 de marzo llega a tiendas Defenders of the Great Bastion, la gran caja de refuerzo de ejército para Gran Cathay en Warhammer: The Old World. 53 miniaturas que cubren todos los escalones de una línea de combate: los Astromancers de la Corte Celestial para liderar la magia, los Crane Guns para trabajo de largo alcance desde retaguardia, los Iron Hail Gunners con sus trabucazos a media distancia y la masa de Peasant Levy con lanzas y arcos para absorber cargas y controlar objetivos.",
+      "Es básicamente un starter de gunline de Gran Cathay en una sola caja. La facción ya debutó el año pasado y algunos jugadores señalaron desbalances, pero Games Workshop la sigue apoyando con material, lo que es buena señal para la salud del juego en su tercer año.",
+      "The Old World sigue demostrando en 2026 que el regreso del Warhammer Fantasy clásico fue una decisión acertada. La comunidad española tiene cada vez más torneos activos y las miniaturas de bases cuadradas ya son de nuevo una visión habitual en las tiendas. Para los veteranos de la quinta edición como yo, ver cómo el juego se expande con facciones nuevas como Cathay es una satisfacción enorme."
+    ],
+    date: "14/03/2026",
+    url: "https://spikeybits.com/old-world-new-releases-roadmap-previews/",
+    page: "warhammer.html",
+    pageLabel: ">> IR A WARHAMMER",
+    accent: "#ffcc00",
+    source: "spikeybits.com",
+    img: "",
+    tags: ["The Old World", "Gran Cathay", "Games Workshop", "Miniaturas", "2026"]
+  },
+
+  // ── ARTICLE 22 ──────────────────────────────────────────────────
+  {
+    id: "noticia-lec-spring-2026-formato",
+    topic: "esports",
+    category: "esports",
+    emoji: "🏆",
+    badgeLabel: "ESPORTS",
+    title: "LEC Spring Split 2026 — Adiós a los Bo1: vuelven el Bo3, los roadtrips y el MSI en Corea",
+    summary: "La LEC Spring Split arranca a finales de marzo con cambios de formato: eliminan los Bo1 y vuelven el Bo3 en fase regular y Bo5 en playoffs. Dos roadtrips de MKOI y Karmine Corp. Los dos finalistas clasifican al MSI en Daejeon.",
+    full: [
+      "La LEC vuelve a finales de marzo con uno de los cambios más pedidos por la comunidad: se eliminan los Bo1 de la temporada regular. Vuelve el formato Bo3 en todos los partidos de liga, lo que da más profundidad táctica y reduce la lotería de partida única. Los playoffs serán Bo5 íntegros. Los lunes seguirán jugándose, pero sin público en arena para reducir costes de producción.",
+      "El split contará con dos roadtrips. Movistar KOI organizará uno en España y Karmine Corp otro en Francia, ambos durante la temporada regular. Siguiendo el modelo del año pasado con el Madrid Arena, estos eventos son una oportunidad de oro para la escena española: ver LoL competitivo de élite en directo es una experiencia que merece la pena.",
+      "Los dos finalistas del Spring Split clasificarán para el Mid-Season Invitational (MSI), que este año se celebra en Daejeon, Corea del Sur. Tras la resaca de G2 campeón del LEC Versus con Caps MVP, ahora toca ver si alguien puede quitarles el trono en este nuevo formato. Los candidatos — MKOI, KC, Fnatic y los propios G2 — empiezan desde cero."
+    ],
+    date: "06/03/2026",
+    url: "https://esports.gg/news/league-of-legends/2026-lec-spring-split/",
+    page: "esports.html",
+    pageLabel: ">> IR A ESPORTS",
+    accent: "#C89B3C",
+    source: "esports.gg",
+    img: "",
+    tags: ["LEC", "Spring Split", "MSI", "MKOI", "2026"]
+  },
+
   // ── ARTICLE 21 ──────────────────────────────────────────────────
   {
     id:         'noticia-fatal-frame-2-remake-2026',
@@ -434,5 +506,5 @@ var NEWS_DATA = [
 
 // NEWS_TRACKER
 // used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba"]
-// last_update: "2026-03-04"
-// next_available: ["got", "nba", "magic", "rol"]
+// last_update: "2026-03-06"
+// next_available: ["got", "nba", "rol"]
