@@ -549,13 +549,36 @@
       <h2 class="fv-section-title" style="color:var(--accent-secondary); text-shadow: var(--glow-pink); margin-bottom: var(--sp-2);">DIARIO DE DESARROLLO</h2>
       <p class="fv-section-sub">Las pequeñas victorias cuentan. Cada línea de código es un paso.</p>
 
-      <!-- Empty state — visible until real entries are added -->
-      <div class="devlog-empty">
-        ▸ LAS PRIMERAS ENTRADAS DEL DIARIO ESTÁN EN CAMINO...
-        <span class="devlog-cursor">█</span>
-      </div>
-
       <!-- DEVLOG ENTRIES — Add new entries here, newest first -->
+
+      <div class="devlog-entry reveal">
+        <div class="devlog-entry-header">
+          <span class="devlog-date">07/03/2026</span>
+          <span class="devlog-num">#01</span>
+        </div>
+
+        <h3 class="devlog-title">DETECCIÓN Y ATAQUE DEL ENEMIGO</h3>
+
+        <img src="assets/img/FV_enemy_attack.gif"
+             alt="Enemy attack demo"
+             class="devlog-img"
+             onerror="this.parentElement.removeChild(this)">
+
+        <p class="devlog-desc">
+          Hoy he implementado la detección del jugador por parte del enemigo esqueleto y el sistema de ataque en rango. El esqueleto ahora detecta cuándo el jugador entra en su radio de visión, lo persigue y, si está dentro del rango de ataque, lanza su secuencia de golpe con animación completa.
+        </p>
+        <p class="devlog-desc">
+          La lógica está construida sobre la máquina de estados existente: se añadió un estado CHASE y un estado ATTACK que se activan por distancia. El daño al jugador queda conectado al frame exacto del swing de la animación de ataque.
+        </p>
+
+        <div class="devlog-tags">
+          <span class="devlog-tag">Enemy AI</span>
+          <span class="devlog-tag">State Machine</span>
+          <span class="devlog-tag">Detection Range</span>
+          <span class="devlog-tag">Attack System</span>
+          <span class="devlog-tag">Animation Events</span>
+        </div>
+      </div>
 
       <!-- EXAMPLE START -->
       <!--
