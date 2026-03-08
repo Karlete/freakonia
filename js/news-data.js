@@ -10,6 +10,156 @@
 
 var NEWS_DATA = [
 
+  // ── NOTICIA 1 ──────────────────────────────────────────────────────────────
+  {
+    id: "noticia-lpl-tes-naiyou-amano-2026",
+    topic: "esports",
+    category: "ESPORTS · LPL",
+    emoji: "🀄",
+    badgeLabel: "ESCÁNDALO",
+    title: "NAIYOU CONFIESA: EL JUNGLA DE TES AMAÑÓ PARTIDAS EN LOS PLAYOFFS DE LA LPL",
+    summary: "El jungla Yang 'naiyou' Zijian de Top Esports confesó haber amañado todos los partidos que su equipo perdió en los Playoffs del Split 1 2026. El entrenador lo reveló en directo. La LPL investiga.",
+    full: [
+      "El 6 de marzo de 2026, Top Esports publicó un comunicado oficial en Weibo anunciando que había reportado a su jungla Yang 'naiyou' Zijian a la comisión disciplinaria de la LPL por 'conducta irregular que afecta a la integridad de la competición'. La investigación se inició el 2 de marzo, tras la eliminación del equipo a manos de Weibo Gaming en el Lower Bracket de los Playoffs.",
+      "Al día siguiente, el entrenador jefe de TES, Chang 'Poppy' Po-Hao, confirmó en directo que naiyou había confesado haber amañado deliberadamente todos los partidos que TES perdió en la fase de playoffs. 'Si él no hubiese tirado esos partidos, ¿hasta dónde podríamos haber llegado? No me lo puedo ni imaginar', declaró Poppy visiblemente afectado.",
+      "El top laner Bai '369' Jia-Hao, que días antes había defendido públicamente al jungla en Weibo, publicó un críptico 'Soy un payaso...' al conocer la noticia. Según los rumores, fueron el midlaner Creme y el AD carry JiaQi quienes alertaron al CEO del club y amenazaron con ir directamente a la liga si no se actuaba.",
+      "El caso se suma a una larga lista de escándalos de amaño en la LPL, que incluye a los exjunglas de FPX Milkyway y Bo Yang-Bo. Ni la LPL ni Riot Games han comunicado aún las sanciones que podría enfrentar naiyou, aunque un ban de por vida es el escenario más probable si los cargos se confirman."
+    ],
+    date: "07/03/2026",
+    url: "https://www.hotspawn.com/league-of-legends/news/top-esports-naiyou-investigation",
+    page: "esports.html",
+    pageLabel: "🏆 ESPORTS",
+    accent: "var(--accent-primary)",
+    source: "Hotspawn / Esports.gg",
+    img: "",
+    tags: ["LPL", "TES", "naiyou", "match fixing", "amaño", "League of Legends", "escándalo"]
+  },
+
+  // ── NOTICIA 2 ──────────────────────────────────────────────────────────────
+  {
+    id: "noticia-crimson-desert-lanzamiento-2026",
+    topic: "gaming",
+    category: "GAMING · PC/CONSOLAS",
+    emoji: "🗡️",
+    badgeLabel: "LANZAMIENTO",
+    title: "CRIMSON DESERT LLEGA EL 19 DE MARZO: EL MUNDO ABIERTO DE PEARL ABYSS ENTRA EN SU RECTA FINAL",
+    summary: "El ambicioso juego de acción y mundo abierto de Pearl Abyss confirma su fecha de salida para PC, PS5 y Xbox Series X|S. Años de desarrollo y comparaciones con Elden Ring. ¿Está a la altura?",
+    full: [
+      "Crimson Desert, el proyecto de mundo abierto desarrollado por Pearl Abyss —los creadores de Black Desert Online—, llega por fin el 19 de marzo de 2026 a PC, PS5 y Xbox Series X|S. Tras años de retrasos y una presentación impactante en el PlayStation State of Play, el juego entra en su recta final antes del lanzamiento.",
+      "El título propone una aventura de acción en solitario ambientada en el continente de Pywel, donde controlamos a Masen, un mercenario marcado por un pasado oscuro que busca sobrevivir en un mundo definido por el conflicto y las leyendas. El diseño de mundo abierto, el combate visceral y la escala visual del juego han generado comparaciones inevitables con Elden Ring.",
+      "Desde su revelación inicial, Crimson Desert ha pasado por varias rondas de rediseño, priorizando la campaña para un jugador sobre el componente multijugador que se barajó en un principio. Las últimas demos mostradas en ferias han recibido reacciones muy positivas, especialmente por la calidad visual y la fluidez del sistema de combate.",
+      "El juego llega en un mes cargado de lanzamientos importantes, compitiendo directamente con otros títulos de peso. Para Pearl Abyss, es su gran apuesta para demostrar que pueden trasladar la profundidad de Black Desert a una experiencia narrativa de un jugador de primer nivel."
+    ],
+    date: "07/03/2026",
+    url: "https://vandal.elespanol.com/noticias/videojuegos",
+    page: "gaming.html",
+    pageLabel: "🕹 GAMING",
+    accent: "var(--accent-secondary)",
+    source: "Vandal / Sortiraparis",
+    img: "",
+    tags: ["Crimson Desert", "Pearl Abyss", "mundo abierto", "PS5", "Xbox Series", "PC", "acción", "RPG"]
+  },
+
+  // ── NOTICIA 3 ──────────────────────────────────────────────────────────────
+  {
+    id: "noticia-akotsk-temporada-2-confirmada-2026",
+    topic: "got",
+    category: "GAME OF THRONES · HBO",
+    emoji: "⚔️",
+    badgeLabel: "CONFIRMADO",
+    title: "UN CABALLERO DE LOS SIETE REINOS TENDRÁ TEMPORADA 2: HBO EXPANDE EL UNIVERSO TARGARYEN HASTA 2028",
+    summary: "HBO confirma la renovación de 'A Knight of the Seven Kingdoms' por una segunda temporada. La precuela de Dunk y Egg continúa el universo de Poniente con novedades hasta 2028.",
+    full: [
+      "HBO ha confirmado la renovación de 'A Knight of the Seven Kingdoms: The Hedge Knight' por una segunda temporada, ampliando así el universo de Juego de Tronos más allá de House of the Dragon. La cadena anunció además un plan de expansión del universo de George R. R. Martin con nuevas temporadas programadas hasta 2028.",
+      "La serie, que adapta las novelas de Dunk y Egg ambientadas unos 90 años antes de los eventos de Game of Thrones, siguió a Ser Duncan el Alto y al joven príncipe Aegon Targaryen en sus aventuras como caballero errante por los Siete Reinos. Su tono más ligero y aventurero, alejado de la oscuridad política de las demás precuelas, la distinguió desde su estreno.",
+      "El anuncio llega mientras House of the Dragon prepara su tercera temporada para junio de 2026, consolidando la estrategia de HBO de mantener el universo de Poniente en pantalla de forma continua con producciones solapadas en el tiempo.",
+      "Para los fans de los libros, la renovación supone una buena noticia: las novelas cortas de Dunk y Egg son de las pocas historias del universo ASOIAF que GRRM ha completado, por lo que la serie tiene material de sobra para continuar sin los problemas de la adaptación de los libros principales de Canción de Hielo y Fuego."
+    ],
+    date: "06/03/2026",
+    url: "https://watchersonthewall.com",
+    page: "got.html",
+    pageLabel: "🐉 GoT",
+    accent: "#cc2200",
+    source: "HBO / Watchers on the Wall",
+    img: "",
+    tags: ["A Knight of the Seven Kingdoms", "Dunk y Egg", "HBO", "precuela", "temporada 2", "ASOIAF", "Game of Thrones"]
+  },
+
+  // ── NOTICIA 4 ──────────────────────────────────────────────────────────────
+  {
+    id: "noticia-mtg-tortugas-ninja-2026",
+    topic: "magic",
+    category: "MAGIC: THE GATHERING",
+    emoji: "🐢",
+    badgeLabel: "NUEVO SET",
+    title: "COWABUNGA: LAS TORTUGAS NINJA LLEGAN A MAGIC: THE GATHERING CON LA MECÁNICA DE INFILTRACIÓN",
+    summary: "Magic lanza el 5 de marzo su colaboración con las TMNT. Cuatro tortugas, nueva mecánica de Infiltración y un único mazo Commander pentacolor cooperativo. ¿Lo mejor de Universes Beyond hasta la fecha?",
+    full: [
+      "El 5 de marzo de 2026 llegó a las tiendas Magic: The Gathering | Teenage Mutant Ninja Turtles, la primera colaboración Universes Beyond del año. El set traslada al universo de Leonardo, Donatello, Raphael y Michelangelo al juego de cartas con mecánicas diseñadas específicamente para capturar la esencia del equipo.",
+      "La mecánica estrella del set es Infiltración, una versión mejorada del clásico Ninjutsu: a diferencia del original, este ahora cuenta como lanzamiento de hechizo, lo que abre sinergias enormes con otras cartas del formato. La mecánica Asociación también hace acto de presencia, activándose al lanzar criaturas adicionales al campo de batalla.",
+      "Uno de los aspectos más comentados del set es la inclusión de un único mazo Commander pentacolor con mecánica cooperativa: hasta cuatro jugadores pueden enfrentarse juntos a un villano controlado por el propio juego. Una propuesta inédita en Magic que puede abrir la puerta a un nuevo formato.",
+      "Las cuatro cartas de las tortugas en versión headliner están ilustradas por Kevin Eastman, el creador original de las TMNT, con su sello de autógrafo estampado. El set incluye además 20 cartas de 'material de origen' que homenajean la historia de la franquicia, incluyendo la portada del número 1 del cómic original en la carta de Doubling Season."
+    ],
+    date: "05/03/2026",
+    url: "https://magic.wizards.com/es/news/announcements/everything-announced-for-magic-the-gathering-in-2026",
+    page: "magic.html",
+    pageLabel: "✨ MAGIC",
+    accent: "var(--accent-secondary)",
+    source: "Magic Wizards Official / Chicas Gamers",
+    img: "",
+    tags: ["Magic The Gathering", "Tortugas Ninja", "TMNT", "Universes Beyond", "Infiltración", "Commander", "nuevo set"]
+  },
+
+  // ── NOTICIA 5 ──────────────────────────────────────────────────────────────
+  {
+    id: "noticia-old-world-grand-cathay-defenders-2026",
+    topic: "warhammer",
+    category: "WARHAMMER: THE OLD WORLD",
+    emoji: "🏯",
+    badgeLabel: "NUEVO LANZAMIENTO",
+    title: "GRAN CATHAY REFUERZA SUS FILAS: DEFENDERS OF THE GREAT BASTION LLEGA EL 14 DE MARZO",
+    summary: "Games Workshop lanza una caja de refuerzo para Gran Cathay con 53 miniaturas: Astromancers, Cañones Grulla, Fusileros de Granizo de Hierro y Milicia Campesina. El ejército más reciente de The Old World sigue creciendo.",
+    full: [
+      "El 14 de marzo de 2026, Games Workshop pone a la venta Defenders of the Great Bastion, una caja de refuerzo de ejército para la facción de Gran Cathay en Warhammer: The Old World. El set incluye 53 miniaturas y está pensado como una 'caja de inicio de línea de tiro': personajes que lideran, una pared de cuerpos para protegerlos y suficientes armas de fuego para hacer el tablero más pequeño.",
+      "El contenido incluye Astromancers de la Corte Celestial —los personajes que lideran el ejército—, Equipos de Cañón Grulla con escudos torre para hostigar desde la retaguardia, Fusileros de Granizo de Hierro con arcabuces de corto alcance y Milicia Campesina con lanzas y arcos para saturar los objetivos.",
+      "Gran Cathay fue el ejército nuevo con el que GW inauguró 2025 en The Old World, y pese a algunos problemas de balance en el metagame competitivo, su popularidad ha sido innegable. Esta caja de refuerzo responde directamente a la demanda de los jugadores de poder construir una línea de fusilería completa sin tener que buscar miniaturas por separado.",
+      "The Old World sigue su hoja de ruta de 2026 con buen ritmo. Los Warriors of Chaos también están en el horizonte, y la comunidad española —especialmente activa en torneos— lleva semanas debatiendo las posibles incorporaciones al reglamento que podrían llegar con la próxima actualización de FAQs y erratas."
+    ],
+    date: "07/03/2026",
+    url: "https://www.warhammer-community.com/es-es",
+    page: "warhammer.html",
+    pageLabel: "⚙ WARHAMMER",
+    accent: "var(--accent-warn)",
+    source: "Warhammer Community / Spikey Bits",
+    img: "",
+    tags: ["Warhammer", "The Old World", "Gran Cathay", "Games Workshop", "miniaturas", "lanzamiento", "Defenders of the Great Bastion"]
+  },
+
+  // ── NOTICIA 6 ──────────────────────────────────────────────────────────────
+  {
+    id: "noticia-nba-playoffs-race-shai-record-2026",
+    topic: "nba",
+    category: "NBA · TEMPORADA 2025-26",
+    emoji: "🏀",
+    badgeLabel: "RECTA FINAL",
+    title: "OKC LIDERA HACIA PLAYOFFS Y SHAI SE ACERCA A UN RÉCORD DE WILT CHAMBERLAIN",
+    summary: "El Thunder de Oklahoma City fue el primer equipo en sellar su plaza en los Playoffs 2026. Su estrella Shai Gilgeous-Alexander se acerca al récord de Wilt Chamberlain de 126 partidos consecutivos anotando 20 o más puntos.",
+    full: [
+      "La temporada regular de la NBA 2025-26 entra en su recta final con el calendario de playoffs cerrado: la temporada regular acaba el 12 de abril, el Play-In Tournament arranca el 14 de abril y los Playoffs comienzan el 18 de abril. Oklahoma City Thunder se convirtió en el primer equipo de la liga en sellar matemáticamente su plaza en la postemporada, liderando una Conferencia Oeste que sigue siendo increíblemente apretada.",
+      "La gran narrativa individual de la temporada la protagoniza Shai Gilgeous-Alexander, que se encuentra en la persecución del histórico récord de Wilt Chamberlain de 126 partidos consecutivos anotando 20 o más puntos. El canadiense lleva una temporada mayúscula que lo sitúa como uno de los favoritos al MVP y confirma al Thunder como el equipo más sólido del Oeste.",
+      "En el Este, los Detroit Pistons han sorprendido al mundo del baloncesto manteniéndose como el mejor equipo de la conferencia, mientras Boston Celtics espera el posible regreso de Jayson Tatum —lesionado— para la postemporada. Houston Rockets pelea por el tercer puesto y los Lakers, con LeBron James todavía en activo, intentan asegurar una posición que evite el Play-In.",
+      "Con cinco semanas de temporada regular por delante, el panorama de playoffs se definirá partido a partido. Las Finales NBA 2026 están programadas para el 3 de junio, y el debate sobre quién se llevará el anillo ya está servido."
+    ],
+    date: "08/03/2026",
+    url: "https://espndeportes.espn.com/basquetbol/nba/nota/_/id/16386606/nba-power-rankings-equipos-clasificacion-juegos-intrigantes",
+    page: "nba.html",
+    pageLabel: "🏀 NBA",
+    accent: "var(--accent-warn)",
+    source: "ESPN / NBA.com",
+    img: "",
+    tags: ["NBA", "OKC Thunder", "Shai Gilgeous-Alexander", "playoffs 2026", "Wilt Chamberlain", "temporada regular", "MVP"]
+  },
+
   // ── ARTICLE 24 ──────────────────────────────────────────────────
   {
     id: "noticia-mtg-tmnt-2026",
@@ -506,5 +656,5 @@ var NEWS_DATA = [
 
 // NEWS_TRACKER
 // used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba"]
-// last_update: "2026-03-06"
+// last_update: "2026-03-08"
 // next_available: ["got", "nba", "rol"]

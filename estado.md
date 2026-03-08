@@ -1,6 +1,6 @@
 # estado.md — Project State Tracker
 
-Last updated: 2026-03-06 (sesión 35)
+Last updated: 2026-03-08 (sesión 37)
 
 ---
 
@@ -103,20 +103,26 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 ## ▶ PRÓXIMA SESIÓN — Leer esto primero
 
 ### Estado actual del sistema de noticias (news)
-- `js/news-data.js` — array `NEWS_DATA` con **21 artículos**. **Añadir nuevos artículos AQUÍ, al principio del array (más reciente primero).**
+- `js/news-data.js` — array `NEWS_DATA` con **27 artículos**. **Añadir nuevos artículos AQUÍ, al principio del array (más reciente primero).**
 - `news.html` — renderizado dinámico vía `renderNews()`. No tocar el grid HTML.
 - `index.html` — slider "¿Qué se cuece?" lee automáticamente `NEWS_DATA`. No requiere cambios al añadir noticias.
 - `css/news.css` — `.news-grid` tiene `align-items: start` (fix bug Leer más).
 
 ### NEWS_TRACKER — temas usados
 ```json
-{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba"],"last_update":"2026-03-06"}
+{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba"],"last_update":"2026-03-08"}
 ```
 **Próximos temas disponibles:** `got` · `nba` · `rol`
 
 ### IDs de artículos actuales en NEWS_DATA (para evitar duplicados)
 | # | id | topic | fecha |
 |---|---|---|---|
+| 30 | `noticia-lpl-tes-naiyou-amano-2026` | esports | 07/03/2026 |
+| 29 | `noticia-crimson-desert-lanzamiento-2026` | gaming | 07/03/2026 |
+| 28 | `noticia-akotsk-temporada-2-confirmada-2026` | got | 06/03/2026 |
+| 27 | `noticia-mtg-tortugas-ninja-2026` | magic | 05/03/2026 |
+| 26 | `noticia-old-world-grand-cathay-defenders-2026` | warhammer | 07/03/2026 |
+| 25 | `noticia-nba-playoffs-race-shai-record-2026` | nba | 08/03/2026 |
 | 24 | `noticia-mtg-tmnt-2026` | magic | 06/03/2026 |
 | 23 | `noticia-tow-gran-cathay-defenders-2026` | warhammer | 14/03/2026 |
 | 22 | `noticia-lec-spring-2026-formato` | esports | 06/03/2026 |
@@ -159,6 +165,9 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 - 🌐 URL: **https://freakonia.com**
 - 📦 Repo: **https://github.com/Karlete/freakonia**
 - ⚙️ Deploy: GitHub Pages (rama `main`, raíz `/`)
+
+**Sesión 36 (2026-03-07):** Primera entrada real del devlog de Fallen Valkyrie añadida a `fallen-valkyrie.html` (sección #sesiones): entrada #01 "DETECCIÓN Y ATAQUE DEL ENEMIGO" (07/03/2026). Eliminado `div.devlog-empty`. Estructura usa clases existentes del diseño (`.devlog-entry`, `.devlog-entry-header`, `.devlog-date`, `.devlog-num`, `.devlog-title`, `.devlog-img`, `.devlog-desc`, `.devlog-tags`). Nuevo asset `assets/img/FV_enemy_attack.gif`. Push a main.
+**Sesión 37 (2026-03-08):** Feature "▶ JUGAR EN EXPLORADOR" añadida a `gamedev.html` e `index.html`: botón verde por card que togglea un iframe de itch.io inline sin salir de la página (`toggleGameEmbed` en `js/main.js`). Samurai Kitchen embed ID 15920008 · Stars Lander embed ID 15830656. `css/gamedev.css`: nuevas clases `.game-embed-container`, `.game-embed-header`, `.game-embed-title`, `.game-embed-close`, `.game-embed-frame-wrap`, `.game-embed-iframe`, `.btn-green` + animación `embedSlideIn`. 6 nuevos artículos insertados al TOP de `js/news-data.js` (artículos 25–30): Esports (naiyou/TES amaño LPL · 07/03) · Gaming (Crimson Desert 19/03 · 07/03) · GoT (A Knight S2 confirmada · 06/03) · Magic (TMNT mecánica Infiltración · 05/03) · Warhammer (Gran Cathay Defenders · 07/03) · NBA (OKC playoffs + Shai récord Wilt · 08/03). NEWS_TRACKER actualizado: last_update 2026-03-08. Estado.md y commit.md actualizados. Push a main.
 
 **Sesión 35 (2026-03-06):** 3 nuevos artículos insertados al TOP de NEWS_DATA en `js/news-data.js`: Magic (noticia-mtg-tmnt-2026 · MTG × TMNT Universes Beyond · 06/03) · Warhammer (noticia-tow-gran-cathay-defenders-2026 · Defenders of the Great Bastion 53 minis · 14/03) · Esports (noticia-lec-spring-2026-formato · LEC Spring Split 2026 formato Bo3/Bo5 · roadtrips MKOI + KC · MSI Daejeon). NEWS_TRACKER actualizado: last_update 2026-03-06, next_available got/nba/rol. Estado.md y commit.md actualizados. Push a main.
 **Sesión 34 (2026-03-05):** Estado actual de fallen-valkyrie.html rellenado con contenido real: imagen `estado_actual_FV.jpg` encima del texto, cuerpo en primera persona (movimiento completo, máquina de estados, salto, dash, wall slide, ataque, tilemap lv1, esqueleto primer enemigo), 8 `.devlog-tag` pills (Player Movement · State Machine · Jump · Dash · Wall Slide · Attack · Tilemap Lv1 · Enemy: Skeleton). Push a main.
@@ -252,6 +261,7 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
   - Samurai Kitchen — screenshot + descripción + tags + itch.io link
   - Stars Lander — screenshot + descripción + tags + itch.io link
   - Grid-2 escalable: añadir más cards siguiendo el comentario HTML
+  - **Botón "▶ JUGAR EN EXPLORADOR"** (btn-green, sesión 37): cada card tiene un botón que despliega un iframe de itch.io inline (`toggleGameEmbed`). IDs: Samurai Kitchen `#embed-15920008` · Stars Lander `#embed-15830656`
 - **Sección "Proyecto Actual"** (Fallen Valkyrie spotlight):
   - Barra progreso general 35% + Diseño 60% + Programación 40% + Arte 25%
   - Feature checklist (✔ done / ▶ pending)

@@ -456,3 +456,77 @@
 @media (max-width: 768px) {
   .gamedev-hero-img { width: 100%; }
 }
+
+/* ── Game Embed ───────────────────────────────────────── */
+.game-embed-container {
+  border: 4px solid var(--accent-primary);
+  box-shadow: 4px 4px 0 var(--accent-primary);
+  background: var(--bg-surface);
+  margin-top: var(--sp-4);
+  animation: embedSlideIn 0.2s steps(4) forwards;
+}
+
+@keyframes embedSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.game-embed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--sp-2) var(--sp-3);
+  background: var(--accent-primary);
+  gap: var(--sp-3);
+}
+
+.game-embed-title {
+  font-family: var(--font-primary);
+  font-size: 0.45rem;
+  color: var(--bg-base);
+}
+
+.game-embed-close {
+  font-family: var(--font-primary);
+  font-size: 0.45rem;
+  background: transparent;
+  border: 2px solid var(--bg-base);
+  color: var(--bg-base);
+  padding: var(--sp-1) var(--sp-2);
+  cursor: pointer;
+}
+
+.game-embed-close:hover {
+  background: var(--bg-base);
+  color: var(--accent-primary);
+}
+
+.game-embed-frame-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+}
+
+.game-embed-iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+}
+
+.btn-green {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  box-shadow: 3px 3px 0 var(--accent-primary);
+}
+
+.btn-green:hover {
+  background: var(--accent-primary);
+  color: var(--bg-base);
+}

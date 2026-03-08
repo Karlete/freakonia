@@ -162,3 +162,28 @@ document.addEventListener('click', e => {
   document.body.appendChild(span);
   setTimeout(() => span.remove(), 900);
 });
+
+// ─── Game embed toggle ─────────────────────────────────────────────────────
+function toggleGameEmbed(btn) {
+  const gameId = btn.dataset.gameId;
+  const container = document.getElementById("embed-" + gameId);
+  if (!container) return;
+
+  const isVisible = container.style.display !== "none";
+
+  // Close all other open embeds first
+  document.querySelectorAll(".game-embed-container").forEach((c) => {
+    c.style.display = "none";
+  });
+  document.querySelectorAll(".play-embed-btn").forEach((b) => {
+    b.textContent = b.classList.contains("btn-small")
+      ? "▶ JUGAR"
+      : "▶ JUGAR EN EXPLORADOR";
+  });
+
+  if (!isVisible) {
+    container.style.display = "block";
+    btn.textContent = "■ CERRAR JUEGO";
+    container.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+}

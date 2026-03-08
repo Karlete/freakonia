@@ -2,6 +2,54 @@
 
 ---
 
+## Sesión 37 — 2026-03-08
+
+### feat(gamedev): add in-browser play embed + 6 news articles
+
+- **gamedev.html** (sección #published · `.game-card-full-footer`):
+  - Samurai Kitchen: añadido botón `▶ JUGAR EN EXPLORADOR` (`.btn.btn-green.play-embed-btn`, `data-game-id="15920008"`, `onclick="toggleGameEmbed(this)"`)
+  - Stars Lander: ídem con `data-game-id="15830656"`
+  - Tras cada `.game-card-full-body`: añadido `div.game-embed-container` con header (título + botón cerrar) + `div.game-embed-frame-wrap` + `iframe` (src itch.io embed-upload, `allowfullscreen`, `allow="fullscreen"`, `frameborder="0"`, `class="game-embed-iframe"`)
+  - Embed IDs: `#embed-15920008` (Samurai Kitchen) · `#embed-15830656` (Stars Lander)
+- **index.html** (sección #games · `.game-card-footer`):
+  - Samurai Kitchen: añadido botón `▶ JUGAR` (`.btn.btn-small.btn-green.play-embed-btn`)
+  - Stars Lander: ídem
+  - Tras cada `.game-card`: añadidos los mismos `div.game-embed-container` con iframe embeds
+- **css/gamedev.css** (append al final):
+  - `.game-embed-container`: border 4px verde, box-shadow verde, bg-surface, animación `embedSlideIn`
+  - `@keyframes embedSlideIn`: opacity 0→1, translateY -8px→0, steps(4)
+  - `.game-embed-header`: flex space-between, bg accent-primary (verde)
+  - `.game-embed-title`: font-primary 0.45rem, color bg-base
+  - `.game-embed-close`: transparent bg, border bg-base, hover invierte colores
+  - `.game-embed-frame-wrap`: aspect-ratio 16/10, width 100%
+  - `.game-embed-iframe`: 100% × 100%, block, border none
+  - `.btn-green`: border/color/shadow accent-primary · hover bg verde text negro
+- **js/main.js** (append al final):
+  - `toggleGameEmbed(btn)`: cierra todos los embeds abiertos, resetea texto de todos los botones, luego abre el embed del juego pulsado y hace scrollIntoView. Texto activo: "■ CERRAR JUEGO"
+- **js/news-data.js** — 6 artículos insertados al TOP de NEWS_DATA (artículos 25–30):
+  - **30** `noticia-lpl-tes-naiyou-amano-2026` (esports · 07/03): naiyou/TES amaño LPL Playoffs S1 2026 — confesión, investigación, ban de por vida esperado
+  - **29** `noticia-crimson-desert-lanzamiento-2026` (gaming · 07/03): Crimson Desert 19/03 PC/PS5/XSX — Pearl Abyss, mundo abierto, Elden Ring comparisons
+  - **28** `noticia-akotsk-temporada-2-confirmada-2026` (got · 06/03): A Knight of the Seven Kingdoms T2 confirmada — Dunk y Egg, HBO expansión hasta 2028
+  - **27** `noticia-mtg-tortugas-ninja-2026` (magic · 05/03): MTG × TMNT — mecánica Infiltración, Commander pentacolor cooperativo, arte Kevin Eastman
+  - **26** `noticia-old-world-grand-cathay-defenders-2026` (warhammer · 07/03): Gran Cathay Defenders of the Great Bastion 14/03 — 53 miniaturas, Astromancers, Crane Guns, Iron Hail Gunners, Peasant Levy
+  - **25** `noticia-nba-playoffs-race-shai-record-2026` (nba · 08/03): OKC primer clasificado playoffs 2026, Shai cerca del récord Wilt Chamberlain 126 partidos 20+ pts
+- **js/news-data.js** — NEWS_TRACKER: `last_update` actualizado a `"2026-03-08"`
+
+---
+
+## Sesión 36 — 2026-03-07
+
+### feat(devlog): add first real devlog entry #01 — enemy detection & attack
+
+- **fallen-valkyrie.html** (sección #sesiones):
+  - Eliminado `div.devlog-empty` (empty state placeholder)
+  - Añadida primera entrada real `#01` (07/03/2026) inmediatamente tras el comentario `<!-- DEVLOG ENTRIES -->` usando las clases de diseño existentes: `.devlog-entry.reveal`, `.devlog-entry-header`, `.devlog-date`, `.devlog-num`, `.devlog-title`, `.devlog-img`, `.devlog-desc` (×2), `.devlog-tags`, `.devlog-tag` (×5)
+  - Contenido: DETECCIÓN Y ATAQUE DEL ENEMIGO — implementación de radio de visión del esqueleto, estados CHASE y ATTACK en la máquina de estados, daño conectado al frame exacto del swing en animación de ataque
+  - Tags: Enemy AI · State Machine · Detection Range · Attack System · Animation Events
+- **assets/img/FV_enemy_attack.gif**: nuevo asset — GIF demostrativo del sistema de ataque del enemigo
+
+---
+
 ## Sesión 35 — 2026-03-06
 
 ### feat(news): add 3 new articles (magic/warhammer/esports) + tracker updated
