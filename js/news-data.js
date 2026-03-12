@@ -10,6 +10,81 @@
 
 var NEWS_DATA = [
 
+  // ── NOTICIA 27 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-gdc-festival-2026',
+    topic: 'gamedev',
+    category: 'gamedev',
+    emoji: '🎮',
+    badgeLabel: 'GAMEDEV',
+    title: 'GDC se reinventa: 40 años después nace el Festival of Gaming',
+    summary: 'La conferencia más importante del sector celebra su 40 aniversario con un histórico cambio de formato. Esta semana en San Francisco, el GDC se convierte en festival abierto con Hideo Kojima como invitado estrella y Clair Obscur liderando las nominaciones al GOTY.',
+    full: [
+      'Del 9 al 13 de marzo de 2026, el Moscone Center de San Francisco acoge la edición más especial de la Game Developers Conference en sus cuatro décadas de historia. Por primera vez, la GDC abandona el formato tradicional de conferencia técnica para convertirse en el GDC Festival of Gaming: un evento más abierto, con mayor protagonismo indie y un espíritu de comunidad que va mucho más allá de los desarrolladores AAA.',
+      'El cambio más llamativo es la democratización del acceso. Se han lanzado nuevas categorías de pases a menor precio, incluyendo el "Early Stage Indie & Startup Pass" pensado para estudios emergentes. Los poseedores del Game Changer Pass pueden participar en el programa de pitches y en reuniones one-to-one de networking a través del sistema GamePlan. La sala de exposiciones se ha reorganizado en cinco zonas temáticas: Game Development, Future Tech, Indie & Education, International y Monetization & Player Engagement.',
+      'En el terreno de los premios, Hideo Kojima sube al escenario para dar el primer keynote en cinco años, un gesto que subraya el peso histórico de esta edición. En los Game Developers Choice Awards, Clair Obscur: Expedition 33 lidera con ocho nominaciones, incluida la de Juego del Año. Por su parte, en el Independent Games Festival, Baby Steps (del creador de QWOP, Bennett Foddy) arrasa con cinco nominaciones que cubren audio, diseño, narrativa, el Premio Nouveau y el Gran Premio Seumas McNally.',
+      'El Day of the Devs se ha trasladado a The Midway para una exhibición pública y gratuita de más de 60 juegos jugables el 8 de marzo, con un pop-up dentro del propio GDC entre los días 11 y 13. La ceremonia del IGF se celebra el miércoles 11 a las 18:30 PT con retransmisión en directo por Twitch. Una semana histórica para los que vivimos el desarrollo de videojuegos desde dentro.'
+    ],
+    date: '09/03/2026',
+    url: 'https://gdconf.com/news-insights/',
+    page: 'gamedev.html',
+    pageLabel: 'GameDev',
+    accent: '#00ff41',
+    source: 'gdconf.com',
+    img: '',
+    tags: ['GDC', 'indie', 'game dev', 'Clair Obscur', 'Hideo Kojima', 'IGF', 'festival']
+  },
+
+  // ── NOTICIA 26 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-gta6-fecha-definitiva-2026',
+    topic: 'gaming',
+    category: 'gaming',
+    emoji: '🎮',
+    badgeLabel: 'GAMING',
+    title: 'GTA 6 tiene fecha inamovible: 19 de noviembre en PS5 y Xbox',
+    summary: 'Tras años de esperas y dos retrasos, Rockstar y Take-Two cierran filas: Grand Theft Auto VI llega el 19 de noviembre de 2026. PlayStation Store ya habilitó su ficha y el marketing arranca este verano. La cuenta atrás es oficial.',
+    full: [
+      'Grand Theft Auto VI tiene fecha definitiva y, por fin, parece que esta vez va en serio. Rockstar Games y su empresa matriz Take-Two Interactive han confirmado el 19 de noviembre de 2026 como fecha de lanzamiento en PlayStation 5 y Xbox Series X|S. El CEO de Take-Two, Strauss Zelnick, lo mencionó explícitamente en el último earnings report como uno de los grandes hitos del ejercicio fiscal 2027, descartando cualquier nuevo retraso en el horizonte inmediato.',
+      'El historial de GTA 6 no ha sido precisamente tranquilo: el juego fue originalmente anunciado para 2025, retrasado a mayo de 2026 y finalmente fijado en noviembre de ese mismo año para ganar el codiciado lanzamiento en la ventana navideña. Dos movimientos que recuerdan mucho al proceso de Red Dead Redemption 2, que también sufrió varios deslizamientos de fecha antes de aterrizar en octubre de 2018 con un resultado aplastante.',
+      'A principios de marzo de 2026, la PlayStation Store actualizó significativamente la ficha oficial del juego, habilitando la opción de añadirlo a las wishlists de los usuarios. La prensa especializada lo interpretó como el pistoletazo de salida para la apertura inminente de reservas internacionales y el inicio de la fase de marketing masivo, que Take-Two ha confirmado comenzará este verano.',
+      'El juego seguirá a Jason Duval y Lucia Caminos, pareja sentimental y criminal, en el estado ficticio de Leonida, inspirado en Florida y centrado en Vice City. Lucia pasa a la historia como la primera protagonista femenina no opcional de toda la saga GTA. La versión de PC llegará con un retraso estimado de 12 a 18 meses. Quedan poco más de ocho meses. La espera, al fin, tiene final.'
+    ],
+    date: '11/03/2026',
+    url: 'https://www.rockstargames.com/newswire/article/ak3ak31a49a221/grand-theft-auto-vi-is-now-set-to-launch-november-19-2026',
+    page: 'gaming.html',
+    pageLabel: 'Gaming',
+    accent: '#00bfff',
+    source: 'rockstargames.com',
+    img: '',
+    tags: ['GTA 6', 'Rockstar', 'PS5', 'Xbox Series X', 'open world', 'Vice City']
+  },
+
+  // ── NOTICIA 25 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-hotd-t3-casting-2026',
+    topic: 'got',
+    category: 'got',
+    emoji: '🐉',
+    badgeLabel: 'HOUSE OF THE DRAGON',
+    title: 'HotD T3: nueva Jaehaera, fechas confirmadas y la Danza al rojo vivo',
+    summary: 'House of the Dragon llega en junio de 2026 con toda la artillería. HBO confirma la fecha, desvela nuevos fichajes para la temporada y los propios directores prometen escenas que eclipsarán todo lo visto hasta ahora. La Batalla del Gullet se acerca.',
+    full: [
+      'House of the Dragon Temporada 3 está en la recta final de posproducción y la maquinaria de HBO se ha puesto en marcha. Tras el tráiler oficial lanzado el 19 de febrero de 2026, los anuncios de casting no han parado: la actriz Pearl Clark se incorpora al reparto para interpretar a la princesa Jaehaera Targaryen, hija del rey Aegon II y la reina Helaena. Lo llamativo es que la temporada contará con dos versiones de Jaehaera simultáneamente, una de bebé y otra de unos diez años, reflejando el avance temporal de la narrativa de la Danza de los Dragones.',
+      'Además de Pearl Clark, la temporada añade nombres importantes: James Norton como Ormund Hightower, Tommy Flanagan como Lord Roderick Dustin, Dan Fogler como Ser Torrhen Manderly y Tom Cullen como Ser Luthor Largent, entre otros. El reparto principal al completo regresa: Matt Smith, Emma D\'Arcy, Olivia Cooke, Ewan Mitchell, Steve Toussaint y Fabien Frankel, entre otros.',
+      'La fecha está fijada en junio de 2026, específicamente en domingo, lo que deja cuatro opciones posibles: 7, 14, 21 o 28 de junio. La temporada constará de ocho episodios, igual que la segunda, y será la penúltima de la serie ya que HBO ha confirmado un final en cuatro temporadas, con la cuarta actualmente en proceso de escritura. El director Loni Peristere no ha podido ser más contundente: "Es todo lo que los fans quieren. Todo lo que han leído en el libro. Esta temporada va a once."',
+      'El tráiler ya adelanta lo que se viene: Aemond Targaryen en el Trono de Hierro tras el retiro de Aegon, Rhaenyra con nuevos dragones a su disposición y Alicent jugando una doble partida desde Rocadragón. La Batalla del Gullet, el conflicto naval que iba a aparecer en la T2 y fue desplazado por el recorte de episodios, promete ser uno de los set pieces más épicos de toda la franquicia Juego de Tronos.'
+    ],
+    date: '10/03/2026',
+    url: 'https://redanianintelligence.com/2026/03/09/house-of-the-dragon-season-3-casts-a-new-jaehaera-targaryen/',
+    page: 'got.html',
+    pageLabel: 'GoT / HotD',
+    accent: '#cc2200',
+    source: 'redanianintelligence.com',
+    img: '',
+    tags: ['House of the Dragon', 'HotD T3', 'HBO', 'Jaehaera', 'Danza de los Dragones', 'Westeros']
+  },
+
   // ── NOTICIA 1 ──────────────────────────────────────────────────────────────
   {
     id: "noticia-lpl-tes-naiyou-amano-2026",
@@ -656,5 +731,5 @@ var NEWS_DATA = [
 
 // NEWS_TRACKER
 // used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba"]
-// last_update: "2026-03-08"
+// last_update: "2026-03-11"
 // next_available: ["got", "nba", "rol"]

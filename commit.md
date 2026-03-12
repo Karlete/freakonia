@@ -2,6 +2,35 @@
 
 ---
 
+## Sesión 39 — 2026-03-12
+
+### feat(news): add 3 articles (GDC festival, GTA6 date, HotD T3 casting)
+
+- **js/news-data.js**: inserted 3 new articles at TOP of NEWS_DATA (noticias 25–27):
+  - `noticia-gdc-festival-2026` (gamedev, 09/03/2026) — GDC 40 aniversario / Festival of Gaming
+  - `noticia-gta6-fecha-definitiva-2026` (gaming, 11/03/2026) — GTA 6 fecha 19 nov 2026
+  - `noticia-hotd-t3-casting-2026` (got, 10/03/2026) — HotD T3 nueva Jaehaera + fecha junio
+- NEWS_TRACKER last_update actualizado a "2026-03-11"
+
+---
+
+## Sesión 38 — 2026-03-08
+
+### refactor(nav): group navbar into dropdowns, reduce items from 12 to 7
+
+- **index.html, gamedev.html, gaming.html, esports.html, got.html, warhammer.html, magic.html, rol.html, nba.html, java.html, social.html, news.html, fallen-valkyrie.html** (navbar `<ul class="nav-menu">`):
+  - Eliminados 8 `<li>` planos: gaming · esports · got · warhammer · magic · rol · java · social
+  - Añadidos 3 nuevos `<li class="nav-dropdown">` con el mismo patrón que el GameDev dropdown existente:
+    - **🕹 Gaming ▾**: gaming.html + esports.html
+    - **🐉 Fantasía ▾**: got.html + warhammer.html + magic.html + rol.html
+    - **📡 Comunidad ▾**: java.html + social.html
+  - `<button class="lang-toggle">` añadido a las 12 páginas que no lo tenían (solo existía en index.html)
+  - Clases activas manuales eliminadas de todos los `<li>` planos — active state 100% delegado a `setActiveNav()` en main.js
+  - `data-i18n="nav.home"` conservado únicamente en index.html (donde ya existía)
+  - Sin cambios en CSS ni en JS
+
+---
+
 ## Sesión 37 — 2026-03-08
 
 ### feat(gamedev): add in-browser play embed + 6 news articles
