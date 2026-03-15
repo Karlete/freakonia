@@ -10,6 +10,81 @@
 
 var NEWS_DATA = [
 
+  // ── NOTICIA 30 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-crimson-desert-launch-2026',
+    topic: 'gaming',
+    category: 'gaming',
+    emoji: '🗡️',
+    badgeLabel: 'GAMING',
+    title: 'Crimson Desert: el RPG más ambicioso del año llega el 19 de marzo',
+    summary: 'Pearl Abyss lanza el 19 de marzo su obra más ambiciosa con seis años de desarrollo. Las primeras impresiones filtradas apuntan a un combate generacional y un mundo abierto inmenso. El embargo de análisis cae el 18 con el juego ya en preload.',
+    full: [
+      'El 19 de marzo de 2026 llega Crimson Desert, el RPG de acción y mundo abierto que Pearl Abyss lleva más de seis años desarrollando. Se puede precargar desde el 17 de marzo en PlayStation Store, Xbox Store, Steam y Epic Games Store — un peso mínimo de 150 GB que da idea de la escala del proyecto. El embargo de análisis se levanta el día previo al lanzamiento, el 18 de marzo a las 15:00 PT, lo que ha generado expectación y cierta incertidumbre entre la comunidad.',
+      'Antes de que se levante ese embargo, una filtración involuntaria del youtuber español Revenant — quien publicó y eliminó rápidamente su impresión del juego — ha disparado la expectativa. Los jugadores que grabaron el vídeo antes de su borrado describen un sistema de combate que el propio Revenant calificó como excepcional, con batallas a gran escala que no había visto hasta ahora y una mecánica que recuerda a clásicos del género como Devil May Cry o Ninja Gaiden, pero integrada en un mundo abierto masivo. Como aspectos negativos señaló algunos puzzles lentos, un esquema de controles complejo y dudas sobre el rendimiento en consola bajo situaciones de combate muy cargadas.',
+      'El juego permite aprender movimientos de los propios enemigos y cuenta con un árbol de habilidades extenso. La campaña principal ronda las 60-80 horas según el equipo. Pearl Abyss ha confirmado que el juego no tendrá microtransacciones post-lanzamiento, un anuncio que ha sido muy bien recibido por una comunidad que conoce bien el modelo de negocio de Black Desert Online, su anterior título.',
+      'En cuanto a especificaciones técnicas, la versión PS5 y Xbox Series X apunta a 60 FPS en modo rendimiento, mientras que Xbox Series S llegaría a los 40 FPS. La versión PS5 Pro correrá a 4K (upscale desde 1080p) con fluidez. La campaña de marketing ha sido bastante discreta hasta ahora, lo que combinado con el embargo tardío genera dos lecturas posibles: confianza total del estudio en el producto, o algún problema que las reviews revelarán en cuestión de horas.'
+    ],
+    date: '15/03/2026',
+    url: 'https://www.gameshub.com/news/news/crimson-desert-early-review-leak-impressions-revenant-2860349/',
+    page: 'gaming.html',
+    pageLabel: 'Gaming',
+    accent: '#00bfff',
+    source: 'gameshub.com',
+    img: '',
+    tags: ['Crimson Desert', 'Pearl Abyss', 'RPG', 'open world', 'PS5', 'Xbox Series X', 'PC']
+  },
+
+  // ── NOTICIA 29 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-martin-condal-abysmal-2026',
+    topic: 'got',
+    category: 'got',
+    emoji: '🐉',
+    badgeLabel: 'HOUSE OF THE DRAGON',
+    title: 'Martin rompe su silencio: "Mi relación con Condal es abismal"',
+    summary: 'El autor de Juego de Tronos ha descrito en The Hollywood Reporter su relación con el showrunner de House of the Dragon como "peor que tensa, directamente abismal". Una declaración que sacude los cimientos de la serie justo cuando la Temporada 3 entra en la recta final.',
+    full: [
+      'En una entrevista con The Hollywood Reporter publicada en enero de 2026, George R.R. Martin no se mordió la lengua al hablar de su relación con Ryan Condal, showrunner y cocreador de House of the Dragon. Cuando el periodista le preguntó si la relación era "tensa", Martin respondió: "Peor que tensa. Es abismal." Una palabra que cayó como una bomba en la comunidad de Westeros, a pocos meses del estreno de la Temporada 3.',
+      'Según Martin, la colaboración empezó bien. Durante la primera temporada, el autor leía borradores de los guiones, daba notas y Condal las incorporaba. Todo cambió en la segunda temporada, cuando Martin afirma que Condal dejó de escucharle. Las diferencias escalaron hasta un punto de no retorno en una videollamada con ejecutivos de HBO, en la que Condal presentó su visión para la Temporada 3 y Martin pronunció la frase que lo resume todo: "Esto ya no es mi historia." HBO le pidió entonces que se mantuviera al margen del proyecto, aunque posteriormente fue reincorporado.',
+      'El trasfondo de la disputa está en los cambios realizados a personajes de Fire & Blood, el libro de referencia. Martin señaló en su momento, en un post de blog que HBO le pidió eliminar, que excluir al joven Maelor del episodio de Sangre y Queso tendría un "efecto mariposa tóxico" en los arcos narrativos futuros. Condal, por su parte, ha reconocido haber hecho todo lo posible por incluir a Martin en el proceso, pero señala que llegó un punto en el que el autor se negó a reconocer las limitaciones prácticas de una producción televisiva.',
+      'El jefe de contenidos de HBO, Casey Bloys, intentó mediar públicamente: "Como toda buena familia americana, preferiría que nuestra disfunción se quedara en casa." Bloys destacó el 87% en Rotten Tomatoes de las dos primeras temporadas y respaldó el trabajo de Condal. A todo esto hay que añadir que Martin se deshace en elogios hacia Ira Parker, showrunner de A Knight of the Seven Kingdoms, con quien describe una relación de colaboración idílica. El contraste no pasa desapercibido. House of the Dragon Temporada 3 llega en junio de 2026 con ocho episodios. Veremos qué historia cuenta Condal — y si es la que Martin habría contado.'
+    ],
+    date: '15/03/2026',
+    url: 'https://www.tvinsider.com/1239508/house-of-the-dragon-creator-feud-george-rr-martin-ryan-condall/',
+    page: 'got.html',
+    pageLabel: 'GoT / HotD',
+    accent: '#cc2200',
+    source: 'hollywoodreporter.com',
+    img: '',
+    tags: ['House of the Dragon', 'George RR Martin', 'Ryan Condal', 'HotD T3', 'HBO', 'drama', 'Fire & Blood']
+  },
+
+  // ── NOTICIA 28 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-ea-despidos-battlefield-2026',
+    topic: 'gamedev',
+    category: 'gamedev',
+    emoji: '💻',
+    badgeLabel: 'GAMEDEV',
+    title: 'EA despide al equipo de Battlefield 6 tras su mejor lanzamiento en la historia de la saga',
+    summary: 'Criterion, DICE, Ripple Effect y Motive Studios sufren despidos masivos solo meses después de que Battlefield 6 batiese todos los récords de la franquicia. EA lo llama "realineamiento". La industria lo llama hipocresía.',
+    full: [
+      'La industria del videojuego vuelve a dar un titular que duele. Electronic Arts ha confirmado despidos en varios de los estudios que desarrollaron Battlefield 6, el juego que batió todos los récords históricos de la saga y fue el título más vendido en Estados Unidos durante 2025. Los afectados incluyen a trabajadores de Criterion Games, DICE, Ripple Effect y Motive Studios. El número exacto de empleados despedidos no ha sido revelado.',
+      'EA justifica la medida con la palabra que más se repite en las notas de prensa del sector: "realineamiento". La compañía ha declarado que estos cambios buscan adaptar los equipos al nuevo enfoque del juego, que pasa de un desarrollo activo a convertirse en un servicio live-service de largo recorrido. "Battlefield sigue siendo una de nuestras mayores prioridades, y continuamos invirtiendo en la franquicia", aseguró un portavoz de EA. Mientras tanto, los afectados actualizan sus perfiles de LinkedIn.',
+      'El caso resulta especialmente llamativo porque la justificación habitual para este tipo de recortes — pobres resultados comerciales — no aplica aquí. Battlefield 6 fue un éxito masivo. La transición de equipos de desarrollo al modo "soporte y actualizaciones" es una dinámica que se repite con preocupante frecuencia en los grandes estudios: los mismos desarrolladores que construyeron el éxito son los primeros en salir una vez que el juego está estabilizado.',
+      'La noticia llega en la misma semana en que el GDC Festival of Gaming publica su informe State of the Game Industry 2026, que dedica un apartado importante a los despidos masivos que han sacudido el sector durante los últimos tres años. Según ese informe, la IA generativa y la presión de los grandes publishers sobre sus estudios internos siguen siendo los principales factores de inestabilidad laboral en la industria. Para muchos desarrolladores independientes, estas noticias son el recordatorio más claro de por qué tiene sentido apostar por el camino del desarrollo indie.'
+    ],
+    date: '15/03/2026',
+    url: 'https://www.goonhammer.com/games-industry-news-roundup-march-10th-2026/',
+    page: 'gamedev.html',
+    pageLabel: 'GameDev',
+    accent: '#00ff41',
+    source: 'goonhammer.com',
+    img: '',
+    tags: ['EA', 'Battlefield 6', 'DICE', 'Criterion', 'despidos', 'industria', 'gamedev', 'live service']
+  },
+
   // ── NOTICIA 27 ──────────────────────────────────────────────────────────────
   {
     id: 'noticia-gdc-festival-2026',
@@ -731,5 +806,5 @@ var NEWS_DATA = [
 
 // NEWS_TRACKER
 // used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba"]
-// last_update: "2026-03-11"
+// last_update: "2026-03-15"
 // next_available: ["got", "nba", "rol"]

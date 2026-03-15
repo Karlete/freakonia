@@ -2,6 +2,18 @@
 
 ---
 
+## Sesión 40 — 2026-03-15
+
+### feat(news): add 3 articles (Crimson Desert, Martin/Condal drama, EA layoffs)
+
+- **js/news-data.js**: inserted 3 new articles at TOP of NEWS_DATA (noticias 28–30):
+  - `noticia-crimson-desert-launch-2026` (gaming, 15/03/2026) — Crimson Desert lanzamiento 19/03, leak Revenant, specs técnicas
+  - `noticia-martin-condal-abysmal-2026` (got, 15/03/2026) — GRRM describe su relación con Ryan Condal como "abismal" (THR interview)
+  - `noticia-ea-despidos-battlefield-2026` (gamedev, 15/03/2026) — EA despidos en DICE/Criterion/Ripple Effect/Motive tras éxito récord de BF6
+- NEWS_TRACKER last_update actualizado a "2026-03-15"
+
+---
+
 ## Sesión 39 — 2026-03-12
 
 ### feat(news): add 3 articles (GDC festival, GTA6 date, HotD T3 casting)

@@ -1,6 +1,6 @@
 # estado.md — Project State Tracker
 
-Last updated: 2026-03-12 (sesión 39)
+Last updated: 2026-03-15 (sesión 40)
 
 ---
 
@@ -110,7 +110,7 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 
 ### NEWS_TRACKER — temas usados
 ```json
-{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba"],"last_update":"2026-03-08"}
+{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba"],"last_update":"2026-03-15"}
 ```
 **Próximos temas disponibles:** `got` · `nba` · `rol`
 
@@ -166,6 +166,8 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 - 📦 Repo: **https://github.com/Karlete/freakonia**
 - ⚙️ Deploy: GitHub Pages (rama `main`, raíz `/`)
 
+**Sesión 40 (2026-03-15):** 3 artículos insertados al TOP de `js/news-data.js` (noticias 28–30): Gaming (noticia-crimson-desert-launch-2026 · Crimson Desert lanzamiento 19/03 · 15/03) · GoT (noticia-martin-condal-abysmal-2026 · Martin "relación abismal" con Condal · 15/03) · GameDev (noticia-ea-despidos-battlefield-2026 · EA despidos post-Battlefield 6 · 15/03). NEWS_TRACKER last_update actualizado a 2026-03-15. Push a main.
+**Sesión 39 (2026-03-12):** 3 artículos insertados al TOP de `js/news-data.js` (noticias 25–27): GameDev (GDC Festival of Gaming 40 aniversario) · Gaming (GTA 6 fecha 19 nov 2026) · GoT (HotD T3 nueva actriz Jaehaera + fecha junio). NEWS_TRACKER last_update 2026-03-11. Push a main.
 **Sesión 38 (2026-03-08):** Navbar refactorizado en las 13 páginas HTML: reducidos items visibles de 12 a 7 agrupando en dropdowns. Nuevos dropdowns: 🕹 Gaming ▾ (gaming.html + esports.html) · 🐉 Fantasía ▾ (got.html + warhammer.html + magic.html + rol.html) · 📡 Comunidad ▾ (java.html + social.html). Mismo patrón HTML/CSS que el dropdown GameDev existente (`.nav-dropdown` / `.nav-submenu`). Lang-toggle button añadido a las 12 páginas que no lo tenían (solo estaba en index.html). Active state delegado completamente a `setActiveNav()` en main.js (sin clases activas manuales). Push a main.
 **Sesión 36 (2026-03-07):** Primera entrada real del devlog de Fallen Valkyrie añadida a `fallen-valkyrie.html` (sección #sesiones): entrada #01 "DETECCIÓN Y ATAQUE DEL ENEMIGO" (07/03/2026). Eliminado `div.devlog-empty`. Estructura usa clases existentes del diseño (`.devlog-entry`, `.devlog-entry-header`, `.devlog-date`, `.devlog-num`, `.devlog-title`, `.devlog-img`, `.devlog-desc`, `.devlog-tags`). Nuevo asset `assets/img/FV_enemy_attack.gif`. Push a main.
 **Sesión 37 (2026-03-08):** Feature "▶ JUGAR EN EXPLORADOR" añadida a `gamedev.html` e `index.html`: botón verde por card que togglea un iframe de itch.io inline sin salir de la página (`toggleGameEmbed` en `js/main.js`). Samurai Kitchen embed ID 15920008 · Stars Lander embed ID 15830656. `css/gamedev.css`: nuevas clases `.game-embed-container`, `.game-embed-header`, `.game-embed-title`, `.game-embed-close`, `.game-embed-frame-wrap`, `.game-embed-iframe`, `.btn-green` + animación `embedSlideIn`. 6 nuevos artículos insertados al TOP de `js/news-data.js` (artículos 25–30): Esports (naiyou/TES amaño LPL · 07/03) · Gaming (Crimson Desert 19/03 · 07/03) · GoT (A Knight S2 confirmada · 06/03) · Magic (TMNT mecánica Infiltración · 05/03) · Warhammer (Gran Cathay Defenders · 07/03) · NBA (OKC playoffs + Shai récord Wilt · 08/03). NEWS_TRACKER actualizado: last_update 2026-03-08. Estado.md y commit.md actualizados. Push a main.
