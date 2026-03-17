@@ -10,6 +10,81 @@
 
 var NEWS_DATA = [
 
+  // ── NOTICIA 33 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-first-stand-2026-dia1',
+    topic: 'esports',
+    category: 'esports',
+    emoji: '🏆',
+    badgeLabel: 'ESPORTS',
+    title: 'First Stand 2026: BLG y G2 dominan el Día 1 en São Paulo',
+    summary: 'Arranca el primer torneo internacional de la temporada de League of Legends. Bilibili Gaming supera en un épico Bo5 a BNK FEARX (3-2, MVP: knight) y G2 barre a Secret Whales (3-0, MVP: SkewMond). Mañana se miran las caras en el Upper Bracket.',
+    full: [
+      'São Paulo abre sus puertas al primer evento internacional del año en League of Legends. El First Stand 2026 arrancó el 16 de marzo en el Riot Games Arena con un formato de doble eliminación en grupos, todos los partidos al mejor de cinco con Fearless Draft — el modo en el que cada campeón solo puede ser elegido una vez a lo largo de la serie. El premio total es de un millón de dólares y el ganador obtiene un puesto directo en la fase de grupos del MSI 2026, saltándose los Play-Ins. Las apuestas no podrían ser más altas.',
+      'El primer partido del día enfrentó a los favoritos de la LPL, Bilibili Gaming, contra BNK FEARX, segundo clasificado de la LCK. BLG ganó 3-2 en un partido memorable. El top laner Bin abrió la lata en el juego 1 con un Jax imparable, terminando 11/1 en una victoria en menos de 30 minutos. FEARX respondió en el juego 2 gracias al botlaner de 18 años Diable, que firmó un pentakill sobre Jinx. La serie fue equilibrada hasta el final, con el MVP knight marcando la diferencia en el juego decisivo. Notable también fue que BLG rompió una racha de 8 series consecutivas perdidas contra equipos LCK.',
+      'El segundo partido fue entre G2 Esports y Team Secret Whales. El resultado fue 3-0 para los europeos, aunque la serie estuvo lejos de ser tan limpia como el marcador indica. Tras un juego 1 convincente, Secret Whales complicó las cosas a G2 en los siguientes mapas, llegando a ejecutar un ace completo sobre el equipo europeo en el juego 2. Pese a ello, G2 cerró la serie con solvencia. Rudy "Skewmond" Semaan, jungler de G2, fue elegido MVP y él mismo definió la serie como "una montaña rusa".',
+      'El Día 2 depara el plato fuerte del Grupo A: BLG vs G2 en el Upper Bracket, un choque que se ha convertido casi en tradición internacional. BLG lidera el head-to-head 4-2, pero G2 ha ganado los dos últimos enfrentamientos directos. En paralelo, FEARX y Secret Whales se juegan la vida en el Lower Bracket. El perdedor se va a casa. El torneo completo termina el 22 de marzo con la gran final, donde además se celebrará el Runeterra Fan Fest abierto al público.'
+    ],
+    date: '17/03/2026',
+    url: 'https://dotesports.com/league-of-legends/news/first-stand-day-1-recap',
+    page: 'esports.html',
+    pageLabel: 'Esports',
+    accent: '#C89B3C',
+    source: 'dotesports.com',
+    img: '',
+    tags: ['First Stand', 'FST 2026', 'BLG', 'G2', 'League of Legends', 'esports', 'São Paulo', 'LEC', 'LPL']
+  },
+
+  // ── NOTICIA 32 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-crimson-desert-embargo-2026',
+    topic: 'gaming',
+    category: 'gaming',
+    emoji: '🗡️',
+    badgeLabel: 'GAMING',
+    title: 'Crimson Desert: mañana caen los análisis y la polémica por consola ya está servida',
+    summary: 'El RPG más ambicioso de Pearl Abyss lanza el 19 de marzo. El embargo de análisis cae el 18 y una segunda review filtrada coreana lo describe como "extraordinario". El problema: nadie ha podido probar la versión de PS5 base ni Xbox Series X antes del lanzamiento.',
+    full: [
+      'Quedan horas para que Crimson Desert llegue a PS5, Xbox Series X|S y PC el 19 de marzo. El embargo de análisis se levanta el día anterior, el 18 de marzo a las 15:00 PT, y la anticipación en la comunidad es enorme. El juego ya está disponible para precargar desde el 17 de marzo en todas las plataformas digitales, con un tamaño mínimo de 150 GB en PC. La campaña rondará las 60-80 horas según los desarrolladores.',
+      'La semana previa al lanzamiento ha estado marcada por una segunda revisión filtrada, esta vez de un creador de contenido coreano, que contradice algunas de las dudas planteadas anteriormente. Esta nueva fuente destaca mejoras sustanciales de rendimiento respecto a builds previas, elogia el sistema de exploración y el combate, y describe la experiencia global como "extraordinaria". Suma así a las impresiones del español Revenant, quien ya había calificado el juego como su "mundo abierto favorito de siempre" antes de borrar el vídeo bajo presión.',
+      'El punto conflictivo es otro: varios medios especializados han confirmado que Pearl Abyss no les proporcionó acceso a las versiones de PS5 base y Xbox Series X antes del lanzamiento. Los primeros análisis procederán de PCs de alta gama y, en el mejor de los casos, de PS5 Pro. Esto genera incertidumbre legítima sobre cómo rendirá el juego en el hardware más común, el de los millones de jugadores que no tienen una PS5 Pro ni un PC tope de gama. Digital Foundry ha confirmado que publicará su análisis técnico de consolas coincidiendo con el lanzamiento.',
+      'Pearl Abyss ha confirmado además que la versión PC incluirá Denuvo DRM, algo que ha generado críticas adicionales. En el lado positivo, la compañía ha garantizado que no habrá microtransacciones post-lanzamiento, un anuncio que ha sido muy bien recibido dada la historia de Black Desert Online. La predicción más optimista de las filtraciones apunta a un 90-95 en Metacritic si los análisis perdonan la curva de aprendizaje. La más conservadora se mueve entre 80 y 85. Mañana salimos de dudas.'
+    ],
+    date: '17/03/2026',
+    url: 'https://www.notebookcheck.net/Crimson-Desert-PS5-reviews-unlikely-with-sites-blocked-from-access-before-release-date.1250973.0.html',
+    page: 'gaming.html',
+    pageLabel: 'Gaming',
+    accent: '#00bfff',
+    source: 'notebookcheck.net',
+    img: '',
+    tags: ['Crimson Desert', 'Pearl Abyss', 'PS5', 'Xbox Series X', 'open world', 'RPG', 'análisis', 'Metacritic']
+  },
+
+  // ── NOTICIA 31 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-slay-spire-2-exito-indie-2026',
+    topic: 'gamedev',
+    category: 'gamedev',
+    emoji: '💻',
+    badgeLabel: 'GAMEDEV',
+    title: 'Slay the Spire 2 arrasa en Early Access: la fórmula indie sigue siendo imbatible',
+    summary: 'El sucesor del roguelike de deckbuilding más influyente de la última década lleva solo días en Early Access y ya se perfila como uno de los grandes éxitos del año. Mega Crit demuestra que los estudios pequeños con visión propia siguen ganando la partida.',
+    full: [
+      'Slay the Spire 2 salió en Early Access el 6 de marzo de 2026 y el resultado es exactamente el que se esperaba de Mega Crit: un éxito rotundo. El original, lanzado en Early Access en 2017, prácticamente inventó el subgénero del roguelike deckbuilder tal como lo conocemos hoy. Nueve años después, el estudio apuesta por repetir la fórmula: lanzar en acceso anticipado, escuchar a la comunidad durante uno o dos años y pulir el juego hasta que esté listo de verdad.',
+      'La secuela llega con cooperativo para cuatro jugadores desde el día uno, lo que amplía considerablemente el alcance respecto al original. Mega Crit ha sido transparente sobre el proceso: estiman que el juego tardará entre uno y dos años en alcanzar su versión 1.0, pero garantizan que el contenido disponible desde el primer día es sustancial y que el ritmo de actualizaciones será constante. Una hoja de ruta que contrasta fuertemente con los lanzamientos precipitados que han quemado a tantos estudios en el último ciclo.',
+      'El caso Slay the Spire 2 llega en un momento especialmente relevante para el debate sobre la salud del sector. En la misma semana en que EA confirmaba despidos masivos en los equipos de Battlefield 6 tras su lanzamiento récord, un estudio independiente de dos personas fundado en 2012 vuelve a demostrar que la escala no lo es todo. El informe State of the Game Industry 2026, presentado en el GDC Festival of Gaming, señala precisamente el modelo de desarrollo indie sostenible como uno de los contrapesos más saludables a la volatilidad que sacude a los grandes publishers.',
+      'Para quienes seguimos de cerca el desarrollo de videojuegos desde dentro, Slay the Spire 2 es mucho más que una secuela. Es un recordatorio de que con una mecánica sólida, escucha activa a la comunidad y honestidad sobre el estado del producto, se puede construir algo duradero. El Early Access tiene mala reputación en muchos círculos, pero Mega Crit fue uno de los que lo hicieron bien la primera vez. Todo apunta a que lo van a volver a hacer.'
+    ],
+    date: '17/03/2026',
+    url: 'https://strategyandwargaming.com/2026/03/15/strategy-and-wargaming-news-15-march-2026-slay-the-spire-2-is-a-major-success-xenonauts-2-release-date-headquarters-cold-war-out-this-week-and-much-more/',
+    page: 'gamedev.html',
+    pageLabel: 'GameDev',
+    accent: '#00ff41',
+    source: 'strategyandwargaming.com',
+    img: '',
+    tags: ['Slay the Spire 2', 'Mega Crit', 'Early Access', 'indie', 'roguelike', 'deckbuilder', 'gamedev', 'PC']
+  },
+
   // ── NOTICIA 30 ──────────────────────────────────────────────────────────────
   {
     id: 'noticia-crimson-desert-launch-2026',
@@ -806,5 +881,5 @@ var NEWS_DATA = [
 
 // NEWS_TRACKER
 // used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba"]
-// last_update: "2026-03-15"
+// last_update: "2026-03-17"
 // next_available: ["got", "nba", "rol"]

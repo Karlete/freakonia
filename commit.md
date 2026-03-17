@@ -2,6 +2,18 @@
 
 ---
 
+## Sesión 41 — 2026-03-17
+
+### feat(news): add 3 articles (First Stand Day 1, Crimson Desert embargo, Slay the Spire 2)
+
+- **js/news-data.js**: inserted 3 new articles at TOP of NEWS_DATA (noticias 31–33):
+  - `noticia-first-stand-2026-dia1` (esports, 17/03/2026) — BLG y G2 dominan Día 1 del First Stand en São Paulo
+  - `noticia-crimson-desert-embargo-2026` (gaming, 17/03/2026) — Embargo análisis Crimson Desert, polémica sin acceso a PS5 base
+  - `noticia-slay-spire-2-exito-indie-2026` (gamedev, 17/03/2026) — Slay the Spire 2 arrasa en Early Access
+- NEWS_TRACKER last_update actualizado a "2026-03-17"
+
+---
+
 ## Sesión 40 — 2026-03-15
 
 ### feat(news): add 3 articles (Crimson Desert, Martin/Condal drama, EA layoffs)
