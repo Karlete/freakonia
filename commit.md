@@ -2,6 +2,14 @@
 
 ---
 
+## Sesión 43 — 2026-03-20
+
+### refactor(index): extend patron-rain-wrap to cover #pixel-patron section
+
+- **index.html**: moved `section#pixel-patron` (including its `<!-- ─── Pixel Patron Rain -->` comment) inside `.patron-rain-wrap`, after `section#que-se-cuece` and before `</div><!-- end .patron-rain-wrap -->`. `<main>` now starts directly with `#about`. Canvas rain animation now covers hero + news slider + pixel patron sections.
+
+---
+
 ## Sesión 42 — 2026-03-20
 
 ### feat(news): add 5 articles (First Stand groups+semis, Crimson Desert reviews, HotD T3 reshoots, Nintendo tariffs)

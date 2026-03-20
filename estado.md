@@ -1,6 +1,6 @@
 # estado.md — Project State Tracker
 
-Last updated: 2026-03-20 (sesión 42)
+Last updated: 2026-03-20 (sesión 43)
 
 ---
 
@@ -172,6 +172,7 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 - 📦 Repo: **https://github.com/Karlete/freakonia**
 - ⚙️ Deploy: GitHub Pages (rama `main`, raíz `/`)
 
+**Sesión 43 (2026-03-20):** `index.html` — `section#pixel-patron` movida dentro de `.patron-rain-wrap`, después de `#que-se-cuece` y antes de `</div><!-- end .patron-rain-wrap -->`. `<main>` ahora empieza directamente con `#about`. El canvas de lluvia cubre ahora hero + news slider + pixel patron. Push a main.
 **Sesión 42 (2026-03-20):** 5 artículos insertados al TOP de `js/news-data.js` (noticias 34–38): Esports (noticia-first-stand-2026-grupos · BLG a playoffs, G2 al límite, Gen.G imparable · 20/03) · Gaming (noticia-crimson-desert-reviews-bolsa-2026 · Crimson Desert 78 Metacritic + bolsa Pearl Abyss -30% · 20/03) · GoT (noticia-hotd-t3-reshoots-condal-2026 · HotD T3 reshoots rutina, estreno junio 2026 · 20/03) · GameDev (noticia-nintendo-demanda-aranceles-2026 · Nintendo demanda aranceles Trump, acción paralizada · 20/03) · Esports (noticia-first-stand-2026-semifinales · G2 vivo, semifinales 21/03, gran final 22/03 São Paulo · 20/03). NEWS_TRACKER last_update actualizado a 2026-03-20. task.md limpiado. Push a main.
 **Sesión 40 (2026-03-15):** 3 artículos insertados al TOP de `js/news-data.js` (noticias 28–30): Gaming (noticia-crimson-desert-launch-2026 · Crimson Desert lanzamiento 19/03 · 15/03) · GoT (noticia-martin-condal-abysmal-2026 · Martin "relación abismal" con Condal · 15/03) · GameDev (noticia-ea-despidos-battlefield-2026 · EA despidos post-Battlefield 6 · 15/03). NEWS_TRACKER last_update actualizado a 2026-03-15. Push a main.
 **Sesión 39 (2026-03-12):** 3 artículos insertados al TOP de `js/news-data.js` (noticias 25–27): GameDev (GDC Festival of Gaming 40 aniversario) · Gaming (GTA 6 fecha 19 nov 2026) · GoT (HotD T3 nueva actriz Jaehaera + fecha junio). NEWS_TRACKER last_update 2026-03-11. Push a main.
