@@ -455,7 +455,7 @@
       </div>
       <div class="fv-stat-box">
         <span class="fv-stat-label">PROGRESO</span>
-        <span class="fv-stat-value" style="color:var(--accent-secondary);">10%</span>
+        <span class="fv-stat-value" style="color:var(--accent-secondary);">15%</span>
       </div>
     </div>
   </div>
@@ -518,7 +518,7 @@
           <span class="bar-pct">10%</span>
         </div>
         <div class="bar-track">
-          <div class="bar-fill pink" data-fill="10"></div>
+          <div class="bar-fill pink" data-fill="15"></div>
         </div>
       </div>
 
@@ -597,6 +597,42 @@
           <span class="devlog-tag">Detection Range</span>
           <span class="devlog-tag">Attack System</span>
           <span class="devlog-tag">Animation Events</span>
+        </div>
+      </div>
+
+      <div class="devlog-entry reveal">
+        <div class="devlog-entry-header">
+          <span class="devlog-date">20/03/2026</span>
+          <span class="devlog-num">#03</span>
+        </div>
+
+        <h3 class="devlog-title">AGRESIVIDAD Y RETIRADA: EL ESQUELETO SE ADAPTA</h3>
+
+        <img src="assets/img/enemy_retreat.gif"
+             alt="Enemy retreat behavior demo"
+             class="devlog-img"
+             onerror="this.parentElement.removeChild(this)">
+
+        <p class="devlog-desc">
+          Hoy el esqueleto ha dejado de ser un muñeco de práctica. He implementado
+          dos nuevos comportamientos que hacen la IA mucho más dinámica: en cuanto
+          detecta al jugador, el enemigo aumenta su velocidad de movimiento para
+          interceptarle con más agresividad. Ya no camina hacia ti, carga.
+        </p>
+        <p class="devlog-desc">
+          El segundo cambio es el más interesante: cuando la distancia al jugador
+          cae por debajo de un umbral mínimo, el esqueleto activa un estado de
+          retirada y retrocede para recuperar espacio. Esto crea un ciclo de combate
+          real — el enemigo avanza, ataca, se aleja si estás demasiado encima y
+          vuelve a cargar. El loop de pelea ya tiene ritmo.
+        </p>
+
+        <div class="devlog-tags">
+          <span class="devlog-tag">Enemy AI</span>
+          <span class="devlog-tag">State Machine</span>
+          <span class="devlog-tag">Chase Speed</span>
+          <span class="devlog-tag">Retreat Behavior</span>
+          <span class="devlog-tag">Combat Loop</span>
         </div>
       </div>
 
