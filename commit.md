@@ -2,6 +2,21 @@
 
 ---
 
+## Sesión 42 — 2026-03-20
+
+### feat(news): add 5 articles (First Stand groups+semis, Crimson Desert reviews, HotD T3 reshoots, Nintendo tariffs)
+
+- **js/news-data.js**: inserted 5 new articles at TOP of NEWS_DATA (noticias 34–38):
+  - `noticia-first-stand-2026-grupos` (esports, 20/03/2026) — BLG a playoffs, G2 al límite, Gen.G imparable en Grupo B
+  - `noticia-crimson-desert-reviews-bolsa-2026` (gaming, 20/03/2026) — Crimson Desert 78 Metacritic, bolsa Pearl Abyss -30%
+  - `noticia-hotd-t3-reshoots-condal-2026` (got, 20/03/2026) — HotD T3 reshoots son rutina, Condal aclara en podcast
+  - `noticia-nintendo-demanda-aranceles-2026` (gamedev, 20/03/2026) — Nintendo demanda aranceles Trump, paraliza la acción
+  - `noticia-first-stand-2026-semifinales` (esports, 20/03/2026) — G2 vivo, semifinales 21/03, gran final 22/03 São Paulo
+- NEWS_TRACKER `last_update` → `2026-03-20`
+- task.md: cleared
+
+---
+
 ## Sesión 41 — 2026-03-17
 
 ### feat(news): add 3 articles (First Stand Day 1, Crimson Desert embargo, Slay the Spire 2)

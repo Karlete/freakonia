@@ -10,6 +10,131 @@
 
 var NEWS_DATA = [
 
+  // ── NOTICIA 38 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-first-stand-2026-semifinales',
+    topic: 'esports',
+    category: 'esports',
+    emoji: '🏆',
+    badgeLabel: 'ESPORTS',
+    title: 'First Stand: G2 vivo en el lower bracket — el sábado se decide quién llega a la gran final',
+    summary: 'Tras la fase de grupos, BLG y Gen.G esperan en playoffs como primeros clasificados. G2 sobrevive en el lower bracket tras ganar a FEARX. El 21 de marzo llegan las semifinales y el 22 la gran final con el Runeterra Fan Fest abierto al público en São Paulo.',
+    full: [
+      'La fase de grupos del First Stand 2026 ha dejado el cuadro semifinal prácticamente cerrado. BLG y Gen.G son los dos clasificados directos para los playoffs tras dominar sus respectivos grupos sin perder un solo mapa en las partidas decisivas. Gen.G fue especialmente contundente, aplastando a JD Gaming 3-0 en el Grupo B y enviando a los grandes names chinos al lower bracket, donde JDG respondió eliminando a LOUD para intentar sobrevivir.',
+      'En el Grupo A, G2 cayó a la lower bracket tras perder 0-3 ante BLG, pero los europeos se reencontraron con FEARX y los eliminaron para mantenerse vivos en el torneo. BrokenBlade, el top laner de G2, fue uno de los más señalados por su rendimiento irregular — aunque en declaraciones a la prensa el jugador mostró confianza: "Necesitas jugar con la convicción de que vas a ganar. Lo que viene el sábado es lo que importa." G2 lleva dos victorias consecutivas en enfrentamientos directos contra BLG en torneos internacionales — la revancha está servida si ambos llegan a la final.',
+      'El formato del Knockout Stage es eliminación directa al mejor de cinco. Las semifinales se disputarán el sábado 21 de marzo, y la gran final es el domingo 22. Ese mismo día, el Gymnásio Visual Farm de São Paulo acogerá el Runeterra Fan Fest: un evento abierto al público con estaciones de juego para TFT, LoL, 2XKO y Wild Rift, zona de artistas, merchandise exclusivo y retransmisión en directo de la final. El primer evento internacional con público físico en Brasil en nueve años.',
+      'La apuesta es alta: la región ganadora obtiene una plaza directa en el Bracket Stage del MSI 2026, saltándose los Play-Ins. Si BLG o Gen.G ganan, LPL o LCK se aseguran otra ventaja estructural en el circuito internacional. Si G2 o LYON dan la sorpresa, sería el primer campeonato de un equipo occidental en un torneo internacional desde hace años. El ambiente en São Paulo, según los casters y periodistas presentes, es eléctrico.'
+    ],
+    date: '20/03/2026',
+    url: 'https://escharts.com/news/bilibili-gaming-qualify-first-stand-playoffs',
+    page: 'esports.html',
+    pageLabel: 'Esports',
+    accent: '#C89B3C',
+    source: 'escharts.com',
+    img: '',
+    tags: ['First Stand', 'FST 2026', 'G2', 'BLG', 'Gen.G', 'semifinales', 'playoffs', 'LoL', 'São Paulo', 'Runeterra Fan Fest']
+  },
+
+  // ── NOTICIA 37 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-nintendo-demanda-aranceles-2026',
+    topic: 'gamedev',
+    category: 'gamedev',
+    emoji: '💻',
+    badgeLabel: 'GAMEDEV',
+    title: 'Nintendo demanda al gobierno de EE.UU. por los aranceles de Trump — y luego paraliza la acción',
+    summary: 'La compañía japonesa presentó una demanda contra el gobierno estadounidense tras el fallo del Tribunal Supremo que validó los aranceles de Trump. Una semana después, con la causa paralizada temporalmente, la industria del videojuego observa con nerviosismo un conflicto que amenaza los precios de hardware en todo el mundo.',
+    full: [
+      'Nintendo tomó una decisión sin precedentes al presentar una demanda formal contra el gobierno de los Estados Unidos en respuesta al fallo del Tribunal Supremo que validó la política arancelaria de la administración Trump. La compañía, uno de los mayores fabricantes de hardware de videojuegos del mundo, argumenta que los aranceles impuestos a productos electrónicos fabricados en Asia impactan directamente en su cadena de suministro y en el precio final de sus consolas y accesorios para el mercado norteamericano.',
+      'Sin embargo, apenas una semana después de abrir el caso, Nintendo solicitó una paralización temporal de los procedimientos legales. La compañía no ha detallado públicamente las razones de esta pausa, aunque analistas del sector apuntan a negociaciones en curso con el Departamento de Comercio y a la presión diplomática entre Japón y Estados Unidos como factores que podrían estar influyendo en la estrategia legal de Nintendo.',
+      'El caso tiene implicaciones que van mucho más allá de Nintendo. Sony, Microsoft y prácticamente todos los fabricantes de periféricos y accesorios de videojuegos dependen de cadenas de producción asiáticas directamente afectadas por los aranceles. Si los gravámenes se consolidan, el impacto en los precios de hardware para el consumidor final podría ser significativo, especialmente en un año en que el Switch 2 acaba de arrancar su ciclo de vida y GTA 6 se aproxima como el mayor lanzamiento de software de la década.',
+      'Para los desarrolladores independientes y estudios pequeños, la situación añade una capa más de incertidumbre a un mercado ya sacudido por despidos masivos y la consolidación de los grandes publishers. El coste de desarrollo no cambia con los aranceles, pero sí lo hace el tamaño del mercado accesible si los jugadores tienen menos dinero disponible después de pagar más por el hardware. Un frente más que vigilar en 2026.'
+    ],
+    date: '20/03/2026',
+    url: 'https://gamerant.com/gaming/',
+    page: 'gamedev.html',
+    pageLabel: 'GameDev',
+    accent: '#00ff41',
+    source: 'gamerant.com',
+    img: '',
+    tags: ['Nintendo', 'aranceles', 'Trump', 'industria', 'hardware', 'gamedev', 'política', 'Switch 2']
+  },
+
+  // ── NOTICIA 36 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-hotd-t3-reshoots-condal-2026',
+    topic: 'got',
+    category: 'got',
+    emoji: '🐉',
+    badgeLabel: 'HOUSE OF THE DRAGON',
+    title: 'HotD T3: Condal sale del silencio — los reshoots son rutina, no catástrofe',
+    summary: 'Rumores de problemas en la producción de House of the Dragon Temporada 3 llevan días circulando en redes. Ryan Condal los corta de raíz en su podcast: son retoques menores planificados desde el principio. La serie llega en junio y "va a once".',
+    full: [
+      'House of the Dragon Temporada 3 está actualmente en una breve fase de reshoots que ha encendido la alarma entre parte del fandom. Condal respondió directamente en su podcast The Stuff Dreams Are Made Of: "Hay rumores de fuego en el mundo porque nadie puede simplemente dejarnos hacer nuestra serie en paz y disfrutarla cuando salga." Las palabras del showrunner no dejan mucho margen a la interpretación — los reshoots comenzaron la semana pasada y duran aproximadamente semana y media.',
+      'Según Condal, se trata de pickups de pequeña escala: ángulos alternativos, planos de reacción y correcciones de continuidad. El tipo de ajustes que cualquier producción de esta envergadura planifica con meses de antelación y que no tienen nada que ver con problemas creativos ni con las tensiones públicas que el showrunner mantiene con George R.R. Martin. La temporada terminó de rodarse en octubre de 2025 en localizaciones europeas, incluyendo los estudios Leavesden de Warner en Watford, y lleva meses en posproducción.',
+      'La fecha de estreno sigue siendo junio de 2026, con el domingo como día habitual de HBO para sus grandes estrenos — las opciones son el 7, 14, 21 o 28 de junio. La temporada constará de ocho episodios y será la penúltima, ya que la Temporada 4 — que concluirá la serie — ya está en proceso de escritura con estreno previsto para 2028. Los directores de la T3 son Clare Kilner, Nina Lopez-Corrado, Andrij Parekh y Loni Peristere, quien ya adelantó que la temporada incluye dos secuencias épicas que eclipsan todo lo visto hasta ahora, incluyendo la Batalla del Gullet.',
+      'El contexto de fondo sigue siendo el conflicto público entre Martin y Condal, que el autor calificó de "abismal" en enero. HBO, que respalda a Condal, tiene motivos para querer que la Temporada 3 sea un éxito rotundo: necesita recuperar el terreno perdido tras la polémica segunda temporada y demostrar que el universo Targaryen puede sostener una franquicia de largo recorrido. El fandom espera. Los dragones vuelan. Junio se acerca.'
+    ],
+    date: '20/03/2026',
+    url: 'https://wikiofthrones.com/house-of-the-dragon-season-3-currently-undergoing-pre-planned-reshoots',
+    page: 'got.html',
+    pageLabel: 'GoT / HotD',
+    accent: '#cc2200',
+    source: 'wikiofthrones.com',
+    img: '',
+    tags: ['House of the Dragon', 'HotD T3', 'HBO', 'Ryan Condal', 'reshoots', 'Danza de los Dragones', 'junio 2026']
+  },
+
+  // ── NOTICIA 35 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-crimson-desert-reviews-bolsa-2026',
+    topic: 'gaming',
+    category: 'gaming',
+    emoji: '🗡️',
+    badgeLabel: 'GAMING',
+    title: 'Crimson Desert lanza con 78 en Metacritic y hunde la bolsa de Pearl Abyss un 30%',
+    summary: 'El RPG de mundo abierto más esperado de la primavera llega con críticas mixtas-positivas y desata el caos en los mercados coreanos. Un 78 no es un fracaso, pero tampoco es el 90+ que los inversores habían descontado en seis meses de subida bursátil del 125%.',
+    full: [
+      'Crimson Desert aterrizó el 19 de marzo en PS5, Xbox Series X|S y PC con un Metascore de 78 sobre 89 análisis y un 80 en OpenCritic con un 81% de recomendaciones. El juego divide a la crítica entre quienes lo consideran un logro técnico generacional — algunos medios le dieron un 10/10 calificándolo como el nuevo estándar del mundo abierto — y quienes señalan controles torpes, una narrativa desenfocada y sistemas que se acumulan sin depurarse. La puntuación media aterriza en el mismo rango que Stellar Blade, Lies of P o Black Myth: Wukong.',
+      'Las consecuencias financieras fueron inmediatas y brutales. Las acciones de Pearl Abyss en la bolsa de Seúl cayeron un 29% en cuestión de horas, cerrando a 46.000 wones frente a los 68.500 que marcaban solo días antes, cuando el hype del juego había empujado la cotización a máximos históricos. La paradoja es que desde marzo de 2025 la acción había subido un 125% impulsada por las expectativas de Crimson Desert — los inversores apostaron por un 90+ y vendieron masivamente al ver el 78.',
+      'Los análisis más positivos destacan el combate en tercera persona como algo nunca visto a esta escala — comparable a Devil May Cry o Ninja Gaiden pero en mundo abierto — y elogian la exploración, la variedad de biomas y una ambición técnica que puede llegar a las 200 horas de contenido. Los más críticos, como Polygon o Jason Schreier de Bloomberg, apuntan a un diseño de misiones plano y a un exceso de sistemas que ahogan la experiencia.',
+      'Para el jugador de a pie, el 78 y el 80 de OpenCritic son números perfectamente respetables. El debate real es si el juego está a la altura de una campaña de marketing que lo vendió como el próximo Breath of the Wild. La versión de consola base sigue siendo una incógnita: Pearl Abyss no proporcionó acceso a PS5 estándar ni Xbox Series X a los medios antes del lanzamiento, y el análisis técnico de Digital Foundry en consola llegará en los próximos días.'
+    ],
+    date: '20/03/2026',
+    url: 'https://www.gamesradar.com/games/rpg/crimson-deserts-metacritic-score-sinks-pearl-abyss-share-prices-by-30-percent-over-the-cardinal-sin-of-being-perfectly-fine/',
+    page: 'gaming.html',
+    pageLabel: 'Gaming',
+    accent: '#00bfff',
+    source: 'gamesradar.com',
+    img: '',
+    tags: ['Crimson Desert', 'Pearl Abyss', 'Metacritic', 'reviews', 'PS5', 'Xbox', 'open world', 'RPG', 'bolsa']
+  },
+
+  // ── NOTICIA 34 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-first-stand-2026-grupos',
+    topic: 'esports',
+    category: 'esports',
+    emoji: '🏆',
+    badgeLabel: 'ESPORTS',
+    title: 'First Stand 2026: BLG a playoffs, G2 al límite y Gen.G imparable en Grupo B',
+    summary: 'El torneo internacional de LoL en São Paulo ya tiene su primera clasificada: Bilibili Gaming barren a G2 3-0 y se meten en playoffs. Los europeos sobreviven en el lower bracket. En el Grupo B, Gen.G aplasta a LYON 3-0 y JDG elimina a LOUD. El sábado llegan los cruces decisivos.',
+    full: [
+      'El First Stand 2026 sigue su curso en el Riot Games Arena de São Paulo y la fase de grupos va dejando el cuadro cada vez más claro. BLG vs G2 fue el partido del Grupo A del día 3: los chinos barrieron a los europeos 3-0 con autoridad, convirtose en el primer equipo confirmado para la fase de playoffs. BLG impuso control total en los tres mapas — robó el pick de Shen que G2 solía usar, aseguró todos los dragones del Grupo A y firmó las kill differences más aplastantes de lo que llevamos de torneo. Knight, el midlaner de BLG, registró dos solo kills sobre Caps en el mapa decisivo.',
+      'G2 cae al lower bracket con un 0-1 en el Upper, pero no está eliminado. Tendrá que enfrentarse al ganador del duelo entre BNK FEARX y Team Secret Whales. En ese partido de eliminación directa, FEARX se impuso 3-0 a Secret Whales, quienes quedan fuera del torneo. G2 debe ganar ese cruce para seguir vivo y aspirar a la gran final del domingo 22.',
+      'En el Grupo B el día 2 dejó resultados igual de contundentes. Gen.G aplastó a JD Gaming 3-0 para meterse directamente en playoffs, mientras LYON derrotó a LOUD 3-2 en uno de los partidos más igualados del torneo. Sin embargo, JDG respondió al día siguiente eliminando a LOUD 3-0, dejando a los brasileños fuera en casa. El enfrentamiento entre Gen.G y LYON por el Upper Bracket del Grupo B decidirá quién avanza cómodo y quién baja al lower.',
+      'El formato del torneo es doble eliminación en grupos con todos los partidos al mejor de cinco en Fearless Draft — cada campeón solo puede ser seleccionado una vez por equipo a lo largo de toda la serie. Los semifinalistas se cruzan el 21 de marzo y la gran final es el 22. El ganador del torneo da a su región una plaza directa en la fase de grupos del MSI 2026, saltándose Play-Ins. Un millón de dólares en premios y el prestigio de ser el primer campeón internacional del año están en juego.'
+    ],
+    date: '20/03/2026',
+    url: 'https://dotesports.com/league-of-legends/news/lol-first-stand-2026-schedule-results-standings-and-more',
+    page: 'esports.html',
+    pageLabel: 'Esports',
+    accent: '#C89B3C',
+    source: 'dotesports.com',
+    img: '',
+    tags: ['First Stand', 'FST 2026', 'BLG', 'G2', 'Gen.G', 'LYON', 'LEC', 'LPL', 'LCK', 'LoL', 'São Paulo']
+  },
+
   // ── NOTICIA 33 ──────────────────────────────────────────────────────────────
   {
     id: 'noticia-first-stand-2026-dia1',
@@ -881,5 +1006,5 @@ var NEWS_DATA = [
 
 // NEWS_TRACKER
 // used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba"]
-// last_update: "2026-03-17"
+// last_update: "2026-03-20"
 // next_available: ["got", "nba", "rol"]
