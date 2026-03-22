@@ -10,6 +10,131 @@
 
 var NEWS_DATA = [
 
+  // ── NOTICIA 43 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-first-stand-final-blg-campeon-2026',
+    topic: 'esports',
+    category: 'esports',
+    emoji: '🏆',
+    badgeLabel: 'ESPORTS',
+    title: 'BLG CAMPEONES DEL FIRST STAND 2026 — Derrota a G2 3-0 en la gran final y Viper hace historia',
+    summary: 'Bilibili Gaming corona una actuación impecable en São Paulo con una victoria sin concesiones sobre G2 Esports en la gran final del First Stand 2026. Un 3-0 que convierte a Viper en el primer jugador bicampeón del torneo y otorga al LPL ventaja directa en el MSI 2026.',
+    full: [
+      'La gran final del First Stand 2026 se celebró este domingo 22 de marzo en el Gymnásio Visual Farm de São Paulo y el resultado fue contundente: Bilibili Gaming derrotó a G2 Esports 3-0 para alzarse con el título del primer gran torneo internacional de la temporada. El KDA global de la serie refleja la superioridad del equipo chino — 61/27 frente a 27/61 — con 27 torres derribadas por solo 2 de G2 y un dominio total en el contador de dragones, 10 contra 5.',
+      'G2 llegó a la final por la vía del lower bracket tras remontar desde una derrota en la fase de grupos: eliminó a FEARX 3-0 y protagonizó la mayor sorpresa del torneo barriendo a Gen.G, el primer clasificado del LCK, también 3-0 en semifinales. En la gran final, sin embargo, los europeos no encontraron respuesta al control absoluto de BLG. El primer partido fue el más igualado: G2 ganó la disputa del Baron y llegó a tener ventaja antes de que BLG cerrara con una teamfight perfecta. En los dos mapas siguientes, los chinos no dejaron margen.',
+      'El MVP de la serie fue el support ON, cuya Alistar en el juego 2 fue uno de los highlights del torneo. Knight dominó el duelo de midlaners frente a Caps, a quien encerró durante los tres mapas. Bin, top laner de BLG, fue el MVP individual con un KDA de 15/6/14 y un 47.5% de kill participation. BrokenBlade fue el único jugador de G2 con actuaciones destacables, incluyendo un solo kill sobre Bin en el juego 1, pero la diferencia estructural entre ambos equipos fue demasiado grande.',
+      'La victoria tiene consecuencias directas en el circuito internacional: BLG otorga al LPL una plaza directa en el Bracket Stage del MSI 2026, saltándose los Play-Ins. G2 se va de São Paulo con 150.000 dólares y el subcampeonato, que de todas formas supone el mejor resultado internacional de un equipo europeo en años. Park "Viper" Do-hyeon se convierte en el primer jugador en ganar el First Stand en dos ocasiones, tras su título con Hanwha Life en 2025. Un campeonato que consolida a BLG como la mejor organización del mundo en el primer tramo de 2026.'
+    ],
+    date: '22/03/2026',
+    url: 'https://www.gosugamers.net/lol/news/78154-g2-esports-bilibili-gaming-are-the-2026-lol-first-stand-champions',
+    page: 'esports.html',
+    pageLabel: 'Esports',
+    accent: '#C89B3C',
+    source: 'gosugamers.net',
+    img: '',
+    tags: ['First Stand', 'FST 2026', 'BLG', 'G2', 'Viper', 'gran final', 'campeones', 'LoL', 'São Paulo', 'LPL', 'LEC', 'MSI 2026']
+  },
+
+  // ── NOTICIA 42 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-hotd-t3-fan-concerns-martin-2026',
+    topic: 'got',
+    category: 'got',
+    emoji: '🐉',
+    badgeLabel: 'HOUSE OF THE DRAGON',
+    title: 'HotD T3: Martin abandona el barco, personajes originales y el fandom en pie de guerra',
+    summary: 'A tres meses del estreno de House of the Dragon Temporada 3, la preocupación del fandom es real. George R.R. Martin dejó la serie al no soportar la dirección creativa de Condal. Se añaden personajes y una casa inventada. El miedo a repetir los errores de GOT S8 está sobre la mesa.',
+    full: [
+      'House of the Dragon Temporada 3 llega en junio de 2026 —fecha en domingo, con el 7, 14, 21 o 28 como opciones— y la expectación está teñida de ansiedad. La serie ha ido divergiendo progresivamente del material fuente de George R.R. Martin, y la Temporada 3 parece dispuesta a acelerar esa separación. Los showrunners han confirmado la inclusión de personajes completamente originales y, lo que ha incendiado las redes, de una casa noble inventada que no existe en Fuego y Sangre ni en ningún otro texto de Martin.',
+      'El propio autor, que ya en enero calificó públicamente la dirección creativa de Ryan Condal como "abysmally bad", ha dejado de participar activamente en la producción. Martin no escribió ningún episodio de la T2 y su influencia sobre la T3 es, según fuentes cercanas, prácticamente nula. El fandom más purista recuerda que algo similar ocurrió con Game of Thrones cuando Benioff y Weiss se quedaron sin libros que adaptar en las temporadas 7 y 8 — con el resultado conocido.',
+      'Los argumentos del sector más optimista son razonables: la Temporada 1 de HotD, que también se alejó en algunos puntos del libro, fue universalmente celebrada. Condal ha demostrado capacidad para navegar la política Targaryen con matices. Y la Batalla del Gullet —una de las secuencias más épicas que quedan por adaptar— promete ser visualmente monumental, según adelantó el director Loni Peristere. La T3 también introduce a James Norton como Ormund Hightower, uno de los personajes más esperados por los lectores.',
+      'La Temporada 4, que ya está en escritura, será la última de la serie —algo que HBO y Condal confirmaron en febrero de 2026. El plan de cuatro temporadas da estructura y evita el síndrome de alargamiento artificial. Pero para llegar a esa conclusión con el fandom intacto, la Temporada 3 tiene que hacer mucho más que la segunda. Junio llega pronto. Los dragones también.'
+    ],
+    date: '22/03/2026',
+    url: 'https://uwpexponent.com/news/2026/03/20/house-of-the-dragon-season-3-concerns/',
+    page: 'got.html',
+    pageLabel: 'GoT / HotD',
+    accent: '#cc2200',
+    source: 'uwpexponent.com',
+    img: '',
+    tags: ['House of the Dragon', 'HotD T3', 'HBO', 'George R.R. Martin', 'Ryan Condal', 'fandom', 'Danza de los Dragones', 'junio 2026', 'T4 confirmada']
+  },
+
+  // ── NOTICIA 41 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-nba-durant-jordan-record-lebron-2026',
+    topic: 'nba',
+    category: 'nba',
+    emoji: '🏀',
+    badgeLabel: 'NBA',
+    title: 'Durant supera a Jordan en el top-5 histórico de anotadores y LeBron rompe otro récord',
+    summary: 'La semana más histórica de la temporada NBA 2025-26: Kevin Durant encesta el triple que le coloca 5º en la lista all-time de anotadores superando a Michael Jordan, y LeBron James juega su partido 1.612 rompiendo el récord de Robert Parish de más encuentros en la historia de la liga regular.',
+    full: [
+      'La noche del 21 de marzo dejó dos hitos históricos en la misma jornada de NBA. Kevin Durant, jugando con los Houston Rockets ante Miami Heat, anotó un triple desde la esquina en el minuto 36 del cuarto cuarto que le hizo superar los 32.292 puntos de carrera de Michael Jordan, colocándose como el quinto máximo anotador de la historia de la liga. Durant terminó el partido con 27 puntos en una victoria ajustada de los Rockets 123-122, decidida en el último segundo por un tap-in de Amen Thompson sobre un rebote ofensivo.',
+      'En el mismo partido, LeBron James disputó su encuentro número 1.612 en la temporada regular con los Los Angeles Lakers, rompiendo el récord histórico de Robert Parish como el jugador con más partidos jugados en la liga regular de la NBA. LeBron aportó 12 puntos en la victoria de los Lakers 105-104 sobre Orlando Magic, su novena victoria consecutiva. A sus 41 años, el alero sigue siendo un rotacional clave en un equipo que marcha tercero en el Oeste con un récord de 46-25.',
+      'El contexto de la temporada no puede ser más apretado a tres semanas del final de la temporada regular. En el Oeste, Oklahoma City Thunder lidera con un récord de 56-15 y una racha activa de 11 victorias. Los San Antonio Spurs son segundos con 53-18, mientras Los Lakers se aseguran el tercer puesto. Houston con 43-27 y Denver con 43-28 pelean por el cuarto y quinto. La zona del play-in incluye a Clippers, Trail Blazers y Warriors en una carrera que se decidirá partido a partido hasta el 12 de abril.',
+      'En el Este, los Detroit Pistons lideran sorprendentemente con 51-19, seguidos de los Boston Celtics con 47-23. La lucha por los puestos 5-10 incluye un grupo de seis equipos separados por solo cuatro victorias. El Play-In arranca el 14 de abril y los Playoffs el 18. Las Finales NBA 2026 están programadas para el 3 de junio en ABC. Con Durant en el Olimpo de los anotadores y LeBron rompiendo récords de longevidad, la temporada tiene más narrativas que un guion de HBO.'
+    ],
+    date: '22/03/2026',
+    url: 'https://www.nba.com/news/2026-nba-playoffs-standings-and-bracket-updates',
+    page: 'nba.html',
+    pageLabel: '🏀 NBA',
+    accent: '#ffcc00',
+    source: 'NBA.com',
+    img: '',
+    tags: ['Kevin Durant', 'Michael Jordan', 'anotadores históricos', 'LeBron James', 'Robert Parish', 'récord', 'NBA 2026', 'playoffs', 'Lakers', 'Rockets']
+  },
+
+  // ── NOTICIA 40 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-dnd-ravenloft-horrors-within-2026',
+    topic: 'rol',
+    category: 'rol',
+    emoji: '🎲',
+    badgeLabel: 'ROL',
+    title: 'D&D presenta su roadmap 2026: Ravenloft en junio y los Red Wizards de Thay en otoño',
+    summary: 'Wizards of the Coast desplegó en marzo su hoja de ruta completa para Dungeons & Dragons en 2026. Dos grandes suplementos dominan el año: Ravenloft: The Horrors Within, ambientado en el Dominio del Terror, y Arcana Unleashed: Deadfall, con los Red Wizards de Thay como antagonistas principales.',
+    full: [
+      'Wizards of the Coast usó su evento de prensa de marzo para presentar el roadmap completo de Dungeons & Dragons para 2026, el año en que el juego de rol más icónico del mundo celebra su transición definitiva a la nueva edición lanzada en 2024. El anuncio estrella es Ravenloft: The Horrors Within, programado para junio de 2026 con un precio de lanzamiento de 49,99 dólares. El suplemento regresa al Dominio del Terror, uno de los escenarios más queridos por los veteranos del juego, con 290 páginas de contenido que incluyen mecánicas de horror psicológico, nuevos sublinajes de monstruos y una campaña completa ambientada en Barovia.',
+      'El segundo gran lanzamiento del año es Arcana Unleashed: Deadfall, un libro de aventuras con los Red Wizards de Thay como antagonistas principales. Wizards publicó ya algunas ilustraciones del arte interior y el material previo sugiere una campaña de nivel medio-alto con componentes de magia oscura, política arcana e infiltración. Junto a estos dos títulos principales, el roadmap incluye Arcana Unleashed como sourcebook mágico general, mazos de Tarokka, mapas de campaña y tarjetas de referencia rápida.',
+      'WotC también anunció que este año usará Gen Con como plataforma de lanzamiento para varios de estos productos, una decisión estratégica que consolida la feria de Indianápolis como el evento de referencia para los anuncios de D&D en Norteamérica. En paralelo, la compañía abrió una encuesta pública para recabar la opinión de los jugadores sobre la dirección futura del juego —un gesto que algunos interpretan como respuesta a las críticas recibidas tras los cambios de licencia de 2023.',
+      'Para los jugadores de rol en España, el calendario de traducciones de Edge Entertainment sigue pendiente de confirmación oficial, aunque históricamente los suplementos del juego base llegan al castellano entre seis y doce meses después del original en inglés. Si el patrón se mantiene, Ravenloft: The Horrors Within podría estar disponible en español a principios de 2027. Mientras tanto, los grupos con acceso al inglés ya pueden reservar el manual en preventa en la web de D&D Beyond.'
+    ],
+    date: '22/03/2026',
+    url: 'https://www.enworld.org/',
+    page: 'rol.html',
+    pageLabel: 'Rol',
+    accent: '#9933ff',
+    source: 'enworld.org',
+    img: '',
+    tags: ['Dungeons & Dragons', 'D&D 2026', 'Ravenloft', 'Wizards of the Coast', 'WotC', 'suplementos', 'rol de mesa', 'roadmap', 'Red Wizards', 'Thay']
+  },
+
+  // ── NOTICIA 39 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-tow-comp-war-comunidad-2026',
+    topic: 'warhammer',
+    category: 'warhammer',
+    emoji: '⚙',
+    badgeLabel: 'WARHAMMER',
+    title: 'Warhammer: The Old World y la guerra de las reglas — GW pierde el control del juego competitivo',
+    summary: 'Dos años después de su regreso, Warhammer: The Old World tiene una base de jugadores entusiasta y un problema creciente: la comunidad competitiva ha fragmentado el juego en versiones incompatibles. FAQs, errata y guías de juego organizado creadas por fans proliferan porque las oficiales no llegan a tiempo ni son suficientes.',
+    full: [
+      'Warhammer: The Old World cumple más de dos años desde su relanzamiento en enero de 2024 y el balance es agridulce. El juego ha recuperado a la mayoría de sus veteranos de Warhammer Fantasy Battle y ha captado a una nueva generación atraída por las miniaturas y la estética rank-and-flank. El problema es que el crecimiento del juego ha superado la capacidad de Games Workshop para gestionarlo de forma centralizada, y la escena competitiva se está fragmentando.',
+      'Según un análisis publicado en Bell of Lost Souls, el núcleo del problema son las "comp rules": reglas de composición de ejército creadas por la comunidad para equilibrar el juego en torneos cuando las restricciones oficiales se perciben como insuficientes. En los últimos meses han proliferado versiones incompatibles entre sí: diferentes organizadores de torneos usan diferentes comp packages, lo que hace que una lista válida para un evento sea ilegal en otro celebrado la semana siguiente en la misma ciudad. La situación recuerda a los últimos años de Warhammer Fantasy Battle antes de que GW lo enterrase con los End Times.',
+      'GW ha respondido con FAQs y erratas periódicas, y la Matched Play Guide incluye algunas restricciones, pero para muchos jugadores no es suficiente ni lo bastante rápido. El problema específico del Old World es que las interacciones entre ejércitos son extremadamente complejas —el sistema heredado de ediciones anteriores no fue diseñado pensando en torneos modernos con docenas de builds viables por facción— y GW no tiene el historial de soporte rápido que caracteriza a AoS o a 40K.',
+      'La ironía es que esta fragmentación convive con un momento brillante para el juego en términos de releases: en marzo llegó el set de refuerzo Defenders of the Great Bastion para Gran Cathay con 53 miniaturas, y el roadmap de 2026 apunta a más facciones nuevas. El Old World tiene el contenido. Lo que necesita ahora es estructura competitiva oficial que unifique la comunidad antes de que las grietas sean demasiado grandes para cerrarlas.'
+    ],
+    date: '22/03/2026',
+    url: 'https://www.belloflostsouls.net/2026/03/warhammer-the-old-world-games-workshop-is-losing-the-comp-wars.html',
+    page: 'warhammer.html',
+    pageLabel: 'Warhammer',
+    accent: '#ffcc00',
+    source: 'belloflostsouls.net',
+    img: '',
+    tags: ['Warhammer', 'The Old World', 'Games Workshop', 'comp rules', 'torneos', 'juego competitivo', 'comunidad', 'rank-and-flank', 'FAQs']
+  },
+
   // ── NOTICIA 38 ──────────────────────────────────────────────────────────────
   {
     id: 'noticia-first-stand-2026-semifinales',
@@ -1006,5 +1131,5 @@ var NEWS_DATA = [
 
 // NEWS_TRACKER
 // used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba"]
-// last_update: "2026-03-20"
+// last_update: "2026-03-22"
 // next_available: ["got", "nba", "rol"]
