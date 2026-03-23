@@ -2,6 +2,14 @@
 
 ---
 
+## Sesión 44 — 2026-03-23
+
+### refactor(java): move JAVADEVBIBLE section to top of main
+
+- **java.html**: reordered sections inside `<main>`. JAVADEVBIBLE (`.javadevbible-section`) is now first — no preceding `<hr>`. A new `<hr class="pixel-divider" style="margin: 0 var(--sp-5);">` separates it from MI HISTORIA CON JAVA. Remaining order: ORÍGENES → ARGUMENTOS → HISTORIA. No internal HTML content changed.
+
+---
+
 ## Sesión 43 — 2026-03-20
 
 ### refactor(index): extend patron-rain-wrap to cover #pixel-patron section
