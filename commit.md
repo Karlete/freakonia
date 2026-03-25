@@ -2,6 +2,19 @@
 
 ---
 
+## Sesión 45 — 2026-03-25
+
+### feat(news): add 3 articles (MHS3 reviews, Subnautica 2/Krafton, Secrets of Strixhaven)
+
+- **js/news-data.js**: inserted 3 new articles at TOP of NEWS_DATA (noticias 44–46):
+  - `noticia-mhs3-reviews-metacritic-2026` (gaming, 25/03/2026) — Monster Hunter Stories 3: Twisted Reflection reviews, Metacritic +80, JRPG del Q1 2026
+  - `noticia-subnautica2-krafton-demanda-2026` (gamedev, 25/03/2026) — Krafton usa ChatGPT para evitar bonus 250M, juez reintegra CEO de Unknown Worlds
+  - `noticia-secrets-strixhaven-preview-2026` (magic, 25/03/2026) — Secrets of Strixhaven preview season, Mystical Archive vuelve, 5 precons Commander
+- NEWS_TRACKER `last_update` → `2026-03-25`, `next_available` → `got · esports · nba`
+- task.md: cleared
+
+---
+
 ## Sesión 44 — 2026-03-23
 
 ### refactor(java): move JAVADEVBIBLE section to top of main

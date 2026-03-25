@@ -10,6 +10,81 @@
 
 var NEWS_DATA = [
 
+  // ── NOTICIA 46 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-mhs3-reviews-metacritic-2026',
+    topic: 'gaming',
+    category: 'gaming',
+    emoji: '🗡️',
+    badgeLabel: 'GAMING',
+    title: 'Monster Hunter Stories 3 llega con críticas sobresalientes — el spin-off JRPG que ya supera a la saga principal',
+    summary: 'Twisted Reflection aterrizó el 13 de marzo en PS5, Xbox Series X, Switch 2 y PC con un Metacritic por encima de 80 y elogios unánimes a su historia madura, su mundo enorme y sus vínculos con los monstruos. La crítica más ambiciosa de la saga, y quizás la mejor.',
+    full: [
+      'Monster Hunter Stories 3: Twisted Reflection ha llegado para demostrar que la franquicia Capcom tiene músculo más allá del combate en tiempo real. Lanzado el 13 de marzo en PS5, Xbox Series X|S, PC y con versión dedicada para Switch 2, el JRPG de crianza y combate por turnos ha recibido una acogida crítica que supera a los dos primeros entries de la saga. RPGFan lo describe como "el mejor de la trilogía, con momentos sorprendentemente épicos y un tono maduro y agridulce que no esperabas de una saga protagonizada por dragones adorables." Nintendo Life le da un 8/10 y destaca su mundo enorme y sus mecánicas de huevo.',
+      'El juego te pone en la piel del Príncipe —o Princesa— de Azuria, un reino en conflicto con su vecino Vermeil mientras una plaga cristalina llamada el "Encroachment" amenaza el mundo. Lo que el juego tiene de especial es su apuesta por personajes con arcos propios, un protagonista con voz y un elenco de Rangers que te acompañan toda la partida con sus propias historias paralelas. La duración estimada ronda las 60-80 horas, con postgame incluido para los más completistas.',
+      'El sistema de combate mantiene el piedra-papel-tijera de entregas anteriores —ataques de Poder, Técnica y Velocidad— pero añade capas suficientes para hacer los combates contra Jefes Ancianos genuinamente estratégicos. Las animaciones de los Ataques de Kinship son espectaculares. La pega más común en la crítica son los 30 FPS en Switch 2 y algunos problemas de pop-in de texturas en esa versión. En PC el rendimiento es prácticamente impecable.',
+      'Digitally Downloaded lo pone más alto todavía: "Para bien o para mal, Twisted Reflection envía un mensaje claro — este spin-off podría convertirse en algo igual de esencial que la saga principal." VGC añade que es "el mayor y más épico monster-catching que existe." Si eres fan de JRPGs de tono emotivo con un sistema de crianza profundo —y no te importa que los protagonistas sean tan adorables que dan grima— este es tu juego del primer trimestre de 2026.'
+    ],
+    date: '25/03/2026',
+    url: 'https://www.rpgfan.com/review/monster-hunter-stories-3-twisted-reflection/',
+    page: 'gaming.html',
+    pageLabel: 'Gaming',
+    accent: '#00bfff',
+    source: 'rpgfan.com',
+    img: '',
+    tags: ['Monster Hunter Stories 3', 'Twisted Reflection', 'Capcom', 'JRPG', 'Switch 2', 'PS5', 'reviews', 'Metacritic', 'monster-catching']
+  },
+
+  // ── NOTICIA 45 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-subnautica2-krafton-demanda-2026',
+    topic: 'gamedev',
+    category: 'gamedev',
+    emoji: '💻',
+    badgeLabel: 'GAMEDEV',
+    title: 'El escándalo Subnautica 2: Krafton usa ChatGPT para esquivar un bono de 250 millones y echa al CEO por los tribunales',
+    summary: 'Uno de los dramas más sórdidos del sector en años. El CEO de Unknown Worlds fue despedido por su publisher Krafton justo antes de lanzar Subnautica 2 en Early Access, supuestamente para no pagar 250 millones de dólares en bonus. Un juez ordena su restitución — y la saga continúa.',
+    full: [
+      'El caso Subnautica 2 vs Krafton es ya una de las batallas legales más llamativas de la industria del videojuego en la última década. Ted Gill, CEO de Unknown Worlds —el estudio creador de Subnautica—, fue despedido por su publisher Krafton junto con los co-fundadores Charlie Cleveland y Max McGuire justo cuando el juego estaba listo para su lanzamiento en Early Access. La acusación de los fundadores es directa: Krafton retrasó deliberadamente el lanzamiento para evitar pagar un bonus de 250 millones de dólares vinculado a que el juego alcanzara ciertos objetivos de ventas antes de finales de 2025.',
+      'El tribunal de Delaware falló a favor de Gill esta semana. El juez ordenó su restitución inmediata como CEO de Unknown Worlds y amplió el plazo para cobrar el bonus hasta septiembre de 2026, con opción de extensión adicional. El fallo incluye un detalle que ya es legendario en el sector: el CEO de Krafton, Changhan Kim, utilizó ChatGPT para buscar estrategias legales sobre cómo despedir a los fundadores y evitar el pago del bonus. El juez lo cita textualmente en la sentencia y fue un factor determinante en el veredicto.',
+      'La saga, sin embargo, no ha terminado. El día después del fallo, Krafton filtró un memo interno anunciando que Subnautica 2 llegaría a Steam Early Access y Xbox Game Preview en mayo de 2026. El problema: el anuncio se hizo sin consultar a Gill, recién reinstalado como CEO. Sus abogados han presentado una nueva queja ante el tribunal argumentando que Krafton anunció la fecha de lanzamiento de forma unilateral, "dañando el juego y sembrando confusión en la comunidad de Subnautica." Krafton responde que el anuncio era simplemente una comunicación interna celebrando los resultados del último milestone review.',
+      'Para los desarrolladores que siguen la industria, el caso resume varios problemas estructurales a la vez: el poder desmedido de los publishers sobre estudios adquiridos, los incentivos perversos que pueden crearse con cláusulas de bonus en fusiones y adquisiciones, y la opacidad con la que a veces se toman decisiones que afectan a años de trabajo de cientos de personas. Subnautica 2 tiene fecha tentativa de mayo 2026 para PC y Xbox — aunque a estas alturas, nada es seguro.'
+    ],
+    date: '25/03/2026',
+    url: 'https://www.gamespot.com/articles/reinstated-subnatica-2-dev-says-krafton-cant-choose-early-release-date/1100-6538914/',
+    page: 'gamedev.html',
+    pageLabel: 'GameDev',
+    accent: '#00ff41',
+    source: 'gamespot.com',
+    img: '',
+    tags: ['Subnautica 2', 'Krafton', 'Unknown Worlds', 'Ted Gill', 'Early Access', 'industria', 'legal', 'publisher', 'bonus', 'ChatGPT']
+  },
+
+  // ── NOTICIA 44 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-secrets-strixhaven-preview-2026',
+    topic: 'magic',
+    category: 'magic',
+    emoji: '✨',
+    badgeLabel: 'MAGIC',
+    title: 'Secrets of Strixhaven arranca su preview season — el set más esperado de 2026 y el regreso al Magic de verdad',
+    summary: 'El 23 de marzo comenzó la historia de Secrets of Strixhaven en DailyMTG. El 31, la revelación masiva de cartas. El 24 de abril llega a tiendas. La vuelta al plano mágico más icónico del año genera más hype que ningún Universes Beyond: Mystical Archive en cada booster, 5 Commander precons y una filtración de 20 cartas que ya incendia Discord.',
+    full: [
+      'Magic: The Gathering lleva meses dominado por las colaboraciones Universes Beyond — Tortugas Ninja, Marvel, Star Trek en camino — y el fandom más tradicional llevaba tiempo pidiendo a gritos volver a los planos propios del juego. Secrets of Strixhaven responde exactamente a esa demanda. El 23 de marzo arrancó la serie de historia en DailyMTG con el primer episodio de los seis que llevarán a la revelación masiva del 31 de marzo. El 24 de abril el set llega a tiendas; el prerrelease empieza el 17.',
+      'El set regresa a Arcavios y a los pasillos de Strixhaven, la universidad mágica fundada por cinco dragones ancestrales. El arco argumental retoma los problemas que amenazaban el plano después de los eventos de March of the Machine: los Archaics —entidades mágicas normalmente pacíficas— se han vuelto erráticos y peligrosos, y Jadzi y otros magos investigan las causas. La historia promete un villano inesperado que se revelará durante los spoilers. El set tiene 111 expansiones de Magic a sus espaldas y se enmarca en el tercer y último arco argumental del ciclo Metronome.',
+      'El elemento más celebrado es el regreso del Mystical Archive: un bonus sheet de conjuros icónicos de la historia de Magic —instantáneos y brujerías— con arte nuevo, uno garantizado en cada booster. El primer Archive revelado es Stock Up, un draw spell de eficiencia razonable que ya mueve mercado. Además, hay cinco Commander precons —uno por colegio— frente a los dos habituales de otros sets, con jefes como Quintorius, History Chaser, que ya tiene a los jugadores de combo frotándose las manos.',
+      'El 23 de marzo también se filtró un lote de 20 cartas antes del schedule oficial, algo que no ocurría desde hacía años en Magic. La calidad de los diseños que se han visto —incluida Lorehold, the Historian, un nuevo dragón mítico del ciclo de Cofundadores— ha disparado el hype. La segunda banned and restricted announcement del año que se publicó simultáneamente solo afectó a Historic en Arena (Food Chain baneado), confirmando que el metajuego en papel está en un momento de estabilidad. Quedan dos semanas para la gran revelación del 31 de marzo.'
+    ],
+    date: '25/03/2026',
+    url: 'https://magic.wizards.com/en/news/magic-story/planeswalkers-guide-to-secrets-of-strixhaven',
+    page: 'magic.html',
+    pageLabel: 'MtG',
+    accent: '#ff00ff',
+    source: 'magic.wizards.com',
+    img: '',
+    tags: ['Magic The Gathering', 'Secrets of Strixhaven', 'MtG 2026', 'Mystical Archive', 'Commander', 'Strixhaven', 'spoilers', 'preview season', 'Arcavios', 'Banned and Restricted']
+  },
+
   // ── NOTICIA 43 ──────────────────────────────────────────────────────────────
   {
     id: 'noticia-first-stand-final-blg-campeon-2026',
@@ -1131,5 +1206,5 @@ var NEWS_DATA = [
 
 // NEWS_TRACKER
 // used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba"]
-// last_update: "2026-03-22"
-// next_available: ["got", "nba", "rol"]
+// last_update: "2026-03-25"
+// next_available: ["got", "esports", "nba"]
