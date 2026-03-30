@@ -10,6 +10,131 @@
 
 var NEWS_DATA = [
 
+  // ── NOTICIA 43 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-marathon-bungie-2026',
+    topic: 'gaming',
+    category: 'gaming',
+    emoji: '🎯',
+    badgeLabel: 'GAMING',
+    title: 'Marathon de Bungie: el extraction shooter que vuelve a poner el nombre de un clásico en boca de todos',
+    summary: 'Bungie ha lanzado en marzo 2026 su regreso a una de las franquicias más queridas de los 90. Marathon no es el shooter de ciencia ficción que algunos veteranos recuerdan: es un extraction shooter PvP por equipos que aspira a redefinir el género con la marca de calidad del estudio creador de Halo y Destiny.',
+    full: [
+      'Para muchos, Bungie es el estudio detrás de Halo y de los diez años de Destiny que marcaron el género looter-shooter. Pero antes de todo eso existía Marathon: una trilogía de shooters de ciencia ficción para Macintosh que sentó las bases del worldbuilding y la narrativa ambiental que después definirían a la compañía. En marzo de 2026, Bungie —ahora bajo el paraguas de Sony— ha lanzado un nuevo Marathon que no es una secuela directa ni un remake, sino algo completamente distinto: un extraction shooter de corte competitivo por equipos ambientado en el universo original.',
+      'En los extraction shooters, el bucle de juego se basa en entrar a una zona, conseguir botín o completar objetivos, y salir vivo — con la amenaza constante de otros equipos rivales intentando hacer exactamente lo mismo. Es el género que popularizaron Escape from Tarkov y Hunt: Showdown, y que en los últimos años ha buscado sin demasiado éxito su gran hit de masas. La apuesta de Bungie es traer la pulcritud de diseño y el trabajo de feel de disparo que definen a Destiny al formato extraction, con una selección de runners —los personajes jugables— que aportan habilidades y estilos de juego diferenciados.',
+      'El lanzamiento llega después de una beta cerrada que generó opiniones mixtas: entusiasmo por la fluidez del movimiento y la solidez del combate, dudas sobre si el loop de juego es suficientemente atractivo a largo plazo para el público general. Bungie tiene historial demostrado en mantener comunidades activas durante años —Destiny lleva más de una década en pie— y eso se nota en cómo Marathon gestiona la progresión y el riesgo/recompensa de cada incursión.',
+      'El contexto de fondo es importante: Bungie ha pasado por un año convulso, con despidos masivos en 2024 y mayor control operativo de Sony. Marathon llega como el lanzamiento que la compañía necesitaba que funcionase. Los primeros datos de jugadores y la respuesta de la comunidad decidirán si el nombre histórico y el saber hacer de Bungie son suficientes para hacerse un hueco duradero en un género donde la retención lo es absolutamente todo.'
+    ],
+    date: '30/03/2026',
+    url: 'https://www.gamespot.com/articles/the-biggest-new-game-releases-of-march-2026/',
+    page: 'gaming.html',
+    pageLabel: 'Gaming',
+    accent: '#00bfff',
+    source: 'gamespot.com',
+    img: '',
+    tags: ['Marathon', 'Bungie', 'Sony', 'extraction shooter', 'PvP', 'FPS', 'marzo 2026']
+  },
+
+  // ── NOTICIA 42 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-dnd-2026-roadmap-ravenloft',
+    topic: 'rol',
+    category: 'rol',
+    emoji: '🎲',
+    badgeLabel: 'ROL',
+    title: 'D&D 2026: Wizards of the Coast presenta un roadmap por temporadas — Ravenloft vuelve en junio con \'The Horrors Within\'',
+    summary: 'Tras meses de silencio, Wizards of the Coast presentó en el GAMA Expo de Louisville su hoja de ruta para 2026. La gran novedad no es solo qué van a publicar, sino cómo: temporadas temáticas que agrupan sourcebooks, aventuras y productos auxiliares. La Temporada del Horror llega en junio con un regreso a Ravenloft.',
+    full: [
+      'El 3 de marzo de 2026, durante el GAMA Expo celebrado en Louisville (Kentucky), Wizards of the Coast rompió meses de silencio sobre sus planes para Dungeons & Dragons. La novedad más estructural no es ningún libro concreto, sino el cambio de formato en cómo se va a organizar el año de lanzamientos: en adelante, los productos se agruparán en temporadas temáticas, cada una anclada por un sourcebook principal y acompañada de aventuras, accesorios y materiales complementarios. El modelo, familiar para cualquier jugador de videojuegos con componentes de live service, llega ahora al rol de mesa.',
+      'La primera temporada se llama Temporada del Horror y arranca en abril con el lanzamiento previsto de Ravenloft: The Horrors Within para el 16 de junio de 2026. El libro introduce nuevas subclases de temática oscura y amplía el setting de Ravenloft, el escenario de terror gótico cuya actualización más reciente data de 2021 con la salida de Van Richten\'s Guide to Ravenloft. Junto al libro principal llegarán un mazo de tarokka de 60 cartas compatible con el sourcebook, una pantalla de DM y un pack de mapas, todos en torno a 24,99 dólares y con salida en junio.',
+      'A partir de julio arranca la Temporada de la Magia, anclada por Arcana Unleashed, un sourcebook que promete ser la guía definitiva para amantes de la magia en D&D. Incluirá opciones de creación de personaje de alta magia, un nuevo sistema para crear objetos mágicos que evolucionan con el personaje, y una aventura complementaria protagonizada por los Magos Rojos de Thay llamada Deadfall. En agosto llegarán además mazos de referencia para hechizos, objetos mágicos y monstruos, actualizados para el reglamento de 2024.',
+      'Una tercera temporada —la Temporada de los Campeones— está confirmada para octubre-diciembre, aunque su sourcebook principal todavía no se ha anunciado. El cambio de modelo llega después de que 2025 fuera un año más tranquilo para D&D, marcado por restructuraciones internas. La apuesta por temporadas temáticas responde a la necesidad de crear eventos culturales alrededor de los lanzamientos y generar conversación coordinada. Para los aficionados al rol de mesa, es una señal de que la franquicia más icónica del sector va a por todas en la segunda mitad de la década.'
+    ],
+    date: '30/03/2026',
+    url: 'https://gameinformer.com/tabletop/2026/03/03/dungeons-dragons-2026-roadmap-reveals-new-sourcebooks-seasons-and-spell-cards',
+    page: 'rol.html',
+    pageLabel: 'Rol',
+    accent: '#9b59b6',
+    source: 'gameinformer.com',
+    img: '',
+    tags: ['Dungeons & Dragons', 'D&D', 'Wizards of the Coast', 'Ravenloft', 'sourcebook', 'TTRPG', '2026', 'rol de mesa']
+  },
+
+  // ── NOTICIA 41 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-nba-finde-march-28-29-2026',
+    topic: 'nba',
+    category: 'nba',
+    emoji: '🏀',
+    badgeLabel: 'NBA',
+    title: 'NBA fin de semana: Wembanyama arrasa en San Antonio, los Celtics se clasifican y los playoffs están que arden',
+    summary: 'Seis partidos el sábado, nueve el domingo. Wembanyama y los Spurs pasaron por encima de los Bucks. Los Celtics sellaron su billete a playoffs. Sengun sigue en estado de gracia con los Rockets. Y Toronto hizo historia con una racha anotadora sin precedentes.',
+    full: [
+      'El sábado 28 de marzo dejó seis partidos de NBA con mucho que analizar. El más destacado: San Antonio Spurs 127-95 Milwaukee Bucks. Wembanyama volvió a demostrar por qué es la conversación del año en ambos lados de la pista —dominio total, los Spurs llegaron a más de 30 puntos de ventaja en el cuarto final y los Bucks no encontraron respuesta en ningún momento. En otra cancha, Jalen Green explotó por 31 puntos para liderar a los Phoenix Suns en una victoria cómoda ante los Utah Jazz (134-109), manteniendo a Phoenix con opciones reales de entrar entre los cuatro primeros del Oeste. Tyrese Maxey también regresó a la acción con los 76ers, que completaron una remontada con Maxey y Paul George anotando 26 cada uno y Embiid añadiendo 29.',
+      'El domingo fue aún más movido: nueve partidos, varios con implicaciones directas en la carrera por la postemporada. Los Boston Celtics certificaron su plaza para los playoffs, sumando otro hito a una temporada que apunta muy alto. Los Denver Nuggets alargaron su racha de victorias aplastando a los Golden State Warriors 116-93, consolidándose con 48-28 en el balance. Alperen Sengun encadenó su tercer partido de 30 o más puntos en los últimos cuatro encuentros para los Houston Rockets en un 134-102 ante los Pelicans, con Kevin Durant y Jabari Smith sumando 20 cada uno. Los Rockets son ya 45-29 y están en zona de playoff en el Oeste.',
+      'El momento más sorprendente del domingo lo protagonizaron los Toronto Raptors, que establecieron una nueva marca histórica de la NBA con una racha anotadora sin precedentes en su partido ante los Orlando Magic. Los Raptors han sido el equipo revelación de la recta final de temporada, ofreciendo actuaciones que van bastante más allá de lo que su posición en la tabla haría esperar. Oklahoma City también ganó, y Jalen Brunson firmó 32 puntos en Nueva York en una noche cargada de grandes actuaciones individuales.',
+      'Con el Play-In programado para el 14-17 de abril y el inicio oficial de los playoffs el 18, la cuenta atrás ya es definitiva. En el Este, los Celtics lideran con autoridad. En el Oeste, OKC y San Antonio acechan en los dos primeros puestos, con un grupo compacto de equipos peleando por posiciones del cuatro al siete. Detroit tiene opciones de cerrar el título de división Central, Nueva York busca confirmar su plaza. Quedan semanas de temporada regular, pero los contornos del cuadro de playoffs ya están tomando forma.'
+    ],
+    date: '30/03/2026',
+    url: 'https://www.nba.com/news/2026-nba-playoffs-standings-and-bracket-updates',
+    page: 'nba.html',
+    pageLabel: 'NBA',
+    accent: '#e35205',
+    source: 'nba.com',
+    img: '',
+    tags: ['NBA', 'Wembanyama', 'Spurs', 'Celtics', 'Sengun', 'Rockets', 'playoffs 2026', 'resultados']
+  },
+
+  // ── NOTICIA 40 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-akotsk-temporada-2-produccion-2026',
+    topic: 'got',
+    category: 'got',
+    emoji: '🐉',
+    badgeLabel: 'HOUSE OF THE DRAGON',
+    title: 'A Knight of the Seven Kingdoms: la T2 ya está en producción y el estreno de 2027 empieza a tomar forma',
+    summary: 'Tras el final de temporada que conquistó 9,5 millones de espectadores, Dunk y Egg ya están de vuelta. La segunda temporada adaptará The Sworn Sword y se espera para 2027, con la T3 (The Mystery Knight) ya confirmada.',
+    full: [
+      'El final de la primera temporada de A Knight of the Seven Kingdoms marcó 9,5 millones de espectadores —la cifra más alta de toda la temporada, sumando datos de Nielsen y streams en HBO Max. Un número que confirma que HBO tiene entre manos otra joya dentro del universo de Westeros. La buena noticia es que el viaje de Dunk y Egg no ha terminado: la segunda temporada ya está en producción desde diciembre de 2025, con previsión de cerrar el rodaje en torno a junio de 2026 y estreno previsto para 2027.',
+      'La T2 adaptará The Sworn Sword, la segunda novela corta del ciclo Dunk y Egg de George R.R. Martin. En comparación con The Hedge Knight, el material de partida tiene una escala más contenida —el conflicto central gira en torno a los derechos sobre un río—, lo que exigirá a los guionistas expandir la historia con material original. Algo que ya demostraron saber hacer muy bien en la primera temporada, donde varias de las mejores escenas no procedían directamente de las páginas de Martin. La estructura de seis episodios cortos se mantiene, lo que facilita el objetivo de HBO de lanzar la serie de forma anual.',
+      'Más allá de la T2, HBO ya tiene confirmada una tercera temporada que adaptaría The Mystery Knight, la más extensa y con más acción de las tres novelas publicadas. Lo que viene después es la gran incógnita: solo existen esas tres novellas, lo que significa que en algún momento la serie tendrá que aventurarse en terreno sin cartografiar —igual que hizo Game of Thrones, aunque con suerte con mejor resultado. El showrunner Ira Parker ya ha señalado que la intención es mantener vivos a Dunk y Egg hasta que su historia llegue a su conclusión natural, aunque eso implique ir más allá del material publicado.',
+      'La primera temporada fue aclamada como el mejor trabajo del universo westerosiano desde los años de gloria de la serie original: sin batallas de dragones, sin reyes disputando el Trono de Hierro, solo un caballero sin blanca y su escudero real intentando sobrevivir en un mundo que no les hace ningún favor. El equilibrio entre humor, emoción y la dureza característica de Martin funcionó como pocas veces en los últimos años. La espera hasta 2027 será larga, pero el camino de regreso ya ha comenzado.'
+    ],
+    date: '30/03/2026',
+    url: 'https://screenrant.com/a-knight-of-the-seven-kingdoms-season-2-release-2027-promise/',
+    page: 'got.html',
+    pageLabel: 'GOT',
+    accent: '#cc2200',
+    source: 'screenrant.com',
+    img: '',
+    tags: ['A Knight of the Seven Kingdoms', 'Dunk y Egg', 'HBO', 'Game of Thrones', 'The Sworn Sword', 'temporada 2', '2027']
+  },
+
+  // ── NOTICIA 39 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-lec-spring-2026-semana1',
+    topic: 'esports',
+    category: 'esports',
+    emoji: '🏆',
+    badgeLabel: 'ESPORTS',
+    title: 'LEC Spring 2026 arranca: Fnatic cae dos veces en el primer fin de semana — MKOI da un aviso a la liga',
+    summary: 'La temporada regular de la LEC Spring 2026 echó a rodar el 28 de marzo desde el Riot Games Arena de Berlín. Cinco partidas en dos días, victorias de NAVI, Karmine Corp, GIANTX, Heretics y Movistar KOI — y Fnatic como la gran damnificada de la apertura.',
+    full: [
+      'La LEC Spring 2026 ya tiene sus primeros resultados. La temporada regular de la liga europea de League of Legends echó a rodar el sábado 28 de marzo desde el Riot Games Arena de Berlín, con tres partidas en formato BO3 y Fearless Draft. La primera sorpresa del día la dio GIANTX, que se impuso a Fnatic 2-1 con Jackies como MVP. Después, Karmine Corp —subcampeones del Versus 2026— remontaron a Team Vitality también 2-1, con Caliste destacando como el mejor jugador de la serie. Para cerrar el sábado, Natus Vincere dejó claro que no llegan a la Spring como recién llegados: victoria 2-1 sobre Movistar KOI con Rhilech como gran protagonista.',
+      'El domingo reservó otras dos partidas igualmente disputadas. Team Heretics ganó a SK Gaming 2-1, con Tracyn como MVP de una serie cerrada al límite. Pero el resultado más llamativo de la jornada llegó al final: Movistar KOI, que apenas un día antes había caído ante NAVI, apareció ante Fnatic en modo implacable y los barrió 2-0. El MVP fue Jojopyun, brillante durante toda la serie. Las declaraciones posteriores de Melzhet, jugador de KOI, no dejaron lugar a dudas sobre lo que piensa del estado actual del equipo londinense: "Si miramos lo de hoy, no merecen que les renueven."',
+      'Fnatic, el club más laureado de la historia europea, suma dos derrotas en los dos primeros días de competición. No es un punto de partida que invite al optimismo. En el otro extremo, NAVI confirma que su salto a la tier 1 no es accidental, y KC mantiene el tipo como uno de los favoritos de la temporada. G2 Esports, campeones defensores del Versus y finalistas del First Stand 2026, no jugaron este fin de semana de apertura y debutarán más adelante en el calendario.',
+      'El formato de la temporada es un todos contra todos en BO3 con Fearless Draft, con los seis primeros clasificados pasando a un playoff de doble eliminación. Los dos finalistas se clasifican para el MSI 2026, y el ganador entra directamente al Bracket Stage. La LEC Roadtrip pasará por París (24-26 de abril) y Madrid Arena (8-10 de mayo). La liga europea ya está en marcha — y los primeros resultados apuntan a una Spring cargada de sorpresas.'
+    ],
+    date: '30/03/2026',
+    url: 'https://liquipedia.net/leagueoflegends/LEC/2026/Spring/Regular_Season',
+    page: 'esports.html',
+    pageLabel: 'Esports',
+    accent: '#C89B3C',
+    source: 'liquipedia.net',
+    img: '',
+    tags: ['LEC', 'LEC Spring 2026', 'Fnatic', 'MKOI', 'NAVI', 'Karmine Corp', 'GIANTX', 'Heretics', 'League of Legends', 'semana 1']
+  },
+
   // ── NOTICIA 46 ──────────────────────────────────────────────────────────────
   {
     id: 'noticia-mhs3-reviews-metacritic-2026',
@@ -1206,5 +1331,5 @@ var NEWS_DATA = [
 
 // NEWS_TRACKER
 // used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba"]
-// last_update: "2026-03-25"
-// next_available: ["got", "esports", "nba"]
+// last_update: "2026-03-30"
+// next_available: ["warhammer", "magic", "gamedev"]
