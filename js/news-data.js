@@ -31,7 +31,7 @@ var NEWS_DATA = [
     pageLabel: 'Gaming',
     accent: '#00bfff',
     source: 'gamespot.com',
-    img: '',
+    img: 'assets/img/news/marathon.webp',
     tags: ['Marathon', 'Bungie', 'Sony', 'extraction shooter', 'PvP', 'FPS', 'marzo 2026']
   },
 
@@ -56,7 +56,7 @@ var NEWS_DATA = [
     pageLabel: 'Rol',
     accent: '#9b59b6',
     source: 'gameinformer.com',
-    img: '',
+    img: 'assets/img/news/dungeons_and_dragons.webp',
     tags: ['Dungeons & Dragons', 'D&D', 'Wizards of the Coast', 'Ravenloft', 'sourcebook', 'TTRPG', '2026', 'rol de mesa']
   },
 
@@ -81,7 +81,7 @@ var NEWS_DATA = [
     pageLabel: 'NBA',
     accent: '#e35205',
     source: 'nba.com',
-    img: '',
+    img: 'assets/img/news/nba_ball.webp',
     tags: ['NBA', 'Wembanyama', 'Spurs', 'Celtics', 'Sengun', 'Rockets', 'playoffs 2026', 'resultados']
   },
 
@@ -106,7 +106,7 @@ var NEWS_DATA = [
     pageLabel: 'GOT',
     accent: '#cc2200',
     source: 'screenrant.com',
-    img: '',
+    img: 'assets/img/news/el_caballero_siete_reinos.webp',
     tags: ['A Knight of the Seven Kingdoms', 'Dunk y Egg', 'HBO', 'Game of Thrones', 'The Sworn Sword', 'temporada 2', '2027']
   },
 
@@ -131,7 +131,7 @@ var NEWS_DATA = [
     pageLabel: 'Esports',
     accent: '#C89B3C',
     source: 'liquipedia.net',
-    img: '',
+    img: 'assets/img/news/lec_calendar_format.webp',
     tags: ['LEC', 'LEC Spring 2026', 'Fnatic', 'MKOI', 'NAVI', 'Karmine Corp', 'GIANTX', 'Heretics', 'League of Legends', 'semana 1']
   },
 
@@ -156,7 +156,7 @@ var NEWS_DATA = [
     pageLabel: 'Gaming',
     accent: '#00bfff',
     source: 'rpgfan.com',
-    img: '',
+    img: 'assets/img/news/monster_hunter.webp',
     tags: ['Monster Hunter Stories 3', 'Twisted Reflection', 'Capcom', 'JRPG', 'Switch 2', 'PS5', 'reviews', 'Metacritic', 'monster-catching']
   },
 
@@ -181,7 +181,7 @@ var NEWS_DATA = [
     pageLabel: 'GameDev',
     accent: '#00ff41',
     source: 'gamespot.com',
-    img: '',
+    img: 'assets/img/news/subnautica.webp',
     tags: ['Subnautica 2', 'Krafton', 'Unknown Worlds', 'Ted Gill', 'Early Access', 'industria', 'legal', 'publisher', 'bonus', 'ChatGPT']
   },
 
@@ -206,7 +206,7 @@ var NEWS_DATA = [
     pageLabel: 'MtG',
     accent: '#ff00ff',
     source: 'magic.wizards.com',
-    img: '',
+    img: 'assets/img/news/secrets_of_strixhaven.webp',
     tags: ['Magic The Gathering', 'Secrets of Strixhaven', 'MtG 2026', 'Mystical Archive', 'Commander', 'Strixhaven', 'spoilers', 'preview season', 'Arcavios', 'Banned and Restricted']
   },
 
@@ -231,7 +231,7 @@ var NEWS_DATA = [
     pageLabel: 'Esports',
     accent: '#C89B3C',
     source: 'gosugamers.net',
-    img: '',
+    img: 'assets/img/news/first_stand_2026.webp',
     tags: ['First Stand', 'FST 2026', 'BLG', 'G2', 'Viper', 'gran final', 'campeones', 'LoL', 'São Paulo', 'LPL', 'LEC', 'MSI 2026']
   },
 
@@ -256,7 +256,7 @@ var NEWS_DATA = [
     pageLabel: 'GoT / HotD',
     accent: '#cc2200',
     source: 'uwpexponent.com',
-    img: '',
+    img: 'assets/img/news/house_of_the_dragons.webp',
     tags: ['House of the Dragon', 'HotD T3', 'HBO', 'George R.R. Martin', 'Ryan Condal', 'fandom', 'Danza de los Dragones', 'junio 2026', 'T4 confirmada']
   },
 
@@ -281,7 +281,7 @@ var NEWS_DATA = [
     pageLabel: '🏀 NBA',
     accent: '#ffcc00',
     source: 'NBA.com',
-    img: '',
+    img: 'assets/img/news/nba_ball.webp',
     tags: ['Kevin Durant', 'Michael Jordan', 'anotadores históricos', 'LeBron James', 'Robert Parish', 'récord', 'NBA 2026', 'playoffs', 'Lakers', 'Rockets']
   },
 
@@ -306,7 +306,7 @@ var NEWS_DATA = [
     pageLabel: 'Rol',
     accent: '#9933ff',
     source: 'enworld.org',
-    img: '',
+    img: 'assets/img/news/dungeons_and_dragons.webp',
     tags: ['Dungeons & Dragons', 'D&D 2026', 'Ravenloft', 'Wizards of the Coast', 'WotC', 'suplementos', 'rol de mesa', 'roadmap', 'Red Wizards', 'Thay']
   },
 
@@ -331,7 +331,7 @@ var NEWS_DATA = [
     pageLabel: 'Warhammer',
     accent: '#ffcc00',
     source: 'belloflostsouls.net',
-    img: '',
+    img: 'assets/img/news/the_old_world.jpg',
     tags: ['Warhammer', 'The Old World', 'Games Workshop', 'comp rules', 'torneos', 'juego competitivo', 'comunidad', 'rank-and-flank', 'FAQs']
   },
 
@@ -356,7 +356,7 @@ var NEWS_DATA = [
     pageLabel: 'Esports',
     accent: '#C89B3C',
     source: 'escharts.com',
-    img: '',
+    img: 'assets/img/news/first_stand_2026.webp',
     tags: ['First Stand', 'FST 2026', 'G2', 'BLG', 'Gen.G', 'semifinales', 'playoffs', 'LoL', 'São Paulo', 'Runeterra Fan Fest']
   },
 
@@ -381,7 +381,7 @@ var NEWS_DATA = [
     pageLabel: 'GameDev',
     accent: '#00ff41',
     source: 'gamerant.com',
-    img: '',
+    img: 'assets/img/news/nintendo.webp',
     tags: ['Nintendo', 'aranceles', 'Trump', 'industria', 'hardware', 'gamedev', 'política', 'Switch 2']
   },
 
@@ -406,7 +406,7 @@ var NEWS_DATA = [
     pageLabel: 'GoT / HotD',
     accent: '#cc2200',
     source: 'wikiofthrones.com',
-    img: '',
+    img: 'assets/img/news/house_of_the_dragons.webp',
     tags: ['House of the Dragon', 'HotD T3', 'HBO', 'Ryan Condal', 'reshoots', 'Danza de los Dragones', 'junio 2026']
   },
 
@@ -431,7 +431,7 @@ var NEWS_DATA = [
     pageLabel: 'Gaming',
     accent: '#00bfff',
     source: 'gamesradar.com',
-    img: '',
+    img: 'assets/img/news/crisom_desert.jpg',
     tags: ['Crimson Desert', 'Pearl Abyss', 'Metacritic', 'reviews', 'PS5', 'Xbox', 'open world', 'RPG', 'bolsa']
   },
 
@@ -456,7 +456,7 @@ var NEWS_DATA = [
     pageLabel: 'Esports',
     accent: '#C89B3C',
     source: 'dotesports.com',
-    img: '',
+    img: 'assets/img/news/first_stand_2026.webp',
     tags: ['First Stand', 'FST 2026', 'BLG', 'G2', 'Gen.G', 'LYON', 'LEC', 'LPL', 'LCK', 'LoL', 'São Paulo']
   },
 
@@ -481,7 +481,7 @@ var NEWS_DATA = [
     pageLabel: 'Esports',
     accent: '#C89B3C',
     source: 'dotesports.com',
-    img: '',
+    img: 'assets/img/news/first_stand_2026.webp',
     tags: ['First Stand', 'FST 2026', 'BLG', 'G2', 'League of Legends', 'esports', 'São Paulo', 'LEC', 'LPL']
   },
 
@@ -506,7 +506,7 @@ var NEWS_DATA = [
     pageLabel: 'Gaming',
     accent: '#00bfff',
     source: 'notebookcheck.net',
-    img: '',
+    img: 'assets/img/news/crisom_desert.jpg',
     tags: ['Crimson Desert', 'Pearl Abyss', 'PS5', 'Xbox Series X', 'open world', 'RPG', 'análisis', 'Metacritic']
   },
 
@@ -531,7 +531,7 @@ var NEWS_DATA = [
     pageLabel: 'GameDev',
     accent: '#00ff41',
     source: 'strategyandwargaming.com',
-    img: '',
+    img: 'assets/img/news/slay_the_spire2.webp',
     tags: ['Slay the Spire 2', 'Mega Crit', 'Early Access', 'indie', 'roguelike', 'deckbuilder', 'gamedev', 'PC']
   },
 
@@ -556,7 +556,7 @@ var NEWS_DATA = [
     pageLabel: 'Gaming',
     accent: '#00bfff',
     source: 'gameshub.com',
-    img: '',
+    img: 'assets/img/news/crisom_desert.jpg',
     tags: ['Crimson Desert', 'Pearl Abyss', 'RPG', 'open world', 'PS5', 'Xbox Series X', 'PC']
   },
 
@@ -581,7 +581,7 @@ var NEWS_DATA = [
     pageLabel: 'GoT / HotD',
     accent: '#cc2200',
     source: 'hollywoodreporter.com',
-    img: '',
+    img: 'assets/img/news/house_of_the_dragons.webp',
     tags: ['House of the Dragon', 'George RR Martin', 'Ryan Condal', 'HotD T3', 'HBO', 'drama', 'Fire & Blood']
   },
 
@@ -606,7 +606,7 @@ var NEWS_DATA = [
     pageLabel: 'GameDev',
     accent: '#00ff41',
     source: 'goonhammer.com',
-    img: '',
+    img: 'assets/img/news/battlefield_6_explosion.webp',
     tags: ['EA', 'Battlefield 6', 'DICE', 'Criterion', 'despidos', 'industria', 'gamedev', 'live service']
   },
 
@@ -631,7 +631,7 @@ var NEWS_DATA = [
     pageLabel: 'GameDev',
     accent: '#00ff41',
     source: 'gdconf.com',
-    img: '',
+    img: 'assets/img/news/gdc_festival_of_gaming_2026.jpg',
     tags: ['GDC', 'indie', 'game dev', 'Clair Obscur', 'Hideo Kojima', 'IGF', 'festival']
   },
 
@@ -656,7 +656,7 @@ var NEWS_DATA = [
     pageLabel: 'Gaming',
     accent: '#00bfff',
     source: 'rockstargames.com',
-    img: '',
+    img: 'assets/img/news/gran_theft_auto_6.webp',
     tags: ['GTA 6', 'Rockstar', 'PS5', 'Xbox Series X', 'open world', 'Vice City']
   },
 
@@ -681,7 +681,7 @@ var NEWS_DATA = [
     pageLabel: 'GoT / HotD',
     accent: '#cc2200',
     source: 'redanianintelligence.com',
-    img: '',
+    img: 'assets/img/news/house_of_the_dragons.webp',
     tags: ['House of the Dragon', 'HotD T3', 'HBO', 'Jaehaera', 'Danza de los Dragones', 'Westeros']
   },
 
@@ -706,7 +706,7 @@ var NEWS_DATA = [
     pageLabel: "🏆 ESPORTS",
     accent: "var(--accent-primary)",
     source: "Hotspawn / Esports.gg",
-    img: "",
+    img: "assets/img/news/lpl_2026.webp",
     tags: ["LPL", "TES", "naiyou", "match fixing", "amaño", "League of Legends", "escándalo"]
   },
 
@@ -731,7 +731,7 @@ var NEWS_DATA = [
     pageLabel: "🕹 GAMING",
     accent: "var(--accent-secondary)",
     source: "Vandal / Sortiraparis",
-    img: "",
+    img: "assets/img/news/crisom_desert.jpg",
     tags: ["Crimson Desert", "Pearl Abyss", "mundo abierto", "PS5", "Xbox Series", "PC", "acción", "RPG"]
   },
 
@@ -756,7 +756,7 @@ var NEWS_DATA = [
     pageLabel: "🐉 GoT",
     accent: "#cc2200",
     source: "HBO / Watchers on the Wall",
-    img: "",
+    img: "assets/img/news/el_caballero_siete_reinos.webp",
     tags: ["A Knight of the Seven Kingdoms", "Dunk y Egg", "HBO", "precuela", "temporada 2", "ASOIAF", "Game of Thrones"]
   },
 
@@ -781,7 +781,7 @@ var NEWS_DATA = [
     pageLabel: "✨ MAGIC",
     accent: "var(--accent-secondary)",
     source: "Magic Wizards Official / Chicas Gamers",
-    img: "",
+    img: 'assets/img/news/magic_tortugas_ninja.webp',
     tags: ["Magic The Gathering", "Tortugas Ninja", "TMNT", "Universes Beyond", "Infiltración", "Commander", "nuevo set"]
   },
 
@@ -806,7 +806,7 @@ var NEWS_DATA = [
     pageLabel: "⚙ WARHAMMER",
     accent: "var(--accent-warn)",
     source: "Warhammer Community / Spikey Bits",
-    img: "",
+    img: 'assets/img/news/defenders_great_bastion.webp',
     tags: ["Warhammer", "The Old World", "Gran Cathay", "Games Workshop", "miniaturas", "lanzamiento", "Defenders of the Great Bastion"]
   },
 
@@ -831,7 +831,7 @@ var NEWS_DATA = [
     pageLabel: "🏀 NBA",
     accent: "var(--accent-warn)",
     source: "ESPN / NBA.com",
-    img: "",
+    img: "assets/img/news/nba_ball.webp",
     tags: ["NBA", "OKC Thunder", "Shai Gilgeous-Alexander", "playoffs 2026", "Wilt Chamberlain", "temporada regular", "MVP"]
   },
 
@@ -855,7 +855,7 @@ var NEWS_DATA = [
     pageLabel: ">> IR A MAGIC",
     accent: "#ff00ff",
     source: "magic.wizards.com",
-    img: "",
+    img: 'assets/img/news/magic_tortugas_ninja.webp',
     tags: ["Magic", "TMNT", "Universes Beyond", "Commander", "2026"]
   },
 
@@ -879,7 +879,7 @@ var NEWS_DATA = [
     pageLabel: ">> IR A WARHAMMER",
     accent: "#ffcc00",
     source: "spikeybits.com",
-    img: "",
+    img: 'assets/img/news/defenders_great_bastion.webp',
     tags: ["The Old World", "Gran Cathay", "Games Workshop", "Miniaturas", "2026"]
   },
 
@@ -903,7 +903,7 @@ var NEWS_DATA = [
     pageLabel: ">> IR A ESPORTS",
     accent: "#C89B3C",
     source: "esports.gg",
-    img: "",
+    img: "assets/img/news/lec_calendar_format.webp",
     tags: ["LEC", "Spring Split", "MSI", "MKOI", "2026"]
   },
 
@@ -927,7 +927,7 @@ var NEWS_DATA = [
     pageLabel:  '>> VER GAMING',
     accent:     '#00bfff',
     source:     'infobae.com',
-    img:        '',
+    img:        'assets/img/news/fatal_frame_ii_crimson_butterfly_remake_pc_steam_cover.webp',
     tags:       ['Fatal Frame II', 'Crimson Butterfly', 'Remake', 'Terror japonés', 'PS5', 'Switch 2']
   },
 
@@ -951,7 +951,7 @@ var NEWS_DATA = [
     pageLabel:  '>> VER WARHAMMER',
     accent:     '#ffcc00',
     source:     'spikeybits.com',
-    img:        '',
+    img:        'assets/img/news/defenders_great_bastion.webp',
     tags:       ['Gran Cathay', 'The Old World', 'Defenders of the Great Bastion', 'Games Workshop', 'Warhammer Fantasy']
   },
 
@@ -975,7 +975,7 @@ var NEWS_DATA = [
     pageLabel:  '>> VER ESPORTS',
     accent:     '#C89B3C',
     source:     'esportsinsider.com',
-    img:        '',
+    img:        'assets/img/news/lcs_lyon_champs.jpg',
     tags:       ['LYON', 'LCS Lock-In 2026', 'Cloud9', 'Inspired MVP', 'First Stand 2026']
   },
 
@@ -999,7 +999,7 @@ var NEWS_DATA = [
     pageLabel:  '>> VER ESPORTS',
     accent:     '#C89B3C',
     source:     'esports.gg',
-    img:        '',
+    img:        'assets/img/news/lec_calendar_format.webp',
     tags:       ['G2 Esports', 'LEC Versus', 'Karmine Corp', 'Caps MVP', 'First Stand 2026']
   },
 
@@ -1023,7 +1023,7 @@ var NEWS_DATA = [
     pageLabel:  '>> VER GOT',
     accent:     '#cc2200',
     source:     'cnnespanol.cnn.com',
-    img:        '',
+    img:        'assets/img/news/house_of_the_dragons.webp',
     tags:       ['House of the Dragon', 'Temporada 3', 'HBO', 'Batalla del Gaznate', 'ASOIAF']
   },
 
@@ -1047,7 +1047,7 @@ var NEWS_DATA = [
     pageLabel:  '>> VER NBA',
     accent:     '#ffcc00',
     source:     'nbamaniacs.com',
-    img:        '',
+    img:        'assets/img/news/nba_ball.webp',
     tags:       ['San Antonio Spurs', 'New York Knicks', 'Mikal Bridges', 'NBA 2026', 'Playoffs']
   },
 
@@ -1072,7 +1072,7 @@ var NEWS_DATA = [
     pageLabel:  'IR A ESPORTS',
     accent:     '#ffcc00',
     source:     'lolesports.com',
-    img:        'assets/img/lec_versus_2026.jpg',
+    img:        'assets/img/lec_versus_2026.webp',
     tags:       ['LEC', 'G2 Esports', 'Movistar KOI', 'Karmine Corp', 'Badalona', 'First Stand 2026']
   },
 
@@ -1146,7 +1146,7 @@ var NEWS_DATA = [
     pageLabel:  'GAMING',
     accent:     '#00bfff',
     source:     '3djuegos.com',
-    img:        '',
+    img:        'assets/img/news/resident_evil_requiem.webp',
     tags:       ['Resident Evil 9', 'Requiem', 'Capcom', 'PS5', 'Leon Kennedy', 'Raccoon City']
   },
 
@@ -1170,7 +1170,7 @@ var NEWS_DATA = [
     pageLabel:  'GOT',
     accent:     '#cc2200',
     source:     '3djuegos.com',
-    img:        '',
+    img:        'assets/img/news/house_of_the_dragons.webp',
     tags:       ['House of the Dragon', 'HBO', 'Temporada 3', 'George R.R. Martin', 'Batalla del Gullet', '2026']
   },
 
@@ -1190,7 +1190,7 @@ var NEWS_DATA = [
     pageLabel:  'ROL',
     accent:     '#9933ff',
     source:     'chaosium.com',
-    img:        '',
+    img:        'assets/img/news/dungeons_and_dragons.webp',
     tags:       ['Call of Cthulhu', 'Arkham', 'Chaosium', 'Rol de Mesa', 'Lovecraft', 'Tapa Dura']
   },
 
@@ -1210,7 +1210,7 @@ var NEWS_DATA = [
     pageLabel:  'WARHAMMER',
     accent:     '#cc2200',
     source:     'warhammer-community.com',
-    img:        '',
+    img:        'assets/img/news/defenders_great_bastion.webp',
     tags:       ['Warhammer', 'The Old World', 'Gran Cathay', 'Games Workshop', 'Miniaturas', 'Preventas']
   },
 
@@ -1230,7 +1230,7 @@ var NEWS_DATA = [
     pageLabel:  'GAMEDEV',
     accent:     '#00ff41',
     source:     'gamedeveloper.com',
-    img:        '',
+    img:        'assets/img/news/unity_ai.webp',
     tags:       ['Unity', 'Inteligencia Artificial', 'GDC 2026', 'Gamedev', 'IA Generativa', 'Casual Games']
   },
 
@@ -1250,7 +1250,7 @@ var NEWS_DATA = [
     pageLabel:  'GAMING',
     accent:     '#00bfff',
     source:     'insider-gaming.com',
-    img:        '',
+    img:        'assets/img/news/final_fantasy_vii.webp',
     tags:       ['Final Fantasy VII', 'Square Enix', 'Steam', 'GOG', 'Remaster', 'PC']
   },
 

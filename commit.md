@@ -2,6 +2,18 @@
 
 ---
 
+## Sesión 47 — 2026-04-01
+
+### refactor(news): fill all img fields and normalize filenames to underscore convention
+
+- **js/news-data.js**: replaced placeholder external URLs (YouTube thumbnails, Steam CDN) and empty `img:` fields with correct local asset paths for all 45 articles in NEWS_DATA
+- **assets/img/news/**: renamed 20 hyphenated image files to underscore convention (e.g. `house-of-the-dragons.webp` → `house_of_the_dragons.webp`); 34 images total in directory
+- **js/news-data.js**: updated 36 `img:` references to match renamed underscore filenames; fixed previously stripped hyphens (e.g. `elcaballerosietereinos.webp` → `el_caballero_siete_reinos.webp`)
+- **js/news-data.js**: updated `lec_versus_2026.jpg` reference → `lec_versus_2026.webp`
+- task.md: cleared
+
+---
+
 ## Sesión 45 — 2026-03-25
 
 ### feat(news): add 3 articles (MHS3 reviews, Subnautica 2/Krafton, Secrets of Strixhaven)
