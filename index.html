@@ -972,8 +972,7 @@
     var card = document.createElement('article');
     card.className = 'news-preview-card';
     card.style.setProperty('--news-accent', n.accent || '#00ff41');
-    var href = n.url || n.page || 'news.html';
-    var isExternal = !!n.url;
+    var href = 'article.html?id=' + n.id;
     card.innerHTML =
       '<div class="news-preview-header">' +
         '<span class="news-topic-badge">' + n.emoji + ' ' + (n.badgeLabel || n.topic).toUpperCase() + '</span>' +
@@ -981,8 +980,7 @@
       '</div>' +
       '<h3 class="news-preview-title">' + n.title + '</h3>' +
       '<p class="news-preview-body">' + n.summary + '</p>' +
-      '<a href="' + href + '"' + (isExternal ? ' target="_blank" rel="noopener"' : '') +
-        ' class="btn btn-small">&gt;&gt; LEER</a>';
+      '<a href="' + href + '" class="btn btn-small">&gt;&gt; LEER</a>';
     track.appendChild(card);
   });
 

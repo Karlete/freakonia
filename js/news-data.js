@@ -10,6 +10,81 @@
 
 var NEWS_DATA = [
 
+  // ── NOTICIA 46 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-adepticon-tow-gran-cathay-2026',
+    topic: 'warhammer',
+    category: 'warhammer',
+    emoji: '⚙',
+    badgeLabel: 'WARHAMMER',
+    title: 'Adepticon 2026: Gran Cathay arrasa con la Jade Fleet — el ejército más nuevo de The Old World se lleva el campeonato',
+    summary: 'El mayor torneo de singles de The Old World en Norteamérica reunió a 78 jugadores en Milwaukee. Andrea Ninni ganó los cinco rondas con una lista de Gran Cathay centrada en magia Yang y artillería. El ejército más reciente del juego demuestra que Games Workshop sabe lo que hace cuando diseña una nueva facción.',
+    full: [
+      'El Adepticon 2026 pasará a la historia de Warhammer: The Old World como el torneo que confirmó lo que muchos sospechaban: Gran Cathay no es solo el ejército nuevo y brillante, es un ejército que gana. 78 jugadores se dieron cita en Milwaukee en lo que se convirtió en el mayor evento de singles de The Old World celebrado en Norteamérica, superando ligeramente al LVO y al NOVA Open anteriores. Cinco rondas de batalla, con restricciones de composición que limitaban las Linternas de Gran Cathay a un máximo de dos y ponían techo a voladoras y monstruos.',
+      'El ganador fue Andrea Ninni con una lista de Jade Fleet —la flota de Gran Cathay— construida alrededor de dos Señores Shugengan de nivel 3 y 4 en el Lore de Yang, con accesorios mágicos orientados a la supervivencia y el control del tablero. La clave del ejército no estaba en la potencia bruta sino en la sinergia: los magos de Yang generan dados extra de energía cuando dos unidades amistosas forman el símbolo Yin-Yang, lo que convierte cada turno de magia en una palanca de decisión táctica constante. Cinco victorias en cinco rondas, sin un empate ni una derrota.',
+      'El resultado reabre el debate sobre el equilibrio de Gran Cathay en el meta competitivo. Desde su lanzamiento en 2025, la facción ha generado opiniones divididas: para un sector de la comunidad es demasiado potente en control y magia, para otro simplemente requiere una curva de aprendizaje más pronunciada que otras facciones. Games Workshop publicó una FAQ de The Old World a principios de 2026 que ajustó algunos de los puntos más polémicos, pero el resultado del Adepticon sugiere que el trabajo de balance no ha terminado.',
+      'Más allá del debate meta, el Adepticon 2026 deja una imagen positiva del estado del juego: 78 jugadores en un singles event es una cifra notable para un wargame de regimientos en 2026, y la variedad de facciones representadas en la parte alta de la tabla —Bretonia, Tomb Kings, Imperio y Elfos Silvanos entre los mejores puestos además de Gran Cathay— apunta a un meta competitivo más diverso de lo que las primeras impresiones sugerían. The Old World lleva ya más de dos años de vida y sigue creciendo.'
+    ],
+    date: '02/04/2026',
+    url: 'https://www.belloflostsouls.net/2026/04/warhammer-the-old-world-the-unbeatable-list-adepticon-championship-2026.html',
+    page: 'warhammer.html',
+    pageLabel: 'Warhammer',
+    accent: '#cc2200',
+    source: 'belloflostsouls.net',
+    img: 'assets/img/news/the_old_world.jpg',
+    tags: ['Warhammer', 'The Old World', 'Adepticon 2026', 'Gran Cathay', 'torneo', 'competitivo', 'Jade Fleet']
+  },
+
+  // ── NOTICIA 45 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-secrets-strixhaven-spoilers-2026',
+    topic: 'magic',
+    category: 'magic',
+    emoji: '✨',
+    badgeLabel: 'MTG',
+    title: 'Secrets of Strixhaven ya está en spoiler season — la Academia vuelve con el Archivo Místico en cada sobre',
+    summary: 'El 31 de marzo arrancó oficialmente la temporada de previews de Secrets of Strixhaven, el próximo set de Magic que sale el 24 de abril. Nuevas mecánicas, cinco precons de Commander, los cinco dragones ancianos de vuelta y una carta del Archivo Místico garantizada en cada sobre de juego. El set que los jugadores llevaban pidiendo desde 2021.',
+    full: [
+      'La temporada de previews de Secrets of Strixhaven arrancó oficialmente el 31 de marzo con el Debut en WeeklyMTG, y lo que se ha mostrado hasta ahora justifica el hype que llevaba meses acumulándose. El set llega el 24 de abril a tiendas físicas —y el 21 en MTG Arena— con los prerrelease el 17 de abril. Strixhaven: School of Mages fue uno de los sets más queridos de la era reciente por su ambientación, sus colegios de magia y el concepto del Archivo Místico, y esta secuela promete ampliar todo eso con nuevas mecánicas y una narrativa que continúa donde lo dejó el set original.',
+      'El gran titular del set es el regreso del Archivo Místico con una carta garantizada en cada sobre de juego — una vuelta a la política original después de años en los que los bonus sheets fueron haciéndose cada vez más raros en los sobres estándar. Las cartas confirmadas ya incluyen reprints de alta demanda como Stock Up y Sylvan Library, esta última llegando a MTG Arena por primera vez. Los sobres Collector incluirán además versiones en japonés con arte alternativo y versiones Silver Scroll, un tratamiento de foil especial que ya ha generado conversación en la comunidad.',
+      'En cuanto a mecánicas nuevas, el set presenta Opus para Prismari —recompensa lanzar instantáneos y brujerías gastando cinco o más maná—, Infusion para Witherbloom —que comprueba si ganaste vida ese turno—, Increment para Quandrix —contadores +1/+1 cuando lanzas hechizos con más maná que el poder o resistencia de la criatura— y el retorno de Flashback para Lorehold. También vuelve Converge para las criaturas arcanas del plano. Son cinco mecánicas distintas, una por colegio, lo que encaja perfectamente con la fantasía de cada facción.',
+      'Los cinco dragones ancianos regresan como cartas míticas, cada uno representando uno de los colegios. Lorehold, the Historian ya ha generado comentarios positivos por su sinergia con el maná alto y el flashback. En el plano de los planewalkers, Ral Zarek reaparece como Guest Lecturer —monocolor negro, sorprendiendo a los que esperaban un Ral azul-rojo— y Professor Dellian Fel debuta como nuevo personaje. Cinco precons de Commander, una por colegio, completan el lanzamiento. Con 125 cartas en el set principal y 379 en los productos Commander, Secrets of Strixhaven es el lanzamiento más completo del año para los jugadores de mesa.'
+    ],
+    date: '02/04/2026',
+    url: 'https://mtgrocks.com/mtg-secrets-of-strixhaven/',
+    page: 'magic.html',
+    pageLabel: 'MtG',
+    accent: '#9933ff',
+    source: 'mtgrocks.com',
+    img: 'assets/img/news/secrets_of_strixhaven.webp',
+    tags: ['Magic: The Gathering', 'Secrets of Strixhaven', 'spoilers', 'Archivo Místico', 'Commander', 'MTG Arena', 'abril 2026']
+  },
+
+  // ── NOTICIA 44 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-unity-informe-gamedev-2026',
+    topic: 'gamedev',
+    category: 'gamedev',
+    emoji: '🎮',
+    badgeLabel: 'GAMEDEV',
+    title: 'El informe Unity 2026 confirma la tendencia: los estudios apuestan por juegos pequeños, IA integrada y mercados emergentes',
+    summary: 'Unity ha publicado su informe anual de desarrollo de videojuegos 2026, basado en encuestas a 300 desarrolladores y datos de casi cinco millones de usuarios del motor. El mensaje es claro: la industria prefiere apostar por proyectos de menor escala, el 82% ya usa colaboraciones externas, y la India es el próximo gran mercado objetivo.',
+    full: [
+      'Unity ha publicado su informe anual sobre el estado del desarrollo de videojuegos en 2026, y el documento cambia el tono respecto al año anterior de una manera significativa. Si el informe de 2025 preguntaba "¿puede un estudio sobrevivir?", el de 2026 da la supervivencia por superada y plantea la siguiente pregunta: "¿cómo construir un futuro sostenible?". Basado en encuestas a 300 desarrolladores profesionales y en datos propios de cerca de cinco millones de usuarios del motor en 2025, el informe identifica cinco grandes tendencias que están redefiniendo cómo se hacen los videojuegos.',
+      'La más destacada es la apuesta decidida por proyectos de menor escala. Los estudios, después de años de hipertrofiar presupuestos y equipos en la era post-pandemia, están volviendo a proyectos más contenidos y enfocados. La lógica es sencilla: menos riesgo, iteración más rápida y mayor claridad sobre qué es el juego desde el primer día. El informe señala que esta tendencia no es solo económica sino también creativa: los equipos pequeños toman decisiones más rápido y el juego final suele tener una identidad más definida.',
+      'En cuanto a promoción y marketing, el 62% de los desarrolladores encuestados apuesta por eventos online y el 60% por redes sociales como sus principales canales. Los eventos presenciales siguen siendo relevantes para el 49%, pero no pueden competir con el alcance potencial y el coste reducido de los medios digitales. La colaboración externa también marca el paso: un 82% de los estudios declara usar colaboraciones y partnerships relacionados con sus juegos, mientras que un 32% está explorando nuevos géneros como vía de diversificación de ingresos.',
+      'El mercado geográfico que más interesa a los desarrolladores para los próximos años es la India, con un 73% de los encuestados apuntando al subcontinente como su próximo objetivo de expansión. La razón encaja con los datos: el 60% de los estudios ha encontrado su mayor éxito reciente en Asia Central y del Sur. Para los desarrolladores indie que usamos Unity —como es mi caso con Fallen Valkyrie—, el informe confirma que el motor sigue siendo la opción más accesible del mercado: Unity Personal continúa siendo gratuito en 2026 para creadores individuales y equipos pequeños con ingresos por debajo de 200.000 dólares anuales.'
+    ],
+    date: '02/04/2026',
+    url: 'https://unity.com/es/blog/2026-unity-game-development-report-trends',
+    page: 'gamedev.html',
+    pageLabel: 'GameDev',
+    accent: '#00ff41',
+    source: 'unity.com',
+    img: 'assets/img/news/unity_ai.webp',
+    tags: ['Unity', 'gamedev', 'informe 2026', 'indie', 'desarrollo de videojuegos', 'mercados emergentes', 'IA']
+  },
+
   // ── NOTICIA 43 ──────────────────────────────────────────────────────────────
   {
     id: 'noticia-marathon-bungie-2026',
@@ -26,7 +101,7 @@ var NEWS_DATA = [
       'El contexto de fondo es importante: Bungie ha pasado por un año convulso, con despidos masivos en 2024 y mayor control operativo de Sony. Marathon llega como el lanzamiento que la compañía necesitaba que funcionase. Los primeros datos de jugadores y la respuesta de la comunidad decidirán si el nombre histórico y el saber hacer de Bungie son suficientes para hacerse un hueco duradero en un género donde la retención lo es absolutamente todo.'
     ],
     date: '30/03/2026',
-    url: 'https://www.gamespot.com/articles/the-biggest-new-game-releases-of-march-2026/',
+    url: 'https://www.gamespot.com/articles/marathon-everything-we-know-about-bungies-extraction-shooter/1100-6514617/',
     page: 'gaming.html',
     pageLabel: 'Gaming',
     accent: '#00bfff',
@@ -1331,5 +1406,5 @@ var NEWS_DATA = [
 
 // NEWS_TRACKER
 // used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba"]
-// last_update: "2026-03-30"
-// next_available: ["warhammer", "magic", "gamedev"]
+// last_update: "2026-04-02"
+// next_available: ["got", "esports", "gaming", "nba", "rol"]

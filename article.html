@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="description" content="Artículo — Freakonia" />
+  <title>Artículo — Freakonia</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/news.css" />
+
+  <!-- News data (global NEWS_DATA array) -->
+  <script src="js/news-data.js"></script>
+  <script src="js/pixels-data.js"></script>
+
+  <!-- Open Graph / WhatsApp / Telegram — set dynamically by JS -->
+  <meta property="og:type"        content="article">
+  <meta property="og:site_name"   content="Freakonia">
+  <meta property="og:url"         content="">
+  <meta property="og:title"       content="">
+  <meta property="og:description" content="">
+  <meta property="og:image"       content="">
+  <meta property="og:locale"      content="es_ES">
+
+  <!-- Twitter/X Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:site"        content="@SanprietoG">
+  <meta name="twitter:title"       content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image"       content="">
+
+  <!-- Canonical — set dynamically by JS -->
+  <link rel="canonical" href="">
+
+  <style>
+    .article-page {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2rem 1rem 4rem;
+    }
+
+    .btn-back-article {
+      margin-bottom: 2rem;
+      font-size: 0.65rem;
+    }
+
+    .article-header {
+      margin-bottom: 2rem;
+    }
+
+    .article-title {
+      font-family: "Press Start 2P", monospace;
+      font-size: clamp(0.85rem, 2.5vw, 1.3rem);
+      line-height: 1.8;
+      margin-top: 1rem;
+    }
+
+    .article-img-wrap {
+      width: 100%;
+      margin-bottom: 1.5rem;
+      border: 4px solid var(--green);
+    }
+
+    .article-img {
+      width: 100%;
+      display: block;
+      image-rendering: auto;
+      transition: transform 0.5s ease;
+    }
+
+    .article-img-wrap:hover .article-img {
+      transform: scale(1.04);
+    }
+
+    .article-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #333;
+      font-family: "VT323", monospace;
+      font-size: 1.2rem;
+      color: #888;
+    }
+
+    .article-source-link {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .article-source-link:hover {
+      color: var(--green);
+    }
+
+    .article-body {
+      font-family: "VT323", monospace;
+      font-size: 1.5rem;
+      line-height: 1.7;
+      color: #ccc;
+    }
+
+    .article-body p {
+      margin-bottom: 1.5rem;
+    }
+
+    .article-source-footer {
+      margin-top: 3rem;
+      padding: 1rem;
+      border: 2px solid #333;
+      font-family: "VT323", monospace;
+      font-size: 1.2rem;
+      color: #666;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .article-source-footer a {
+      color: var(--blue);
+      word-break: break-all;
+    }
+
+    .article-source-footer a:hover {
+      color: var(--green);
+    }
+
+    .article-error {
+      text-align: center;
+      padding: 4rem 1rem;
+      font-family: "Press Start 2P", monospace;
+      font-size: 0.8rem;
+      color: var(--magenta);
+    }
+
+    .news-badge {
+      font-family: "Press Start 2P", monospace;
+      font-size: 0.4rem;
+      padding: 0.3rem 0.6rem;
+      display: inline-block;
+    }
+
+    .article-content-box {
+      border: 4px solid #333;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      background: #111;
+      position: relative;
+    }
+    .article-content-box::before {
+      content: "// FREAKONIA NEWS";
+      position: absolute;
+      top: -14px;
+      left: 16px;
+      background: #0a0a0a;
+      padding: 0 8px;
+      font-family: "Press Start 2P", monospace;
+      font-size: 0.45rem;
+      color: #444;
+      letter-spacing: 2px;
+    }
+
+    .article-corners {
+      position: absolute;
+      inset: 8px;
+      pointer-events: none;
+    }
+    .article-corners::before,
+    .article-corners::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-color: #333;
+      border-style: solid;
+    }
+    .article-corners::before {
+      top: 0;
+      left: 0;
+      border-width: 2px 0 0 2px;
+    }
+    .article-corners::after {
+      bottom: 0;
+      right: 0;
+      border-width: 0 2px 2px 0;
+    }
+
+    #patron-rain-canvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .navbar {
+      position: relative;
+      z-index: 100;
+    }
+
+    .article-page {
+      position: relative;
+      z-index: 10;
+    }
+
+    .article-content-box {
+      position: relative;
+      z-index: 10;
+    }
+
+    .site-footer {
+      position: relative;
+      z-index: 10;
+    }
+
+    .article-img-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+    .article-img-wrap::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.08) 2px,
+        rgba(0, 0, 0, 0.08) 4px
+      );
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- CRT overlay -->
+<div class="crt-overlay" aria-hidden="true"></div>
+<canvas id="patron-rain-canvas" aria-hidden="true"></canvas>
+
+<!-- ─── Navigation ─────────────────────────────────────────────────────── -->
+<nav class="navbar" role="navigation" aria-label="Navegación principal">
+  <div class="container">
+    <a href="index.html" class="nav-brand">⚔ FREAKONIA</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" data-i18n-aria="nav.toggleAria">▼ MENU</button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html" class="nav-link" data-i18n="nav.home">🏠 Inicio</a></li>
+      <li class="nav-dropdown">
+        <span class="nav-link nav-dropdown-toggle">🎮 GameDev ▾</span>
+        <ul class="nav-submenu">
+          <li><a href="gamedev.html">🎮 GameDev</a></li>
+          <li><a href="fallen-valkyrie.html">📓 FV Devlog</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <span class="nav-link nav-dropdown-toggle">🕹 Gaming ▾</span>
+        <ul class="nav-submenu">
+          <li><a href="gaming.html">🕹 Gaming</a></li>
+          <li><a href="esports.html">🏆 Esports</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <span class="nav-link nav-dropdown-toggle">🐉 Fantasía ▾</span>
+        <ul class="nav-submenu">
+          <li><a href="got.html">🐉 GoT</a></li>
+          <li><a href="warhammer.html">⚙ Warhammer</a></li>
+          <li><a href="magic.html">✨ MtG</a></li>
+          <li><a href="rol.html">🎲 Rol</a></li>
+        </ul>
+      </li>
+      <li><a href="nba.html" class="nav-link">🏀 NBA</a></li>
+      <li class="nav-dropdown">
+        <span class="nav-link nav-dropdown-toggle">📡 Comunidad ▾</span>
+        <ul class="nav-submenu">
+          <li><a href="java.html">☕ Java</a></li>
+          <li><a href="social.html">📡 Social</a></li>
+        </ul>
+      </li>
+      <li><a href="news.html" class="nav-link">📰 News</a></li>
+      <li>
+        <button class="lang-toggle" id="lang-toggle" aria-label="Cambiar idioma" title="Switch language / Cambiar idioma">
+          🌐 EN
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ─── Article ─────────────────────────────────────────────────────────── -->
+<main class="article-page container">
+  <button onclick="history.back()" class="btn btn-back-article">
+    ◄ VOLVER
+  </button>
+
+  <div class="article-header">
+    <span id="article-badge" class="news-badge"></span>
+    <h1 id="article-title" class="article-title"></h1>
+  </div>
+
+  <div class="article-content-box">
+    <div class="article-corners" aria-hidden="true"></div>
+
+    <div id="article-img-wrap" class="article-img-wrap">
+      <img
+        id="article-img"
+        class="article-img"
+        src=""
+        alt=""
+        onerror="this.parentElement.style.display='none'"
+      />
+    </div>
+
+    <div class="article-meta">
+      <span id="article-date" class="article-date"></span>
+      <a
+        id="article-source-link"
+        class="article-source-link"
+        href="#"
+        target="_blank"
+        rel="noopener"
+        style="display:none"
+      ></a>
+    </div>
+
+    <div id="article-body" class="article-body"></div>
+
+    <div id="article-source-footer" class="article-source-footer">
+      <span id="article-footer-source">
+        <span>FUENTE ORIGINAL:</span>
+        <a id="article-footer-link" href="#" target="_blank" rel="noopener"></a>
+      </span>
+      <a
+        id="article-share-twitter"
+        href="#"
+        target="_blank"
+        rel="noopener"
+        class="btn btn-small btn-pink"
+        style="margin-left:auto;"
+      >
+        𝕏 COMPARTIR
+      </a>
+    </div>
+  </div>
+
+  <button
+    onclick="history.back()"
+    class="btn btn-back-article"
+    style="margin-top:2rem;"
+  >
+    ◄ VOLVER
+  </button>
+</main>
+
+<!-- ─── Footer ──────────────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="index.html"    data-i18n="nav.home2">Inicio</a></li>
+      <li><a href="gamedev.html">GameDev</a></li>
+      <li><a href="gaming.html">Gaming</a></li>
+      <li><a href="got.html">GoT</a></li>
+      <li><a href="social.html">Social</a></li>
+      <li><a href="java.html">Java</a></li>
+    </ul>
+    <p>⚔ FREAKONIA — KARLETE</p>
+    <p style="color:#444;" data-i18n="footer.made">HECHO CON AMOR PIXELADO Y DEMASIADAS BEBIDAS ENERGÉTICAS</p>
+    <p style="color:#333;">◄ INSERT COIN ►</p>
+
+    <div class="footer-legal">
+      <div class="pixel-divider"></div>
+      <p class="footer-copyright">
+        © 2025 FREAKONIA — KARLETE. ALL RIGHTS RESERVED.
+      </p>
+      <p class="footer-trademark">
+        FREAKONIA™ IS A REGISTERED PERSONAL BRAND.
+        ALL CONTENT, DESIGNS, GAME CONCEPTS AND ORIGINAL TEXTS
+        ON THIS SITE ARE THE EXCLUSIVE PROPERTY OF THEIR AUTHOR.
+        UNAUTHORIZED REPRODUCTION, DISTRIBUTION OR USE OF ANY
+        CONTENT IS STRICTLY PROHIBITED WITHOUT PRIOR WRITTEN PERMISSION.
+      </p>
+      <p class="footer-notice">
+        ⚠ THIS SITE CONTAINS STRONG OPINIONS ABOUT VIDEO GAMES,
+        FANTASY LORE AND BASKETBALL. READER DISCRETION IS ADVISED.
+        NO GOBLINS WERE HARMED IN THE MAKING OF THIS WEBSITE.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="js/main.js"></script>
+<script>
+  // ─── i18n translations ────────────────────────────────────────────────
+  const translations = {
+    es: {
+      'nav.home':         '🏠 Inicio',
+      'nav.home2':        'Inicio',
+      'nav.gamedev':      '🎮 GameDev',
+      'nav.gaming':       '🕹 Gaming',
+      'nav.esports':      '🏆 Esports',
+      'nav.got':          '🐉 GoT',
+      'nav.warhammer':    '⚙ Warhammer',
+      'nav.magic':        '✨ MtG',
+      'nav.rol':          '🎲 Rol',
+      'nav.social':       '📡 Social',
+      'nav.toggleAria':   'Abrir menú',
+      'footer.made':      'HECHO CON AMOR PIXELADO Y DEMASIADAS BEBIDAS ENERGÉTICAS',
+    },
+    en: {
+      'nav.home':         '🏠 Home',
+      'nav.home2':        'Home',
+      'nav.gamedev':      '🎮 GameDev',
+      'nav.gaming':       '🕹 Gaming',
+      'nav.esports':      '🏆 Esports',
+      'nav.got':          '🐉 GoT',
+      'nav.warhammer':    '⚙ Warhammer',
+      'nav.magic':        '✨ MtG',
+      'nav.rol':          '🎲 RPG',
+      'nav.social':       '📡 Social',
+      'nav.toggleAria':   'Toggle menu',
+      'footer.made':      'MADE WITH PIXEL LOVE & TOO MANY ENERGY DRINKS',
+    },
+  };
+
+  // ─── Language engine ──────────────────────────────────────────────────
+  let currentLang = localStorage.getItem('sp-lang') || 'es';
+  const langToggleBtn = document.getElementById('lang-toggle');
+
+  function applyLang(lang) {
+    const t = translations[lang];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (t[key] !== undefined) el.innerHTML = t[key];
+    });
+    document.documentElement.lang = lang;
+    langToggleBtn.textContent = lang === 'es' ? '🌐 EN' : '🌐 ES';
+    langToggleBtn.title = lang === 'es' ? 'Switch to English' : 'Cambiar a Español';
+  }
+
+  langToggleBtn.addEventListener('click', () => {
+    currentLang = currentLang === 'es' ? 'en' : 'es';
+    localStorage.setItem('sp-lang', currentLang);
+    applyLang(currentLang);
+  });
+
+  applyLang(currentLang);
+</script>
+
+<script>
+(function () {
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+
+  // Try to match numeric id too
+  const article = NEWS_DATA.find((a) => String(a.id) === String(id));
+
+  if (!article) {
+    document.querySelector(".article-page").innerHTML = `
+      <div class="article-error">
+        <p>⚠ ARTÍCULO NO ENCONTRADO</p>
+        <button onclick="history.back()" class="btn">◄ VOLVER</button>
+      </div>`;
+    return;
+  }
+
+  // Dynamic <title>
+  document.title = article.title + " — Freakonia";
+
+  // Dynamic OG tags
+  document.querySelector('meta[property="og:title"]').content = article.title;
+  document.querySelector('meta[property="og:description"]').content =
+    article.summary;
+  if (article.img)
+    document.querySelector('meta[property="og:image"]').content =
+      "https://freakonia.com/" + article.img;
+  document.querySelector('meta[property="og:url"]').content =
+    window.location.href;
+  document.querySelector('link[rel="canonical"]').href = window.location.href;
+
+  // Render
+  const badge = document.getElementById("article-badge");
+  badge.textContent = article.badgeLabel;
+  badge.style.background = article.accent || "#00ff41";
+  badge.style.color = "#000";
+
+  const ACCENT_COLORS = ["#00ff41", "#ff00ff", "#00bfff", "#ffcc00", "#ff3131"];
+  const randomAccent =
+    ACCENT_COLORS[Math.floor(Math.random() * ACCENT_COLORS.length)];
+  const titleEl = document.getElementById("article-title");
+  titleEl.textContent = article.title;
+  titleEl.style.color = randomAccent;
+  titleEl.style.textShadow =
+    "0 0 10px " + randomAccent + ", 0 0 20px " + randomAccent;
+
+  document.getElementById("article-date").textContent = "📅 " + article.date;
+
+  const imgWrap = document.getElementById("article-img-wrap");
+  if (article.img) {
+    document.getElementById("article-img").src = article.img;
+    document.getElementById("article-img").alt = article.title;
+  } else {
+    imgWrap.style.display = "none";
+  }
+
+  const srcLink = document.getElementById("article-source-link");
+  if (article.url && article.source) {
+    srcLink.href = article.url;
+    srcLink.textContent = "🔗 " + article.source;
+    srcLink.style.display = "inline";
+  } else {
+    srcLink.style.display = "none";
+  }
+
+  const body = document.getElementById("article-body");
+  const paragraphs =
+    article.full && article.full.length > 0 ? article.full : [article.summary];
+  body.innerHTML = paragraphs.map((p) => `<p>${p}</p>`).join("");
+
+  const footer = document.getElementById("article-source-footer");
+  const footerLink = document.getElementById("article-footer-link");
+  const footerSource = document.getElementById("article-footer-source");
+  footer.style.display = "flex";
+
+  if (article.url) {
+    footerLink.href = article.url;
+    footerLink.textContent = article.source || article.url;
+    footerSource.style.display = "inline";
+  } else {
+    footerSource.style.display = "none";
+  }
+
+  // Twitter/X share button
+  const shareBtn = document.getElementById("article-share-twitter");
+  const shareText = encodeURIComponent(article.title + " — Freakonia");
+  const shareUrl = encodeURIComponent(window.location.href);
+  const shareVia = "SanprietoG";
+  shareBtn.href =
+    "https://twitter.com/intent/tweet?text=" +
+    shareText +
+    "&url=" +
+    shareUrl +
+    "&via=" +
+    shareVia;
+})();
+</script>
+
+<script src="js/pixels-rain.js"></script>
+</body>
+</html>

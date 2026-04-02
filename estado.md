@@ -1,6 +1,6 @@
 # estado.md — Project State Tracker
 
-Last updated: 2026-04-01 (sesión 47)
+Last updated: 2026-04-02 (sesión 46)
 
 ---
 
@@ -103,61 +103,91 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 ## ▶ PRÓXIMA SESIÓN — Leer esto primero
 
 ### Estado actual del sistema de noticias (news)
-- `js/news-data.js` — array `NEWS_DATA` con **32 artículos**. **Añadir nuevos artículos AQUÍ, al principio del array (más reciente primero).**
-- `news.html` — renderizado dinámico vía `renderNews()`. No tocar el grid HTML.
+- `js/news-data.js` — array `NEWS_DATA` con **49 artículos**. **Añadir nuevos artículos AQUÍ, al principio del array (más reciente primero).**
+- `news.html` — renderizado dinámico vía `renderNews()`. El botón "LEER MÁS" ha sido reemplazado por enlace a `article.html?id=`. No tocar el grid HTML.
+- `article.html` — **NUEVA PÁGINA**. Renderiza artículos individuales vía query param `?id=`. Incluye navbar + footer + Pixel Patron Rain de fondo + botón compartir en Twitter/X. CSS inline en la propia página.
 - `index.html` — slider "¿Qué se cuece?" lee automáticamente `NEWS_DATA`. No requiere cambios al añadir noticias.
-- `css/news.css` — `.news-grid` tiene `align-items: start` (fix bug Leer más).
+- `css/news.css` — `.news-grid` tiene `align-items: start`.
 
 ### NEWS_TRACKER — temas usados
 ```json
-{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba"],"last_update":"2026-03-25"}
+{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba"],"last_update":"2026-04-02"}
 ```
-**Próximos temas disponibles:** `got` · `esports` · `nba`
+**Próximos temas disponibles:** `got` · `esports` · `nba` · `rol` · `gaming`
 
 ### IDs de artículos actuales en NEWS_DATA (para evitar duplicados)
 | # | id | topic | fecha |
 |---|---|---|---|
+| 49 | `noticia-adepticon-tow-gran-cathay-2026` | warhammer | 02/04/2026 |
+| 48 | `noticia-secrets-strixhaven-spoilers-2026` | magic | 02/04/2026 |
+| 47 | `noticia-unity-informe-gamedev-2026` | gamedev | 02/04/2026 |
+| 46 | `noticia-marathon-bungie-2026` | gaming | 30/03/2026 |
+| 45 | `noticia-dnd-2026-roadmap-ravenloft` | rol | 30/03/2026 |
+| 44 | `noticia-nba-finde-march-28-29-2026` | nba | 30/03/2026 |
+| 43 | `noticia-akotsk-temporada-2-produccion-2026` | got | 30/03/2026 |
+| 42 | `noticia-lec-spring-2026-semana1` | esports | 30/03/2026 |
+| 41 | `noticia-mhs3-reviews-metacritic-2026` | gaming | 25/03/2026 |
+| 40 | `noticia-subnautica2-krafton-demanda-2026` | gamedev | 25/03/2026 |
+| 39 | `noticia-secrets-strixhaven-preview-2026` | magic | 25/03/2026 |
 | 38 | `noticia-first-stand-2026-semifinales` | esports | 20/03/2026 |
 | 37 | `noticia-nintendo-demanda-aranceles-2026` | gamedev | 20/03/2026 |
 | 36 | `noticia-hotd-t3-reshoots-condal-2026` | got | 20/03/2026 |
 | 35 | `noticia-crimson-desert-reviews-bolsa-2026` | gaming | 20/03/2026 |
 | 34 | `noticia-first-stand-2026-grupos` | esports | 20/03/2026 |
-| 33 | `noticia-first-stand-2026-dia1` | esports | 17/03/2026 |
-| 30 | `noticia-lpl-tes-naiyou-amano-2026` | esports | 07/03/2026 |
-| 29 | `noticia-crimson-desert-lanzamiento-2026` | gaming | 07/03/2026 |
-| 28 | `noticia-akotsk-temporada-2-confirmada-2026` | got | 06/03/2026 |
-| 27 | `noticia-mtg-tortugas-ninja-2026` | magic | 05/03/2026 |
-| 26 | `noticia-old-world-grand-cathay-defenders-2026` | warhammer | 07/03/2026 |
-| 25 | `noticia-nba-playoffs-race-shai-record-2026` | nba | 08/03/2026 |
-| 24 | `noticia-mtg-tmnt-2026` | magic | 06/03/2026 |
-| 23 | `noticia-tow-gran-cathay-defenders-2026` | warhammer | 14/03/2026 |
-| 22 | `noticia-lec-spring-2026-formato` | esports | 06/03/2026 |
-| 21 | `noticia-fatal-frame-2-remake-2026` | gaming | 02/03/2026 |
-| 18 | `noticia-g2-lec-versus-2026` | esports | 01/03/2026 |
-| 17 | `noticia-hotd-t3-trailer-2026` | got | 19/02/2026 |
-| 16 | `noticia-spurs-racha-2026` | nba | 01/03/2026 |
-| 15 | `noticia-lec-versus-final-badalona-2026` | esports | 28/02/2026 |
-| 14 | `noticia-nba-allstar-2026` | nba | 28/02/2026 |
-| 12 | `noticia-god-of-war-trilogy-remake-2026` | gaming | 28/02/2026 |
-| 10 | `noticia-re9-requiem-2026` | gaming | 28/02/2026 |
-| 9  | `noticia-hotd-s3-trailer-2026` | got | 28/02/2026 |
-| 8  | `noticia-coc-arkham-2026` | misc/rol | 26/02/2026 |
-| 7  | `noticia-warhammer-gran-cathay-2026` | misc/warhammer | 26/02/2026 |
-| 6  | `noticia-unity-ia-gdc-2026` | gamedev | 26/02/2026 |
-| 5  | `noticia-ffvii-remaster-2026` | gaming | 25/02/2026 |
-| 4  | `id:4` | got | 22/02/2026 |
-| 3  | `id:3` | magic | 23/02/2026 |
-| 2  | `id:2` | gaming | 24/02/2026 |
+| 33 | `noticia-slay-spire-2-exito-indie-2026` | gamedev | 17/03/2026 |
+| 32 | `noticia-crimson-desert-embargo-2026` | gaming | 17/03/2026 |
+| 31 | `noticia-first-stand-2026-dia1` | esports | 17/03/2026 |
+| 30 | `noticia-crimson-desert-launch-2026` | gaming | 15/03/2026 |
+| 29 | `noticia-martin-condal-abysmal-2026` | got | 15/03/2026 |
+| 28 | `noticia-ea-despidos-battlefield-2026` | gamedev | 15/03/2026 |
+| 27 | `noticia-gta6-fecha-definitiva-2026` | gaming | 11/03/2026 |
+| 26 | `noticia-hotd-t3-casting-2026` | got | 10/03/2026 |
+| 25 | `noticia-gdc-festival-2026` | gamedev | 09/03/2026 |
+| 24 | `noticia-lpl-tes-naiyou-amano-2026` | esports | 07/03/2026 |
+| 23 | `noticia-crimson-desert-lanzamiento-2026` | gaming | 07/03/2026 |
+| 22 | `noticia-akotsk-temporada-2-confirmada-2026` | got | 06/03/2026 |
+| 21 | `noticia-mtg-tortugas-ninja-2026` | magic | 05/03/2026 |
+| 20 | `noticia-old-world-grand-cathay-defenders-2026` | warhammer | 07/03/2026 |
+| 19 | `noticia-nba-playoffs-race-shai-record-2026` | nba | 05/03/2026 |
+| 18 | `noticia-mtg-tmnt-2026` | magic | 05/03/2026 |
+| 17 | `noticia-tow-gran-cathay-defenders-2026` | warhammer | 05/03/2026 |
+| 16 | `noticia-lec-spring-2026-formato` | esports | 04/03/2026 |
+| 15 | `noticia-fatal-frame-2-remake-2026` | gaming | 03/03/2026 |
+| 14 | `noticia-tow-comp-war-comunidad-2026` | warhammer | 03/03/2026 |
+| 13 | `noticia-lyon-lcs-lockin-2026` | esports | 02/03/2026 |
+| 12 | `noticia-g2-lec-versus-2026` | esports | 28/02/2026 |
+| 11 | `noticia-hotd-t3-trailer-2026` | got | 28/02/2026 |
+| 10 | `noticia-spurs-racha-2026` | nba | 28/02/2026 |
+| 9 | `noticia-lec-versus-final-badalona-2026` | esports | 28/02/2026 |
+| 8 | `noticia-nba-allstar-2026` | nba | 12/02/2026 |
+| 7 | `noticia-god-of-war-trilogy-remake-2026` | gaming | 12/02/2026 |
+| 6 | `noticia-re9-requiem-2026` | gaming | 27/02/2026 |
+| 5 | `noticia-hotd-s3-trailer-2026` | got | 28/02/2026 |
+| 4 | `noticia-coc-arkham-2026` | rol | 26/02/2026 |
+| 3 | `noticia-warhammer-gran-cathay-2026` | warhammer | 26/02/2026 |
+| 2 | `noticia-unity-ia-gdc-2026` | gamedev | 26/02/2026 |
+| 1 | `noticia-ffvii-remaster-2026` | gaming | 25/02/2026 |
 
-### Cómo añadir una noticia nueva
-1. Abrir `js/news-data.js`
-2. Insertar nuevo objeto al principio del array (antes del `// ── ARTICLE 1`)
-3. Seguir la estructura obligatoria: `id, topic, category, emoji, badgeLabel, title, summary, full[], date (DD/MM/YYYY), url, page, pageLabel, accent, source, img, tags[]`
-4. Actualizar el comentario `NEWS_TRACKER` al final del archivo
-5. Añadir imagen en `assets/img/` si la hay
+### Páginas HTML — estado actual
+| Página | Estado | Notas |
+|---|---|---|
+| index.html | ✅ Completa | Pixel Patron Rain, slider noticias, embeds juegos |
+| gamedev.html | ✅ Completa | Embeds itch.io Samurai Kitchen + Stars Lander |
+| fallen-valkyrie.html | ✅ Completa | Devlog FV ~15% progreso |
+| gaming.html | ✅ Completa | |
+| esports.html | ✅ Completa | |
+| got.html | ✅ Completa | |
+| warhammer.html | ✅ Completa | |
+| magic.html | ✅ Completa | |
+| rol.html | ✅ Completa | |
+| nba.html | ✅ Completa | |
+| java.html | ✅ Completa | JavaDevBible spotlight |
+| social.html | ✅ Completa | |
+| news.html | ✅ Completa | Cards enlazan a article.html?id= |
+| article.html | ✅ NUEVA | Páginas individuales por artículo, URL compartible |
 
 ### Bugs conocidos / pendientes
-- Ninguno activo. Todo funcionando en producción a fecha 2026-02-28.
+- Ninguno activo.
 
 ### Bugs resueltos (histórico)
 - **2026-02-28 sesión 23:** `.news-grid` expandía todas las cards de una fila al hacer "Leer más" en una. Fix: `align-items: start` en `.news-grid` en `css/news.css`.

@@ -261,11 +261,8 @@ function renderNews() {
       ? '<div class="news-card-img-wrap"><img src="' + n.img + '" alt="' + n.title + '" class="news-card-img" onerror="this.parentElement.style.display=\'none\'"></div>'
       : '';
 
-    var fullHtml = (n.full && n.full.length)
-      ? '<div class="news-card-full" style="display:none">' +
-          n.full.map(function (p) { return '<p>' + p + '</p>'; }).join('') +
-        '</div><button class="news-read-more" data-expanded="false">\u25b6 LEER M\u00c1S</button>'
-      : '';
+    var fullHtml =
+      '<a href="article.html?id=' + n.id + '" class="btn btn-small news-read-more-link">\u25b6 LEER ART\u00cdCULO</a>';
 
     var tagsHtml = (n.tags || []).map(function (t) {
       return '<span class="tag">' + t + '</span>';
@@ -274,14 +271,9 @@ function renderNews() {
     var linksHtml = '';
     if (n.url || n.page) {
       linksHtml = '<div style="display:flex;gap:0.5rem;margin-top:0.75rem;flex-wrap:wrap;">';
-      if (n.url)  linksHtml += '<a href="' + n.url + '" target="_blank" rel="noopener" class="btn btn-small">&gt;&gt; FUENTE</a>';
       if (n.page) linksHtml += '<a href="' + n.page + '" class="btn btn-small btn-pink">&gt;&gt; IR A ' + (n.pageLabel || badge) + '</a>';
       linksHtml += '</div>';
     }
-
-    var sourceHtml = n.source
-      ? '<p class="news-source">fuente: <a href="' + n.url + '" target="_blank" rel="noopener">' + n.source + '</a></p>'
-      : '';
 
     return '<article class="news-card" data-category="' + cat + '" data-title="' + searchText + '">'
       + '<div class="news-card-header">'
@@ -298,7 +290,6 @@ function renderNews() {
       +   '<div class="news-card-tags">' + tagsHtml + '</div>'
       +   linksHtml
       + '</div>'
-      + sourceHtml
       + '</article>';
   }
 

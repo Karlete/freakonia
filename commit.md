@@ -2,6 +2,27 @@
 
 ---
 
+## Sesión 46 — 2026-04-02
+
+### feat(news): article pages + UI improvements + 3 new articles
+
+**New file:**
+- `article.html` — individual article page, renders any NEWS_DATA entry via `?id=` query param. Navbar + footer + inline CSS + Pixel Patron Rain full-page background + Twitter/X share button. Title color randomised from site palette on each load. Pixel-art corner brackets + scanline overlay on image. `// FREAKONIA NEWS` label on content box border.
+
+**Modified files:**
+- `news.html` — `renderNews()`: "LEER MÁS" expand/collapse replaced by `<a>` link to `article.html?id=<n.id>`. FUENTE button and sourceHtml removed from cards (both now live in article.html).
+- `js/news.js` — removed `.news-read-more` click toggle listener (no longer needed).
+- `js/news-data.js`:
+  - Fixed `url` for `noticia-marathon-bungie-2026` → correct GameSpot URL.
+  - All images in `assets/img/news/` renamed: hyphens removed from filenames (e.g. `el-caballero-siete-reinos.webp` → `elcaballerosietereinos.webp`). All `img:` references in NEWS_DATA updated accordingly.
+  - 3 new articles inserted at TOP (noticias 47–49):
+    - `noticia-adepticon-tow-gran-cathay-2026` (warhammer, 02/04/2026) — Gran Cathay gana Adepticon 2026 con Jade Fleet, 78 jugadores, 5-0 Andrea Ninni
+    - `noticia-secrets-strixhaven-spoilers-2026` (magic, 02/04/2026) — Secrets of Strixhaven spoiler season oficial, Archivo Místico en cada sobre, 5 precons Commander, sale 24/04
+    - `noticia-unity-informe-gamedev-2026` (gamedev, 02/04/2026) — Unity Game Dev Report 2026: juegos pequeños, India como mercado objetivo, 82% usa colaboraciones externas
+  - NEWS_TRACKER `last_update` → `2026-04-02`
+
+---
+
 ## Sesión 47 — 2026-04-01
 
 ### refactor(news): fill all img fields and normalize filenames to underscore convention

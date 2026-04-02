@@ -67,25 +67,6 @@
     });
   });
 
-  // Read more toggle
-  document.querySelectorAll('.news-read-more').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const card        = btn.closest('.news-card');
-      const fullContent = card.querySelector('.news-card-full');
-      const expanded    = btn.dataset.expanded === 'true';
-
-      if (expanded) {
-        fullContent.style.display = 'none';
-        btn.textContent        = '▶ LEER MÁS';
-        btn.dataset.expanded   = 'false';
-      } else {
-        fullContent.style.display = 'block';
-        btn.textContent        = '▼ LEER MENOS';
-        btn.dataset.expanded   = 'true';
-      }
-    });
-  });
-
   updateCount();
 
 })();
