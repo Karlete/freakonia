@@ -10,6 +10,131 @@
 
 var NEWS_DATA = [
 
+  // ── NOTICIA 51 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-unity-hdrp-mantenimiento-2026',
+    topic: 'gamedev',
+    category: 'gamedev',
+    emoji: '🎮',
+    badgeLabel: 'GAMEDEV',
+    title: 'Unity pone HDRP en modo mantenimiento: el debate sobre el futuro del motor indie más popular del mundo',
+    summary: 'En febrero de 2026, Unity anunció que su pipeline de renderizado de alta definición (HDRP) pasa a modo mantenimiento: sin nuevas funciones, solo corrección de bugs críticos. La comunidad indie se divide: ¿es el fin del Unity 3D de alta calidad o simplemente una apuesta inteligente por centrarse en URP y mobile?',
+    full: [
+      'El 25 de febrero de 2026, Unity tomó una decisión que ha encendido el debate en la comunidad de desarrolladores: colocar HDRP —su pipeline de renderizado de alta definición, pensado para competir con Unreal Engine en el espacio AAA y mid-core— en modo mantenimiento. En la práctica, esto significa que HDRP no recibirá nuevas funciones ni mejoras visuales. Solo se aplicarán correcciones de bugs críticos. Todo el esfuerzo del equipo de gráficos de Unity se concentra ahora en URP (Universal Render Pipeline).',
+      'La justificación interna de Unity es clara: HDRP nunca consiguió masa crítica entre los desarrolladores. Quien quería gráficos de altísima fidelidad optaba por Unreal Engine 5, con Nanite y Lumen como argumentos aplastantes. Unity nunca pudo competir en ese espacio, y mantener dos pipelines activos consumía recursos sin retorno suficiente. La apuesta ahora es llevar URP al siguiente nivel, con Iluminación Global en tiempo real en el horizonte. La pregunta es si URP puede realmente satisfacer a los estudios que usaban HDRP para proyectos de calidad media-alta.',
+      'El contexto importa: esta decisión llega tres años después del escándalo de las Runtime Fees de 2023, que dañó profundamente la confianza de la comunidad en Unity como empresa. Muchos desarrolladores llevan tiempo evaluando alternativas —Godot para 2D y proyectos ligeros, Unreal para 3D de alta calidad— y la noticia del HDRP ha acelerado esas conversaciones. No obstante, el informe de desarrollo de Unity 2026 muestra que el motor sigue siendo dominante en móvil y en equipos pequeños, con el 64% de los estudios de menos de 50 personas apostando por proyectos más pequeños y manejables donde URP es perfectamente suficiente.',
+      'Para los desarrolladores indie de 2D —como la mayoría de los que hacen juegos de rol, plataformas o RPGs clásicos— el movimiento de Unity no cambia prácticamente nada: URP siempre fue la opción recomendada en esos géneros. La conversación que importa es para los estudios que querían hacer algo visualmente ambicioso sin saltar a Unreal. Y ahí Unity tendrá que demostrar que URP puede cubrir ese espacio vacío que deja HDRP.'
+    ],
+    date: '06/04/2026',
+    url: 'https://www.gamedeveloper.com/programming/unity-says-its-ai-tech-will-soon-be-able-to-prompt-full-casual-games-into-existence-',
+    page: 'gamedev.html',
+    pageLabel: 'Gamedev',
+    accent: '#00ff41',
+    source: 'gamedeveloper.com',
+    img: 'assets/img/news/gamedev_generic.webp',
+    tags: ['Unity', 'HDRP', 'URP', 'game development', 'indie dev', 'Godot', 'Unreal Engine', '2026']
+  },
+
+  // ── NOTICIA 50 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-nba-playoffs-picture-april-2026',
+    topic: 'nba',
+    category: 'nba',
+    emoji: '🏀',
+    badgeLabel: 'NBA',
+    title: 'NBA: Detroit lidera el Este, OKC el Oeste — última semana de temporada regular antes del Play-In',
+    summary: 'La temporada regular acaba el 12 de abril y el cuadro de playoffs se está dibujando. Los Pistons son el primer cabeza de serie del Este en veinte años. Oklahoma City manda en el Oeste. Luka Dončić pierde la recta final con los Lakers. El Play-In arranca el 14 de abril, los playoffs el 18.',
+    full: [
+      'Queda una semana de temporada regular en la NBA y el panorama de playoffs está tomando forma definitiva. En el Este, los Detroit Pistons han sellado el primer cabeza de serie con un balance de 57-21 —su primera posición número uno en el Este desde la temporada 2006-07. Un hito que nadie esperaba hace tres temporadas, cuando Detroit era uno de los peores equipos de la liga. En el Oeste, Oklahoma City Thunder lidera con autoridad, con los San Antonio Spurs de Wembanyama pisándole los talones en el segundo puesto. Los Spurs vuelven a playoffs tras seis años de ausencia, otra de las grandes historias de la temporada.',
+      'La mala noticia de la recta final llega desde Los Ángeles: los Lakers han perdido a Luka Dončić (lesión en el isquiotibial) y a Austin Reaves (oblicuo) para los partidos que quedan. Los Lakers se aferran al tercer puesto del Oeste pero llegan tocados a la postemporada, lo que cambia por completo las perspectivas del cuadro occidental. Denver, Houston y los Clippers pelean por acomodarse lo mejor posible antes del 12 de abril.',
+      'En el Este, la zona del quinto al décimo puesto es un hervidero: Atlanta Hawks, Philadelphia 76ers, Toronto Raptors, Charlotte Hornets, Orlando Magic y Miami Heat se juegan dos plazas directas a playoffs y dos al Play-In en los últimos partidos. Los Bucks y los Bulls ya están eliminados, dejando un bloque compacto de seis equipos con opciones reales. Los Raptors llevan una racha excepcional de final de temporada que los tiene en posición privilegiada.',
+      'El calendario del final de la temporada: última jornada el 12 de abril, Play-In Tournament del 14 al 17 de abril, inicio de los playoffs el 18 de abril y Finales de la NBA programadas para comenzar el 3 de junio. Hay hambre de playoffs y el cuadro promete emociones desde la primera ronda.'
+    ],
+    date: '06/04/2026',
+    url: 'https://www.nba.com/news/2026-nba-playoffs-standings-and-bracket-updates',
+    page: 'nba.html',
+    pageLabel: 'NBA',
+    accent: '#FF8C00',
+    source: 'nba.com',
+    img: 'assets/img/news/nba_generic.png',
+    tags: ['NBA', 'playoffs 2026', 'Detroit Pistons', 'OKC Thunder', 'Wembanyama', 'Luka Doncic', 'Play-In', 'temporada regular']
+  },
+
+  // ── NOTICIA 49 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-lec-spring-semana2-2026',
+    topic: 'esports',
+    category: 'esports',
+    emoji: '🏆',
+    badgeLabel: 'ESPORTS',
+    title: 'LEC Spring Semana 2: Fnatic se redime aplastando a G2 — el reencuentro más esperado de la liga',
+    summary: 'Fnatic había caído dos veces en la primera semana ante GIANTX y MKOI. Esta semana el equipo naranja se ha sacudido la presión de encima de la mejor manera posible: un 2-1 ante G2 Esports que vale mucho más que tres puntos. La semana también dejó a SK cayendo ante GIANTX y a VIT derrotando a NaVi.',
+    full: [
+      'Si la primera semana del LEC Spring 2026 había dejado a Fnatic con el cuerpo lleno de dudas — dos derrotas consecutivas ante GIANTX primero y el doloroso 0-2 ante Movistar KOI después — la segunda semana ha llegado para recordar por qué el equipo naranja siempre acaba apareciendo cuando menos te lo esperas. El viernes 4 de abril empezó bien para los favoritos: G2 Esports barrió a Team Heretics 2-0 sin dificultades, y SK Gaming hizo lo propio ante Shifters. Vitality, por su parte, se llevó la partida en BO1 ante Natus Vincere. Todo apuntaba a que G2 iba a confirmar ese buen tono el sábado... pero Fnatic tenía otros planes.',
+      'El sábado 5 de abril, en lo que era el partido más atractivo de la segunda semana, Fnatic derrotó a G2 Esports 2-1 en un BO3 disputado. Vladi en mid y Upset en bot-lane lideraron el juego naranja en un partido donde G2, pese a llevarse el segundo mapa, no encontró respuesta en el tercero frente a un Fnatic que jugó con convicción y claridad táctica. Era la primera derrota de G2 en el split y mandaba un mensaje claro: la liga está completamente abierta. En ese mismo día, GIANTX se encargó de confirmar su buen momento al superar a SK Gaming 2-0, sumando tres victorias en su arranque de temporada.',
+      'El domingo 6 de abril completa la segunda semana con los enfrentamientos GIANTX vs Team Heretics y Vitality vs Movistar KOI, duelos que terminarán de definir el cuadro de clasificación al término de la segunda jornada. Con tres semanas disputadas del todos contra todos, el panorama está lejos de aclararse: G2 sigue siendo uno de los favoritos pero ya ha mostrado que no es invulnerable, Fnatic ha respondido cuando más lo necesitaba, y GIANTX emerge como uno de los equipos revelación del split.',
+      'El LEC Spring 2026 tiene paradas internacionales que elevan aún más el interés: el Roadtrip de París se celebra del 24 al 26 de abril en Les Arènes, y el Madrid Arena acoge el segundo Roadtrip del 8 al 10 de mayo. Los dos finalistas del split se clasifican para el MSI 2026 y la Esports World Cup. Quedan semanas de liga por delante y la narrativa ya está calentando motores.'
+    ],
+    date: '06/04/2026',
+    url: 'https://liquipedia.net/leagueoflegends/LEC/2026/Spring',
+    page: 'esports.html',
+    pageLabel: 'Esports',
+    accent: '#C89B3C',
+    source: 'liquipedia.net',
+    img: 'assets/img/news/esports_generic.webp',
+    tags: ['LEC', 'LEC Spring 2026', 'Fnatic', 'G2 Esports', 'GIANTX', 'semana 2', 'League of Legends', 'esports']
+  },
+
+  // ── NOTICIA 48 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-secrets-of-strixhaven-spoilers-2026',
+    topic: 'magic',
+    category: 'magic',
+    emoji: '✨',
+    badgeLabel: 'MTG',
+    title: 'Secrets of Strixhaven llega el 24 de abril: la temporada de spoilers ya está en marcha',
+    summary: 'Magic: The Gathering regresa a la universidad de magia más famosa del Multiverso. Secrets of Strixhaven sale el 24 de abril y la temporada de spoilers ya está mostrando cartas. Nuevos personajes, vida off-campus en Arcavios y el regreso del Mystical Archive. Además: la novela Strixhaven: Omens of Chaos ya está disponible.',
+    full: [
+      'Si Strixhaven: School of Mages de 2021 fue el primer curso, Secrets of Strixhaven es la segunda visita al campus más prestigioso del Multiverso de Magic. El set sale el 24 de abril de 2026 y la temporada de spoilers lleva semanas filtrando cartas que ya están generando conversación en la comunidad. La premisa esta vez es diferente: los protagonistas son estudiantes de segundo año explorando la vida fuera del campus de Arcavios, lejos de las paredes de sus Colegios. La dinámica narrativa se aleja del formato de primer curso para explorar qué hay más allá de las clases, los exámenes y las rivalidades entre facultades.',
+      'Entre los spoilers ya revelados destacan Banishing Betrayal, Heated Argument, Together as One y Oracle\'s Restoration —cartas que apuntan a un set con fuerte componente de control y magia de interacción. El Mystical Archive, la bonus sheet de cartas históricas que fue uno de los grandes atractivos del Strixhaven original, regresa en esta edición. Para los jugadores de Commander, el 24 de abril también llegan los decks de Strixhaven al completo.',
+      'Más allá de las cartas, Wizards ha lanzado esta semana la novela juvenil Strixhaven: Omens of Chaos, escrita por Seanan McGuire, que expande el lore del set con una historia paralela de nuevos estudiantes navegando su identidad en el Multiverso. Cada ejemplar incluye una carta promocional Command Tower en marco Retro Frame, algo que los coleccionistas ya están cazando activamente.',
+      'Secrets of Strixhaven llega en el mejor momento posible para Magic: después de las Tortugas Ninja en marzo —un set Universes Beyond que dividió opiniones pero vendió muy bien—, el juego necesitaba volver a territorio propio. Arcavios y sus cinco Colegios representan exactamente eso: Magic puro con identidad propia, sin IP externa. El mes de abril se pinta de universitario y mágico en los locales de juego de todo el mundo.'
+    ],
+    date: '06/04/2026',
+    url: 'https://magic.wizards.com/en/news',
+    page: 'magic.html',
+    pageLabel: 'MTG',
+    accent: '#9933ff',
+    source: 'magic.wizards.com',
+    img: 'assets/img/news/magic_generic.webp',
+    tags: ['Magic: The Gathering', 'Secrets of Strixhaven', 'Strixhaven', 'spoilers', 'MTG 2026', 'Wizards of the Coast']
+  },
+
+  // ── NOTICIA 47 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-adepticon-old-world-2026',
+    topic: 'warhammer',
+    category: 'warhammer',
+    emoji: '⚔️',
+    badgeLabel: 'WARHAMMER',
+    title: 'Adepticon 2026: Grand Cathay arrasa y los rumores de los Dogs of War calientan la comunidad',
+    summary: 'El campeonato de Warhammer: The Old World del Adepticon 2026 ya tiene ganador: Andrea Ninni con su lista de Jade Fleet (Gran Catay) se alzó invicto con cinco victorias. Y mientras la competición competitiva vive su mejor momento, los rumores sobre un posible regreso de los Dogs of War a The Old World están incendiando los foros.',
+    full: [
+      'El Adepticon 2026 celebrado en Milwaukee ha sido el mayor evento de Warhammer: The Old World en Norteamérica hasta la fecha. 78 jugadores se inscribieron en el campeonato individual, superando el récord del LVO y del NOVA en este mismo formato. Tras cinco rondas de juego con composición limitada —solo dos Linternas de Gran Catay permitidas, restricciones en voladoras y monstruos—, una sola lista ganó los cinco enfrentamientos sin ceder una sola derrota. Su piloto: Andrea Ninni, con una lista de Jade Fleet de Gran Catay basada en un doble Lord Shugengan de nivel 3 y 4 con la Lore of Yang, apoyado por infantería de Lanza Larga y artillería.',
+      'La victoria de Ninni confirma lo que muchos llevan meses viendo en la escena competitiva: Gran Catay sigue siendo el ejército a batir a nivel mundial, a pesar de las restricciones de composición introducidas precisamente para limitar su dominio. La combinación de magia de Yang, la regla Strikes First de las Lanzas Largas y la solidez defensiva del ejército resulta extremadamente difícil de contrarrestar si el rival no ha preparado específicamente una respuesta.',
+      'Pero si la escena competitiva está animada, los rumores que circulan en la comunidad no se quedan atrás. Fuentes habituales del circuito de rumores de Games Workshop apuntan a que los Dogs of War —la legendaria facción mercenaria de Warhammer Fantasy que lleva décadas sin una presencia oficial— podrían recibir una revisión dentro del roadmap de 2026 para The Old World. Los Dogs of War, conocidos por sus regimientos de Tercios y sus unidades de élite a sueldo, fueron durante años una de las opciones más creativas del juego original. Su regreso sería una señal clara de que GW no solo está recuperando las grandes facciones, sino también los elementos más únicos del viejo Warhammer Fantasy.',
+      'The Old World cierra su tercer año de existencia en una posición de salud envidiable. El juego ha pasado de ser una apuesta nostálgica a construir una escena competitiva real, con torneos internacionales de envergadura y un crecimiento constante de la base de jugadores. Si los Dogs of War se confirman, 2026 podría ser el año más grande del juego desde su relanzamiento.'
+    ],
+    date: '06/04/2026',
+    url: 'https://www.belloflostsouls.net/2026/04/warhammer-the-old-world-the-unbeatable-list-adepticon-championship-2026.html',
+    page: 'warhammer.html',
+    pageLabel: 'Warhammer',
+    accent: '#8B0000',
+    source: 'belloflostsouls.net',
+    img: 'assets/img/news/warhammer_generic.jpg',
+    tags: ['Warhammer', 'The Old World', 'Adepticon 2026', 'Gran Catay', 'Dogs of War', 'torneos', 'rumores']
+  },
+
   // ── NOTICIA 46 ──────────────────────────────────────────────────────────────
   {
     id: 'noticia-adepticon-tow-gran-cathay-2026',
@@ -1406,5 +1531,5 @@ var NEWS_DATA = [
 
 // NEWS_TRACKER
 // used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba"]
-// last_update: "2026-04-02"
-// next_available: ["got", "esports", "gaming", "nba", "rol"]
+// last_update: "2026-04-06"
+// next_available: ["gaming", "got", "rol"]
