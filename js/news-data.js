@@ -10,6 +10,81 @@
 
 var NEWS_DATA = [
 
+  // ── NOTICIA 54 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-les-split-primavera-2026',
+    topic: 'esports',
+    category: 'esports',
+    emoji: '🏆',
+    badgeLabel: 'ESPORTS',
+    title: 'Arranca el Split de Primavera de la LES: la liga española de LoL ya está en marcha con Movistar KOI como campeón defensor',
+    summary: 'La Liga Española de League of Legends echa a rodar su Split de Primavera 2026 hoy mismo, con la Jornada 1 en directo. Tras un Kickoff Tournament histórico —el primero bajo el nombre LES y la organización de Lastlap— donde Movistar KOI se coronó campeón, llega el split que definirá quién va al EMEA Masters.',
+    full: [
+      'La LES, la Liga Española de League of Legends nacida en 2026 de las cenizas de la Superliga, arranca hoy su Split de Primavera con la primera jornada de la temporada. El cambio fue histórico: después de más de una década bajo el paraguas de la LVP de Mediapro, la competición nacional pasó a manos de Lastlap y CABAL Esports, con el apoyo de Riot Games dentro de la estructura ERL europea. El nuevo nombre, nuevo organizador, nuevo formato y nueva identidad visual han sido recibidos con ilusión por una comunidad que llevaba tiempo pidiendo un producto renovado.',
+      'El Kickoff Tournament de febrero dejó claro que la LES tiene nivel. Celebrado de forma presencial en Madrid con entradas agotadas en la jornada inaugural, los ocho equipos —Movistar KOI Fénix, GIANTX iTero, Los Heretics, Barça eSports, UCAM Esports, Falke Esports, LUA Gaming y Universitat de Barcelona— disputaron el primer título de la nueva era. Movistar KOI Fénix se llevó el trofeo y con él las dos plazas de clasificación para el EMEA Masters junto al finalista. El roster con mayor presencia española de la historia de la liga fue uno de los puntos más celebrados del torneo.',
+      'El Split de Primavera que arranca hoy es el verdadero primer examen de largo recorrido para la LES. El formato alterna días de competición a lo largo de semanas, con los mejores equipos clasificándose para los playoffs finales. En juego está la plaza para representar a España en el EMEA Masters de primavera, el torneo regional que agrupa a los campeones de las ERL de toda Europa. MKOI llega como favorito, pero GIANTX y Los Heretics ya demostraron en el Kickoff que pueden competir al máximo nivel.',
+      'Para mí, como fan de la escena española desde los tiempos de la primera Superliga, este arranque tiene sabor especial. Recordar los años de la LCS española, seguir a equipos históricos como los viejos Giants o los primeros MAD Lions, y ver ahora una liga con producción renovada y ocho equipos con identidad propia genera una mezcla de nostalgia y esperanza. La LES tiene una oportunidad real de recuperar la atención de una comunidad que nunca dejó de querer un producto doméstico de calidad. Hoy empieza a construirlo.'
+    ],
+    date: '08/04/2026',
+    url: 'https://lesesports.es/split-primavera-2026/calendario/',
+    page: 'esports.html',
+    pageLabel: 'Esports',
+    accent: '#C89B3C',
+    source: 'lesesports.es',
+    img: 'assets/img/news/esports_generic.webp',
+    tags: ['LES', 'Liga Española', 'League of Legends', 'Split Primavera', 'Movistar KOI', 'GIANTX', 'Lastlap', 'EMEA Masters', '2026']
+  },
+
+  // ── NOTICIA 53 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-hotd-s3-junio-dragonfire-2026',
+    topic: 'got',
+    category: 'got',
+    emoji: '🐉',
+    badgeLabel: 'GOT',
+    title: 'House of the Dragon T3 llega en junio y HBO anuncia Dragonfire, el juego móvil oficial del universo Targaryen',
+    summary: 'HBO ha confirmado que House of the Dragon regresa en junio de 2026 con su tercera temporada, la más ambiciosa según el showrunner Ryan Condal. Y por si fuera poco, esta semana se anunció Dragonfire, un juego móvil gratuito de estrategia ambientado en los Siete Reinos, con lanzamiento previsto para este verano.',
+    full: [
+      'Ya es oficial: House of the Dragon Temporada 3 llega en junio de 2026 en HBO y Max. La confirmación llegó desde el CCXP México, donde parte del reparto —Matt Smith, Olivia Cooke y Fabien Frankel— confirmaron su presencia en el evento del 24 al 26 de abril con paneles, sesiones de firmas y material exclusivo de la producción. La tercera temporada constará de ocho episodios y cubrirá nuevos capítulos de la Danza de los Dragones, el conflicto civil Targaryen que quedó en punto álgido al final de la segunda temporada.',
+      'Ryan Condal ha confirmado que la producción está en plena fase de postproducción: cortes, edición y efectos visuales están en marcha para cumplir el estreno estival. El showrunner describió esta temporada como la más ambiciosa de las tres, con la Batalla del Gullet como uno de los grandes set pieces prometidos desde hace tiempo. La T4, que será la temporada final de la serie, ya está en proceso de escritura y llegará en 2028, cerrando definitivamente la historia Targaryen antes de los eventos de Game of Thrones.',
+      'Pero la noticia que más me sorprendió esta semana fue el anuncio de Dragonfire, un juego móvil gratuito de estrategia desarrollado por Warner Bros. Games Boston y ligado directamente al universo de House of the Dragon. El juego promete una experiencia de guerra territorial donde los jugadores crían, entrenan y vuelan con dragones para conquistar los Siete Reinos, con una mecánica definida como "estrategia social moderna". Su lanzamiento está programado para este verano, coincidiendo con el estreno de la T3.',
+      'Seré honesto: la T2 me decepcionó bastante. Las decisiones de guión con Ser Criston Cole actuando impunemente en cada escena, las reuniones surrealistas entre reinas en medio de una guerra civil, o la resurrección conveniente de Laenor Velaryon convirtieron la serie en algo difícil de defender. Pero la T3 tiene ingredientes de sobra para redimirse: la Batalla del Gullet, el giro en las lealtades de varios personajes clave y una historia que en los libros de George R.R. Martin es absolutamente demoledora. Junio no puede llegar antes.'
+    ],
+    date: '08/04/2026',
+    url: 'https://collider.com/house-of-the-dragon-season-3-companion-mobile-game-of-thrones-dragonfire-free-to-play-summer-release/',
+    page: 'got.html',
+    pageLabel: 'GoT',
+    accent: '#cc2200',
+    source: 'collider.com',
+    img: 'assets/img/news/got_generic.webp',
+    tags: ['House of the Dragon', 'HBO', 'Temporada 3', 'Dragonfire', 'Targaryens', 'Ryan Condal', 'junio 2026', 'Game of Thrones']
+  },
+
+  // ── NOTICIA 52 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-gaming-abril-2026-lanzamientos',
+    topic: 'gaming',
+    category: 'gaming',
+    emoji: '🎮',
+    badgeLabel: 'GAMING',
+    title: 'Abril 2026 gaming: Pragmata de Capcom, Saros de Housemarque y el Paladín de vuelta en Diablo IV',
+    summary: 'Abril viene cargado de lanzamientos importantes. Pragmata, la nueva IP de Capcom ambientada en la Luna, llega el 17 de abril tras años de espera. Saros, el nuevo roguelike de los creadores de Returnal, cierra el mes el 30 en PS5. Y Diablo IV: Lord of Hatred trae al Paladín el 28 de abril. Hay para todos.',
+    full: [
+      'Después de un marzo que ya dejó el listón alto con Crimson Desert y el remake de Fatal Frame II, abril no afloja el ritmo. El lanzamiento más esperado del mes es sin duda Pragmata, la nueva IP de Capcom que lleva años generando expectativa desde su primer tráiler. Tras múltiples retrasos, el juego llegará el 17 de abril a PS5, Xbox Series, Switch 2 y PC. La propuesta nos lleva a una estación de investigación lunar en un futuro cercano donde una IA hostil lo controla todo: nuestro personaje, Hugh, un astronauta armado, deberá cooperar con Diana, una androide con habilidades de hackeo, para sobrevivir y volver a la Tierra. Los gráficos en los tráilers cortan el aliento y Capcom confía tanto en el producto que incluso adelantó la fecha de lanzamiento.',
+      'También en abril llega Saros, el nuevo título de Housemarque para PS5 exclusivo de la plataforma de Sony, con fecha el 30 de abril. Los creadores del brillante Returnal vuelven a la carga con otro roguelike de corte arcade donde el dominio de patrones de enemigos y la precisión son la clave. Saros nos lleva a Carcosa, una colonia perdida bajo un eclipse permanente, donde interpretamos a Arjun Devraj, un ejecutor que lucha por sobrevivir. El actor Rahul Kohli forma parte del reparto de voces. Si Returnal os gustó aunque os diera algún que otro infarto, Saros está diseñado exactamente para vosotros.',
+      'Y el mes no estaría completo sin mencionar Diablo IV: Lord of Hatred, la segunda gran expansión del ARPG de Blizzard, que llega el 28 de abril. La novedad más celebrada por la comunidad: por fin llega el Paladín, la clase más pedida por los fans desde el lanzamiento original, junto a un segundo personaje que aún no ha sido revelado. La historia enfrenta a los jugadores con Mefisto en un enfrentamiento que promete cerrar el arco narrativo iniciado con la expansión anterior.',
+      'Más allá de los tres grandes del mes, abril también tiene hueco para Replaced (un cyberpunk en pixel art con fondos 3D que llega en Game Pass el 14), Mouse: P.I. for Hire (shooter en primera persona con estética de los dibujos animados de los años 30 de Disney) y Vampire Crawlers, el spin-off estratégico de Vampire Survivors para el 21 de abril. Un mes redondo para los que llevamos décadas sin poder parar de jugar.'
+    ],
+    date: '08/04/2026',
+    url: 'https://arkaiacorp.com/blog/lanzamientos-videojuegos-abril-2026',
+    page: 'gaming.html',
+    pageLabel: 'Gaming',
+    accent: '#00bfff',
+    source: 'arkaiacorp.com',
+    img: 'assets/img/news/gaming_generic.webp',
+    tags: ['Pragmata', 'Saros', 'Diablo IV', 'Capcom', 'Housemarque', 'Blizzard', 'lanzamientos abril 2026', 'gaming']
+  },
+
   // ── NOTICIA 51 ──────────────────────────────────────────────────────────────
   {
     id: 'noticia-unity-hdrp-mantenimiento-2026',
@@ -1531,5 +1606,5 @@ var NEWS_DATA = [
 
 // NEWS_TRACKER
 // used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba"]
-// last_update: "2026-04-06"
-// next_available: ["gaming", "got", "rol"]
+// last_update: "2026-04-08"
+// next_available: ["warhammer", "magic", "rol"]
