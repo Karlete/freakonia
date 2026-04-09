@@ -2,6 +2,17 @@
 
 ---
 
+## Sesión 50 — 2026-04-09
+
+### feat(gaming): YouTube video section with inline embed toggle in #canal
+
+**Modified files:**
+- `js/youtube.js` — fully rewritten. `SANPRIETO_VIDEOS` array (type: `'short'` | `'video'`). `buildVideoCard()` builds article with thumbnail (maxresdefault → hqdefault fallback), badge SHORT/VÍDEO, buttons "VER EN YOUTUBE" and "REPRODUCIR AQUÍ" (hidden for Shorts). `toggleVideoEmbed()` closes all open embeds before opening the clicked one. `renderVideoCards()` targets `#sanprieto-videos-grid` on DOMContentLoaded. Globals: `window.toggleVideoEmbed`, `window.SANPRIETO_VIDEOS`.
+- `css/gaming.css` — appended new block: `.videos-section-header`, `#sanprieto-videos-grid` (auto-fill grid 280px min), `.video-card`, `.video-type-badge` (absolute top-left), `.video-thumb-wrap` (16:9 aspect-ratio), `.video-thumb`, `.video-thumb-overlay`, `.video-info`, `.video-title`, `.video-desc`, `.video-btns`, `.video-embed-container` + `@keyframes embedSlideIn`, `.video-embed-header`, `.video-embed-title`, `.video-embed-close`, `.video-embed-frame-wrap` (16:9 default, `.short-frame` 9:16 max-width 360px), `.video-embed-iframe`. Mobile breakpoint: 1-column grid, short-frame full width.
+- `gaming.html` — (1) videos grid injected inside `#canal` after "VER CANAL" button: `.videos-section-header` + `#sanprieto-videos-grid` div. (2) `<script src="js/youtube.js">` added before `</body>`.
+
+---
+
 ## Sesión 46 — 2026-04-02
 
 ### feat(news): article pages + UI improvements + 3 new articles

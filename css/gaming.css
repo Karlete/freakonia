@@ -351,3 +351,208 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   VÍDEOS @SANPRIETO
+═══════════════════════════════════════════════════════════════════════════ */
+
+.videos-section-header {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-top: var(--sp-7);
+  margin-bottom: var(--sp-5);
+  border-bottom: 2px solid var(--accent-secondary);
+  padding-bottom: var(--sp-3);
+}
+
+.videos-section-header h3 {
+  font-family: var(--font-primary);
+  font-size: 0.6rem;
+  color: var(--accent-secondary);
+  text-shadow: var(--glow-pink);
+  margin: 0;
+}
+
+.videos-section-header .section-badge {
+  font-family: var(--font-primary);
+  font-size: 0.4rem;
+  background: var(--accent-secondary);
+  color: var(--bg-base);
+  padding: 2px 6px;
+}
+
+#sanprieto-videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--sp-5);
+  margin-top: var(--sp-4);
+}
+
+.video-card {
+  border: 4px solid var(--border);
+  background: var(--bg-card);
+  position: relative;
+  transition:
+    box-shadow 0.2s,
+    border-color 0.2s;
+}
+
+.video-card:hover {
+  border-color: var(--accent-secondary);
+  box-shadow: 4px 4px 0 var(--accent-secondary);
+}
+
+.video-type-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--accent-secondary);
+  color: var(--bg-base);
+  font-family: var(--font-primary);
+  font-size: 0.38rem;
+  padding: 3px 8px;
+  z-index: 2;
+}
+
+.video-thumb-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--bg-base);
+}
+
+.video-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.video-card:hover .video-thumb {
+  transform: scale(1.03);
+}
+
+.video-thumb-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--accent-secondary);
+  text-shadow: var(--glow-pink);
+  opacity: 0;
+  transition: opacity 0.2s;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.video-card:hover .video-thumb-overlay {
+  opacity: 1;
+}
+
+.video-info {
+  padding: var(--sp-3) var(--sp-4);
+}
+
+.video-title {
+  font-family: var(--font-primary);
+  font-size: 0.5rem;
+  color: var(--text);
+  margin: 0 0 var(--sp-2);
+  line-height: 1.6;
+}
+
+.video-desc {
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  color: var(--text-dim);
+  margin: 0 0 var(--sp-3);
+  line-height: 1.4;
+}
+
+.video-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+/* ── Embed container (shared short/video) ── */
+.video-embed-container {
+  border-top: 4px solid var(--accent-secondary);
+  background: var(--bg-surface);
+  animation: embedSlideIn 0.2s steps(4) forwards;
+}
+
+@keyframes embedSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.video-embed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--sp-2) var(--sp-3);
+  background: var(--accent-secondary);
+  gap: var(--sp-3);
+}
+
+.video-embed-title {
+  font-family: var(--font-primary);
+  font-size: 0.4rem;
+  color: var(--bg-base);
+}
+
+.video-embed-close {
+  font-family: var(--font-primary);
+  font-size: 0.4rem;
+  background: transparent;
+  border: 2px solid var(--bg-base);
+  color: var(--bg-base);
+  padding: var(--sp-1) var(--sp-2);
+  cursor: pointer;
+}
+
+.video-embed-close:hover {
+  background: var(--bg-base);
+  color: var(--accent-secondary);
+}
+
+/* 16:9 frame (normal video) */
+.video-embed-frame-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+/* 9:16 frame (Shorts) — centered, max 360px wide */
+.video-embed-frame-wrap.short-frame {
+  aspect-ratio: 9 / 16;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.video-embed-iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+}
+
+@media (max-width: 600px) {
+  #sanprieto-videos-grid {
+    grid-template-columns: 1fr;
+  }
+  .video-embed-frame-wrap.short-frame {
+    max-width: 100%;
+  }
+}

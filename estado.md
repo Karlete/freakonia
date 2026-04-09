@@ -1,6 +1,6 @@
 # estado.md — Project State Tracker
 
-Last updated: 2026-04-02 (sesión 46)
+Last updated: 2026-04-09 (sesión 50)
 
 ---
 
@@ -52,7 +52,7 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 - `magic.html` → `.mtg-pillar`, `.edition-card`, `.mana-color-box`, `.collection-box`, `.set-badge`, `.personal-story`, `.lore-box`, `.quote-card`, `.section-quicknav`
 - `rol.html` → `.publisher-card`, `.publisher-tragedy`, `.publisher-stats`, `.collection-item`, `.owned-badge`, `.rpg-system`, `.supplement-card`, `.closing-narrative`, `.quote-card-final`, `.lore-box`, `.quote-card`, `.section-quicknav`
 - `nba.html` → `.player-tribute`, `.player-stats`, `.player-stat-row`, `.player-badge`, `.dunk-event`, `.dunk-contender`, `.dunk-verdict`, `.dunk-grid`, `.dunk-gif`, `.channel-card`, `.taberna-img-link`, `.taberna-img-wrap`, `.taberna-img`, `.taberna-img-overlay`, `.taberna-play-btn`, `.fantasy-card`, `.fantasy-table`, `.memory-card`, `.era-stats`, `.era-stat-box`, `.lore-box`, `.quote-card`, `.section-quicknav`, `.nba-hero-text`, `.nba-hero-visual`, `.nba-hero-img`, `.section-img-nba`, `.section-media-row`
-- `gaming.html` → `.memory-card`, `.platform-header`
+- `gaming.html` → `.memory-card`, `.platform-header` | `css/gaming.css` → `.video-card`, `.video-type-badge`, `.video-thumb-wrap`, `.video-thumb`, `.video-thumb-overlay`, `.video-info`, `.video-title`, `.video-desc`, `.video-btns`, `.video-embed-container`, `.video-embed-header`, `.video-embed-title`, `.video-embed-close`, `.video-embed-frame-wrap`, `.video-embed-iframe`, `.videos-section-header`, `#sanprieto-videos-grid`
 - `esports.html` → `.season-card`, `.section-quicknav`
 
 ### Estructura obligatoria de cada página HTML
@@ -174,7 +174,7 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 | index.html | ✅ Completa | Pixel Patron Rain, slider noticias, embeds juegos |
 | gamedev.html | ✅ Completa | Embeds itch.io Samurai Kitchen + Stars Lander |
 | fallen-valkyrie.html | ✅ Completa | Devlog FV ~15% progreso |
-| gaming.html | ✅ Completa | |
+| gaming.html | ✅ Completa | Sección vídeos @sanprieto con inline embed toggle |
 | esports.html | ✅ Completa | |
 | got.html | ✅ Completa | |
 | warhammer.html | ✅ Completa | |
@@ -202,6 +202,7 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 - 📦 Repo: **https://github.com/Karlete/freakonia**
 - ⚙️ Deploy: GitHub Pages (rama `main`, raíz `/`)
 
+**Sesión 50 (2026-04-09):** `gaming.html` — sección de vídeos `@sanprieto` con inline embed toggle añadida dentro de `#canal`. `js/youtube.js` reescrito: array `SANPRIETO_VIDEOS`, `buildVideoCard()` genera tarjetas con miniatura, badge SHORT/VÍDEO, botones "VER EN YOUTUBE" + "REPRODUCIR AQUÍ" (este último oculto para Shorts), embed inline con autoplay. `css/gaming.css`: nuevo bloque de estilos para `.video-card`, `.video-embed-container` (con `@keyframes embedSlideIn`), `.video-embed-frame-wrap` (16:9 y 9:16 para Shorts), `.videos-section-header`, `#sanprieto-videos-grid`. Push a main.
 **Sesión 45 (2026-03-25):** 3 artículos insertados al TOP de `js/news-data.js` (noticias 44–46): Gaming (noticia-mhs3-reviews-metacritic-2026 · Monster Hunter Stories 3 reviews Metacritic +80 · 25/03) · GameDev (noticia-subnautica2-krafton-demanda-2026 · Krafton/ChatGPT/bonus 250M · 25/03) · Magic (noticia-secrets-strixhaven-preview-2026 · preview season Secrets of Strixhaven · 25/03). NEWS_TRACKER last_update → 2026-03-25, next_available → got · esports · nba. Push a main.
 **Sesión 43 (2026-03-20):** `index.html` — `section#pixel-patron` movida dentro de `.patron-rain-wrap`, después de `#que-se-cuece` y antes de `</div><!-- end .patron-rain-wrap -->`. `<main>` ahora empieza directamente con `#about`. El canvas de lluvia cubre ahora hero + news slider + pixel patron. Push a main.
 **Sesión 42 (2026-03-20):** 5 artículos insertados al TOP de `js/news-data.js` (noticias 34–38): Esports (noticia-first-stand-2026-grupos · BLG a playoffs, G2 al límite, Gen.G imparable · 20/03) · Gaming (noticia-crimson-desert-reviews-bolsa-2026 · Crimson Desert 78 Metacritic + bolsa Pearl Abyss -30% · 20/03) · GoT (noticia-hotd-t3-reshoots-condal-2026 · HotD T3 reshoots rutina, estreno junio 2026 · 20/03) · GameDev (noticia-nintendo-demanda-aranceles-2026 · Nintendo demanda aranceles Trump, acción paralizada · 20/03) · Esports (noticia-first-stand-2026-semifinales · G2 vivo, semifinales 21/03, gran final 22/03 São Paulo · 20/03). NEWS_TRACKER last_update actualizado a 2026-03-20. task.md limpiado. Push a main.
