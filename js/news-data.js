@@ -10,6 +10,78 @@
 
 var NEWS_DATA = [
 
+  // ── NOTICIA 57 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-dnd-villainous-options-playtest-2026',
+    topic: 'rol',
+    category: 'rol',
+    emoji: '🎲',
+    badgeLabel: 'ROL',
+    title: 'D&D lanza el playtest de Villainous Options — ahora los jugadores también pueden ser los malos',
+    summary: 'Wizards of the Coast ha publicado un nuevo Unearthed Arcana con opciones de juego para personajes villanos. El playtest abre la puerta a construir PJs con rasgos oscuros de forma oficial, una petición que la comunidad llevaba tiempo haciendo.',
+    full: [
+      'Wizards of the Coast acaba de publicar un nuevo Unearthed Arcana bajo el título Villainous Options, y la comunidad de D&D ya está dando vueltas a todo lo que implica. El playtest introduce opciones mecánicas oficiales para construir personajes con rasgos claramente oscuros o directamente malvados: habilidades, trasfondos y características que hasta ahora quedaban fuera del manual principal o dependían de la buena voluntad del DM.',
+      'Esto es algo que muchos jugadores llevaban tiempo pidiendo. La edición 2024 del Player\'s Handbook eliminó el alineamiento como restricción mecánica, y este playtest parece el siguiente paso lógico: si cualquier personaje puede actuar de cualquier manera, ¿por qué no tener herramientas diseñadas específicamente para campañas oscuras o grupos de antihéroes? Personalmente me parece una dirección interesante, aunque ya veo los debates infinitos en Reddit sobre si esto "arruina" D&D.',
+      'Como siempre con los Unearthed Arcana, el material está sujeto a cambios según el feedback que reciba. Si te interesa probarlo o dar tu opinión, Wizards tiene habilitado el formulario de respuesta habitual. Yo ya tengo pensado un warlock con más de un secreto que esconder.'
+    ],
+    date: '11/04/2026',
+    url: 'https://www.enworld.org/',
+    page: 'rol.html',
+    pageLabel: 'Rol',
+    accent: '#9b59b6',
+    source: 'enworld.org',
+    img: 'assets/img/news/dungeons_and_dragons.webp',
+    tags: ['D&D', 'Dungeons & Dragons', 'Unearthed Arcana', 'Wizards of the Coast', 'Playtest']
+  },
+
+  // ── NOTICIA 56 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-hotd-s3-junio-2026-confirmado',
+    topic: 'got',
+    category: 'got',
+    emoji: '🐉',
+    badgeLabel: 'GOT',
+    title: 'House of the Dragon T3 confirmada para junio — el elenco al completo y la Danza de Dragones en su punto álgido',
+    summary: 'HBO ha confirmado que House of the Dragon vuelve en junio de 2026 con 8 episodios. El elenco completo retoma la guerra civil Targaryen, con nuevas incorporaciones como James Norton y Tommy Flanagan. La T4 y última ya tiene fecha: 2028.',
+    full: [
+      'Ya es oficial: House of the Dragon regresa en junio de 2026 con su tercera temporada, la penúltima de la serie. HBO ha confirmado los 8 episodios que continuarán la Danza de Dragones, la guerra civil Targaryen que dejó la segunda temporada en un punto bastante tenso. Emma D\'Arcy, Matt Smith, Olivia Cooke, Tom Glynn-Carney y prácticamente todo el reparto principal regresan. Además se incorporan James Norton como Lord Ormund Hightower y Tommy Flanagan como Roderick Dustin, el llamado Roddy el Ruin, liderando a los Lobos del Invierno del Norte.',
+      'El tráiler ya cayó en febrero y hay que reconocer que tiene muy buena pinta. Se ve a Jaehaerys montando su dragón hacia la Batalla del Gaznate, una secuencia que en el libro es brutal y que esperaba con ganas. La T2 dejó mucho que desear tras el nivel que había marcado la primera, así que hay presión sobre Ryan Condal para que esta remonte. Con la guerra ya completamente desatada, el terreno está abonado para que sea la temporada más espectacular.',
+      'Además, el cast aparecerá en el CCXP México del 24 al 26 de abril para una presentación con avances exclusivos. Si todo va bien, la T4 y final llegará en 2028 para cerrar definitivamente la historia de los Targaryen.'
+    ],
+    date: '11/04/2026',
+    url: 'https://www.gamesradar.com/entertainment/fantasy-shows/house-of-the-dragon-season-3-release-date-cast-plot-trailer-news/',
+    page: 'got.html',
+    pageLabel: 'GoT',
+    accent: '#cc2200',
+    source: 'gamesradar.com',
+    img: 'assets/img/news/house_of_the_dragons.webp',
+    tags: ['House of the Dragon', 'HBO', 'Targaryen', 'Game of Thrones', 'Temporada 3']
+  },
+
+  // ── NOTICIA 55 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-oblivion-remastered-gamepass-2026',
+    topic: 'gaming',
+    category: 'gaming',
+    emoji: '🎮',
+    badgeLabel: 'GAMING',
+    title: 'Oblivion Remastered llega a Game Pass el 16 de abril — el regreso que nadie esperaba tan pronto',
+    summary: 'The Elder Scrolls IV: Oblivion Remastered sale de Game Pass Premium y se expande a Ultimate y PC Game Pass el 16 de abril. Un clásico de 2006 actualizado visualmente que vuelve a estar al alcance de millones de jugadores de golpe.',
+    full: [
+      'No hace mucho Bethesda sorprendió a todo el mundo con el anuncio de Oblivion Remastered, y ahora la sorpresa se completa: el juego llega a Game Pass Ultimate y PC Game Pass el 16 de abril. Llevaba un tiempo disponible solo para suscriptores de Game Pass Premium, pero a partir de esta semana se abre a la base más amplia del servicio. Para los que ya tienen Ultimate o PC Game Pass, es una incorporación directa sin coste adicional.',
+      'Oblivion es uno de esos juegos que definen una época. Lo recuerdo perfectamente: el portal de Oblivion abriéndose por primera vez, el sistema de nivelado roto que nadie entendía del todo, y horas perdidas recorriendo Cyrodiil sin ningún objetivo concreto más allá de explorar. La versión remasterizada mantiene la esencia pero actualiza gráficos, iluminación y rendimiento para que se pueda disfrutar en hardware moderno sin que chirríe demasiado.',
+      'Si nunca lo jugaste, esta es probablemente la mejor excusa para hacerlo. Y si ya lo conoces, seguro que hay una quimera o un Daedra por matar que tienes pendiente desde 2006.'
+    ],
+    date: '11/04/2026',
+    url: 'https://news.xbox.com/en-us/2026/04/07/xbox-game-pass-april-2026-wave-1/',
+    page: 'gaming.html',
+    pageLabel: 'Gaming',
+    accent: '#00bfff',
+    source: 'news.xbox.com',
+    img: 'assets/img/news/gaming_generic.webp',
+    tags: ['Elder Scrolls', 'Game Pass', 'Oblivion', 'Bethesda', 'Remaster']
+  },
+
   // ── NOTICIA 54 ──────────────────────────────────────────────────────────────
   {
     id: 'noticia-les-split-primavera-2026',
@@ -1605,6 +1677,6 @@ var NEWS_DATA = [
 ];
 
 // NEWS_TRACKER
-// used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba"]
-// last_update: "2026-04-08"
-// next_available: ["warhammer", "magic", "rol"]
+// used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba", "gaming", "got", "rol"]
+// last_update: "2026-04-11"
+// next_available: ["esports", "nba", "magic", "warhammer", "gamedev"]

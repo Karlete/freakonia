@@ -2,6 +2,27 @@
 
 ---
 
+## Sesión 51 — 2026-04-11
+
+### fix(gaming): autoplay bug in youtube.js + new short + 3 news articles
+
+**Modified files:**
+- `js/youtube.js`:
+  - `toggleVideoEmbed()` reescrito: al cerrar embeds ahora borra `iframe.src = ''` para detener la reproducción. Al abrir, asigna `iframe.src = iframe.dataset.src` para arrancar el vídeo solo cuando se solicita.
+  - `buildVideoCard()`: iframe renderiza con `src=""` + `data-src="<embedUrl>"` para evitar autoplay en carga de página.
+  - `SANPRIETO_VIDEOS`: nuevo entry añadido al TOP — `dOsnhBU5AzA` (FINAL FANTASY VII — WTF TRADUCCIÓN, type: 'short').
+- `js/news-data.js`:
+  - 3 artículos nuevos insertados al TOP del array (noticias 55–57, fecha 11/04/2026):
+    - `noticia-oblivion-remastered-gamepass-2026` (gaming) — Oblivion Remastered llega a Game Pass Ultimate y PC Game Pass el 16 de abril. Fuente: news.xbox.com.
+    - `noticia-hotd-s3-junio-2026-confirmado` (got) — HotD T3 confirmada junio 2026, 8 episodios, James Norton + Tommy Flanagan se incorporan. T4 en 2028. Fuente: gamesradar.com.
+    - `noticia-dnd-villainous-options-playtest-2026` (rol) — D&D Unearthed Arcana Villainous Options: opciones mecánicas oficiales para PJs villanos. Fuente: enworld.org.
+  - NEWS_TRACKER actualizado: last_update → 2026-04-11, next_available → esports · nba · magic · warhammer · gamedev.
+- `estado.md` — Last updated → sesión 51, NEWS_TRACKER actualizado, tabla de IDs actualizada (noticias 50–57), entrada de sesión 51 añadida al log.
+- `commit.md` — esta entrada.
+- `task.md` — limpiado.
+
+---
+
 ## Sesión 50 — 2026-04-09
 
 ### feat(gaming): YouTube video section with inline embed toggle in #canal

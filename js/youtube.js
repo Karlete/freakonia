@@ -5,6 +5,13 @@
 // type: 'short' = vertical 9:16 embed | 'video' = horizontal 16:9 embed
 const SANPRIETO_VIDEOS = [
   {
+    id: "dOsnhBU5AzA",
+    title: "FINAL FANTASY VII — WTF TRADUCCIÓN",
+    description:
+      "Los momentos más surrealistas de la traducción original de FFVII. Hay cosas que no tienen perdón.",
+    type: "short",
+  },
+  {
     id: "hZQMq7Zg5dg",
     title: "FINAL FANTASY VII — TRÁILER",
     description:
@@ -16,23 +23,30 @@ const SANPRIETO_VIDEOS = [
 // ─── Toggle embed (open/close inline) ────────────────────────────────────────
 function toggleVideoEmbed(btn) {
   const videoId = btn.dataset.videoId;
-  const embed = document.getElementById("video-embed-" + videoId);
+  const embed = document.getElementById('video-embed-' + videoId);
   if (!embed) return;
 
-  const isOpen = embed.style.display !== "none";
+  const isOpen = embed.style.display !== 'none';
 
-  // Close all open video embeds first
-  document.querySelectorAll(".video-embed-container").forEach((el) => {
-    el.style.display = "none";
+  // Close all open embeds and clear their iframes to stop playback
+  document.querySelectorAll('.video-embed-container').forEach(el => {
+    el.style.display = 'none';
+    const iframe = el.querySelector('iframe');
+    if (iframe) iframe.src = '';
   });
-  document.querySelectorAll(".play-video-btn").forEach((b) => {
-    b.textContent = "▶ REPRODUCIR AQUÍ";
+  document.querySelectorAll('.play-video-btn').forEach(b => {
+    b.textContent = '▶ REPRODUCIR AQUÍ';
   });
 
   if (!isOpen) {
-    embed.style.display = "block";
-    btn.textContent = "✕ CERRAR";
-    embed.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    embed.style.display = 'block';
+    btn.textContent = '✕ CERRAR';
+    // Set src only now to prevent autoplay on page load
+    const iframe = embed.querySelector('iframe');
+    if (iframe && iframe.dataset.src) {
+      iframe.src = iframe.dataset.src;
+    }
+    embed.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 }
 
@@ -100,7 +114,7 @@ function buildVideoCard(video) {
     '<div class="video-embed-frame-wrap ' +
     (isShort ? "short-frame" : "") +
     '">' +
-    '<iframe src="' +
+    '<iframe src="" data-src="' +
     embedUrl +
     '" ' +
     'allow="autoplay; fullscreen" allowfullscreen ' +
