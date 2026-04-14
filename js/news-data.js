@@ -10,6 +10,106 @@
 
 var NEWS_DATA = [
 
+  // ── NOTICIA 61 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-lec-spring-semanas3-4-2026',
+    topic: 'esports',
+    category: 'esports',
+    emoji: '🏆',
+    badgeLabel: 'ESPORTS',
+    title: 'LEC Versus Spring 2026 — Semanas 3 y 4: Karmine Corp lidera con 8-3 mientras la tabla se aprieta',
+    summary: 'Las semanas 3 y 4 del split europeo de League of Legends han dibujado un panorama inesperado: Karmine Corp encabeza la tabla con ocho victorias y se consolida como el equipo más sólido del split. NaVi y Vitality les pisan los talones, mientras G2, MKOI, GIANTX y Heretics se agolpan en el centro con resultados igualados.',
+    full: [
+      'Las semanas 3 y 4 del LEC Versus Spring 2026 han dejado una clasificación sorprendente: Karmine Corp es el equipo más sólido del split hasta la fecha, con un balance de 8-3 que nadie anticipaba del todo al inicio de temporada. El equipo francés, con una afición ferviente y un juego que combina velocidad con capacidad de pelea en equipo, ha escalado hasta lo más alto de una tabla que a estas alturas del split sigue siendo muy difícil de leer.',
+      'Detrás de KC, Natus Vincere y Team Vitality comparten el segundo puesto con 7-4, lo que convierte la parte alta en un triángulo apretado. GIANTX, Team Heretics, Movistar KOI y G2 Esports están todos en el mismo bloque con 6-5, lo que significa que cualquiera de los cuatro puede quedar entre los dos primeros —y clasificarse para el MSI 2026— con dos buenas semanas de resultados. El LEC nunca ha estado tan igualado en la parte central de la tabla en los últimos años.',
+      'Fnatic, con 5-6, sigue siendo una incógnita. Después de ganar a G2 en la semana 2, el equipo naranja ha mezclado resultados irregulares que no permiten fiarse de ellos pero tampoco descartarlos como posible sorpresa de playoffs. SK Gaming continúa en la parte baja con 3-8, en una situación delicada de cara a la fase final del split. Quedan semanas de liga y el Roadtrip de París del 24 al 26 de abril se perfila como el primer gran evento presencial que puede cambiar el ambiente competitivo.',
+      'Para quien sigue el competitivo europeo desde hace años, ver a Karmine Corp al frente tiene algo de justicia poética: un proyecto construido desde la comunidad, con una base de fans que llenan pabellones, compitiendo de tú a tú con los históricos del continente. El guión del split está siendo de lo más interesante que se recuerda en Europa.'
+    ],
+    date: '14/04/2026',
+    url: 'https://liquipedia.net/leagueoflegends/LEC/2026/Spring/Regular_Season',
+    page: 'esports.html',
+    pageLabel: 'Esports',
+    accent: '#C89B3C',
+    source: 'liquipedia.net',
+    img: 'assets/img/news/lec_versus_2026.webp',
+    tags: ['LEC', 'League of Legends', 'Split Spring 2026', 'Karmine Corp', 'G2 Esports', 'Fnatic', 'GIANTX', 'Movistar KOI', 'Esports']
+  },
+
+  // ── NOTICIA 60 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-nba-playin-2026',
+    topic: 'nba',
+    category: 'nba',
+    emoji: '🏀',
+    badgeLabel: 'NBA',
+    title: 'NBA Play-In 2026 — Arranca hoy la postemporada: Heat, Hornets, Trail Blazers y Suns pelean por los últimos billetes a playoffs',
+    summary: 'El Play-In Tournament 2026 da el pistoletazo de salida este 14 de abril. En el Este, Heat y Hornets se cruzan en el partido 9-10. En el Oeste, Trail Blazers visita a Suns en el 7-8. Los playoffs propiamente dichos arrancan el 18 de abril, con Detroit y OKC como primeros cabezas de serie.',
+    full: [
+      'El calendario de la NBA llega hoy a uno de sus momentos más emocionantes del año: el Play-In Tournament 2026 da su primer pistoletazo de salida el 14 de abril. El formato, consolidado ya como un clásico de la temporada, enfrenta a los equipos del séptimo al décimo puesto de cada conferencia en una mini eliminatoria que define los últimos dos clasificados por lado a la postemporada.',
+      'En el Este, el enfrentamiento de la primera tanda es Miami Heat (10) contra Charlotte Hornets (9), dos franquicias que llegan a este punto con algo que demostrar. Charlotte, con una segunda mitad de temporada que ha generado ilusión, busca el billete a playoffs en uno de sus mejores momentos recientes. Miami tiene el peso del nombre y la experiencia, pero no llega con las garantías de temporadas anteriores. En el Oeste, los Portland Trail Blazers (8) visitan a los Phoenix Suns (7) en un duelo que promete ser más competido de lo que sugieren los puestos.',
+      'Es importante recordar cómo funciona el Play-In: el ganador del partido 7-8 entra directamente a playoffs como séptimo cabeza de serie. El perdedor del 7-8 y el ganador del 9-10 disputan un segundo cruce, y solo el ganador de ese partido obtiene la octava plaza. Es un sistema que mantiene la tensión más allá de la primera noche y que en los últimos años ha dado partidos de altísimo nivel.',
+      'Los playoffs propiamente dichos arrancan el 18 de abril, con los Detroit Pistons encabezando el Este y Oklahoma City Thunder el Oeste en lo que son dos de las grandes historias de la temporada. Con Luka Dončić tocado en los Lakers y los Spurs de Wembanyama con ganas de dejar huella en su primera postemporada seria, el cuadro promete emociones desde la primera ronda. La mejor época del año para los que disfrutamos del baloncesto está aquí.'
+    ],
+    date: '14/04/2026',
+    url: 'https://www.nba.com/news/2026-nba-playoffs-schedule',
+    page: 'nba.html',
+    pageLabel: 'NBA',
+    accent: '#FF8C00',
+    source: 'nba.com',
+    img: 'assets/img/news/nba_ball.webp',
+    tags: ['NBA', 'Play-In 2026', 'playoffs', 'Miami Heat', 'Charlotte Hornets', 'Trail Blazers', 'Suns', 'postemporada', 'OKC', 'Detroit Pistons']
+  },
+
+  // ── NOTICIA 59 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-magic-secrets-strixhaven-2026',
+    topic: 'magic',
+    category: 'magic',
+    emoji: '✨',
+    badgeLabel: 'MTG',
+    title: 'Magic: The Gathering — Secrets of Strixhaven llega el 24 de abril con prerrelease, early access en Arena y mazos de bienvenida renovados',
+    summary: 'El próximo set de Magic: The Gathering vuelve a la academia más famosa del Multiverso. Secrets of Strixhaven llega a las tiendas el 24 de abril, con lanzamiento previo en MTG Arena el 21. El 15 de abril, early access con streamers y pros. El 17, prerrelease en tiendas WPN. Además, el set estrena una nueva oleada de mazos de bienvenida para nuevos jugadores.',
+    full: [
+      'El regreso a Strixhaven, la academia de magia más famosa de todo el Multiverso, llega por fin a las tiendas físicas. Secrets of Strixhaven sale al mercado el 24 de abril de 2026, precedido por el lanzamiento digital en MTG Arena el 21 de abril. Para los jugadores que quieren pillar el set con antelación, el 17 de abril se celebran los eventos de Prerrelease en tiendas WPN participantes de todo el mundo, como es habitual en cada lanzamiento de Magic.',
+      'Antes de eso, el 15 de abril Wizards organiza el Early Access Event de Arena: un grupo seleccionado de streamers, jugadores competitivos y creadores de contenido tendrá acceso anticipado al set para mostrarlo en directo en Twitch y YouTube. Es el escaparate que la comunidad utiliza para ver en acción las mecánicas nuevas antes de decidir qué cartas perseguir en el lanzamiento oficial. La novela Strixhaven: Omens of Chaos ya se publicó el 7 de abril como adelanto del lore que rodea al set.',
+      'Una de las novedades más interesantes de este lanzamiento es la renovación de los Welcome Decks, los mazos de bienvenida monocolor de 40 cartas que llegan gratis a las tiendas WPN para que los jugadores nuevos puedan empezar sin coste. El movimiento parece pensado para aprovechar el interés creciente en el juego y facilitar la entrada justo cuando el set vuelve a un entorno tan popular como Strixhaven. En MTG Arena, las recompensas de temporada incluyen sobres del nuevo set y estilos de carta exclusivos para los rangos Platino y Diamante.',
+      'Strixhaven original —lanzado en 2021— dividió opiniones con su diseño de colegios, pero creó un espacio de juego muy diferenciado que muchos jugadores recuerdan con cariño. Que Wizards vuelva con Secrets implica que tienen historia que contar ahí. Si el set hace honor al nombre, habrá secretos que valdrán mucho más que cualquier carta de tirada alta.'
+    ],
+    date: '14/04/2026',
+    url: 'https://magic.wizards.com/en/news/mtg-arena/announcements-april-13-2026',
+    page: 'magic.html',
+    pageLabel: 'MTG',
+    accent: '#9933ff',
+    source: 'magic.wizards.com',
+    img: 'assets/img/news/secrets_of_strixhaven.webp',
+    tags: ['Magic: The Gathering', 'Secrets of Strixhaven', 'MTG Arena', 'Prerrelease', 'Wizards of the Coast', 'abril 2026', 'nuevo set']
+  },
+
+  // ── NOTICIA 58 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-warhammer-old-world-adepticon-gw-2026',
+    topic: 'warhammer',
+    category: 'warhammer',
+    emoji: '⚔️',
+    badgeLabel: 'WARHAMMER',
+    title: 'Warhammer: The Old World — Adepticon 2026 y el debate que nadie quiere ignorar: lo que GW necesita cambiar',
+    summary: 'El Adepticon 2026 fue el mayor torneo de The Old World en Norteamérica, con 78 jugadores y Andrea Ninni con Jade Fleet llevándose el título. Pero el torneo también puso sobre la mesa los problemas del juego: packs de compensación fragmentados, reglas con lagunas y la necesidad urgente de que Games Workshop tome el control de su propio sistema.',
+    full: [
+      'El Adepticon 2026 fue el mayor torneo de Warhammer: The Old World celebrado en América del Norte hasta la fecha. Con 78 participantes en el campeonato individual, Andrea Ninni con su ejército Jade Fleet se llevó el trofeo invicto tras ganar sus cinco enfrentamientos del día. Más allá del resultado, el evento dejó algo más valioso que el campeón: una conversación abierta y honesta sobre el estado del juego y lo que Games Workshop necesita hacer para que The Old World no pierda el impulso que tenía en su relanzamiento.',
+      'El análisis de Bell of Lost Souls —una de las comunidades wargamers más seguidas en inglés— identifica cuatro grandes áreas de mejora. La primera es establecer un circuito de eventos oficial y estandarizado que venga de la propia empresa: sin ese referente, la comunidad se fragmenta en formatos locales incompatibles que no pueden compararse entre sí. La segunda es publicar actualizaciones de balance más frecuentes, algo que GW ya hace en sus otros juegos activos como Age of Sigmar o 40K, y que en The Old World brilla por su ausencia.',
+      'La tercera crítica apunta al reglamento: hay secciones del libro de reglas que generan interpretaciones distintas según la región, especialmente en lo relativo a las reglas de escaramuzadores. Una segunda edición que cierre esas lagunas daría una base de juego uniforme a escala global. La cuarta —y quizás la más urgente— es que Games Workshop recupere el control de su propio juego: la proliferación de packs de compensación no oficiales y FAQs alternativos ha generado un mosaico de formatos regionales donde no todos juegan a lo mismo. Sin dirección unificada desde GW, el juego se arriesga a quedarse como un hobby de nicho fragmentado.',
+      'The Old World está en su tercer año desde el relanzamiento, y la base de jugadores responde con entusiasmo cuando GW lo alimenta. El Arcane Journal de Gran Catay —lanzado a principios de año con nuevas unidades como los Astromancers y los equipos de Crane Gun— fue muy bien recibido. La comunidad existe, el talento de pintura es espectacular y el lore del Viejo Mundo tiene una profundidad que pocas ambientaciones de fantasía pueden igualar. Ahora le toca a GW hacer los deberes.'
+    ],
+    date: '14/04/2026',
+    url: 'https://www.belloflostsouls.net/2026/04/warhammer-the-old-world-four-things-gw-needs-to-do-to-save-the-game.html',
+    page: 'warhammer.html',
+    pageLabel: 'Warhammer',
+    accent: '#8B0000',
+    source: 'belloflostsouls.net',
+    img: 'assets/img/news/the_old_world.jpg',
+    tags: ['Warhammer', 'The Old World', 'Games Workshop', 'Adepticon 2026', 'torneo', 'balance', 'comunidad', 'GW']
+  },
+
   // ── NOTICIA 57 ──────────────────────────────────────────────────────────────
   {
     id: 'noticia-dnd-villainous-options-playtest-2026',
@@ -1677,6 +1777,6 @@ var NEWS_DATA = [
 ];
 
 // NEWS_TRACKER
-// used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba", "gaming", "got", "rol"]
-// last_update: "2026-04-11"
-// next_available: ["esports", "nba", "magic", "warhammer", "gamedev"]
+// used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba", "gaming", "got", "rol", "esports", "nba", "magic", "warhammer"]
+// last_update: "2026-04-14"
+// next_available: ["gamedev", "got", "gaming"]

@@ -1,6 +1,6 @@
 # estado.md — Project State Tracker
 
-Last updated: 2026-04-11 (sesión 51)
+Last updated: 2026-04-14 (sesión 52)
 
 ---
 
@@ -103,7 +103,7 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 ## ▶ PRÓXIMA SESIÓN — Leer esto primero
 
 ### Estado actual del sistema de noticias (news)
-- `js/news-data.js` — array `NEWS_DATA` con **57 artículos**. **Añadir nuevos artículos AQUÍ, al principio del array (más reciente primero).**
+- `js/news-data.js` — array `NEWS_DATA` con **61 artículos**. **Añadir nuevos artículos AQUÍ, al principio del array (más reciente primero).**
 - `news.html` — renderizado dinámico vía `renderNews()`. El botón "LEER MÁS" ha sido reemplazado por enlace a `article.html?id=`. No tocar el grid HTML.
 - `article.html` — **NUEVA PÁGINA**. Renderiza artículos individuales vía query param `?id=`. Incluye navbar + footer + Pixel Patron Rain de fondo + botón compartir en Twitter/X. CSS inline en la propia página.
 - `index.html` — slider "¿Qué se cuece?" lee automáticamente `NEWS_DATA`. No requiere cambios al añadir noticias.
@@ -111,9 +111,9 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 
 ### NEWS_TRACKER — temas usados
 ```json
-{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba","gaming","got","rol"],"last_update":"2026-04-11"}
+{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba","gaming","got","rol","esports","nba","magic","warhammer"],"last_update":"2026-04-14"}
 ```
-**Próximos temas disponibles:** `esports` · `nba` · `magic` · `warhammer` · `gamedev`
+**Próximos temas disponibles:** `gamedev` · `got` · `gaming`
 
 ### IDs de artículos actuales en NEWS_DATA (para evitar duplicados)
 | # | id | topic | fecha |
@@ -210,6 +210,7 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 - 📦 Repo: **https://github.com/Karlete/freakonia**
 - ⚙️ Deploy: GitHub Pages (rama `main`, raíz `/`)
 
+**Sesión 52 (2026-04-14):** `js/news-data.js` — 4 artículos nuevos insertados al TOP (noticias 58–61): Esports (noticia-lec-spring-semanas3-4-2026 · LEC Versus Spring semanas 3-4, Karmine Corp lidera 8-3 · liquipedia.net) · NBA (noticia-nba-playin-2026 · NBA Play-In 2026 arranca 14/04, Heat/Hornets y Blazers/Suns · nba.com) · Magic (noticia-magic-secrets-strixhaven-2026 · Secrets of Strixhaven lanza 24/04, prerrelease 17/04, early access Arena 15/04 · magic.wizards.com) · Warhammer (noticia-warhammer-old-world-adepticon-gw-2026 · Adepticon 2026 Andrea Ninni campeón + debate 4 cosas que GW necesita cambiar · belloflostsouls.net). NEWS_TRACKER last_update → 2026-04-14, next_available → gamedev · got · gaming. Push a main.
 **Sesión 51 (2026-04-11):** `js/youtube.js` — fix bug autoplay: iframes ahora renderizan con `src=""` + `data-src`, y `toggleVideoEmbed` asigna `iframe.src = iframe.dataset.src` al abrir y borra `iframe.src = ''` al cerrar (detiene reproducción). Nuevo short añadido al array `SANPRIETO_VIDEOS`: `dOsnhBU5AzA` (FFVII WTF Traducción). `js/news-data.js` — 3 artículos nuevos insertados al TOP (noticias 55–57): Gaming (noticia-oblivion-remastered-gamepass-2026 · Oblivion Remastered en Game Pass Ultimate/PC el 16/04 · news.xbox.com) · GoT (noticia-hotd-s3-junio-2026-confirmado · HotD T3 junio, James Norton + Tommy Flanagan, T4 en 2028 · gamesradar.com) · Rol (noticia-dnd-villainous-options-playtest-2026 · D&D Villainous Options UA, opciones para PJs villanos · enworld.org). NEWS_TRACKER last_update → 2026-04-11, next_available → esports · nba · magic · warhammer · gamedev. Push a main.
 **Sesión 50 (2026-04-09):** `gaming.html` — sección de vídeos `@sanprieto` con inline embed toggle añadida dentro de `#canal`. `js/youtube.js` reescrito: array `SANPRIETO_VIDEOS`, `buildVideoCard()` genera tarjetas con miniatura, badge SHORT/VÍDEO, botones "VER EN YOUTUBE" + "REPRODUCIR AQUÍ" (este último oculto para Shorts), embed inline con autoplay. `css/gaming.css`: nuevo bloque de estilos para `.video-card`, `.video-embed-container` (con `@keyframes embedSlideIn`), `.video-embed-frame-wrap` (16:9 y 9:16 para Shorts), `.videos-section-header`, `#sanprieto-videos-grid`. Push a main.
 **Sesión 45 (2026-03-25):** 3 artículos insertados al TOP de `js/news-data.js` (noticias 44–46): Gaming (noticia-mhs3-reviews-metacritic-2026 · Monster Hunter Stories 3 reviews Metacritic +80 · 25/03) · GameDev (noticia-subnautica2-krafton-demanda-2026 · Krafton/ChatGPT/bonus 250M · 25/03) · Magic (noticia-secrets-strixhaven-preview-2026 · preview season Secrets of Strixhaven · 25/03). NEWS_TRACKER last_update → 2026-03-25, next_available → got · esports · nba. Push a main.

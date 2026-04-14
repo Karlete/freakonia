@@ -2,6 +2,23 @@
 
 ---
 
+## Sesión 52 — 2026-04-14
+
+### feat(news): 4 new articles — LEC semanas 3-4, NBA Play-In, MTG Strixhaven, Warhammer Adepticon
+
+**Modified files:**
+- `js/news-data.js`:
+  - 4 artículos nuevos insertados al TOP del array (noticias 58–61, fecha 14/04/2026):
+    - **Noticia 61** — Esports: `noticia-lec-spring-semanas3-4-2026` · LEC Versus Spring 2026 semanas 3-4, Karmine Corp lidera con 8-3, NaVi/VIT 7-4, bloque central igualado G2/MKOI/GIANTX/Heretics 6-5. Img: `lec_versus_2026.webp`. Source: liquipedia.net.
+    - **Noticia 60** — NBA: `noticia-nba-playin-2026` · Play-In Tournament 2026 arranca el 14/04, Heat vs Hornets y Trail Blazers vs Suns, playoffs el 18/04. Img: `nba_ball.webp`. Source: nba.com.
+    - **Noticia 59** — Magic: `noticia-magic-secrets-strixhaven-2026` · Secrets of Strixhaven lanza 24/04 en papel, 21/04 en Arena, early access 15/04, prerrelease 17/04, mazos bienvenida renovados. Img: `secrets_of_strixhaven.webp`. Source: magic.wizards.com.
+    - **Noticia 58** — Warhammer: `noticia-warhammer-old-world-adepticon-gw-2026` · Adepticon 2026 campeón Andrea Ninni con Jade Fleet (78 jugadores) + análisis 4 cosas que GW necesita cambiar. Img: `the_old_world.jpg`. Source: belloflostsouls.net.
+  - NEWS_TRACKER: last_update → 2026-04-14, next_available → gamedev · got · gaming.
+- `estado.md`: Last updated → 2026-04-14 (sesión 52), artículos 57 → 61, NEWS_TRACKER actualizado.
+- `task.md`: limpiado.
+
+---
+
 ## Sesión 51 — 2026-04-11
 
 ### fix(gaming): autoplay bug in youtube.js + new short + 3 news articles
