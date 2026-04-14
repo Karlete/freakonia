@@ -12,27 +12,27 @@ var NEWS_DATA = [
 
   // ── NOTICIA 61 ──────────────────────────────────────────────────────────────
   {
-    id: 'noticia-lec-spring-semanas3-4-2026',
+    id: 'noticia-lec-spring-semana3-2026',
     topic: 'esports',
     category: 'esports',
     emoji: '🏆',
     badgeLabel: 'ESPORTS',
-    title: 'LEC Versus Spring 2026 — Semanas 3 y 4: Karmine Corp lidera con 8-3 mientras la tabla se aprieta',
-    summary: 'Las semanas 3 y 4 del split europeo de League of Legends han dibujado un panorama inesperado: Karmine Corp encabeza la tabla con ocho victorias y se consolida como el equipo más sólido del split. NaVi y Vitality les pisan los talones, mientras G2, MKOI, GIANTX y Heretics se agolpan en el centro con resultados igualados.',
+    title: 'LEC Spring 2026 — Semana 3: Team Vitality lidera con 5-1 y GIANTX sigue invicto con 4-0',
+    summary: 'La semana 3 del LEC Spring 2026 (11-13 abril) ha dejado la tabla más clara: Team Vitality manda con 5 victorias en 6 partidos y GIANTX sigue sin perder un solo set. Heretics acumula su peor racha del split con dos derrotas más. SK Gaming sorprende ganando a Fnatic. La semana 4 arranca el 18 de abril.',
     full: [
-      'Las semanas 3 y 4 del LEC Versus Spring 2026 han dejado una clasificación sorprendente: Karmine Corp es el equipo más sólido del split hasta la fecha, con un balance de 8-3 que nadie anticipaba del todo al inicio de temporada. El equipo francés, con una afición ferviente y un juego que combina velocidad con capacidad de pelea en equipo, ha escalado hasta lo más alto de una tabla que a estas alturas del split sigue siendo muy difícil de leer.',
-      'Detrás de KC, Natus Vincere y Team Vitality comparten el segundo puesto con 7-4, lo que convierte la parte alta en un triángulo apretado. GIANTX, Team Heretics, Movistar KOI y G2 Esports están todos en el mismo bloque con 6-5, lo que significa que cualquiera de los cuatro puede quedar entre los dos primeros —y clasificarse para el MSI 2026— con dos buenas semanas de resultados. El LEC nunca ha estado tan igualado en la parte central de la tabla en los últimos años.',
-      'Fnatic, con 5-6, sigue siendo una incógnita. Después de ganar a G2 en la semana 2, el equipo naranja ha mezclado resultados irregulares que no permiten fiarse de ellos pero tampoco descartarlos como posible sorpresa de playoffs. SK Gaming continúa en la parte baja con 3-8, en una situación delicada de cara a la fase final del split. Quedan semanas de liga y el Roadtrip de París del 24 al 26 de abril se perfila como el primer gran evento presencial que puede cambiar el ambiente competitivo.',
-      'Para quien sigue el competitivo europeo desde hace años, ver a Karmine Corp al frente tiene algo de justicia poética: un proyecto construido desde la comunidad, con una base de fans que llenan pabellones, compitiendo de tú a tú con los históricos del continente. El guión del split está siendo de lo más interesante que se recuerda en Europa.'
+      'La tercera semana del LEC Spring 2026 ha dejado resultados muy claros en la parte alta y baja de la tabla. Team Vitality es el líder indiscutible con cinco victorias en seis partidos disputados. Esta semana el equipo se deshizo de G2 Esports (2-1 el viernes 11) y de Shifters (2-1 el sábado 12), consolidando su dominio en un split que juega todos contra todos en formato BO3.',
+      'El dato que más llama la atención es GIANTX: cuatro partidos jugados, cuatro victorias, cero derrotas. El martes 13 cerraron la semana despachando a Shifters 2-0 de forma cómoda, y la pregunta que ya circula por la comunidad es cuándo va a aparecer su primera derrota y quién se la va a dar. Con NaVi tercero en 3-1 y Movistar KOI en 2-2, la parte alta del split tiene mucho por definir todavía.',
+      'La semana también tuvo sus sorpresas. SK Gaming, que llevan 2-4 en el global del split, se sacó de encima el papel de aspirante a colista derrotando a Fnatic 2-0 el miércoles 13. Es la segunda victoria seguida de SK tras haber caído ante MKOI (2-0) el viernes 11. Por el lado de Heretics, la situación se complica: perdieron contra NaVi (0-2) el viernes y contra Karmine Corp (0-2) el sábado, dejando su balance en 1-5 y convirtiéndose en el equipo más castigado del split junto a Shifters.',
+      'Karmine Corp es otro nombre a vigilar: solo han jugado dos partidos y los dos los han ganado. Su rendimiento en las próximas semanas, cuando se enfrenten a los equipos de la parte alta, será determinante para saber si son candidatos reales a playoffs o si el calendario fácil del inicio los ha favorecido. La semana 4 arranca el 18 de abril y el Roadtrip de París del 24 al 26 de abril será el primer gran evento presencial del split.'
     ],
     date: '14/04/2026',
-    url: 'https://liquipedia.net/leagueoflegends/LEC/2026/Spring/Regular_Season',
+    url: 'https://globalsportsarchive.com/competition/leagueoflegends/lec-2026-spring/regular-season/145302/',
     page: 'esports.html',
     pageLabel: 'Esports',
     accent: '#C89B3C',
-    source: 'liquipedia.net',
+    source: 'globalsportsarchive.com',
     img: 'assets/img/news/lec_versus_2026.webp',
-    tags: ['LEC', 'League of Legends', 'Split Spring 2026', 'Karmine Corp', 'G2 Esports', 'Fnatic', 'GIANTX', 'Movistar KOI', 'Esports']
+    tags: ['LEC', 'League of Legends', 'Split Spring 2026', 'Team Vitality', 'GIANTX', 'SK Gaming', 'Fnatic', 'Heretics', 'Esports']
   },
 
   // ── NOTICIA 60 ──────────────────────────────────────────────────────────────
