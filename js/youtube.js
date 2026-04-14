@@ -5,6 +5,13 @@
 // type: 'short' = vertical 9:16 embed | 'video' = horizontal 16:9 embed
 const SANPRIETO_VIDEOS = [
   {
+    id: "xst_ontfUyg",
+    title: "7 CURIOSIDADES DE FFVII QUE NO TIENES NI PUTA IDEA 😂",
+    description:
+      "7 bombazos sobre Final Fantasy VII que ni los más hardcore conocen. ¿Cuál te ha flipado más? Cuéntamelo en comentarios.",
+    type: "short",
+  },
+  {
     id: "dOsnhBU5AzA",
     title: "FINAL FANTASY VII — WTF TRADUCCIÓN",
     description:

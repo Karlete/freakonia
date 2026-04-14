@@ -180,6 +180,124 @@
     @media (max-width: 640px) {
       #canal .taberna-img { height: 220px; }
     }
+
+    /* ── QUICKNAV — FFVII ── */
+    .platform-quicknav a.ffvii {
+      color: var(--accent-warn);
+      border-color: var(--accent-warn);
+    }
+
+    /* ── FINAL FANTASY VII — Reportaje Especial ── */
+    #ffvii-especial .ffvii-portada-wrap {
+      border: 4px solid var(--accent-warn);
+      box-shadow: 0 0 20px rgba(255,204,0,0.25);
+      overflow: hidden;
+      margin-bottom: var(--sp-5);
+    }
+    #ffvii-especial .ffvii-portada {
+      width: 100%;
+      display: block;
+      max-height: 380px;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.4s;
+    }
+    #ffvii-especial .ffvii-portada-wrap:hover .ffvii-portada {
+      transform: scale(1.03);
+    }
+    #ffvii-especial .ffvii-intro {
+      font-family: var(--font-secondary);
+      font-size: 20px;
+      color: var(--text);
+      line-height: 1.75;
+      margin-bottom: var(--sp-5);
+      border-left: 4px solid var(--accent-warn);
+      padding-left: var(--sp-4);
+    }
+    .ffvii-report-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-4);
+      margin-bottom: var(--sp-5);
+    }
+    .ffvii-block {
+      background: var(--bg-card);
+      border: 4px solid var(--accent-primary);
+      padding: var(--sp-4);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .ffvii-block:hover {
+      border-color: var(--accent-warn);
+      box-shadow: 0 0 14px rgba(255,204,0,0.18);
+    }
+    .ffvii-block-title {
+      font-family: var(--font-primary);
+      font-size: 0.42rem;
+      color: var(--accent-warn);
+      margin-bottom: var(--sp-3);
+      padding-bottom: var(--sp-2);
+      border-bottom: 2px solid var(--accent-warn);
+      line-height: 1.6;
+    }
+    .ffvii-block p {
+      font-family: var(--font-secondary);
+      font-size: 18px;
+      color: var(--text);
+      line-height: 1.75;
+      margin: 0 0 var(--sp-3);
+    }
+    .ffvii-block p:last-child { margin-bottom: 0; }
+    .ffvii-announce {
+      background: var(--bg-card);
+      border: 4px solid var(--accent-secondary);
+      box-shadow: 0 0 22px rgba(255,0,255,0.18);
+      padding: var(--sp-5);
+      text-align: center;
+    }
+    .ffvii-announce-label {
+      font-family: var(--font-primary);
+      font-size: 0.38rem;
+      color: var(--accent-secondary);
+      letter-spacing: 0.08em;
+      margin-bottom: var(--sp-3);
+      text-shadow: var(--glow-pink);
+    }
+    .ffvii-announce-title {
+      font-family: var(--font-primary);
+      font-size: 0.55rem;
+      color: var(--accent-warn);
+      text-shadow: 0 0 12px rgba(255,204,0,0.4);
+      margin-bottom: var(--sp-4);
+      line-height: 1.7;
+    }
+    .ffvii-announce p {
+      font-family: var(--font-secondary);
+      font-size: 19px;
+      color: var(--text);
+      max-width: 660px;
+      margin: 0 auto var(--sp-3);
+      line-height: 1.75;
+    }
+    .ffvii-announce-meta {
+      font-family: var(--font-primary);
+      font-size: 0.38rem;
+      color: var(--text-dim);
+      margin-bottom: var(--sp-4);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--sp-3);
+    }
+    .ffvii-announce-meta span {
+      color: var(--accent-warn);
+      border: 2px solid var(--accent-warn);
+      padding: 4px 10px;
+    }
+    @media (max-width: 640px) {
+      .ffvii-report-grid { grid-template-columns: 1fr; }
+      #ffvii-especial .ffvii-portada { max-height: 220px; }
+      .ffvii-announce-title { font-size: 0.42rem; }
+    }
   </style>
   <link rel="canonical" href="https://freakonia.com/gaming.html">
 
@@ -292,8 +410,9 @@
       <!-- Quick platform navigation -->
       <nav class="platform-quicknav" aria-label="Saltar a plataforma">
         <span style="font-family:var(--font-primary);font-size:0.45rem;color:var(--text-dim);align-self:center;">▶ IR A:</span>
-        <a href="#canal"         class="yt">📺 MI CANAL</a>
-        <a href="#master-system" class="sms">📺 MASTER SYSTEM II</a>
+        <a href="#canal"          class="yt">📺 MI CANAL</a>
+        <a href="#ffvii-especial" class="ffvii">⚔ FINAL FANTASY VII</a>
+        <a href="#master-system"  class="sms">📺 MASTER SYSTEM II</a>
         <a href="#game-boy"      class="gb">🎮 GAME BOY</a>
         <a href="#super-nintendo" class="snes">🟣 SUPER NINTENDO</a>
         <a href="#playstation-1" class="ps1">💿 PLAYSTATION 1</a>
@@ -348,6 +467,67 @@
         <span class="section-badge">@SANPRIETO</span>
       </div>
       <div id="sanprieto-videos-grid"></div>
+
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       REPORTAJE ESPECIAL — FINAL FANTASY VII
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="ffvii-especial">
+    <div class="container">
+
+      <div class="section-label gold">⚔ REPORTAJE ESPECIAL</div>
+      <h2 class="section-title" style="color:var(--accent-warn);text-shadow:0 0 14px rgba(255,204,0,0.5);">FINAL FANTASY VII</h2>
+      <p style="font-family:var(--font-primary);font-size:0.4rem;color:var(--text-dim);margin-bottom:var(--sp-5);">EL JUEGO QUE LO CAMBIÓ TODO — 1997</p>
+
+      <!-- Portada -->
+      <div class="ffvii-portada-wrap reveal">
+        <img src="assets/img/FFVIIPortada.webp"
+             alt="Final Fantasy VII — Reportaje especial Freakonia"
+             class="ffvii-portada"
+             loading="lazy" />
+      </div>
+
+      <!-- Intro -->
+      <p class="ffvii-intro reveal">
+        Un RPG de Square que llegó a PlayStation en 1997 y no solo redefinió el género: redefinió lo que se podía esperar de un videojuego. La historia de un equipo que lo apostó todo a una tecnología que nadie dominaba aún, y de un juego que casi treinta años después sigue siendo imposible de olvidar.
+      </p>
+
+      <!-- Report grid -->
+      <div class="ffvii-report-grid">
+
+        <div class="ffvii-block reveal">
+          <div class="ffvii-block-title">📼 HISTORIA REAL — SQUARE, LA APUESTA Y PLAYSTATION</div>
+          <p>En 1995, Square necesitaba dar el salto al 3D para no quedarse atrás. Hironobu Sakaguchi lideró el proyecto; Yoshinori Kitase lo dirigió; Tetsuya Nomura diseñó los personajes. El equipo creció hasta más de 120 personas — el mayor que había trabajado en un videojuego japonés hasta la fecha.</p>
+          <p>La ruptura con Nintendo fue histórica. Square mostró una demo técnica en 3D y ante la tibia respuesta de la Gran N, tomó la decisión que cambiaría la industria: FFVII sería exclusivo de PlayStation. La noticia fue portada en todas las revistas del sector. Nobuo Uematsu compuso más de 60 temas, incluyendo One-Winged Angel — el primer tema con coro de la saga.</p>
+          <p>Lanzado en Japón el 31 de enero de 1997, vendió un millón de copias en tres días. En Norteamérica llegó en septiembre y fue el detonante que convirtió los JRPGs en fenómeno de masas en Occidente.</p>
+        </div>
+
+        <div class="ffvii-block reveal">
+          <div class="ffvii-block-title">🌆 LA HISTORIA — CLOUD, MIDGAR Y LA MENTIRA</div>
+          <p>Cloud Strife es un mercenario que trabaja para AVALANCHE, un grupo eco-terrorista que lucha contra la Corporación Shinra — que drena la energía vital del planeta (Mako) para generar electricidad. La ciudad de Midgar, dividida entre el mundo de arriba para los ricos y los slums sin luz solar, es uno de los diseños de mundo más icónicos de la historia del medio.</p>
+          <p>El pasado de Cloud está fragmentado y lleno de mentiras que ni él mismo reconoce. La revelación sobre lo que ocurrió realmente en Nibelheim es uno de los momentos narrativos más recordados de la historia de los videojuegos. Sephiroth, el General Legendario que enloqueció al descubrir sus verdaderos orígenes, definió el estándar de villano durante décadas.</p>
+          <p>Y luego está Aerith. No hace falta decir más. Quien lo sabe, lo sabe. Quien no... que juegue.</p>
+        </div>
+
+      </div>
+
+      <!-- Announcement -->
+      <div class="ffvii-announce reveal">
+        <div class="ffvii-announce-label">▶ PRÓXIMAMENTE EN @SANPRIETO</div>
+        <div class="ffvii-announce-title">SERIE COMPLETA — GAMEPLAY DE FFVII CON MODS GRÁFICOS + RETRADUCCIÓN ESPAÑOLA</div>
+        <p>Este fin de semana sube la serie completa del gameplay de Final Fantasy VII: tres vídeos de casi 9 horas cada uno, con los mods gráficos activados y la retraducción española que arregla todos los errores de la localización original. El FFVII que siempre mereció ser jugado así.</p>
+        <div class="ffvii-announce-meta">
+          <span>3 VÍDEOS</span>
+          <span>~9 H CADA UNO</span>
+          <span>MODS GRÁFICOS</span>
+          <span>RETRADUCCIÓN ES</span>
+        </div>
+        <a href="https://www.youtube.com/@sanprieto" class="btn btn-pink" target="_blank" rel="noopener noreferrer">🔔 SUSCRÍBETE PARA NO PERDÉRTELO</a>
+      </div>
 
     </div>
   </section>
