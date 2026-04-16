@@ -10,6 +10,81 @@
 
 var NEWS_DATA = [
 
+  // ── NOTICIA 64 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-hotd-s3-nuevos-caballeros-2026',
+    topic: 'got',
+    category: 'got',
+    emoji: '🐉',
+    badgeLabel: 'GOT',
+    title: 'House of the Dragon T3 suma dos caballeros al elenco — Barry Sloane y Tom Cullen se unen a la Danza de Dragones',
+    summary: 'Westeros.org confirma dos nuevas incorporaciones al reparto de la tercera temporada: Barry Sloane da vida a Ser Adrian Redfort, caballero del Valle, y Tom Cullen interpreta a Ser Luthor Largent, oficial de la Guardia de la Ciudad. Además, el showrunner Ryan Condal ha adelantado que habrá un episodio conceptual de estructura completamente distinta al resto de la serie.',
+    full: [
+      'La Danza de Dragones sigue sumando piezas. Westeros.org ha confirmado dos nuevas incorporaciones al elenco de la tercera temporada de House of the Dragon. Barry Sloane, conocido por su trabajo en series como Revenge y Six, da vida a Ser Adrian Redfort, un caballero del Valle cuyo papel en la guerra civil Targaryen está por ver pero que en el libro tiene presencia en los enfrentamientos de la coalición norteña. Tom Cullen, al que muchos recordarán de Knightfall, se mete en la piel de Ser Luthor Largent, un oficial de la Guardia de la Ciudad de desempeño temible que aparece en los capítulos más violentos de Fuego y Sangre.',
+      'Estas incorporaciones se suman a las que ya conocíamos: James Norton como Lord Ormund Hightower y Tommy Flanagan como Roderick Dustin, el Roddy el Ruin que lidera a los Lobos del Invierno. El casting sigue apostando por actores de perfil medio-alto con experiencia en ficción épica, lo cual es una señal de que la tercera temporada no va a escatimar en el tratamiento de los personajes secundarios. En la segunda, ese fue uno de los puntos débiles: figuras que en el libro son importantes quedaron reducidas a apariciones casi anecdóticas.',
+      'Lo más llamativo de lo que ha trascendido hasta ahora es el comentario del showrunner Ryan Condal sobre un episodio "conceptual" que romperá la estructura habitual de la serie. No ha dado detalles, pero la frase exacta apunta a un capítulo que se aleja del formato tradicional y apuesta por algo más experimental en términos narrativos. La comunidad ya especula: ¿un episodio centrado en un único personaje? ¿Algo en el estilo del "Long Night" de GoT pero bien ejecutado? Sea lo que sea, la expectativa está ahí.',
+      'Con estreno confirmado para junio de 2026 y el cast al completo en el CCXP México del 24 al 26 de abril para una presentación con avances exclusivos, la campaña de promoción de la T3 ya está en marcha. La segunda temporada dejó el listón bajo, pero con la guerra completamente desatada y personajes nuevos de peso entrando en escena, hay motivos para el optimismo cauteloso.'
+    ],
+    date: '16/04/2026',
+    url: 'https://www.westeros.org/News/Entry/Three_New_Characters_Announced_for_House_of_the_Dragon',
+    page: 'got.html',
+    pageLabel: 'GoT',
+    accent: '#cc2200',
+    source: 'westeros.org',
+    img: 'assets/img/news/got_generic.webp',
+    tags: ['House of the Dragon', 'HBO', 'Temporada 3', 'Barry Sloane', 'Tom Cullen', 'Targaryen', 'Danza de Dragones', 'casting']
+  },
+
+  // ── NOTICIA 63 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-nba-playin-resultados-2026',
+    topic: 'nba',
+    category: 'nba',
+    emoji: '🏀',
+    badgeLabel: 'NBA',
+    title: 'NBA Play-In 2026 — Avdija firma 41 puntos en la remontada de Portland y Curry saca a los Warriors del abismo contra los Clippers',
+    summary: 'La primera tanda del Play-In 2026 dejó imágenes para el recuerdo. Deni Avdija anotó 41 puntos para rescatar a Portland de -11 en el cuarto cuarto y eliminar a Phoenix. En el Oeste, los Warriors remontaron una desventaja de 13 con Curry dominando la segunda mitad. En el Este, los 76ers sin Joel Embiid sobrevivieron gracias a Tyrese Maxey (31 pts) y los Hornets avanzan de la mano de LaMelo Ball y Coby White.',
+    full: [
+      'El Play-In Tournament 2026 ha dado exactamente lo que prometía: partidos competidos, remontadas y actuaciones individuales para el recuerdo. En el Oeste, Deni Avdija firmó uno de los mejores partidos de su carrera con 41 puntos para devolver a los Portland Trail Blazers a la postemporada. Los Blazers llegaron al cuarto cuarto con once puntos de desventaja ante los Phoenix Suns, y Avdija se encargó de desmontar la ventaja local prácticamente él solo en los minutos finales. Una actuación que ya circula por todas las redes y que recuerda a esos partidos que definen el rumbo de una franquicia.',
+      'En el otro cruce del Oeste, los Golden State Warriors protagonizaron la remontada de la noche contra los Los Angeles Clippers. Trece puntos abajo con menos de diez minutos para el final, Stephen Curry activó el modo que le conocemos de toda la vida y anotó 27 puntos solo en la segunda mitad. Al Horford colaboró con cuatro triples en los momentos clave, y los Warriors sacaron adelante un partido que ya tenían perdido. Con esta victoria, Golden State accede directamente a la séptima plaza del Oeste para los playoffs.',
+      'En el Este, la historia fue la ausencia de Joel Embiid. Los Philadelphia 76ers tuvieron que afrontar el partido sin su estrella, y Tyrese Maxey respondió como el líder que está demostrando ser: 31 puntos y una actuación madura que silenció cualquier duda sobre si los Sixers podían sobrevivir sin su pívot. Ganaron el partido contra el Orlando Magic y aseguran la séptima plaza del Este.',
+      'Los Charlotte Hornets también avanzaron en la misma conferencia gracias a una noche inspirada de LaMelo Ball, con Coby White ejerciendo de apoyo perfecto cuando la presión apretaba más. Charlotte aspira a la octava plaza en los juegos de segunda ronda del Play-In, donde se cruzará con el Orlando Magic. Los playoffs propiamente dichos arrancan el 18 de abril, y el cuadro ya está prácticamente definido. La postemporada promete.'
+    ],
+    date: '16/04/2026',
+    url: 'https://www.nba.com/playoffs/2026/play-in-tournament',
+    page: 'nba.html',
+    pageLabel: 'NBA',
+    accent: '#FF8C00',
+    source: 'nba.com',
+    img: 'assets/img/news/nba_generic.png',
+    tags: ['NBA', 'Play-In 2026', 'Avdija', 'Portland Trail Blazers', 'Golden State Warriors', 'Stephen Curry', '76ers', 'Maxey', 'Charlotte Hornets', 'postemporada']
+  },
+
+  // ── NOTICIA 62 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-unity-platform-toolkit-unite2026',
+    topic: 'gamedev',
+    category: 'gamedev',
+    emoji: '🎮',
+    badgeLabel: 'GAMEDEV',
+    title: 'Unite 2026 — Unity lanza el Platform Toolkit y promete generar juegos casuales completos con IA desde un prompt',
+    summary: 'En Unite 2026, Unity presentó el Platform Toolkit: una herramienta que permite lanzar un juego en múltiples plataformas con una sola línea de C#. También anunció acuerdos con Stripe y Coda para tiendas externas, y confirmó que su IA podrá generar juegos casuales completos desde instrucciones de texto. Un roadmap conservador pero enfocado en recuperar la confianza perdida desde el escándalo del Runtime Fee.',
+    full: [
+      'Unite 2026 ha llegado con un mensaje claro de Unity Technologies: estabilidad y herramientas prácticas antes que anuncios espectaculares. El evento, seguido de cerca por toda la comunidad de desarrolladores indie y estudios medianos, presentó el Platform Toolkit como la novedad más relevante del año. La promesa es ambiciosa en su sencillez: con una sola línea de código C#, el motor gestiona automáticamente las especificidades de cada plataforma —achievements, sistemas de pago, notificaciones— y las convierte al formato nativo correspondiente. Para un indie que quiere lanzar simultáneamente en PC, consolas y móvil sin volverse loco con SDKs diferentes, es una herramienta que puede cambiar el flujo de trabajo de forma significativa.',
+      'Unity también anunció acuerdos con los procesadores de pago Stripe y Coda para conectar tiendas web externas directamente desde el motor. En un contexto donde Epic y Apple llevan años peleando en los tribunales por las comisiones de las tiendas, la posibilidad de derivar ventas a una tienda propia con mejores márgenes es una opción que muchos desarrolladores van a mirar con atención. No es una solución mágica —la implementación depende de cada plataforma y sus políticas—, pero es un paso en la dirección correcta.',
+      'El anuncio más llamativo, y también el más debatido en redes, es la afirmación de que la IA de Unity será capaz de generar juegos casuales completos a partir de instrucciones en texto. La empresa no dio una fecha concreta ni mostró una demo pública, pero el CEO Matthew Bromberg confirmó la dirección en la que trabajan. Los escépticos señalan que "casual game" es un término muy amplio y que el camino entre un prototipo generado por IA y un juego publicable sigue siendo largo. Los optimistas ven en ello el mismo salto que supuso pasar de programar píxel a píxel a usar motores como el propio Unity.',
+      'Lo que más se agradece de Unite 2026 es precisamente lo que no tiene: promesas vacías. Desde el escándalo del Runtime Fee en 2023, que provocó una fuga masiva de desarrolladores hacia Godot y otras alternativas, Unity ha estado en modo reparación. El roadmap de este año es deliberadamente conservador, centrado en rendimiento, velocidad de iteración y herramientas que los devs han pedido directamente. Si cumplen, la comunidad indie que se quedó —y la que se fue y está mirando de reojo— tiene razones para volver a confiar en el motor más usado de los últimos diez años.'
+    ],
+    date: '16/04/2026',
+    url: 'https://www.gamedeveloper.com/programming/unity-unveils-new-toolkit-to-accelerate-multi-platform-launches',
+    page: 'gamedev.html',
+    pageLabel: 'GameDev',
+    accent: '#00ff41',
+    source: 'gamedeveloper.com',
+    img: 'assets/img/news/unity_ai.webp',
+    tags: ['Unity', 'Unite 2026', 'Platform Toolkit', 'IA', 'indie dev', 'game development', 'Unity 6', 'GameDev']
+  },
+
   // ── NOTICIA 61 ──────────────────────────────────────────────────────────────
   {
     id: 'noticia-lec-spring-semana3-2026',
@@ -1777,6 +1852,6 @@ var NEWS_DATA = [
 ];
 
 // NEWS_TRACKER
-// used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba", "gaming", "got", "rol", "esports", "nba", "magic", "warhammer"]
-// last_update: "2026-04-14"
-// next_available: ["gamedev", "got", "gaming"]
+// used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba", "gaming", "got", "rol", "esports", "nba", "magic", "warhammer", "got", "nba", "gamedev"]
+// last_update: "2026-04-16"
+// next_available: ["gaming", "esports", "warhammer"]

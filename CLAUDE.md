@@ -179,3 +179,5 @@ Replace it with:
   Si no existe genérica para ese topic, dejar `img: ''`.
 
 Do not modify anything else in the file.
+
+At the end of the sesions your code will be revised by Chat GPT and Grok.
