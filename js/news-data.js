@@ -10,6 +10,106 @@
 
 var NEWS_DATA = [
 
+  // ── NOTICIA 68 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-msi-2026-daejeon-clasificacion',
+    topic: 'esports',
+    category: 'esports',
+    emoji: '🏆',
+    badgeLabel: 'ESPORTS',
+    title: 'MSI 2026 llega a Daejeon en junio — formato renovado, BLG con ventaja del First Stand y la carrera de clasificación en marcha',
+    summary: 'Riot Games ha confirmado que el Mid-Season Invitational 2026 se celebrará en el Daejeon Convention Center del 28 de junio al 12 de julio. Nuevo formato: fase de grupos eliminada, con Play-In y Bracket Stage en eliminatorias directas. Bilibili Gaming entra al Bracket Stage sin pasar Play-In tras ganar el First Stand. Las splits de primavera definen quién va a Corea.',
+    full: [
+      'El Mid-Season Invitational 2026 tiene ya todos sus detalles confirmados. El torneo se celebrará en el Daejeon Convention Center II de Corea del Sur, del 28 de junio al 12 de julio, y llega con cambios importantes en el formato que llevan tiempo demandando tanto jugadores como aficionados. El play-in stage va del 28 de junio al 1 de julio, el bracket stage se extiende del 3 al 6 y del 8 al 12, con la Upper Final el 9, la Lower Final el 11 y la Gran Final el 12 de julio. Daejeon, sede habitual de grandes eventos de esports coreanos, acoge el torneo internacional más importante del calendario de League of Legends antes de Worlds.',
+      'El cambio de formato más relevante es la eliminación de la fase de grupos tradicional en favor de un sistema de doble eliminación directa desde el Bracket Stage. Las primeras semillas de LCK, LEC, LCS y LCP entran directamente al Bracket Stage, mientras que los segundos de esas regiones —más el campeón de CBLOL— deben pasar el Play-In. Y aquí llega la ventaja más significativa: Bilibili Gaming, ganadores del First Stand 2026 en São Paulo, llevan a la LPL el privilegio de colocar dos equipos directamente en el Bracket Stage. BLG y el segundo clasificado de la LPL se saltan el Play-In, una ventaja enorme en un torneo donde cada serie puede ser definitiva.',
+      'La carrera de clasificación está en plena ebullición. En el LEC, el Split de Primavera define las dos plazas europeas, con Team Vitality y GIANTX liderando en las primeras semanas. En la LCK, el sistema 2026 tiene su propio calendario de clasificación. Para los fans europeos, la clave está en si el LEC puede enviar representantes capaces de competir en la fase de brackets: en el First Stand, G2 llegó a la final —perdiendo 3-1 contra BLG—, señal de que Europa puede estar en conversación en Daejeon.',
+      'El MSI 2026 en Corea tiene un atractivo especial. Los aficionados al LoL competitivo llevan años pidiendo un torneo internacional en el país donde el juego tiene más arraigo cultural, y finalmente llega. Con los equipos de la LPL llegando con ventaja de First Stand y los coreanos jugando ante su propio público, el ambiente en Daejeon promete ser extraordinario. Junio y julio llegan cargados de esports, y el calendario ya está marcado en rojo.'
+    ],
+    date: '20/04/2026',
+    url: 'https://dotesports.com/league-of-legends/news/lol-msi-2026-and-worlds-2026-schedule-venues-format-changes-and-ticket-details',
+    page: 'esports.html',
+    pageLabel: 'Esports',
+    accent: '#C89B3C',
+    source: 'dotesports.com',
+    img: 'assets/img/news/lpl_2026.webp',
+    tags: ['MSI 2026', 'Mid-Season Invitational', 'League of Legends', 'Daejeon', 'BLG', 'Bilibili Gaming', 'LPL', 'clasificación', 'esports']
+  },
+
+  // ── NOTICIA 67 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-got-winds-winter-falso-leak-2026',
+    topic: 'got',
+    category: 'got',
+    emoji: '🐉',
+    badgeLabel: 'GOT',
+    title: 'The Winds of Winter no llega en otoño — Bantam Books desmiente el leak y Martin tiene unas 1.100 páginas escritas',
+    summary: 'A principios de abril circuló en internet un supuesto "leak" afirmando que Martin había entregado el manuscrito de The Winds of Winter y que el libro saldría en otoño de 2026. Bantam Books desmintió la información: es falsa. La última declaración de Martin, de enero de 2026, sitúa el manuscrito en aproximadamente 1.100 páginas. La espera sigue.',
+    full: [
+      'Ya es una tradición del fandom de ASOIAF: cada cierto tiempo aparece un "leak" asegurando que The Winds of Winter está terminado, que Martin lo entregó en secreto y que el libro llegará antes de que nadie lo espere. Esta vez el rumor tomó más forma que de costumbre: una cuenta de Twitter bajo el nombre de "Ned Stark" difundió un supuesto mensaje de un asistente de producción en Bantam Spectra afirmando que el manuscrito estaba entregado desde enero, que rondaba las 1.600 páginas y que un anuncio oficial estaba a punto de producirse con fecha de lanzamiento para las navidades de 2026.',
+      'La respuesta de Bantam Books llegó rápido. Un representante de la editorial comunicó a Entertainment Weekly que "el contenido que están viendo en internet sobre un supuesto leak es falso". Punto final. Martin lleva décadas prometiendo que cuando el libro esté terminado, lo anunciará él mismo en su blog Not A Blog antes que nadie. Que los fans de ASOIAF conozcan ese compromiso y sigan cayendo en cada nuevo rumor dice mucho sobre los niveles de ansiedad que genera la espera del sexto volumen.',
+      'La última declaración oficial de George R.R. Martin sobre el libro llegó en una entrevista con The Hollywood Reporter publicada en enero de 2026. El autor situaba el manuscrito en aproximadamente 1.100 páginas y reconocía que el libro es "la maldición de mi vida". También admitió que aunque le habían dejado claro que The Winds of Winter es la prioridad, hay momentos en los que "no está de humor" para trabajar en él. Para contexto: en julio de 2026 se cumplirán casi quince años desde la publicación de A Dance with Dragons.',
+      '¿Llegará The Winds of Winter algún día? La respuesta razonable es sí, aunque nadie sabe cuándo. En el fandom hay quien ya ha decidido que la historia de ASOIAF la terminarán las series de HBO antes de que Martin ponga el punto final. Otros seguimos esperando el blog post que empiece con "Tengo algo que anunciaros". Por si acaso, no contengas la respiración.'
+    ],
+    date: '20/04/2026',
+    url: 'https://collider.com/game-of-thrones-george-rr-martin-winds-of-winter-release-update-not-coming-in-2026/',
+    page: 'got.html',
+    pageLabel: 'GoT',
+    accent: '#cc2200',
+    source: 'collider.com',
+    img: 'assets/img/news/got_generic.webp',
+    tags: ['The Winds of Winter', 'George R.R. Martin', 'ASOIAF', 'Bantam Books', 'leak falso', 'A Song of Ice and Fire', 'libros']
+  },
+
+  // ── NOTICIA 66 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-nba-playoffs-r1-juego1-2026',
+    topic: 'nba',
+    category: 'nba',
+    emoji: '🏀',
+    badgeLabel: 'NBA',
+    title: 'NBA Playoffs 2026 — Primera ronda arranca con sorpresa: el Magic tumba a Detroit y Wembanyama debuta con récord histórico de los Spurs',
+    summary: 'La primera ronda de los playoffs 2026 arrancó el 18 y 19 de abril con resultados que marcan el tono. El Orlando Magic venció en Detroit 112-101 —Paolo Banchero como líder— desafiando al primer cabeza de serie del Este. Oklahoma City aplastó a los Suns 119-84. Y Victor Wembanyama firmó 35 puntos en su debut de postemporada: récord histórico de los San Antonio Spurs.',
+    full: [
+      'La primera ronda de los NBA Playoffs 2026 ya ha dado imágenes para el recuerdo. Los Detroit Pistons llegaban como primer cabeza de serie del Este —la primera vez que la franquicia lideraba la conferencia en veinte años—, con toda la presión de un equipo que había construido algo especial durante la temporada regular. El Orlando Magic, séptima plaza conseguida en el Play-In, se plantó en el Little Caesars Arena y se llevó el Juego 1 por 112-101. Paolo Banchero fue el hombre del partido: 23 puntos, 9 rebotes y 4 asistencias. Franz Wagner apareció en el cuarto período con 11 de sus 19 puntos para cerrar cualquier intento de remontada. Los Pistons cargan ahora con once derrotas consecutivas en casa en playoffs, un récord negativo de la NBA que en Detroit nadie quiere recordar.',
+      'En el Oeste, Oklahoma City Thunder empezó la postemporada como ha jugado toda la temporada: sin misericordia. 119-84 a los Phoenix Suns en el Juego 1, con Shai Gilgeous-Alexander anotando 25 puntos, distribuyendo 7 asistencias y estableciendo un récord personal en postemporada con 15 tiros libres anotados en 17 intentos. La diferencia de 35 puntos en el marcador habla de un equipo en estado de forma diferente al del resto. Boston Celtics tampoco tuvo piedad: ganaron a los 76ers con 32 puntos de margen, la mayor diferencia en un debut de playoffs en la historia de la franquicia.',
+      'Pero la gran historia individual del primer fin de semana fue Victor Wembanyama. El pívot francés debutó en playoffs con los San Antonio Spurs firmando 35 puntos —récord histórico de la franquicia en un debut de postemporada—, en una actuación que demostró que el escenario de los playoffs no le impone lo más mínimo. Los Spurs, que vuelven a la postemporada después de seis años de ausencia, arrancaron con victoria ante Portland. Es el tipo de debut que define narrativas para toda una carrera.',
+      'La primera ronda tiene por delante muchos partidos, pero las primeras conclusiones son claras: los Magic no van a ser unos rivales cómodos para Detroit, OKC llega a otro nivel y Wembanyama en playoffs es exactamente el espectáculo que llevábamos esperando. Juego 2 en cada serie en los próximos días, y el cuadro de playoffs empieza a tomar su forma definitiva.'
+    ],
+    date: '20/04/2026',
+    url: 'https://www.nba.com/news/live-updates-2026-nba-playoffs-r1-celtics-76ers-renew-classic-rivalry-to-open-slate',
+    page: 'nba.html',
+    pageLabel: 'NBA',
+    accent: '#FF8C00',
+    source: 'nba.com',
+    img: 'assets/img/news/nba_ball.webp',
+    tags: ['NBA', 'Playoffs 2026', 'primera ronda', 'Detroit Pistons', 'Orlando Magic', 'Wembanyama', 'OKC Thunder', 'Paolo Banchero', 'San Antonio Spurs']
+  },
+
+  // ── NOTICIA 65 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-gta-vi-mapa-noviembre-2026',
+    topic: 'gaming',
+    category: 'gaming',
+    emoji: '🕹️',
+    badgeLabel: 'GAMING',
+    title: 'GTA VI — El mapa de Leonida al detalle, sin retraso nuevo y con el marketing arrancando este verano',
+    summary: 'El 14 de abril, la comunidad publicó la versión más completa hasta la fecha del mapa de GTA VI: Vice City, los Leonida Keys, Grassrivers y Mount Kalaga ya tienen forma. Por primera vez en años, Rockstar ha entrado en el año fiscal de Take-Two sin anunciar ningún retraso, y un informe de febrero confirmó que el marketing de lanzamiento arranca este verano. Fecha: 19 de noviembre de 2026.',
+    full: [
+      'La espera de GTA VI tiene ya una historia de dilaciones que haría sonrojar al mismísimo Roman Bellic. Primero fue el Otoño de 2025, luego Mayo de 2026, y finalmente Noviembre de 2026 —la fecha actual—. Cada movimiento en el calendario venía acompañado de un apocalipsis en internet y meses de especulaciones. Pero algo ha cambiado esta semana: el 1 de abril marcó el inicio del año fiscal de Take-Two Interactive, y por primera vez desde que se anunció GTA VI, no hubo ninguna noticia de nuevo retraso. Para quienes llevamos un tiempo siguiendo el ciclo de Rockstar, ese silencio vale más que cualquier comunicado oficial.',
+      'La otra gran noticia llegó el 14 de abril: un proyecto comunitario de cartografía publicó la versión más actualizada del mapa de Leonida, la versión ficticia de Florida. El resultado es impresionante: Vice City en el sur con su zona costera, los Leonida Keys como archipiélago en el extremo meridional, Grassrivers al estilo de los Everglades en el centro-oeste, Mount Kalaga con cañones y bosques en el norte, y una red de carreteras y ciudades que conectan todo. Si el mapa publicado se ajusta aunque sea parcialmente a la realidad, GTA VI será el open world más grande que Rockstar haya construido, dejando el mapa de GTA V como algo parecido a un barrio.',
+      'El informe financiero de Take-Two de febrero fue explícito: el "launch marketing" de GTA VI arrancará este verano. Eso significa más trailers, gameplay en directo y la campaña publicitaria completa antes del otoño. El Trailer 2 ya fue un golpe visual de impacto pero mostró poco sobre las mecánicas reales. Un tercer trailer centrado en gameplay parece el siguiente paso lógico. Con la fecha de 19 de noviembre para PS5 y Xbox Series sin moverse y el marketing listo para despegar, las probabilidades de un cuarto retraso son menores que nunca.',
+      'PC tendrá que esperar: Rockstar no ha confirmado versión para ordenador, y su historial —GTA V tardó dos años, Red Dead 2 también— hace pensar que llegará en 2027 o más tarde. Para los que solo tenemos PC, la espera se prolonga un poco más. Pero al menos la de la versión consola parece que esta vez va en serio. Noviembre no puede llegar antes.'
+    ],
+    date: '20/04/2026',
+    url: 'https://www.gamingbible.com/news/gta-6-updated-map-leak-324914-20260414',
+    page: 'gaming.html',
+    pageLabel: 'Gaming',
+    accent: '#00bfff',
+    source: 'gamingbible.com',
+    img: 'assets/img/news/gran_theft_auto_6.webp',
+    tags: ['GTA VI', 'GTA 6', 'Rockstar Games', 'Take-Two', 'Leonida', 'Vice City', 'mapa filtrado', 'noviembre 2026']
+  },
+
   // ── NOTICIA 64 ──────────────────────────────────────────────────────────────
   {
     id: 'noticia-hotd-s3-nuevos-caballeros-2026',
@@ -1852,6 +1952,6 @@ var NEWS_DATA = [
 ];
 
 // NEWS_TRACKER
-// used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba", "gaming", "got", "rol", "esports", "nba", "magic", "warhammer", "got", "nba", "gamedev"]
-// last_update: "2026-04-16"
-// next_available: ["gaming", "esports", "warhammer"]
+// used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba", "gaming", "got", "rol", "esports", "nba", "magic", "warhammer", "got", "nba", "gamedev", "esports", "got", "nba", "gaming"]
+// last_update: "2026-04-20"
+// next_available: ["magic", "warhammer", "gamedev"]

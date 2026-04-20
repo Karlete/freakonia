@@ -1,6 +1,6 @@
 # estado.md — Project State Tracker
 
-Last updated: 2026-04-14 (sesión 52)
+Last updated: 2026-04-20 (sesión 53)
 
 ---
 
@@ -103,7 +103,7 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 ## ▶ PRÓXIMA SESIÓN — Leer esto primero
 
 ### Estado actual del sistema de noticias (news)
-- `js/news-data.js` — array `NEWS_DATA` con **61 artículos**. **Añadir nuevos artículos AQUÍ, al principio del array (más reciente primero).**
+- `js/news-data.js` — array `NEWS_DATA` con **65 artículos**. **Añadir nuevos artículos AQUÍ, al principio del array (más reciente primero).**
 - `news.html` — renderizado dinámico vía `renderNews()`. El botón "LEER MÁS" ha sido reemplazado por enlace a `article.html?id=`. No tocar el grid HTML.
 - `article.html` — **NUEVA PÁGINA**. Renderiza artículos individuales vía query param `?id=`. Incluye navbar + footer + Pixel Patron Rain de fondo + botón compartir en Twitter/X. CSS inline en la propia página.
 - `index.html` — slider "¿Qué se cuece?" lee automáticamente `NEWS_DATA`. No requiere cambios al añadir noticias.
@@ -111,13 +111,24 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 
 ### NEWS_TRACKER — temas usados
 ```json
-{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba","gaming","got","rol","esports","nba","magic","warhammer"],"last_update":"2026-04-14"}
+{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba","gaming","got","rol","esports","nba","magic","warhammer","got","nba","gamedev","esports","got","nba","gaming"],"last_update":"2026-04-20"}
 ```
-**Próximos temas disponibles:** `gamedev` · `got` · `gaming`
+**Próximos temas disponibles:** `magic` · `warhammer` · `gamedev`
 
 ### IDs de artículos actuales en NEWS_DATA (para evitar duplicados)
 | # | id | topic | fecha |
 |---|---|---|---|
+| 68 | `noticia-msi-2026-daejeon-clasificacion` | esports | 20/04/2026 |
+| 67 | `noticia-got-winds-winter-falso-leak-2026` | got | 20/04/2026 |
+| 66 | `noticia-nba-playoffs-r1-juego1-2026` | nba | 20/04/2026 |
+| 65 | `noticia-gta-vi-mapa-noviembre-2026` | gaming | 20/04/2026 |
+| 64 | `noticia-hotd-s3-nuevos-caballeros-2026` | got | 16/04/2026 |
+| 63 | `noticia-nba-playin-resultados-2026` | nba | 16/04/2026 |
+| 62 | `noticia-unity-platform-toolkit-unite2026` | gamedev | 16/04/2026 |
+| 61 | `noticia-lec-spring-semana3-2026` | esports | 14/04/2026 |
+| 60 | `noticia-nba-playin-2026` | nba | 14/04/2026 |
+| 59 | `noticia-magic-secrets-strixhaven-2026` | magic | 14/04/2026 |
+| 58 | `noticia-warhammer-old-world-adepticon-gw-2026` | warhammer | 14/04/2026 |
 | 57 | `noticia-dnd-villainous-options-playtest-2026` | rol | 11/04/2026 |
 | 56 | `noticia-hotd-s3-junio-2026-confirmado` | got | 11/04/2026 |
 | 55 | `noticia-oblivion-remastered-gamepass-2026` | gaming | 11/04/2026 |
@@ -210,6 +221,7 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 - 📦 Repo: **https://github.com/Karlete/freakonia**
 - ⚙️ Deploy: GitHub Pages (rama `main`, raíz `/`)
 
+**Sesión 53 (2026-04-20):** `js/news-data.js` — 4 artículos nuevos insertados al TOP (noticias 65–68): Esports (noticia-msi-2026-daejeon-clasificacion · MSI 2026 Daejeon 28/06–12/07, formato renovado, BLG con ventaja bracket por First Stand · dotesports.com) · GoT (noticia-got-winds-winter-falso-leak-2026 · Bantam Books desmiente leak otoño 2026, Martin ~1.100 págs · collider.com) · NBA (noticia-nba-playoffs-r1-juego1-2026 · Playoffs R1 Juego1: Magic tumba a Detroit 112-101, Thunder aplasta Suns 119-84, Wembanyama 35 pts récord Spurs · nba.com) · Gaming (noticia-gta-vi-mapa-noviembre-2026 · mapa Leonida filtrado 14/04, Rockstar sin retraso nuevo, marketing verano, 19 nov 2026 · gamingbible.com). NEWS_TRACKER last_update → 2026-04-20, next_available → magic · warhammer · gamedev. Push a main.
 **Sesión 52 (2026-04-14):** `js/news-data.js` — 4 artículos nuevos insertados al TOP (noticias 58–61): Esports (noticia-lec-spring-semana3-2026 · LEC Spring semana 3, VIT 5-1 lidera, GIANTX 4-0 invicto, resultados 11-13/04 · globalsportsarchive.com) · NBA (noticia-nba-playin-2026 · NBA Play-In 2026 arranca 14/04 · nba.com) · Magic (noticia-magic-secrets-strixhaven-2026 · Secrets of Strixhaven 24/04 · magic.wizards.com) · Warhammer (noticia-warhammer-old-world-adepticon-gw-2026 · Adepticon 2026 + 4 cosas que GW necesita · belloflostsouls.net). Fix noticia 61: clasificación corregida (se usaban datos LEC Versus enero-feb por error, sustituidos por datos reales LEC Spring abril). `js/youtube.js` — nuevo short `xst_ontfUyg` (7 curiosidades FFVII) al TOP. `gaming.html` — nueva sección `#ffvii-especial`: portada `FFVIIPortada.webp`, mini-reportaje historia real + historia del juego, caja de anuncio gameplay completo (3 vídeos ~9h + mods + retraducción ES); quicknav link ⚔ FINAL FANTASY VII añadido; CSS scoped. NEWS_TRACKER last_update → 2026-04-14, next_available → gamedev · got · gaming. Push a main.
 **Sesión 51 (2026-04-11):** `js/youtube.js` — fix bug autoplay: iframes ahora renderizan con `src=""` + `data-src`, y `toggleVideoEmbed` asigna `iframe.src = iframe.dataset.src` al abrir y borra `iframe.src = ''` al cerrar (detiene reproducción). Nuevo short añadido al array `SANPRIETO_VIDEOS`: `dOsnhBU5AzA` (FFVII WTF Traducción). `js/news-data.js` — 3 artículos nuevos insertados al TOP (noticias 55–57): Gaming (noticia-oblivion-remastered-gamepass-2026 · Oblivion Remastered en Game Pass Ultimate/PC el 16/04 · news.xbox.com) · GoT (noticia-hotd-s3-junio-2026-confirmado · HotD T3 junio, James Norton + Tommy Flanagan, T4 en 2028 · gamesradar.com) · Rol (noticia-dnd-villainous-options-playtest-2026 · D&D Villainous Options UA, opciones para PJs villanos · enworld.org). NEWS_TRACKER last_update → 2026-04-11, next_available → esports · nba · magic · warhammer · gamedev. Push a main.
 **Sesión 50 (2026-04-09):** `gaming.html` — sección de vídeos `@sanprieto` con inline embed toggle añadida dentro de `#canal`. `js/youtube.js` reescrito: array `SANPRIETO_VIDEOS`, `buildVideoCard()` genera tarjetas con miniatura, badge SHORT/VÍDEO, botones "VER EN YOUTUBE" + "REPRODUCIR AQUÍ" (este último oculto para Shorts), embed inline con autoplay. `css/gaming.css`: nuevo bloque de estilos para `.video-card`, `.video-embed-container` (con `@keyframes embedSlideIn`), `.video-embed-frame-wrap` (16:9 y 9:16 para Shorts), `.videos-section-header`, `#sanprieto-videos-grid`. Push a main.

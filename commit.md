@@ -2,6 +2,23 @@
 
 ---
 
+## Sesión 53 — 2026-04-20
+
+### feat(news): 4 new articles — MSI 2026 Daejeon, Winds of Winter fake leak, NBA Playoffs R1, GTA VI mapa
+
+**Modified files:**
+- `js/news-data.js`:
+  - 4 artículos nuevos insertados al TOP del array (noticias 65–68, fecha 20/04/2026):
+    - **Noticia 68** — Esports: `noticia-msi-2026-daejeon-clasificacion` · MSI 2026 en Daejeon (28/06–12/07), formato renovado sin fase de grupos, BLG con ventaja de clasificación directa al Bracket Stage por ganar el First Stand 2026. Img: `lpl_2026.webp`. Source: dotesports.com.
+    - **Noticia 67** — GoT: `noticia-got-winds-winter-falso-leak-2026` · Bantam Books desmiente en abril el rumor de que The Winds of Winter sale en otoño 2026; Martin tiene ~1.100 páginas escritas según su entrevista de enero. Img: `got_generic.webp`. Source: collider.com.
+    - **Noticia 66** — NBA: `noticia-nba-playoffs-r1-juego1-2026` · Playoffs primera ronda Juego 1: Magic tumba a Detroit 112-101 (Banchero 23+9+4), Thunder aplasta a Suns 119-84 (SGA 25 pts), Wembanyama debuta con 35 pts (récord histórico Spurs en postemporada). Img: `nba_ball.webp`. Source: nba.com.
+    - **Noticia 65** — Gaming: `noticia-gta-vi-mapa-noviembre-2026` · Mapa actualizado de Leonida filtrado el 14/04 con Vice City, Leonida Keys, Grassrivers y Mount Kalaga; Rockstar entra en año fiscal de Take-Two sin retraso nuevo; marketing de lanzamiento arranca en verano; fecha 19 nov 2026. Img: `gran_theft_auto_6.webp`. Source: gamingbible.com.
+  - NEWS_TRACKER: last_update → 2026-04-20, next_available → magic · warhammer · gamedev.
+- `estado.md`: Last updated → 2026-04-20 (sesión 53), artículos 61 → 65, ID table actualizada (noticias 58–68 añadidas), NEWS_TRACKER actualizado, entrada sesión 53 añadida al log.
+- `commit.md`: esta entrada.
+
+---
+
 ## Sesión 52 — 2026-04-14
 
 ### feat(news): 4 new articles — LEC semana 3, NBA Play-In, MTG Strixhaven, Warhammer Adepticon
