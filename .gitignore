@@ -19,6 +19,10 @@ npm-debug.log*
 *.temp
 TAREA.md
 task.md
+freakonia_plan_actuacion.md
+entities.json
+mempalace.yaml
+task_for_news.md
 
 # Node (just in case)
 node_modules/
