@@ -493,6 +493,56 @@
     return;
   }
 
+  // --- Dynamic SEO: update <head> tags per article ---
+  (function updateSEO(article) {
+    if (!article) return;
+
+    var baseUrl = 'https://freakonia.com/';
+    var pageUrl = baseUrl + 'article.html?id=' + article.id;
+    var imgUrl = article.img
+      ? baseUrl + article.img
+      : baseUrl + 'assets/img/og_image.jpg';
+    var fullTitle = article.title + ' — Freakonia';
+    var desc = article.summary || '';
+
+    // 1. Page title
+    document.title = fullTitle;
+
+    // 2. Meta description
+    var metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute('content', desc);
+
+    // 3. Canonical URL
+    var canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) canonical.setAttribute('href', pageUrl);
+
+    // 4. Open Graph
+    var og = {
+      'og:title': fullTitle,
+      'og:description': desc,
+      'og:url': pageUrl,
+      'og:image': imgUrl,
+      'og:type': 'article'
+    };
+    Object.keys(og).forEach(function(prop) {
+      var el = document.querySelector('meta[property="' + prop + '"]');
+      if (el) el.setAttribute('content', og[prop]);
+    });
+
+    // 5. Twitter/X Card
+    var tw = {
+      'twitter:title': fullTitle,
+      'twitter:description': desc,
+      'twitter:image': imgUrl
+    };
+    Object.keys(tw).forEach(function(name) {
+      var el = document.querySelector('meta[name="' + name + '"]');
+      if (el) el.setAttribute('content', tw[name]);
+    });
+
+  })(article);
+  // --- End Dynamic SEO ---
+
   // Dynamic <title>
   document.title = article.title + " — Freakonia";
 
