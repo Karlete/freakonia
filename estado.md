@@ -1,6 +1,6 @@
 # estado.md — Project State Tracker
 
-Last updated: 2026-04-21 (sesión 54)
+Last updated: 2026-04-21 (sesión 55)
 
 ---
 
@@ -103,21 +103,25 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 ## ▶ PRÓXIMA SESIÓN — Leer esto primero
 
 ### Estado actual del sistema de noticias (news)
-- `js/news-data.js` — array `NEWS_DATA` con **65 artículos**. **Añadir nuevos artículos AQUÍ, al principio del array (más reciente primero).**
+- `js/news-data.js` — array `NEWS_DATA` con **70 artículos** (68 noticias + 2 Freakochapas). **Añadir nuevos artículos AQUÍ, al principio del array (más reciente primero).**
 - `news.html` — renderizado dinámico vía `renderNews()`. El botón "LEER MÁS" ha sido reemplazado por enlace a `article.html?id=`. No tocar el grid HTML.
-- `article.html` — **NUEVA PÁGINA**. Renderiza artículos individuales vía query param `?id=`. Incluye navbar + footer + Pixel Patron Rain de fondo + botón compartir en Twitter/X. CSS inline en la propia página.
+- `article.html` — Renderiza artículos individuales vía query param `?id=`. Incluye `updateSEO()` dinámico (OG, Twitter, canonical, meta description), Freakcoin rating (`<div id="freakcoin-rating">` + `renderFreakcoin()`), `css/freakcoin.css` y `js/freakcoin.js`.
 - `index.html` — slider "¿Qué se cuece?" lee automáticamente `NEWS_DATA`. No requiere cambios al añadir noticias.
 - `css/news.css` — `.news-grid` tiene `align-items: start`.
+- `css/freakcoin.css` + `js/freakcoin.js` — sistema de rating Freakcoin. Campo opcional en artículos: `freakcoin: { score: N, verdict: '...' }`.
+- `assets/img/mastersystem2/` — 10 imágenes webp de juegos de Master System II.
 
 ### NEWS_TRACKER — temas usados
 ```json
-{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba","gaming","got","rol","esports","nba","magic","warhammer","got","nba","gamedev","esports","got","nba","gaming"],"last_update":"2026-04-20"}
+{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba","gaming","got","rol","esports","nba","magic","warhammer","got","nba","gamedev","esports","got","nba","gaming","gamedev","gaming"],"last_update":"2026-04-21"}
 ```
-**Próximos temas disponibles:** `magic` · `warhammer` · `gamedev`
+**Próximos temas disponibles:** `magic` · `warhammer` · `got`
 
 ### IDs de artículos actuales en NEWS_DATA (para evitar duplicados)
 | # | id | topic | fecha |
 |---|---|---|---|
+| FC2 | `freakochapa-master-system-ii-10-juegarrales` | gaming | 21/04/2026 |
+| FC1 | `freakochapa-fallen-valkyrie-devlog-1` | gamedev | 21/04/2026 |
 | 68 | `noticia-msi-2026-daejeon-clasificacion` | esports | 20/04/2026 |
 | 67 | `noticia-got-winds-winter-falso-leak-2026` | got | 20/04/2026 |
 | 66 | `noticia-nba-playoffs-r1-juego1-2026` | nba | 20/04/2026 |
@@ -221,6 +225,7 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 - 📦 Repo: **https://github.com/Karlete/freakonia**
 - ⚙️ Deploy: GitHub Pages (rama `main`, raíz `/`)
 
+**Sesión 55 (2026-04-21):** `article.html`: `updateSEO(article)` añadido (actualiza meta description, canonical, OG tags, Twitter/X cards por artículo en runtime). Freakcoin wired: `css/freakcoin.css` en `<head>`, `<div id="freakcoin-rating">` en DOM, `renderFreakcoin()` gateado en `article.freakcoin`, `js/freakcoin.js` antes de `</body>`. `js/news-data.js`: Freakochapa #1 `freakochapa-fallen-valkyrie-devlog-1` (gamedev, 7 párrafos, Unity año-1 + diseño Fallen Valkyrie · 21/04/2026) + Freakochapa #2 `freakochapa-master-system-ii-10-juegarrales` (gaming, 10 párrafos con imágenes inline y FREAKCOINS por juego · 21/04/2026 · img ghoulsandghosts.webp). Nuevos ficheros: `css/freakcoin.css`, `js/freakcoin.js`, `assets/img/freakcoin_*.png`, `assets/img/mastersystem2/` (10 webp). NEWS_TRACKER last_update → 2026-04-21. Push a main.
 **Sesión 54 (2026-04-21):** JSON-LD schema markup añadido en todas las páginas. `index.html`: texto Pixel Patron "Freakonio/a para siempre" → "Freakoni@ real" + `schema.org/Person` block antes de `</head>`. 12 páginas (gamedev/gaming/esports/got/warhammer/magic/rol/nba/social/java/news/fallen-valkyrie): `schema.org/WebPage` (o `Blog`/dual `VideoGame`) antes de `</head>` en cada una. `article.html`: `schema.org/BlogPosting` inyectado dinámicamente en el IIFE existente — construye ISO date desde DD/MM/YYYY, mapea headline/description/datePublished/keywords desde el objeto `article` de NEWS_DATA, appends `<script ld+json>` a `<head>` en runtime. Push a main.
 **Sesión 53 (2026-04-20):** `js/news-data.js` — 4 artículos nuevos insertados al TOP (noticias 65–68): Esports (noticia-msi-2026-daejeon-clasificacion · MSI 2026 Daejeon 28/06–12/07, formato renovado, BLG con ventaja bracket por First Stand · dotesports.com) · GoT (noticia-got-winds-winter-falso-leak-2026 · Bantam Books desmiente leak otoño 2026, Martin ~1.100 págs · collider.com) · NBA (noticia-nba-playoffs-r1-juego1-2026 · Playoffs R1 Juego1: Magic tumba a Detroit 112-101, Thunder aplasta Suns 119-84, Wembanyama 35 pts récord Spurs · nba.com) · Gaming (noticia-gta-vi-mapa-noviembre-2026 · mapa Leonida filtrado 14/04, Rockstar sin retraso nuevo, marketing verano, 19 nov 2026 · gamingbible.com). NEWS_TRACKER last_update → 2026-04-20, next_available → magic · warhammer · gamedev. Push a main.
 **Sesión 52 (2026-04-14):** `js/news-data.js` — 4 artículos nuevos insertados al TOP (noticias 58–61): Esports (noticia-lec-spring-semana3-2026 · LEC Spring semana 3, VIT 5-1 lidera, GIANTX 4-0 invicto, resultados 11-13/04 · globalsportsarchive.com) · NBA (noticia-nba-playin-2026 · NBA Play-In 2026 arranca 14/04 · nba.com) · Magic (noticia-magic-secrets-strixhaven-2026 · Secrets of Strixhaven 24/04 · magic.wizards.com) · Warhammer (noticia-warhammer-old-world-adepticon-gw-2026 · Adepticon 2026 + 4 cosas que GW necesita · belloflostsouls.net). Fix noticia 61: clasificación corregida (se usaban datos LEC Versus enero-feb por error, sustituidos por datos reales LEC Spring abril). `js/youtube.js` — nuevo short `xst_ontfUyg` (7 curiosidades FFVII) al TOP. `gaming.html` — nueva sección `#ffvii-especial`: portada `FFVIIPortada.webp`, mini-reportaje historia real + historia del juego, caja de anuncio gameplay completo (3 vídeos ~9h + mods + retraducción ES); quicknav link ⚔ FINAL FANTASY VII añadido; CSS scoped. NEWS_TRACKER last_update → 2026-04-14, next_available → gamedev · got · gaming. Push a main.

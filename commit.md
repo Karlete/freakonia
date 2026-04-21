@@ -2,6 +2,29 @@
 
 ---
 
+## Sesión 55 — 2026-04-21
+
+### feat(freakcoin+news): freakcoin system + 2 Freakochapas + dynamic SEO in article.html
+
+**Modified files:**
+- `article.html`:
+  - `updateSEO(article)` IIFE added after `if (!article)` guard: updates `meta[name="description"]`, `link[rel="canonical"]`, all 5 OG tags, and 3 Twitter/X card tags dynamically per article. Falls back to `og_image.jpg` when no `img` field.
+  - Freakcoin system wired: `<link rel="stylesheet" href="css/freakcoin.css">` in `<head>`, `<div id="freakcoin-rating">` between article body and source footer, `renderFreakcoin()` call gated on `article.freakcoin`, `<script src="js/freakcoin.js">` before `</body>`.
+- `js/news-data.js`:
+  - **Freakochapa #1** inserted at TOP: `freakochapa-fallen-valkyrie-devlog-1` · topic gamedev · 7 paragraphs · año-1 Unity journey + Fallen Valkyrie lore/design vision · 21/04/2026 · source freakonia.com.
+  - **Freakochapa #2** inserted at TOP (above #1): `freakochapa-master-system-ii-10-juegarrales` · topic gaming · 10 paragraphs · per-game inline images + FREAKCOINS scores · 21/04/2026 · img ghoulsandghosts.webp.
+  - NEWS_TRACKER `last_update` → `2026-04-21`.
+- **New files added:**
+  - `css/freakcoin.css` — Freakochapa rating widget styles.
+  - `js/freakcoin.js` — `renderFreakcoin()` function.
+  - `assets/img/freakcoin_fondo_negro.png` · `assets/img/freakcoin_transparente.png` — Freakcoin badge assets.
+  - `assets/img/mastersystem2/` — 10 game screenshots: alexkidd, asterix, castle_of_ilusion, ghoulsandghosts, princeofpersia, shadowofthebeast, shinobi, sonic, streetofrage, supermonaco (all `.webp`).
+- `estado.md`: Last updated → 2026-04-21 (sesión 55), article count 68 → 70, IDs table updated, session log entry added.
+- `commit.md`: esta entrada.
+- `task.md`: limpiado.
+
+---
+
 ## Sesión 54 — 2026-04-21
 
 ### feat(seo): JSON-LD schema markup across all pages + dynamic BlogPosting in article.html
