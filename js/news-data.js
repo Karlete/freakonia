@@ -10,6 +10,34 @@
 
 var NEWS_DATA = [
 
+  // ── NOTICIA 52 — FREAKOCHAPA #1 ─────────────────────────────────────────────
+  {
+    id: 'freakochapa-fallen-valkyrie-devlog-1',
+    topic: 'gamedev',
+    category: 'gamedev',
+    emoji: '🎮',
+    badgeLabel: 'FREAKOCHAPA',
+    title: 'Fallen Valkyrie devlog #1: primer año en Unity',
+    summary: 'Primer devlog de Fallen Valkyrie, mi metroidvania en Unity. Un año de tutoriales, minijuegos publicados en itch.io y el primer enemigo ya implementado. Aquí cuento de dónde vengo, qué he construido y hacia dónde va el juego.',
+    full: [
+      'Empecé a interesarme por el desarrollo de videojuegos en el Covid, justo al poco tiempo de empezar el grado. El problema es que necesitas mucha dedicación y constancia, cosa imposible casi de compaginar con un trabajo a tiempo completo.',
+      'Por ello, lo vivo como un hobby en el que avanzo cuando puedo, sin prisas ni ansias. Aunque eso sí, sigo con el síndrome de hacer y hacer más tutoriales, también me compré un libro. Hasta ahora, he completado varios minijuegos de los cuales solo he subido 2 a itch.io: uno sobre naves espaciales, StarsLander, y otro sobre cocinar tus recetas de sushi, Samurai Kitchen. Todo gracias a Alva Majo, DevAlen, AlexDev, Imphenzia, Jonathan Weinberger y el gran Hugo CodeMonkey, mis referentes.',
+      'He metido mucha caña y muchas horas al tutorial sobre crear un RPG de AlexDev, y con todo lo que ese tutorial aporta vamos de cabeza a crear un juego estilo 2D. En términos de género, lo que estoy construyendo es un metroidvania: exploración no lineal, habilidades que desbloquean nuevas zonas, y ese feeling de ir haciéndote más poderoso poco a poco. Me gustaría que sea una mezcla entre Castlevania SOTN y el Ghouls and Ghosts. Vamos muy poco a poco, ya que no puedo dedicarme a tiempo completo, pero estamos avanzando mucho y quiero cerrarlo como un juego completo, que no se sienta una demo.',
+      'Fallen Valkyrie trata sobre una guerrera que ha perdido su camino y necesita reunir los 5 sellos para volver al Valhalla. Estos sellos están ocultos en 5 reinos distintos: el reino de Arena (me basaré en temática, lore, dioses y animales de Egipto), el reino del Agua (me basaré en mitología submarina, Poseidón, krakens...), el mundo de Fuego (estilo infierno, diablos, satánico), el reino de las Sombras (basado en vampiros, criaturas nocturnas, animales oscuros) y el reino del Aire (seres mitológicos alados, dioses alados, elementales del aire).',
+      'Mi idea es poder acabar cada reino en el orden que se quiera, mostrar un minimapa para elegir por qué reino empezar. En cada reino habrá muchos caminos que elegir, pero al final de cada uno espera la lucha contra el boss final. Cada boss te dará un objeto, arma o lo que sea, que te dará alguna pequeña bonificación para que el juego te resulte algo más fácil, mientras que el juego sabe por detrás cuántos sellos tienes y entonces aumentaremos la dificultad de alguna forma para dar sensación al jugador de que va avanzando y de que conseguir los sellos vale para algo. Al tener los 5 sellos, acabaremos con una pequeña cinemática de nuestra guerrera llegando por fin al Valhalla.',
+      'Por ahora tenemos hecho casi completamente a la guerrera principal con todas sus animaciones, movimientos y estados (uso state machine), y acabo de implementar también al primer enemigo, de cuya state machine luego podré ampliar a un sinfín de enemigos con más facilidad al ser escalable. Me falta terminar de implementar el combate por completo: impactar, añadir puntos de vida, reacción a los golpes, iluminación o avisar de alguna forma para saber que has impactado y demás.',
+      'Luego ya empezaré a implementar el primer mundo con todas sus plataformas, el mapa completo, los enemigos y el primer boss final. Continuaremos el devlog cuando implemente el combate totalmente contra el primer enemigo, el esqueleto. Poco a poco, pero hacia adelante. Esto es una idea muy básica y general sobre lo que quiero construir, pero habrá muchos cambios durante el desarrollo. ¡Segurisimo!'
+    ],
+    date: '21/04/2026',
+    url: 'gamedev.html',
+    page: 'gamedev.html',
+    pageLabel: 'GameDev',
+    accent: '#00ff41',
+    source: 'freakonia.com',
+    img: 'assets/img/news/gamedev_generic.webp',
+    tags: ['Fallen Valkyrie', 'devlog', 'Unity', 'metroidvania', 'gamedev', 'indie', 'itch.io', '2026']
+  },
+
   // ── NOTICIA 68 ──────────────────────────────────────────────────────────────
   {
     id: 'noticia-msi-2026-daejeon-clasificacion',
@@ -1953,5 +1981,5 @@ var NEWS_DATA = [
 
 // NEWS_TRACKER
 // used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba", "gaming", "got", "rol", "esports", "nba", "magic", "warhammer", "got", "nba", "gamedev", "esports", "got", "nba", "gaming"]
-// last_update: "2026-04-20"
+// last_update: "2026-04-21"
 // next_available: ["magic", "warhammer", "gamedev"]
