@@ -2,6 +2,27 @@
 
 ---
 
+## Sesión 54 — 2026-04-21
+
+### feat(seo): JSON-LD schema markup across all pages + dynamic BlogPosting in article.html
+
+**Modified files:**
+- `index.html`:
+  - Pixel Patron text: "Freakonio/a para siempre" → "Freakoni@ real".
+  - JSON-LD `schema.org/Person` block inserted before `</head>` (name: sanprieto, sameAs: YouTube/Twitter/itch.io/GitHub, knowsAbout: 8 topics).
+- `gamedev.html`, `gaming.html`, `esports.html`, `got.html`, `warhammer.html`, `magic.html`, `rol.html`, `nba.html`, `social.html`, `java.html`, `news.html`, `fallen-valkyrie.html`:
+  - JSON-LD `schema.org/WebPage` (or `Blog` for news.html, dual `WebPage`+`VideoGame` for fallen-valkyrie.html) inserted before `</head>` in each file.
+  - Each block includes: `name`, `url`, `description`, `author` (Person/sanprieto), `isPartOf` (WebSite/Freakonia).
+- `article.html`:
+  - Dynamic `schema.org/BlogPosting` injected at runtime inside the existing IIFE, after the `article` object is confirmed from `NEWS_DATA`.
+  - Builds ISO date from `DD/MM/YYYY`, populates headline, description, datePublished, dateModified, author, publisher, url, mainEntityOfPage, isPartOf (Blog), keywords from `article.tags`.
+  - Script tag appended to `<head>` via `document.createElement`.
+- `estado.md`: Last updated → 2026-04-21 (sesión 54), session log entry added.
+- `commit.md`: esta entrada.
+- `task.md`: limpiado.
+
+---
+
 ## Sesión 53 — 2026-04-20
 
 ### feat(news): 4 new articles — MSI 2026 Daejeon, Winds of Winter fake leak, NBA Playoffs R1, GTA VI mapa
