@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="css/components.css" />
   <link rel="stylesheet" href="css/animations.css" />
   <link rel="stylesheet" href="css/news.css" />
+  <link rel="stylesheet" href="css/freakcoin.css">
 
   <!-- News data (global NEWS_DATA array) -->
   <script src="js/news-data.js"></script>
@@ -354,6 +355,8 @@
 
     <div id="article-body" class="article-body"></div>
 
+    <div id="freakcoin-rating"></div>
+
     <div id="article-source-footer" class="article-source-footer">
       <span id="article-footer-source">
         <span>FUENTE ORIGINAL:</span>
@@ -596,6 +599,10 @@
     article.full && article.full.length > 0 ? article.full : [article.summary];
   body.innerHTML = paragraphs.map((p) => `<p>${p}</p>`).join("");
 
+  if (article.freakcoin) {
+    renderFreakcoin('freakcoin-rating', article.freakcoin.score, article.freakcoin.verdict);
+  }
+
   const footer = document.getElementById("article-source-footer");
   const footerLink = document.getElementById("article-footer-link");
   const footerSource = document.getElementById("article-footer-source");
@@ -672,5 +679,6 @@
 </script>
 
 <script src="js/pixels-rain.js"></script>
+<script src="js/freakcoin.js"></script>
 </body>
 </html>
