@@ -571,6 +571,53 @@
     shareUrl +
     "&via=" +
     shareVia;
+
+  // --- Schema Markup: BlogPosting ---
+  (function injectArticleSchema(article) {
+    if (!article) return;
+
+    // Build ISO date from DD/MM/YYYY
+    var parts = (article.date || '').split('/');
+    var isoDate = parts.length === 3
+      ? parts[2] + '-' + parts[1] + '-' + parts[0]
+      : new Date().toISOString().split('T')[0];
+
+    var schema = {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": article.title || '',
+      "description": article.summary || '',
+      "datePublished": isoDate,
+      "dateModified": isoDate,
+      "author": {
+        "@type": "Person",
+        "name": "sanprieto",
+        "url": "https://freakonia.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Freakonia",
+        "url": "https://freakonia.com"
+      },
+      "url": "https://freakonia.com/article.html?id=" + article.id,
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://freakonia.com/article.html?id=" + article.id
+      },
+      "isPartOf": {
+        "@type": "Blog",
+        "name": "Freakonia News",
+        "url": "https://freakonia.com/news.html"
+      },
+      "keywords": (article.tags || []).join(', ')
+    };
+
+    var script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
+  })(article);
+  // --- End Schema Markup ---
 })();
 </script>
 
