@@ -2,6 +2,54 @@
 
 ---
 
+## Sesión 58 — 2026-04-22
+
+### feat(nav): add Quiz Retro to Gaming dropdown in all 14 HTML pages
+
+**Modified files:**
+- `index.html`, `gamedev.html`, `gaming.html`, `esports.html`, `got.html`, `warhammer.html`, `magic.html`, `rol.html`, `nba.html`, `social.html`, `java.html`, `news.html`, `fallen-valkyrie.html`, `quiz.html`:
+  - `<li><a href="quiz.html">🎯 Quiz Retro</a></li>` inserted after `<li><a href="esports.html">🏆 Esports</a></li>` inside the Gaming `<ul class="nav-submenu">` in every page.
+- `estado.md`: Last updated → 2026-04-22 (sesión 58), quiz.html added to pages table and phase list, nav template updated, session log entries 56–58 added.
+- `commit.md`: esta entrada.
+- `task.md`: limpiado.
+
+---
+
+## Sesión 57 — 2026-04-22
+
+### feat(quiz): create quiz.html — ¿Qué jugador retro eres?
+
+**New file:**
+- `quiz.html` — Standalone quiz page. 5 archetypes (speedrunner, coleccionista, rpg_addict, arcade_purist, trasteador) with boy/girl title variants. 7 questions × 5 options each; scores tallied per option type. Gender selector with onclick (avoids DOMContentLoaded timing). Progress dots bar (active/done states). URL params `?resultado=&gender=` make results deep-linkable and shareable. Twitter/X share button generates pre-filled tweet. Inline `<style>` block (no border-radius, CSS variables only). Navbar + footer copied verbatim from gaming.html. Full static OG + Twitter/X meta tags + canonical with absolute https://freakonia.com/ URLs. `js/main.js` loaded at bottom of body. References `assets/img/quiz/` for archetype images.
+
+**Modified files:**
+- `estado.md`: quiz.html added to pages table, phase list updated, session log entry added.
+- `commit.md`: esta entrada.
+- `task.md`: limpiado.
+
+---
+
+## Sesión 56 — 2026-04-22
+
+### fix(seo): convert article.html OG/Twitter meta tags from empty to static absolute URLs
+
+**Modified files:**
+- `article.html`:
+  - `og:url` → `https://freakonia.com/article.html` (was empty string)
+  - `og:title` → `"Freakonia — Artículos y Freakochapas"` (was empty)
+  - `og:description` → full description string (was empty)
+  - `og:image` → `https://freakonia.com/assets/img/og_image.jpg` (was empty)
+  - Added `og:image:width` content="1200" (was missing)
+  - Added `og:image:height` content="630" (was missing)
+  - Added `twitter:creator` content="@SanprietoG" (was missing)
+  - `twitter:title`, `twitter:description`, `twitter:image` → filled with absolute values (were empty)
+  - Removed "set dynamically by JS" comment from OG block
+- `estado.md`: session log entry added.
+- `commit.md`: esta entrada.
+- `task.md`: limpiado.
+
+---
+
 ## Sesión 55 — 2026-04-21
 
 ### feat(freakcoin+news): freakcoin system + 2 Freakochapas + dynamic SEO in article.html

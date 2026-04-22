@@ -1,6 +1,6 @@
 # estado.md — Project State Tracker
 
-Last updated: 2026-04-21 (sesión 55)
+Last updated: 2026-04-22 (sesión 58)
 
 ---
 
@@ -84,8 +84,14 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
     <li><a href="fallen-valkyrie.html">📓 FV Devlog</a></li>
   </ul>
 </li>
-<li><a href="gaming.html"    class="nav-link">🕹 Gaming</a></li>
-<li><a href="esports.html"   class="nav-link">🏆 Esports</a></li>
+<li class="nav-dropdown">
+  <span class="nav-link nav-dropdown-toggle">🕹 Gaming ▾</span>
+  <ul class="nav-submenu">
+    <li><a href="gaming.html">🕹 Gaming</a></li>
+    <li><a href="esports.html">🏆 Esports</a></li>
+    <li><a href="quiz.html">🎯 Quiz Retro</a></li>
+  </ul>
+</li>
 <li><a href="got.html"       class="nav-link">🐉 GoT</a></li>
 <li><a href="warhammer.html" class="nav-link">⚙ Warhammer</a></li>
 <li><a href="magic.html"     class="nav-link">✨ MtG</a></li>
@@ -207,7 +213,8 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 | java.html | ✅ Completa | JavaDevBible spotlight |
 | social.html | ✅ Completa | |
 | news.html | ✅ Completa | Cards enlazan a article.html?id= |
-| article.html | ✅ NUEVA | Páginas individuales por artículo, URL compartible |
+| article.html | ✅ Completa | Páginas individuales por artículo, URL compartible |
+| quiz.html | ✅ NUEVA | Quiz pixel art — 5 arquetipos · 7 preguntas · versión chico/chica |
 
 ### Bugs conocidos / pendientes
 - Ninguno activo.
@@ -218,13 +225,16 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 ---
 
 ## Current Phase
-🚀 Phase 3: PUBLICADA — index ✅ · gamedev ✅ · fallen-valkyrie ✅ · gaming ✅ · esports ✅ · got ✅ · warhammer ✅ · magic ✅ · rol ✅ · nba ✅ · social ✅ · java ✅ · news ✅
+🚀 Phase 3: PUBLICADA — index ✅ · gamedev ✅ · fallen-valkyrie ✅ · gaming ✅ · esports ✅ · got ✅ · warhammer ✅ · magic ✅ · rol ✅ · nba ✅ · social ✅ · java ✅ · news ✅ · quiz ✅
 
 **Web completa y publicada en producción.**
 - 🌐 URL: **https://freakonia.com**
 - 📦 Repo: **https://github.com/Karlete/freakonia**
 - ⚙️ Deploy: GitHub Pages (rama `main`, raíz `/`)
 
+**Sesión 58 (2026-04-22):** `quiz.html` + 14 navbars — `<li><a href="quiz.html">🎯 Quiz Retro</a></li>` añadido al Gaming dropdown en los 14 archivos HTML: index.html, gamedev.html, gaming.html, esports.html, got.html, warhammer.html, magic.html, rol.html, nba.html, social.html, java.html, news.html, fallen-valkyrie.html, quiz.html. Quiz Retro aparece como tercer item del submenu Gaming ▾, después de Esports. Push a main.
+**Sesión 57 (2026-04-22):** Nueva página `quiz.html` — Quiz pixel art completo. 5 arquetipos (Speedrunner, Coleccionista, RPG Addict, Arcade Purist, Trasteador) con variante chico/chica. 7 preguntas con 5 opciones cada una. Selector de género con onclick (evita timing con DOMContentLoaded). Barra de progreso por puntos (active/done). URL params `?resultado=&gender=` para resultados compartibles. Botón compartir en Twitter/X con tweet prefabricado. Meta tags estáticos completos (OG + Twitter/X + canonical). Inline `<style>` con full pixel aesthetic — no border-radius, CSS variables. Navbar + footer copiados verbatim de gaming.html. `js/main.js` al final del body. Assets directory `assets/img/quiz/` referenciado para imágenes de arquetipos. Push a main.
+**Sesión 56 (2026-04-22):** `article.html` — meta tags OG y Twitter/X convertidos de strings vacíos a HTML estático con URLs absolutas. Añadidos `og:image:width` (1200) y `og:image:height` (630) que faltaban. Añadido `twitter:creator: @SanprietoG` que faltaba. `og:url`, `og:title`, `og:description`, `og:image`, `twitter:title`, `twitter:description`, `twitter:image` actualizados a valores absolutos (`https://freakonia.com/...`). Eliminado comentario "set dynamically by JS". Push a main.
 **Sesión 55 (2026-04-21):** `article.html`: `updateSEO(article)` añadido (actualiza meta description, canonical, OG tags, Twitter/X cards por artículo en runtime). Freakcoin wired: `css/freakcoin.css` en `<head>`, `<div id="freakcoin-rating">` en DOM, `renderFreakcoin()` gateado en `article.freakcoin`, `js/freakcoin.js` antes de `</body>`. `js/news-data.js`: Freakochapa #1 `freakochapa-fallen-valkyrie-devlog-1` (gamedev, 7 párrafos, Unity año-1 + diseño Fallen Valkyrie · 21/04/2026) + Freakochapa #2 `freakochapa-master-system-ii-10-juegarrales` (gaming, 10 párrafos con imágenes inline y FREAKCOINS por juego · 21/04/2026 · img ghoulsandghosts.webp). Nuevos ficheros: `css/freakcoin.css`, `js/freakcoin.js`, `assets/img/freakcoin_*.png`, `assets/img/mastersystem2/` (10 webp). NEWS_TRACKER last_update → 2026-04-21. Push a main.
 **Sesión 54 (2026-04-21):** JSON-LD schema markup añadido en todas las páginas. `index.html`: texto Pixel Patron "Freakonio/a para siempre" → "Freakoni@ real" + `schema.org/Person` block antes de `</head>`. 12 páginas (gamedev/gaming/esports/got/warhammer/magic/rol/nba/social/java/news/fallen-valkyrie): `schema.org/WebPage` (o `Blog`/dual `VideoGame`) antes de `</head>` en cada una. `article.html`: `schema.org/BlogPosting` inyectado dinámicamente en el IIFE existente — construye ISO date desde DD/MM/YYYY, mapea headline/description/datePublished/keywords desde el objeto `article` de NEWS_DATA, appends `<script ld+json>` a `<head>` en runtime. Push a main.
 **Sesión 53 (2026-04-20):** `js/news-data.js` — 4 artículos nuevos insertados al TOP (noticias 65–68): Esports (noticia-msi-2026-daejeon-clasificacion · MSI 2026 Daejeon 28/06–12/07, formato renovado, BLG con ventaja bracket por First Stand · dotesports.com) · GoT (noticia-got-winds-winter-falso-leak-2026 · Bantam Books desmiente leak otoño 2026, Martin ~1.100 págs · collider.com) · NBA (noticia-nba-playoffs-r1-juego1-2026 · Playoffs R1 Juego1: Magic tumba a Detroit 112-101, Thunder aplasta Suns 119-84, Wembanyama 35 pts récord Spurs · nba.com) · Gaming (noticia-gta-vi-mapa-noviembre-2026 · mapa Leonida filtrado 14/04, Rockstar sin retraso nuevo, marketing verano, 19 nov 2026 · gamingbible.com). NEWS_TRACKER last_update → 2026-04-20, next_available → magic · warhammer · gamedev. Push a main.

@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="description" content="Descubre tu arquetipo retro: Speedrunner, Coleccionista, RPG Addict, Arcade Purist o Trasteador. Quiz pixel art de Freakonia." />
+  <title>¿Qué jugador retro eres? — Freakonia | Quiz Pixel Art</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"         content="website">
+  <meta property="og:site_name"    content="Freakonia">
+  <meta property="og:url"          content="https://freakonia.com/quiz.html">
+  <meta property="og:title"        content="¿Qué jugador retro eres? — Freakonia">
+  <meta property="og:description"  content="Descubre tu arquetipo retro en 7 preguntas. 5 arquetipos, versión chico y chica. Quiz pixel art de Freakonia.">
+  <meta property="og:image"        content="https://freakonia.com/assets/img/og_image.jpg">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale"       content="es_ES">
+
+  <!-- Twitter/X Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:site"        content="@SanprietoG">
+  <meta name="twitter:creator"     content="@SanprietoG">
+  <meta name="twitter:title"       content="¿Qué jugador retro eres? — Freakonia">
+  <meta name="twitter:description" content="Descubre tu arquetipo retro en 7 preguntas.">
+  <meta name="twitter:image"       content="https://freakonia.com/assets/img/og_image.jpg">
+
+  <link rel="canonical" href="https://freakonia.com/quiz.html">
+
+  <style>
+    .quiz-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    /* Gender selector */
+    .gender-select {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+
+    .gender-btn {
+      background: var(--bg-card);
+      border: 4px solid var(--accent-primary);
+      padding: 1.5rem 2rem;
+      cursor: pointer;
+      text-align: center;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      min-width: 200px;
+    }
+
+    .gender-btn:hover,
+    .gender-btn.selected {
+      border-color: var(--accent-secondary);
+      box-shadow: var(--glow-pink);
+    }
+
+    .gender-btn-icon {
+      font-size: 48px;
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+
+    .gender-btn-label {
+      font-family: var(--font-primary);
+      font-size: 0.55rem;
+      color: var(--accent-primary);
+      display: block;
+    }
+
+    /* Progress bar */
+    .quiz-progress {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .quiz-progress-dot {
+      width: 32px;
+      height: 32px;
+      border: 4px solid var(--accent-primary);
+      background: var(--bg-card);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-primary);
+      font-size: 0.45rem;
+      color: var(--text-dim);
+      transition: all 0.2s;
+    }
+
+    .quiz-progress-dot.active {
+      background: var(--accent-primary);
+      color: var(--bg);
+    }
+
+    .quiz-progress-dot.done {
+      background: var(--accent-secondary);
+      border-color: var(--accent-secondary);
+      color: var(--bg);
+    }
+
+    /* Question */
+    .quiz-question-box {
+      background: var(--bg-card);
+      border: 4px solid var(--accent-primary);
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .quiz-question-num {
+      font-family: var(--font-primary);
+      font-size: 0.5rem;
+      color: var(--accent-tertiary);
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .quiz-question-text {
+      font-family: var(--font-secondary);
+      font-size: 24px;
+      color: var(--text-bright);
+      line-height: 1.5;
+    }
+
+    /* Options */
+    .quiz-options {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 2rem;
+    }
+
+    .quiz-option {
+      background: var(--bg-card);
+      border: 4px solid #333;
+      padding: 1.25rem 1.5rem;
+      cursor: pointer;
+      font-family: var(--font-secondary);
+      font-size: 20px;
+      color: var(--text);
+      text-align: left;
+      transition: border-color 0.15s, transform 0.1s, box-shadow 0.15s;
+      width: 100%;
+    }
+
+    .quiz-option:hover {
+      border-color: var(--accent-secondary);
+      color: var(--text-bright);
+      transform: translateX(6px);
+      box-shadow: var(--glow-pink);
+    }
+
+    /* Result */
+    .result-box {
+      background: var(--bg-card);
+      border: 4px solid var(--accent-secondary);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .result-img {
+      width: 100%;
+      max-width: 420px;
+      height: 300px;
+      object-fit: cover;
+      border: 4px solid var(--accent-secondary);
+      display: block;
+      margin: 0 auto 1.5rem;
+      image-rendering: pixelated;
+    }
+
+    .result-title {
+      font-family: var(--font-primary);
+      font-size: clamp(0.6rem, 2vw, 1rem);
+      color: var(--accent-secondary);
+      margin-bottom: 1.5rem;
+      text-shadow: var(--glow-pink);
+    }
+
+    .result-desc {
+      font-family: var(--font-secondary);
+      font-size: 22px;
+      color: var(--text);
+      line-height: 1.6;
+      text-align: left;
+      background: var(--bg-surface);
+      border: 4px solid #333;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .result-game {
+      font-family: var(--font-primary);
+      font-size: 0.5rem;
+      color: var(--accent-tertiary);
+      background: var(--bg-surface);
+      border: 4px solid var(--accent-tertiary);
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
+
+    .result-game span {
+      color: var(--text-bright);
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.55rem;
+    }
+
+    .result-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    /* Screens */
+    .quiz-screen { display: none; }
+    .quiz-screen.active { display: block; }
+  </style>
+</head>
+<body>
+
+<div class="crt-overlay" aria-hidden="true"></div>
+
+<!-- ─── Navigation ─────────────────────────────────────────────────────── -->
+<nav class="navbar" role="navigation" aria-label="Navegación principal">
+  <div class="container">
+    <a href="index.html" class="nav-brand">⚔ FREAKONIA</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">▼ MENU</button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html" class="nav-link">🏠 Inicio</a></li>
+      <li class="nav-dropdown">
+        <span class="nav-link nav-dropdown-toggle">🎮 GameDev ▾</span>
+        <ul class="nav-submenu">
+          <li><a href="gamedev.html">🎮 GameDev</a></li>
+          <li><a href="fallen-valkyrie.html">📓 FV Devlog</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <span class="nav-link nav-dropdown-toggle">🕹 Gaming ▾</span>
+        <ul class="nav-submenu">
+          <li><a href="gaming.html">🕹 Gaming</a></li>
+          <li><a href="esports.html">🏆 Esports</a></li>
+          <li><a href="quiz.html">🎯 Quiz Retro</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <span class="nav-link nav-dropdown-toggle">🐉 Fantasía ▾</span>
+        <ul class="nav-submenu">
+          <li><a href="got.html">🐉 GoT</a></li>
+          <li><a href="warhammer.html">⚙ Warhammer</a></li>
+          <li><a href="magic.html">✨ MtG</a></li>
+          <li><a href="rol.html">🎲 Rol</a></li>
+        </ul>
+      </li>
+      <li><a href="nba.html" class="nav-link">🏀 NBA</a></li>
+      <li class="nav-dropdown">
+        <span class="nav-link nav-dropdown-toggle">📡 Comunidad ▾</span>
+        <ul class="nav-submenu">
+          <li><a href="java.html">☕ Java</a></li>
+          <li><a href="social.html">📡 Social</a></li>
+        </ul>
+      </li>
+      <li><a href="news.html" class="nav-link">📰 News</a></li>
+      <li>
+        <button class="lang-toggle" id="lang-toggle" aria-label="Cambiar idioma" title="Switch language / Cambiar idioma">
+          🌐 EN
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ─── Page Header ─────────────────────────────────────────────────────── -->
+<header class="page-header" style="--header-accent: var(--accent-secondary);">
+  <div class="container">
+    <p class="page-header-label">🕹 GAMING · FREAKONIA QUIZ</p>
+    <h1 class="page-header-title">¿QUÉ JUGADOR RETRO ERES?</h1>
+    <p class="page-header-sub">7 PREGUNTAS · 5 ARQUETIPOS · VERSION CHICO O CHICA</p>
+  </div>
+</header>
+
+<main>
+  <div class="quiz-wrapper">
+
+    <!-- SCREEN 1: INTRO -->
+    <div id="screen-intro" class="quiz-screen">
+      <div class="card" style="text-align:center; padding: 2rem;">
+        <p class="section-title" style="margin-bottom:1.5rem;">🕹 EL QUIZ DE FREAKONIA</p>
+        <p style="font-family:var(--font-secondary); font-size:22px; color:var(--text);
+           line-height:1.6; max-width:600px; margin:0 auto 2rem;">
+          7 preguntas. 5 arquetipos reales. Descubre si eres Speedrunner,
+          Coleccionista, RPG Addict, Arcade Purist o Trasteador.
+          Elige primero tu versión:
+        </p>
+        <div class="gender-select">
+          <div class="gender-btn selected" id="btn-boy" onclick="selectGender('boy')">
+            <span class="gender-btn-icon">🕹</span>
+            <span class="gender-btn-label">VERSIÓN CHICO</span>
+          </div>
+          <div class="gender-btn" id="btn-girl" onclick="selectGender('girl')">
+            <span class="gender-btn-icon">🎮</span>
+            <span class="gender-btn-label">VERSIÓN CHICA</span>
+          </div>
+        </div>
+        <button class="btn btn-pink btn-block" onclick="startQuiz()"
+                style="max-width:400px; margin:0 auto; font-size:0.6rem; padding:1.25rem;">
+          ▶ ¡EMPEZAR EL QUIZ!
+        </button>
+      </div>
+    </div>
+
+    <!-- SCREEN 2: QUIZ -->
+    <div id="screen-quiz" class="quiz-screen">
+      <div class="quiz-progress" id="quiz-progress"></div>
+      <div class="quiz-question-box">
+        <span class="quiz-question-num" id="question-num"></span>
+        <p class="quiz-question-text" id="question-text"></p>
+      </div>
+      <div class="quiz-options" id="quiz-options"></div>
+    </div>
+
+    <!-- SCREEN 3: RESULT -->
+    <div id="screen-result" class="quiz-screen">
+      <div class="result-box">
+        <img id="result-img" class="result-img" alt="Resultado">
+        <h2 id="result-title" class="result-title"></h2>
+        <div id="result-desc" class="result-desc"></div>
+        <div class="result-game">
+          🎮 JUEGO RECOMENDADO PARA TI:
+          <span id="result-game-name"></span>
+          <span id="result-game-why"
+                style="font-family:var(--font-secondary); font-size:18px;
+                       color:var(--text-dim); display:block; margin-top:4px;"></span>
+        </div>
+        <div class="result-btns">
+          <button class="btn btn-pink" onclick="shareOnX()"
+                  style="font-size:0.45rem;">
+            📤 COMPARTIR EN TWITTER/X
+          </button>
+          <button class="btn" onclick="retakeQuiz()"
+                  style="font-size:0.45rem;">
+            🔄 REPETIR EL QUIZ
+          </button>
+          <a href="gaming.html" class="btn btn-blue"
+             style="font-size:0.45rem; text-decoration:none;
+                    display:inline-flex; align-items:center;">
+            🕹 IR A GAMING
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- ─── Footer ──────────────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="gamedev.html">GameDev</a></li>
+      <li><a href="gaming.html">Gaming</a></li>
+      <li><a href="esports.html">Esports</a></li>
+      <li><a href="got.html">GoT</a></li>
+      <li><a href="social.html">Social</a></li>
+      <li><a href="java.html">Java</a></li>
+    </ul>
+    <p>⚔ FREAKONIA — KARLETE</p>
+    <p style="color:#444;">HECHO CON AMOR PIXELADO Y DEMASIADAS BEBIDAS ENERGÉTICAS</p>
+    <p style="color:#333;">◄ INSERT COIN ►</p>
+
+    <div class="footer-legal">
+      <div class="pixel-divider"></div>
+      <p class="footer-copyright">
+        © 2025 FREAKONIA — KARLETE. ALL RIGHTS RESERVED.
+      </p>
+      <p class="footer-trademark">
+        FREAKONIA™ IS A REGISTERED PERSONAL BRAND.
+        ALL CONTENT, DESIGNS, GAME CONCEPTS AND ORIGINAL TEXTS
+        ON THIS SITE ARE THE EXCLUSIVE PROPERTY OF THEIR AUTHOR.
+        UNAUTHORIZED REPRODUCTION, DISTRIBUTION OR USE OF ANY
+        CONTENT IS STRICTLY PROHIBITED WITHOUT PRIOR WRITTEN PERMISSION.
+      </p>
+      <p class="footer-notice">
+        ⚠ THIS SITE CONTAINS STRONG OPINIONS ABOUT VIDEO GAMES,
+        FANTASY LORE AND BASKETBALL. READER DISCRETION IS ADVISED.
+        NO GOBLINS WERE HARMED IN THE MAKING OF THIS WEBSITE.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="js/main.js"></script>
+
+<script>
+const ARCHETYPES = {
+  speedrunner: {
+    title: "EL SPEEDRUNNER",
+    title_f: "LA SPEEDRUNNER",
+    desc: "Vives en el filo del milisegundo. Glitches, frame-perfects, leaderboards y el subidón de un nuevo PB. Para ti el retro no se termina... se domina. La comunidad te sigue porque conviertes imposibles en récords.",
+    game: "Super Metroid",
+    game_why: "El santo grial de los speedruns clásicos.",
+    img_boy: "assets/img/quiz/boy_speedrunner.png",
+    img_girl: "assets/img/quiz/girl_speedrunner.jpg"
+  },
+  coleccionista: {
+    title: "EL COLECCIONISTA",
+    title_f: "LA COLECCIONISTA",
+    desc: "Tu setup es un museo vivo. Cajas en perfecto estado, manuales, cartuchos sellados y el olor a plástico de los 90. Preservas la historia física del gaming porque sabes que los bits se borran, pero una SNES bien cuidada dura para siempre.",
+    game: "EarthBound",
+    game_why: "Una joya que vale oro tanto en tu corazón como en eBay.",
+    img_boy: "assets/img/quiz/boy_coleccionista.png",
+    img_girl: "assets/img/quiz/girl_coleccionista.jpg"
+  },
+  rpg_addict: {
+    title: "EL RPG ADDICT",
+    title_f: "LA RPG ADDICT",
+    desc: "Te tragas 80 horas sin darte cuenta. Grinding, múltiples finales, lore que te rompe la cabeza y personajes que se convierten en familia. Un buen RPG retro no se juega... se vive. Tu backlog es más largo que una saga de Dragon Quest.",
+    game: "Chrono Trigger",
+    game_why: "La obra maestra que aún inspira a los indies de hoy.",
+    img_boy: "assets/img/quiz/boy_rpgaddict.png",
+    img_girl: "assets/img/quiz/girl_rpgaddict.jpg"
+  },
+  arcade_purist: {
+    title: "EL ARCADE PURIST",
+    title_f: "LA ARCADE PURIST",
+    desc: "Una moneda. Una vida. Sin saves, sin checkpoints, solo skill puro. El brillo de la CRT, el sonido de los botones y la presión de los high scores te hacen sentir vivo. El arcade no es nostalgia... es religión.",
+    game: "Street Fighter II",
+    game_why: "El rey eterno de los combates uno contra uno.",
+    img_boy: "assets/img/quiz/boy_arcadepurist.png",
+    img_girl: "assets/img/quiz/girl_arcadepurist.webp"
+  },
+  trasteador: {
+    title: "EL TRASTEADOR",
+    title_f: "LA TRASTEADORA",
+    desc: "No solo juegas los clásicos... los transformas. ROM hacks, ports, mods, traducciones fan y homebrew. Eres mitad arqueólogo, mitad game dev. El futuro del retro lo estás creando tú con cada patch y cada port.",
+    game: "Doom",
+    game_why: "El juego más modificado de la historia... y tú sigues la tradición.",
+    img_boy: "assets/img/quiz/boy_trasteador.png",
+    img_girl: "assets/img/quiz/girl_trasteador.jpg"
+  }
+};
+
+const QUESTIONS = [
+  {
+    q: "¿Al empezar un juego retro, lo primero que haces es…?",
+    options: [
+      { text: "Buscar guías de speedrun y glitches para optimizar", type: "speedrunner" },
+      { text: "Comprobar si tengo la versión física completa con caja y manual", type: "coleccionista" },
+      { text: "Leer toda la lore y backstory del juego", type: "rpg_addict" },
+      { text: "Practicar los primeros niveles para conseguir la puntuación más alta", type: "arcade_purist" },
+      { text: "Buscar si hay ROMs hackeadas o mods que mejoren la experiencia", type: "trasteador" }
+    ]
+  },
+  {
+    q: "¿Cuál es tu mayor frustración en el retro gaming?",
+    options: [
+      { text: "Que un RNG arruine un run perfecto", type: "speedrunner" },
+      { text: "Ver un juego raro en mal estado o incompleto", type: "coleccionista" },
+      { text: "Que la historia sea demasiado lineal o corta", type: "rpg_addict" },
+      { text: "Que el juego sea demasiado fácil y no desafíe tu habilidad", type: "arcade_purist" },
+      { text: "Que no haya soporte para mods o herramientas de edición", type: "trasteador" }
+    ]
+  },
+  {
+    q: "¿Cómo pasas un fin de semana de gaming retro?",
+    options: [
+      { text: "Intentando mejorar mi Personal Best en un speedrun", type: "speedrunner" },
+      { text: "Limpiando, organizando y cazando nuevos tesoros para mi colección", type: "coleccionista" },
+      { text: "Sumergiéndome en un RPG épico de +50 horas sin parar", type: "rpg_addict" },
+      { text: "Compitiendo en leaderboards de arcade o simuladores", type: "arcade_purist" },
+      { text: "Experimentando con emuladores y creando mis propios hacks", type: "trasteador" }
+    ]
+  },
+  {
+    q: "Tu juego retro ideal tendría…",
+    options: [
+      { text: "Mecánicas ultra precisas y glitches explotables", type: "speedrunner" },
+      { text: "Múltiples variantes regionales y ediciones especiales", type: "coleccionista" },
+      { text: "Una narrativa ramificada con toneladas de diálogos", type: "rpg_addict" },
+      { text: "Acción frenética sin checkpoints ni saves", type: "arcade_purist" },
+      { text: "Código accesible para mods y ports comunitarios", type: "trasteador" }
+    ]
+  },
+  {
+    q: "Cuando ves un cartucho abandonado en una tienda…",
+    options: [
+      { text: "Calculas cuánto tardarías en completarlo a máxima velocidad", type: "speedrunner" },
+      { text: "Lo compras al instante para tu colección, sin importar el precio", type: "coleccionista" },
+      { text: "Imaginas la épica historia que esconde dentro", type: "rpg_addict" },
+      { text: "Sueñas con enchufarlo y jugar una partida perfecta", type: "arcade_purist" },
+      { text: "Piensas en cómo hackearlo para añadir nuevas features", type: "trasteador" }
+    ]
+  },
+  {
+    q: "¿Emulación o hardware original?",
+    options: [
+      { text: "Emulación con save states y herramientas de speedrun", type: "speedrunner" },
+      { text: "Hardware original siempre, para la experiencia auténtica", type: "coleccionista" },
+      { text: "Me da igual mientras pueda jugar sesiones maratonianas", type: "rpg_addict" },
+      { text: "Original en arcade o CRT para sentir la pureza", type: "arcade_purist" },
+      { text: "Emulación total para poder modificar y personalizar", type: "trasteador" }
+    ]
+  },
+  {
+    q: "El legado del retro que más valoras es…",
+    options: [
+      { text: "Los récords mundiales y la comunidad de speedrunners", type: "speedrunner" },
+      { text: "La preservación física de los juegos y consolas", type: "coleccionista" },
+      { text: "Las historias inmortales que aún inspiran a creadores hoy", type: "rpg_addict" },
+      { text: "La pureza del skill puro en las salas de arcade", type: "arcade_purist" },
+      { text: "La creatividad infinita con mods, ports y homebrew", type: "trasteador" }
+    ]
+  }
+];
+
+// STATE
+let gender = 'boy';
+let currentQ = 0;
+let scores = { speedrunner:0, coleccionista:0, rpg_addict:0, arcade_purist:0, trasteador:0 };
+
+function showScreen(id) {
+  document.querySelectorAll('.quiz-screen').forEach(function(s) { s.classList.remove('active'); });
+  document.getElementById(id).classList.add('active');
+}
+
+function selectGender(g) {
+  gender = g;
+  document.querySelectorAll('.gender-btn').forEach(function(b) { b.classList.remove('selected'); });
+  document.getElementById('btn-' + g).classList.add('selected');
+}
+
+function startQuiz() {
+  currentQ = 0;
+  scores = { speedrunner:0, coleccionista:0, rpg_addict:0, arcade_purist:0, trasteador:0 };
+  showScreen('screen-quiz');
+  renderQuestion();
+}
+
+function renderProgress() {
+  var html = QUESTIONS.map(function(_, i) {
+    var cls = '';
+    if (i < currentQ) cls = 'done';
+    else if (i === currentQ) cls = 'active';
+    return '<div class="quiz-progress-dot ' + cls + '">' + (i + 1) + '</div>';
+  }).join('');
+  document.getElementById('quiz-progress').innerHTML = html;
+}
+
+function renderQuestion() {
+  var q = QUESTIONS[currentQ];
+  document.getElementById('question-num').textContent = 'PREGUNTA ' + (currentQ + 1) + ' / ' + QUESTIONS.length;
+  document.getElementById('question-text').textContent = q.q;
+  var opts = document.getElementById('quiz-options');
+  opts.innerHTML = '';
+  q.options.forEach(function(opt) {
+    var btn = document.createElement('button');
+    btn.className = 'quiz-option';
+    btn.textContent = opt.text;
+    btn.onclick = function() { pickAnswer(opt.type); };
+    opts.appendChild(btn);
+  });
+  renderProgress();
+}
+
+function pickAnswer(type) {
+  scores[type]++;
+  currentQ++;
+  if (currentQ >= QUESTIONS.length) {
+    showResult();
+  } else {
+    renderQuestion();
+  }
+}
+
+function getWinner() {
+  return Object.keys(scores).reduce(function(a, b) {
+    return scores[a] >= scores[b] ? a : b;
+  });
+}
+
+function showResult(forcedKey) {
+  var key = forcedKey || getWinner();
+  var data = ARCHETYPES[key];
+  var isFemale = gender === 'girl';
+
+  document.getElementById('result-img').src = isFemale ? data.img_girl : data.img_boy;
+  document.getElementById('result-img').alt = isFemale ? data.title_f : data.title;
+  document.getElementById('result-title').textContent = isFemale ? data.title_f : data.title;
+  document.getElementById('result-desc').textContent = data.desc;
+  document.getElementById('result-game-name').textContent = data.game;
+  document.getElementById('result-game-why').textContent = data.game_why;
+
+  var url = new URL(window.location);
+  url.searchParams.set('resultado', key);
+  url.searchParams.set('gender', gender);
+  window.history.replaceState({}, '', url);
+
+  showScreen('screen-result');
+}
+
+function shareOnX() {
+  var key = getWinner();
+  var data = ARCHETYPES[key];
+  var isFemale = gender === 'girl';
+  var archName = isFemale ? data.title_f : data.title;
+  var url = window.location.href;
+  var text = '¡Soy ' + archName + ' en Freakonia! 🕹\n' +
+    data.desc.split('.')[0] + '.\n' +
+    '¿Y tú qué jugador retro eres?\n\n' + url +
+    '\n\n#Freakonia #RetroGaming #PixelArt';
+  window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text), '_blank');
+}
+
+function retakeQuiz() {
+  var url = new URL(window.location);
+  url.searchParams.delete('resultado');
+  url.searchParams.delete('gender');
+  window.history.replaceState({}, '', url);
+  showScreen('screen-intro');
+}
+
+window.addEventListener('DOMContentLoaded', function() {
+  var params = new URLSearchParams(window.location.search);
+  var savedResult = params.get('resultado');
+  var savedGender = params.get('gender');
+  if (savedResult && ARCHETYPES[savedResult]) {
+    if (savedGender) gender = savedGender;
+    showResult(savedResult);
+  } else {
+    showScreen('screen-intro');
+  }
+});
+</script>
+
+</body>
+</html>
