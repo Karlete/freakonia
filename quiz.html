@@ -631,10 +631,28 @@ function shareOnX() {
   var data = ARCHETYPES[key];
   var isFemale = gender === 'girl';
   var archName = isFemale ? data.title_f : data.title;
-  var url = window.location.href;
+  var shareUrls = {
+    boy: {
+      speedrunner:   'https://freakonia.com/quiz-speedrunner.html',
+      coleccionista: 'https://freakonia.com/quiz-coleccionista.html',
+      rpg_addict:    'https://freakonia.com/quiz-rpgaddict.html',
+      arcade_purist: 'https://freakonia.com/quiz-arcadepurist.html',
+      trasteador:    'https://freakonia.com/quiz-trasteador.html'
+    },
+    girl: {
+      speedrunner:   'https://freakonia.com/quiz-speedrunner-girl.html',
+      coleccionista: 'https://freakonia.com/quiz-coleccionista-girl.html',
+      rpg_addict:    'https://freakonia.com/quiz-rpgaddict-girl.html',
+      arcade_purist: 'https://freakonia.com/quiz-arcadepurist-girl.html',
+      trasteador:    'https://freakonia.com/quiz-trasteadora-girl.html'
+    }
+  };
+  var currentUrl = (shareUrls[gender] && shareUrls[gender][key])
+    ? shareUrls[gender][key]
+    : 'https://freakonia.com/quiz.html';
   var text = '¡Soy ' + archName + ' en Freakonia! 🕹\n' +
     data.desc.split('.')[0] + '.\n' +
-    '¿Y tú qué jugador retro eres?\n\n' + url +
+    '¿Y tú qué jugador retro eres?\n\n' + currentUrl +
     '\n\n#Freakonia #RetroGaming #PixelArt';
   window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text), '_blank');
 }

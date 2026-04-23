@@ -253,3 +253,17 @@
     font-size: 1.2rem;
   }
 }
+
+/* ── Sections above patron rain canvas (z-index: 1) ── */
+#que-se-cuece,
+#gaming-history-widget {
+  position: relative;
+  z-index: 2;
+}
+
+#que-se-cuece .news-slider-wrapper,
+#que-se-cuece .card,
+#gaming-history-widget .gaming-history-card {
+  position: relative;
+  z-index: 2;
+}

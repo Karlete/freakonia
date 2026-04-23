@@ -28,8 +28,9 @@
 
   <!-- News data (global NEWS_DATA array) -->
   <script src="js/news-data.js"></script>
+  <script src="js/gaming-history.js"></script>
   <script src="js/pixels-data.js"></script>
-  <link rel="canonical" href="https://freakonia.com/index.html">
+  <link rel="canonical" href="https://freakonia.com/">
 
   <!-- Open Graph / WhatsApp / Telegram -->
   <meta property="og:type"         content="website">
@@ -88,6 +89,63 @@
   }
 }
 </script>
+  <style>
+.gaming-history-card {
+  background: var(--bg-card);
+  border: 4px solid var(--accent-tertiary);
+  padding: 2rem;
+  max-width: 700px;
+  position: relative;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.gaming-history-card:hover {
+  box-shadow: var(--glow-blue);
+}
+.gaming-history-empty {
+  border-color: #333;
+}
+.gaming-history-date {
+  font-family: var(--font-primary);
+  font-size: 0.45rem;
+  color: var(--accent-tertiary);
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  display: block;
+}
+.gaming-history-emoji {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+.gaming-history-year {
+  font-family: var(--font-primary);
+  font-size: clamp(0.9rem, 3vw, 1.4rem);
+  color: var(--accent-secondary);
+  text-shadow: var(--glow-pink);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+.gaming-history-text {
+  font-family: var(--font-secondary);
+  font-size: 22px;
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.gaming-history-nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.gaming-history-counter {
+  font-family: var(--font-primary);
+  font-size: 0.4rem;
+  color: var(--text-dim);
+  margin-left: auto;
+}
+  </style>
 </head>
 <body>
 
@@ -263,6 +321,18 @@
       </div>
     </div>
   </section>
+
+  <!-- ── Esta semana en la historia del gaming ───────────── -->
+  <section class="section" id="gaming-history-widget">
+    <div class="container">
+      <h2 class="section-title">&gt; ESTA SEMANA EN LA HISTORIA</h2>
+      <p class="news-preview-sub">// hoy en la historia del gaming //</p>
+      <div id="gaming-history-card" class="gaming-history-card">
+        <!-- populated by JS -->
+      </div>
+    </div>
+  </section>
+
 <!-- ─── Pixel Patron Rain ────────────────────────────────────────────────── -->
   <section class="section" id="pixel-patron">
   <div
@@ -1096,5 +1166,73 @@
 }
 </style>
 <script src="js/pixels-rain.js"></script>
+<script>
+(function() {
+  if (typeof GAMING_HISTORY === 'undefined') return;
+
+  var today   = new Date();
+  var dd      = String(today.getDate()).padStart(2, '0');
+  var mm      = String(today.getMonth() + 1).padStart(2, '0');
+  var key     = dd + '-' + mm;
+
+  // Build a 7-day window: today ± 3 days
+  var candidates = [];
+  for (var offset = 0; offset <= 6; offset++) {
+    var d   = new Date(today);
+    d.setDate(today.getDate() - offset);
+    var dk  = String(d.getDate()).padStart(2, '0') + '-' +
+              String(d.getMonth() + 1).padStart(2, '0');
+    if (GAMING_HISTORY[dk]) {
+      GAMING_HISTORY[dk].forEach(function(ev) {
+        candidates.push({ date: dk, event: ev });
+      });
+    }
+  }
+
+  var card = document.getElementById('gaming-history-card');
+  if (!card) return;
+
+  if (!candidates.length) {
+    card.classList.add('gaming-history-empty');
+    card.innerHTML =
+      '<span class="gaming-history-emoji">🕹</span>' +
+      '<span class="gaming-history-text" style="color:var(--text-dim);">' +
+      'Esta semana no hay eventos históricos registrados. ' +
+      '¡Pronto añadiremos más fechas al archivo!</span>';
+    return;
+  }
+
+  // Pick one: prefer exact today, else most recent
+  var pick = candidates[0];
+  candidates.forEach(function(c) {
+    var cParts = c.date.split('-');
+    var cDate  = new Date(today.getFullYear(), parseInt(cParts[1]) - 1, parseInt(cParts[0]));
+    var pParts = pick.date.split('-');
+    var pDate  = new Date(today.getFullYear(), parseInt(pParts[1]) - 1, parseInt(pParts[0]));
+    if (Math.abs(today - cDate) < Math.abs(today - pDate)) pick = c;
+  });
+
+  var ev      = pick.event;
+  var parts   = pick.date.split('-');
+  var months  = ['ENE','FEB','MAR','ABR','MAY','JUN',
+                 'JUL','AGO','SEP','OCT','NOV','DIC'];
+  var dateStr = parts[0] + ' ' + months[parseInt(parts[1]) - 1];
+  var ago     = today.getFullYear() - ev.year;
+
+  card.innerHTML =
+    '<span class="gaming-history-date">📅 ' + dateStr + ' · HACE ' + ago + ' AÑOS</span>' +
+    '<span class="gaming-history-emoji">' + ev.emoji + '</span>' +
+    '<span class="gaming-history-year">' + ev.year + '</span>' +
+    '<p class="gaming-history-text">' + ev.text + '</p>' +
+    '<div class="gaming-history-nav">' +
+    '  <a href="gaming.html" class="btn btn-blue" ' +
+    '     style="font-size:0.4rem; padding:0.6rem 1rem;">' +
+    '    🕹 VER SECCIÓN GAMING</a>' +
+    '  <span class="gaming-history-counter">' + candidates.length +
+    ' EVENTO' + (candidates.length > 1 ? 'S' : '') + ' ESTA SEMANA</span>' +
+    '</div>';
+
+})();
+</script>
 </body>
 </html>

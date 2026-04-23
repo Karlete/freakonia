@@ -154,30 +154,4 @@ Estas reglas se aplican SIEMPRE, sin excepción, antes de redactar o insertar no
 [ ] ¿Los artículos van al TOP del array?
 [ ] ¿He actualizado el NEWS_TRACKER al final?
 
-In `CLAUDE.md`, find this exact line inside the ## FLUJO DE NOTICIAS section:
-
-[ ] ¿El id propuesto no existe ya en el array?
-
-Replace it with:
-
-[ ] ¿El id propuesto no existe ya en el array?
-[ ] ¿He asignado una imagen genérica a los artículos sin imagen específica?
-
-Also find this line inside the same section:
-
-- Los artículos `full[]` deben ser texto original — nunca copiar ni parafrasear
-  demasiado cerca de la fuente. Citar la fuente en `url` y `source`, nada más.
-
-Replace it with:
-
-- Los artículos `full[]` deben ser texto original — nunca copiar ni parafrasear
-  demasiado cerca de la fuente. Citar la fuente en `url` y `source`, nada más.
-- Si un artículo no tiene imagen específica (campo `img` vacío), asignar
-  la imagen genérica correspondiente a su `topic` buscando en `assets/img/news/`
-  un fichero cuyo nombre contenga la palabra "generic" y el topic del artículo
-  (ej: topic "esports" → buscar fichero con "esports" y "generic" en el nombre).
-  Si no existe genérica para ese topic, dejar `img: ''`.
-
-Do not modify anything else in the file.
-
 At the end of the sesions your code will be revised by Chat GPT and Grok.

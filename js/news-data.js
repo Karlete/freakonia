@@ -10,6 +10,106 @@
 
 var NEWS_DATA = [
 
+  // ── NOTICIA 72 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-lck-2026-apertura-kt-sorpresa',
+    topic: 'esports',
+    category: 'esports',
+    emoji: '🏆',
+    badgeLabel: 'ESPORTS',
+    title: 'LCK 2026 arranca en Seúl con KT Rolster arrasando — aplasta a T1 y Gen.G en la primera semana del split regular',
+    summary: 'El split regular de la LCK 2026 arrancó del 1 al 5 de abril en el remodelado LCK Arena de Seúl con una sorpresa mayúscula: KT Rolster barrió a T1 2-0 en el día de apertura y luego hizo lo mismo con Gen.G. A mitad de split, Gen.G, T1 y Dplus van todos a 3-3 y la lucha por las plazas del MSI está abierta. Los favoritos de siempre tendrán que sudar.',
+    full: [
+      'La nueva temporada regular de la LCK arrancó el 1 de abril en el remodelado LCK Arena de Seúl con un resultado que nadie tenía en la quiniela: KT Rolster barrió a T1 con un contundente 2-0 el mismo día de apertura. Y no se quedó ahí. Durante la primera semana completa (1-5 de abril), KT repitió la fórmula derrotando también a Gen.G, que venía de un LCK Cup en el que había clasificado para el First Stand dejando a T1 eliminado. Que KT ganara a los dos favoritos en la misma semana inaugural fue el primer gran titular de la LCK 2026, y la primera señal de que este split regular no iba a ser un paseo para nadie.',
+      'El formato de la LCK 2026 es un doble round robin entre diez equipos, lo que garantiza que todos se enfrentan a todos dos veces antes de los playoffs. A mediados de abril, los resultados han dejado una tabla comprimida en la parte alta que refleja lo igualado del nivel: Gen.G, T1 y Dplus KIA van todos empatados a 3-3 en series. Gen.G tiene mejor set differential y mantiene el liderato técnico, pero la distancia con T1 y Dplus es mínima. El Gen.G de Chovy y Peyz ganó al propio T1 el 8 de abril por 2-0, lo que añade tensión extra a lo que promete ser un sprint hacia los playoffs con varios equipos en pugna.',
+      'KT Rolster es el gran nombre de la primera parte del split. La victoria sobre T1 en el día de apertura rompió el guion de lo que se esperaba y convirtió a los propios KT en candidatos a primera plaza. El equipo, que en el LCK Cup no había destacado especialmente, llegó al split regular con una puesta a punto evidente. La LCK tiene también a FEARX, DRX, SOOPers y BRION en la parte baja, formando un pelotón que lucha por no quedar fuera de playoffs en las últimas semanas.',
+      'La carrera hacia el MSI 2026 en Daejeon pasa por el top-4 de la LCK, y con Gen.G, T1, Dplus y KT compitiendo tan cerca en la tabla, la segunda mitad del split se presenta apasionante. El LCK tiene tradición de ver cosas en mayo que nadie predijo en abril. Este año, la sorpresa ya empezó en la primera semana.'
+    ],
+    date: '23/04/2026',
+    url: 'https://www.invenglobal.com/articles/20586/kt-rolster-stuns-t1-and-geng-in-opening-week-of-2026-lck-regular-season',
+    page: 'esports.html',
+    pageLabel: 'Esports',
+    accent: '#C89B3C',
+    source: 'invenglobal.com',
+    img: 'assets/img/news/esports_generic.webp',
+    tags: ['LCK', 'League of Legends', 'KT Rolster', 'T1', 'Gen.G', 'split regular 2026', 'Seúl', 'esports', 'MSI 2026']
+  },
+
+  // ── NOTICIA 71 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-tow-espana-2026-wtc-wcw',
+    topic: 'warhammer',
+    category: 'warhammer',
+    emoji: '⚔️',
+    badgeLabel: 'WARHAMMER',
+    title: 'España en el centro del Viejo Mundo: Barcelona acoge el WCW en diciembre y Talavera el WTC en septiembre',
+    summary: 'España se convierte en capital mundial de Warhammer: The Old World en 2026. El World Team Championship "Clash of Nations" llega en septiembre a Talavera con más de 18 naciones participantes. En diciembre, la Fira de Barcelona acoge el World Championships of Warhammer del 3 al 6, la primera vez que el WCW abandona su sede habitual en Atlanta. Dos eventos mundiales en casa en un solo año.',
+    full: [
+      'Que 2026 iba a ser un año importante para el Warhammer Fantasy competitivo ya se intuía, pero que España iba a ser la gran protagonista era difícil de predecir. Games Workshop anunció en febrero que el World Championships of Warhammer 2026 se celebrará en Barcelona, en la Fira de Barcelona, del 3 al 6 de diciembre. Es la primera vez en la historia del torneo que el WCW abandona su sede habitual en Atlanta para cruzar el Atlántico. El motivo oficial: el equipo español empató el primer puesto en la última edición, y llevar el campeonato a España es un reconocimiento a esa actuación histórica. De fondo, la comunidad también apunta a que varios jugadores clave de EE.UU. rechazaron sus Golden Tickets de clasificación citando el clima político del país, algo que GW no puede ignorar si quiere un campeonato verdaderamente global.',
+      'Antes del WCW llega el World Team Championship Clash of Nations 2026, que se celebrará en septiembre en Talavera de la Reina. El WTC es el campeonato de selecciones nacionales del juego: cada país presenta un equipo de ocho jugadores y un capitán que gestiona el emparejamiento de ejércitos antes de cada ronda —un sistema de drafting estratégico que añade una dimensión táctica única que no existe en el circuito individual—. El año pasado, en Alemania, participaron 18 naciones. Este año en España la organización espera superarlo. Hay también un World Singles Championship para quienes quieran competir individualmente sin necesidad de un equipo completo.',
+      'Para la comunidad española de The Old World, tener dos eventos mundiales en casa en el mismo año es histórico. España cuenta con uno de los circuitos competitivos de Warhammer Fantasy más sólidos de Europa, activo desde mucho antes del relanzamiento del juego en 2024. El WCW de Barcelona incluye además los torneos de Warhammer 40.000, Age of Sigmar, Kill Team y Underworlds, lo que lo convierte en el evento Warhammer más grande del año. Que GW elija el país para semejante cita dice mucho del peso que tiene la comunidad friki española en el panorama competitivo internacional.',
+      'El calendario queda marcado: septiembre en Talavera para el WTC Clash of Nations, y diciembre en la Fira de Barcelona para el WCW. Hay que preparar los ejércitos, que el Viejo Mundo viene a casa.'
+    ],
+    date: '23/04/2026',
+    url: 'https://www.warhammer-community.com/en-gb/articles/40dvsrcq/experience-the-world-championships-of-warhammer-in-spain-in-2026/',
+    page: 'warhammer.html',
+    pageLabel: 'Warhammer',
+    accent: '#8B0000',
+    source: 'warhammer-community.com',
+    img: 'assets/img/news/warhammer_generic.jpg',
+    tags: ['Warhammer', 'The Old World', 'WCW 2026', 'WTC 2026', 'Barcelona', 'Talavera', 'España', 'campeonato mundial', 'Games Workshop', 'competitivo']
+  },
+
+  // ── NOTICIA 70 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-rol-cthulhu-campfire-tales-2026',
+    topic: 'rol',
+    category: 'rol',
+    emoji: '🎲',
+    badgeLabel: 'ROL',
+    title: 'Chaosium lanza Campfire Tales — scouts contra Cthulhu en el suplemento más original de Call of Cthulhu en años',
+    summary: 'Chaosium publicó el 15 de abril Campfire Tales, un suplemento de 180 páginas para Call of Cthulhu 7ª Edición en el que los jugadores son exploradores jóvenes de los años 20 enfrentados al Mythos. Nuevas reglas para investigadores jóvenes, insignias de mérito como mecánica de campaña y una saga completa ambientada en Westhaven, cerca de Arkham. Un libro que lleva el horror cósmico a un sitio donde nunca había estado de forma oficial.',
+    full: [
+      'Chaosium llevaba meses construyendo expectativa en torno a Campfire Tales, el suplemento más diferente que han publicado para Call of Cthulhu en mucho tiempo. El 15 de abril de 2026 el libro salió a la venta en formato físico —hardcover de 180 páginas a 42,99 dólares con PDF incluido— y la respuesta de la comunidad fue inmediata. La premisa es sencilla y brillante a la vez: ¿qué pasa cuando el horror cósmico de Lovecraft no lo enfrentan detectives curtidos o profesores universitarios, sino un grupo de scouts de doce años acampando en los bosques de Nueva Inglaterra en 1924? La respuesta de Chaosium: suceden cosas muy, muy malas... y una partida memorable.',
+      'El suplemento añade un sistema completo de creación de investigadores jóvenes con atributos ajustados para personajes de entre 10 y 16 años, nuevas habilidades propias de la edad y una mecánica de insignias de mérito que funciona como recompensas de campaña. Las insignias —orientación, primeros auxilios, astronomía, conocimiento de la naturaleza— se usan en partida como ventajas situacionales que reflejan el entrenamiento específico de cada explorador. El diseño encaja muy bien con la filosofía de Call of Cthulhu: los personajes son frágiles, sus recursos son limitados, y el horror del Mythos resulta aún más aplastante visto desde la perspectiva de un niño. El libro también incluye reglas para llevar a los scouts a la edad adulta y continuar sus aventuras en otras campañas de CoC.',
+      'La ambientación es el pueblo ficticio de Westhaven, situado en las afueras de Arkham, lo que conecta el suplemento con la geografía clásica del juego sin necesitar conocimientos previos. Los escenarios pueden jugarse como partidas únicas o enlazarse en una campaña completa con un arco narrativo propio. Chaosium convirtió además Campfire Tales en el tema central de ChaosiumCon US 2026, con mesas dirigidas por los propios autores del libro y actividades especiales. El boca a boca ha sido muy positivo: varias tiendas especializadas agotaron existencias en los primeros días.',
+      'Para quienes llevan años jugando a Call of Cthulhu con los mismos grupos, Campfire Tales es una excusa perfecta para reiniciar con un tono diferente, presentar el juego a personas sin experiencia en el rol de terror, o simplemente vivir algo distinto a lo habitual. El Mythos llevaba décadas esperando a que alguien se atreviera a contarlo desde este punto de vista. Chaosium se ha atrevido, y el resultado merece la pena.'
+    ],
+    date: '23/04/2026',
+    url: 'https://www.chaosium.com/blogout-for-call-of-cthulhu-campfire-tales-scouts-against-cthulhu/',
+    page: 'rol.html',
+    pageLabel: 'Rol',
+    accent: '#cc9900',
+    source: 'chaosium.com',
+    img: 'assets/img/news/rol_generic.jpg',
+    tags: ['Call of Cthulhu', 'Chaosium', 'Campfire Tales', 'scouts', 'rol de mesa', '7ª edición', 'Mythos', 'Lovecraft', 'suplemento 2026']
+  },
+
+  // ── NOTICIA 69 ──────────────────────────────────────────────────────────────
+  {
+    id: 'noticia-magic-protour-strixhaven-las-vegas-2026',
+    topic: 'magic',
+    category: 'magic',
+    emoji: '✨',
+    badgeLabel: 'MTG',
+    title: 'Pro Tour Secrets of Strixhaven en Las Vegas — 500.000 dólares y el mejor Magic del mundo del 1 al 3 de mayo',
+    summary: 'Con Secrets of Strixhaven recién salido a la venta el 24 de abril, el Pro Tour llega la semana siguiente a MagicCon Las Vegas (1-3 de mayo). Formato mixto de Booster Draft y Standard Constructed, medio millón de dólares en premios y los mejores jugadores del mundo estrenando el Mystical Archive en competición. El torneo que dictará qué cartas del nuevo set van a definir el metagame.',
+    full: [
+      'Secrets of Strixhaven salió a las tiendas el 24 de abril y los sobres ya están abiertos, los decks en construcción y las cartas del Mystical Archive cotizando. Pero el momento más importante del lanzamiento llega la semana siguiente: el Pro Tour Secrets of Strixhaven, que se celebra del 1 al 3 de mayo dentro de MagicCon Las Vegas. Para la comunidad competitiva, el Pro Tour no es solo un torneo —es el evento que decide qué cartas de cada nuevo set son realmente buenas y cuáles se quedan en la teoría. Tres días de Magic de máximo nivel en Las Vegas, con todos los focos del circuito internacional puestos en el nuevo set.',
+      'El formato es el habitual en los Pro Tours de la era moderna: dos rondas de Booster Draft y seis rondas de Standard Constructed el primer día, con el corte al segundo y tercer día para los jugadores que superen el umbral de victorias. El Standard 2026 llega al torneo con las cartas de Secrets of Strixhaven ya integradas, lo que significa que los jugadores habrán tenido solo unos días para preparar sus listas. En este contexto, los equipos que más horas de testing han metido en los días previos al evento suelen sacar ventaja. El Mystical Archive —la bonus sheet de cartas históricas que regresa con Secrets— es legal en Standard, lo que añade herramientas adicionales a los arquetipos de control y combo.',
+      'El premio total asciende a 500.000 dólares, con 50.000 para el primer clasificado más puntos adicionales para el circuito anual. Cada participante en el Pro Tour recibirá además una carta promo de Tamiyo, Inquisitive Student en versión no foil, uno de los personajes centrales del lore de Strixhaven. Más allá del torneo principal, MagicCon Las Vegas incluye side events de Legacy, Modern y Pioneer, torneos abiertos, meet & greet con jugadores profesionales y el ambiente de convención que convierte estos eventos en destinos en sí mismos para cualquier fan de Magic.',
+      'Con el Pro Tour a una semana del lanzamiento, la comunidad tiene por delante días intensos de análisis, construcción de mazos y especulación sobre el metagame. Los streamers ya han mostrado las cartas en el Early Access Event de Arena (15 de abril) y en el Prerrelease (17 de abril), pero el torneo es donde se sabrá de verdad qué funciona bajo presión competitiva real. Que Secrets of Strixhaven haya devuelto Magic a territorio propio —sin licencias externas— después de meses de Universes Beyond hace que este Pro Tour tenga un sabor especial para los fans del juego.'
+    ],
+    date: '23/04/2026',
+    url: 'https://magic.gg/events/pro-tour-secrets-of-strixhaven-fact-sheet-for-competitors',
+    page: 'magic.html',
+    pageLabel: 'MTG',
+    accent: '#9933ff',
+    source: 'magic.gg',
+    img: 'assets/img/news/magic_generic.webp',
+    tags: ['Magic: The Gathering', 'Pro Tour', 'Secrets of Strixhaven', 'MagicCon Las Vegas', 'Standard', 'Booster Draft', 'mayo 2026', 'competitivo', 'Mystical Archive']
+  },
+
   // ── NOTICIA 53 — FREAKOCHAPA #2 ─────────────────────────────────────────────
   {
     id: 'freakochapa-master-system-ii-10-juegarrales',
@@ -2012,6 +2112,6 @@ var NEWS_DATA = [
 ];
 
 // NEWS_TRACKER
-// used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba", "gaming", "got", "rol", "esports", "nba", "magic", "warhammer", "got", "nba", "gamedev", "esports", "got", "nba", "gaming"]
-// last_update: "2026-04-21"
-// next_available: ["magic", "warhammer", "gamedev"]
+// used_topics: ["esports", "warhammer", "rol", "magic", "got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "esports", "nba", "magic", "warhammer", "got", "nba", "gamedev", "esports", "got", "nba", "gaming"]
+// last_update: "2026-04-23"
+// next_available: ["gaming", "nba", "gamedev"]

@@ -2,6 +2,31 @@
 
 ---
 
+## Sesiones 59–64 — 2026-04-23
+
+### feat: gaming history widget + quiz redirects + news update + SEO fixes
+
+**New files:**
+- `js/gaming-history.js` — `GAMING_HISTORY` object keyed by `DD-MM`, eventos históricos del gaming; ventana de 7 días; renderizado IIFE en index.html y gaming.html.
+- `quiz-speedrunner.html`, `quiz-coleccionista.html`, `quiz-rpgaddict.html`, `quiz-arcadepurist.html`, `quiz-trasteador.html` (boy variants)
+- `quiz-speedrunner-girl.html`, `quiz-coleccionista-girl.html`, `quiz-rpgaddict-girl.html`, `quiz-arcadepurist-girl.html`, `quiz-trasteadora-girl.html` (girl variants)
+- Cada redirect: OG + Twitter/X meta tags específicos por arquetipo + `window.location.replace()` a `quiz.html?resultado=X&gender=Y`
+
+**Modified files:**
+- `index.html`: canonical corregido (`/index.html` → `/`); `<script src="js/gaming-history.js">` en `<head>`; CSS `.gaming-history-*` (border azul, hover glow-blue) en `<style>`; sección `#gaming-history-widget` entre `#que-se-cuece` y `#pixel-patron`; IIFE widget antes de `</body>`.
+- `gaming.html`: `<script src="js/gaming-history.js">` antes de `</head>`; CSS `.gaming-history-*` añadido al `<style>` existente; sección `#gaming-history-widget` antes de `<hr>#canal`; IIFE widget antes de `</body>`; placeholder MS2 reemplazado por callout Freakochapa con `ghoulsandghosts.webp`; flex row con `ghoulsandghosts.webp` + `asterix.webp`.
+- `quiz.html`: `shareOnX()` — `var url = window.location.href` reemplazado por `shareUrls[gender][key]` con URLs absolutas por arquetipo + fallback a `https://freakonia.com/quiz.html`.
+- `css/pixels.css`: z-index:2 añadido a `#que-se-cuece` y `#gaming-history-widget` (y subelementos) para quedar sobre el canvas patron rain (z-index:1).
+- `js/news-data.js`: 4 artículos nuevos al TOP (noticias 69–72, 23/04/2026): `noticia-lck-2026-apertura-kt-sorpresa` (esports) · `noticia-tow-espana-2026-wtc-wcw` (warhammer) · `noticia-rol-cthulhu-campfire-tales-2026` (rol) · `noticia-magic-protour-strixhaven-las-vegas-2026` (magic). NEWS_TRACKER last_update → 2026-04-23, next_available → gaming · nba · gamedev.
+- `CLAUDE.md`: eliminadas líneas 157–fin (bloque de instrucciones de edición que quedó en el cuerpo del fichero); añadida regla de imagen genérica al checklist de noticias.
+- `sitemap.xml`: 13 `<lastmod>` actualizados a `2026-04-23`; fallen-valkyrie priority `0.8` → `0.6`.
+- `fallen-valkyrie.html`: `<link rel="canonical" href="https://freakonia.com/fallen-valkyrie.html">` añadido antes de `</head>`.
+- `task.md`: limpiado.
+- `estado.md`: Last updated → 2026-04-23 (sesión 64), session log entries 59–64 añadidos.
+- `commit.md`: esta entrada.
+
+---
+
 ## Sesión 58 — 2026-04-22
 
 ### feat(nav): add Quiz Retro to Gaming dropdown in all 14 HTML pages
