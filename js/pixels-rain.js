@@ -82,42 +82,68 @@
   }
   animate();
 
-  // ─── Update UI elements ────────────────────────────────────────────────
-  const INTENSITY_LEVELS = [
-    { max: 0, label: "SILENCIOSA", pct: 2 },
-    { max: 3, label: "GOTAS", pct: 15 },
-    { max: 10, label: "LLOVIZNA", pct: 30 },
-    { max: 25, label: "LLUVIA", pct: 55 },
-    { max: 50, label: "TORMENTA", pct: 80 },
-    { max: 9999, label: "DILUVIO ⚡", pct: 100 },
-  ];
+  // ─── Bilingual UI strings ──────────────────────────────────────────────────
+  const INTENSITY_LEVELS = {
+    es: [
+      { max: 0,    label: "SILENCIOSA",  pct: 2   },
+      { max: 3,    label: "GOTAS",       pct: 15  },
+      { max: 10,   label: "LLOVIZNA",    pct: 30  },
+      { max: 25,   label: "LLUVIA",      pct: 55  },
+      { max: 50,   label: "TORMENTA",    pct: 80  },
+      { max: 9999, label: "DILUVIO ⚡",  pct: 100 },
+    ],
+    en: [
+      { max: 0,    label: "SILENT",   pct: 2   },
+      { max: 3,    label: "DROPS",    pct: 15  },
+      { max: 10,   label: "DRIZZLE",  pct: 30  },
+      { max: 25,   label: "RAIN",     pct: 55  },
+      { max: 50,   label: "STORM",    pct: 80  },
+      { max: 9999, label: "FLOOD ⚡", pct: 100 },
+    ],
+  };
 
-  function getIntensity(n) {
-    return (
-      INTENSITY_LEVELS.find((l) => n <= l.max) ||
-      INTENSITY_LEVELS[INTENSITY_LEVELS.length - 1]
-    );
+  const UI_STRINGS = {
+    es: {
+      registered: (n) => `${n} registrados`,
+      emptyState:  "¡Sé el primero en aparecer en la lluvia!",
+    },
+    en: {
+      registered: (n) => `${n} registered`,
+      emptyState:  "Be the first to appear in the rain!",
+    },
+  };
+
+  function getLang() {
+    return document.documentElement.lang === "en" ? "en" : "es";
   }
 
-  function updatePatronUI() {
+  function getIntensity(n, lang) {
+    const levels = INTENSITY_LEVELS[lang] || INTENSITY_LEVELS.es;
+    return levels.find((l) => n <= l.max) || levels[levels.length - 1];
+  }
+
+  // ─── Update UI elements ────────────────────────────────────────────────────
+  function updatePatronUI(lang) {
+    lang = lang || getLang();
+    const strings = UI_STRINGS[lang] || UI_STRINGS.es;
     const count = DONORS.length;
-    const lvl = getIntensity(count);
+    const lvl = getIntensity(count, lang);
 
-    const elCount = document.getElementById("patron-count");
-    const elBar = document.getElementById("patron-intensity-bar");
+    const elCount    = document.getElementById("patron-count");
+    const elBar      = document.getElementById("patron-intensity-bar");
     const elIntLabel = document.getElementById("patron-intensity-label");
-    const elListNum = document.getElementById("patron-list-count");
+    const elListNum  = document.getElementById("patron-list-count");
 
-    if (elCount) elCount.textContent = count;
-    if (elBar) elBar.style.width = lvl.pct + "%";
+    if (elCount)    elCount.textContent    = count;
+    if (elBar)      elBar.style.width      = lvl.pct + "%";
     if (elIntLabel) elIntLabel.textContent = lvl.label;
-    if (elListNum) elListNum.textContent = count + " registrados";
+    if (elListNum)  elListNum.textContent  = strings.registered(count);
 
     // Render donor list
     const list = document.getElementById("patron-donor-list");
     if (!list) return;
     if (count === 0) {
-      list.innerHTML = `<div style="padding:1.2rem;text-align:center;font-family:var(--font-secondary);color:var(--text-dim);font-size:1.1rem;">¡Sé el primero en aparecer en la lluvia!</div>`;
+      list.innerHTML = `<div style="padding:1.2rem;text-align:center;font-family:var(--font-secondary);color:var(--text-dim);font-size:1.1rem;">${strings.emptyState}</div>`;
       return;
     }
     list.innerHTML = "";
@@ -133,6 +159,9 @@
     });
   }
 
+  // Exposed so applyLang() in index.html can call it on language switch
+  window.refreshPatronUI = (lang) => updatePatronUI(lang);
+
   // Run on DOMContentLoaded (script loads at end of body)
-  document.addEventListener("DOMContentLoaded", updatePatronUI);
+  document.addEventListener("DOMContentLoaded", () => updatePatronUI());
 })();

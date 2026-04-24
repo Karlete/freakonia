@@ -2,6 +2,24 @@
 
 ---
 
+## Sesión 65 — 2026-04-24
+
+### feat(news+i18n): Freakochapa #3 PS1 + Pixel Patron bilingual
+
+**New files:**
+- `assets/img/PS1/`: 12 imágenes de juegos PS1 (FFVII.jpg, abe.jpg, alundra.jpg, castlevania.jpg, grantheftauto.jpg, metalgear.jpg, residentevil.jpg, silenthill.jpg, tekken3.jpg, tenchu.jpg, tombraider.jpg, tony.jpg).
+
+**Modified files:**
+- `js/news-data.js`: Freakochapa #3 (`freakochapa-ps1-biblioteca-historia-2026`) insertada al TOP como NOTICIA 73. Estructura idéntica a la Freakochapa #2 (MS2): `badgeLabel:'FREAKOCHAPA'`, `source:'freakonia.com'`, `url:'gaming.html'`, puntuaciones Freakcoin como `<span>` inline en cada entrada `full[]`. 14 juegos (Metal Gear Solid 10, FFVII/IX 10, Castlevania SotN 10, Oddworld 7, Alundra 8, GTA 6, Gran Turismo 8, Soul Reaver 7, RE2 9, Silent Hill 8, Tekken 3 10, Tomb Raider 7, Tenchu 10, Tony Hawk 5). Imágenes `assets/img/PS1/` + fallback `gaming_generic.webp`. NEWS_TRACKER last_update → 2026-04-24, next_available → got · esports · nba.
+- `index.html`: Pixel Patron section — elementos con `data-i18n` añadidos a `achievementDesc`, `counterLabel`, `intensityTitle`, `donateBtn`, `listHeader`, `how1/2/3Title`, `how1/2/3Desc`. Traducciones ES+EN añadidas al objeto `translations`. `applyLang()` llama a `window.refreshPatronUI(lang)` tras aplicar keys.
+- `js/pixels-rain.js`: `INTENSITY_LEVELS` convertido a objeto `{es:[...], en:[...]}`. `UI_STRINGS` añadido con `registered(n)` y `emptyState` por idioma. `updatePatronUI(lang)` recibe lang y usa los strings correctos. `window.refreshPatronUI` expuesto para que `applyLang()` de index.html lo llame al cambiar idioma.
+- `CLAUDE.md`: sección "FLUJO DE FREAKOCHAPAS" añadida con tabla de campos obligatorios, checklist de verificación y explicación de por qué importa cada campo.
+- `estado.md`: Last updated → 2026-04-24 (sesión 65), news count → 73, NEWS_TRACKER updated, FC3 added to ID table, session log entry added.
+- `commit.md`: esta entrada.
+- `task.md`: limpiado.
+
+---
+
 ## Sesiones 59–64 — 2026-04-23
 
 ### feat: gaming history widget + quiz redirects + news update + SEO fixes

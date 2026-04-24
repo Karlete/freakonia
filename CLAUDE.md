@@ -154,4 +154,77 @@ Estas reglas se aplican SIEMPRE, sin excepción, antes de redactar o insertar no
 [ ] ¿Los artículos van al TOP del array?
 [ ] ¿He actualizado el NEWS_TRACKER al final?
 
+## REGLA GENERAL — ANTES DE IMPLEMENTAR CUALQUIER COSA
+
+**Si la tarea que se pide ya se ha hecho antes en este proyecto (mismo componente,
+mismo tipo de artículo, mismo patrón), la primera acción OBLIGATORIA es leer el
+código existente que ya funciona y replicar su estructura exacta.**
+
+No inferir. No inventar. No usar valores por defecto genéricos.
+Leer primero. Copiar el patrón. Aplicar los datos nuevos.
+
+Checklist de "ya se ha hecho antes":
+[ ] ¿Existe ya un artículo del mismo tipo en js/news-data.js?
+→ Leer ese artículo completo y copiar su estructura campo a campo.
+[ ] ¿Existe ya un componente igual en otra página HTML?
+→ Copiar el HTML/CSS/JS existente, no recrearlo desde cero.
+[ ] ¿Existe ya una función JS que hace lo mismo?
+→ Reusar esa función. No escribir una nueva.
+
+Si no lees el código existente primero, producirás errores garantizados
+en campos, clases, IDs o lógica que ya estaban resueltos.
+
+---
+
+## FLUJO DE FREAKOCHAPAS — OBLIGATORIO PARA ARTÍCULOS TIPO FREAKOCHAPA
+
+Una **Freakochapa** es un artículo de opinión personal de Karlete.
+Su estructura en `js/news-data.js` difiere de las noticias estándar en
+campos clave. Violarlos produce bugs visuales y de filtrado.
+
+### PASO 0 — LEER LAS FREAKOCHAPAS EXISTENTES PRIMERO
+
+Antes de insertar una nueva freakochapa, ejecutar:
+
+grep -n "isFreakochapa\|FREAKOCHAPA\|freakochapa" js/news-data.js
+
+Leer ÍNTEGROS los artículos encontrados. Copiar su estructura exacta.
+No usar la estructura de noticias estándar como base.
+
+### Campos obligatorios y sus valores correctos
+
+| Campo           | Valor correcto                   | Error habitual a evitar        |
+| --------------- | -------------------------------- | ------------------------------ |
+| `badgeLabel`    | `'FREAKOCHAPA'` — siempre        | Poner el topic ('GAMING', etc) |
+| `isFreakochapa` | `true`                           | Omitirlo                       |
+| `freakcoin`     | `{ score: N, verdict: '...' }`   | Omitirlo                       |
+| `source`        | `'freakonia.com'`                | Dejarlo vacío o externo        |
+| `url`           | `''` (vacío — es opinión propia) | Poner una URL externa          |
+| `date`          | `'DD/MM/YYYY'` — formato exacto  | Usar `'YYYY-MM-DD'`            |
+
+### PASO FINAL — Verificar posición e integridad
+
+Después de insertar, ejecutar estas comprobaciones:
+
+1. grep "id:" js/news-data.js | head -3
+   → El id de la nueva freakochapa debe aparecer en las 3 primeras líneas.
+   → Si no aparece: NO se insertó al TOP del array. Corregir.
+
+2. grep "badgeLabel" js/news-data.js | head -3
+   → Debe mostrar 'FREAKOCHAPA', no el nombre del topic.
+
+3. node --input-type=module < js/news-data.js 2>&1 | head -5
+   (o: node -e "var s=require('fs').readFileSync('js/news-data.js','utf8'); eval(s)")
+   → Si hay error de sintaxis JS, el artículo no se cargará en ninguna página.
+   → Causa más común: apóstrofes sin escapar dentro de strings con comillas simples.
+   → Ejemplo del bug: title: 'Abe's Oddysee' → rompe el JS.
+   → Corrección: usar comillas dobles para el string: title: "Abe's Oddysee"
+
+### Por qué importa
+
+- `badgeLabel: 'GAMING'` en lugar de `'FREAKOCHAPA'` → el badge muestra el tipo
+  incorrecto en news.html y en el slider "Qué se cuece" de index.html.
+- Artículo no insertado al TOP → no aparece en el slider (toma solo los 6 más recientes).
+- Error de sintaxis JS → NEWS_DATA no carga → ninguna noticia aparece en la web.
+
 At the end of the sesions your code will be revised by Chat GPT and Grok.

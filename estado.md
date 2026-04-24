@@ -1,6 +1,6 @@
 # estado.md — Project State Tracker
 
-Last updated: 2026-04-23 (sesión 64)
+Last updated: 2026-04-24 (sesión 65)
 
 ---
 
@@ -109,7 +109,7 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 ## ▶ PRÓXIMA SESIÓN — Leer esto primero
 
 ### Estado actual del sistema de noticias (news)
-- `js/news-data.js` — array `NEWS_DATA` con **70 artículos** (68 noticias + 2 Freakochapas). **Añadir nuevos artículos AQUÍ, al principio del array (más reciente primero).**
+- `js/news-data.js` — array `NEWS_DATA` con **73 artículos** (70 noticias + 3 Freakochapas). **Añadir nuevos artículos AQUÍ, al principio del array (más reciente primero).**
 - `news.html` — renderizado dinámico vía `renderNews()`. El botón "LEER MÁS" ha sido reemplazado por enlace a `article.html?id=`. No tocar el grid HTML.
 - `article.html` — Renderiza artículos individuales vía query param `?id=`. Incluye `updateSEO()` dinámico (OG, Twitter, canonical, meta description), Freakcoin rating (`<div id="freakcoin-rating">` + `renderFreakcoin()`), `css/freakcoin.css` y `js/freakcoin.js`.
 - `index.html` — slider "¿Qué se cuece?" lee automáticamente `NEWS_DATA`. No requiere cambios al añadir noticias.
@@ -119,13 +119,14 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 
 ### NEWS_TRACKER — temas usados
 ```json
-{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba","gaming","got","rol","esports","nba","magic","warhammer","got","nba","gamedev","esports","got","nba","gaming","gamedev","gaming"],"last_update":"2026-04-21"}
+{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba"],"last_update":"2026-04-24"}
 ```
-**Próximos temas disponibles:** `magic` · `warhammer` · `got`
+**Próximos temas disponibles:** `got` · `esports` · `nba`
 
 ### IDs de artículos actuales en NEWS_DATA (para evitar duplicados)
 | # | id | topic | fecha |
 |---|---|---|---|
+| FC3 | `freakochapa-ps1-biblioteca-historia-2026` | gaming | 24/04/2026 |
 | FC2 | `freakochapa-master-system-ii-10-juegarrales` | gaming | 21/04/2026 |
 | FC1 | `freakochapa-fallen-valkyrie-devlog-1` | gamedev | 21/04/2026 |
 | 68 | `noticia-msi-2026-daejeon-clasificacion` | esports | 20/04/2026 |
@@ -232,6 +233,7 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 - 📦 Repo: **https://github.com/Karlete/freakonia**
 - ⚙️ Deploy: GitHub Pages (rama `main`, raíz `/`)
 
+**Sesión 65 (2026-04-24):** Freakochapa #3 (PS1) + Pixel Patron i18n — `js/news-data.js`: artículo `freakochapa-ps1-biblioteca-historia-2026` insertado al TOP como NOTICIA 73 (estructura inline idéntica a MS2 Freakochapa: 14 juegos con `<span>` Freakcoin inline, imágenes en `assets/img/PS1/`). `index.html` + `js/pixels-rain.js`: Pixel Patron section bilingüe (ES/EN) vía `data-i18n` keys + `window.refreshPatronUI`. `CLAUDE.md`: sección Flujo de Freakochapas añadida. `task.md`: limpiado.
 **Sesión 64 (2026-04-23):** SEO fixes — `index.html`: canonical corregido de `https://freakonia.com/index.html` → `https://freakonia.com/`. `sitemap.xml`: 13 `<lastmod>` actualizados a `2026-04-23` (replace_all); fallen-valkyrie.html priority bajada de `0.8` a `0.6`. `fallen-valkyrie.html`: `<link rel="canonical" href="https://freakonia.com/fallen-valkyrie.html">` añadido antes de `</head>`. `task.md` limpiado.
 **Sesión 63 (2026-04-23):** Mantenimiento interno — `CLAUDE.md`: eliminadas líneas 157–fin (bloque de instrucciones de edición que había quedado en el cuerpo del fichero por error); añadida regla de imagen genérica al checklist de noticias. `task_for_news.md`: STEP 1 reescrito para usar comandos shell (`tail -250`, `grep "id:"`, `ls assets/img/news/`) en lugar de leer el fichero completo, reduciendo coste de tokens en sesiones futuras.
 **Sesión 62 (2026-04-23):** News update — 4 artículos nuevos insertados al TOP de `js/news-data.js` (noticias 69–72): Esports (noticia-lck-2026-apertura-kt-sorpresa · LCK Spring 2026 arranque, KT Rolster sorpresa, T1 irregular · globalesports.com) · Warhammer (noticia-tow-espana-2026-wtc-wcw · WTC + WCW Spain 2026 en marzo/abril · belloflostsouls.net) · Rol (noticia-rol-cthulhu-campfire-tales-2026 · Campfire Tales para Call of Cthulhu · chaosium.com) · Magic (noticia-magic-protour-strixhaven-las-vegas-2026 · Pro Tour Strixhaven Las Vegas 1-3/05, $500k · magic.gg). NEWS_TRACKER last_update → 2026-04-23, next_available → gaming · nba · gamedev.
