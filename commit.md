@@ -2,6 +2,23 @@
 
 ---
 
+## Sesión 66 — 2026-04-26
+
+### feat(universo): interactive universe map page + nav link on all pages
+
+**New files:**
+- `universo.html`: Mapa del Universo Freakonia. Canvas fullscreen (`overflow:hidden`), navbar idéntica al resto del proyecto (incluye el propio link activo), inline `<style>` con panel lateral responsive (desktop: slide desde right; mobile: slide desde bottom), footer copiado de index.html. Carga `js/news-data.js` en `<head>`, `js/main.js` + `js/universo.js` al final del body. Schema JSON-LD WebPage.
+- `js/universo.js`: Motor canvas completo en IIFE. 9 nodos (`UNIVERSE_NODES`): GameDev, Gaming, Esports, GoT, Warhammer, Magic, Rol, NBA, Java. 9 líneas de constelación (`CONSTELLATION_LINES`). 220 estrellas con parpadeo. Orbit particles (2 por nodo) + pulse rings. Breathing animation por nodo. `drawNode()`: glow, fill, border, emoji centrado, label truncado a 12 chars. `drawConstellationLines()`: lineDash animado. `showPanel()`: filtra `NEWS_DATA` por `topic`, renderiza 2 artículos recientes, botón "▶ ENTRAR A ...". Eventos: mousemove, click, touchstart/end, Escape, resize.
+
+**Modified files (nav only — 16 pages):**
+- `index.html`, `gamedev.html`, `fallen-valkyrie.html`, `gaming.html`, `esports.html`, `got.html`, `warhammer.html`, `magic.html`, `rol.html`, `nba.html`, `social.html`, `java.html`, `news.html`, `article.html`, `quiz.html`:
+  - `<li><a href="universo.html" class="nav-link">🗺 Universo</a></li>` insertado inmediatamente antes del `<li>` del lang-toggle button en todos los archivos.
+- `estado.md`: Last updated → 2026-04-26 (sesión 66), nav template actualizado, universo.html añadido a tabla de páginas y Phase list, session log entry añadida.
+- `commit.md`: esta entrada.
+- `task.md`: limpiado.
+
+---
+
 ## Sesión 65 — 2026-04-24
 
 ### feat(news+i18n): Freakochapa #3 PS1 + Pixel Patron bilingual

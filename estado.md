@@ -1,6 +1,6 @@
 # estado.md — Project State Tracker
 
-Last updated: 2026-04-24 (sesión 65)
+Last updated: 2026-04-26 (sesión 66)
 
 ---
 
@@ -100,6 +100,7 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 <li><a href="java.html"      class="nav-link">☕ Java</a></li>
 <li><a href="social.html"    class="nav-link">📡 Social</a></li>
 <li><a href="news.html"      class="nav-link">📰 News</a></li>
+<li><a href="universo.html"  class="nav-link">🗺 Universo</a></li>
 ```
 > "🎮 GameDev" es un dropdown. Desktop: hover muestra el submenu. Mobile: click en el toggle abre/cierra. El active state lo gestiona `setActiveNav()` en main.js — no añadir clase `active` a mano en el toggle.
 > ✅ Nav actualizada en todas las páginas (sesión 33). Dropdown styles en `css/components.css`.
@@ -215,7 +216,8 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 | social.html | ✅ Completa | |
 | news.html | ✅ Completa | Cards enlazan a article.html?id= |
 | article.html | ✅ Completa | Páginas individuales por artículo, URL compartible |
-| quiz.html | ✅ NUEVA | Quiz pixel art — 5 arquetipos · 7 preguntas · versión chico/chica |
+| quiz.html | ✅ Completa | Quiz pixel art — 5 arquetipos · 7 preguntas · versión chico/chica |
+| universo.html | ✅ NUEVA | Mapa interactivo canvas — 9 nodos, constelaciones, panel lateral, news integradas |
 
 ### Bugs conocidos / pendientes
 - Ninguno activo.
@@ -226,13 +228,14 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 ---
 
 ## Current Phase
-🚀 Phase 3: PUBLICADA — index ✅ · gamedev ✅ · fallen-valkyrie ✅ · gaming ✅ · esports ✅ · got ✅ · warhammer ✅ · magic ✅ · rol ✅ · nba ✅ · social ✅ · java ✅ · news ✅ · quiz ✅
+🚀 Phase 3: PUBLICADA — index ✅ · gamedev ✅ · fallen-valkyrie ✅ · gaming ✅ · esports ✅ · got ✅ · warhammer ✅ · magic ✅ · rol ✅ · nba ✅ · social ✅ · java ✅ · news ✅ · quiz ✅ · universo ✅
 
 **Web completa y publicada en producción.**
 - 🌐 URL: **https://freakonia.com**
 - 📦 Repo: **https://github.com/Karlete/freakonia**
 - ⚙️ Deploy: GitHub Pages (rama `main`, raíz `/`)
 
+**Sesión 66 (2026-04-26):** Universo Freakonia — `universo.html` (canvas interactivo con 9 nodos: GameDev, Gaming, Esports, GoT, Warhammer, Magic, Rol, NBA, Java; constelaciones animadas, orbit particles, pulse rings, panel lateral con noticias integradas de NEWS_DATA). `js/universo.js` (motor canvas completo: IIFE, animación RAF, mousemove/touch, showPanel, panel close, Escape key, resize). Nav link `🗺 Universo` añadido en todos los HTML del proyecto (16 páginas). `task.md`: limpiado.
 **Sesión 65 (2026-04-24):** Freakochapa #3 (PS1) + Pixel Patron i18n + article img hover — `js/news-data.js`: artículo `freakochapa-ps1-biblioteca-historia-2026` insertado al TOP como NOTICIA 73 (14 juegos PS1, Freakcoin inline, todas las imágenes en `assets/img/PS1/` incluyendo `granturismo.jpg` y `soulreaver.webp`). `article.html`: `.article-body img` hover (scale + glow) + `height:180px; object-fit:cover` para tamaño uniforme. `index.html` + `js/pixels-rain.js`: Pixel Patron bilingüe. `CLAUDE.md`: Flujo de Freakochapas. `task.md`: limpiado.
 **Sesión 64 (2026-04-23):** SEO fixes — `index.html`: canonical corregido de `https://freakonia.com/index.html` → `https://freakonia.com/`. `sitemap.xml`: 13 `<lastmod>` actualizados a `2026-04-23` (replace_all); fallen-valkyrie.html priority bajada de `0.8` a `0.6`. `fallen-valkyrie.html`: `<link rel="canonical" href="https://freakonia.com/fallen-valkyrie.html">` añadido antes de `</head>`. `task.md` limpiado.
 **Sesión 63 (2026-04-23):** Mantenimiento interno — `CLAUDE.md`: eliminadas líneas 157–fin (bloque de instrucciones de edición que había quedado en el cuerpo del fichero por error); añadida regla de imagen genérica al checklist de noticias. `task_for_news.md`: STEP 1 reescrito para usar comandos shell (`tail -250`, `grep "id:"`, `ls assets/img/news/`) en lugar de leer el fichero completo, reduciendo coste de tokens en sesiones futuras.

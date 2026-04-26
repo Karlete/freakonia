@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="description" content="Explora el universo Freakonia: Gaming, GameDev, GoT, Warhammer, Magic, NBA, Java. El mapa interactivo del reino friki de Karlete." />
+  <title>Mapa del Universo Freakonia — Explorar</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+
+  <!-- News data (global NEWS_DATA array) -->
+  <script src="js/news-data.js"></script>
+
+  <link rel="canonical" href="https://freakonia.com/universo.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Mapa del Universo Freakonia",
+    "url": "https://freakonia.com/universo.html",
+    "description": "Explora el universo Freakonia: Gaming, GameDev, GoT, Warhammer, Magic, NBA, Java. El mapa interactivo del reino friki de Karlete."
+  }
+  </script>
+
+  <style>
+body.universe-page {
+  overflow: hidden;
+}
+
+#universe-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  cursor: default;
+  display: block;
+}
+
+.universe-title-overlay {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.45rem;
+  color: rgba(0, 255, 65, 0.35);
+  z-index: 10;
+  pointer-events: none;
+  white-space: nowrap;
+  letter-spacing: 4px;
+}
+
+.universe-panel {
+  position: fixed;
+  top: 80px;
+  right: -380px;
+  width: 320px;
+  max-height: calc(100vh - 110px);
+  overflow-y: auto;
+  background: #111111;
+  border: 4px solid #00ff41;
+  z-index: 200;
+  padding: 20px;
+  transition: right 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  scrollbar-width: thin;
+  scrollbar-color: #00ff41 #111111;
+}
+
+.universe-panel.visible {
+  right: 20px;
+}
+
+.universe-panel-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: 2px solid #888888;
+  color: #888888;
+  font-family: "Press Start 2P", monospace;
+  font-size: 8px;
+  padding: 4px 8px;
+  cursor: pointer;
+  line-height: 1;
+  transition:
+    border-color 0.15s,
+    color 0.15s;
+}
+
+.universe-panel-close:hover {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.universe-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-right: 24px;
+}
+
+.universe-panel-emoji {
+  font-size: 2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.universe-panel-title {
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.55rem;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+.universe-panel-tagline {
+  font-family: "VT323", monospace;
+  font-size: 20px;
+  color: #888888;
+  line-height: 1.3;
+  border-left: 3px solid #00ff41;
+  padding-left: 12px;
+  margin: 0;
+}
+
+.universe-panel-news {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.universe-news-label {
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.4rem;
+  color: #555555;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.universe-news-card {
+  background: #161616;
+  border: 2px solid #2a2a2a;
+  padding: 10px;
+  cursor: pointer;
+  transition: border-color 0.15s;
+  text-decoration: none;
+  display: block;
+}
+
+.universe-news-card:hover {
+  border-color: #555555;
+}
+
+.universe-news-card-title {
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.38rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.universe-news-card-date {
+  font-family: "VT323", monospace;
+  font-size: 16px;
+  color: #555555;
+}
+
+.universe-panel-btn {
+  font-size: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin-top: 4px;
+}
+
+.universe-hint {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.38rem;
+  color: #444444;
+  z-index: 10;
+  white-space: nowrap;
+  pointer-events: none;
+  animation: blink 3s infinite;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .universe-panel {
+    top: auto;
+    right: 0 !important;
+    bottom: -460px;
+    width: 100%;
+    max-height: 55vh;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    transition: bottom 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  .universe-panel.visible {
+    bottom: 0;
+  }
+  .universe-hint {
+    display: none;
+  }
+  .universe-title-overlay {
+    font-size: 0.35rem;
+  }
+}
+  </style>
+</head>
+<body class="universe-page">
+
+<!-- ─── Navigation ─────────────────────────────────────────────────────── -->
+<nav class="navbar" role="navigation" aria-label="Navegación principal">
+  <div class="container">
+    <a href="index.html" class="nav-brand">⚔ FREAKONIA</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" data-i18n-aria="nav.toggleAria">▼ MENU</button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html" class="nav-link" data-i18n="nav.home">🏠 Inicio</a></li>
+      <li class="nav-dropdown">
+        <span class="nav-link nav-dropdown-toggle">🎮 GameDev ▾</span>
+        <ul class="nav-submenu">
+          <li><a href="gamedev.html">🎮 GameDev</a></li>
+          <li><a href="fallen-valkyrie.html">📓 FV Devlog</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <span class="nav-link nav-dropdown-toggle">🕹 Gaming ▾</span>
+        <ul class="nav-submenu">
+          <li><a href="gaming.html">🕹 Gaming</a></li>
+          <li><a href="esports.html">🏆 Esports</a></li>
+          <li><a href="quiz.html">🎯 Quiz Retro</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <span class="nav-link nav-dropdown-toggle">🐉 Fantasía ▾</span>
+        <ul class="nav-submenu">
+          <li><a href="got.html">🐉 GoT</a></li>
+          <li><a href="warhammer.html">⚙ Warhammer</a></li>
+          <li><a href="magic.html">✨ MtG</a></li>
+          <li><a href="rol.html">🎲 Rol</a></li>
+        </ul>
+      </li>
+      <li><a href="nba.html" class="nav-link">🏀 NBA</a></li>
+      <li class="nav-dropdown">
+        <span class="nav-link nav-dropdown-toggle">📡 Comunidad ▾</span>
+        <ul class="nav-submenu">
+          <li><a href="java.html">☕ Java</a></li>
+          <li><a href="social.html">📡 Social</a></li>
+        </ul>
+      </li>
+      <li><a href="news.html" class="nav-link">📰 News</a></li>
+      <li><a href="universo.html" class="nav-link">🗺 Universo</a></li>
+      <li>
+        <button class="lang-toggle" id="lang-toggle" aria-label="Cambiar idioma" title="Switch language / Cambiar idioma">
+          🌐 EN
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<canvas id="universe-canvas"></canvas>
+
+<div class="universe-title-overlay">[ MAPA DEL UNIVERSO FREAKONIA ]</div>
+
+<div
+  id="universe-panel"
+  class="universe-panel"
+  role="complementary"
+  aria-label="Información del sector"
+>
+  <button
+    id="universe-panel-close"
+    class="universe-panel-close"
+    aria-label="Cerrar panel"
+  >
+    ✕
+  </button>
+  <div class="universe-panel-header">
+    <span class="universe-panel-emoji" id="panel-emoji"></span>
+    <h2 class="universe-panel-title" id="panel-title"></h2>
+  </div>
+  <p class="universe-panel-tagline" id="panel-tagline"></p>
+  <div class="universe-panel-news" id="panel-news"></div>
+  <a class="btn universe-panel-btn" id="panel-btn" href="#">▶ ENTRAR</a>
+</div>
+
+<p class="universe-hint">HOVER PARA EXPLORAR · CLICK PARA ENTRAR</p>
+
+<!-- ─── Footer ──────────────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="index.html"    data-i18n="nav.home2">Inicio</a></li>
+      <li><a href="gamedev.html">GameDev</a></li>
+      <li><a href="gaming.html">Gaming</a></li>
+      <li><a href="got.html">GoT</a></li>
+      <li><a href="social.html">Social</a></li>
+      <li><a href="java.html">Java</a></li>
+    </ul>
+    <p>⚔ FREAKONIA — KARLETE</p>
+    <p style="color:#444;" data-i18n="footer.made">HECHO CON AMOR PIXELADO Y DEMASIADAS BEBIDAS ENERGÉTICAS</p>
+    <p style="color:#333;">◄ INSERT COIN ►</p>
+
+    <div class="footer-legal">
+      <div class="pixel-divider"></div>
+      <p class="footer-copyright">
+        © 2025 FREAKONIA — KARLETE. ALL RIGHTS RESERVED.
+      </p>
+      <p class="footer-trademark">
+        FREAKONIA™ IS A REGISTERED PERSONAL BRAND.
+        ALL CONTENT, DESIGNS, GAME CONCEPTS AND ORIGINAL TEXTS
+        ON THIS SITE ARE THE EXCLUSIVE PROPERTY OF THEIR AUTHOR.
+        UNAUTHORIZED REPRODUCTION, DISTRIBUTION OR USE OF ANY
+        CONTENT IS STRICTLY PROHIBITED WITHOUT PRIOR WRITTEN PERMISSION.
+      </p>
+      <p class="footer-notice">
+        ⚠ THIS SITE CONTAINS STRONG OPINIONS ABOUT VIDEO GAMES,
+        FANTASY LORE AND BASKETBALL. READER DISCRETION IS ADVISED.
+        NO GOBLINS WERE HARMED IN THE MAKING OF THIS WEBSITE.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="js/main.js"></script>
+<script src="js/universo.js"></script>
+</body>
+</html>
