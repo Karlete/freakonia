@@ -10,8 +10,8 @@
       topic: "gamedev",
       color: "#00ff41",
       tagline: "Fallen Valkyrie en construcción. Unity y café.",
-      xRatio: 0.24,
-      yRatio: 0.22,
+      xRatio: 0.30,
+      yRatio: 0.20,
       baseRadius: 28,
     },
     {
@@ -22,8 +22,8 @@
       topic: "gaming",
       color: "#ff00ff",
       tagline: "Desde 1993. Memoria pixelada y músculo arcade.",
-      xRatio: 0.13,
-      yRatio: 0.47,
+      xRatio: 0.20,
+      yRatio: 0.45,
       baseRadius: 26,
     },
     {
@@ -34,8 +34,8 @@
       topic: "esports",
       color: "#00bfff",
       tagline: "14 temporadas de LoL. Más espectador que jugador.",
-      xRatio: 0.21,
-      yRatio: 0.73,
+      xRatio: 0.27,
+      yRatio: 0.71,
       baseRadius: 22,
     },
     {
@@ -46,8 +46,8 @@
       topic: "got",
       color: "#cc2200",
       tagline: "ASOIAF S1-S6. El Norte recuerda. GRRM, escribe.",
-      xRatio: 0.74,
-      yRatio: 0.22,
+      xRatio: 0.67,
+      yRatio: 0.20,
       baseRadius: 26,
     },
     {
@@ -58,8 +58,8 @@
       topic: "warhammer",
       color: "#ffcc00",
       tagline: "Bretonia, 5ª edición, 1996. El Viejo Mundo vive.",
-      xRatio: 0.84,
-      yRatio: 0.46,
+      xRatio: 0.78,
+      yRatio: 0.43,
       baseRadius: 24,
     },
     {
@@ -70,8 +70,8 @@
       topic: "magic",
       color: "#cc44ff",
       tagline: "Ice Age a Tempest. Clan MDK. Torneos de viernes.",
-      xRatio: 0.76,
-      yRatio: 0.68,
+      xRatio: 0.71,
+      yRatio: 0.66,
       baseRadius: 22,
     },
     {
@@ -82,8 +82,8 @@
       topic: "rol",
       color: "#ff8800",
       tagline: "JOC Internacional. MERP, Stormbringer, Cthulhu.",
-      xRatio: 0.61,
-      yRatio: 0.82,
+      xRatio: 0.59,
+      yRatio: 0.79,
       baseRadius: 20,
     },
     {
@@ -94,8 +94,8 @@
       topic: "nba",
       color: "#ff6600",
       tagline: "25 años de Lakers. La Taberna del Boxscore.",
-      xRatio: 0.34,
-      yRatio: 0.83,
+      xRatio: 0.38,
+      yRatio: 0.79,
       baseRadius: 22,
     },
     {
@@ -106,9 +106,21 @@
       topic: "java",
       color: "#1eb8d0",
       tagline: "Dev profesional. JavaDevBible en construcción.",
-      xRatio: 0.5,
-      yRatio: 0.91,
+      xRatio: 0.50,
+      yRatio: 0.88,
       baseRadius: 20,
+    },
+    {
+      id: "freakonia",
+      label: "FREAKONIA",
+      emoji: "⚔",
+      href: "index.html",
+      topic: null,
+      color: "#00ff41",
+      tagline: "El reino friki de Karlete. Sin filtros desde 1993.",
+      xRatio: 0.50,
+      yRatio: 0.47,
+      baseRadius: 36,
     },
   ];
 
@@ -122,12 +134,19 @@
     ["nba", "java"],
     ["java", "rol"],
     ["gamedev", "got"],
+    ["freakonia", "gamedev"],
+    ["freakonia", "gaming"],
+    ["freakonia", "got"],
+    ["freakonia", "nba"],
+    ["freakonia", "java"],
+    ["freakonia", "rol"],
   ];
 
   const NAV_HEIGHT = 64;
 
   let canvas, ctx;
   let stars = [];
+  let shootingStars = [];
   let time = 0;
   let hoveredNode = null;
   let panelNode = null;
@@ -167,12 +186,13 @@
 
   function initStars() {
     stars = [];
-    for (let i = 0; i < 220; i++) {
+    for (let i = 0; i < 350; i++) {
+      const isBright = Math.random() < 0.05;
       stars.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        size: 0.5 + Math.random() * 1.5,
-        baseAlpha: 0.3 + Math.random() * 0.7,
+        size: isBright ? 2.5 + Math.random() * 0.5 : 0.5 + Math.random() * 1.5,
+        baseAlpha: isBright ? 0.9 + Math.random() * 0.1 : 0.3 + Math.random() * 0.7,
         phase: Math.random() * Math.PI * 2,
         speed: 0.001 + Math.random() * 0.003,
       });
@@ -194,20 +214,126 @@
     });
   }
 
+  function updateAndDrawShootingStars() {
+    if (Math.random() < 0.0007) {
+      shootingStars.push({
+        x: Math.random() * canvas.width * 0.7,
+        y: NAV_HEIGHT + Math.random() * (canvas.height - NAV_HEIGHT) * 0.5,
+        vx: 4 + Math.random() * 3,
+        vy: 1.5 + Math.random() * 2,
+        length: 60 + Math.random() * 80,
+        life: 1,
+      });
+    }
+
+    shootingStars = shootingStars.filter((star) => {
+      star.x += star.vx;
+      star.y += star.vy;
+      star.life -= 0.018;
+      if (star.life <= 0) return false;
+
+      ctx.save();
+      ctx.globalAlpha = star.life * 0.8;
+      ctx.strokeStyle = "#ffffff";
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(star.x, star.y);
+      ctx.lineTo(
+        star.x - star.vx * (star.length / 5),
+        star.y - star.vy * (star.length / 5),
+      );
+      ctx.stroke();
+      ctx.globalAlpha = star.life;
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(Math.floor(star.x), Math.floor(star.y), 2, 2);
+      ctx.restore();
+
+      return true;
+    });
+  }
+
+  function drawNebulae() {
+    const blobs = [
+      {
+        cx: canvas.width * 0.23,
+        cy: NAV_HEIGHT + (canvas.height - NAV_HEIGHT) * 0.46,
+        r: canvas.width * 0.16,
+        inner: "rgba(255,0,255,0.06)",
+        outer: "rgba(255,0,255,0)",
+      },
+      {
+        cx: canvas.width * 0.72,
+        cy: NAV_HEIGHT + (canvas.height - NAV_HEIGHT) * 0.44,
+        r: canvas.width * 0.18,
+        inner: "rgba(255,204,0,0.05)",
+        outer: "rgba(204,34,0,0)",
+      },
+      {
+        cx: canvas.width * 0.49,
+        cy: NAV_HEIGHT + (canvas.height - NAV_HEIGHT) * 0.82,
+        r: canvas.width * 0.14,
+        inner: "rgba(255,102,0,0.04)",
+        outer: "rgba(0,191,255,0)",
+      },
+      {
+        cx: canvas.width * 0.50,
+        cy: NAV_HEIGHT + (canvas.height - NAV_HEIGHT) * 0.47,
+        r: canvas.width * 0.10,
+        inner: "rgba(0,255,65,0.05)",
+        outer: "rgba(0,255,65,0)",
+      },
+    ];
+
+    blobs.forEach((blob) => {
+      const grad = ctx.createRadialGradient(
+        blob.cx, blob.cy, 0,
+        blob.cx, blob.cy, blob.r,
+      );
+      grad.addColorStop(0, blob.inner);
+      grad.addColorStop(1, blob.outer);
+      ctx.globalAlpha = 1;
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(blob.cx, blob.cy, blob.r, 0, Math.PI * 2);
+      ctx.fill();
+    });
+  }
+
   function drawConstellationLines() {
     ctx.save();
-    CONSTELLATION_LINES.forEach(([fromId, toId]) => {
+    CONSTELLATION_LINES.forEach(([fromId, toId], idx) => {
       const from = UNIVERSE_NODES.find((n) => n.id === fromId);
       const to = UNIVERSE_NODES.find((n) => n.id === toId);
       if (!from || !to) return;
+
+      // Pass 1 — wide glow in from-node color
       ctx.beginPath();
-      ctx.setLineDash([5, 6]);
-      ctx.lineDashOffset = -(time * 12);
-      ctx.strokeStyle = "rgba(0,255,65,0.12)";
-      ctx.lineWidth = 1;
+      ctx.setLineDash([]);
+      ctx.strokeStyle = from.color + "18";
+      ctx.lineWidth = 4;
       ctx.moveTo(from.x, from.y);
       ctx.lineTo(to.x, to.y);
       ctx.stroke();
+
+      // Pass 2 — animated dashed mid line
+      ctx.beginPath();
+      ctx.setLineDash([6, 5]);
+      ctx.lineDashOffset = -(time * 14);
+      ctx.strokeStyle = "rgba(0,255,65,0.20)";
+      ctx.lineWidth = 1.5;
+      ctx.moveTo(from.x, from.y);
+      ctx.lineTo(to.x, to.y);
+      ctx.stroke();
+
+      // Pass 3 — traveling bright dot
+      ctx.setLineDash([]);
+      const t = ((time * 0.3 + idx * 0.17) % 1);
+      const px = from.x + (to.x - from.x) * t;
+      const py = from.y + (to.y - from.y) * t;
+      ctx.globalAlpha = 0.6;
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(Math.floor(px) - 1, Math.floor(py) - 1, 3, 3);
+      ctx.globalAlpha = 1;
     });
     ctx.setLineDash([]);
     ctx.restore();
@@ -245,12 +371,15 @@
     });
   }
 
-  function drawNode(node, currentRadius, isHovered) {
+  function drawNode(node, currentRadius, isHovered, breathe) {
+    const isFreakonia = node.id === "freakonia";
     ctx.save();
 
-    // Glow
+    // Glow — stronger for freakonia
     ctx.shadowColor = node.color;
-    ctx.shadowBlur = isHovered ? 32 : 16;
+    ctx.shadowBlur = isFreakonia
+      ? (isHovered ? 60 : 40)
+      : (isHovered ? 45 : 18);
 
     // Filled body (low alpha)
     ctx.beginPath();
@@ -265,7 +394,51 @@
     ctx.lineWidth = isHovered ? 3 : 2;
     ctx.stroke();
 
+    // FREAKONIA second static inner ring
+    if (isFreakonia) {
+      ctx.beginPath();
+      ctx.arc(node.x, node.y, node.baseRadius + 8 + breathe, 0, Math.PI * 2);
+      ctx.strokeStyle = "#00ff41" + "33";
+      ctx.lineWidth = 1;
+      ctx.setLineDash([]);
+      ctx.stroke();
+    }
+
     ctx.shadowBlur = 0;
+
+    // Hover: outer dashed ring
+    if (isHovered) {
+      ctx.beginPath();
+      ctx.arc(node.x, node.y, currentRadius + 18, 0, Math.PI * 2);
+      ctx.strokeStyle = node.color + "55";
+      ctx.lineWidth = 1;
+      ctx.setLineDash([3, 3]);
+      ctx.stroke();
+      ctx.setLineDash([]);
+    }
+
+    // Hover: animated scan line sweeping vertically through node
+    if (isHovered) {
+      const scanY = node.y - currentRadius + ((time * 60) % (currentRadius * 2));
+      if (scanY >= node.y - currentRadius && scanY <= node.y + currentRadius) {
+        ctx.beginPath();
+        ctx.strokeStyle = node.color + "40";
+        ctx.lineWidth = 1;
+        ctx.moveTo(node.x - currentRadius, scanY);
+        ctx.lineTo(node.x + currentRadius, scanY);
+        ctx.stroke();
+      }
+    }
+
+    // Hover: coordinate label above node
+    if (isHovered) {
+      ctx.font = '6px "Press Start 2P", monospace';
+      ctx.fillStyle = node.color + "aa";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "bottom";
+      const coordText = `[${Math.floor(node.xRatio * 100)}:${Math.floor(node.yRatio * 100)}]`;
+      ctx.fillText(coordText, node.x, node.y - currentRadius - 16);
+    }
 
     // Emoji (centered)
     const emojiSize = Math.floor(currentRadius * 0.75);
@@ -300,15 +473,18 @@
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     drawStars();
+    updateAndDrawShootingStars();
+    drawNebulae();
     drawConstellationLines();
 
     UNIVERSE_NODES.forEach((node, i) => {
       const isHovered = hoveredNode && hoveredNode.id === node.id;
-      const breathe = Math.sin(time * 0.8 + i * 1.3) * 3;
+      const breatheAmp = node.id === "freakonia" ? 6 : 3;
+      const breathe = Math.sin(time * 0.8 + i * 1.3) * breatheAmp;
       const currentRadius = node.baseRadius + breathe + (isHovered ? 10 : 0);
       updatePulseRing(node, currentRadius);
       updateOrbitParticles(node, currentRadius);
-      drawNode(node, currentRadius, isHovered);
+      drawNode(node, currentRadius, isHovered, breathe);
     });
   }
 

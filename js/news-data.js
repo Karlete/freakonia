@@ -10,6 +10,56 @@
 
 var NEWS_DATA = [
 
+  // ── NOTICIA 77 ───────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-unity-7-cancelado-2026',
+    topic:      'gamedev',
+    category:   'gamedev',
+    emoji:      '🎮',
+    badgeLabel: 'GAMEDEV',
+    title:      'UNITY 7 HA MUERTO — EL FUTURO DEL MOTOR SE LLAMA 6.X',
+    summary:    'Unity ha cancelado oficialmente el desarrollo de Unity 7. El nuevo CEO ha confirmado que todas las mejoras previstas se integrarán de forma incremental en la línea Unity 6.x. Un cambio de estrategia que sacude la hoja de ruta de miles de estudios indies.',
+    full: [
+      'La noticia lleva días circulando en los foros de gamedev y ya es oficial: Unity 7 no va a existir. La compañía ha decidido abandonar el salto de versión mayor y apostar por un modelo de actualizaciones continuas bajo la rama Unity 6.x. El anuncio llegó en silencio, sin ningún State of Play ni evento especial, simplemente una entrada en el blog del equipo y un par de declaraciones del CEO que han puesto patas arriba a la comunidad de desarrolladores independientes.',
+      'El argumento de Unity es pragmático: en lugar de acumular features durante años para un lanzamiento masivo que genera expectativas imposibles de cumplir, el plan es distribuir las mejoras de forma continua. Ciclos de actualización más cortos, menos ruptura de compatibilidad entre versiones, y una experiencia de migración de proyectos más llevadera. Sobre el papel suena bien. En la práctica, significa que si estabas esperando Unity 7 para cambiar de motor o actualizar tu proyecto, el calendario que tenías en mente ya no sirve.',
+      'La comunidad está dividida. Hay devs que llevan meses aguantando bugs y limitaciones del motor con la promesa mental de "en Unity 7 esto se arreglará". Ahora esa fecha horizonte desaparece y todo depende de cuándo llegue cada fix en el flujo de actualizaciones 6.x. Otros, especialmente los que usan el motor en producción con proyectos a largo plazo, respiran aliviados: menos versiones mayores significa menos migraciones traumáticas. Como siempre con Unity, la realidad depende enormemente de qué tipo de proyecto tengas entre manos.',
+      'Desde aquí, como desarrolladora de Fallen Valkyrie en Unity, reconozco que la noticia me deja un sabor agridulce. Unity 7 era una promesa en el horizonte. Ahora toca adaptarse a los 6.x y esperar que el ritmo de mejoras sea tan consistente como prometen. El motor tiene cosas muy buenas, pero también lleva años acumulando deuda técnica en ciertos apartados que necesitan más que un parche de versión menor.'
+    ],
+    date:       '26/04/2026',
+    url:        'https://gamefromscratch.com/unity-7-is-dead/',
+    page:       'gamedev.html',
+    pageLabel:  'GameDev',
+    accent:     '#00ff41',
+    source:     'gamefromscratch.com',
+    img:        'assets/img/news/gamedev_generic.webp',
+    tags:       ['Unity', 'Unity 7', 'GameDev', 'Motor de Juego', 'Indie Dev', 'Unity 6']
+  },
+
+  // ── NOTICIA 76 ───────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-nba-playoffs-r1-bajas-2026',
+    topic:      'nba',
+    category:   'nba',
+    emoji:      '🏀',
+    badgeLabel: 'NBA',
+    title:      'PLAYOFFS NBA R1 — LAKERS Y THUNDER BARREN, PERO LAS BAJAS LO COMPLICAN TODO',
+    summary:    'Los Lakers están a un paso de barrer a los Rockets y el Thunder domina a los Suns 3-0. Pero las eliminatorias de primer ronda tienen un protagonista inesperado: las lesiones. Con Edwards y DiVincenzo fuera, los Timberwolves sufren contra los Nuggets. El Oeste no perdona.',
+    full: [
+      'La primera ronda de los Playoffs 2026 está dando exactamente lo que prometía: series cortas en el papel que se complican en la cancha. En el Oeste, los Lakers de LeBron James marchan 3-0 ante Houston y están a un paso de completar el barrido. El Fantasma de Cleveland lleva unos playoffs de otro nivel para su edad, recordándonos una vez más que mientras siga siendo capaz de dominar en postemporada, Los Ángeles tiene opciones reales. Los Rockets, que llegaron como la sorpresa de la temporada regular, no han encontrado respuesta.',
+      'El Oklahoma City Thunder también aprieta el acelerador y pone 3-0 a los Suns de Durant y Booker. Phoenix lleva una temporada entera de promesas incumplidas y la postemporada no está siendo diferente. En el Este, los Celtics y los Cavaliers lideran sus respectivas series, mientras que el Magic ha sorprendido plantando cara a los Pistons. Pero el dato que más preocupa del Oeste es la situación de Minnesota: los Timberwolves, que eran candidatos reales con Anthony Edwards liderando, tienen a su estrella fuera por lesión. Sin Edwards, los Nuggets con Jokic tienen muchas más opciones de remontar la serie.',
+      'Los Playoffs de 2026 confirman lo que veíamos venir: el Oeste va a ser una carnicería. Si los Lakers barren a Houston y el Thunder hace lo propio con Phoenix, la segunda ronda pinta con partidos de altísimo nivel. Jokic contra cualquiera sigue siendo el matchup más interesante de la liga cuando está enchufado. Y LeBron en postemporada tiene esa capacidad de hacer irrelevante cualquier análisis previo.',
+      'Desde la Taberna del Boxscore seguimos los playoffs con el mismo ritual de siempre: estadísticas, debates interminables y la esperanza de que esta sea la ronda en la que Lakers vayan de verdad a por el anillo. Con LeBron nunca se sabe. Y eso, reconozcámoslo, es lo mejor de todo.'
+    ],
+    date:       '26/04/2026',
+    url:        'https://www.espn.com/nba/story/_/id/48506452/2026-nba-playoffs-western-conference-round-one-takeaways',
+    page:       'nba.html',
+    pageLabel:  'NBA',
+    accent:     '#FF8C00',
+    source:     'espn.com',
+    img:        'assets/img/news/nba_generic.png',
+    tags:       ['NBA', 'Playoffs 2026', 'Lakers', 'LeBron James', 'Thunder', 'Anthony Edwards']
+  },
+
   // ── NOTICIA 73 — FREAKOCHAPA #3 ─────────────────────────────────────────────
   {
     id: 'freakochapa-ps1-biblioteca-historia-2026',
@@ -2150,5 +2200,5 @@ var NEWS_DATA = [
 
 // NEWS_TRACKER
 // used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba"]
-// last_update: "2026-04-24"
-// next_available: ["got", "esports", "nba"]
+// last_update: "2026-04-26"
+// next_available: ["gaming", "warhammer", "rol"]
