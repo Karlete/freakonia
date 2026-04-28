@@ -1,5 +1,10 @@
 # CLAUDE.md — Project Context
 
+## INICIO DE SESIÓN — OBLIGATORIO
+
+**Primera acción de cada sesión**: leer `estado.md` completo antes de hacer nada.
+`estado.md` es la fuente de verdad del estado actual del proyecto.
+
 ## Project
 
 Personal static fandom & gamedev website with pixel art aesthetic.
@@ -101,58 +106,48 @@ Owner: Karlete | Stack: HTML5, CSS3, Vanilla JS | Host: GitHub Pages
 - All buttons styled as pixel art buttons with :active press effect
 - Section headers use pixel art dividers
 
-## Fuentes de noticias
+## FLUJO DE NOTICIAS
 
-Antes de buscar noticias o novedades para cualquier sección del proyecto, leer `news_source.md` y consultar las fuentes de la categoría correspondiente.
+**Las noticias llegan YA REDACTADAS en `task.md`. Claude Code NO busca, NO redacta, NO planifica.**
+El único trabajo es insertar los artículos en `js/news-data.js` y actualizar el NEWS_TRACKER.
 
-## FLUJO DE NOTICIAS — OBLIGATORIO ANTES DE PROPONER O AÑADIR CUALQUIER NOTICIA
+### PASOS — en orden, sin saltarse ninguno
 
-Estas reglas se aplican SIEMPRE, sin excepción, antes de redactar o insertar noticias en `js/news-data.js`.
+1. **Leer `task.md`** — contiene los artículos listos para insertar.
 
-### PASO 1 — Leer el estado actual ANTES de buscar nada
+2. **Obtener el número del último artículo y los IDs existentes:**
+   tail -300 js/news-data.js
+   grep "id:" js/news-data.js
+   Solo estos dos comandos. NO leer `js/news-data.js` entero.
 
-1. Leer `js/news-data.js` completo para conocer:
-   - Todos los `id` existentes (evitar duplicados)
-   - Los temas (`topic`) ya cubiertos recientemente
-   - El bloque `NEWS_TRACKER` al final del fichero:
-     - `used_topics` — temas ya usados
-     - `last_update` — fecha de la última actualización
-     - `next_available` — temas sugeridos para la próxima tanda
+3. **Insertar** todos los artículos al TOP del array `NEWS_DATA`, con su comentario
+   `// ── NOTICIA N ──` numerado desde el siguiente al último existente.
 
-2. Leer `news_source.md` para saber qué fuentes consultar por categoría.
+4. **Actualizar `NEWS_TRACKER`** al final de `js/news-data.js`:
+   - `last_update`: fecha de hoy en YYYY-MM-DD
+   - `next_available`: los 3 topics no usados en este batch
 
-### PASO 2 — Buscar noticias respetando estas restricciones
+5. **Vaciar `task.md`** — dejar el fichero en blanco tras completar la inserción.
 
-- NO proponer un topic que ya tenga una noticia reciente en el array
-  (revisar los últimos 10 artículos del array antes de decidir el topic)
-- Para temas con cobertura en curso (LEC, NBA, torneos activos):
-  buscar SIEMPRE los resultados más recientes antes de redactar.
-  Nunca proponer una noticia de "arranque" o "presentación" de algo
-  que ya lleva semanas en curso.
-- Los artículos `full[]` deben ser texto original — nunca copiar ni parafrasear
-  demasiado cerca de la fuente. Citar la fuente en `url` y `source`, nada más.
+### Reglas inamovibles
 
-### PASO 3 — IDs y numeración
+- Artículos nuevos siempre al **TOP** del array, nunca al final.
+- **Nunca** editar artículos existentes.
+- **Nunca** tocar `index.html`, `news.html`, `article.html`, `js/news.js` ni ningún CSS.
+- Si un `id` del task.md ya existe en el array, avisar a Karlete antes de insertar.
 
-- El `id` debe ser único y descriptivo: `noticia-[tema-corto]-[año]`
-- El número de artículo en el comentario `// ── NOTICIA N ──` es el siguiente
-  al último existente en el array.
+### Quick reference — accents, pages, fallback images
 
-### PASO 4 — Inserción
-
-- Los artículos nuevos van SIEMPRE al TOP del array `NEWS_DATA` (más reciente primero).
-- Después de insertar, actualizar el bloque `NEWS_TRACKER` al final del fichero:
-  - `last_update`: fecha actual en formato YYYY-MM-DD
-  - `next_available`: sugerir los 3 topics menos usados recientemente
-
-### RESUMEN RÁPIDO (checklist antes de proponer noticias)
-
-[ ] ¿He leído los últimos 10 artículos del array para evitar repetir topic?
-[ ] ¿He comprobado si el tema tiene cobertura en curso (liga activa, torneo, etc.)?
-[ ] ¿He buscado los resultados/novedades MÁS RECIENTES, no el "arranque" del evento?
-[ ] ¿El id propuesto no existe ya en el array?
-[ ] ¿Los artículos van al TOP del array?
-[ ] ¿He actualizado el NEWS_TRACKER al final?
+| topic     | accent  | page           | pageLabel | badgeLabel | emoji | fallback img         |
+| --------- | ------- | -------------- | --------- | ---------- | ----- | -------------------- |
+| got       | #cc2200 | got.html       | GoT       | GOT        | 🐉    | got_generic.webp     |
+| esports   | #C89B3C | esports.html   | Esports   | ESPORTS    | 🏆    | esports_generic.webp |
+| gaming    | #00bfff | gaming.html    | Gaming    | GAMING     | 🕹️    | gaming_generic.webp  |
+| gamedev   | #00ff41 | gamedev.html   | GameDev   | GAMEDEV    | 🎮    | gamedev_generic.webp |
+| magic     | #9933ff | magic.html     | MTG       | MTG        | ✨    | magic_generic.webp   |
+| warhammer | #8B0000 | warhammer.html | Warhammer | WARHAMMER  | ⚔️    | the_old_world.jpg    |
+| rol       | #cc9900 | rol.html       | Rol       | ROL        | 🎲    | rol_generic.jpg      |
+| nba       | #FF8C00 | nba.html       | NBA       | NBA        | 🏀    | nba_ball.webp        |
 
 ## REGLA GENERAL — ANTES DE IMPLEMENTAR CUALQUIER COSA
 
@@ -185,8 +180,7 @@ campos clave. Violarlos produce bugs visuales y de filtrado.
 ### PASO 0 — LEER LAS FREAKOCHAPAS EXISTENTES PRIMERO
 
 Antes de insertar una nueva freakochapa, ejecutar:
-
-grep -n "isFreakochapa\|FREAKOCHAPA\|freakochapa" js/news-data.js
+grep -n "isFreakochapa|FREAKOCHAPA|freakochapa" js/news-data.js
 
 Leer ÍNTEGROS los artículos encontrados. Copiar su estructura exacta.
 No usar la estructura de noticias estándar como base.
@@ -206,15 +200,14 @@ No usar la estructura de noticias estándar como base.
 
 Después de insertar, ejecutar estas comprobaciones:
 
-1. grep "id:" js/news-data.js | head -3
+1. `grep "id:" js/news-data.js | head -3`
    → El id de la nueva freakochapa debe aparecer en las 3 primeras líneas.
    → Si no aparece: NO se insertó al TOP del array. Corregir.
 
-2. grep "badgeLabel" js/news-data.js | head -3
+2. `grep "badgeLabel" js/news-data.js | head -3`
    → Debe mostrar 'FREAKOCHAPA', no el nombre del topic.
 
-3. node --input-type=module < js/news-data.js 2>&1 | head -5
-   (o: node -e "var s=require('fs').readFileSync('js/news-data.js','utf8'); eval(s)")
+3. `node -e "var s=require('fs').readFileSync('js/news-data.js','utf8'); eval(s)"`
    → Si hay error de sintaxis JS, el artículo no se cargará en ninguna página.
    → Causa más común: apóstrofes sin escapar dentro de strings con comillas simples.
    → Ejemplo del bug: title: 'Abe's Oddysee' → rompe el JS.
@@ -227,4 +220,4 @@ Después de insertar, ejecutar estas comprobaciones:
 - Artículo no insertado al TOP → no aparece en el slider (toma solo los 6 más recientes).
 - Error de sintaxis JS → NEWS_DATA no carga → ninguna noticia aparece en la web.
 
-At the end of the sesions your code will be revised by Chat GPT and Grok.
+At the end of each session your code will be revised by ChatGPT and Grok.

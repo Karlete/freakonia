@@ -10,6 +10,126 @@
 
 var NEWS_DATA = [
 
+  // ── NOTICIA 82 ──────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-hotd-t3-fecha-trailer-2026',
+    topic:      'got',
+    category:   'got',
+    emoji:      '🐉',
+    badgeLabel: 'GOT',
+    title:      'HOUSE OF THE DRAGON T3: FECHA OFICIAL 21 DE JUNIO Y NUEVO TRÁILER DESDE EL CCXP MÉXICO',
+    summary:    'HBO ha confirmado el estreno de la tercera temporada para el 21 de junio, con episodios semanales hasta el 9 de agosto. El showrunner Ryan Condal presentó un nuevo tráiler en el CCXP México con Matt Smith, Olivia Cooke y Fabien Frankel, describiendo la temporada como la más grande que han producido con diferencia.',
+    full: [
+      'HBO ha dado el pistoletazo de salida oficial a la temporada 3 de House of the Dragon: estreno el 21 de junio de 2026, con episodios semanales que se extenderán hasta el 9 de agosto. La confirmación llegó desde el CCXP México, donde el showrunner Ryan Condal subió al escenario junto a Matt Smith, Olivia Cooke y Fabien Frankel para presentar en primicia el nuevo tráiler.',
+      'Condal describió esta tercera entrega como la más grande que han producido con diferencia, una declaración que en boca de alguien que ya nos entregó dos temporadas cargadas de dragones y fuego targaryen tiene mucho peso. La Danza de los Dragones llega a su punto de máxima intensidad y el equipo parece consciente de ello.',
+      'La ventana de emisión —junio a agosto— coloca a HotD en la franja de verano, la misma en la que Game of Thrones construyó sus momentos más memorables. Con fecha confirmada y tráiler en circulación, el hype está servido.'
+    ],
+    date:       '28/04/2026',
+    url:        'https://variety.com/2026/tv/news/house-of-the-dragon-season-3-release-date-hbo-1236731400/',
+    page:       'got.html',
+    pageLabel:  'GoT',
+    accent:     '#cc2200',
+    source:     'variety.com',
+    img:        'assets/img/news/house_of_the_dragons.webp',
+    tags:       ['HouseOfTheDragon', 'HotD', 'HotDT3', 'HBO', 'GoT', 'Targaryens', 'DanceOfDragons', 'RyanCondal']
+  },
+
+  // ── NOTICIA 81 ──────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-lec-spring-2026-semana5',
+    topic:      'esports',
+    category:   'esports',
+    emoji:      '🏆',
+    badgeLabel: 'ESPORTS',
+    title:      'LEC SPRING 2026 (SEMANA 5): KARMINE CORP LIDERA INVICTA Y FNATIC SE HUNDE',
+    summary:    'Karmine Corp se mantiene líder tras vencer a Fnatic 2-1 y acumula una racha invicta en el tramo final de la fase regular, mientras que NAVI sella su clasificación para playoffs al derrotar a Shifters. Fnatic atraviesa su peor momento de la split con un balance de 2-5.',
+    full: [
+      'La semana 5 del LEC Spring 2026 deja un panorama cada vez más claro en la fase regular: Karmine Corp sigue imparable. El equipo francés venció a Fnatic 2-1 en uno de los enfrentamientos más esperados de la jornada y confirma su racha invicta con miras a los playoffs. KC es, a estas alturas, el gran favorito para llevarse la primera plaza de la split regular.',
+      'La otra gran noticia de la semana es NAVI, que selló su clasificación para playoffs al derrotar a Shifters. El equipo cierra así la incertidumbre sobre su presencia en la fase final y llega con confianza a las últimas jornadas de la regular season.',
+      'En el lado negativo, Fnatic vive su peor momento del split. El balance de 2-5 habla por sí solo: el equipo histórico de la LEC no encuentra su juego y el tiempo se agota. Con las plazas de playoffs en juego, las próximas semanas serán decisivas para Fnatic si quiere revertir la situación.'
+    ],
+    date:       '28/04/2026',
+    url:        'https://liquipedia.net/leagueoflegends/LEC/2026/Spring/Regular_Season',
+    page:       'esports.html',
+    pageLabel:  'Esports',
+    accent:     '#C89B3C',
+    source:     'liquipedia.net',
+    img:        'assets/img/news/lec_calendar_format.webp',
+    tags:       ['LEC', 'LECSpring2026', 'KarmineCorp', 'Fnatic', 'NAVI', 'LeagueOfLegends', 'Semana5', 'Playoffs']
+  },
+
+  // ── NOTICIA 80 ──────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-nba-playoffs-2026-r1',
+    topic:      'nba',
+    category:   'nba',
+    emoji:      '🏀',
+    badgeLabel: 'NBA',
+    title:      'PLAYOFFS NBA 2026: PRIMERA RONDA EN EBULLICIÓN, CELTICS DOMINAN Y THUNDER APLASTA',
+    summary:    'Los Celtics se ponen 3-1 frente a los Sixers, con Joel Embiid regresando tras su apendicitis pero sin poder frenar a Boston. Oklahoma City, campeón defensor y primer cabeza de serie del Oeste, arrasa a los Suns. Mientras tanto, los Nuggets evitan la eliminación frente a Minnesota gracias a un triple-doble de Jokić, y los Spurs buscan cerrar la serie ante Portland.',
+    full: [
+      'La primera ronda de los Playoffs NBA 2026 está siendo un espectáculo en el Este. Los Celtics mandan con claridad frente a los Sixers: 3-1 en la serie. El regreso de Joel Embiid tras superar una apendicitis ha generado expectativas en Filadelfia, pero Boston sigue siendo demasiado para los Sixers con un Embiid aún en proceso de recuperación física.',
+      'En el Oeste, Oklahoma City confirma por qué es el campeón defensor y primer cabeza de serie: los Thunder arrasan a los Suns sin dar opciones. Durant y Booker no han encontrado respuesta ante la intensidad de OKC, que se acerca a la siguiente ronda de manera contundente.',
+      'La serie más emocionante del Oeste es la de los Nuggets contra Minnesota. Denver evitó la eliminación gracias a un triple-doble de Nikola Jokić, que sigue siendo el factor diferencial siempre que su equipo lo necesita. Por su parte, los Spurs tienen la posibilidad de cerrar la serie ante Portland en los próximos encuentros.'
+    ],
+    date:       '28/04/2026',
+    url:        'https://www.nba.com/playoffs/2026',
+    page:       'nba.html',
+    pageLabel:  'NBA',
+    accent:     '#FF8C00',
+    source:     'nba.com',
+    img:        'assets/img/news/nba_ball.webp',
+    tags:       ['NBAPlayoffs', 'NBA2026', 'Celtics', 'OKCThunder', 'Jokic', 'Nuggets', 'Sixers', 'Playoffs']
+  },
+
+  // ── NOTICIA 79 ──────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-gta6-noviembre-2026',
+    topic:      'gaming',
+    category:   'gaming',
+    emoji:      '🕹',
+    badgeLabel: 'GAMING',
+    title:      'GTA VI: CONFIRMADO PARA EL 19 DE NOVIEMBRE DE 2026 Y TRAILER 3 ESPERADO EN MAYO',
+    summary:    'Tras dos retrasos, Rockstar y Take-Two reafirmaron en febrero la fecha del 19 de noviembre de 2026 para PS5 y Xbox Series X/S, con la campaña de marketing principal arrancando en verano. Insiders del sector estiman una confianza del 95-96% en que no habrá un tercer retraso, y se espera la publicación del Trailer 3 en torno al 12 de mayo, justo antes de la earnings call de Take-Two.',
+    full: [
+      'Tras dos retrasos que pusieron a prueba la paciencia de los fans, Rockstar y Take-Two pusieron negro sobre blanco en febrero: GTA VI llega el 19 de noviembre de 2026 a PS5 y Xbox Series X/S. La fecha es firme según las declaraciones oficiales de ambas compañías, y la campaña de marketing arrancará a pleno rendimiento durante el verano.',
+      'Los insiders más seguidos del sector manejan una confianza del 95-96% en que no habrá un tercer retraso. Los argumentos: la fecha está comprometida ante inversores, el desarrollo parece en fase final de pulido y Take-Two tiene sus propias earnings calls que cuadrar. Salvo catástrofe, el 19 de noviembre es real.',
+      'El plato fuerte antes del verano llegará en torno al 12 de mayo con la publicación del Trailer 3, prevista justo antes de la earnings call de Take-Two. Si el Trailer 2 ya levantó expectativas a nivel mundial, el tercero debería confirmar detalles de jugabilidad y mundo abierto que aún no se han mostrado. Noviembre se acerca.'
+    ],
+    date:       '28/04/2026',
+    url:        'https://www.rockstargames.com/newswire/article/ak3ak31a49a221/grand-theft-auto-vi-is-now-set-to-launch-november-19-2026',
+    page:       'gaming.html',
+    pageLabel:  'Gaming',
+    accent:     '#00ff41',
+    source:     'rockstargames.com',
+    img:        'assets/img/news/gran_theft_auto_6.webp',
+    tags:       ['GTAVI', 'GTA6', 'RockstarGames', 'TakeTwo', 'ViceCity', 'OpenWorld', 'PS5', 'XboxSeries']
+  },
+
+  // ── NOTICIA 78 ──────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-origins-awards-rol-2026',
+    topic:      'rol',
+    category:   'rol',
+    emoji:      '🎲',
+    badgeLabel: 'ROL',
+    title:      'ORIGINS AWARDS 2026: DAGGERHEART, COSMERE RPG Y CHAOSIUM DOMINAN LAS NOMINACIONES',
+    summary:    "Los finalistas de los 49 Origins Awards mezclan grandes nombres como Daggerheart y Starfinder 2E con sorpresas indie, con los ganadores a anunciar en el Origins Game Fair de junio en Columbus, Ohio. Chaosium acumula cuatro nominaciones con Age of Vikings al mejor juego de rol y tres suplementos: Pendragon Gamemaster's Handbook, Cthulhu by Gaslight Keeper's Guide y Call of Cthulhu: The Sutra of Pale Leaves.",
+    full: [
+      'Los finalistas de los 49 Origins Awards han sido anunciados y el panorama es una mezcla de grandes nombres y sorpresas indie. Daggerheart, el nuevo sistema de Darrington Press, y Starfinder 2ª Edición de Paizo comparten espacio en las categorías principales junto a propuestas más pequeñas que han encontrado su hueco entre los votantes.',
+      "Los ganadores se darán a conocer en el Origins Game Fair, celebrado en junio en Columbus, Ohio. Es uno de los eventos más importantes del calendario de los juegos de mesa y el rol de mesa en Estados Unidos, y este año la ceremonia promete ser especialmente interesante con la batalla entre Daggerheart y Cosmere RPG en las categorías de rol.",
+      "Chaosium es el gran protagonista de la lista de nominados: cuatro nominaciones en total. Age of Vikings opta al mejor juego de rol, mientras que tres suplementos completan su presencia: Pendragon Gamemaster's Handbook, Cthulhu by Gaslight Keeper's Guide y Call of Cthulhu: The Sutra of Pale Leaves. Una cosecha extraordinaria para la editorial de Providence."
+    ],
+    date:       '28/04/2026',
+    url:        'https://www.chaosium.com/blogchaosium-creators-nominated-for-four-2026-origins-awards/',
+    page:       'rol.html',
+    pageLabel:  'Rol',
+    accent:     '#cc9900',
+    source:     'chaosium.com',
+    img:        'assets/img/news/rol_generic.jpg',
+    tags:       ['OriginsAwards', 'TTRPG', 'Daggerheart', 'CosomereRPG', 'CallOfCthulhu', 'Chaosium', 'Starfinder', 'JuegosDeRol']
+  },
+
   // ── NOTICIA 77 ───────────────────────────────────────────────────────────────
   {
     id:         'noticia-unity-7-cancelado-2026',
@@ -2200,5 +2320,5 @@ var NEWS_DATA = [
 
 // NEWS_TRACKER
 // used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba"]
-// last_update: "2026-04-26"
-// next_available: ["gaming", "warhammer", "rol"]
+// last_update: "2026-04-28"
+// next_available: ["warhammer", "magic", "gamedev"]
