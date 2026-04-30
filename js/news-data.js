@@ -10,6 +10,81 @@
 
 var NEWS_DATA = [
 
+  // ── NOTICIA 85 ──────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-replaced-lanzamiento-abril-2026',
+    topic:      'gamedev',
+    category:   'gamedev',
+    emoji:      '🎮',
+    badgeLabel: 'GAMEDEV',
+    title:      'REPLACED llega por fin: el indie pixel art más esperado de la década aterriza en PC y consolas',
+    summary:    'Tras años de espera, REPLACED se lanzó el 14 de abril en PC y consolas. El 2.5D sci-fi action platformer de Sad Cat Studios ambientado en una América retro-futurista de los 80s ha sido uno de los juegos indie más anticipados de los últimos años, y su mezcla de pixel art cinematográfico con iluminación dinámica moderna ya está generando reacciones muy positivas.',
+    full: [
+      'REPLACED llegó el 14 de abril de 2026 a PC y consolas como un 2.5D action platformer de ciencia ficción ambientado en una América alternativa de los años 80 retro-futuristas. Juegas como una IA atrapada en un cuerpo humano, luchando por sobrevivir en un mundo que no te reconoce como persona. El concepto llevaba años circulando por los foros y listas de "más esperados" de la escena indie, y el lanzamiento era uno de los más comentados del mes de abril.',
+      'Lo que hace especial a REPLACED no es solo su narrativa —aunque la premisa de una IA atrapada en carne da para mucho— sino su apartado técnico. El juego combina pixel art de altísima resolución con iluminación dinámica moderna, creando una estética que no se parece a nada que hayas visto antes: es retro en la forma pero completamente contemporáneo en la ejecución. El combate, descrito como "crujiente" y basado en combos, añade la capa de acción que el juego necesitaba para no quedarse solo en vitrina visual.',
+      'El lanzamiento de REPLACED en abril llega rodeado de una hornada de indie muy potente: Darwin\'s Paradox, un action platformer donde controlas un pulpo sigiloso con mecánicas de camuflaje y ataques de tinta; Fishbowl, una novela visual con pixel art sobre la vida post-pandemia; y Cursed Words, un roguelike de palabras que fusiona Balatro y Scrabble en algo peligrosamente adictivo. Abril 2026 se ha confirmado como uno de los mejores meses para el indie en lo que va de año.',
+      'Para los desarrolladores indie que siguen el sector de cerca, el lanzamiento de REPLACED es también un caso de estudio en gestión de hype a largo plazo: el juego lleva en radares desde 2021, ha sobrevivido a múltiples retrasos y ha llegado en un estado que, según las primeras impresiones, justifica la espera. Esa paciencia tiene valor en un mercado donde las salidas apresuradas destrozan reputaciones de forma irreversible.'
+    ],
+    date:       '30/04/2026',
+    url:        'https://tbreak.com/upcoming-indie-games-april-2026/',
+    page:       'gamedev.html',
+    pageLabel:  'GameDev',
+    accent:     '#00ff41',
+    source:     'tbreak.com',
+    img:        'assets/img/news/gamedev_generic.webp',
+    tags:       ['REPLACED', 'IndieGame', 'PixelArt', 'CinemáticoPixel', 'SciFi', 'ActionPlatformer', 'SteamPC', 'IndieApril2026']
+  },
+
+  // ── NOTICIA 84 ──────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-mtg-secrets-strixhaven-2026',
+    topic:      'magic',
+    category:   'magic',
+    emoji:      '✨',
+    badgeLabel: 'MTG',
+    title:      'Secrets of Strixhaven ya está aquí: el regreso a la universidad mágica más querida del multiverso',
+    summary:    'El 24 de abril llegó Secrets of Strixhaven, el set más esperado de la primera mitad de 2026. Magic vuelve a Arcavios y a las cinco facultades —Witherbloom, Prismari, Quandrix, Silverquill y Lorehold— con nuevos estudiantes, nuevos profesores y mecánicas que expanden lo que la primera Strixhaven dejó en el Standard.',
+    full: [
+      'Secrets of Strixhaven estuvo disponible para prerrelease el 17 de abril y llegó a las mesas el 24, marcando el regreso de Magic a Arcavios y a la mayor universidad del multiverso, con sus cinco facultades volviendo a protagonizar la narrativa. La primera Strixhaven, lanzada en 2021, se convirtió en uno de los sets más queridos de la comunidad por su ambientación y su diseño de cartas, y las expectativas para esta segunda visita eran muy altas.',
+      'El set está repleto de hechizos deslumbrantes y mecánicas centradas en instantáneos y conjuros, con los dragones ancianos de cada facultad —Witherbloom, el equilibrador— poniendo a prueba el dominio de mecánicas que permiten hacer trampa con los costes de los hechizos. Las matemáticas de Mathemagics como conjuro de robo de cartas exponencialmente potente son uno de los highlights del set.',
+      'Acompañando al lanzamiento del set llega también el Secret Lair: Back to School Superdrop, disponible desde el 27 de abril con diseños temáticos de vuelta al cole que están dando mucho que hablar entre los coleccionistas. Es una estrategia de Wizards muy medida: lanzar el superdrop justo después del prerrelease para aprovechar el pico de interés de la comunidad.',
+      'El regreso a Strixhaven llega en un momento interesante para Magic: el debate entre Universes Within y Universes Beyond sigue candente, con más de la mitad del calendario 2026 ocupado por colaboraciones externas (TMNT, Marvel, El Hobbit, Star Trek). Secrets of Strixhaven es exactamente el antídoto que una parte de la base de jugadores necesitaba: Magic puro, lore propio y diseño de cartas sin licencias de por medio.'
+    ],
+    date:       '30/04/2026',
+    url:        'https://magic.wizards.com/en/news',
+    page:       'magic.html',
+    pageLabel:  'MTG',
+    accent:     '#9933ff',
+    source:     'magic.wizards.com',
+    img:        'assets/img/news/secrets_of_strixhaven.webp',
+    tags:       ['MagicTheGathering', 'MTG', 'SecretsOfStrixhaven', 'Strixhaven', 'WizardsOfTheCoast', 'NuevoSet', 'Standard', 'UniversesWithin']
+  },
+
+  // ── NOTICIA 83 ──────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-tow-grand-cathay-wave-abril-2026',
+    topic:      'warhammer',
+    category:   'warhammer',
+    emoji:      '⚔️',
+    badgeLabel: 'WARHAMMER',
+    title:      'The Old World: Grand Cathay arrasa en abril con Astromantes, Iron Hail Gunners y Crane Gunner Teams',
+    summary:    'Grand Cathay sigue siendo el ejército estrella de The Old World en 2026. Esta semana llegan los Astromantes del Tribunal Celestial en plástico —con opciones de pie y a caballo—, los Iron Hail Gunners y los Crane Gunner Teams, completando una ola de lanzamientos que convierte al ejército de Cathay en uno de los más completos del juego.',
+    full: [
+      'Grand Cathay continúa siendo el gran protagonista de The Old World en esta recta final de abril, con los Astromantes del Tribunal Celestial como pieza central: un kit en plástico que ofrece tanto la versión de infantería como la montada, con opciones extra de cabezas y brazos que dan margen de personalización real. Es exactamente el tipo de lanzamiento que necesitaba el ejército para sentirse completo en el apartado de personajes.',
+      'Los Iron Hail Gunners y los Crane Gunner Teams son probablemente los lanzamientos más destacados de la ola, consolidando la identidad de disparo de Cathay: los Crane Guns actúan desde la retaguardia con potencia de fuego sostenida, los Iron Hail Gunners castigan a cualquier unidad que intente jugar limpio en el centro del tablero, y las milicias de campesinos inundan objetivos y absorben tiempo del rival. Combinado con el Arcane Journal del Gran Bastión, Grand Cathay por fin tiene el respaldo competitivo que le faltaba.',
+      'El roadmap de The Old World para lo que queda de 2026 empieza a escasear de lanzamientos confirmados. Más allá de Kislev —cuya fecha sigue siendo un misterio—, el calendario oficial está prácticamente vacío, lo que ha generado cierta inquietud en la comunidad. GW ha apostado fuerte por Cathay en los últimos meses, pero la pregunta de cuándo llegan nuevas facciones empieza a hacerse incómoda.',
+      'Los rumores apuntan a Dogs of War y posibles Mamuts del Caos como sorpresas para la segunda mitad del año, aunque nada está confirmado. Por ahora, si juegas Cathay, abril ha sido un mes muy generoso. Si juegas cualquier otra facción, toca seguir esperando con paciencia estoica.'
+    ],
+    date:       '30/04/2026',
+    url:        'https://wargameportal.com/blogs/warhammer-previews-reveals-and-news/the-old-world-and-the-horus-heresy-share-the-spotlight-this-weekend',
+    page:       'warhammer.html',
+    pageLabel:  'Warhammer',
+    accent:     '#8B0000',
+    source:     'wargameportal.com',
+    img:        'assets/img/news/the_old_world.jpg',
+    tags:       ['TheOldWorld', 'Warhammer', 'GrandCathay', 'GamesWorkshop', 'Astromancers', 'IronHailGunners', 'Miniaturas', 'WarhammerFantasy']
+  },
+
   // ── NOTICIA 82 ──────────────────────────────────────────────────────────────
   {
     id:         'noticia-hotd-t3-fecha-trailer-2026',
@@ -2320,5 +2395,5 @@ var NEWS_DATA = [
 
 // NEWS_TRACKER
 // used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba"]
-// last_update: "2026-04-28"
-// next_available: ["warhammer", "magic", "gamedev"]
+// last_update: "2026-04-30"
+// next_available: ["got", "esports", "nba"]
