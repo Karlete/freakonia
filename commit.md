@@ -2,6 +2,24 @@
 
 ---
 
+## Sesión 67 — 2026-05-02
+
+### feat(news): add 5 news articles (GOT, ESPORTS, NBA, GAMING, ROL) + update NEWS_TRACKER
+
+**Modified files:**
+- `js/news-data.js`: 5 artículos nuevos insertados al TOP como NOTICIA 86–90:
+  - NOTICIA 90: `noticia-ttrpg-news-mayo-2026` (rol) — D&D Beyond, Justice League RPG, Blade Runner expansions
+  - NOTICIA 89: `noticia-gaming-mayo-2026-forza-bond` (gaming) — Forza Horizon 6 (Tokio), 007 First Light
+  - NOTICIA 88: `noticia-nba-playoffs-2026-r1-game7s` (nba) — NBA Playoffs East chaos, Game 7s, Knicks leading
+  - NOTICIA 87: `noticia-lec-spring-2026-semana6-playoffs` (esports) — LEC Spring Week 6, playoff shape forming
+  - NOTICIA 86: `noticia-hotd-t3-aegon-look-2026` (got) — House of the Dragon S3, Aegon II scarred reveal
+  - NEWS_TRACKER: last_update → 2026-05-02, next_available → warhammer · magic · gamedev
+- `estado.md`: Last updated → 2026-05-02 (sesión 67), news count → 78 artículos, NEWS_TRACKER updated, 5 new articles added to ID table.
+- `commit.md`: esta entrada.
+- `task.md`: limpiado.
+
+---
+
 ## Sesión 66 — 2026-04-26
 
 ### feat(universo): interactive universe map page + nav link on all pages

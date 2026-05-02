@@ -10,6 +10,133 @@
 
 var NEWS_DATA = [
 
+  // ── NOTICIA 90 ──────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-ttrpg-news-mayo-2026',
+    topic:      'rol',
+    category:   'rol',
+    emoji:      '🎲',
+    badgeLabel: 'ROL',
+    title:      'Semana cargada en el rol: D&D Beyond vuelve a la venta por partes, Justice League RPG anunciado y Blade Runner se expande',
+    summary:    'El digest de noticias rol de esta primera semana de mayo viene cargado: D&D Beyond recupera las compras de contenido por separado con Starter Packs de 4,99 $, DC Comics y Gamefound anuncian un RPG oficial de la Justice League para julio, y Free League expande Blade Runner RPG con dos productos nuevos.',
+    full: [
+      'D&D Beyond ha recuperado las compras de contenido a la carta en forma de Starter Packs de 4,99 dólares, una vuelta atrás que muchos jugadores llevaban tiempo pidiendo después de que Wizards of the Coast eliminara la opción de comprar suplementos individuales en la plataforma digital. Es una señal de que WotC escucha —aunque a veces tarde— las quejas de su comunidad.',
+      'La noticia más sorprendente de la semana es el anuncio de un TTRPG oficial de la Justice League que lanzará en Gamefound en julio. Aunque los detalles del sistema y el estudio detrás del proyecto no se han revelado todavía, la combinación de DC Comics con el crowdfunding de Gamefound apunta a un lanzamiento con mucho respaldo de IP y ediciones de coleccionista. El año de los TTRPGs de licencia —Daggerheart, Cosmere, Justice League— no para.',
+      'Free League, el estudio sueco detrás de Alien RPG y Vaesen, anuncia dos expansiones para Blade Runner RPG: la nueva campaña Replicant Rebellion y un Asset Pack con Modo en Solitario. Es exactamente el tipo de soporte post-lanzamiento que hace que los juegos de Free League tengan una longevidad extraordinaria en las mesas.',
+      'La semana también trajo el anuncio de un set de terreno modular prerrintado de Mazmorra de Archon Studio con licencia oficial de D&D, y un nuevo libro de fuente para Star Trek Adventures de Modiphius con material de aliados y antagonistas. Por su parte, el roadmap de D&D 2026 sigue su curso con la Season of Horror en marcha hasta junio, seguida de la Season of Magic de julio a septiembre con los lanzamientos de Arcana Unleashed.',
+      'En resumen, una semana que confirma lo que ya sabemos: 2026 es el año definitivo para los juegos de rol de todas las formas, tamaños y licencias. Desde mesas de D&D hasta campañas especializadas de ciencia ficción o superhéroes, el TTRPG ha alcanzado un punto de saturación creativa donde la variedad no solo existe sino que prospera.'
+    ],
+    date:       '02/05/2026',
+    url:        'https://www.enworld.org/threads/news-digest-for-may-1-2026.718963/',
+    page:       'rol.html',
+    pageLabel:  'Rol',
+    accent:     '#cc9900',
+    source:     'enworld.org',
+    img:        'assets/img/news/rol_generic.jpg',
+    tags:       ['TTRPG', 'DungeonsAndDragons', 'DnDBeyond', 'JusticeLeagueRPG', 'BladeRunnerRPG', 'FreeLeague', 'JuegosDeRol', 'Noticias']
+  },
+
+  // ── NOTICIA 89 ──────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-gaming-mayo-2026-forza-bond',
+    topic:      'gaming',
+    category:   'gaming',
+    emoji:      '🕹️',
+    badgeLabel: 'GAMING',
+    title:      'Mayo llega cargado: Forza Horizon 6 en Tokio y James Bond regresan a los videojuegos',
+    summary:    'Mayo 2026 es uno de los mejores meses del año en gaming. Forza Horizon 6 lleva el festival de coches a Japón el 19 de mayo con el mapa más grande de la saga, y el 27 llega 007 First Light, el juego de James Bond desarrollado por IO Interactive —los creadores de Hitman— que promete ser el origen definitivo del espía más famoso del mundo.',
+    full: [
+      'Forza Horizon 6 llega el 19 de mayo a PC y Xbox Series con Japón como escenario, y los primeros que han podido ver el mapa ya lo están calificando como el mejor de toda la saga. El nuevo juego añade progresión por ranked, acceso desbloqueable a Legend Island y una finca personalizable para los momentos fuera de la carretera. Playground Games lleva la franquicia a un territorio que llevaba años siendo pedido por la comunidad.',
+      'El mes se cierra el 27 de mayo con 007 First Light en PC, PS5 y Xbox Series, desarrollado por IO Interactive —el estudio detrás de la trilogía Hitman— como una historia de origen del agente más famoso del MI6. Acción, sigilo, gadgets y resolución de problemas a través del diálogo: todo lo que defines cuando piensas en Bond, pero en sus primeros pasos como espía. El proyecto lleva años en el radar y la elección de IO Interactive como desarrollador genera expectativas altísimas.',
+      'Mayo también trae otras propuestas interesantes: Directive 8020 es una aventura de horror cinemático con ramificaciones narrativas inspirada en The Thing de John Carpenter, Mixtape sigue a tres amigos en una última aventura veraniega a ritmo de una banda sonora generacional, y Paralives llega a early access como alternativa a Los Sims con una propuesta más íntima y de construcción libre.',
+      'Para los amantes del pixel art y el retrogaming, mayo también tiene su regalo: Subnautica 2 tiene fecha de lanzamiento en early access muy próxima y está generando conversación como uno de los juegos de supervivencia más esperados del año, mientras Path of Exile 2 y Phasmophobia tienen actualizaciones importantes planificadas para el mes. Difícil aburrirse.'
+    ],
+    date:       '02/05/2026',
+    url:        'https://www.gamespot.com/gallery/the-biggest-new-game-releases-of-may-2026/2900-7667/',
+    page:       'gaming.html',
+    pageLabel:  'Gaming',
+    accent:     '#00bfff',
+    source:     'gamespot.com',
+    img:        'assets/img/news/gaming_generic.webp',
+    tags:       ['ForzaHorizon6', 'ForzaHorizon', '007FirstLight', 'JamesBond', 'IOInteractive', 'PlaygroundGames', 'Gaming', 'Mayo2026']
+  },
+
+  // ── NOTICIA 88 ──────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-nba-playoffs-2026-r1-game7s',
+    topic:      'nba',
+    category:   'nba',
+    emoji:      '🏀',
+    badgeLabel: 'NBA',
+    title:      'Playoffs NBA 2026: el Este enloquece con tres Game 7s y los Knicks son los únicos clasificados',
+    summary:    'La primera ronda de los playoffs NBA 2026 se ha convertido en un caos histórico en el Este: los Knicks son el único equipo ya clasificado para semis tras arrasar a los Hawks. Pistons, Celtics y Cavaliers están forzando Game 7s en una jornada que ha producido remontadas épicas y récords históricos.',
+    full: [
+      'Los Knicks son el único equipo del Este que ya ha avanzado a las semifinales de conferencia tras destrozar a los Hawks en el Game 6, en una noche en la que establecieron el récord histórico de ventaja en el descanso de un partido de playoffs con 47 puntos de diferencia al medio tiempo. Nueva York llega a las semis fresco y con confianza máxima.',
+      'Los Pistons, que llegaron a estar 24 puntos abajo en el segundo tiempo del Game 6 ante los Magic fuera de casa, protagonizaron una remontada histórica para sobrevivir y forzar el séptimo partido. Detroit aguanta como puede la presión de ser el primer cabeza de serie. Por su parte, los Raptors también forzaron su Game 7 ante los Cavaliers gracias a un triple de RJ Barrett con 1.9 segundos en el tiempo extra.',
+      'En el Oeste, el panorama está más despejado: LeBron James y los Lakers eliminaron a los Rockets en el Game 6 enviando a Houston a casa, y los Timberwolves —sin Anthony Edwards y tres jugadores más de rotación— eliminaron a los Nuggets de Jokić en el Game 6 por segunda vez en tres temporadas. Minnesota y los Spurs se medirán en la segunda ronda del Oeste.',
+      'Los Game 7s del Este se disputan hoy sábado 2 de mayo: Celtics-Sixers a las 7 PM ET en Boston, Pistons-Magic en Orlando a primera hora de la tarde. Las semifinales de conferencia arrancarán el lunes 4 de mayo si los horarios se respetan, con el cuadro final del Este pendiente de resolverse este fin de semana.',
+      'Esta es la clase de competición que define los playoffs: cuando los márgenes son tan finos que un simple lanzamiento puede determinar todo. Los mejores jugadores de la NBA están actuando bajo presión máxima, y mientras todo se resuelve en el Este, el Oeste espera con su propio bracket casi cerrado. Faltan horas clave.'
+    ],
+    date:       '02/05/2026',
+    url:        'https://www.cbssports.com/nba/news/2026-nba-playoff-bracket-matchups-schedule/',
+    page:       'nba.html',
+    pageLabel:  'NBA',
+    accent:     '#FF8C00',
+    source:     'cbssports.com',
+    img:        'assets/img/news/nba_ball.webp',
+    tags:       ['NBA', 'NBAPlayoffs2026', 'Game7', 'NewYorkKnicks', 'DetroitPistons', 'Raptors', 'Celtics', 'Sixers']
+  },
+
+  // ── NOTICIA 87 ──────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-lec-spring-2026-semana6-playoffs',
+    topic:      'esports',
+    category:   'esports',
+    emoji:      '🏆',
+    badgeLabel: 'ESPORTS',
+    title:      'LEC Spring Semana 6: la fase regular llega a su recta final y el cuadro de playoffs toma forma',
+    summary:    'La semana 6 del LEC Spring 2026 arranca hoy mismo con Fnatic vs Team Heretics, Vitality vs SK, y los partidos del fin de semana que cerrarán prácticamente el cuadro de playoffs. Con solo dos semanas de fase regular por delante, la clasificación empieza a definirse y las plazas del Upper Bracket están en juego.',
+    full: [
+      'La semana 6 del LEC Spring 2026 comienza este 2 de mayo con Fnatic vs Team Heretics y Vitality vs SK Gaming, seguida el domingo por Heretics vs Shifters y G2 vs NAVI, y el lunes por el duelo Fnatic vs Vitality. Con solo siete semanas de round robin y los playoffs arrancando el 22 de mayo, cada partido de estas últimas dos semanas tiene peso de clasificación real.',
+      'El formato del split envía a los seis mejores equipos a playoffs, con los cuatro primeros entrando directamente al Upper Bracket y los puestos quinto y sexto comenzando en el Lower Bracket. Los dos finalistas del split se clasifican para el MSI 2026, con el ganador yendo directo a la fase de grupos y el subcampeón al play-in. Las plazas del Upper Bracket son por tanto cruciales: entrar como top 4 puede valer una serie entera de margen.',
+      'Karmine Corp se mantiene como el equipo más sólido del split con la mejor racha de victorias consecutivas. G2 Esports lleva el ritmo esperado de un equipo candidato pero ya tiene una derrota en el haber tras la sorpresa ante Fnatic en la semana 2. GIANTX sigue siendo la revelación del split. Fnatic, tras un arranque complicado, ha recuperado pulso y necesita seguir sumando para asegurar el Upper Bracket. Los playoffs arrancan en Madrid el 8 de mayo con el Roadtrip del Madrid Arena y la gran final está programada para el 7 de junio.',
+      'El split también tiene implicaciones de Worlds: los tres mejores equipos de los playoffs de verano aseguran plaza en el Mundial de League of Legends 2026, con una cuarta plaza desbloqueada si un equipo LEC llega a la final del MSI. La carrera de largo plazo empieza ahora.'
+    ],
+    date:       '02/05/2026',
+    url:        'https://liquipedia.net/leagueoflegends/LEC/2026/Spring/Regular_Season',
+    page:       'esports.html',
+    pageLabel:  'Esports',
+    accent:     '#C89B3C',
+    source:     'liquipedia.net',
+    img:        'assets/img/news/lec_calendar_format.webp',
+    tags:       ['LEC', 'LECSpring2026', 'KarmineCorp', 'G2Esports', 'Fnatic', 'GIANTX', 'Playoffs', 'LeagueOfLegends']
+  },
+
+  // ── NOTICIA 86 ──────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-hotd-t3-aegon-look-2026',
+    topic:      'got',
+    category:   'got',
+    emoji:      '🐉',
+    badgeLabel: 'GOT',
+    title:      'House of the Dragon T3: Aegon II aparece desfigurado y el June 21 se acerca',
+    summary:    'A menos de siete semanas del estreno del 21 de junio, HBO ha revelado el nuevo aspecto de Aegon II Targaryen en la tercera temporada: marcado por las quemaduras de la batalla del Ojo de Dios, el rey verde llega a la T3 físicamente destrozado y políticamente acorralado. La temporada promete ser la más oscura de la serie.',
+    full: [
+      'Las nuevas imágenes del rey Aegon II Targaryen para la tercera temporada muestran a un monarca irreconocible: su cuerpo lleva visiblemente las cicatrices de las quemaduras recibidas en el enfrentamiento con su hermano Aemond, convirtiendo al personaje interpretado por Tom Glynn-Carney en un rey físicamente arruinado y políticamente desesperado. El aspecto es deliberado: Aegon ya no es el rey arrogante y despreocupado de las primeras temporadas.',
+      'La temporada 3, con estreno confirmado en HBO Max el 21 de junio de 2026, llega con la guerra civil Targaryen en su punto de máxima ebullición. Rhaenyra ha descubierto nuevos dragones para su ejército, Aemond se sienta en el Trono de Hierro, y la situación de Aegon —que huyó de Desembarco del Rey junto a Larys Strong— es de total incertidumbre. Algunos análisis apuntan a un posible exilio en Braavos como parte de su arco esta temporada.',
+      'La temporada constará de ocho episodios y concluirá el 9 de agosto. El tráiler ya ha confirmado la presencia de la Batalla del Golfo —con Jace volando su dragón contra la flota de Casa Velaryon— como uno de los grandes espectáculos de la temporada, además de la incorporación de nuevos personajes como James Norton como Ormund Hightower y Tommy Flanagan como Lord Roderick Dustin.',
+      'Con la T3 cerrando el ciclo hacia el ecuador de la guerra y la T4 ya confirmada como temporada final para 2028, la serie entra en su tramo decisivo. La presión sobre Ryan Condal es enorme tras la decepción de la segunda temporada, y el cambio estético de Aegon es la primera señal de que esta entrega va a tomarse la oscuridad muy en serio.'
+    ],
+    date:       '02/05/2026',
+    url:        'https://www.primetimer.com/features/new-look-at-aegon-ii-targaryen-revealed-ahead-of-house-of-the-dragon-season-3-premiere-on-hbo-max',
+    page:       'got.html',
+    pageLabel:  'GoT',
+    accent:     '#cc2200',
+    source:     'primetimer.com',
+    img:        'assets/img/news/house_of_the_dragons.webp',
+    tags:       ['HouseOfTheDragon', 'HotDT3', 'HBO', 'AegonII', 'TomGlynnCarney', 'DanceOfDragons', 'GoT', 'Targaryens']
+  },
+
   // ── NOTICIA 85 ──────────────────────────────────────────────────────────────
   {
     id:         'noticia-replaced-lanzamiento-abril-2026',
@@ -2395,5 +2522,5 @@ var NEWS_DATA = [
 
 // NEWS_TRACKER
 // used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba"]
-// last_update: "2026-04-30"
-// next_available: ["got", "esports", "nba"]
+// last_update: "2026-05-02"
+// next_available: ["warhammer", "magic", "gamedev"]
