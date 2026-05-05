@@ -10,6 +10,106 @@
 
 var NEWS_DATA = [
 
+  // ── NOTICIA 94 ──────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-got-analisis-menique-petyr-baelish',
+    topic:      'got',
+    category:   'got',
+    emoji:      '🐉',
+    badgeLabel: 'ANÁLISIS',
+    title:      'Meñique: la traición más grande de Juego de Tronos no fue de él… fue a él',
+    summary:    'Petyr Baelish nació en la nada y murió de rodillas. Entre medias, movió los hilos de la Guerra de los Cinco Reyes, traicionó a todos los que confiaron en él y pronunció algunas de las frases más icónicas de la serie. Un análisis temporada a temporada del hombre más peligroso de Poniente... y de cómo los showrunners lo arruinaron.',
+    full: [
+      'Petyr Baelish llegó al mundo con todo en contra: hijo de un señor menor de Los Dedos, criado como pupilo en Aguasdulces por favor ajeno, enamorado de una mujer que nunca lo quiso y humillado por un Stark antes incluso de que la serie comenzara. Ese origen lo explica todo. El resentimiento no lo consumió — lo forjó. Cada burdel, cada traición, cada escalón trepado fue la respuesta de un hombre que entendió antes que nadie que las reglas del juego las escriben los que tienen espada y cuna, y que él nunca tendría ninguna de las dos... a menos que cambiara las reglas.',
+      'En sus mejores temporadas — la primera y la segunda — Meñique es puro teatro de manipulación. La escena con Cersei en la que pronuncia "knowledge is power" y la reina ordena cortarle el cuello antes de rectificar en el último segundo es uno de los momentos más tensos de toda la serie: un hombre sin ejército ni sangre noble mirando a los ojos a la Reina Regente y no parpadeando. Su rivalidad con Varys funciona porque son dos versiones del mismo arquetipo — el poder desde la sombra — con filosofías opuestas: Varys cree en el reino, Meñique solo cree en la escalera. La frase del caos no es un pozo sino una escalera, pronunciada en la temporada 3, es su manifiesto completo. Y hasta ese punto la serie lo sostiene: cada movimiento tiene lógica, cada traición tiene un porqué, cada sacrificio — Ros entregada a Joffrey, Jon Arryn envenenado, Ned Stark condenado — encaja en un tablero que solo él puede leer. Es el arquitecto invisible de la Guerra de los Cinco Reyes y casi nadie lo sabe.',
+      'A partir de la temporada 5 el personaje empieza a romperse, y no por decisión propia sino por las costuras del guion. Casar a Sansa con Ramsay Bolton es un movimiento que ningún Meñique de las temporadas anteriores habría hecho jamás: demasiado riesgo, demasiada dependencia en que una chica sola en territorio enemigo pueda vengarse sin ayuda. Y la temporada 7 lo entierra: el maestro del engaño que durante seis años no dejó que nadie leyera sus cartas pasa media temporada en Invernalia siendo leído por tres Stark, uno de los cuales es literalmente un oráculo.',
+      'Muere de rodillas, suplicando, degollado con su propia daga. Un final que cierra el círculo en lo simbólico pero que traiciona todo lo que el personaje había construido. Como escribió Varys: era el hombre más peligroso del reino. Se merecía una caída a su altura.'
+    ],
+    date:       '05/05/2026',
+    url:        'https://x.com/SanprietoG/status/2051734320117940252',
+    page:       'got.html',
+    pageLabel:  'GoT',
+    accent:     '#cc2200',
+    source:     'x.com/SanprietoG',
+    img:        'assets/img/got/Petyr_baelish.webp',
+    tags:       ['GameOfThrones', 'GOT', 'Meñique', 'PetyrBaelish', 'Análisis', 'Personajes', 'HBO', 'Littlefinger']
+  },
+
+  // ── NOTICIA 93 ──────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-mtg-magiccon-vegas-2026-hobbit-realityfracture',
+    topic:      'magic',
+    category:   'magic',
+    emoji:      '✨',
+    badgeLabel: 'MTG',
+    title:      'MagicCon Las Vegas: primeras cartas de Final Fantasy, El Hobbit confirmado y Reality Fracture desvela su arco final',
+    summary:    'El MagicCon de Las Vegas de este fin de semana ha sido uno de los Preview Panels más cargados del año. Wizards reveló las primeras cartas de Magic: The Gathering — Final Fantasy con spoilers de los 16 juegos, desveló El Hobbit como set de agosto y presentó Reality Fracture, el cierre del arco Metronome que lleva tres años construyéndose.',
+    full: [
+      'El 10 de mayo arranca oficialmente la temporada de spoilers de Magic: The Gathering — Final Fantasy, pero el MagicCon de Las Vegas ya ha adelantado las primeras revelaciones del set. El crossover cubre los 16 juegos principales de la saga con nuevas mecánicas, leyendas icónicas y cartas para todos los títulos de la franquicia. Para los jugadores que crecieron con Final Fantasy y con Magic al mismo tiempo, este set es prácticamente un evento cultural.',
+      'La otra gran revelación del fin de semana fue el primer vistazo a Magic: The Gathering — The Hobbit, con lanzamiento confirmado para el 14 de agosto de 2026. Han pasado tres años desde que Universes Beyond viajó a la Tierra Media con El Señor de los Anillos, y esta vez la historia se centra en Bilbo Bolsón y su aventura para recuperar el tesoro custodiado por Smaug.',
+      'El panel también desveló información relevante sobre Reality Fracture, el set previsto para octubre de 2026 que cierra el arco Metronome iniciado hace tres años. Con la historia de Lorwyn Eclipsed presentando a una Liliana de blanco y Secrets of Strixhaven introduciendo a un Ral Zarek de Orzhov, las especulaciones sobre el desenlace llevaban meses siendo las más activas de toda la comunidad.',
+      'El Pro Tour de Secrets of Strixhaven también se resolvió en Las Vegas: Nathan Steuer se proclamó campeón por segunda vez en su carrera, venciendo a Larsen en una final en espejo que reunió a dos de las mentes más brillantes del formato competitivo actual. Un fin de semana redondo para Magic en todos los frentes.'
+    ],
+    date:       '05/05/2026',
+    url:        'https://magic.wizards.com/en/news',
+    page:       'magic.html',
+    pageLabel:  'MTG',
+    accent:     '#9933ff',
+    source:     'magic.wizards.com',
+    img:        'assets/img/news/magic_generic.webp',
+    tags:       ['MagicTheGathering', 'MTG', 'MagicConVegas', 'FinalFantasy', 'TheHobbit', 'RealityFracture', 'UniversesBeyond', 'WizardsOfTheCoast']
+  },
+
+  // ── NOTICIA 92 ──────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-tow-grand-cathay-preorder-mayo-2026',
+    topic:      'warhammer',
+    category:   'warhammer',
+    emoji:      '⚔️',
+    badgeLabel: 'WARHAMMER',
+    title:      'The Old World: los Astromantes de Grand Cathay ya en preventa y rumores de Dogs of War para 2026',
+    summary:    'Games Workshop ha abierto la preventa de la nueva oleada de Grand Cathay para The Old World, con los Astromantes del Tribunal Celestial como pieza central — disponibles tanto a pie como a caballo. Mientras tanto, el rumor mill apunta a una posible revelación de los Dogs of War antes de que acabe 2026.',
+    full: [
+      'La nueva oleada de Grand Cathay para Warhammer: The Old World ya está en preventa. El kit estrella son los Astromantes del Tribunal Celestial: un kit plástico que incluye dos magos, uno de infantería y uno montado, con opciones de cabezas y brazos extra para representar tanto Astromantes como Supremos Astromantes. Acompañan al kit los Iron Hail Gunners —tropas de fuego a corta distancia para destrozar infantería enemiga— y los Crane Gunner Teams, equipos de francotiradores de largo alcance que trabajan en parejas.',
+      'El set de refuerzo incluye también la Peasant Levy: 20 miniaturas multipieza de plástico que pueden construirse con lanzas largas o arcos de guerra, configurables como dos unidades de 10 o una de 20. Es exactamente el tipo de tropa de relleno barata que necesita cualquier ejército de Cathay para proteger sus líneas de fuego y saturar objetivos.',
+      'El roadmap de The Old World para lo que queda de 2026 empieza a despejarse: los rumores señalan a los Dogs of War como la gran sorpresa del año, una facción de mercenarios que llevan décadas fuera del juego y cuyo regreso en plástico sería un bombazo para la comunidad. También circulan rumores de Mamuts del Caos como futura miniatura central de ejército.',
+      'El gran ausente sigue siendo Kislev, cuya fecha de lanzamiento permanece envuelta en misterio a pesar de las constantes especulaciones. La comunidad lleva meses con Kislev en el radar tras un update de Games Workshop en 2020 que no tuvo continuación, y la paciencia empieza a agotarse. Por ahora, Grand Cathay sigue siendo el ejército más mimado del catálogo, y esta oleada de mayo no hace más que confirmarlo.'
+    ],
+    date:       '05/05/2026',
+    url:        'https://spikeybits.com/gw-reveals-new-grand-cathay-horus-heresy-pre-orders-for-may-16-2026/',
+    page:       'warhammer.html',
+    pageLabel:  'Warhammer',
+    accent:     '#8B0000',
+    source:     'spikeybits.com',
+    img:        'assets/img/news/the_old_world.jpg',
+    tags:       ['TheOldWorld', 'Warhammer', 'GrandCathay', 'GamesWorkshop', 'Astromancers', 'DogsOfWar', 'Miniaturas', 'WarhammerFantasy']
+  },
+
+  // ── NOTICIA 91 ──────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-lec-spring-2026-semana6-fnatic-eliminado',
+    topic:      'esports',
+    category:   'esports',
+    emoji:      '🏆',
+    badgeLabel: 'ESPORTS',
+    title:      'LEC Spring Semana 6: Vitality arrasa, Fnatic queda eliminado y el top 6 está cerrado',
+    summary:    'La semana 6 del LEC Spring 2026 ha dejado el cuadro de playoffs prácticamente cerrado. Team Vitality fue el único equipo con pleno este fin de semana y lidera la clasificación con un récord de 8-1. Fnatic, que necesitaba ganar para seguir vivo, cayó ante Vitality y quedó oficialmente eliminado de la carrera al playoff.',
+    full: [
+      'La semana 6 ha confirmado la identidad de los seis equipos que disputarán los playoffs del LEC Spring 2026. Fnatic, que necesitaba que todos los resultados le fueran favorables, vio sus esperanzas extinguidas definitivamente el lunes tras caer ante Team Vitality. Los Bees fueron además el único equipo en cerrar el fin de semana con pleno de victorias, y terminan la fase regular con un récord de 8-1.',
+      'Los resultados del fin de semana fueron contundentes: Fnatic venció a Team Heretics el viernes, Vitality superó a SK Gaming en tres partidos con Naak Nako como MVP, Shifters derrotó a Heretics el sábado con Sheo llevándose el MVP, G2 barrió a NAVI con Hans Sama brillando, y el domingo Vitality cerró la semana ganando a Fnatic en tres partidos.',
+      'La clasificación final de la fase regular deja a Vitality primera con 7-1 y a Karmine Corp segunda con un invicto de 6-0. NAVI, GIANTX y G2 se sitúan en el bloque del 4-2 disputando las plazas del Upper Bracket, mientras Movistar KOI entra como sexto clasificado. Fnatic termina séptima con 3-5 y queda fuera.',
+      'Shifters consiguió su primera victoria del split pero volvió a caer ante Movistar KOI, que ahora se prepara para albergar un evento Roadtrip cuya única batalla que le resta será la del seeding de playoffs. La última jornada de fase regular se disputa la semana del 8 de mayo antes de que arranquen los playoffs el 23 de mayo.'
+    ],
+    date:       '05/05/2026',
+    url:        'https://liquipedia.net/leagueoflegends/LEC/2026/Spring/Regular_Season',
+    page:       'esports.html',
+    pageLabel:  'Esports',
+    accent:     '#C89B3C',
+    source:     'liquipedia.net',
+    img:        'assets/img/news/lec_calendar_format.webp',
+    tags:       ['LEC', 'LECSpring2026', 'TeamVitality', 'Fnatic', 'KarmineCorp', 'GIANTX', 'Playoffs', 'LeagueOfLegends']
+  },
+
   // ── NOTICIA 90 ──────────────────────────────────────────────────────────────
   {
     id:         'noticia-ttrpg-news-mayo-2026',
@@ -2522,5 +2622,5 @@ var NEWS_DATA = [
 
 // NEWS_TRACKER
 // used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba"]
-// last_update: "2026-05-02"
-// next_available: ["warhammer", "magic", "gamedev"]
+// last_update: "2026-05-05"
+// next_available: ["gaming", "nba"]

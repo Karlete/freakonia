@@ -2,6 +2,42 @@
 
 ---
 
+## Sesión 68 — 2026-05-05
+
+### feat(news+got+gaming): add 4 news articles (esports/warhammer/magic/got análisis) + got analysis section + gaming history fill
+
+**Modified files:**
+- `js/news-data.js`: 4 artículos nuevos insertados al TOP como NOTICIA 91–94:
+  - NOTICIA 94: `noticia-got-analisis-menique-petyr-baelish` (got/análisis) — Meñique: la traición más grande de Juego de Tronos no fue de él… fue a él. Análisis temporada a temporada del personaje. Source: x.com/SanprietoG. Image: `assets/img/got/Petyr_baelish.webp`. BadgeLabel: ANÁLISIS.
+  - NOTICIA 93: `noticia-mtg-magiccon-vegas-2026-hobbit-realityfracture` (magic) — MagicCon Las Vegas: primeras cartas de Final Fantasy, El Hobbit confirmado, Reality Fracture desvela su arco final.
+  - NOTICIA 92: `noticia-tow-grand-cathay-preorder-mayo-2026` (warhammer) — The Old World: los Astromantes de Grand Cathay ya en preventa y rumores de Dogs of War para 2026.
+  - NOTICIA 91: `noticia-lec-spring-2026-semana6-fnatic-eliminado` (esports) — LEC Spring Semana 6: Vitality arrasa, Fnatic queda eliminado y el top 6 está cerrado.
+  - NEWS_TRACKER: last_update → 2026-05-05, next_available → ["gaming", "nba"]
+
+- `got.html`: 2 cambios realizados:
+  1. Añadido nav link en `.section-quicknav` (línea ~174): `<a href="#analisis-personajes" class="gold">🎭 Análisis</a>` después de link "Spinoffs"
+  2. Insertada nueva sección "ANÁLISIS DE PERSONAJES" antes del cierre (línea ~1123): era-header con h3 "🎭 ANÁLISIS DE PERSONAJES", grid-2 con análisis Petyr Baelish (imagen, descripción, tags, link a X) + tarjeta "MÁS ANÁLISIS PRÓXIMAMENTE"
+
+- `js/gaming-history.js`: 35+ eventos históricos del gaming añadidos para llenar gaps:
+  - Enero: +2 eventos (03-01: Splinter Cell, 08-01: Tomb Raider)
+  - Febrero: +4 eventos (01-02: Brawl, 11-02: Twilight Princess, 18-02: Deus Ex 2, 28-02: BioShock)
+  - Marzo: +4 eventos (01-03: RE4, 08-03: Diablo II, 20-03: Splinter Cell lanza, 29-03: Advance Wars)
+  - Abril: +3 eventos (01-04: Portal, 11-04: Shenmue, 29-04: RE4 lanza)
+  - Mayo: +6 eventos (01-05 a 06-05: Killzone 2, Street Fighter IV, Game Boy, Pac-Man, League of Legends, Red Dead Redemption anunciado)
+  - Junio: +3 eventos (01-06: Advance Wars, 05-06: Diablo II, 30-06: GTA San Andreas)
+  - Julio: +2 eventos (02-07: MGS2, 18-07: Pokémon RB)
+  - Agosto: +3 eventos (01-08: MGS2 Japón, 20-08: Shadow of the Colossus, 31-08: Perfect Dark)
+  - Septiembre: +2 eventos (02-09: WoW lanza, 28-09: BioShock)
+  - Octubre: +2 eventos (01-10: MGS2 lanza, 18-10: RE4 Norteamérica)
+  - Noviembre: +1 evento (06-11: Diablo II, 25-11: Halo 2)
+  - Diciembre: +2 eventos (07-12: Halo 2 anunciado, 17-12: Wii, 28-12: Perfect Dark desarrollo)
+
+- `estado.md`: Last updated → 2026-05-05 (sesión 68), news count → 94 artículos, NEW sections added (GOT análisis, gaming history expanded).
+
+- `commit.md`: esta entrada.
+
+---
+
 ## Sesión 67 — 2026-05-02
 
 ### feat(news): add 5 news articles (GOT, ESPORTS, NBA, GAMING, ROL) + update NEWS_TRACKER
