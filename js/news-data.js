@@ -10,7 +10,132 @@
 
 var NEWS_DATA = [
 
+  // ── NOTICIA 98 ──────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-lec-roadtrip-madrid-2026-mkoi-top4',
+    topic:      'esports',
+    category:   'esports',
+    emoji:      '🏆',
+    badgeLabel: 'ESPORTS',
+    title:      'LEC Roadtrip Madrid 2026: éxito total, MKOI épico ante G2 y el top 4 queda cerrado con dos equipos españoles',
+    summary:    'El Madrid Arena acogió del 8 al 10 de mayo el LEC Roadtrip de Movistar KOI, y fue un éxito rotundo. Doce mil aficionados llenaron el recinto en una jornada que cerró la fase regular y definió el cuadro de playoffs: Team Vitality líder, Karmine Corp segunda, G2 tercera, y MKOI cuarta tras una victoria épica que la afición madrileña no olvidará.',
+    full: [
+      'El Madrid Arena abrió sus puertas del 8 al 10 de mayo para acoger el LEC Roadtrip de Movistar KOI, con 12.000 entradas disponibles y seis partidos a Bo3 que cerraron definitivamente la fase regular del LEC Spring 2026. El evento se convirtió en uno de los fines de semana más intensos del año en los esports europeos, con el seeding de playoffs en juego en cada mapa.',
+      'El resultado más importante del fin de semana fue la épica victoria de Movistar KOI ante G2 Esports, que confirmó a los españoles en el top 4 de la tabla. Acabar entre los cuatro primeros tiene una ventaja enorme en estos playoffs: entras directamente al upper bracket, con una oportunidad extra para avanzar sin quedarte sin red de seguridad. La afición del Madrid Arena estalló.',
+      'La clasificación final de la fase regular queda así: Team Vitality primera con 8-1, Karmine Corp segunda, G2 Esports tercera y Movistar KOI cuarta. NAVI y GIANTX cierran el top 6. Por primera vez desde 2023, Vitality ha terminado como campeón de la fase regular, y ha elegido a Movistar KOI como rival en el primer Bo5 de playoffs. El choque entre los dos equipos más apoyados del evento promete.',
+      'Los playoffs arrancan el 23 de mayo con el Upper Bracket, con la gran final programada para el 7 de junio. Los dos finalistas del split clasifican para el MSI 2026, con el ganador yendo directo a fase de grupos. España tendrá representación garantizada en los playoffs con MKOI y GIANTX, y la afición que llenó el Madrid Arena este fin de semana ya tiene las fechas marcadas en el calendario.'
+    ],
+    date:       '11/05/2026',
+    url:        'https://movistaresports.com/playoffs-de-lec-primavera-2026-partidos-y-hora/',
+    page:       'esports.html',
+    pageLabel:  'Esports',
+    accent:     '#C89B3C',
+    source:     'movistaresports.com',
+    img:        'assets/img/news/lec_calendar_format.webp',
+    tags:       ['LEC', 'LECRoadtrip', 'Madrid', 'MovistarKOI', 'GIANTX', 'KarmineCorp', 'G2Esports', 'LeagueOfLegends']
+  },
+
+  // ── NOTICIA 97 ──────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-rol-dnd-liveservice-elric-rpg-2026',
+    topic:      'rol',
+    category:   'rol',
+    emoji:      '🎲',
+    badgeLabel: 'ROL',
+    title:      'D&D anuncia "Drops" y el CEO habla de modelo live service — y Free League sorprende con un RPG de Elric de Melniboné',
+    summary:    'La semana del rol ha sido intensa. Wizards of the Coast lanzó los "D&D Beyond Drops" — microtransacciones de contenido clásico de 1ª edición — mientras el CEO de Hasbro declaró que quiere convertir D&D en un "live service". La comunidad está encendida. Y como contraste refrescante, Free League anunció Legends of Stormbringer, un RPG oficial de Elric de Melniboné.',
+    full: [
+      'Wizards of the Coast lanzó esta semana los "D&D Beyond Drops", una nueva funcionalidad que recupera tres hechizos clásicos de la 1ª edición vendiéndolos como contenido individual en la plataforma digital. La controversia llegó inmediatamente: los suscriptores no pueden compartir este contenido con su grupo, algo que va en contra de la filosofía tradicional de D&D Beyond y ha generado cientos de críticas en foros y redes.',
+      'El fuego lo avivó el propio CEO de Hasbro, Chris Cocks, al declarar que tiene sentido mover D&D hacia un modelo de "live service", aunque aclaró que la compañía siempre mantendrá los libros físicos. La declaración ha dividido a la comunidad entre quienes ven el potencial digital del sistema y quienes temen que el juego de rol más icónico del mundo acabe siguiendo los pasos de los peores ejemplos del modelo de servicio en videojuegos.',
+      'La noticia más interesante para los amantes del rol clásico llega de Free League: el estudio sueco anunció Legends of Stormbringer, un RPG oficial con licencia de Elric de Melniboné, el antihéroe de las novelas de Michael Moorcock. Es el segundo RPG oficial del personaje en desarrollo simultáneo —el primero fue anunciado semanas antes por otra compañía—, lo que convierte a Elric en el personaje del momento en el mundo del rol.',
+      'Que Free League sea el estudio detrás del proyecto es una garantía de calidad: sus juegos de Alien, Blade Runner y Vaesen han demostrado que saben trasladar licencias exigentes a sistemas propios con mucha personalidad. La semana también trajo el anuncio de dos expansiones para Blade Runner RPG —Replicant Rebellion y un Asset Pack con Modo Solitario— y un nuevo suplemento de Allies & Adversaries para Star Trek Adventures de Modiphius. Buena semana para el rol de licencias, mala semana para la paz mental de la comunidad D&D.'
+    ],
+    date:       '11/05/2026',
+    url:        'https://www.enworld.org/threads/news-digest-for-may-8-2026.719060/',
+    page:       'rol.html',
+    pageLabel:  'Rol',
+    accent:     '#cc9900',
+    source:     'enworld.org',
+    img:        'assets/img/news/rol_generic.jpg',
+    tags:       ['DungeonsAndDragons', 'DnDBeyond', 'Hasbro', 'LiveService', 'ElricDeMelnibone', 'FreeLeague', 'LegendsOfStormbringer', 'TTRPG']
+  },
+
+  // ── NOTICIA 96 ──────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-gaming-subnautica2-forza6-mayo-2026',
+    topic:      'gaming',
+    category:   'gaming',
+    emoji:      '🕹️',
+    badgeLabel: 'GAMING',
+    title:      'Mayo gaming: Subnautica 2 llega al Game Pass el 14, Forza Horizon 6 en Japón el 19 y 007 First Light el 27',
+    summary:    'Mayo está siendo uno de los mejores meses del año en gaming. Subnautica 2 aterrizó en early access en Game Pass el 14, Forza Horizon 6 lleva el festival de coches a Japón el 19 y el mes cierra el 27 con 007 First Light, el juego de James Bond de IO Interactive. Tres lanzamientos de peso en menos de tres semanas.',
+    full: [
+      'Subnautica 2 llegó al Game Pass el 14 de mayo en acceso anticipado como aventura de supervivencia submarina en un mundo alienígena completamente nuevo, con modo cooperativo para cuatro jugadores, construcción de bases y exploración de profundidades desconocidas. El juego es uno de los más esperados del año y su inclusión directa en Game Pass desde el día uno es una de las mejores noticias del mes para los suscriptores.',
+      'Forza Horizon 6 llega el 19 de mayo con Japón como escenario, ofreciendo el mapa abierto más grande de toda la saga con más de 550 coches reales. El juego incluye progresión por ranked, una isla legendaria desbloqueable y llegará también al Game Pass desde el primer día. La comunidad lleva años pidiendo Japón como escenario y Playground Games por fin lo hace realidad.',
+      'El mes cierra el 27 con 007 First Light en PC, PS5 y Xbox Series, desarrollado por IO Interactive —los creadores de la trilogía Hitman— como historia de origen del agente más famoso del MI6. Acción, sigilo, gadgets y resolución de problemas a través del diálogo: las primeras impresiones son extraordinariamente positivas.',
+      'Entre medias, mayo también trae Mixtape el 7, una aventura narrativa sobre tres amigos en un último viaje de verano al ritmo de una banda sonora generacional, y Alabaster Dawn en early access, el nuevo juego de los creadores de CrossCode con pixel art de altísimo nivel y combate fluido muy esperado por la escena indie. Difícil aburrirse en mayo.'
+    ],
+    date:       '11/05/2026',
+    url:        'https://www.gamespot.com/gallery/the-biggest-new-game-releases-of-may-2026/2900-7667/',
+    page:       'gaming.html',
+    pageLabel:  'Gaming',
+    accent:     '#00bfff',
+    source:     'gamespot.com',
+    img:        'assets/img/news/gaming_generic.webp',
+    tags:       ['Subnautica2', 'ForzaHorizon6', '007FirstLight', 'GamePass', 'Xbox', 'PS5', 'IOInteractive', 'Mayo2026']
+  },
+
+  // ── NOTICIA 95 ──────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-nba-semis-2026-knicks-barren-thunder-3-0',
+    topic:      'nba',
+    category:   'nba',
+    emoji:      '🏀',
+    badgeLabel: 'NBA',
+    title:      'Semis NBA 2026: los Knicks barren a los Sixers, el Thunder va 3-0 ante los Lakers y Wembanyama es expulsado',
+    summary:    'Las semifinales de conferencia están dejando momentos históricos. Los Knicks han barrido a los Sixers con 25 triples en el cuarto partido, récord en la historia de los playoffs. El Thunder va 3-0 ante los Lakers con LeBron contra las cuerdas. Y Wembanyama fue expulsado en el cuarto partido ante los Wolves por un codazo, abriendo la serie al empate 2-2.',
+    full: [
+      'Los Knicks son el único equipo ya clasificado para las finales de conferencia del Este tras barrer a los Sixers. Miles McBride, supliendo la baja de OG Anunoby, anotó 25 puntos con 7 de 9 en triples en el cuarto partido, uno de los mejores partidos individuales de estos playoffs. Nueva York llega a las semifinales de conferencia en plena forma y con el factor cancha a favor.',
+      'En el Oeste, el Thunder defiende el título con autoridad: tres victorias consecutivas sobre los Lakers, que ven cómo su serie se pone imposible. Con Jalen Williams aún lesionado, Ajay Mitchell ha dado el paso al frente que OKC necesitaba para mantener el nivel campeón. Los Lakers de LeBron necesitan ganar cuatro seguidos para sobrevivir, algo que no ha logrado ningún equipo en la historia de la NBA con 0-3 abajo.',
+      'El momento más sonado de la semana llegó en el partido 4 entre Spurs y Timberwolves: Wembanyama fue expulsado en el segundo cuarto por un codazo a Naz Reid, y su ausencia abrió la pintura para que Anthony Edwards anotara 36 puntos en 40 minutos. Minnesota igualó la serie a 2-2 y se garantizó un partido 6 en casa.',
+      'En el Este, los Pistons mantienen el liderato de serie ante los Cavaliers 2-1 después de remontar 16 puntos abajo en el segundo tiempo del partido 3. El equipo más joven de los playoffs demostró que no se rinde aunque se quede sin margen, exactamente la lección aprendida en su eliminatoria de primera ronda ante el Magic. Las finales de conferencia empiezan a tomar forma.'
+    ],
+    date:       '11/05/2026',
+    url:        'https://www.espn.com/nba/story/*/id/48676289/2026-nba-playoffs-conference-semifinals-round-2-takeaways',
+    page:       'nba.html',
+    pageLabel:  'NBA',
+    accent:     '#FF8C00',
+    source:     'espn.com',
+    img:        'assets/img/news/nba_ball.webp',
+    tags:       ['NBA', 'NBAPlayoffs2026', 'Knicks', 'Thunder', 'Wembanyama', 'Timberwolves', 'Spurs', 'Semifinales']
+  },
+
   // ── NOTICIA 94 ──────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-hotd-t3-cambios-libro-aegon-2026',
+    topic:      'got',
+    category:   'got',
+    emoji:      '🐉',
+    badgeLabel: 'GOT',
+    title:      'HotD T3: seis cambios confirmados respecto al libro y el póster "Win or Die" anticipa la batalla más esperada',
+    summary:    'Con el estreno del 21 de junio acercándose, la campaña de marketing de HotD T3 se acelera. El nuevo póster "Win or Die" ha confirmado visualmente lo que muchos lectores de Fire & Blood llevaban meses esperando: Aemond y Daemon con los ojos clavados el uno en el otro. Además, ya se conocen seis cambios respecto al libro que van a dar mucho que hablar.',
+    full: [
+      'El nuevo póster de la tercera temporada ha generado tanto análisis como el propio tráiler: Aemond y Daemon ocupan posiciones prominentes a ambos lados de Rhaenyra, con los ojos fijos el uno en el otro y las armas desenvainadas, anticipando el duelo más esperado de toda la saga. La batalla sobre el Ojo de los Dioses lleva en el radar de los lectores desde la publicación de Fire & Blood en 2018 y el póster confirma que la serie lo tiene en mente.',
+      'Entre los cambios confirmados respecto al libro destaca la eliminación de Nettles como personaje: Rhaena Targaryen ocupará su lugar vinculándose al dragón salvaje Sheepstealer, mientras Baela parece asumir su papel en la Batalla del Golfo. El arco de Daemon también se modifica, enfrentándose a ejércitos del Norte y las Tierras de los Ríos, e incluso reuniéndose con Ormund Hightower.',
+      'El cambio más polémico afecta a Aegon II: la serie le añade una obsesión por matar a su hermano Aemond que no existe en el libro. En el tráiler, el rey quemado declara "voy a matar a mi hermano o moriré en el intento", una línea que no tiene equivalente en Fire & Blood y que sugiere que los showrunners quieren darle un arco emocional que el libro no contemplaba.',
+      'El póster también ofrece pistas sobre otros personajes: Rhaenyra no está sentada directamente en el Trono de Hierro, un detalle que en el libro tiene peso narrativo propio. Helaena es la única mirando hacia otro lado, coherente con su deseo de mantenerse al margen de la guerra. Y Aegon aparece en la parte inferior, trepando hacia arriba, imagen perfecta de alguien que perdió todo y lucha por recuperarlo. El 21 de junio no puede llegar pronto.'
+    ],
+    date:       '11/05/2026',
+    url:        'https://comicbook.com/tv-shows/feature/house-of-the-dragon-season-3-rewriting-its-iron-throne-story-is-bad-news-for-team-green/',
+    page:       'got.html',
+    pageLabel:  'GoT',
+    accent:     '#cc2200',
+    source:     'comicbook.com',
+    img:        'assets/img/news/house_of_the_dragons.webp',
+    tags:       ['HouseOfTheDragon', 'HotDT3', 'HBO', 'AegonII', 'Aemond', 'Daemon', 'DanceOfDragons', 'FireAndBlood']
+  },
+
+  // ── NOTICIA 93 ──────────────────────────────────────────────────────────────
   {
     id:         'noticia-got-analisis-menique-petyr-baelish',
     topic:      'got',
@@ -2622,5 +2747,5 @@ var NEWS_DATA = [
 
 // NEWS_TRACKER
 // used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba"]
-// last_update: "2026-05-05"
-// next_available: ["gaming", "nba"]
+// last_update: "2026-05-11"
+// next_available: ["warhammer", "magic", "gamedev"]

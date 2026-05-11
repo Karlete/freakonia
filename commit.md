@@ -2,6 +2,25 @@
 
 ---
 
+## Sesión 69 — 2026-05-11
+
+### feat(news): add 5 news articles (GOT/NBA/GAMING/ROL/ESPORTS batch 94–98) + update tracker
+
+**Modified files:**
+- `js/news-data.js`: 5 artículos nuevos insertados al TOP como NOTICIA 94–98:
+  - NOTICIA 98: `noticia-lec-roadtrip-madrid-2026-mkoi-top4` (esports) — LEC Roadtrip Madrid 2026: MKOI épico ante G2, top 4 cerrado con dos equipos españoles. Source: movistaresports.com. Image: `lec_calendar_format.webp`.
+  - NOTICIA 97: `noticia-rol-dnd-liveservice-elric-rpg-2026` (rol) — D&D anuncia "Drops" y CEO habla de modelo live service · Free League sorprende con RPG de Elric. Source: enworld.org. Image: `rol_generic.jpg`.
+  - NOTICIA 96: `noticia-gaming-subnautica2-forza6-mayo-2026` (gaming) — Mayo gaming: Subnautica 2 Game Pass 14, Forza Horizon 6 Japón 19, 007 First Light 27. Source: gamespot.com. Image: `gaming_generic.webp`.
+  - NOTICIA 95: `noticia-nba-semis-2026-knicks-barren-thunder-3-0` (nba) — Semis NBA 2026: Knicks barren Sixers, Thunder 3-0 Lakers, Wembanyama expulsado. Source: espn.com. Image: `nba_ball.webp`.
+  - NOTICIA 94: `noticia-hotd-t3-cambios-libro-aegon-2026` (got) — HotD T3: seis cambios confirmados respecto al libro, póster "Win or Die" anticipa Aemond vs Daemon. Source: comicbook.com. Image: `house_of_the_dragons.webp`.
+  - NEWS_TRACKER: last_update → 2026-05-11, next_available → ["warhammer", "magic", "gamedev"]
+
+- `estado.md`: Last updated → 2026-05-11 (sesión 69), news count → 83 artículos, NEWS_TRACKER updated, IDs table updated (noticias 94–98 añadidas).
+- `commit.md`: esta entrada.
+- `task.md`: limpiado.
+
+---
+
 ## Sesión 68 — 2026-05-05
 
 ### feat(news+got+gaming): add 4 news articles (esports/warhammer/magic/got análisis) + got analysis section + gaming history fill

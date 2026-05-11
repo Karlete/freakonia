@@ -1,6 +1,6 @@
 # estado.md — Project State Tracker
 
-Last updated: 2026-05-05 (sesión 68)
+Last updated: 2026-05-11 (sesión 69)
 
 ---
 
@@ -110,7 +110,7 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 ## ▶ PRÓXIMA SESIÓN — Leer esto primero
 
 ### Estado actual del sistema de noticias (news)
-- `js/news-data.js` — array `NEWS_DATA` con **78 artículos** (75 noticias + 3 Freakochapas). **Añadir nuevos artículos AQUÍ, al principio del array (más reciente primero).**
+- `js/news-data.js` — array `NEWS_DATA` con **83 artículos** (80 noticias + 3 Freakochapas). **Añadir nuevos artículos AQUÍ, al principio del array (más reciente primero).**
 - `news.html` — renderizado dinámico vía `renderNews()`. El botón "LEER MÁS" ha sido reemplazado por enlace a `article.html?id=`. No tocar el grid HTML.
 - `article.html` — Renderiza artículos individuales vía query param `?id=`. Incluye `updateSEO()` dinámico (OG, Twitter, canonical, meta description), Freakcoin rating (`<div id="freakcoin-rating">` + `renderFreakcoin()`), `css/freakcoin.css` y `js/freakcoin.js`.
 - `index.html` — slider "¿Qué se cuece?" lee automáticamente `NEWS_DATA`. No requiere cambios al añadir noticias.
@@ -120,9 +120,9 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 
 ### NEWS_TRACKER — temas usados
 ```json
-{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba"],"last_update":"2026-05-02"}
+{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba"],"last_update":"2026-05-11"}
 ```
-**Próximos temas disponibles:** `got` · `esports` · `nba`
+**Próximos temas disponibles:** `warhammer` · `magic` · `gamedev`
 
 ### IDs de artículos actuales en NEWS_DATA (para evitar duplicados)
 | # | id | topic | fecha |
@@ -130,11 +130,20 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 | FC3 | `freakochapa-ps1-biblioteca-historia-2026` | gaming | 24/04/2026 |
 | FC2 | `freakochapa-master-system-ii-10-juegarrales` | gaming | 21/04/2026 |
 | FC1 | `freakochapa-fallen-valkyrie-devlog-1` | gamedev | 21/04/2026 |
-| 90 | `noticia-ttrpg-news-mayo-2026` | rol | 02/05/2026 |
-| 89 | `noticia-gaming-mayo-2026-forza-bond` | gaming | 02/05/2026 |
-| 88 | `noticia-nba-playoffs-2026-r1-game7s` | nba | 02/05/2026 |
-| 87 | `noticia-lec-spring-2026-semana6-playoffs` | esports | 02/05/2026 |
-| 86 | `noticia-hotd-t3-aegon-look-2026` | got | 02/05/2026 |
+| 98 | `noticia-lec-roadtrip-madrid-2026-mkoi-top4` | esports | 11/05/2026 |
+| 97 | `noticia-rol-dnd-liveservice-elric-rpg-2026` | rol | 11/05/2026 |
+| 96 | `noticia-gaming-subnautica2-forza6-mayo-2026` | gaming | 11/05/2026 |
+| 95 | `noticia-nba-semis-2026-knicks-barren-thunder-3-0` | nba | 11/05/2026 |
+| 94 | `noticia-hotd-t3-cambios-libro-aegon-2026` | got | 11/05/2026 |
+| 93 | `noticia-got-analisis-menique-petyr-baelish` | got | 05/05/2026 |
+| 92 | `noticia-mtg-magiccon-vegas-2026-hobbit-realityfracture` | magic | 05/05/2026 |
+| 91 | `noticia-tow-grand-cathay-preorder-mayo-2026` | warhammer | 05/05/2026 |
+| 90 | `noticia-lec-spring-2026-semana6-fnatic-eliminado` | esports | 05/05/2026 |
+| 89 | `noticia-ttrpg-news-mayo-2026` | rol | 02/05/2026 |
+| 88 | `noticia-gaming-mayo-2026-forza-bond` | gaming | 02/05/2026 |
+| 87 | `noticia-nba-playoffs-2026-r1-game7s` | nba | 02/05/2026 |
+| 86 | `noticia-lec-spring-2026-semana6-playoffs` | esports | 02/05/2026 |
+| 85 | `noticia-hotd-t3-aegon-look-2026` | got | 02/05/2026 |
 | 68 | `noticia-msi-2026-daejeon-clasificacion` | esports | 20/04/2026 |
 | 67 | `noticia-got-winds-winter-falso-leak-2026` | got | 20/04/2026 |
 | 66 | `noticia-nba-playoffs-r1-juego1-2026` | nba | 20/04/2026 |
