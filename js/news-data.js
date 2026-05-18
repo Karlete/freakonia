@@ -10,6 +10,126 @@
 
 var NEWS_DATA = [
 
+  // ── NOTICIA 103 ──────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-ewc-2026-emea-g2-kc-clasificados-riyadh',
+    topic:      'esports',
+    category:   'esports',
+    emoji:      '🏆',
+    badgeLabel: 'ESPORTS',
+    title:      'G2 y Karmine Corp van al EWC 2026 en Riad: el 3-0 de G2 y la remontada de KC para cerrar las dos plazas de EMEA',
+    summary:    'Europa ya tiene sus dos representantes para la Esports World Cup 2026 en Riad. G2 Esports arrasó a Karmine Corp 3-0 el 16 de mayo en la final del upper bracket del clasificatorio EMEA para convertirse en el primer equipo europeo en sellar su plaza. KC respondió remontando a Movistar KOI 3-1 al día siguiente para cerrar la segunda. El torneo arranca el 15 de julio con 2 millones de dólares en premios.',
+    full: [
+      'G2 Esports se convirtió el 16 de mayo en el primer equipo de EMEA en asegurar su plaza en el EWC 2026 tras barrer a Karmine Corp 3-0 en la final del upper bracket del clasificatorio regional. La serie no tuvo historia: G2 ganó el primer partido con un marcador de kills de 23-10, tomó el segundo en un duelo más ajustado de 18-14, y cerró el tercero con una actuación perfecta de 27-6 que no dejó ninguna duda sobre quién manda en Europa ahora mismo.',
+      'Lejos de hundirse tras la derrota, Karmine Corp demostró la resiliencia que les ha convertido en uno de los equipos más queridos de la escena europea. Al día siguiente, se enfrentaron a Movistar KOI en el lower bracket y, tras perder el primer partido, exhibieron una creatividad táctica notable: el primer Yone profesional de Canna, un Vel\'Koz inesperado para Busio y una Janna en el tercer partido. KC cerró la serie 3-1 y selló la segunda plaza de EMEA para el torneo.',
+      'La Esports World Cup 2026 de League of Legends se celebra del 15 al 19 de julio en Riad con 16 equipos participantes y un prize pool de 2 millones de dólares. Gen.G Esports llega como campeón defensor tras su victoria 3-2 del año pasado, y Sentinels representará a Norteamérica. EMEA llega con dos equipos en plena forma y con la rivalidad G2-KC más encendida que nunca.',
+      'La clasificación al EWC no afecta al calendario del LEC: los playoffs del split de primavera arrancan el 23 de mayo, y tanto G2 como KC están en el upper bracket junto a Vitality y Movistar KOI. Si alguno de los dos gana el split, la tercera plaza del EWC para EMEA irá al siguiente en la clasificación del clasificatorio — lo que muy probablemente sería Movistar KOI. Un verano histórico para el League of Legends europeo.'
+    ],
+    date:       '18/05/2026',
+    url:        'https://www.sheepesports.com/en/all/articles/g2-esports-and-karmine-corp-qualify-for-the-esports-world-cup-lol-tournament/en',
+    page:       'esports.html',
+    pageLabel:  'Esports',
+    accent:     '#C89B3C',
+    source:     'sheepesports.com',
+    img:        'assets/img/news/esports_generic.webp',
+    tags:       ['EWC2026', 'EsportsWorldCup', 'G2Esports', 'KarmineCorp', 'LeagueOfLegends', 'EMEA', 'Riyadh', 'LEC']
+  },
+  // ── NOTICIA 102 ──────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-nba-semifinales-este-oeste-knicks-thunder-2026',
+    topic:      'nba',
+    category:   'nba',
+    emoji:      '🏀',
+    badgeLabel: 'NBA',
+    title:      'Playoffs NBA: los Knicks son los primeros en semifinales del Este y el Thunder va a barrer a los Lakers',
+    summary:    'Los playoffs NBA 2026 entran en su tramo más caliente. Los Knicks son el único equipo ya clasificado para finales de conferencia tras barrer a los Sixers. El Thunder va 3-0 ante los Lakers con LeBron contra las cuerdas y Wembanyama fue expulsado ante los Wolves abriendo la serie al 2-2. Semanas decisivas por delante.',
+    full: [
+      'Los Knicks son el único equipo ya clasificado para las finales de conferencia del Este tras barrer a los Sixers. Miles McBride, cubriendo la baja de OG Anunoby, anotó 25 puntos con 7 de 9 en triples en el partido decisivo. Nueva York llega a las semifinales de conferencia con plena confianza y el factor cancha a favor.',
+      'En el Oeste, el Thunder defiende el título con autoridad aplastante: tres victorias consecutivas sobre los Lakers, que ven cómo la serie se convierte en una misión casi imposible. Con Jalen Williams aún lesionado, Ajay Mitchell ha dado el paso al frente que Oklahoma City necesitaba para mantener el nivel campeón. LeBron necesita ganar cuatro seguidos, algo que ningún equipo ha logrado nunca partiendo de 0-3 en la historia de la NBA.',
+      'El momento de la semana llegó en el partido 4 de Spurs-Timberwolves: Wembanyama fue expulsado por un codazo a Naz Reid y su ausencia abrió la pintura para que Anthony Edwards anotara 36 puntos. Minnesota igualó a 2-2 con una actuación ofensiva demoledora que confirma que esta serie llega al partido 7 si ambos equipos mantienen el nivel.',
+      'En el Este, los Pistons mantienen ventaja ante los Cavaliers con un 2-1 después de remontar 16 puntos abajo en el segundo tiempo del tercer partido. James Harden llegó por fin con su mejor versión en el cuarto parcial del partido 3 para dar a Cleveland su primera victoria de la serie. Las finales de conferencia empiezan a tomar forma y el cuadro del Este sigue siendo el más abierto de los últimos años.'
+    ],
+    date:       '18/05/2026',
+    url:        'https://www.espn.com/nba/story/_/id/48676289/2026-nba-playoffs-conference-semifinals-round-2-takeaways',
+    page:       'nba.html',
+    pageLabel:  'NBA',
+    accent:     '#FF8C00',
+    source:     'espn.com',
+    img:        'assets/img/news/nba_ball.webp',
+    tags:       ['NBA', 'NBAPlayoffs2026', 'NewYorkKnicks', 'OKCThunder', 'Wembanyama', 'Timberwolves', 'Pistons', 'Cavaliers']
+  },
+  // ── NOTICIA 101 ──────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-gamedev-ea-record-griffin-fund-sgf2026',
+    topic:      'gamedev',
+    category:   'gamedev',
+    emoji:      '🎮',
+    badgeLabel: 'GAMEDEV',
+    title:      'EA bate récords gracias a Battlefield 6, un fondo de 100M$ para indies y Summer Games Fest 2026 ya tiene fecha',
+    summary:    'La industria del videojuego arranca la segunda mitad de mayo con buenas noticias para el sector: EA cerró su mejor año fiscal de la historia impulsado por Battlefield 6, Griffin Gaming Partners lanzó un fondo de 100 millones de dólares para desarrolladores indie, y Summer Games Fest 2026 ya tiene fecha confirmada para principios de junio.',
+    full: [
+      'Electronic Arts cerró su año fiscal con resultados récord, impulsados principalmente por Battlefield 6 y EA Sports FC. Es el mejor año de la compañía en términos de ingresos, y confirma que la apuesta por el shooter de largo aliento fue la decisión correcta después del complicado lanzamiento de Battlefield 2042. El retorno de la franquicia al estilo clásico de la saga ha calado en la comunidad y los números lo corroboran.',
+      'Griffin Gaming Partners anunció el lanzamiento de un fondo de 100 millones de dólares destinado exclusivamente a apoyar desarrolladores indie. En el contexto actual —con estudios medianos recortando plantillas y los costes de producción en máximos históricos— la noticia llega como un balón de oxígeno para el ecosistema independiente. El fondo se centra en estudios en etapas tempranas con proyectos de entre 2 y 15 millones de dólares de presupuesto.',
+      'Otro movimiento interesante de la semana: los fundadores de Gearbox Studio Quebec, que cerraron tras la cancelación de varios proyectos, anunciaron la creación de un nuevo estudio. La tendencia de veteranos de grandes estudios que abandonan el barco corporativo para fundar equipos más pequeños sigue acelerándose en 2026.',
+      'En el apartado de eventos, Summer Games Fest 2026 ya tiene fecha confirmada para principios de junio, justo antes del E3 alternativo que Geoff Keighley lleva organizando desde la desaparición del evento original. Es el escaparate donde más anuncios sorpresa han aterrizado en los últimos años y la comunidad indie lo marca en el calendario casi con tanta expectación como el propio E3.'
+    ],
+    date:       '18/05/2026',
+    url:        'https://www.gamedeveloper.com/latest-news',
+    page:       'gamedev.html',
+    pageLabel:  'GameDev',
+    accent:     '#00ff41',
+    source:     'gamedeveloper.com',
+    img:        'assets/img/news/gamedev_generic.webp',
+    tags:       ['Battlefield6', 'EA', 'GriffinGaming', 'IndieFund', 'SummerGamesFest', 'GameDev', 'Industria', 'Noticias']
+  },
+  // ── NOTICIA 100 ──────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-mtg-final-fantasy-spoilers-mayo-2026',
+    topic:      'magic',
+    category:   'magic',
+    emoji:      '✨',
+    badgeLabel: 'MTG',
+    title:      'MTG x Final Fantasy: la temporada de spoilers arranca a lo grande con Jenova, Knights of the Round y el bonus sheet',
+    summary:    'La temporada de spoilers de Magic: The Gathering — Final Fantasy está en plena ebullición. Esta semana se han revelado Jenova como carta mítica de los 16 juegos, los Knights of the Round de FFVII, una mecánica basada en Triple Triad y el primer vistazo al bonus sheet "Through the Ages" con reprints icónicos retematizados con el universo FF.',
+    full: [
+      'La semana del 17 al 21 de mayo está siendo una de las más cargadas de la temporada de spoilers de Final Fantasy, con cartas del set principal y un aluvión de revelaciones del bonus sheet Through the Ages, que incluye reprints de cartas icónicas de Magic retematizadas con el universo de Final Fantasy. El hype en la comunidad es máximo: es la primera vez que Wizards combina la profundidad de un bonus sheet completo con una licencia de este calibre.',
+      'Entre los spoilers más comentados de la semana destacan los Knights of the Round de Final Fantasy VII — uno de los momentos más icónicos de la saga — y la inclusión de Triple Triad como mecánica de juego propia dentro del set. Los Starter Kit decks también han mostrado sus cartas exclusivas, y se han confirmado tres Secret Lairs temáticos de Final Fantasy.',
+      'Jenova, la Calamidad Ancestral de FFVII, ha aparecido como carta mítica y está generando una cantidad enorme de discusión en foros y redes: su interacción con las cartas de Mutantes está creando combinaciones que los jugadores de Commander ya están probando en sus listas, especialmente combinada con Hope Estheim del set de TMNT.',
+      'El set completo se lanza el 13 de junio, con prerelease programada para el 6-8 de junio. Wizards también ha aprovechado el momentum para anunciar el Secret Lair Commander Deck: Goblin Storm, disponible en su tienda desde el 18 de mayo, mientras el Secret Lair Cats Are the Best Superdrop se prepara para el 15 de junio. Magic no para en este primer semestre de 2026.'
+    ],
+    date:       '18/05/2026',
+    url:        'https://www.mtggoldfish.com/articles/final-fantasy-spoilers-may-17-21-jenova-bonus-sheet-and-cheating-at-coin-flips',
+    page:       'magic.html',
+    pageLabel:  'MTG',
+    accent:     '#9933ff',
+    source:     'mtggoldfish.com',
+    img:        'assets/img/news/magic_generic.webp',
+    tags:       ['MagicTheGathering', 'MTG', 'FinalFantasy', 'Jenova', 'KnightsOfTheRound', 'TripleTriad', 'UniversesBeyond', 'Spoilers']
+  },
+  // ── NOTICIA 99 ──────────────────────────────────────────────────────────────
+  {
+    id:         'noticia-tow-grand-cathay-wave-mayo-solar-auxilia-2026',
+    topic:      'warhammer',
+    category:   'warhammer',
+    emoji:      '⚔️',
+    badgeLabel: 'WARHAMMER',
+    title:      'The Old World: la oleada de Grand Cathay ya está en mesa y los rumores de Dogs of War se intensifican',
+    summary:    'La nueva oleada de Grand Cathay para Warhammer: The Old World lleva semanas en mesas de toda Europa y las primeras reseñas confirman lo que prometían los kits: los Astromantes son la miniatura de personaje más trabajada que ha sacado Games Workshop para el juego hasta la fecha. Mientras tanto, el rumor de los Dogs of War se intensifica con cada semana que pasa.',
+    full: [
+      'Las últimas semanas han traído una oleada de lanzamientos para The Old World centrada en Grand Cathay, con los Astromantes del Tribunal Celestial, los Iron Hail Gunners y los Crane Gunner Teams llegando a las tiendas de toda Europa. Las primeras reseñas de la comunidad destacan la calidad del kit de los Astromantes — disponible tanto a pie como a caballo — como el mejor kit de personaje que ha sacado GW para el juego desde su relanzamiento en 2024.',
+      'El rumor mill lleva semanas calentando con la posibilidad de que los Dogs of War hagan su regreso al catálogo de The Old World antes de que acabe 2026. Los mercenarios más icónicos del Warhammer Fantasy clásico llevan fuera del juego desde los últimos años de la edición anterior, y su vuelta en plástico sería uno de los anuncios más celebrados por la comunidad veterana.',
+      'También circulan rumores de Mamuts del Caos como futura miniatura central de ejército para los Warriors of Chaos, lo que encajaría perfectamente con el estilo de unidades de élite que GW está priorizando para las facciones del Caos en esta nueva era del juego. El gran ausente sigue siendo Kislev, cuya fecha de lanzamiento sigue sin confirmarse a pesar de ser la facción más pedida por la comunidad desde el día uno.',
+      'El modelo de lanzamiento de GW para The Old World en 2026 está siendo más pausado que el frenesí de Grand Cathay en el primer semestre, lo que algunos leen como señal de que se están guardando algo grande para la segunda mitad del año. Si los Dogs of War se confirman antes del verano, el juego tendrá un otoño muy intenso. Si no hay anuncio en las próximas semanas, la comunidad empezará a plantear preguntas incómodas sobre el calendario.'
+    ],
+    date:       '18/05/2026',
+    url:        'https://spikeybits.com/old-world-new-releases-roadmap-previews/',
+    page:       'warhammer.html',
+    pageLabel:  'Warhammer',
+    accent:     '#8B0000',
+    source:     'spikeybits.com',
+    img:        'assets/img/news/the_old_world.jpg',
+    tags:       ['TheOldWorld', 'Warhammer', 'GrandCathay', 'GamesWorkshop', 'DogsOfWar', 'Miniaturas', 'WarhammerFantasy', 'Preventa']
+  },
   // ── NOTICIA 98 ──────────────────────────────────────────────────────────────
   {
     id:         'noticia-lec-roadtrip-madrid-2026-mkoi-top4',
@@ -2747,5 +2867,5 @@ var NEWS_DATA = [
 
 // NEWS_TRACKER
 // used_topics: ["got", "esports", "gaming", "magic", "gamedev", "warhammer", "rol", "nba"]
-// last_update: "2026-05-11"
-// next_available: ["warhammer", "magic", "gamedev"]
+// last_update: "2026-05-18"
+// next_available: ["got", "gaming", "rol"]
