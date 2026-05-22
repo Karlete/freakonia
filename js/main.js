@@ -187,3 +187,20 @@ function toggleGameEmbed(btn) {
     container.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }
 }
+
+// ─── Article image zoom wrapper ───────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', function () {
+  if (!document.querySelector('main article')) return;
+  document.querySelectorAll('main article > img').forEach(function (img) {
+    var accent = getComputedStyle(document.documentElement)
+      .getPropertyValue('--article-accent') || '';
+    var wrap = document.createElement('div');
+    wrap.className = 'article-img-zoom';
+    if (accent) wrap.style.borderColor = accent.trim();
+    img.style.removeProperty('margin-bottom');
+    img.style.removeProperty('border');
+    img.style.removeProperty('width');
+    img.parentNode.insertBefore(wrap, img);
+    wrap.appendChild(img);
+  });
+});

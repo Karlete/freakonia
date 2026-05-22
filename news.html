@@ -296,7 +296,7 @@ function renderNews() {
       + (n.page ? '<a href="' + n.page + '" class="btn btn-small btn-pink">&gt;&gt; IR A ' + (n.pageLabel||badge) + '</a>' : '')
       + '</div>';
 
-    return '<article class="news-card" data-category="' + cat + '" data-title="' + searchText + '">'
+    return '<article class="news-card" style="--news-accent:' + (n.accent || 'var(--accent-primary)') + '" data-category="' + cat + '" data-title="' + searchText + '">'
       + '<div class="news-card-header">'
       +   '<span class="news-card-cat news-cat--' + cat + '">' + n.emoji + ' ' + badge + '</span>'
       +   '<span class="news-card-date">' + fmtDate(n.date) + '</span>'
