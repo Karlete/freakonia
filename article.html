@@ -27,6 +27,10 @@
   <link rel="stylesheet" href="css/freakcoin.css">
 
   <!-- News data (global NEWS_DATA array) -->
+  <script src="js/news-2026-02.js"></script>
+  <script src="js/news-2026-03.js"></script>
+  <script src="js/news-2026-04.js"></script>
+  <script src="js/news-2026-05.js"></script>
   <script src="js/news-data.js"></script>
   <script src="js/pixels-data.js"></script>
 
@@ -614,9 +618,23 @@
   }
 
   const body = document.getElementById("article-body");
-  const paragraphs =
-    article.full && article.full.length > 0 ? article.full : [article.summary];
-  body.innerHTML = paragraphs.map((p) => `<p>${p}</p>`).join("");
+  let bodyHtml = "";
+  if (article.full && article.full.length > 0) {
+    if (Array.isArray(article.full)) {
+      bodyHtml = article.full.map((p) => `<p>${p}</p>`).join("");
+    } else {
+      bodyHtml = String(article.full);
+    }
+  } else {
+    bodyHtml = `<p>${article.summary || ""}</p>`;
+  }
+  body.innerHTML = bodyHtml;
+  body.style.display = "block";
+
+  // Ensure any .news-card-full inside the article view is visible
+  document.querySelectorAll(".news-card-full").forEach((el) => {
+    el.style.display = "block";
+  });
 
   if (article.freakcoin) {
     renderFreakcoin('freakcoin-rating', article.freakcoin.score, article.freakcoin.verdict);
@@ -695,6 +713,19 @@
   })(article);
   // --- End Schema Markup ---
 })();
+</script>
+
+<script>
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('news-read-more')) {
+    var btn = e.target;
+    var full = btn.previousElementSibling;
+    var expanded = btn.dataset.expanded === 'true';
+    full.style.display = expanded ? 'none' : 'block';
+    btn.dataset.expanded = expanded ? 'false' : 'true';
+    btn.textContent = expanded ? '▶ LEER MÁS' : '▼ LEER MENOS';
+  }
+});
 </script>
 
 <script src="js/pixels-rain.js"></script>

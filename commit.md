@@ -2,6 +2,34 @@
 
 ---
 
+## Sesión 70 — 2026-05-21
+
+### feat(news+arch): batch 104–108 + migración completa a artículos estáticos
+
+**Cambios funcionales:**
+- 5 noticias nuevas (104–108): GoT (HotD T3 teaser), Gaming (GTA VI Trailer 3 earnings call), Rol (Daggerheart/Fallout/Magefall), NBA (playoffs semis), Esports (LEC Spring playoffs).
+- Migración de noticias desde un único `js/news-data.js` a ficheros mensuales (`js/news-2026-02.js` … `js/news-2026-05.js`) y luego a un sistema **estático**:
+  - `articles/[id].html` — 120 ficheros HTML auto-contenidos generados por un script de un solo uso (`generate-articles.js`, ya borrado tras la generación). Nav y footer pegados verbatim desde `news.html`. CSS/JS con rutas relativas `../`.
+  - `js/articles-index.js` — array `ARTICLES_INDEX` con solo metadatos (sin `full`), un objeto por línea, ordenados newest-first.
+- Eliminados: `js/news-data.js`, `js/news-2026-02.js`, `js/news-2026-03.js`, `js/news-2026-04.js`, `js/news-2026-05.js`. Los 5 `<script>` tags de `index.html` y `news.html` reemplazados por un único `<script src="js/articles-index.js"></script>`.
+- `news.html` — `renderNews()` ahora consume `ARTICLES_INDEX`. `renderCard()` simplificado: las cards muestran solo summary + tags + botones `>> LEER ARTÍCULO` (→ `articles/[id].html`), `>> FUENTE` (si hay), `>> IR A <topic>` (si hay).
+- `index.html` — slider "¿Qué se cuece?" consume `ARTICLES_INDEX`; el botón `LEER` enlaza a `articles/[id].html`.
+- `article.html` — ya no se enlaza desde ningún sitio (deprecated). El render dinámico que tenía se arregló durante la migración (manejaba `full` como array; ahora también acepta string HTML) por compatibilidad antes de retirarlo del flujo.
+
+**Bug fix de datos:**
+- Detectada colisión de IDs: dos noticias de Warhammer Old World/Gran Cathay de marzo compartían el id `noticia-tow-gran-cathay-defenders-2026`. La segunda fue renombrada a `noticia-tow-gran-cathay-defenders-marzo-2026` y su HTML estático copiado con el id correcto. Verificado `ls articles/*.html | wc -l` → 120.
+
+**Docs:**
+- `CLAUDE.md` reescrito: la sección "FLUJO DE NOTICIAS" ahora describe el sistema estático (OPERACIÓN 1: crear HTML; OPERACIÓN 2: insertar línea en index). Plantilla HTML de referencia incluida.
+- `estado.md` actualizado: nueva descripción del sistema, NEWS_TRACKER → `last_update: 2026-05-21`, tabla de IDs reducida a las 5 más recientes (la fuente de verdad ahora es `js/articles-index.js`).
+
+**Verificaciones:**
+- `node -e "eval(require('fs').readFileSync('js/articles-index.js','utf8')); console.log(ARTICLES_INDEX.length);"` → `120`
+- `grep -n "NEWS_DATA\|news-data\|news-2026" index.html news.html` → empty
+- `ls articles/*.html | wc -l` → `120`
+
+---
+
 ## Sesión 69 — 2026-05-11
 
 ### feat(news): add 5 news articles (GOT/NBA/GAMING/ROL/ESPORTS batch 94–98) + update tracker

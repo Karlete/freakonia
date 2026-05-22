@@ -26,8 +26,8 @@
   <link rel="stylesheet" href="css/news.css" />
   <link rel="stylesheet" href="css/pixels.css" />
 
-  <!-- News data (global NEWS_DATA array) -->
-  <script src="js/news-data.js"></script>
+  <!-- News data (global ARTICLES_INDEX array) -->
+  <script src="js/articles-index.js"></script>
   <script src="js/gaming-history.js"></script>
   <script src="js/pixels-data.js"></script>
   <link rel="canonical" href="https://freakonia.com/">
@@ -1094,7 +1094,7 @@
   var prevBtn  = document.querySelector('.slider-prev');
   var nextBtn  = document.querySelector('.slider-next');
 
-  if (!section || !track || typeof NEWS_DATA === 'undefined' || !NEWS_DATA.length) {
+  if (!section || !track || typeof ARTICLES_INDEX === 'undefined' || !ARTICLES_INDEX.length) {
     if (section) section.style.display = 'none';
     return;
   }
@@ -1104,7 +1104,7 @@
     var p = d.split('/');
     return new Date(+p[2], +p[1] - 1, +p[0]);
   }
-  var sorted = NEWS_DATA.slice().sort(function (a, b) {
+  var sorted = ARTICLES_INDEX.slice().sort(function (a, b) {
     return parseDate(b.date) - parseDate(a.date);
   });
   var items = sorted.slice(0, 6);
@@ -1114,7 +1114,7 @@
     var card = document.createElement('article');
     card.className = 'news-preview-card';
     card.style.setProperty('--news-accent', n.accent || '#00ff41');
-    var href = 'article.html?id=' + n.id;
+    var href = 'articles/' + n.id + '.html';
     card.innerHTML =
       '<div class="news-preview-header">' +
         '<span class="news-topic-badge">' + n.emoji + ' ' + (n.badgeLabel || n.topic).toUpperCase() + '</span>' +

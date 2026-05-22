@@ -1,6 +1,6 @@
 # estado.md — Project State Tracker
 
-Last updated: 2026-05-11 (sesión 69)
+Last updated: 2026-05-21 (sesión 70 — migración a artículos estáticos)
 
 ---
 
@@ -109,109 +109,39 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 
 ## ▶ PRÓXIMA SESIÓN — Leer esto primero
 
-### Estado actual del sistema de noticias (news)
-- `js/news-data.js` — array `NEWS_DATA` con **83 artículos** (80 noticias + 3 Freakochapas). **Añadir nuevos artículos AQUÍ, al principio del array (más reciente primero).**
-- `news.html` — renderizado dinámico vía `renderNews()`. El botón "LEER MÁS" ha sido reemplazado por enlace a `article.html?id=`. No tocar el grid HTML.
-- `article.html` — Renderiza artículos individuales vía query param `?id=`. Incluye `updateSEO()` dinámico (OG, Twitter, canonical, meta description), Freakcoin rating (`<div id="freakcoin-rating">` + `renderFreakcoin()`), `css/freakcoin.css` y `js/freakcoin.js`.
-- `index.html` — slider "¿Qué se cuece?" lee automáticamente `NEWS_DATA`. No requiere cambios al añadir noticias.
-- `css/news.css` — `.news-grid` tiene `align-items: start`.
-- `css/freakcoin.css` + `js/freakcoin.js` — sistema de rating Freakcoin. Campo opcional en artículos: `freakcoin: { score: N, verdict: '...' }`.
+### Estado actual del sistema de noticias (news) — SISTEMA ESTÁTICO
+
+Migrado en sesión 70 (2026-05-21). Ya **no existe** `js/news-data.js` ni `article.html?id=` ni los ficheros mensuales `js/news-2026-XX.js`. El nuevo flujo es:
+
+- `js/articles-index.js` — array `ARTICLES_INDEX` con metadatos de los **120 artículos** (sin el campo `full`). Un objeto por línea. **Añadir nuevos artículos al TOP del array.**
+- `articles/[id].html` — un fichero HTML estático por artículo (120 ficheros). Auto-contenidos: nav, header, body, footer, links. Rutas relativas a CSS/JS con `../`.
+- `news.html` — `renderNews()` lee `ARTICLES_INDEX`, ordena por fecha desc, y cada card enlaza a `articles/[id].html`. El botón es `>> LEER ARTÍCULO`. Filtros por topic, search y paginación intactos.
+- `index.html` — slider "¿Qué se cuece?" lee `ARTICLES_INDEX`; cada card enlaza a `articles/[id].html`.
+- `article.html` — **deprecated** (sigue en el repo pero ya no se enlaza desde ningún sitio). Se puede borrar en una sesión futura.
+- `css/news.css` — `.news-grid` con `align-items: start`. Sin cambios.
 - `assets/img/mastersystem2/` — 10 imágenes webp de juegos de Master System II.
+
+### Cómo añadir un artículo nuevo (DOS operaciones — ver CLAUDE.md sección "FLUJO DE NOTICIAS — SISTEMA ESTÁTICO")
+1. Crear `articles/[id].html` copiando la estructura de cualquier artículo existente.
+2. Insertar una línea en `js/articles-index.js` al TOP del array `ARTICLES_INDEX`.
 
 ### NEWS_TRACKER — temas usados
 ```json
-{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba"],"last_update":"2026-05-11"}
+{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba"],"last_update":"2026-05-21"}
 ```
 **Próximos temas disponibles:** `warhammer` · `magic` · `gamedev`
 
-### IDs de artículos actuales en NEWS_DATA (para evitar duplicados)
+### IDs de artículos actuales (para evitar duplicados)
+**Fuente de verdad:** `js/articles-index.js` (un objeto por línea, IDs visibles a simple vista) o `ls articles/*.html`. La tabla detallada que vivía aquí (120 entradas) ha sido retirada por mantenimiento. IDs recientes (batch 104–108, 21/05/2026) para referencia rápida:
 | # | id | topic | fecha |
 |---|---|---|---|
-| FC3 | `freakochapa-ps1-biblioteca-historia-2026` | gaming | 24/04/2026 |
-| FC2 | `freakochapa-master-system-ii-10-juegarrales` | gaming | 21/04/2026 |
-| FC1 | `freakochapa-fallen-valkyrie-devlog-1` | gamedev | 21/04/2026 |
+| 108 | `noticia-lec-spring-2026-playoffs-arrancan-mayo23` | esports | 21/05/2026 |
+| 107 | `noticia-nba-playoffs-semis-knicks-conf-finals-thunder-2026` | nba | 21/05/2026 |
+| 106 | `noticia-rol-daggerheart-fallout-magefall-mayo-2026` | rol | 21/05/2026 |
+| 105 | `noticia-gta6-trailer3-takeTwo-earnings-mayo21-2026` | gaming | 21/05/2026 |
+| 104 | `noticia-hotd-t3-teaser-mayo-2026` | got | 21/05/2026 |
 | 98 | `noticia-lec-roadtrip-madrid-2026-mkoi-top4` | esports | 11/05/2026 |
-| 97 | `noticia-rol-dnd-liveservice-elric-rpg-2026` | rol | 11/05/2026 |
-| 96 | `noticia-gaming-subnautica2-forza6-mayo-2026` | gaming | 11/05/2026 |
-| 95 | `noticia-nba-semis-2026-knicks-barren-thunder-3-0` | nba | 11/05/2026 |
-| 94 | `noticia-hotd-t3-cambios-libro-aegon-2026` | got | 11/05/2026 |
-| 93 | `noticia-got-analisis-menique-petyr-baelish` | got | 05/05/2026 |
-| 92 | `noticia-mtg-magiccon-vegas-2026-hobbit-realityfracture` | magic | 05/05/2026 |
-| 91 | `noticia-tow-grand-cathay-preorder-mayo-2026` | warhammer | 05/05/2026 |
-| 90 | `noticia-lec-spring-2026-semana6-fnatic-eliminado` | esports | 05/05/2026 |
-| 89 | `noticia-ttrpg-news-mayo-2026` | rol | 02/05/2026 |
-| 88 | `noticia-gaming-mayo-2026-forza-bond` | gaming | 02/05/2026 |
-| 87 | `noticia-nba-playoffs-2026-r1-game7s` | nba | 02/05/2026 |
-| 86 | `noticia-lec-spring-2026-semana6-playoffs` | esports | 02/05/2026 |
-| 85 | `noticia-hotd-t3-aegon-look-2026` | got | 02/05/2026 |
-| 68 | `noticia-msi-2026-daejeon-clasificacion` | esports | 20/04/2026 |
-| 67 | `noticia-got-winds-winter-falso-leak-2026` | got | 20/04/2026 |
-| 66 | `noticia-nba-playoffs-r1-juego1-2026` | nba | 20/04/2026 |
-| 65 | `noticia-gta-vi-mapa-noviembre-2026` | gaming | 20/04/2026 |
-| 64 | `noticia-hotd-s3-nuevos-caballeros-2026` | got | 16/04/2026 |
-| 63 | `noticia-nba-playin-resultados-2026` | nba | 16/04/2026 |
-| 62 | `noticia-unity-platform-toolkit-unite2026` | gamedev | 16/04/2026 |
-| 61 | `noticia-lec-spring-semana3-2026` | esports | 14/04/2026 |
-| 60 | `noticia-nba-playin-2026` | nba | 14/04/2026 |
-| 59 | `noticia-magic-secrets-strixhaven-2026` | magic | 14/04/2026 |
-| 58 | `noticia-warhammer-old-world-adepticon-gw-2026` | warhammer | 14/04/2026 |
-| 57 | `noticia-dnd-villainous-options-playtest-2026` | rol | 11/04/2026 |
-| 56 | `noticia-hotd-s3-junio-2026-confirmado` | got | 11/04/2026 |
-| 55 | `noticia-oblivion-remastered-gamepass-2026` | gaming | 11/04/2026 |
-| 54 | `noticia-les-split-primavera-2026` | esports | 08/04/2026 |
-| 53 | `noticia-hotd-s3-junio-dragonfire-2026` | got | 08/04/2026 |
-| 52 | `noticia-gaming-abril-2026-lanzamientos` | gaming | 08/04/2026 |
-| 51 | `noticia-unity-hdrp-mantenimiento-2026` | gamedev | 06/04/2026 |
-| 50 | `noticia-nba-playoffs-picture-april-2026` | nba | 06/04/2026 |
-| 49 | `noticia-adepticon-tow-gran-cathay-2026` | warhammer | 02/04/2026 |
-| 48 | `noticia-secrets-strixhaven-spoilers-2026` | magic | 02/04/2026 |
-| 47 | `noticia-unity-informe-gamedev-2026` | gamedev | 02/04/2026 |
-| 46 | `noticia-marathon-bungie-2026` | gaming | 30/03/2026 |
-| 45 | `noticia-dnd-2026-roadmap-ravenloft` | rol | 30/03/2026 |
-| 44 | `noticia-nba-finde-march-28-29-2026` | nba | 30/03/2026 |
-| 43 | `noticia-akotsk-temporada-2-produccion-2026` | got | 30/03/2026 |
-| 42 | `noticia-lec-spring-2026-semana1` | esports | 30/03/2026 |
-| 41 | `noticia-mhs3-reviews-metacritic-2026` | gaming | 25/03/2026 |
-| 40 | `noticia-subnautica2-krafton-demanda-2026` | gamedev | 25/03/2026 |
-| 39 | `noticia-secrets-strixhaven-preview-2026` | magic | 25/03/2026 |
-| 38 | `noticia-first-stand-2026-semifinales` | esports | 20/03/2026 |
-| 37 | `noticia-nintendo-demanda-aranceles-2026` | gamedev | 20/03/2026 |
-| 36 | `noticia-hotd-t3-reshoots-condal-2026` | got | 20/03/2026 |
-| 35 | `noticia-crimson-desert-reviews-bolsa-2026` | gaming | 20/03/2026 |
-| 34 | `noticia-first-stand-2026-grupos` | esports | 20/03/2026 |
-| 33 | `noticia-slay-spire-2-exito-indie-2026` | gamedev | 17/03/2026 |
-| 32 | `noticia-crimson-desert-embargo-2026` | gaming | 17/03/2026 |
-| 31 | `noticia-first-stand-2026-dia1` | esports | 17/03/2026 |
-| 30 | `noticia-crimson-desert-launch-2026` | gaming | 15/03/2026 |
-| 29 | `noticia-martin-condal-abysmal-2026` | got | 15/03/2026 |
-| 28 | `noticia-ea-despidos-battlefield-2026` | gamedev | 15/03/2026 |
-| 27 | `noticia-gta6-fecha-definitiva-2026` | gaming | 11/03/2026 |
-| 26 | `noticia-hotd-t3-casting-2026` | got | 10/03/2026 |
-| 25 | `noticia-gdc-festival-2026` | gamedev | 09/03/2026 |
-| 24 | `noticia-lpl-tes-naiyou-amano-2026` | esports | 07/03/2026 |
-| 23 | `noticia-crimson-desert-lanzamiento-2026` | gaming | 07/03/2026 |
-| 22 | `noticia-akotsk-temporada-2-confirmada-2026` | got | 06/03/2026 |
-| 21 | `noticia-mtg-tortugas-ninja-2026` | magic | 05/03/2026 |
-| 20 | `noticia-old-world-grand-cathay-defenders-2026` | warhammer | 07/03/2026 |
-| 19 | `noticia-nba-playoffs-race-shai-record-2026` | nba | 05/03/2026 |
-| 18 | `noticia-mtg-tmnt-2026` | magic | 05/03/2026 |
-| 17 | `noticia-tow-gran-cathay-defenders-2026` | warhammer | 05/03/2026 |
-| 16 | `noticia-lec-spring-2026-formato` | esports | 04/03/2026 |
-| 15 | `noticia-fatal-frame-2-remake-2026` | gaming | 03/03/2026 |
-| 14 | `noticia-tow-comp-war-comunidad-2026` | warhammer | 03/03/2026 |
-| 13 | `noticia-lyon-lcs-lockin-2026` | esports | 02/03/2026 |
-| 12 | `noticia-g2-lec-versus-2026` | esports | 28/02/2026 |
-| 11 | `noticia-hotd-t3-trailer-2026` | got | 28/02/2026 |
-| 10 | `noticia-spurs-racha-2026` | nba | 28/02/2026 |
-| 9 | `noticia-lec-versus-final-badalona-2026` | esports | 28/02/2026 |
-| 8 | `noticia-nba-allstar-2026` | nba | 12/02/2026 |
-| 7 | `noticia-god-of-war-trilogy-remake-2026` | gaming | 12/02/2026 |
-| 6 | `noticia-re9-requiem-2026` | gaming | 27/02/2026 |
-| 5 | `noticia-hotd-s3-trailer-2026` | got | 28/02/2026 |
-| 4 | `noticia-coc-arkham-2026` | rol | 26/02/2026 |
-| 3 | `noticia-warhammer-gran-cathay-2026` | warhammer | 26/02/2026 |
-| 2 | `noticia-unity-ia-gdc-2026` | gamedev | 26/02/2026 |
-| 1 | `noticia-ffvii-remaster-2026` | gaming | 25/02/2026 |
+_…87 entradas más (94 a 1) retiradas. Para la lista completa actualizada ver `js/articles-index.js`._
 
 ### Páginas HTML — estado actual
 | Página | Estado | Notas |
@@ -228,8 +158,9 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 | nba.html | ✅ Completa | |
 | java.html | ✅ Completa | JavaDevBible spotlight |
 | social.html | ✅ Completa | |
-| news.html | ✅ Completa | Cards enlazan a article.html?id= |
-| article.html | ✅ Completa | Páginas individuales por artículo, URL compartible |
+| news.html | ✅ Completa | Cards leen `ARTICLES_INDEX` y enlazan a `articles/[id].html` |
+| articles/ | ✅ NUEVA | 120 ficheros HTML estáticos auto-contenidos, uno por artículo |
+| article.html | ⚠ Deprecated | Ya no se enlaza desde ningún sitio; pendiente de borrar |
 | quiz.html | ✅ Completa | Quiz pixel art — 5 arquetipos · 7 preguntas · versión chico/chica |
 | universo.html | ✅ NUEVA | Mapa interactivo canvas — 9 nodos, constelaciones, panel lateral, news integradas |
 

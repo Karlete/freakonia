@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="css/news.css" />
 
   <!-- News data — must load before render script -->
-  <script src="js/news-data.js"></script>
+  <script src="js/articles-index.js"></script>
   <link rel="canonical" href="https://freakonia.com/news.html">
 
 
@@ -195,7 +195,7 @@
       <p>// NO SE ENCONTRARON NOTICIAS</p>
     </div>
 
-    <!-- NEWS GRID — populated from js/news-data.js via renderNews() below -->
+    <!-- NEWS GRID — populated from js/articles-index.js via renderNews() below -->
     <div class="news-grid" id="newsGrid"></div><!-- end news-grid -->
 
     <div class="news-pagination" id="news-pagination"></div>
@@ -248,7 +248,7 @@
 
 <script src="js/main.js"></script>
 <script>
-/* ── RENDER NEWS FROM NEWS_DATA ────────────────────────────────── */
+/* ── RENDER NEWS FROM ARTICLES_INDEX ───────────────────────────── */
 function renderNews() {
   var grid = document.getElementById('newsGrid');
   if (!grid) return;
@@ -256,14 +256,14 @@ function renderNews() {
   /* double-render guard */
   if (grid.children.length > 0) return;
 
-  if (typeof NEWS_DATA === 'undefined' || NEWS_DATA.length === 0) {
+  if (typeof ARTICLES_INDEX === 'undefined' || ARTICLES_INDEX.length === 0) {
     grid.innerHTML = '<p class="no-news">// Sin noticias todav\u00eda. Vuelve pronto. //</p>';
     document.getElementById('newsCount').textContent = '0';
     return;
   }
 
   /* sort newest first (DD/MM/YYYY) */
-  var sorted = NEWS_DATA.slice().sort(function (a, b) {
+  var sorted = ARTICLES_INDEX.slice().sort(function (a, b) {
     var pa = a.date.split('/'), pb = b.date.split('/');
     return new Date(+pb[2], +pb[1]-1, +pb[0]) - new Date(+pa[2], +pa[1]-1, +pa[0]);
   });
@@ -284,19 +284,17 @@ function renderNews() {
       ? '<div class="news-card-img-wrap"><img src="' + n.img + '" alt="' + n.title + '" class="news-card-img" loading="eager" onerror="this.parentElement.style.display=\'none\'"></div>'
       : '';
 
-    var fullHtml =
-      '<a href="article.html?id=' + n.id + '" class="btn btn-small news-read-more-link">\u25b6 LEER ART\u00cdCULO</a>';
+    var fullHtml = '';
 
     var tagsHtml = (n.tags || []).map(function (t) {
       return '<span class="tag">' + t + '</span>';
     }).join('');
 
-    var linksHtml = '';
-    if (n.url || n.page) {
-      linksHtml = '<div style="display:flex;gap:0.5rem;margin-top:0.75rem;flex-wrap:wrap;">';
-      if (n.page) linksHtml += '<a href="' + n.page + '" class="btn btn-small btn-pink">&gt;&gt; IR A ' + (n.pageLabel || badge) + '</a>';
-      linksHtml += '</div>';
-    }
+    var linksHtml = '<div style="display:flex;gap:0.5rem;margin-top:0.75rem;flex-wrap:wrap;">'
+      + '<a href="articles/' + n.id + '.html" class="btn">&gt;&gt; LEER ART\u00cdCULO</a>'
+      + (n.url  ? '<a href="' + n.url  + '" target="_blank" rel="noopener" class="btn btn-small">&gt;&gt; FUENTE</a>' : '')
+      + (n.page ? '<a href="' + n.page + '" class="btn btn-small btn-pink">&gt;&gt; IR A ' + (n.pageLabel||badge) + '</a>' : '')
+      + '</div>';
 
     return '<article class="news-card" data-category="' + cat + '" data-title="' + searchText + '">'
       + '<div class="news-card-header">'
@@ -402,4 +400,4 @@ document.addEventListener('DOMContentLoaded', renderNews);
 </body>
 </html>
 
-<!-- NEWS_TRACKER moved to js/news-data.js -->
+<!-- NEWS_TRACKER moved to js/articles-index.js -->
