@@ -17,9 +17,15 @@
     var article = document.querySelector('main article');
     if (!article) return;
 
+    /* ── Set body class + style page title ──────────────── */
+    document.body.classList.add('article-page');
+    var h1 = document.querySelector('.page-header-title');
+    if (h1) h1.style.color = accent;
+
     /* ── Style paragraphs ───────────────────────────────── */
-    article.querySelectorAll('div > p').forEach(function (p) {
+    article.querySelectorAll('p').forEach(function (p) {
       p.classList.add('article-paragraph');
+      p.style.borderLeftColor = accent;
     });
 
     /* ── Prev / Next navigation ─────────────────────────── */
