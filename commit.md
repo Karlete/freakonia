@@ -2,6 +2,24 @@
 
 ---
 
+## Sesión 71 — 2026-05-24
+
+### feat(ui): UI polish — glitch hero + hub hover + typewriter + quiz CTA + news cards
+
+**Modified files:**
+- `index.html`: Hero h1 — `glitch` class + `data-text="FREAKONIA"` añadidos. Sección `#quiz-cta` insertada antes de Social Quick Links — 5 arquetipos (arcade purist/coleccionista/TÚ/rpg addict/speedrunner), pills info, botón CTA pulsante, `.quiz-coin` animada (octagono `clip-path`). Rutas de imágenes actualizadas a `assets/img/quiz/`. CSS `.quiz-*` (14 reglas) + `@keyframes coinFlip` añadidos al `<style>` inline.
+- `css/animations.css`: `.glitch::before/.after` reescritos — `font-family`, `font-size: inherit`, `pointer-events: none`, `clip-path: inset(0 0 100% 0)`, animación `glitchSlice 5s` (glitch en 90–100% del ciclo). `@keyframes glitchSlice` añadido. `@keyframes hubScanSweep` y `@keyframes hubIconBounce` añadidos al final.
+- `css/components.css`: `.nav-hub-item` hover brutal reescrito — pixel-stepped transitions (`steps(1)/(2)`), `::before` top bar `transform-origin: left steps(4)`, `::after` scan sweep, hover verde `translate(-4px,-4px)` + shadow offset 4px + glow + inset. `.nav-hub-item:hover .nav-hub-label` glow verde. `.nav-hub-icon` hover bounce + drop-shadow.
+- `css/news.css`: `.news-preview-card` hover brutal — `position: relative; overflow: hidden`, pixel transitions, `::before` top bar `steps(5)`, hover `translate(-4px,-4px)` + shadow offset + inset dark, title color change. `.news-preview-section::after` scan beam `sectionScanBeam 6s` + `z-index` stacking. `@keyframes sectionScanBeam` añadido.
+- `js/main.js`: Typewriter IIFE extraído del DOMContentLoaded (bloqueado por early return de article detection) a función standalone `sectionTitleTypewriter()` al final del fichero — se ejecuta en todas las páginas.
+
+**Verificaciones:**
+- `grep -n "quiz-cta\|quiz/boy\|quiz/girl" index.html` → section + 4 img paths
+- `grep -n "sectionScanBeam\|coinFlip\|news-preview-card:hover" css/news.css index.html` → 7 matches
+- `tail -20 js/main.js` → `sectionTitleTypewriter` IIFE al final
+
+---
+
 ## Sesión 70 — 2026-05-21
 
 ### feat(news+arch): batch 104–108 + migración completa a artículos estáticos

@@ -1,6 +1,6 @@
 # estado.md — Project State Tracker
 
-Last updated: 2026-05-21 (sesión 70 — migración a artículos estáticos)
+Last updated: 2026-05-24 (sesión 71 — UI polish: glitch hero, hub hover, typewriter, quiz CTA, news cards)
 
 ---
 
@@ -180,6 +180,7 @@ _…87 entradas más (94 a 1) retiradas. Para la lista completa actualizada ver 
 - 📦 Repo: **https://github.com/Karlete/freakonia**
 - ⚙️ Deploy: GitHub Pages (rama `main`, raíz `/`)
 
+**Sesión 71 (2026-05-24):** UI Polish — `index.html`: hero h1 con efecto glitch (`glitch` class + `data-text="FREAKONIA"`); sección `#quiz-cta` insertada antes de Social (5 arquetipos, pills, CTA pulsante, `.quiz-coin` animada); imágenes actualizadas a `assets/img/quiz/`; CSS `.quiz-*` + `@keyframes coinFlip` en `<style>` inline. `css/animations.css`: `.glitch::before/.after` reescritos con `glitchSlice` 5s; `@keyframes hubScanSweep` + `hubIconBounce` añadidos. `css/components.css`: `.nav-hub-item` hover brutal reescrito — pixel transitions, `::before` top bar, `::after` scan sweep, shadow offset verde 4px, icon bounce, label glow. `css/news.css`: `.news-preview-card` hover brutal con `::before` bar, offset shadow, title color; `.news-preview-section::after` scan beam `sectionScanBeam` 6s. `js/main.js`: typewriter IIFE movido a función standalone `sectionTitleTypewriter()`. `task.md`: limpiado.
 **Sesión 66 (2026-04-26):** Universo Freakonia — `universo.html` (canvas interactivo con 9 nodos: GameDev, Gaming, Esports, GoT, Warhammer, Magic, Rol, NBA, Java; constelaciones animadas, orbit particles, pulse rings, panel lateral con noticias integradas de NEWS_DATA). `js/universo.js` (motor canvas completo: IIFE, animación RAF, mousemove/touch, showPanel, panel close, Escape key, resize). Nav link `🗺 Universo` añadido en todos los HTML del proyecto (16 páginas). `task.md`: limpiado.
 **Sesión 65 (2026-04-24):** Freakochapa #3 (PS1) + Pixel Patron i18n + article img hover — `js/news-data.js`: artículo `freakochapa-ps1-biblioteca-historia-2026` insertado al TOP como NOTICIA 73 (14 juegos PS1, Freakcoin inline, todas las imágenes en `assets/img/PS1/` incluyendo `granturismo.jpg` y `soulreaver.webp`). `article.html`: `.article-body img` hover (scale + glow) + `height:180px; object-fit:cover` para tamaño uniforme. `index.html` + `js/pixels-rain.js`: Pixel Patron bilingüe. `CLAUDE.md`: Flujo de Freakochapas. `task.md`: limpiado.
 **Sesión 64 (2026-04-23):** SEO fixes — `index.html`: canonical corregido de `https://freakonia.com/index.html` → `https://freakonia.com/`. `sitemap.xml`: 13 `<lastmod>` actualizados a `2026-04-23` (replace_all); fallen-valkyrie.html priority bajada de `0.8` a `0.6`. `fallen-valkyrie.html`: `<link rel="canonical" href="https://freakonia.com/fallen-valkyrie.html">` añadido antes de `</head>`. `task.md` limpiado.

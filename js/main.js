@@ -203,4 +203,41 @@ document.addEventListener('DOMContentLoaded', function () {
     img.parentNode.insertBefore(wrap, img);
     wrap.appendChild(img);
   });
+
 });
+
+// ─── Typewriter on section titles when they enter viewport ──────────────────
+(function sectionTitleTypewriter() {
+  var titleEls = document.querySelectorAll('.section-title');
+  if (!titleEls.length) return;
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      var el = entry.target;
+      if (el._twDone) return;
+      el._twDone = true;
+
+      var original = el._twOriginal;
+      el.textContent = '';
+      el.style.visibility = 'visible';
+
+      var i = 0;
+      function tick() {
+        if (i <= original.length) {
+          el.textContent = original.slice(0, i);
+          i++;
+          setTimeout(tick, 55);
+        }
+      }
+      tick();
+      observer.unobserve(el);
+    });
+  }, { threshold: 0.4 });
+
+  titleEls.forEach(function (el) {
+    el._twOriginal = el.textContent.trim();
+    el.style.visibility = 'hidden';
+    observer.observe(el);
+  });
+})();

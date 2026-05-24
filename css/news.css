@@ -310,6 +310,41 @@
 .news-preview-section {
   padding-top: 3rem;
   padding-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.news-preview-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 35%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 255, 65, 0.04) 40%,
+    rgba(0, 255, 65, 0.09) 50%,
+    rgba(0, 255, 65, 0.04) 60%,
+    transparent 100%
+  );
+  animation: sectionScanBeam 6s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Cards must sit above the beam */
+.news-preview-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes sectionScanBeam {
+  0%   { left: -40%;  opacity: 0; }
+  3%   { opacity: 1; }
+  30%  { left: 130%;  opacity: 0; }
+  100% { left: 130%;  opacity: 0; }
 }
 
 .news-preview-sub {
@@ -367,12 +402,41 @@
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  transition: box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform    0s steps(1),
+    box-shadow   0.1s steps(2),
+    border-color 0s steps(1);
   /* NO border-radius */
 }
 
+.news-preview-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--news-accent, var(--accent-primary));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.15s steps(5);
+}
+
 .news-preview-card:hover {
-  box-shadow: 0 0 12px var(--news-accent, var(--accent-primary));
+  transform: translate(-4px, -4px);
+  border-color: var(--news-accent, var(--accent-primary));
+  box-shadow:
+    4px 4px 0 var(--news-accent, var(--accent-primary)),
+    0 0 16px rgba(var(--news-accent, 0,255,65), 0.35),
+    inset 0 0 20px rgba(0,0,0,0.3);
+}
+
+.news-preview-card:hover::before {
+  transform: scaleX(1);
+}
+
+.news-preview-card:hover .news-preview-title {
+  color: var(--news-accent, var(--accent-primary));
 }
 
 .news-preview-header {
@@ -410,6 +474,7 @@
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+  transition: color 0.1s;
 }
 
 .news-preview-body {

@@ -222,7 +222,7 @@
     <div class="hero-text">
       <p class="hero-pre" data-i18n="hero.pre">// JUGADOR UNO HA ENTRADO AL JUEGO</p>
 
-      <h1 class="hero-title">
+      <h1 class="hero-title glitch" data-text="FREAKONIA">
         FREAK<span class="line-accent">ONIA</span>
       </h1>
 
@@ -766,6 +766,69 @@
     </div>
   </section>
 
+  <!-- ─── Quiz Gamer CTA ──────────────────────────────────────────────────── -->
+  <section class="section" id="quiz-cta">
+    <div class="container">
+
+      <p class="quiz-pre anim-blink">// NUEVO RETO DESBLOQUEADO</p>
+      <h2 class="section-title center">🎯 ¿CUÁL ES TU ARQUETIPO GAMER?</h2>
+      <p class="quiz-sub">7 preguntas. Sin trampa. La verdad sobre lo que eres.</p>
+
+      <div class="quiz-archetypes">
+
+        <div class="quiz-archetype-card">
+          <img src="assets/img/quiz/boy_arcadepurist.png"
+               alt="Arcade Purist" class="quiz-archetype-img" />
+          <span class="quiz-archetype-name">ARCADE PURIST</span>
+        </div>
+
+        <div class="quiz-archetype-card">
+          <img src="assets/img/quiz/boy_coleccionista.png"
+               alt="Coleccionista" class="quiz-archetype-img" />
+          <span class="quiz-archetype-name">COLECCIONISTA</span>
+        </div>
+
+        <div class="quiz-archetype-card quiz-archetype-center">
+          <div class="quiz-unknown-wrap">
+            <span class="quiz-unknown">?</span>
+          </div>
+          <span class="quiz-archetype-name">TÚ</span>
+        </div>
+
+        <div class="quiz-archetype-card">
+          <img src="assets/img/quiz/girl_rpgaddict.jpg"
+               alt="RPG Addict" class="quiz-archetype-img" />
+          <span class="quiz-archetype-name">RPG ADDICT</span>
+        </div>
+
+        <div class="quiz-archetype-card">
+          <img src="assets/img/quiz/girl_speedrunner.jpg"
+               alt="Speedrunner" class="quiz-archetype-img" />
+          <span class="quiz-archetype-name">SPEEDRUNNER</span>
+        </div>
+
+      </div>
+
+      <div class="quiz-cta-wrap">
+        <div class="quiz-pills">
+          <span class="quiz-pill">🎮 7 PREGUNTAS</span>
+          <span class="quiz-pill">🏆 5 ARQUETIPOS</span>
+          <span class="quiz-pill">⚡ 2 MINUTOS</span>
+        </div>
+        <a href="quiz.html" class="btn quiz-cta-btn">
+          ▶ ACEPTAR EL RETO
+        </a>
+        <p class="quiz-insert-coin anim-blink">// INSERT COIN TO CONTINUE</p>
+        <div class="quiz-coin" aria-hidden="true">
+          <span class="quiz-coin-inner">C</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
   <!-- ─── Social Quick Links ─────────────────────────────────────────────── -->
   <section class="section reveal">
     <div class="container">
@@ -1188,6 +1251,197 @@
       0 0 14px var(--accent-warn),
       0 0 28px rgba(255, 204, 0, 0.6);
   }
+}
+
+/* ── Quiz CTA Section ── */
+.quiz-pre {
+  font-family: var(--font-primary);
+  font-size: 0.5rem;
+  color: var(--accent-primary);
+  text-align: center;
+  margin-bottom: var(--sp-3);
+  letter-spacing: 2px;
+}
+
+.quiz-sub {
+  font-family: var(--font-secondary);
+  font-size: 1.3rem;
+  color: var(--text-dim);
+  text-align: center;
+  margin-bottom: var(--sp-6);
+}
+
+.quiz-archetypes {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: var(--sp-4);
+  margin: var(--sp-6) 0;
+  flex-wrap: wrap;
+}
+
+.quiz-archetype-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-2);
+  background: var(--bg-card);
+  border: 4px solid var(--border-color);
+  padding: var(--sp-3) var(--sp-3) var(--sp-2);
+  width: 110px;
+  transition: border-color 0s steps(1), box-shadow 0.1s steps(2), transform 0s steps(1);
+  cursor: default;
+  position: relative;
+}
+
+.quiz-archetype-card:hover {
+  border-color: var(--accent-secondary);
+  transform: translate(-3px, -3px);
+  box-shadow:
+    3px 3px 0 var(--accent-secondary),
+    0 0 12px rgba(255, 0, 255, 0.3);
+}
+
+.quiz-archetype-img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  filter: grayscale(0.3);
+  transition: filter 0s steps(1);
+}
+
+.quiz-archetype-card:hover .quiz-archetype-img {
+  filter: grayscale(0) drop-shadow(0 0 6px var(--accent-secondary));
+}
+
+.quiz-archetype-center {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 14px rgba(0,255,65,0.25);
+  transform: translateY(-8px);
+  width: 120px;
+}
+
+.quiz-archetype-center:hover {
+  border-color: var(--accent-primary);
+  transform: translate(-3px, -11px);
+  box-shadow:
+    3px 3px 0 var(--accent-primary),
+    0 0 18px rgba(0, 255, 65, 0.4);
+}
+
+.quiz-unknown-wrap {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,255,65,0.05);
+  border: 2px solid var(--accent-primary);
+}
+
+.quiz-unknown {
+  font-family: var(--font-primary);
+  font-size: 2rem;
+  color: var(--accent-primary);
+  text-shadow: var(--glow-green);
+  animation: blink 1.2s step-end infinite;
+}
+
+.quiz-archetype-name {
+  font-family: var(--font-primary);
+  font-size: 0.38rem;
+  color: var(--text-dim);
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.quiz-archetype-center .quiz-archetype-name {
+  color: var(--accent-primary);
+  text-shadow: var(--glow-green);
+}
+
+.quiz-cta-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-4);
+  margin-top: var(--sp-4);
+}
+
+.quiz-pills {
+  display: flex;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.quiz-pill {
+  font-family: var(--font-primary);
+  font-size: 0.4rem;
+  color: var(--accent-tertiary);
+  border: 2px solid var(--accent-tertiary);
+  padding: var(--sp-1) var(--sp-3);
+  letter-spacing: 1px;
+}
+
+.quiz-cta-btn {
+  font-size: 0.75rem;
+  padding: var(--sp-4) var(--sp-7);
+  animation: patron-btn-pulse 2s ease-in-out infinite;
+  border-color: var(--accent-primary);
+}
+
+.quiz-insert-coin {
+  font-family: var(--font-primary);
+  font-size: 0.45rem;
+  color: var(--text-dim);
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.quiz-coin {
+  width: 32px;
+  height: 32px;
+  background: var(--accent-warn);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(
+    30% 0%, 70% 0%,
+    100% 30%, 100% 70%,
+    70% 100%, 30% 100%,
+    0% 70%, 0% 30%
+  );
+  box-shadow: 0 0 10px rgba(255,204,0,0.5);
+  animation: coinFlip 1.8s steps(4) infinite;
+  margin-top: var(--sp-1);
+}
+
+.quiz-coin-inner {
+  font-family: var(--font-primary);
+  font-size: 0.55rem;
+  color: #000;
+  line-height: 1;
+  pointer-events: none;
+}
+
+@keyframes coinFlip {
+  0%   { transform: scaleX(1);   background: var(--accent-warn); }
+  25%  { transform: scaleX(0.15); background: #997a00; }
+  50%  { transform: scaleX(1);   background: var(--accent-warn); }
+  75%  { transform: scaleX(0.15); background: #997a00; }
+  100% { transform: scaleX(1);   background: var(--accent-warn); }
+}
+
+@media (max-width: 600px) {
+  .quiz-archetypes { gap: var(--sp-2); }
+  .quiz-archetype-card { width: 80px; padding: var(--sp-2); }
+  .quiz-archetype-img { width: 52px; height: 52px; }
+  .quiz-archetype-center { width: 90px; transform: translateY(-6px); }
+  .quiz-unknown-wrap { width: 52px; height: 52px; }
+  .quiz-unknown { font-size: 1.4rem; }
 }
 </style>
 <script src="js/pixels-rain.js"></script>

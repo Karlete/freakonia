@@ -156,18 +156,33 @@
   position: absolute;
   top: 0; left: 0;
   width: 100%;
+  font-family: var(--font-primary);
+  font-size: inherit;
+  pointer-events: none;
 }
 
 .glitch::before {
   color: var(--accent-secondary);
-  animation: glitchX 3s infinite linear;
-  animation-delay: 0.1s;
+  clip-path: inset(0 0 100% 0);
+  animation: glitchSlice 5s infinite linear;
+  animation-delay: 0.2s;
 }
 
 .glitch::after {
   color: var(--accent-tertiary);
-  animation: glitchX 3s infinite linear;
-  animation-delay: 0.3s;
+  clip-path: inset(0 0 100% 0);
+  animation: glitchSlice 5s infinite linear;
+  animation-delay: 0.7s;
+}
+
+@keyframes glitchSlice {
+  0%,  89% { clip-path: inset(0 0 100% 0); transform: translateX(0); }
+  90%       { clip-path: inset(10% 0 60% 0); transform: translateX(-4px); }
+  92%       { clip-path: inset(50% 0 20% 0); transform: translateX(4px); }
+  94%       { clip-path: inset(75% 0 5%  0); transform: translateX(-3px); }
+  96%       { clip-path: inset(30% 0 55% 0); transform: translateX(3px); }
+  98%       { clip-path: inset(60% 0 25% 0); transform: translateX(-2px); }
+  100%      { clip-path: inset(0 0 100% 0); transform: translateX(0); }
 }
 
 /* ─── Scanline sweep overlay (individual element) ────────────────────────── */
@@ -259,3 +274,16 @@
 .stagger > *:nth-child(6)  { animation-delay: 0.25s; }
 .stagger > *:nth-child(7)  { animation-delay: 0.30s; }
 .stagger > *:nth-child(8)  { animation-delay: 0.35s; }
+
+@keyframes hubScanSweep {
+  0%   { top: -3px;   opacity: 0; }
+  10%  { opacity: 1; }
+  100% { top: calc(100% + 3px); opacity: 0.6; }
+}
+
+@keyframes hubIconBounce {
+  0%   { transform: translateY(-4px) scale(1.15); }
+  33%  { transform: translateY(-8px) scale(1.2);  }
+  66%  { transform: translateY(-2px) scale(1.1);  }
+  100% { transform: translateY(-4px) scale(1.15); }
+}
