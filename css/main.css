@@ -330,41 +330,6 @@ img  { max-width: 100%; height: auto; image-rendering: pixelated; display: block
   body { font-size: 16px; }
 }
 
-/* ─── Destino banner (index.html — ELIGE TU DESTINO) ─────────────────────── */
-.destino-banner-wrap {
-  width: 100%;
-  margin: 1.5rem 0 2.5rem 0;
-  border: 4px solid var(--accent-primary);
-  box-shadow: 0 0 16px var(--accent-primary),
-              0 0 32px rgba(0, 255, 65, 0.3);
-  overflow: hidden;
-  /* NO border-radius */
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.destino-banner-wrap:hover {
-  border-color: var(--accent-secondary);
-  box-shadow: 0 0 24px var(--accent-secondary),
-              0 0 48px rgba(255, 0, 255, 0.3);
-}
-
-.destino-banner-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.4s ease;
-  /* NO border-radius */
-}
-
-.destino-banner-wrap:hover .destino-banner-img {
-  transform: scale(1.01);
-}
-
-@media (max-width: 768px) {
-  .destino-banner-wrap {
-    margin: 1rem 0 1.5rem 0;
-  }
-}
 
 /* ── Index-specific styles ── */
 
