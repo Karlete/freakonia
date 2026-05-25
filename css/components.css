@@ -675,31 +675,17 @@
   transition: transform 0.12s steps(4);
 }
 
-/* Scan line — idle sequential sweep + hover override */
+/* Scan line sweep on hover */
 .nav-hub-item::after {
   content: '';
   position: absolute;
   left: 0; right: 0;
   height: 3px;
-  background: rgba(0, 255, 65, 0.65);
-  box-shadow: 0 0 6px rgba(0, 255, 65, 0.9);
-  top: -4px;
-  animation: hubIdleScan 5.5s linear infinite;
+  background: rgba(0, 255, 65, 0.18);
+  top: -3px;
+  animation: none;
   pointer-events: none;
 }
-
-/* Stagger: each card offset by 0.5s → full 11-card cycle = 5.5s */
-.nav-hub-item:nth-child(1)::after  { animation-delay:  0.0s; }
-.nav-hub-item:nth-child(2)::after  { animation-delay:  0.5s; }
-.nav-hub-item:nth-child(3)::after  { animation-delay:  1.0s; }
-.nav-hub-item:nth-child(4)::after  { animation-delay:  1.5s; }
-.nav-hub-item:nth-child(5)::after  { animation-delay:  2.0s; }
-.nav-hub-item:nth-child(6)::after  { animation-delay:  2.5s; }
-.nav-hub-item:nth-child(7)::after  { animation-delay:  3.0s; }
-.nav-hub-item:nth-child(8)::after  { animation-delay:  3.5s; }
-.nav-hub-item:nth-child(9)::after  { animation-delay:  4.0s; }
-.nav-hub-item:nth-child(10)::after { animation-delay:  4.5s; }
-.nav-hub-item:nth-child(11)::after { animation-delay:  5.0s; }
 
 .nav-hub-item:hover::before {
   transform: scaleX(1);

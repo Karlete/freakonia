@@ -288,11 +288,3 @@
   100% { transform: translateY(-4px) scale(1.15); }
 }
 
-/* Idle scan — green line sweeps each card top-to-bottom sequentially */
-@keyframes hubIdleScan {
-  0%   { top: -4px;           opacity: 0; }
-  2%   { top: -4px;           opacity: 1; }
-  8%   { top: calc(100% + 4px); opacity: 1; }
-  10%  { top: calc(100% + 4px); opacity: 0; }
-  100% { top: calc(100% + 4px); opacity: 0; }
-}
