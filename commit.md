@@ -2,6 +2,19 @@
 
 ---
 
+## Sesión 72 — 2026-05-25
+
+### feat(ux): 8-bit click sound + hub stagger + reveal polish
+
+**Modified files:**
+- `js/main.js`: `playClickSound()` añadida — `AudioContext` lazy + persistente, `resume()` si suspended. Clicks en enlaces internos: `preventDefault` + navegación a 85ms para completar el sonido antes del unload.
+- `css/animations.css`: stagger hub cards — 12 entradas (era 8), paso 0.08s (era 0.05s), delays 0.00s–0.88s.
+- `css/main.css`: `.reveal` — `translateY(24px)` (era 16px), `transition 0.5s` (era 0.4s). Eliminados `.destino-banner-wrap` / `.destino-banner-img`.
+- `index.html`: banner `freakonia_background.png` eliminado de sección `#hub`. Script tag `konami.js` eliminado.
+- `js/konami.js`: fichero eliminado.
+
+---
+
 ## Sesión 71 — 2026-05-24
 
 ### feat(ui): UI polish — glitch hero + hub hover + typewriter + quiz CTA + news cards

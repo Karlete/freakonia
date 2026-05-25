@@ -146,8 +146,41 @@ window.typeWriter = typeWriter;
   });
 })();
 
+// ─── 8-bit click sound (Web Audio API) ────────────────────────────────────
+let _audioCtx = null;
+function playClickSound() {
+  try {
+    if (!_audioCtx) _audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    if (_audioCtx.state === 'suspended') _audioCtx.resume();
+    const ctx = _audioCtx;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.type = 'square';
+    osc.frequency.setValueAtTime(880, ctx.currentTime);
+    osc.frequency.exponentialRampToValueAtTime(220, ctx.currentTime + 0.08);
+    gain.gain.setValueAtTime(0.12, ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.08);
+    osc.start(ctx.currentTime);
+    osc.stop(ctx.currentTime + 0.08);
+  } catch (e) {}
+}
+
 // ─── Pixel coin / star spawn on click ─────────────────────────────────────
 document.addEventListener('click', e => {
+  playClickSound();
+
+  // Delay internal-link navigation so the sound has time to play
+  const link = e.target.closest('a[href]');
+  if (link && link.target !== '_blank' && !e.ctrlKey && !e.metaKey) {
+    const href = link.getAttribute('href');
+    if (href && !href.startsWith('#') && !href.startsWith('javascript')) {
+      e.preventDefault();
+      setTimeout(() => { window.location.href = href; }, 85);
+    }
+  }
+
   const chars = ['★', '●', '♦', '+', '✦'];
   const colors = ['var(--accent-primary)', 'var(--accent-secondary)', 'var(--accent-tertiary)'];
   const span = document.createElement('span');

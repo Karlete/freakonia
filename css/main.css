@@ -309,8 +309,8 @@ img  { max-width: 100%; height: auto; image-rendering: pixelated; display: block
 /* ─── Reveal animation base ──────────────────────────────────────────────── */
 .reveal {
   opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .reveal.revealed {

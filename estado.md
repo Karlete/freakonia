@@ -1,6 +1,6 @@
 # estado.md — Project State Tracker
 
-Last updated: 2026-05-24 (sesión 71 — UI polish: glitch hero, hub hover, typewriter, quiz CTA, news cards)
+Last updated: 2026-05-25 (sesión 72 — hub polish + 8-bit click sound)
 
 ---
 
@@ -557,6 +557,15 @@ Si no hay fuente externa (`source: ''`), el elemento `.news-source` no se render
 ---
 
 ## Session Notes
+
+### 2026-05-25 — Session 72
+- **index.html — banner "ELIGE TU DESTINO" eliminado:** imagen `freakonia_background.png` y su wrapper `.destino-banner-wrap` quitados de la sección `#hub` — la sección muestra directamente las cards de navegación
+  - CSS `.destino-banner-wrap` / `.destino-banner-img` eliminados de `css/main.css`
+- **css/animations.css — stagger hub cards:** bloque `.stagger > *:nth-child` ampliado de 8 a 12 entradas, paso 0.08s (era 0.05s); delays: 0.00s → 0.88s
+- **css/main.css — reveal animation:** `.reveal` actualizado: `translateY(16px → 24px)`, `transition 0.4s → 0.5s`
+- **js/konami.js — eliminado:** easter egg Konami Code descartado; script tag eliminado de `index.html`
+- **js/main.js — 8-bit click sound:** función `playClickSound()` añadida con `AudioContext` persistente (lazy init + `resume()` si suspended); llamada como primera línea del listener de click global
+  - Fix enlaces: clicks en `<a href>` internos hacen `preventDefault` + navegan a los 85ms para que el sonido complete antes del unload
 
 ### 2026-03-01 — Session 20
 - Fix lluvia (sesión 20b): canvas movido de posición fixed a absolute dentro de .patron-rain-wrap

@@ -265,15 +265,19 @@
 .pixel-particles span:nth-child(11) { left: 88%; animation-duration: 3.6s; animation-delay: 0.4s; background: var(--accent-secondary); }
 .pixel-particles span:nth-child(12) { left: 93%; animation-duration: 4.8s; animation-delay: 2.2s; }
 
-/* ─── Animate staggered delays for grid children ─────────────────────────── */
-.stagger > *:nth-child(1)  { animation-delay: 0.0s; }
-.stagger > *:nth-child(2)  { animation-delay: 0.05s; }
-.stagger > *:nth-child(3)  { animation-delay: 0.10s; }
-.stagger > *:nth-child(4)  { animation-delay: 0.15s; }
-.stagger > *:nth-child(5)  { animation-delay: 0.20s; }
-.stagger > *:nth-child(6)  { animation-delay: 0.25s; }
-.stagger > *:nth-child(7)  { animation-delay: 0.30s; }
-.stagger > *:nth-child(8)  { animation-delay: 0.35s; }
+/* ─── Stagger delays for hub cards ──────────────────────────────────────── */
+.stagger > *:nth-child(1)  { animation-delay: 0.00s; }
+.stagger > *:nth-child(2)  { animation-delay: 0.08s; }
+.stagger > *:nth-child(3)  { animation-delay: 0.16s; }
+.stagger > *:nth-child(4)  { animation-delay: 0.24s; }
+.stagger > *:nth-child(5)  { animation-delay: 0.32s; }
+.stagger > *:nth-child(6)  { animation-delay: 0.40s; }
+.stagger > *:nth-child(7)  { animation-delay: 0.48s; }
+.stagger > *:nth-child(8)  { animation-delay: 0.56s; }
+.stagger > *:nth-child(9)  { animation-delay: 0.64s; }
+.stagger > *:nth-child(10) { animation-delay: 0.72s; }
+.stagger > *:nth-child(11) { animation-delay: 0.80s; }
+.stagger > *:nth-child(12) { animation-delay: 0.88s; }
 
 @keyframes hubScanSweep {
   0%   { top: -3px;   opacity: 0; }
