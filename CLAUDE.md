@@ -3,7 +3,7 @@
 ## INICIO DE SESIÓN
 
 Leer `estado.md` SOLO si la tarea implica construir o modificar páginas HTML/CSS/JS.
-Si el prompt menciona `task.md` o noticias: ignorar este paso e ir directamente al flujo correspondiente.
+Si el prompt menciona `task.md` o noticias: saltar directamente al FLUJO DE NOTICIAS.
 
 ## Project
 
@@ -13,65 +13,26 @@ Owner: Karlete | Stack: HTML5, CSS3, Vanilla JS | Host: GitHub Pages
 ## Design System
 
 - Primary font: "Press Start 2P" (Google Fonts)
-- Secondary font: "VT323" for body text (more readable at smaller sizes)
-- Color palette:
-  - Background: #0a0a0a (near black)
-  - Primary accent: #00ff41 (matrix green)
-  - Secondary accent: #ff00ff (magenta/neon)
-  - Tertiary: #00bfff (electric blue)
-  - Text: #e0e0e0
-- Effects: CRT scanlines overlay, pixel borders (4px solid),
-  box-shadow neon glow on hover
-- No smooth border-radius — everything squared or pixel-stepped
-
-## Pages & Sections
-
-### index.html — Home
-- Pixel art hero section with animated character sprite (CSS animated)
-- Navigation hub with pixel art icons per section
-- "Qué se cuece" slider — reads from ARTICLES_INDEX (js/articles-index.js)
-
-### gamedev.html — Game Dev
-- Grid of game cards: title, screenshot, description, itch.io link, genre tags
-- Section "In Development" vs "Released"
-- Currently working on: "Fallen Valkyrie" (2D Metroidvania in Unity)
-
-### gaming.html — Gaming History
-- Organized by console: Master System 2, Game Boy, SNES, PS1, PC
-
-### news.html — News listing
-- Renders cards from ARTICLES_INDEX, links to articles/[id].html
-- Filters by topic, search, pagination
-
-### articles/[id].html — Individual article pages (static HTML)
-- One file per article, fully self-contained
-
-### got.html, warhammer.html, magic.html, esports.html, nba.html, rol.html, gamedev.html, social.html, java.html, fallen-valkyrie.html
-
-## Development Notes
-- No external dependencies except Google Fonts
-- GitHub Pages compatible (no server-side code)
-- Nav is duplicated HTML across all pages (no build tool)
+- Secondary font: "VT323" for body text
+- Background: #0a0a0a | Primary accent: #00ff41 | Secondary: #ff00ff | Tertiary: #00bfff | Text: #e0e0e0
+- CRT scanlines overlay, pixel borders (4px solid), neon glow on hover
+- NO border-radius anywhere — everything squared
 
 ## Key Conventions
 - CSS custom properties for all colors/fonts
 - Pixel borders: `border: 4px solid var(--accent-primary)`
-- Hover effects: neon glow via box-shadow
-- No border-radius anywhere
+- Hover: neon glow via box-shadow
 
 ---
 
 ## FLUJO DE NOTICIAS — SISTEMA ESTÁTICO
 
-**Las noticias llegan completamente escritas en `task.md`.**
-**Añadir una noticia = DOS operaciones. Nada más.**
+**Las noticias llegan completamente escritas en `task.md`. NO leer ningún fichero existente.**
+**Añadir una noticia = DOS operaciones únicamente.**
 
-### OPERACIÓN 1 — Crear el fichero HTML del artículo
+### OPERACIÓN 1 — Crear `articles/[ID].html`
 
-Crear `articles/[id].html` copiando la estructura exacta de cualquier artículo existente.
-Para ver un ejemplo: `head -60 articles/noticia-lec-spring-2026-semana5.html`
-
-Estructura del fichero (adaptar datos del artículo):
+**NO leer ningún artículo existente como plantilla. Usar EXACTAMENTE esta plantilla:**
 
 ```html
 <!DOCTYPE html>
@@ -81,7 +42,7 @@ Estructura del fichero (adaptar datos del artículo):
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <meta name="description" content="[SUMMARY — max 155 chars]"/>
+  <meta name="description" content="[SUMMARY_155]"/>
   <title>[TITLE] — Freakonia</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -92,7 +53,52 @@ Estructura del fichero (adaptar datos del artículo):
   <link rel="stylesheet" href="../css/news.css"/>
 </head>
 <body>
-[NAV — copy exact nav from any existing article]
+<nav class="navbar" role="navigation" aria-label="Navegación principal">
+  <div class="container">
+    <a href="../index.html" class="nav-brand">⚔ FREAKONIA</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">▼ MENU</button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="../index.html" class="nav-link">🏠 Inicio</a></li>
+      <li class="nav-dropdown">
+        <span class="nav-link nav-dropdown-toggle">🎮 GameDev ▾</span>
+        <ul class="nav-submenu">
+          <li><a href="../gamedev.html">🎮 GameDev</a></li>
+          <li><a href="../fallen-valkyrie.html">📓 FV Devlog</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <span class="nav-link nav-dropdown-toggle">🕹 Gaming ▾</span>
+        <ul class="nav-submenu">
+          <li><a href="../gaming.html">🕹 Gaming</a></li>
+          <li><a href="../esports.html">🏆 Esports</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <span class="nav-link nav-dropdown-toggle">🐉 Fantasía ▾</span>
+        <ul class="nav-submenu">
+          <li><a href="../got.html">🐉 GoT</a></li>
+          <li><a href="../warhammer.html">⚙ Warhammer</a></li>
+          <li><a href="../magic.html">✨ MtG</a></li>
+          <li><a href="../rol.html">🎲 Rol</a></li>
+        </ul>
+      </li>
+      <li><a href="../nba.html" class="nav-link">🏀 NBA</a></li>
+      <li class="nav-dropdown">
+        <span class="nav-link nav-dropdown-toggle">📡 Comunidad ▾</span>
+        <ul class="nav-submenu">
+          <li><a href="../java.html">☕ Java</a></li>
+          <li><a href="../social.html">📡 Social</a></li>
+        </ul>
+      </li>
+      <li><a href="../news.html" class="nav-link">📰 News</a></li>
+      <li>
+        <button class="lang-toggle" id="lang-toggle" aria-label="Cambiar idioma" title="Switch language / Cambiar idioma">
+          🌐 EN
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
 <div class="page-header">
   <div class="container">
     <p class="page-header-pre"><a href="../news.html" style="color:inherit;text-decoration:none;">← NOTICIAS</a></p>
@@ -101,43 +107,73 @@ Estructura del fichero (adaptar datos del artículo):
 </div>
 <main>
   <div class="container" style="max-width:860px;">
-    <article style="margin:var(--sp-6) 0;">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--sp-4);flex-wrap:wrap;gap:var(--sp-2);">
+    <article style="margin:var(--sp-6,2.5rem) 0;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--sp-4,1.5rem);flex-wrap:wrap;gap:0.5rem;">
         <span class="news-card-cat news-cat--[TOPIC]" style="border-color:[ACCENT];color:[ACCENT];">[EMOJI] [BADGELABEL]</span>
         <span class="news-card-date">📅 [DD · MES · YYYY]</span>
       </div>
-      <img src="../[IMG]" alt="[TITLE]" style="width:100%;display:block;margin-bottom:var(--sp-5);border:4px solid [ACCENT];">
-      <div style="font-family:var(--font-secondary);font-size:1.25rem;line-height:1.8;color:var(--text-muted);margin-bottom:var(--sp-5);padding:var(--sp-4);border-left:4px solid [ACCENT];">
+      <img src="../[IMG]" alt="[TITLE]" style="width:100%;display:block;margin-bottom:1.5rem;border:4px solid [ACCENT];">
+      <div style="font-family:var(--font-secondary);font-size:1.25rem;line-height:1.8;color:var(--text-muted,#aaa);margin-bottom:1.5rem;padding:1rem;border-left:4px solid [ACCENT];">
         [SUMMARY]
       </div>
       <div style="font-family:var(--font-secondary);font-size:1.15rem;line-height:1.9;">
-        <p class="article-paragraph">[PARAGRAPH 1]</p>
-        <p class="article-paragraph">[PARAGRAPH 2]</p>
-        <p class="article-paragraph">[PARAGRAPH 3]</p>
-        <p class="article-paragraph">[PARAGRAPH 4]</p>
+        <p class="article-paragraph">[P1]</p>
+        <p class="article-paragraph">[P2]</p>
+        <p class="article-paragraph">[P3]</p>
+        <p class="article-paragraph">[P4]</p>
       </div>
-      <div style="margin-top:var(--sp-6);padding-top:var(--sp-4);border-top:2px solid var(--border-color);">
-        <div class="news-card-tags" style="margin-bottom:var(--sp-4);">
-          <span class="tag">[TAG1]</span><span class="tag">[TAG2]</span>
-        </div>
-        <div style="display:flex;gap:var(--sp-3);flex-wrap:wrap;">
-          <a href="[URL]" target="_blank" rel="noopener" class="btn">>> FUENTE: [SOURCE]</a>
-          <a href="../[PAGE]" class="btn btn-pink">>> IR A [PAGELABEL]</a>
-          <a href="../news.html" class="btn btn-small" style="border-color:var(--text-dim);color:var(--text-dim);">← TODAS LAS NOTICIAS</a>
+      <div style="margin-top:2rem;padding-top:1rem;border-top:2px solid #333;">
+        <div class="news-card-tags" style="margin-bottom:1rem;">[TAGS_HTML]</div>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+          [SOURCE_BTN]
+          <a href="../[PAGE]" class="btn btn-pink">&gt;&gt; IR A [PAGELABEL]</a>
+          <a href="../news.html" class="btn btn-small" style="border-color:#555;color:#555;">← TODAS LAS NOTICIAS</a>
         </div>
       </div>
     </article>
   </div>
 </main>
-[FOOTER — copy exact footer from any existing article]
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="../gamedev.html">GameDev</a></li>
+      <li><a href="../gaming.html">Gaming</a></li>
+      <li><a href="../esports.html">Esports</a></li>
+      <li><a href="../got.html">GoT</a></li>
+      <li><a href="../warhammer.html">Warhammer</a></li>
+      <li><a href="../magic.html">MtG</a></li>
+      <li><a href="../rol.html">Rol</a></li>
+      <li><a href="../nba.html">NBA</a></li>
+      <li><a href="../java.html">Java</a></li>
+      <li><a href="../social.html">Social</a></li>
+      <li><a href="../news.html">News</a></li>
+    </ul>
+    <p>⚔ FREAKONIA — KARLETE</p>
+    <p style="color:#444;">HECHO CON AMOR PIXELADO Y DEMASIADAS BEBIDAS ENERGÉTICAS</p>
+    <p style="color:#333;">◄ INSERT COIN ►</p>
+    <div class="footer-legal">
+      <div class="pixel-divider"></div>
+      <p class="footer-copyright">© 2025 FREAKONIA — KARLETE. ALL RIGHTS RESERVED.</p>
+      <p class="footer-trademark">FREAKONIA™ IS A REGISTERED PERSONAL BRAND. ALL CONTENT, DESIGNS, GAME CONCEPTS AND ORIGINAL TEXTS ON THIS SITE ARE THE EXCLUSIVE PROPERTY OF THEIR AUTHOR.</p>
+      <p class="footer-notice">⚠ THIS SITE CONTAINS STRONG OPINIONS ABOUT VIDEO GAMES, FANTASY LORE AND BASKETBALL. READER DISCRETION IS ADVISED. NO GOBLINS WERE HARMED IN THE MAKING OF THIS WEBSITE.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/articles-index.js"></script>
+<script src="../js/article-page.js"></script>
 <script src="../js/main.js"></script>
 </body>
 </html>
 ```
 
-### OPERACIÓN 2 — Añadir una línea al índice
+**Notas de la plantilla:**
+- `[DD · MES · YYYY]` → formato `26 · MAY · 2026` (MES en español en mayúsculas: ENE FEB MAR ABR MAY JUN JUL AGO SEP OCT NOV DIC)
+- `[TAGS_HTML]` → cada tag como `<span class="tag">TAGNAME</span>`
+- `[SOURCE_BTN]` → si hay URL: `<a href="[URL]" target="_blank" rel="noopener" class="btn">&gt;&gt; FUENTE: [SOURCE]</a>` — si no hay URL, omitir
+- Si el artículo tiene menos de 4 párrafos, usar solo los que haya
 
-In `js/articles-index.js`, insert ONE line at the very TOP of the `ARTICLES_INDEX` array:
+### OPERACIÓN 2 — Añadir UNA línea al TOP de `js/articles-index.js`
 
 ```js
 { id:'[ID]', topic:'[TOPIC]', category:'[TOPIC]', emoji:'[EMOJI]', badgeLabel:'[BADGELABEL]', title:'[TITLE]', summary:'[SUMMARY]', date:'[DD/MM/YYYY]', img:'assets/img/news/[IMG]', url:'[URL]', page:'[PAGE]', pageLabel:'[PAGELABEL]', accent:'[ACCENT]', source:'[SOURCE]', tags:['TAG1','TAG2'] },
@@ -145,13 +181,14 @@ In `js/articles-index.js`, insert ONE line at the very TOP of the `ARTICLES_INDE
 
 ### PROHIBIDO
 
-- Leer `js/articles-index.js` entero antes de insertar — sólo abrir y añadir al top.
-- Tocar `news.html`, `index.html`, `js/news.js`, cualquier `.css`.
-- Editar artículos existentes en `articles/`.
+- Leer cualquier artículo existente en `articles/` — la plantilla ya está arriba
+- Leer `js/articles-index.js` entero — solo abrir y añadir al top
+- Tocar `news.html`, `index.html`, `js/news.js`, cualquier `.css`
+- Usar PowerShell para escribir ficheros — Node.js o escritura directa únicamente
 
 ### Quick reference — topics
 
-| topic     | accent   | page           | pageLabel | badgeLabel | emoji | fallback img         |
+| topic     | accent   | page           | pageLabel | badgeLabel | emoji | img fallback         |
 |-----------|----------|----------------|-----------|------------|-------|----------------------|
 | got       | #cc2200  | got.html       | GoT       | GOT        | 🐉    | got_generic.webp     |
 | esports   | #C89B3C  | esports.html   | Esports   | ESPORTS    | 🏆    | esports_generic.webp |
@@ -164,7 +201,7 @@ In `js/articles-index.js`, insert ONE line at the very TOP of the `ARTICLES_INDE
 
 ---
 
-## REGLA GENERAL — PARA TAREAS DE DESARROLLO WEB
+## REGLA GENERAL — TAREAS DE DESARROLLO WEB
 
 Si la tarea implica construir o modificar HTML/CSS/JS (NO noticias):
 leer el código existente equivalente antes de escribir nada nuevo.
@@ -174,17 +211,14 @@ No inferir. No inventar. Copiar el patrón existente y aplicar los datos nuevos.
 
 ## FLUJO DE FREAKOCHAPAS
 
-Una Freakochapa es un artículo de opinión de Karlete. Sigue el mismo flujo
-que una noticia estándar (crear HTML + añadir línea al índice) con estos campos distintos:
+Una Freakochapa es artículo de opinión de Karlete. Mismo flujo que noticias (HTML + línea en index) con estos campos distintos en articles-index.js:
 
-| Campo           | Valor correcto                   |
+| Campo           | Valor                            |
 |-----------------|----------------------------------|
 | `badgeLabel`    | `'FREAKOCHAPA'` siempre          |
 | `isFreakochapa` | `true`                           |
 | `freakcoin`     | `{ score: N, verdict: '...' }`   |
 | `source`        | `'freakonia.com'`                |
-| `url`           | `''` (vacío)                     |
-
-En el HTML del artículo, omitir el botón de fuente si `url` está vacío.
+| `url`           | `''` (vacío — omitir SOURCE_BTN) |
 
 At the end of each session your code will be revised by ChatGPT and Grok.

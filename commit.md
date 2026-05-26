@@ -2,6 +2,30 @@
 
 ---
 
+## Sesión 73 — 2026-05-26
+
+### feat(news): batch 109–113 + NBA replace + OG banner URL update
+
+**New files:**
+- `articles/noticia-tow-dark-elves-silencio-gw-2026.html` — Warhammer (109): The Old World silencio GW, debate Dark Elves segundo semestre 2026. Source: belloflostsouls.net.
+- `articles/noticia-mtg-marvel-reality-fracture-junio-2026.html` — MTG (110): Marvel Super Heroes 26/06, Reality Fracture set What If? universos alternativos. Source: wargamer.com.
+- `articles/noticia-gamedev-six-one-showcase-sgf-2026.html` — GameDev (111): Six One Indie Showcase 2026, Summer Game Fest Dolby Theatre 5-8/06. Source: gameinformer.com.
+- `articles/noticia-nba-finales-2026-knicks-finals-thunder-spurs.html` — NBA (112 reemplazada): Knicks a Finales por primera vez desde 1999 (barren Cavs 4-0), Thunder vs Spurs 2-2 Game 5 esta noche. Source: espn.com.
+- `articles/noticia-lec-g2-reverse-sweep-koi-msi-2026.html` — Esports (113): G2 remonta 0-2 ante Movistar KOI, Caps decimosexto torneo internacional, G2 a la final y al MSI. Source: insider-gaming.com.
+
+**Deleted files:**
+- `articles/noticia-nba-finales-conferencia-2026.html` — reemplazado por artículo actualizado (Knicks ya en Finales, Thunder vs Spurs).
+
+**Modified files:**
+- `js/articles-index.js`: 5 líneas nuevas al TOP (esports → nba → gamedev → magic → warhammer). Línea `noticia-nba-finales-conferencia-2026` eliminada y sustituida por `noticia-nba-finales-2026-knicks-finals-thunder-spurs` también al TOP.
+- Todos los `.html` raíz + `article.html` (inline JS): `og_image.jpg` → `freakonia_banner.jpg` en todas las referencias a `https://freakonia.com/assets/img/og_image.jpg`. `article.html:530` — fallback JS `assets/img/og_image.jpg` → `assets/img/freakonia_banner.jpg`.
+- `estado.md`: last_update → 2026-05-26, artículos 120 → 125, NEWS_TRACKER actualizado, IDs recientes actualizados.
+- `commit.md`: esta entrada.
+
+**NEWS_TRACKER:** last_update → 2026-05-26 · next_available → got · gaming · rol
+
+---
+
 ## Sesión 72 — 2026-05-25
 
 ### feat(ux): 8-bit click sound + hub stagger + reveal polish
