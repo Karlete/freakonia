@@ -553,64 +553,22 @@
   <section class="section" id="hub">
     <div class="container">
       <h2 class="section-title center" data-i18n="hub.title">ELIGE TU DESTINO</h2>
+    </div>
 
-      <div class="nav-hub stagger">
-        <a href="gamedev.html" class="nav-hub-item reveal">
-          <span class="nav-hub-icon">🎮</span>
-          <span class="nav-hub-label">GAME DEV</span>
-          <span class="nav-hub-desc" data-i18n="hub.gamedev">Proyectos indie, Fallen Valkyrie y devlogs</span>
-        </a>
-        <a href="gaming.html" class="nav-hub-item reveal">
-          <span class="nav-hub-icon">🕹</span>
-          <span class="nav-hub-label">GAMING</span>
-          <span class="nav-hub-desc" data-i18n="hub.gaming">Historial de consolas desde SMS2 hasta PC</span>
-        </a>
-        <a href="esports.html" class="nav-hub-item reveal">
-          <span class="nav-hub-icon">🏆</span>
-          <span class="nav-hub-label">ESPORTS</span>
-          <span class="nav-hub-desc" data-i18n="hub.esports">LoL competitivo, DBD y noticias</span>
-        </a>
-        <a href="got.html" class="nav-hub-item reveal">
-          <span class="nav-hub-icon">🐉</span>
-          <span class="nav-hub-label">GAME OF THRONES</span>
-          <span class="nav-hub-desc" data-i18n="hub.got">Libros ASOIAF, serie y teorías</span>
-        </a>
-        <a href="warhammer.html" class="nav-hub-item reveal">
-          <span class="nav-hub-icon">⚙</span>
-          <span class="nav-hub-label">WARHAMMER</span>
-          <span class="nav-hub-desc" data-i18n="hub.warhammer">40K, Age of Sigmar y galería de pintura</span>
-        </a>
-        <a href="magic.html" class="nav-hub-item reveal">
-          <span class="nav-hub-icon">✨</span>
-          <span class="nav-hub-label">MAGIC: THE GATHERING</span>
-          <span class="nav-hub-desc" data-i18n="hub.magic">Mazos, cartas favoritas y colecciones</span>
-        </a>
-        <a href="rol.html" class="nav-hub-item reveal">
-          <span class="nav-hub-icon">🎲</span>
-          <span class="nav-hub-label" data-i18n="hub.rolLabel">ROL</span>
-          <span class="nav-hub-desc" data-i18n="hub.rol">LOTR, Stormbringer, Cthulhu y más</span>
-        </a>
-        <a href="nba.html" class="nav-hub-item reveal">
-          <span class="nav-hub-icon">🏀</span>
-          <span class="nav-hub-label">NBA</span>
-          <span class="nav-hub-desc">Kobe, LeBron, fantasy y la Taberna del Boxscore</span>
-        </a>
-        <a href="java.html" class="nav-hub-item reveal">
-          <span class="nav-hub-icon">☕</span>
-          <span class="nav-hub-label">JAVA</span>
-          <span class="nav-hub-desc" data-i18n="hub.java">Desarrollo profesional, JavaDevBible y más</span>
-        </a>
-        <a href="social.html" class="nav-hub-item reveal">
-          <span class="nav-hub-icon">📡</span>
-          <span class="nav-hub-label">SOCIAL HUB</span>
-          <span class="nav-hub-desc" data-i18n="hub.social">Feed de YouTube y Twitter/X</span>
-        </a>
-        <a href="news.html" class="nav-hub-item reveal">
-          <span class="nav-hub-icon">📰</span>
-          <span class="nav-hub-label">NEWS</span>
-          <span class="nav-hub-desc">Noticias, opinión y actualidad friki</span>
-        </a>
+    <div class="hub-universe-wrap">
+      <canvas id="hub-canvas" aria-label="Mapa interactivo del universo Freakonia"></canvas>
+    </div>
+    <p class="hub-universe-hint">HOVER PARA EXPLORAR · CLICK PARA ENTRAR</p>
+
+    <div id="hub-panel" class="hub-panel" role="complementary" aria-label="Información del sector">
+      <button id="hub-panel-close" class="hub-panel-close" aria-label="Cerrar panel">✕</button>
+      <div class="hub-panel-header">
+        <span class="hub-panel-emoji" id="hub-panel-emoji"></span>
+        <h2 class="hub-panel-title" id="hub-panel-title"></h2>
       </div>
+      <p class="hub-panel-tagline" id="hub-panel-tagline"></p>
+      <div class="hub-panel-news" id="hub-panel-news"></div>
+      <a class="btn hub-panel-btn" id="hub-panel-btn" href="#">▶ ENTRAR</a>
     </div>
   </section>
 
@@ -1435,6 +1393,124 @@
   .quiz-unknown-wrap { width: 52px; height: 52px; }
   .quiz-unknown { font-size: 1.4rem; }
 }
+
+/* ── Hub Universe Map ─────────────────────────────────────────────────── */
+.hub-universe-wrap {
+  position: relative;
+  width: 100%;
+  height: 56vh;
+  min-height: 380px;
+  max-height: 600px;
+  overflow: hidden;
+  margin-top: var(--sp-4);
+  background: #0a0a0a;
+}
+#hub-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+}
+.hub-universe-hint {
+  font-family: var(--font-primary);
+  font-size: 0.38rem;
+  color: #444444;
+  text-align: center;
+  margin: var(--sp-3) 0 0;
+  animation: blink 3s infinite;
+  pointer-events: none;
+}
+.hub-panel {
+  position: fixed;
+  top: 80px;
+  right: -380px;
+  width: 320px;
+  max-height: calc(100vh - 110px);
+  overflow-y: auto;
+  background: #111111;
+  border: 4px solid #00ff41;
+  z-index: 200;
+  padding: 20px;
+  transition: right 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  scrollbar-width: thin;
+  scrollbar-color: #00ff41 #111111;
+}
+.hub-panel.visible { right: 20px; }
+.hub-panel-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: 2px solid #888888;
+  color: #888888;
+  font-family: var(--font-primary);
+  font-size: 8px;
+  padding: 4px 8px;
+  cursor: pointer;
+  line-height: 1;
+  transition: border-color 0.15s, color 0.15s;
+}
+.hub-panel-close:hover { border-color: #ffffff; color: #ffffff; }
+.hub-panel-header { display: flex; align-items: center; gap: 12px; padding-right: 24px; }
+.hub-panel-emoji { font-size: 2rem; line-height: 1; flex-shrink: 0; }
+.hub-panel-title { font-family: var(--font-primary); font-size: 0.55rem; color: #ffffff; line-height: 1.5; margin: 0; }
+.hub-panel-tagline {
+  font-family: var(--font-secondary);
+  font-size: 20px;
+  color: #888888;
+  line-height: 1.3;
+  border-left: 3px solid #00ff41;
+  padding-left: 12px;
+  margin: 0;
+}
+.hub-panel-news { display: flex; flex-direction: column; gap: 8px; }
+.hub-news-label {
+  font-family: var(--font-primary);
+  font-size: 0.4rem;
+  color: #555555;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+.hub-news-card {
+  background: #161616;
+  border: 2px solid #2a2a2a;
+  padding: 10px;
+  cursor: pointer;
+  transition: border-color 0.15s;
+  text-decoration: none;
+  display: block;
+}
+.hub-news-card:hover { border-color: #555555; }
+.hub-news-card-title {
+  font-family: var(--font-primary);
+  font-size: 0.38rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+  display: block;
+  margin-bottom: 6px;
+}
+.hub-news-card-date { font-family: var(--font-secondary); font-size: 16px; color: #555555; }
+.hub-panel-btn { font-size: 0.5rem; text-align: center; text-decoration: none; display: block; margin-top: 4px; }
+
+@media (max-width: 768px) {
+  .hub-panel {
+    top: auto;
+    right: 0 !important;
+    bottom: -460px;
+    width: 100%;
+    max-height: 55vh;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    transition: bottom 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  .hub-panel.visible { bottom: 0; }
+  .hub-universe-wrap { height: 50vh; min-height: 320px; }
+  .hub-universe-hint { display: none; }
+}
 </style>
 <script src="js/pixels-rain.js"></script>
 <script>
@@ -1503,6 +1579,253 @@
     ' EVENTO' + (candidates.length > 1 ? 'S' : '') + ' ESTA SEMANA</span>' +
     '</div>';
 
+})();
+</script>
+
+<!-- ── Hub Universe Map ──────────────────────────────────────────────── -->
+<script>
+(function () {
+  "use strict";
+
+  var NODES = [
+    { id: "gamedev",   label: "GAMEDEV",              emoji: "🎮", href: "gamedev.html",   topic: "gamedev",   color: "#00ff41", tagline: "Fallen Valkyrie en construcción. Unity y café.",       xRatio: 0.30, yRatio: 0.20, baseRadius: 28 },
+    { id: "gaming",    label: "GAMING",               emoji: "🕹", href: "gaming.html",    topic: "gaming",    color: "#ff00ff", tagline: "Desde 1993. Memoria pixelada y músculo arcade.",      xRatio: 0.20, yRatio: 0.45, baseRadius: 26 },
+    { id: "esports",   label: "ESPORTS",              emoji: "🏆", href: "esports.html",   topic: "esports",   color: "#00bfff", tagline: "14 temporadas de LoL. Más espectador que jugador.",  xRatio: 0.27, yRatio: 0.71, baseRadius: 22 },
+    { id: "got",       label: "GAME OF THRONES",      emoji: "🐉", href: "got.html",       topic: "got",       color: "#cc2200", tagline: "ASOIAF S1-S6. El Norte recuerda. GRRM, escribe.",   xRatio: 0.67, yRatio: 0.20, baseRadius: 26 },
+    { id: "warhammer", label: "WARHAMMER",            emoji: "⚙",  href: "warhammer.html", topic: "warhammer", color: "#ffcc00", tagline: "Bretonia, 5ª edición, 1996. El Viejo Mundo vive.", xRatio: 0.78, yRatio: 0.43, baseRadius: 24 },
+    { id: "magic",     label: "MAGIC: THE GATHERING", emoji: "✨", href: "magic.html",     topic: "magic",     color: "#cc44ff", tagline: "Ice Age a Tempest. Clan MDK. Torneos de viernes.",   xRatio: 0.71, yRatio: 0.66, baseRadius: 22 },
+    { id: "rol",       label: "ROL",                  emoji: "🎲", href: "rol.html",       topic: "rol",       color: "#ff8800", tagline: "JOC Internacional. MERP, Stormbringer, Cthulhu.",   xRatio: 0.59, yRatio: 0.79, baseRadius: 20 },
+    { id: "nba",       label: "NBA",                  emoji: "🏀", href: "nba.html",       topic: "nba",       color: "#ff6600", tagline: "25 años. Kobe. La Taberna del Boxscore.",            xRatio: 0.38, yRatio: 0.79, baseRadius: 22 },
+    { id: "java",      label: "JAVA",                 emoji: "☕", href: "java.html",      topic: "java",      color: "#1eb8d0", tagline: "Dev profesional. JavaDevBible en construcción.",      xRatio: 0.50, yRatio: 0.88, baseRadius: 20 },
+    { id: "freakonia", label: "FREAKONIA",            emoji: "⚔",  href: "index.html",     topic: null,        color: "#00ff41", tagline: "El reino friki de Karlete. Sin filtros desde 1993.", xRatio: 0.50, yRatio: 0.47, baseRadius: 36 },
+  ];
+
+  var LINES = [
+    ["gamedev","gaming"],["gaming","esports"],["got","warhammer"],
+    ["warhammer","magic"],["magic","rol"],["esports","nba"],
+    ["nba","java"],["java","rol"],["gamedev","got"],
+    ["freakonia","gamedev"],["freakonia","gaming"],["freakonia","got"],
+    ["freakonia","nba"],["freakonia","java"],["freakonia","rol"],
+  ];
+
+  var canvas, ctx, stars = [], shootingStars = [], time = 0, hoveredNode = null;
+
+  function computePositions() {
+    var w = canvas.width, h = canvas.height;
+    NODES.forEach(function (n) { n.x = n.xRatio * w; n.y = n.yRatio * h; });
+  }
+
+  function initParticles() {
+    NODES.forEach(function (n) {
+      n.particles = [
+        { angle: Math.random() * Math.PI * 2, orbitRadius: n.baseRadius + 14, speed: 0.012 + Math.random() * 0.01, size: 2 },
+        { angle: Math.random() * Math.PI * 2, orbitRadius: n.baseRadius + 22, speed: 0.007 + Math.random() * 0.008, size: 2 },
+      ];
+      n.pulseRing = { progress: Math.random(), speed: 0.004 + Math.random() * 0.003 };
+    });
+  }
+
+  function initStars() {
+    stars = [];
+    for (var i = 0; i < 250; i++) {
+      var bright = Math.random() < 0.05;
+      stars.push({
+        x: Math.random() * canvas.width, y: Math.random() * canvas.height,
+        size: bright ? 2.5 + Math.random() * 0.5 : 0.5 + Math.random() * 1.5,
+        baseAlpha: bright ? 0.9 + Math.random() * 0.1 : 0.3 + Math.random() * 0.7,
+        phase: Math.random() * Math.PI * 2, speed: 0.001 + Math.random() * 0.003,
+      });
+    }
+  }
+
+  function drawStars() {
+    stars.forEach(function (s) {
+      var a = s.baseAlpha * (0.5 + 0.5 * Math.sin(time * s.speed * 60 + s.phase));
+      ctx.fillStyle = "rgba(255,255,255," + a + ")";
+      ctx.fillRect(Math.floor(s.x), Math.floor(s.y), Math.ceil(s.size), Math.ceil(s.size));
+    });
+  }
+
+  function updateShootingStars() {
+    if (Math.random() < 0.0007) {
+      shootingStars.push({ x: Math.random() * canvas.width * 0.7, y: Math.random() * canvas.height * 0.5, vx: 4 + Math.random() * 3, vy: 1.5 + Math.random() * 2, length: 60 + Math.random() * 80, life: 1 });
+    }
+    shootingStars = shootingStars.filter(function (s) {
+      s.x += s.vx; s.y += s.vy; s.life -= 0.018;
+      if (s.life <= 0) return false;
+      ctx.save(); ctx.globalAlpha = s.life * 0.8; ctx.strokeStyle = "#fff"; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(s.x, s.y); ctx.lineTo(s.x - s.vx * (s.length / 5), s.y - s.vy * (s.length / 5)); ctx.stroke();
+      ctx.globalAlpha = s.life; ctx.fillStyle = "#fff"; ctx.fillRect(Math.floor(s.x), Math.floor(s.y), 2, 2);
+      ctx.restore(); return true;
+    });
+  }
+
+  function drawNebulae() {
+    [
+      { cx: canvas.width * 0.23, cy: canvas.height * 0.46, r: canvas.width * 0.16, inner: "rgba(255,0,255,0.06)",   outer: "rgba(255,0,255,0)" },
+      { cx: canvas.width * 0.72, cy: canvas.height * 0.44, r: canvas.width * 0.18, inner: "rgba(255,204,0,0.05)",   outer: "rgba(204,34,0,0)" },
+      { cx: canvas.width * 0.49, cy: canvas.height * 0.82, r: canvas.width * 0.14, inner: "rgba(255,102,0,0.04)",   outer: "rgba(0,191,255,0)" },
+      { cx: canvas.width * 0.50, cy: canvas.height * 0.47, r: canvas.width * 0.10, inner: "rgba(0,255,65,0.05)",    outer: "rgba(0,255,65,0)" },
+    ].forEach(function (b) {
+      var g = ctx.createRadialGradient(b.cx, b.cy, 0, b.cx, b.cy, b.r);
+      g.addColorStop(0, b.inner); g.addColorStop(1, b.outer);
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(b.cx, b.cy, b.r, 0, Math.PI * 2); ctx.fill();
+    });
+  }
+
+  function drawLines() {
+    ctx.save();
+    LINES.forEach(function (pair, idx) {
+      var from = null, to = null;
+      NODES.forEach(function (n) { if (n.id === pair[0]) from = n; if (n.id === pair[1]) to = n; });
+      if (!from || !to) return;
+      ctx.beginPath(); ctx.setLineDash([]); ctx.strokeStyle = from.color + "18"; ctx.lineWidth = 4;
+      ctx.moveTo(from.x, from.y); ctx.lineTo(to.x, to.y); ctx.stroke();
+      ctx.beginPath(); ctx.setLineDash([6,5]); ctx.lineDashOffset = -(time * 14);
+      ctx.strokeStyle = "rgba(0,255,65,0.20)"; ctx.lineWidth = 1.5;
+      ctx.moveTo(from.x, from.y); ctx.lineTo(to.x, to.y); ctx.stroke();
+      ctx.setLineDash([]);
+      var t = ((time * 0.3 + idx * 0.17) % 1);
+      ctx.globalAlpha = 0.6; ctx.fillStyle = "#fff";
+      ctx.fillRect(Math.floor(from.x + (to.x - from.x) * t) - 1, Math.floor(from.y + (to.y - from.y) * t) - 1, 3, 3);
+      ctx.globalAlpha = 1;
+    });
+    ctx.setLineDash([]); ctx.restore();
+  }
+
+  function drawNode(node, r, isHovered, breathe) {
+    var isCenter = node.id === "freakonia";
+    ctx.save();
+    ctx.shadowColor = node.color;
+    ctx.shadowBlur = isCenter ? (isHovered ? 60 : 40) : (isHovered ? 45 : 18);
+    ctx.beginPath(); ctx.arc(node.x, node.y, r, 0, Math.PI * 2);
+    ctx.fillStyle = node.color + "22"; ctx.fill();
+    ctx.beginPath(); ctx.arc(node.x, node.y, r, 0, Math.PI * 2);
+    ctx.strokeStyle = node.color; ctx.lineWidth = isHovered ? 3 : 2; ctx.stroke();
+    if (isCenter) {
+      ctx.beginPath(); ctx.arc(node.x, node.y, node.baseRadius + 8 + breathe, 0, Math.PI * 2);
+      ctx.strokeStyle = "#00ff4133"; ctx.lineWidth = 1; ctx.setLineDash([]); ctx.stroke();
+    }
+    ctx.shadowBlur = 0;
+    if (isHovered) {
+      ctx.beginPath(); ctx.arc(node.x, node.y, r + 18, 0, Math.PI * 2);
+      ctx.strokeStyle = node.color + "55"; ctx.lineWidth = 1; ctx.setLineDash([3,3]); ctx.stroke(); ctx.setLineDash([]);
+      var scanY = node.y - r + ((time * 60) % (r * 2));
+      if (scanY >= node.y - r && scanY <= node.y + r) {
+        ctx.beginPath(); ctx.strokeStyle = node.color + "40"; ctx.lineWidth = 1;
+        ctx.moveTo(node.x - r, scanY); ctx.lineTo(node.x + r, scanY); ctx.stroke();
+      }
+      ctx.font = '6px "Press Start 2P",monospace'; ctx.fillStyle = node.color + "aa";
+      ctx.textAlign = "center"; ctx.textBaseline = "bottom";
+      ctx.fillText("[" + Math.floor(node.xRatio * 100) + ":" + Math.floor(node.yRatio * 100) + "]", node.x, node.y - r - 16);
+    }
+    ctx.font = Math.floor(r * 0.75) + "px serif"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+    ctx.globalAlpha = 1; ctx.fillStyle = "#fff"; ctx.fillText(node.emoji, node.x, node.y);
+    ctx.font = '7px "Press Start 2P",monospace'; ctx.textAlign = "center"; ctx.textBaseline = "top";
+    ctx.fillStyle = isHovered ? node.color : "#666";
+    ctx.shadowColor = isHovered ? node.color : "transparent"; ctx.shadowBlur = isHovered ? 8 : 0;
+    var lbl = node.label.length > 12 ? node.label.slice(0, 12) + "…" : node.label;
+    ctx.fillText(lbl, node.x, node.y + r + 10);
+    ctx.shadowBlur = 0; ctx.restore();
+  }
+
+  function animate() {
+    requestAnimationFrame(animate);
+    time += 0.016;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawStars(); updateShootingStars(); drawNebulae(); drawLines();
+    NODES.forEach(function (node, i) {
+      var isHov = hoveredNode && hoveredNode.id === node.id;
+      var breatheAmp = node.id === "freakonia" ? 6 : 3;
+      var breathe = Math.sin(time * 0.8 + i * 1.3) * breatheAmp;
+      var r = node.baseRadius + breathe + (isHov ? 10 : 0);
+      node.pulseRing.progress = (node.pulseRing.progress + node.pulseRing.speed) % 1;
+      var pp = node.pulseRing.progress;
+      ctx.save(); ctx.beginPath(); ctx.arc(node.x, node.y, r + pp * 35, 0, Math.PI * 2);
+      ctx.strokeStyle = node.color; ctx.globalAlpha = (1 - pp) * 0.5; ctx.lineWidth = 1; ctx.stroke(); ctx.restore();
+      node.particles.forEach(function (part) {
+        part.angle += part.speed;
+        ctx.fillStyle = node.color; ctx.globalAlpha = 0.55;
+        ctx.fillRect(Math.floor(node.x + Math.cos(part.angle) * (r + part.orbitRadius - node.baseRadius)), Math.floor(node.y + Math.sin(part.angle) * (r + part.orbitRadius - node.baseRadius)), part.size, part.size);
+        ctx.globalAlpha = 1;
+      });
+      drawNode(node, r, isHov, breathe);
+    });
+  }
+
+  function handleMove(mx, my) {
+    var found = null;
+    NODES.forEach(function (n) { if (Math.hypot(mx - n.x, my - n.y) < n.baseRadius + 20) found = n; });
+    if (found !== hoveredNode) {
+      hoveredNode = found;
+      canvas.style.cursor = found ? "pointer" : "default";
+      if (found) showPanel(found);
+    }
+  }
+
+  function showPanel(node) {
+    var panel = document.getElementById("hub-panel");
+    panel.style.borderColor = node.color;
+    document.getElementById("hub-panel-emoji").textContent = node.emoji;
+    var titleEl = document.getElementById("hub-panel-title");
+    titleEl.textContent = node.label; titleEl.style.color = node.color;
+    var tagEl = document.getElementById("hub-panel-tagline");
+    tagEl.textContent = node.tagline; tagEl.style.borderLeftColor = node.color; tagEl.style.color = "#aaaaaa";
+    var newsEl = document.getElementById("hub-panel-news");
+    newsEl.innerHTML = "";
+    var lbl = document.createElement("p"); lbl.className = "hub-news-label"; lbl.textContent = "— ÚLTIMAS NOTICIAS —"; newsEl.appendChild(lbl);
+    if (typeof ARTICLES_INDEX !== "undefined" && node.topic) {
+      var items = ARTICLES_INDEX.filter(function (a) { return a.topic === node.topic; }).slice(0, 2);
+      if (!items.length) {
+        var empty = document.createElement("p"); empty.style.cssText = "font-family:VT323,monospace;font-size:18px;color:#444;"; empty.textContent = "Sin noticias recientes."; newsEl.appendChild(empty);
+      } else {
+        items.forEach(function (a) {
+          var card = document.createElement("a"); card.className = "hub-news-card"; card.href = "articles/" + a.id + ".html";
+          card.innerHTML = '<span class="hub-news-card-title">' + a.title + '</span><span class="hub-news-card-date">' + a.date + '</span>';
+          newsEl.appendChild(card);
+        });
+      }
+    } else {
+      var center = document.createElement("p"); center.style.cssText = "font-family:VT323,monospace;font-size:18px;color:#444;"; center.textContent = "El corazón del reino."; newsEl.appendChild(center);
+    }
+    var btn = document.getElementById("hub-panel-btn");
+    btn.href = node.href; btn.textContent = "▶ ENTRAR A " + node.label;
+    btn.style.background = node.color; btn.style.color = "#000"; btn.style.borderColor = node.color;
+    panel.classList.add("visible");
+  }
+
+  function resizeCanvas() {
+    var wrap = canvas.parentElement;
+    canvas.width  = wrap.offsetWidth  || 800;
+    canvas.height = wrap.offsetHeight || 480;
+    computePositions();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    canvas = document.getElementById("hub-canvas");
+    if (!canvas) return;
+    ctx = canvas.getContext("2d");
+    resizeCanvas(); initParticles(); initStars(); animate();
+
+    canvas.addEventListener("mousemove", function (e) {
+      var r = canvas.getBoundingClientRect(); handleMove(e.clientX - r.left, e.clientY - r.top);
+    });
+    canvas.addEventListener("click", function () { if (hoveredNode) window.location.href = hoveredNode.href; });
+    canvas.addEventListener("touchstart", function (e) {
+      e.preventDefault(); var t = e.touches[0]; var r = canvas.getBoundingClientRect(); handleMove(t.clientX - r.left, t.clientY - r.top);
+    }, { passive: false });
+    canvas.addEventListener("touchend", function (e) {
+      e.preventDefault(); if (hoveredNode) window.location.href = hoveredNode.href;
+    }, { passive: false });
+
+    document.getElementById("hub-panel-close").addEventListener("click", function () {
+      document.getElementById("hub-panel").classList.remove("visible");
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") document.getElementById("hub-panel").classList.remove("visible");
+    });
+    window.addEventListener("resize", resizeCanvas);
+  });
 })();
 </script>
 </body>
