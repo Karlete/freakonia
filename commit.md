@@ -2,6 +2,29 @@
 
 ---
 
+## Sesión 74 — 2026-06-02
+
+### feat(news): batch 119–123 + freakochapa fixes + PS1 callout in gaming
+
+**New files:**
+- `articles/noticia-lec-spring-giantx-elimina-vitality-kc-barre-2026.html` — Esports (119): GIANTX tumba a Vitality 3-0, KC barre a GIANTX, Gran Final G2 vs KC/MKOI el 7/06. Source: insider-gaming.com.
+- `articles/noticia-nba-finales-2026-spurs-knicks-1999-reencuentro.html` — NBA (120): Finales NBA 2026 Spurs vs Knicks, reencuentro 27 años después, Wembanyama lideró la remontada en 7 partidos. Source: yahoo.com.
+- `articles/noticia-gamedev-summer-game-fest-week-2026-playstation-xbox.html` — GameDev (121): Semana del SGF — PlayStation State of Play hoy, SGF Live el 5/06, Xbox Showcase el 7/06. Source: gamesradar.com.
+- `articles/noticia-mtg-final-fantasy-prerelease-junio-2026.html` — Magic (122): MTG x Final Fantasy prerrelease 6-8/06, lanzamiento 13/06. Jenova, Knights of the Round, Triple Triad, bonus sheet. Source: mtggoldfish.com.
+- `articles/noticia-tow-summer-roadmap-whfrp5e-rumores-2026.html` — Warhammer (123): The Old World verano 2026, Dogs of War como rumor más sólido, WHFRP 5E en listas de más esperados. Source: belloflostsouls.net.
+
+**Modified files:**
+- `js/articles-index.js`: 5 líneas nuevas al TOP (warhammer → magic → gamedev → nba → esports).
+- `gaming.html`: enlace freakochapa Master System II corregido (`article.html?id=...` → `articles/freakochapa-master-system-ii-10-juegarrales.html`). Callout freakochapa PS1 añadido en sección PlayStation 1 (reemplaza placeholder "MÁS JUEGOS POR AÑADIR"), con imágenes `metalgear.jpg` + `tekken3.jpg`, border `var(--accent-warn)`.
+- `articles/freakochapa-master-system-ii-10-juegarrales.html`: 10 rutas de imágenes corregidas (`assets/img/mastersystem2/` → `../assets/img/mastersystem2/`).
+- `articles/freakochapa-ps1-biblioteca-historia-2026.html`: 14 rutas de imágenes inline corregidas (`assets/img/PS1/` → `../assets/img/PS1/`).
+- `estado.md`: last_update → 2026-06-02, artículos 125 → 135, NEWS_TRACKER actualizado, IDs recientes actualizados.
+- `commit.md`: esta entrada.
+
+**NEWS_TRACKER:** last_update → 2026-06-02 · next_available → got · gaming · rol
+
+---
+
 ## Sesión 73 — 2026-05-26
 
 ### feat(news): batch 109–113 + NBA replace + OG banner URL update
