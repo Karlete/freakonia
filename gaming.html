@@ -606,17 +606,73 @@
 
       <!-- Announcement -->
       <div class="ffvii-announce reveal">
-        <div class="ffvii-announce-label">▶ PRÓXIMAMENTE EN @SANPRIETO</div>
-        <div class="ffvii-announce-title">SERIE COMPLETA — GAMEPLAY DE FFVII CON MODS GRÁFICOS + RETRADUCCIÓN ESPAÑOLA</div>
-        <p>Este fin de semana sube la serie completa del gameplay de Final Fantasy VII: tres vídeos de casi 9 horas cada uno, con los mods gráficos activados y la retraducción española que arregla todos los errores de la localización original. El FFVII que siempre mereció ser jugado así.</p>
+        <span class="ffvii-announce-label">▶ PRÓXIMAMENTE EN @SANPRIETO</span>
+        <h3 class="ffvii-announce-title">SERIE COMPLETA — GAMEPLAY DE FFVII CON MODS GRÁFICOS + RETRADUCCIÓN ESPAÑOLA</h3>
+        <p style="font-family:'VT323',monospace;font-size:1.15rem;line-height:1.6;margin-bottom:1rem;">
+          Este fin de semana sube la serie completa del gameplay de Final Fantasy VII: tres vídeos de casi 9 horas cada uno, con los mods gráficos activados y la retraducción española que arregla todos los errores de la localización original. El FFVII que siempre mereció ser jugado así.
+        </p>
         <div class="ffvii-announce-meta">
           <span>3 VÍDEOS</span>
           <span>~9 H CADA UNO</span>
           <span>MODS GRÁFICOS</span>
           <span>RETRADUCCIÓN ES</span>
         </div>
-        <a href="https://www.youtube.com/@sanprieto" class="btn btn-pink" target="_blank" rel="noopener noreferrer">🔔 SUSCRÍBETE PARA NO PERDÉRTELO</a>
+
+        <!-- PARTE 1 — YA DISPONIBLE -->
+        <div style="margin-top:1.25rem;border:2px solid #ffcc00;padding:1rem;background:rgba(255,204,0,0.07);">
+          <p style="font-family:'Press Start 2P',monospace;font-size:0.6rem;color:#ffcc00;margin-bottom:0.6rem;">
+            ▶ PARTE 1 — YA DISPONIBLE (04/06/2026 · 19H ES)
+          </p>
+          <div class="ffvii-video-thumb" style="position:relative;cursor:pointer;border:2px solid #ffcc00;" id="ffvii-p1-thumb" onclick="toggleFFVIIP1()">
+            <img src="assets/img/Miniatura1_FFVII.jpg" alt="Gameplay FFVII Parte 1 — Sephiroth" style="width:100%;display:block;image-rendering:pixelated;" />
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Press Start 2P',monospace;font-size:0.65rem;color:#ffcc00;background:rgba(0,0,0,0.82);padding:0.5rem 0.9rem;border:2px solid #ffcc00;pointer-events:none;">▶ REPRODUCIR AQUÍ</div>
+          </div>
+          <div id="ffvii-p1-embed" style="display:none;margin-top:0.5rem;aspect-ratio:16/9;">
+            <iframe
+              id="ffvii-p1-iframe"
+              src=""
+              data-src="https://www.youtube.com/embed/r5vfnsv_e_A?autoplay=1"
+              width="100%" height="100%"
+              style="border:none;display:block;"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <a href="https://youtu.be/r5vfnsv_e_A" target="_blank" rel="noopener noreferrer"
+             style="display:inline-block;margin-top:0.6rem;font-family:'Press Start 2P',monospace;font-size:0.55rem;color:#ffcc00;border:2px solid #ffcc00;padding:0.4rem 0.8rem;text-decoration:none;">
+            🎬 VER EN YOUTUBE
+          </a>
+        </div>
+
+        <!-- PARTES 2 Y 3 — PRÓXIMAMENTE -->
+        <div style="margin-top:0.75rem;border:2px solid #444;padding:0.75rem;background:rgba(255,255,255,0.03);">
+          <p style="font-family:'Press Start 2P',monospace;font-size:0.55rem;color:#888;margin:0;">
+            ⏳ PARTE 2 — PRÓXIMAMENTE · PARTE 3 — PRÓXIMAMENTE
+          </p>
+        </div>
+
+        <a href="https://www.youtube.com/@sanprieto?sub_confirmation=1" target="_blank" rel="noopener noreferrer"
+           class="btn btn-subscribe" style="margin-top:1rem;">
+          🔔 SUSCRÍBETE PARA NO PERDERTE LOS PRÓXIMOS EPISODIOS
+        </a>
       </div>
+
+      <script>
+      function toggleFFVIIP1() {
+        const embed = document.getElementById('ffvii-p1-embed');
+        const iframe = document.getElementById('ffvii-p1-iframe');
+        const thumb = document.getElementById('ffvii-p1-thumb');
+        if (embed.style.display === 'none') {
+          embed.style.display = 'block';
+          iframe.src = iframe.dataset.src;
+          thumb.style.display = 'none';
+        } else {
+          embed.style.display = 'none';
+          iframe.src = '';
+          thumb.style.display = 'block';
+        }
+      }
+      </script>
 
     </div>
   </section>
