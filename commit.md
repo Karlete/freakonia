@@ -2,6 +2,26 @@
 
 ---
 
+## Sesión 75 — 2026-06-09
+
+### feat(news): batch 124–128 — esports/nba/gaming/got/rol
+
+**New files:**
+- `articles/noticia-lec-g2-campeon-spring-2026-backttoback-nasus.html` — Esports (124): G2 bicampeón LEC Spring 2026, 3-2 ante KC, Skewmond MVP con Nasus jungle (primero en 9 años). Source: win.gg.
+- `articles/noticia-nba-finales-2026-knicks-21-wemby-responde-g3.html` — NBA (125): Knicks 2-1 tras el Game 3 — Wembanyama gana su primer partido en Finales, Spurs 115-111 en el MSG. Source: nba.com.
+- `articles/noticia-sgf-2026-ffvii-revelation-re-veronica-god-of-war.html` — Gaming (126): Summer Game Fest 2026 — FFVII Revelation cierra la trilogía, RE Code Veronica, God of War Laufey, Alien Isolation 2. Source: keengamer.com.
+- `articles/noticia-hotd-t3-premiere-londons-taormina-72-minutos-2026.html` — GoT (127): HotD T3 premiere en Londres hoy, cap. 1 de 72 min en Taormina, estreno global el 21 de junio. Source: wikiofthrones.com.
+- `articles/noticia-rol-dnd-gencon-2026-arcana-unleashed-13-omens.html` — Rol (128): D&D toma Gen Con 2026 con edificio de 6 plantas, Season of Magic con Arcana Unleashed, Paizo desvela 13 Omens. Source: enworld.org.
+
+**Modified files:**
+- `js/articles-index.js`: 5 líneas nuevas al TOP (rol → got → gaming → nba → esports).
+- `estado.md`: last_update → 2026-06-09, artículos 135 → 140, NEWS_TRACKER actualizado, IDs recientes actualizados.
+- `commit.md`: esta entrada.
+
+**NEWS_TRACKER:** last_update → 2026-06-09 · next_available → warhammer · magic · gamedev
+
+---
+
 ## Sesión 74 — 2026-06-02
 
 ### feat(news): batch 119–123 + freakochapa fixes + PS1 callout in gaming

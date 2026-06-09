@@ -1,6 +1,6 @@
 # estado.md — Project State Tracker
 
-Last updated: 2026-06-02 (sesión 74 — batch 119–123 + fixes freakochapas + callout PS1 en gaming)
+Last updated: 2026-06-09 (sesión 75 — batch 124–128)
 
 ---
 
@@ -113,7 +113,7 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 
 Migrado en sesión 70 (2026-05-21). Ya **no existe** `js/news-data.js` ni `article.html?id=` ni los ficheros mensuales `js/news-2026-XX.js`. El nuevo flujo es:
 
-- `js/articles-index.js` — array `ARTICLES_INDEX` con metadatos de los **135 artículos** (sin el campo `full`). Un objeto por línea. **Añadir nuevos artículos al TOP del array.**
+- `js/articles-index.js` — array `ARTICLES_INDEX` con metadatos de los **140 artículos** (sin el campo `full`). Un objeto por línea. **Añadir nuevos artículos al TOP del array.**
 - `articles/[id].html` — un fichero HTML estático por artículo (120 ficheros). Auto-contenidos: nav, header, body, footer, links. Rutas relativas a CSS/JS con `../`.
 - `news.html` — `renderNews()` lee `ARTICLES_INDEX`, ordena por fecha desc, y cada card enlaza a `articles/[id].html`. El botón es `>> LEER ARTÍCULO`. Filtros por topic, search y paginación intactos.
 - `index.html` — slider "¿Qué se cuece?" lee `ARTICLES_INDEX`; cada card enlaza a `articles/[id].html`.
@@ -127,20 +127,21 @@ Migrado en sesión 70 (2026-05-21). Ya **no existe** `js/news-data.js` ni `artic
 
 ### NEWS_TRACKER — temas usados
 ```json
-{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba"],"last_update":"2026-06-02"}
+{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba"],"last_update":"2026-06-09"}
 ```
-**Próximos temas disponibles:** `got` · `gaming` · `rol`
+**Próximos temas disponibles:** `warhammer` · `magic` · `gamedev`
 
 ### IDs de artículos actuales (para evitar duplicados)
 **Fuente de verdad:** `js/articles-index.js` (un objeto por línea, IDs visibles a simple vista) o `ls articles/*.html`. La tabla detallada que vivía aquí (120 entradas) ha sido retirada por mantenimiento. IDs recientes (batch 104–108, 21/05/2026) para referencia rápida:
 | # | id | topic | fecha |
 |---|---|---|---|
+| 128 | `noticia-rol-dnd-gencon-2026-arcana-unleashed-13-omens` | rol | 09/06/2026 |
+| 127 | `noticia-hotd-t3-premiere-londons-taormina-72-minutos-2026` | got | 09/06/2026 |
+| 126 | `noticia-sgf-2026-ffvii-revelation-re-veronica-god-of-war` | gaming | 09/06/2026 |
+| 125 | `noticia-nba-finales-2026-knicks-21-wemby-responde-g3` | nba | 09/06/2026 |
+| 124 | `noticia-lec-g2-campeon-spring-2026-backttoback-nasus` | esports | 09/06/2026 |
 | 123 | `noticia-tow-summer-roadmap-whfrp5e-rumores-2026` | warhammer | 02/06/2026 |
-| 122 | `noticia-mtg-final-fantasy-prerelease-junio-2026` | magic | 02/06/2026 |
-| 121 | `noticia-gamedev-summer-game-fest-week-2026-playstation-xbox` | gamedev | 02/06/2026 |
-| 120 | `noticia-nba-finales-2026-spurs-knicks-1999-reencuentro` | nba | 02/06/2026 |
 | 119 | `noticia-lec-spring-giantx-elimina-vitality-kc-barre-2026` | esports | 02/06/2026 |
-| 113 | `noticia-lec-g2-reverse-sweep-koi-msi-2026` | esports | 26/05/2026 |
 _…107 entradas más (112 a 1) retiradas. Para la lista completa actualizada ver `js/articles-index.js`._
 
 ### Páginas HTML — estado actual
