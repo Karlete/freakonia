@@ -2,6 +2,27 @@
 
 ---
 
+## Sesión 76 — 2026-06-16
+
+### feat(news+gaming): batch 129–133 + FFVII Parte 2-3 video blocks
+
+**New files:**
+- `articles/noticia-msi-2026-equipos-clasificados-daejeon.html` — Esports (129): MSI 2026 en Daejeon: G2, LYON, BLG, HLE y T1 entre los 11 clasificados — el torneo más esperado del año arranca en julio. Source: hotspawn.com.
+- `articles/noticia-nba-knicks-campeones-2026-brunson-45-53-anos.html` — NBA (130): ¡Los Knicks son CAMPEONES! Brunson anota 45 en el Game 5 y Nueva York rompe 53 años de sequía. Source: espn.com.
+- `articles/noticia-gothic-remake-500k-primera-semana-2026.html` — Gaming (131): Gothic 1 Remake supera las 500.000 copias vendidas en su primera semana — el regreso a La Colonia es un éxito rotundo. Source: thqnordic.com.
+- `articles/noticia-hotd-t3-taormina-reacciones-batalla-gulfo-5dias.html` — GoT (132): HotD T3: 5.000 personas alucinan en Taormina con la Batalla del Golfo — "el episodio más loco de la TV jamás hecho" — estreno en 5 días. Source: variety.com.
+- `articles/noticia-mtg-final-fantasy-lanzamiento-reacciones-2026.html` — Magic (133): MTG x Final Fantasy ya está aquí: primeras reacciones del set, las cartas que rompen formatos y por qué Cloud está en todas partes. Source: mtggoldfish.com.
+
+**Modified files:**
+- `js/articles-index.js`: 5 líneas nuevas al TOP (magic → got → gaming → nba → esports).
+- `gaming.html`: FFVII Parte 2-3 blocks — reemplazado el div placeholder "⏳ PARTE 2 — PRÓXIMAMENTE · PARTE 3 — PRÓXIMAMENTE" con dos bloques de vídeo completos (Parte 2: `tN3ox-OuOE8`, Parte 3: `DQYwzVETQc0`), cada uno con thumbnail interactivo, embed inline, y botón "VER EN YOUTUBE". Added `toggleFFVIIP2()` y `toggleFFVIIP3()` functions al script block existente del FFVII.
+- `estado.md`: last_update → 2026-06-16, artículos 120 → 125, NEWS_TRACKER actualizado, IDs recientes actualizados.
+- `commit.md`: esta entrada.
+
+**NEWS_TRACKER:** last_update → 2026-06-16 · next_available → warhammer · gamedev · rol
+
+---
+
 ## Sesión 75 — 2026-06-09
 
 ### feat(news): batch 124–128 — esports/nba/gaming/got/rol
