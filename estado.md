@@ -1,6 +1,6 @@
 # estado.md — Project State Tracker
 
-Last updated: 2026-06-16 (sesión 76 — batch 129–133 + gaming.html FFVII Parte 2-3)
+Last updated: 2026-06-22 (sesión 77 — batch 134–138 + articles index updated)
 
 ---
 
@@ -127,22 +127,23 @@ Migrado en sesión 70 (2026-05-21). Ya **no existe** `js/news-data.js` ni `artic
 
 ### NEWS_TRACKER — temas usados
 ```json
-{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba"],"last_update":"2026-06-16"}
+{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba"],"last_update":"2026-06-22"}
 ```
-**Próximos temas disponibles:** `warhammer` · `gamedev` · `rol`
+**Próximos temas disponibles:** `nba` · `gaming` · `magic`
 
 ### IDs de artículos actuales (para evitar duplicados)
-**Fuente de verdad:** `js/articles-index.js` (un objeto por línea, IDs visibles a simple vista) o `ls articles/*.html`. La tabla detallada que vivía aquí (125 entradas) ha sido retirada por mantenimiento. IDs recientes (batch 129–133, 16/06/2026) para referencia rápida:
+**Fuente de verdad:** `js/articles-index.js` (un objeto por línea, IDs visibles a simple vista) o `ls articles/*.html`. La tabla detallada que vivía aquí (130 entradas) ha sido retirada por mantenimiento. IDs recientes (batch 134–138, 22/06/2026) para referencia rápida:
 | # | id | topic | fecha |
 |---|---|---|---|
+| 138 | `noticia-rol-justice-league-rpg-gencon-dnd-arcana-junio-2026` | rol | 22/06/2026 |
+| 137 | `noticia-gamedev-xbox-showcase-gears-fable-fatal-frame-2026` | gamedev | 22/06/2026 |
+| 136 | `noticia-warhammer-40k-11ed-armageddon-old-world-faq-junio-2026` | warhammer | 22/06/2026 |
+| 135 | `noticia-msi-2026-daejeon-preview-g2-t1-blg-arranca-28-junio` | esports | 22/06/2026 |
+| 134 | `noticia-hotd-t3-ep1-estreno-reacciones-jace-gulfo-2026` | got | 22/06/2026 |
 | 133 | `noticia-mtg-final-fantasy-lanzamiento-reacciones-2026` | magic | 16/06/2026 |
 | 132 | `noticia-hotd-t3-taormina-reacciones-batalla-gulfo-5dias` | got | 16/06/2026 |
 | 131 | `noticia-gothic-remake-500k-primera-semana-2026` | gaming | 16/06/2026 |
-| 130 | `noticia-nba-knicks-campeones-2026-brunson-45-53-anos` | nba | 16/06/2026 |
-| 129 | `noticia-msi-2026-equipos-clasificados-daejeon` | esports | 16/06/2026 |
-| 128 | `noticia-rol-dnd-gencon-2026-arcana-unleashed-13-omens` | rol | 09/06/2026 |
-| 127 | `noticia-hotd-t3-premiere-londons-taormina-72-minutos-2026` | got | 09/06/2026 |
-_…118 entradas más (126 a 1) retiradas. Para la lista completa actualizada ver `js/articles-index.js`._
+_…121 entradas más (130 a 1) retiradas. Para la lista completa actualizada ver `js/articles-index.js`._
 
 ### Páginas HTML — estado actual
 | Página | Estado | Notas |

@@ -2,6 +2,26 @@
 
 ---
 
+## Sesión 77 — 2026-06-22
+
+### feat(news): batch 134–138 — got/esports/warhammer/gamedev/rol
+
+**New files:**
+- `articles/noticia-hotd-t3-ep1-estreno-reacciones-jace-gulfo-2026.html` — GoT (134): HotD T3 Ep.1: la Batalla del Golfo destruye a la audiencia — Jace muere y el beso Aemond-Alicent paraliza las redes. Source: variety.com.
+- `articles/noticia-msi-2026-daejeon-preview-g2-t1-blg-arranca-28-junio.html` — Esports (135): MSI 2026 arranca el 28 de junio en Daejeon: guía completa, el cuadro sin Gen.G y G2 vs BLG como duelo soñado. Source: escharts.com.
+- `articles/noticia-warhammer-40k-11ed-armageddon-old-world-faq-junio-2026.html` — Warhammer (136): Warhammer doble noticia: 40K lanza la 11ª Edición con Armageddon y The Old World espera el FAQ más grande desde 1.5. Source: spikeybits.com.
+- `articles/noticia-gamedev-xbox-showcase-gears-fable-fatal-frame-2026.html` — GameDev (137): Xbox Showcase junio: Gears of War E-Day para 2026, Fable con fecha y Fatal Frame II Crimson Butterfly llega a PC. Source: gamespot.com.
+- `articles/noticia-rol-justice-league-rpg-gencon-dnd-arcana-junio-2026.html` — Rol (138): El RPG oficial de la Justice League llega a Gamefound en julio, D&D arrasa en Gen Con y Arcana Unleashed a la vuelta de la esquina. Source: enworld.org.
+
+**Modified files:**
+- `js/articles-index.js`: 5 líneas nuevas al TOP (rol → gamedev → warhammer → esports → got).
+- `estado.md`: last_update → 2026-06-22, artículos 130 → 135, NEWS_TRACKER actualizado, IDs recientes actualizados.
+- `commit.md`: esta entrada.
+
+**NEWS_TRACKER:** last_update → 2026-06-22 · next_available → nba · gaming · magic
+
+---
+
 ## Sesión 76 — 2026-06-16
 
 ### feat(news+gaming): batch 129–133 + FFVII Parte 2-3 video blocks
