@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -144,6 +144,83 @@
   font-size: 0.4rem;
   color: var(--text-dim);
   margin-left: auto;
+}
+
+/* ── Sobre mí condensado ── */
+.sobre-mi-tagline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+.tagline-pill {
+  font-family: var(--font-primary);
+  font-size: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  border: 2px solid;
+  letter-spacing: 1px;
+}
+.tagline-pill--green { color: var(--accent-primary);   border-color: var(--accent-primary); }
+.tagline-pill--gold  { color: var(--accent-warn);      border-color: var(--accent-warn); }
+.tagline-pill--pink  { color: var(--accent-secondary); border-color: var(--accent-secondary); }
+.tagline-pill--blue  { color: var(--accent-tertiary);  border-color: var(--accent-tertiary); }
+
+.sobre-mi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+.sobre-mi-text p {
+  font-family: var(--font-secondary);
+  font-size: 22px;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+@media (max-width: 700px) {
+  .sobre-mi-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Social hero cards ── */
+.social-hero-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.social-hero-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  border: 4px solid;
+  text-decoration: none;
+  background: var(--bg-card);
+  transition: transform 0.1s steps(2), box-shadow 0.1s;
+}
+.social-hero-card--yt { border-color: #ff0000; }
+.social-hero-card--yt:hover { box-shadow: 0 0 20px rgba(255,0,0,0.35); transform: translate(-2px,-2px); }
+.social-hero-card--x  { border-color: #ffffff; }
+.social-hero-card--x:hover  { box-shadow: 0 0 20px rgba(255,255,255,0.2); transform: translate(-2px,-2px); }
+.social-hero-icon {
+  font-family: var(--font-primary);
+  font-size: 1.8rem;
+  line-height: 1;
+}
+.social-hero-card--yt .social-hero-icon { color: #ff0000; }
+.social-hero-card--x  .social-hero-icon { color: #ffffff; }
+.social-hero-body { display: flex; flex-direction: column; gap: 0.25rem; flex: 1; }
+.social-hero-platform { font-family: var(--font-primary); font-size: 0.55rem; letter-spacing: 2px; }
+.social-hero-card--yt .social-hero-platform { color: #ff0000; }
+.social-hero-card--x  .social-hero-platform { color: #ffffff; }
+.social-hero-handle { font-family: var(--font-secondary); font-size: 22px; color: var(--text-dim); }
+.social-hero-desc { font-family: var(--font-secondary); font-size: 19px; color: var(--text); line-height: 1.5; margin-top: 0.25rem; }
+.social-hero-cta { font-family: var(--font-primary); font-size: 0.42rem; letter-spacing: 1px; margin-top: 0.5rem; align-self: flex-start; }
+.social-hero-card--yt .social-hero-cta { color: #ff0000; }
+.social-hero-card--x  .social-hero-cta { color: #ffffff; }
+@media (max-width: 700px) {
+  .social-hero-row { grid-template-columns: 1fr; }
 }
   </style>
 </head>
@@ -297,6 +374,144 @@
     </div>
   </div>
 </section>
+</div><!-- end .patron-rain-wrap -->
+
+<main>
+
+  <!-- ─── Sobre mí — condensado ──────────────────────────────────────── -->
+  <section class="section" id="sobre-mi-condensado">
+    <div class="container">
+      <p class="hero-pre" style="margin-bottom:0.5rem;">// QUIÉN HAY DETRÁS DEL REINO</p>
+      <h2 class="section-title">SOBRE MÍ</h2>
+      <div class="pixel-divider"></div>
+
+      <p class="sobre-mi-tagline">
+        <span class="tagline-pill tagline-pill--green">🕹 NOSTALGIA GAMING</span>
+        <span class="tagline-pill tagline-pill--gold">⚔ DESDE 1993</span>
+        <span class="tagline-pill tagline-pill--pink">💾 FFVII FOREVER</span>
+        <span class="tagline-pill tagline-pill--blue">🎮 INDIE DEV</span>
+      </p>
+
+      <div class="sobre-mi-grid">
+        <div class="sobre-mi-text reveal">
+          <p>
+            Soy <strong>Karlete</strong> — desarrollador Java de día, indie dev de noche
+            y friki acérrimo las 24 horas. Esto es <strong>Freakonia</strong>: mi rincón
+            personal donde confluyen la nostalgia gamer de los 90s-2000s, el fandom
+            (GoT, Warhammer, MtG, Rol), el baloncesto y el código.
+            Sin filtros, sin patrocinios, solo amor puro al friquismo.
+          </p>
+          <div class="hero-actions" style="margin-top:var(--sp-4);">
+            <a href="#about" class="btn btn-small">📖 LEER MÁS</a>
+            <a href="gaming.html" class="btn btn-small btn-pink">🎮 MI HISTORIAL</a>
+          </div>
+        </div>
+        <div class="sobre-mi-stats reveal">
+          <div class="stats-row">
+            <div class="stat-box">
+              <span class="stat-value">1993</span>
+              <span class="stat-label">PRIMER JUEGO</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-value">5+</span>
+              <span class="stat-label">Consolas</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-value">∞</span>
+              <span class="stat-label">Horas Épicas</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-value">1</span>
+              <span class="stat-label">Juego en Dev</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ─── Navigation Hub ────────────────────────────────────────────────── -->
+  <section class="section" id="hub">
+    <div class="container">
+      <h2 class="section-title center" data-i18n="hub.title">ELIGE TU DESTINO</h2>
+    </div>
+
+    <div class="hub-universe-wrap">
+      <canvas id="hub-canvas" aria-label="Mapa interactivo del universo Freakonia"></canvas>
+    </div>
+    <p class="hub-universe-hint">HOVER PARA EXPLORAR · CLICK PARA ENTRAR</p>
+
+    <div id="hub-panel" class="hub-panel" role="complementary" aria-label="Información del sector">
+      <button id="hub-panel-close" class="hub-panel-close" aria-label="Cerrar panel">✕</button>
+      <div class="hub-panel-header">
+        <span class="hub-panel-emoji" id="hub-panel-emoji"></span>
+        <h2 class="hub-panel-title" id="hub-panel-title"></h2>
+      </div>
+      <p class="hub-panel-tagline" id="hub-panel-tagline"></p>
+      <div class="hub-panel-news" id="hub-panel-news"></div>
+      <a class="btn hub-panel-btn" id="hub-panel-btn" href="#">▶ ENTRAR</a>
+    </div>
+  </section>
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+  <!-- ─── Canal & Redes — destacado ──────────────────────────────────── -->
+  <section class="section" id="social-destacado">
+    <div class="container">
+      <h2 class="section-title center">📡 SÍGUEME EN LA RED</h2>
+      <p style="font-family:var(--font-secondary);font-size:20px;color:var(--text);text-align:center;margin-bottom:2rem;">
+        Donde publico gameplay, análisis y todo lo que sale del reino.
+      </p>
+      <div class="pixel-divider"></div>
+
+      <!-- Fila principal: YouTube + X grandes -->
+      <div class="social-hero-row">
+        <a href="https://www.youtube.com/@sanprieto" target="_blank" rel="noopener noreferrer"
+           class="social-hero-card social-hero-card--yt">
+          <span class="social-hero-icon">▶</span>
+          <div class="social-hero-body">
+            <span class="social-hero-platform">YOUTUBE</span>
+            <span class="social-hero-handle">@sanprieto</span>
+            <span class="social-hero-desc">Gaming retro, gameplays y devlogs de Fallen Valkyrie. Suscríbete al canal.</span>
+          </div>
+          <span class="social-hero-cta">▶ VER CANAL</span>
+        </a>
+        <a href="https://x.com/SanprietoG" target="_blank" rel="noopener noreferrer"
+           class="social-hero-card social-hero-card--x">
+          <span class="social-hero-icon">✖</span>
+          <div class="social-hero-body">
+            <span class="social-hero-platform">X / TWITTER</span>
+            <span class="social-hero-handle">@SanprietoG</span>
+            <span class="social-hero-desc">Opiniones sin filtro, hilos frikis y actualizaciones de Freakonia en tiempo real.</span>
+          </div>
+          <span class="social-hero-cta">✖ SEGUIR</span>
+        </a>
+      </div>
+
+      <!-- Fila secundaria -->
+      <div class="social-quick-grid stagger" style="margin-top:1.5rem;">
+        <a href="https://sanprieto.itch.io/" target="_blank" rel="noopener noreferrer"
+           class="social-quick-card reveal" style="--card-color: #fa5c5c">
+          <span class="social-card-icon">🕹</span>
+          <span class="social-card-name">ITCH.IO</span>
+          <span class="social-card-handle">sanprieto.itch.io</span>
+        </a>
+        <a href="https://www.twitch.tv/sanprieto" target="_blank" rel="noopener noreferrer"
+           class="social-quick-card reveal" style="--card-color: #9147ff">
+          <span class="social-card-icon">📺</span>
+          <span class="social-card-name">TWITCH</span>
+          <span class="social-card-handle">twitch.tv/sanprieto</span>
+        </a>
+        <a href="mailto:sanprietogamer@gmail.com"
+           class="social-quick-card reveal" style="--card-color: var(--accent-primary)">
+          <span class="social-card-icon">✉</span>
+          <span class="social-card-name">EMAIL</span>
+          <span class="social-card-handle">sanprietogamer@gmail.com</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
 
 <!-- ─── ¿Qué se cuece? — News Preview Slider ───────────────────────── -->
   <section class="section news-preview-section" id="que-se-cuece">
@@ -333,245 +548,6 @@
       </div>
     </div>
   </section>
-
-<!-- ─── Pixel Patron Rain ────────────────────────────────────────────────── -->
-  <section class="section" id="pixel-patron">
-  <div
-    class="container"
-    style="display:flex;flex-direction:column;align-items:center;gap:2rem;"
-  >
-    <div style="text-align:center;">
-      <h2 class="section-title">&gt; PIXEL PATRON RAIN</h2>
-      <div class="pixel-divider"></div>
-    </div>
-
-    <!-- Achievement card -->
-    <div class="patron-achievement-card">
-      <div class="patron-achievement-icon">🏅</div>
-      <div class="patron-achievement-title">[ PIXEL PATRON RAIN ]</div>
-      <div class="patron-achievement-desc" data-i18n="patron.achievementDesc">
-        ¿Quieres ser un Freakoni@ real? 🔥<br /><br />
-        Dona 5€ y tu nombre caerá para siempre en la lluvia de Freakonia.<br /><br />
-        Esto no es una donación random.<br />
-        Detrás de cada post, cada devlog de Fallen Valkyrie, cada gameplay retro y cada hora que le echo al reino hay tiempo, curro, café y pasta.<br /><br />
-        Tú, siendo Pixel Patron, estás colaborando de verdad: ayudas a que la tormenta siga cayendo densa y que Freakonia no sea solo un blog, sino nuestro reino friki.<br /><br />
-        A más patrons, más lloverá.<br />
-        <strong
-          style="color:var(--accent-warn);font-family:var(--font-primary);font-size:0.55rem;display:block;margin-top:0.5rem;"
-        >
-          Tu nombre. Tu pixel. Tu legado eterno en el reino.
-        </strong>
-        <span style="font-family:var(--font-secondary);font-size:1.1rem;display:block;margin-top:0.5rem;">
-          ¡Hagamos que esto crezca juntos! Pim pam plim orejudo 💥
-        </span>
-      </div>
-
-      <div class="patron-counter">
-        <div class="patron-counter-number" id="patron-count">0</div>
-        <div class="patron-counter-label" data-i18n="patron.counterLabel">
-          <strong>PIXEL PATRONS</strong>
-          han donado 5€ y viven en la lluvia
-        </div>
-      </div>
-
-      <div class="patron-intensity">
-        <div class="patron-intensity-label">
-          <span data-i18n="patron.intensityTitle">INTENSIDAD DE LLUVIA</span>
-          <span id="patron-intensity-label">SILENCIOSA</span>
-        </div>
-        <div class="bar-track">
-          <div
-            class="bar-fill green"
-            id="patron-intensity-bar"
-            style="width:2%;transition:width 0.8s ease;"
-          ></div>
-        </div>
-      </div>
-
-      <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
-        <a
-          href="https://paypal.me/sanprieto/5"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-gold"
-        >
-          <span data-i18n="patron.donateBtn">💳 DONAR 5€ VÍA PAYPAL</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- Donor list -->
-    <div class="patron-donor-list-wrap">
-      <div class="patron-donor-list-header">
-        <span data-i18n="patron.listHeader">▶ PIXEL PATRONS EN LA LLUVIA</span>
-        <span id="patron-list-count">0 registrados</span>
-      </div>
-      <div class="patron-donor-scroll" id="patron-donor-list">
-        <div
-          style="padding:1.2rem;text-align:center;font-family:var(--font-secondary);color:var(--text-dim);font-size:1.1rem;"
-        >
-          ¡Sé el primero en aparecer en la lluvia!
-        </div>
-      </div>
-    </div>
-
-    <!-- How it works -->
-    <div class="patron-how-grid">
-      <div class="patron-how-card">
-        <div class="patron-how-num">01</div>
-        <div class="patron-how-title" data-i18n="patron.how1Title">DONAS 5€</div>
-        <div class="patron-how-desc" data-i18n="patron.how1Desc">
-          Vía PayPal. Pon tu nick en el concepto del pago.
-        </div>
-      </div>
-      <div class="patron-how-card">
-        <div class="patron-how-num">02</div>
-        <div class="patron-how-title" data-i18n="patron.how2Title">RECIBES EMAIL</div>
-        <div class="patron-how-desc" data-i18n="patron.how2Desc">
-          Se te confirma que eres Pixel Patron oficial de Freakonia en pocos minutos.
-        </div>
-      </div>
-      <div class="patron-how-card">
-        <div class="patron-how-num">03</div>
-        <div class="patron-how-title" data-i18n="patron.how3Title">TU NOMBRE CAE</div>
-        <div class="patron-how-desc" data-i18n="patron.how3Desc">
-          Tu nick aparece en la lluvia de la portada. Para siempre.
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-</div><!-- end .patron-rain-wrap -->
-
-<main>
-  <!-- ─── About ─────────────────────────────────────────────────────────── -->
-  <section class="section" id="about">
-    <div class="container">
-      <h2 class="section-title" data-i18n="about.title">SOBRE MÍ</h2>
-      <hr class="pixel-divider" />
-
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <p data-i18n="about.p1">
-            Bienvenido a <strong>Freakonia</strong> — mi rincón personal en internet donde
-            la historia del gaming, la obsesión por el fandom y el desarrollo indie se fusionan.
-          </p>
-          <p data-i18n="about.p2">
-            Soy <strong>Karlete</strong>, y la historia viene de lejos: todo empezó con el <strong>Doom</strong>
-            en casa de mi primo siendo un renacuajo. De ahí vinieron Alex Kid, Sonic, <strong>Super Mario World</strong>,
-            Mortal Kombat y todas las arcades del mundo; la <strong>Game Boy</strong> con Super Mario Land 2,
-            y la <strong>Master System 2</strong>, mi primera consola propia. Con la <strong>Super Nintendo</strong>
-            y la <strong>PlayStation</strong> llegaron Tomb Raider, los <strong>Final Fantasy</strong>,
-            PES, NBA Live y NBA 2K. Y luego el PC — y con él, las tardes interminables en el mítico
-            ciber <strong>Death Match</strong> de Cáceres, donde con toda la pandilla del pueblo le dábamos
-            caña al <strong>Action Quake 2</strong>, Counter-Strike y <strong>Diablo 2</strong>.
-            Luego vinieron StarCraft, Unreal, Gothic, Fallout, <strong>Heroes of Might and Magic</strong> del II al V,
-            Oblivion, Skyrim con mil mods instalados... y ya saben cómo termina esto:
-            <strong>League of Legends</strong> y <strong>Dead by Daylight</strong>.
-            Aunque ya no los juego, lo juro jajaj — hoy me limito a ver competitivo y a fingir que aún podría. ¡Así que dale, que allé voy!
-          </p>
-          <p data-i18n="about.p3">
-            Pero el frikismo no se queda solo en los videojuegos. Soy fan acérrimo de
-            <strong>Juego de Tronos</strong> — los libros y la serie hasta la sexta temporada;
-            las dos últimas, en este sitio, jamás existieron. También le he dado mucha caña al
-            <strong>Warhammer Fantasy</strong> y al rol de mesa: <strong>El Señor de los Anillos</strong>,
-            <strong>Stormbringer</strong>, <strong>La Llamada de Cthulhu</strong>... y todavía conservo
-            mi colección de cartas de <strong>Magic: The Gathering</strong>.
-            Sí, el frikismo me invade y me alegra que así sea.
-          </p>
-          <p data-i18n="about.p4">
-            Cuando no estoy viendo pros hacer lo que yo solía hacer, estoy construyendo —
-            actualmente desarrollando <strong>Fallen Valkyrie</strong>, un Metroidvania 2D en Unity.
-          </p>
-          <div class="hero-actions" style="margin-top: var(--sp-5);">
-            <a href="gamedev.html" class="btn btn-small"          data-i18n="about.btnProjects">📁 MIS PROYECTOS</a>
-            <a href="gaming.html"  class="btn btn-small btn-pink" data-i18n="about.btnHistory">🎮 MI HISTORIAL</a>
-          </div>
-        </div>
-
-        <div class="about-stats reveal">
-          <!-- Skill bars -->
-          <div class="bar-container">
-            <div class="bar-label"><span>GAME DEV</span><span>78%</span></div>
-            <div class="bar-track"><div class="bar-fill green" data-fill="78"></div></div>
-          </div>
-          <div class="bar-container">
-            <div class="bar-label"><span>BLENDER</span><span>65%</span></div>
-            <div class="bar-track"><div class="bar-fill pink" data-fill="65"></div></div>
-          </div>
-          <div class="bar-container">
-            <div class="bar-label"><span>LoL RANK</span><span>BROMURO DE SODIO III</span></div>
-            <div class="bar-track"><div class="bar-fill gold" data-fill="22"></div></div>
-          </div>
-          <div class="bar-container">
-            <div class="bar-label"><span data-i18n="about.statLoreLabel">FANÁTICO LORE</span><span>99%</span></div>
-            <div class="bar-track"><div class="bar-fill blue" data-fill="99"></div></div>
-          </div>
-          <div class="bar-container">
-            <div class="bar-label"><span>DBD HOURS</span><span data-i18n="about.statDbdVal">MUY POCAS</span></div>
-            <div class="bar-track"><div class="bar-fill green" data-fill="8"></div></div>
-          </div>
-
-          <div class="stats-row" style="margin-top:var(--sp-4);">
-            <div class="stat-box">
-              <span class="stat-value">5+</span>
-              <span class="stat-label" data-i18n="about.statConsoles">Consolas</span>
-            </div>
-            <div class="stat-box">
-              <span class="stat-value">∞</span>
-              <span class="stat-label" data-i18n="about.statHours">Horas Épicas</span>
-            </div>
-            <div class="stat-box">
-              <span class="stat-value">1</span>
-              <span class="stat-label" data-i18n="about.statWip">Juego en Dev</span>
-            </div>
-          </div>
-
-          <div style="margin: 2rem 0; text-align: center;">
-            <img fetchpriority="high"
-              src="assets/img/habitacion_gamer.gif"
-              alt="Habitación gamer pixel art"
-              style="
-                width: 100%;
-                max-width: 500px;
-                border: 4px solid var(--accent-secondary);
-                box-shadow: var(--glow-pink);
-                display: block;
-                margin: 0 auto;
-                image-rendering: pixelated;
-              "
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
-
-  <!-- ─── Navigation Hub ────────────────────────────────────────────────── -->
-  <section class="section" id="hub">
-    <div class="container">
-      <h2 class="section-title center" data-i18n="hub.title">ELIGE TU DESTINO</h2>
-    </div>
-
-    <div class="hub-universe-wrap">
-      <canvas id="hub-canvas" aria-label="Mapa interactivo del universo Freakonia"></canvas>
-    </div>
-    <p class="hub-universe-hint">HOVER PARA EXPLORAR · CLICK PARA ENTRAR</p>
-
-    <div id="hub-panel" class="hub-panel" role="complementary" aria-label="Información del sector">
-      <button id="hub-panel-close" class="hub-panel-close" aria-label="Cerrar panel">✕</button>
-      <div class="hub-panel-header">
-        <span class="hub-panel-emoji" id="hub-panel-emoji"></span>
-        <h2 class="hub-panel-title" id="hub-panel-title"></h2>
-      </div>
-      <p class="hub-panel-tagline" id="hub-panel-tagline"></p>
-      <div class="hub-panel-news" id="hub-panel-news"></div>
-      <a class="btn hub-panel-btn" id="hub-panel-btn" href="#">▶ ENTRAR</a>
-    </div>
-  </section>
-
   <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
 
   <!-- ─── Current project spotlight ────────────────────────────────────── -->
@@ -776,65 +752,219 @@
 
     </div>
   </section>
-
   <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
 
-  <!-- ─── Social Quick Links ─────────────────────────────────────────────── -->
-  <section class="section reveal">
+  <!-- ─── About ─────────────────────────────────────────────────────────── -->
+  <section class="section" id="about">
     <div class="container">
-      <h2 class="section-title center">📡 ENCUÉNTRAME EN LA RED</h2>
-      <div class="pixel-divider"></div>
+      <h2 class="section-title" data-i18n="about.title">SOBRE MÍ</h2>
+      <hr class="pixel-divider" />
 
-      <p style="font-family: var(--font-secondary); font-size: 20px;
-                color: var(--text); text-align: center; margin-bottom: 2rem;">
-        Sígueme, escríbeme o juega a mis juegos. Todo está a un clic.
-      </p>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p data-i18n="about.p1">
+            Bienvenido a <strong>Freakonia</strong> — mi rincón personal en internet donde
+            la historia del gaming, la obsesión por el fandom y el desarrollo indie se fusionan.
+          </p>
+          <p data-i18n="about.p2">
+            Soy <strong>Karlete</strong>, y la historia viene de lejos: todo empezó con el <strong>Doom</strong>
+            en casa de mi primo siendo un renacuajo. De ahí vinieron Alex Kid, Sonic, <strong>Super Mario World</strong>,
+            Mortal Kombat y todas las arcades del mundo; la <strong>Game Boy</strong> con Super Mario Land 2,
+            y la <strong>Master System 2</strong>, mi primera consola propia. Con la <strong>Super Nintendo</strong>
+            y la <strong>PlayStation</strong> llegaron Tomb Raider, los <strong>Final Fantasy</strong>,
+            PES, NBA Live y NBA 2K. Y luego el PC — y con él, las tardes interminables en el mítico
+            ciber <strong>Death Match</strong> de Cáceres, donde con toda la pandilla del pueblo le dábamos
+            caña al <strong>Action Quake 2</strong>, Counter-Strike y <strong>Diablo 2</strong>.
+            Luego vinieron StarCraft, Unreal, Gothic, Fallout, <strong>Heroes of Might and Magic</strong> del II al V,
+            Oblivion, Skyrim con mil mods instalados... y ya saben cómo termina esto:
+            <strong>League of Legends</strong> y <strong>Dead by Daylight</strong>.
+            Aunque ya no los juego, lo juro jajaj — hoy me limito a ver competitivo y a fingir que aún podría. ¡Así que dale, que allé voy!
+          </p>
+          <p data-i18n="about.p3">
+            Pero el frikismo no se queda solo en los videojuegos. Soy fan acérrimo de
+            <strong>Juego de Tronos</strong> — los libros y la serie hasta la sexta temporada;
+            las dos últimas, en este sitio, jamás existieron. También le he dado mucha caña al
+            <strong>Warhammer Fantasy</strong> y al rol de mesa: <strong>El Señor de los Anillos</strong>,
+            <strong>Stormbringer</strong>, <strong>La Llamada de Cthulhu</strong>... y todavía conservo
+            mi colección de cartas de <strong>Magic: The Gathering</strong>.
+            Sí, el frikismo me invade y me alegra que así sea.
+          </p>
+          <p data-i18n="about.p4">
+            Cuando no estoy viendo pros hacer lo que yo solía hacer, estoy construyendo —
+            actualmente desarrollando <strong>Fallen Valkyrie</strong>, un Metroidvania 2D en Unity.
+          </p>
+          <div class="hero-actions" style="margin-top: var(--sp-5);">
+            <a href="gamedev.html" class="btn btn-small"          data-i18n="about.btnProjects">📁 MIS PROYECTOS</a>
+            <a href="gaming.html"  class="btn btn-small btn-pink" data-i18n="about.btnHistory">🎮 MI HISTORIAL</a>
+          </div>
+        </div>
 
-      <div class="social-quick-grid stagger">
+        <div class="about-stats reveal">
+          <!-- Skill bars -->
+          <div class="bar-container">
+            <div class="bar-label"><span>GAME DEV</span><span>78%</span></div>
+            <div class="bar-track"><div class="bar-fill green" data-fill="78"></div></div>
+          </div>
+          <div class="bar-container">
+            <div class="bar-label"><span>BLENDER</span><span>65%</span></div>
+            <div class="bar-track"><div class="bar-fill pink" data-fill="65"></div></div>
+          </div>
+          <div class="bar-container">
+            <div class="bar-label"><span>LoL RANK</span><span>BROMURO DE SODIO III</span></div>
+            <div class="bar-track"><div class="bar-fill gold" data-fill="22"></div></div>
+          </div>
+          <div class="bar-container">
+            <div class="bar-label"><span data-i18n="about.statLoreLabel">FANÁTICO LORE</span><span>99%</span></div>
+            <div class="bar-track"><div class="bar-fill blue" data-fill="99"></div></div>
+          </div>
+          <div class="bar-container">
+            <div class="bar-label"><span>DBD HOURS</span><span data-i18n="about.statDbdVal">MUY POCAS</span></div>
+            <div class="bar-track"><div class="bar-fill green" data-fill="8"></div></div>
+          </div>
 
-        <a href="https://www.youtube.com/@sanprieto" target="_blank"
-           class="social-quick-card reveal"
-           style="--card-color: #ff0000" rel="noopener noreferrer">
-          <span class="social-card-icon">▶</span>
-          <span class="social-card-name">YOUTUBE</span>
-          <span class="social-card-handle">@sanprieto</span>
-        </a>
+          <div class="stats-row" style="margin-top:var(--sp-4);">
+            <div class="stat-box">
+              <span class="stat-value">5+</span>
+              <span class="stat-label" data-i18n="about.statConsoles">Consolas</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-value">∞</span>
+              <span class="stat-label" data-i18n="about.statHours">Horas Épicas</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-value">1</span>
+              <span class="stat-label" data-i18n="about.statWip">Juego en Dev</span>
+            </div>
+          </div>
 
-        <a href="https://x.com/SanprietoG" target="_blank"
-           class="social-quick-card reveal"
-           style="--card-color: #ffffff" rel="noopener noreferrer">
-          <span class="social-card-icon">✖</span>
-          <span class="social-card-name">X / TWITTER</span>
-          <span class="social-card-handle">@SanprietoG</span>
-        </a>
-
-        <a href="https://sanprieto.itch.io/" target="_blank"
-           class="social-quick-card reveal"
-           style="--card-color: #fa5c5c" rel="noopener noreferrer">
-          <span class="social-card-icon">🕹</span>
-          <span class="social-card-name">ITCH.IO</span>
-          <span class="social-card-handle">sanprieto.itch.io</span>
-        </a>
-
-        <a href="https://www.twitch.tv/sanprieto" target="_blank"
-           class="social-quick-card reveal"
-           style="--card-color: #9147ff" rel="noopener noreferrer">
-          <span class="social-card-icon">📺</span>
-          <span class="social-card-name">TWITCH</span>
-          <span class="social-card-handle">twitch.tv/sanprieto</span>
-        </a>
-
-        <a href="mailto:sanprietogamer@gmail.com"
-           class="social-quick-card reveal"
-           style="--card-color: var(--accent-primary)">
-          <span class="social-card-icon">✉</span>
-          <span class="social-card-name">EMAIL</span>
-          <span class="social-card-handle">sanprietogamer@gmail.com</span>
-        </a>
-
+          <div style="margin: 2rem 0; text-align: center;">
+            <img fetchpriority="high"
+              src="assets/img/habitacion_gamer.gif"
+              alt="Habitación gamer pixel art"
+              style="
+                width: 100%;
+                max-width: 500px;
+                border: 4px solid var(--accent-secondary);
+                box-shadow: var(--glow-pink);
+                display: block;
+                margin: 0 auto;
+                image-rendering: pixelated;
+              "
+            >
+          </div>
+        </div>
       </div>
     </div>
   </section>
+  <hr class="pixel-divider" style="margin: 0 var(--sp-5);" />
+
+<!-- ─── Pixel Patron Rain ────────────────────────────────────────────────── -->
+  <section class="section" id="pixel-patron">
+  <div
+    class="container"
+    style="display:flex;flex-direction:column;align-items:center;gap:2rem;"
+  >
+    <div style="text-align:center;">
+      <h2 class="section-title">&gt; PIXEL PATRON RAIN</h2>
+      <div class="pixel-divider"></div>
+    </div>
+
+    <!-- Achievement card -->
+    <div class="patron-achievement-card">
+      <div class="patron-achievement-icon">🏅</div>
+      <div class="patron-achievement-title">[ PIXEL PATRON RAIN ]</div>
+      <div class="patron-achievement-desc" data-i18n="patron.achievementDesc">
+        ¿Quieres ser un Freakoni@ real? 🔥<br /><br />
+        Dona 5€ y tu nombre caerá para siempre en la lluvia de Freakonia.<br /><br />
+        Esto no es una donación random.<br />
+        Detrás de cada post, cada devlog de Fallen Valkyrie, cada gameplay retro y cada hora que le echo al reino hay tiempo, curro, café y pasta.<br /><br />
+        Tú, siendo Pixel Patron, estás colaborando de verdad: ayudas a que la tormenta siga cayendo densa y que Freakonia no sea solo un blog, sino nuestro reino friki.<br /><br />
+        A más patrons, más lloverá.<br />
+        <strong
+          style="color:var(--accent-warn);font-family:var(--font-primary);font-size:0.55rem;display:block;margin-top:0.5rem;"
+        >
+          Tu nombre. Tu pixel. Tu legado eterno en el reino.
+        </strong>
+        <span style="font-family:var(--font-secondary);font-size:1.1rem;display:block;margin-top:0.5rem;">
+          ¡Hagamos que esto crezca juntos! Pim pam plim orejudo 💥
+        </span>
+      </div>
+
+      <div class="patron-counter">
+        <div class="patron-counter-number" id="patron-count">0</div>
+        <div class="patron-counter-label" data-i18n="patron.counterLabel">
+          <strong>PIXEL PATRONS</strong>
+          han donado 5€ y viven en la lluvia
+        </div>
+      </div>
+
+      <div class="patron-intensity">
+        <div class="patron-intensity-label">
+          <span data-i18n="patron.intensityTitle">INTENSIDAD DE LLUVIA</span>
+          <span id="patron-intensity-label">SILENCIOSA</span>
+        </div>
+        <div class="bar-track">
+          <div
+            class="bar-fill green"
+            id="patron-intensity-bar"
+            style="width:2%;transition:width 0.8s ease;"
+          ></div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+        <a
+          href="https://paypal.me/sanprieto/5"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-gold"
+        >
+          <span data-i18n="patron.donateBtn">💳 DONAR 5€ VÍA PAYPAL</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Donor list -->
+    <div class="patron-donor-list-wrap">
+      <div class="patron-donor-list-header">
+        <span data-i18n="patron.listHeader">▶ PIXEL PATRONS EN LA LLUVIA</span>
+        <span id="patron-list-count">0 registrados</span>
+      </div>
+      <div class="patron-donor-scroll" id="patron-donor-list">
+        <div
+          style="padding:1.2rem;text-align:center;font-family:var(--font-secondary);color:var(--text-dim);font-size:1.1rem;"
+        >
+          ¡Sé el primero en aparecer en la lluvia!
+        </div>
+      </div>
+    </div>
+
+    <!-- How it works -->
+    <div class="patron-how-grid">
+      <div class="patron-how-card">
+        <div class="patron-how-num">01</div>
+        <div class="patron-how-title" data-i18n="patron.how1Title">DONAS 5€</div>
+        <div class="patron-how-desc" data-i18n="patron.how1Desc">
+          Vía PayPal. Pon tu nick en el concepto del pago.
+        </div>
+      </div>
+      <div class="patron-how-card">
+        <div class="patron-how-num">02</div>
+        <div class="patron-how-title" data-i18n="patron.how2Title">RECIBES EMAIL</div>
+        <div class="patron-how-desc" data-i18n="patron.how2Desc">
+          Se te confirma que eres Pixel Patron oficial de Freakonia en pocos minutos.
+        </div>
+      </div>
+      <div class="patron-how-card">
+        <div class="patron-how-num">03</div>
+        <div class="patron-how-title" data-i18n="patron.how3Title">TU NOMBRE CAE</div>
+        <div class="patron-how-desc" data-i18n="patron.how3Desc">
+          Tu nick aparece en la lluvia de la portada. Para siempre.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 </main>
 
