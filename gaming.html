@@ -187,6 +187,12 @@
       border-color: var(--accent-warn);
     }
 
+    /* ── QUICKNAV — GOTHIC ── */
+    .platform-quicknav a.gothic {
+      color: #8B0000;
+      border-color: #8B0000;
+    }
+
     /* ── FINAL FANTASY VII — Reportaje Especial ── */
     #ffvii-especial .ffvii-portada-wrap {
       border: 4px solid var(--accent-warn);
@@ -297,6 +303,113 @@
       .ffvii-report-grid { grid-template-columns: 1fr; }
       #ffvii-especial .ffvii-portada { max-height: 220px; }
       .ffvii-announce-title { font-size: 0.42rem; }
+    }
+
+    /* ── GOTHIC REMAKE — Reportaje Especial ── */
+    #gothic-especial .gothic-portada-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    #gothic-especial .gothic-portada {
+      max-width: 100%;
+      max-height: 360px;
+      border: 4px solid #8B0000;
+      image-rendering: pixelated;
+      transition: transform 0.2s;
+    }
+    #gothic-especial .gothic-portada-wrap:hover .gothic-portada {
+      transform: scale(1.02);
+    }
+    #gothic-especial .gothic-intro {
+      font-family: var(--font-secondary);
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--text);
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border-left: 4px solid #8B0000;
+      background: rgba(139, 0, 0, 0.08);
+    }
+    .gothic-report-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    .gothic-block {
+      background: var(--bg-card);
+      border: 4px solid #8B0000;
+      padding: 1.5rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .gothic-block:hover {
+      border-color: #cc0000;
+      box-shadow: 0 0 16px rgba(139, 0, 0, 0.3);
+    }
+    .gothic-block-title {
+      font-family: var(--font-primary);
+      font-size: 0.48rem;
+      color: #cc0000;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .gothic-block p {
+      font-family: var(--font-secondary);
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+    .gothic-block p:last-child { margin-bottom: 0; }
+    .gothic-announce {
+      background: var(--bg-card);
+      border: 4px solid #8B0000;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+    .gothic-announce-label {
+      font-family: var(--font-primary);
+      font-size: 0.5rem;
+      color: #8B0000;
+      letter-spacing: 1px;
+      display: block;
+      margin-bottom: 1rem;
+    }
+    .gothic-announce-title {
+      font-family: var(--font-primary);
+      font-size: 0.65rem;
+      color: #cc0000;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .gothic-announce p {
+      font-family: var(--font-secondary);
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+    .gothic-announce-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .gothic-announce-meta span {
+      color: #8B0000;
+      border: 2px solid #8B0000;
+      padding: 4px 10px;
+      font-family: var(--font-primary);
+      font-size: 0.4rem;
+    }
+    @media (max-width: 640px) {
+      .gothic-report-grid { grid-template-columns: 1fr; }
+      #gothic-especial .gothic-portada { max-height: 220px; }
+      .gothic-announce-title { font-size: 0.42rem; }
     }
 
     /* ── Gaming History Widget ── */
@@ -494,6 +607,7 @@
         <span style="font-family:var(--font-primary);font-size:0.45rem;color:var(--text-dim);align-self:center;">▶ IR A:</span>
         <a href="#canal"          class="yt">📺 MI CANAL</a>
         <a href="#ffvii-especial" class="ffvii">⚔ FINAL FANTASY VII</a>
+        <a href="#gothic-especial" class="gothic">⚔ GOTHIC REMAKE</a>
         <a href="#master-system"  class="sms">📺 MASTER SYSTEM II</a>
         <a href="#game-boy"      class="gb">🎮 GAME BOY</a>
         <a href="#super-nintendo" class="snes">🟣 SUPER NINTENDO</a>
@@ -751,6 +865,80 @@
         }
       }
       </script>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       ⚔ REPORTAJE ESPECIAL — GOTHIC REMAKE
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="gothic-especial">
+    <div class="container">
+
+      <div class="section-label gold">⚔ REPORTAJE ESPECIAL</div>
+      <h2 class="section-title" style="color:#8B0000;text-shadow:0 0 14px rgba(139,0,0,0.4);">GOTHIC REMAKE</h2>
+      <p style="font-family:var(--font-primary);font-size:0.4rem;color:var(--text-dim);margin-bottom:var(--sp-5);">LA REDENCIÓN DEL CLÁSICO — 2024</p>
+
+      <!-- Portada -->
+      <div class="gothic-portada-wrap reveal">
+        <img src="assets/img/gothic/GohitRemakeCap1Miniatura.jpg"
+             alt="Gothic Remake — Reportaje especial Freakonia"
+             class="gothic-portada"
+             loading="lazy" />
+      </div>
+
+      <!-- Intro -->
+      <p class="gothic-intro reveal">
+        Hace casi 25 años, Piranha Bytes creó un world de fantasía oscura donde la libertad de exploración y la brutalidad del mundo eran tan importantes como la historia. Gothic fue antes que todo eso se pusiera de moda. Ahora, THQ Nordic nos regala lo que parecía imposible: una revisión que entiende qué hacía especial al original y respeta cada rincón de ese reino de oscuridad.
+      </p>
+
+      <!-- Report grid -->
+      <div class="gothic-report-grid">
+
+        <div class="gothic-block reveal">
+          <div class="gothic-block-title">🏰 GOTHIC ORIGINAL — EL JUEGO QUE LO CAMBIÓ TODO</div>
+          <p>Corría 2001 cuando Piranha Bytes lanzó Gothic. No era el juego más bonito, ni el más pulido, pero era brutalmente honesto. Un mundo abierto donde los NPCs ignoraban al jugador por defecto, donde la exploración prematura te llevaba a morir contra enemigos que triplicaban tu nivel. No había compasión. No había migas de pan.</p>
+          <p>La atmósfera de Gothic era (y sigue siendo) inigualable. Esa mezcla de castillo medieval decadente, colonia carcelaria disfrazada de mina, y un poder corruptor que lo envenenaba todo. Los gráficos no envejecieron bien, la cámara era terrible, los combates eran torpes — pero el mundo, ese mundo gótico de ruinas y sacrificios, permanece intacto en la memoria de quien lo vivió.</p>
+          <p>Para quien quiera entender más sobre qué significó Gothic para mí, escribí un hilo en Twitter hace años que sigue siendo mi análisis favorito: <a href="https://x.com/SanprietoG/status/1632340023008808963?s=20" target="_blank" rel="noopener" style="color:#cc0000;text-decoration:underline;">aquí está</a>. Porque Gothic no fue solo un juego — fue una filosofía sobre cómo debería jugarse a los mundos abiertos.</p>
+        </div>
+
+        <div class="gothic-block reveal">
+          <div class="gothic-block-title">⚔️ GOTHIC REMAKE — LA REDENCIÓN LLEGÓ</div>
+          <p>THQ Nordic ha hecho algo que parecía imposible: un remake que honra el original sin vivir eternamente a su sombra. Aquí están los mundos de Gothic tal como los recordamos — Khorinis, Huno, Jharkendar — pero pulidos, respirando, rebosantes de atmósfera. La calidad de los gráficos es excelente. No es un juego AA de presupuesto modesto: es un juego que invierte en cada rincón.</p>
+          <p>La atmósfera... Dios, la atmósfera. Los desarrolladores entendieron que la oscuridad de Gothic no era visual, era existencial. El mundo está corrupto, los personajes son personajes rotos, el polvo se ve en la luz del fuego de las antorchas. El remake no intenta hacer bonito lo que era feo — intenta hacer verdadero lo que fue importante.</p>
+          <p>Los añadidos al gameplay están increíblemente bien pensados. Las mecánicas de sigilo, el nuevo sistema de hechizos, las mejoras a los combates — todo se siente como una evolución natural, no como algo forzado. Algunos puños apretados sobre esta máquina, 25 años después, y descubres que siguen funcionando exactamente como debería funcionar la violencia en un mundo que te odia. He disfrutado cada hora jugando esto como si fuese hace dos décadas. Eso no se puede fingir.</p>
+        </div>
+
+      </div>
+
+      <!-- Announcement -->
+      <div class="gothic-announce reveal">
+        <span class="gothic-announce-label">▶ EN MI CANAL — GOTHC REMAKE COMPLETO</span>
+        <h3 class="gothic-announce-title">SERIE DE GAMEPLAY — GOTHIC REMAKE CON COMMENTARY EN ESPAÑOL</h3>
+        <p style="font-family:'VT323',monospace;font-size:1rem;line-height:1.6;margin-bottom:1rem;">
+          Tengo toda una lista de reproducción dedicada a Gothic Remake en mi canal. Gameplay completo, sin cortes, con análisis en tiempo real de las decisiones de diseño, las atmósferas y esos momentos que hacen que Gothic siga siendo especial después de 25 años.
+        </p>
+        <div class="gothic-announce-meta">
+          <span>MÚLTIPLES VÍDEOS</span>
+          <span>ANÁLISIS EN VIVO</span>
+          <span>GAMEPLAY COMPLETO</span>
+          <span>GOTHIC PURO</span>
+        </div>
+
+        <!-- YouTube Playlist Button -->
+        <div style="margin-top:1.5rem;">
+          <a href="https://www.youtube.com/playlist?list=PLQVU14t1eA4Y1r4P_MlzDvVEXUTBAIbtP"
+             target="_blank" rel="noopener noreferrer"
+             class="btn" style="background:rgba(139,0,0,0.15);border-color:#8B0000;color:#cc0000;">
+            ▶ VER TODA LA PLAYLIST EN YOUTUBE
+          </a>
+        </div>
+
+        <a href="https://www.youtube.com/@sanprieto?sub_confirmation=1" target="_blank" rel="noopener noreferrer"
+           class="btn btn-subscribe" style="margin-top:1rem;border-color:#8B0000;color:#cc0000;">
+          🔔 SUSCRÍBETE PARA NO PERDERTE FUTUROS ANÁLISIS
+        </a>
+      </div>
 
     </div>
   </section>
