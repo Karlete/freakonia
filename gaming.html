@@ -189,8 +189,8 @@
 
     /* ── QUICKNAV — GOTHIC ── */
     .platform-quicknav a.gothic {
-      color: #8B0000;
-      border-color: #8B0000;
+      color: var(--accent-danger);
+      border-color: var(--accent-danger);
     }
 
     /* ── FINAL FANTASY VII — Reportaje Especial ── */
@@ -307,20 +307,25 @@
 
     /* ── GOTHIC REMAKE — Reportaje Especial ── */
     #gothic-especial .gothic-portada-wrap {
-      position: relative;
       display: flex;
       justify-content: center;
+      align-items: center;
+      border: 4px solid var(--accent-danger);
+      box-shadow: 0 0 20px rgba(255, 49, 49, 0.25);
+      background: var(--bg-card);
+      overflow: hidden;
+      max-height: 420px;
       margin-bottom: 2rem;
     }
     #gothic-especial .gothic-portada {
-      max-width: 100%;
-      max-height: 360px;
-      border: 4px solid #8B0000;
-      image-rendering: pixelated;
-      transition: transform 0.2s;
+      width: 100%;
+      max-height: 420px;
+      display: block;
+      object-fit: contain;
+      transition: transform 0.4s;
     }
     #gothic-especial .gothic-portada-wrap:hover .gothic-portada {
-      transform: scale(1.02);
+      transform: scale(1.03);
     }
     #gothic-especial .gothic-intro {
       font-family: var(--font-secondary);
@@ -329,32 +334,35 @@
       color: var(--text);
       margin-bottom: 2rem;
       padding: 1.5rem;
-      border-left: 4px solid #8B0000;
-      background: rgba(139, 0, 0, 0.08);
+      border-left: 4px solid var(--accent-danger);
+      background: rgba(255, 49, 49, 0.06);
     }
     .gothic-report-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 2rem;
       margin-bottom: 2rem;
     }
     .gothic-block {
       background: var(--bg-card);
-      border: 4px solid #8B0000;
+      border: 4px solid var(--accent-danger);
       padding: 1.5rem;
       transition: border-color 0.2s, box-shadow 0.2s;
     }
     .gothic-block:hover {
-      border-color: #cc0000;
-      box-shadow: 0 0 16px rgba(139, 0, 0, 0.3);
+      border-color: var(--accent-warn);
+      box-shadow: 0 0 16px rgba(255, 49, 49, 0.3);
     }
     .gothic-block-title {
       font-family: var(--font-primary);
       font-size: 0.48rem;
-      color: #cc0000;
+      color: var(--accent-danger);
       margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--accent-danger);
       letter-spacing: 1px;
       text-transform: uppercase;
+      line-height: 1.6;
     }
     .gothic-block p {
       font-family: var(--font-secondary);
@@ -366,14 +374,14 @@
     .gothic-block p:last-child { margin-bottom: 0; }
     .gothic-announce {
       background: var(--bg-card);
-      border: 4px solid #8B0000;
+      border: 4px solid var(--accent-danger);
       padding: 2rem;
       margin-top: 2rem;
     }
     .gothic-announce-label {
       font-family: var(--font-primary);
       font-size: 0.5rem;
-      color: #8B0000;
+      color: var(--accent-danger);
       letter-spacing: 1px;
       display: block;
       margin-bottom: 1rem;
@@ -381,7 +389,9 @@
     .gothic-announce-title {
       font-family: var(--font-primary);
       font-size: 0.65rem;
-      color: #cc0000;
+      color: var(--text-bright);
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--accent-danger);
       margin-bottom: 1.5rem;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -400,15 +410,64 @@
       margin: 1.5rem 0;
     }
     .gothic-announce-meta span {
-      color: #8B0000;
-      border: 2px solid #8B0000;
+      color: var(--accent-danger);
+      border: 2px solid var(--accent-danger);
       padding: 4px 10px;
       font-family: var(--font-primary);
       font-size: 0.4rem;
     }
+    /* Playlist thumbnail — con hover, igual patrón que taberna-img-wrap */
+    .gothic-playlist-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      margin: 1.5rem 0;
+      border: 4px solid var(--accent-danger);
+      background: var(--bg-card);
+      overflow: hidden;
+      max-height: 420px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .gothic-playlist-wrap:hover {
+      border-color: var(--accent-warn);
+      box-shadow: 0 0 20px rgba(255, 49, 49, 0.35);
+    }
+    .gothic-playlist-wrap img {
+      width: 100%;
+      max-height: 420px;
+      display: block;
+      object-fit: contain;
+      image-rendering: pixelated;
+      transition: transform 0.3s;
+    }
+    .gothic-playlist-wrap:hover img {
+      transform: scale(1.04);
+    }
+    .gothic-playlist-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Press Start 2P', monospace;
+      font-size: 0.65rem;
+      color: var(--text-bright);
+      background: rgba(255, 49, 49, 0.85);
+      padding: 0.75rem 1.25rem;
+      border: 2px solid var(--text-bright);
+      pointer-events: none;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .gothic-playlist-wrap:hover .gothic-playlist-overlay {
+      transform: translate(-50%, -50%) scale(1.05);
+    }
     @media (max-width: 640px) {
-      .gothic-report-grid { grid-template-columns: 1fr; }
+      #gothic-especial .gothic-portada-wrap,
       #gothic-especial .gothic-portada { max-height: 220px; }
+      .gothic-playlist-wrap,
+      .gothic-playlist-wrap img { max-height: 220px; }
       .gothic-announce-title { font-size: 0.42rem; }
     }
 
@@ -876,12 +935,12 @@
     <div class="container">
 
       <div class="section-label gold">⚔ REPORTAJE ESPECIAL</div>
-      <h2 class="section-title" style="color:#8B0000;text-shadow:0 0 14px rgba(139,0,0,0.4);">GOTHIC REMAKE</h2>
+      <h2 class="section-title" style="color:var(--accent-danger);text-shadow:0 0 14px rgba(255,49,49,0.4);">GOTHIC REMAKE</h2>
       <p style="font-family:var(--font-primary);font-size:0.4rem;color:var(--text-dim);margin-bottom:var(--sp-5);">LA REDENCIÓN DEL CLÁSICO — 2024</p>
 
       <!-- Portada -->
       <div class="gothic-portada-wrap reveal">
-        <img src="assets/img/gothic/GohitRemakeCap1Miniatura.jpg"
+        <img src="assets/img/gothic/GothicRemakeImagen2.jpg"
              alt="Gothic Remake — Reportaje especial Freakonia"
              class="gothic-portada"
              loading="lazy" />
@@ -889,7 +948,7 @@
 
       <!-- Intro -->
       <p class="gothic-intro reveal">
-        Hace casi 25 años, Piranha Bytes creó un world de fantasía oscura donde la libertad de exploración y la brutalidad del mundo eran tan importantes como la historia. Gothic fue antes que todo eso se pusiera de moda. Ahora, THQ Nordic nos regala lo que parecía imposible: una revisión que entiende qué hacía especial al original y respeta cada rincón de ese reino de oscuridad.
+        Hace casi 25 años, Piranha Bytes creó un mundo de fantasía oscura donde la libertad de exploración pesaba tanto como la propia historia. Gothic llegó antes de que ese estilo se pusiera de moda. Ahora THQ Nordic firma algo que parecía imposible: una revisión que entiende qué hacía único al original y respeta cada rincón de ese reino en penumbra.
       </p>
 
       <!-- Report grid -->
@@ -899,17 +958,17 @@
           <div class="gothic-block-title">🏰 GOTHIC ORIGINAL — EL JUEGO QUE LO CAMBIÓ TODO</div>
           <img src="assets/img/gothic/gothic_1.jpg"
                alt="Gothic 1 — Original"
-               style="width:100%;border:4px solid #8B0000;margin-bottom:1rem;image-rendering:pixelated;" />
-          <p>Corría 2001 cuando Piranha Bytes lanzó Gothic. No era el juego más bonito, ni el más pulido, pero era brutalmente honesto. Un mundo abierto donde los NPCs ignoraban al jugador por defecto, donde la exploración prematura te llevaba a morir contra enemigos que triplicaban tu nivel. No había compasión. No había migas de pan.</p>
-          <p>La atmósfera de Gothic era (y sigue siendo) inigualable. Esa mezcla de castillo medieval decadente, colonia carcelaria disfrazada de mina, y un poder corruptor que lo envenenaba todo. Los gráficos no envejecieron bien, la cámara era terrible, los combates eran torpes — pero el mundo, ese mundo gótico de ruinas y sacrificios, permanece intacto en la memoria de quien lo vivió.</p>
-          <p style="margin-top:1.5rem;padding-top:1rem;border-top:2px solid #8B0000;">Para quien quiera entender más sobre qué significó Gothic para mí en profundidad, escribí un <a href="https://x.com/SanprietoG/status/1632340023008808963?s=20" target="_blank" rel="noopener" style="color:#cc0000;text-decoration:underline;font-weight:bold;">hilo completo en Twitter</a> hace años que sigue siendo mi análisis favorito. Porque Gothic no fue solo un juego — fue una filosofía sobre cómo debería jugarse a los mundos abiertos.</p>
+               style="display:block;width:100%;max-width:320px;margin:0 auto 1rem;border:4px solid var(--accent-danger);image-rendering:pixelated;" />
+          <p>Corría 2001 cuando Piranha Bytes lanzó Gothic. No era el juego más bonito ni el más pulido, pero sí era brutalmente honesto. Un mundo abierto donde los NPCs te ignoraban por defecto y donde explorar demasiado pronto significaba morir contra enemigos que triplicaban tu nivel. No había compasión ni migas de pan que seguir.</p>
+          <p>Su ambientación era, y sigue siendo, irrepetible: castillo medieval en decadencia, colonia carcelaria disfrazada de mina, y un poder corruptor que lo contaminaba todo. Los gráficos envejecieron mal, la cámara era un suplicio y los combates resultaban torpes — pero ese universo de ruinas y sacrificios se quedó grabado en quien lo vivió.</p>
+          <p style="margin-top:1.5rem;padding-top:1rem;border-top:2px solid var(--accent-danger);">Para quien quiera profundizar en lo que significó este juego para mí, escribí hace años un <a href="https://x.com/SanprietoG/status/1632340023008808963?s=20" target="_blank" rel="noopener" style="color:var(--accent-danger);text-decoration:underline;font-weight:bold;">hilo completo en Twitter</a> que sigue siendo mi análisis favorito. Porque no fue solo un videojuego — fue una forma de entender cómo debían construirse los mundos abiertos.</p>
         </div>
 
         <div class="gothic-block reveal">
           <div class="gothic-block-title">⚔️ GOTHIC REMAKE — LA REDENCIÓN LLEGÓ</div>
-          <p>THQ Nordic ha hecho algo que parecía imposible: un remake que honra el original sin vivir eternamente a su sombra. Aquí están los mundos de Gothic tal como los recordamos — Khorinis, Huno, Jharkendar — pero pulidos, respirando, rebosantes de atmósfera. La calidad de los gráficos es excelente. No es un juego AA de presupuesto modesto: es un juego que invierte en cada rincón.</p>
-          <p>La atmósfera... Dios, la atmósfera. Los desarrolladores entendieron que la oscuridad de Gothic no era visual, era existencial. El mundo está corrupto, los personajes son personajes rotos, el polvo se ve en la luz del fuego de las antorchas. El remake no intenta hacer bonito lo que era feo — intenta hacer verdadero lo que fue importante.</p>
-          <p>Los añadidos al gameplay están increíblemente bien pensados. Las mecánicas de sigilo, el nuevo sistema de hechizos, las mejoras a los combates — todo se siente como una evolución natural, no como algo forzado. Algunos puños apretados sobre esta máquina, 25 años después, y descubres que siguen funcionando exactamente como debería funcionar la violencia en un mundo que te odia. He disfrutado cada hora jugando esto como si fuese hace dos décadas. Eso no se puede fingir.</p>
+          <p>THQ Nordic ha logrado algo que parecía imposible: un remake que honra el original sin vivir eternamente a su sombra. Khorinis, Huno y Jharkendar están aquí tal como los recordamos, pero pulidos y rebosantes de vida. No es un juego AA de presupuesto ajustado — es una producción que invierte en cada rincón del mapa.</p>
+          <p>Los desarrolladores entendieron que la oscuridad original nunca fue solo visual, sino existencial. El mundo sigue corrupto, los personajes siguen rotos, y el polvo se distingue incluso a la luz de las antorchas. El remake no intenta embellecer lo que era feo — intenta hacer verdad lo que siempre importó.</p>
+          <p>Las novedades de jugabilidad están muy bien pensadas: el sigilo, el nuevo sistema de hechizos y los combates mejorados encajan como una evolución natural, no como un añadido forzado. Vuelvo a esta saga un cuarto de siglo después y la violencia de un mundo que te odia sigue funcionando exactamente como debería. He disfrutado cada hora como si volviera a tener veinte años, y eso no se puede fingir.</p>
         </div>
 
       </div>
@@ -923,21 +982,20 @@
         </p>
 
         <!-- Playlist Image Link -->
-        <div style="position:relative;cursor:pointer;margin:1.5rem 0;border:4px solid #8B0000;" onclick="window.open('https://www.youtube.com/watch?v=GPGTiLXfqhc&list=PLQVU14t1eA4Y1r4P_MlzDvVEXUTBAIbtP', '_blank')">
-          <img src="assets/img/gothic/GothicRemakeImagen2.jpg"
-               alt="Gothic Remake — Playlist de YouTube"
-               style="width:100%;display:block;image-rendering:pixelated;" />
-          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Press Start 2P',monospace;font-size:0.65rem;color:#ffffff;background:rgba(139,0,0,0.85);padding:0.75rem 1.25rem;border:2px solid #ffffff;pointer-events:none;text-align:center;">▶ VER PLAYLIST COMPLETA</div>
+        <div class="gothic-playlist-wrap" onclick="window.open('https://www.youtube.com/watch?v=GPGTiLXfqhc&list=PLQVU14t1eA4Y1r4P_MlzDvVEXUTBAIbtP', '_blank')">
+          <img src="assets/img/gothic/GohitRemakeCap1Miniatura.jpg"
+               alt="Gothic Remake — Playlist de YouTube" />
+          <div class="gothic-playlist-overlay">▶ VER PLAYLIST COMPLETA</div>
         </div>
 
         <a href="https://www.youtube.com/watch?v=GPGTiLXfqhc&list=PLQVU14t1eA4Y1r4P_MlzDvVEXUTBAIbtP"
            target="_blank" rel="noopener noreferrer"
-           class="btn" style="background:rgba(139,0,0,0.15);border-color:#8B0000;color:#cc0000;margin-top:1.5rem;display:inline-block;width:100%;text-align:center;">
+           class="btn" style="background:rgba(255,49,49,0.15);border-color:var(--accent-danger);color:var(--text-bright);margin-top:1.5rem;display:inline-block;width:100%;text-align:center;">
           ▶ ABRIR LISTA EN YOUTUBE
         </a>
 
         <a href="https://www.youtube.com/@sanprieto?sub_confirmation=1" target="_blank" rel="noopener noreferrer"
-           class="btn btn-subscribe" style="margin-top:1rem;border-color:#8B0000;color:#cc0000;">
+           class="btn btn-subscribe" style="margin-top:1rem;">
           🔔 SUSCRÍBETE PARA NO PERDERTE FUTUROS ANÁLISIS
         </a>
       </div>
