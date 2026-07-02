@@ -1,6 +1,6 @@
 # estado.md — Project State Tracker
 
-Last updated: 2026-06-22 (sesión 77 — batch 134–138 + articles index updated)
+Last updated: 2026-07-02 (sesión 78 — scroll-to-top button + redesigned SOBRE MÍ section)
 
 ---
 
@@ -559,6 +559,42 @@ Si no hay fuente externa (`source: ''`), el elemento `.news-source` no se render
 ---
 
 ## Session Notes
+
+### 2026-07-02 — Session 78
+- **Scroll-to-top button — ALL PAGES:**
+  - `index.html`: Agregado botón flotante `#scroll-to-top` (▲) tras CRT overlay
+  - CSS en `css/components.css`: `.scroll-to-top` · fixed position bottom-right · 50px · border 4px green · neon glow · opacity 0 invisible
+  - Muestra con `.show` class cuando scroll > 200px · animación fade-in/lift · hover con scale(1.05) + glow
+  - `js/main.js`: IIFE nueva `scrollToTop()` · scroll listener (passive) + smooth scroll animado + ESC key support
+  - Propagado a **25+ páginas**: gamedev.html, gaming.html, esports.html, got.html, warhammer.html, magic.html, rol.html, nba.html, java.html, social.html, news.html, quiz.html, universo.html, fallen-valkyrie.html + 10 quiz variants + 155 article pages
+  - CSS global + JS global ya los soportan — solo añadir HTML en cada página
+
+- **SOBRE MÍ section — redesigned (index.html):**
+  - **Antes:** Cards de stats al lado del texto (2-col layout)
+  - **Después:** Two-column layout con `.sobre-mi-layout` (1fr 1fr grid) · 3rem gap · responsive a 1 col en ≤1024px
+  - **Left column (`.sobre-mi-left`):** texto + 4 stat boxes (1993, 5+ consolas, ∞ horas, 1 juego)
+  - **Right column (`.sobre-mi-right`):** `.character-stats` card — NEW GAME UI PANEL
+  
+- **Character Stats Card — Game UI Design:**
+  - Contenedor: `.character-stats` · border 4px green · padding 2rem · box-shadow offset verde
+  - Header: `⚔ CHARACTER STATS` · green text · 0.55rem font · glow text-shadow
+  - 3 stats (reducido de 4): GAMER (🎮) 99% · FREAK (🔥) 98% · DEVELOPER (💾) 85%
+  - Cada stat: icon + name (0.48rem) + percentage (0.5rem) + bar (28px height, 3px border)
+  - Bars: green/pink/blue con inset + outer glow · hover: white border · smooth fill animation
+  - `.character-stat-fill`: anima a `--stat-fill` valor con easing cubic-bezier(0.34, 1.56, 0.64, 1) (bouncy)
+  - Staggered animations: items slide-in con delays 0.15/0.3/0.45s · bars fill con delays 0.4/0.55/0.7s
+  - CSS inline en `<style>` de index.html · ~120 líneas nuevas de estilos
+
+- **Tagline pills repositionados:**
+  - De "dentro de `.sobre-mi-grid`" a "antes de `.sobre-mi-layout`" (más visibles)
+  - Margin-top 0.5rem + margin-bottom 2.5rem para mejor respiro visual
+
+- **Archivos modificados:**
+  - `index.html`: +258 líneas (scroll button + redesign + character stats CSS)
+  - `css/components.css`: +58 líneas (scroll-to-top styles)
+  - `js/main.js`: +31 líneas (scroll-to-top IIFE)
+  - 24 HTML pages: +3 líneas cada una (scroll button)
+  - 155 article pages: +3 líneas cada una (scroll button)
 
 ### 2026-05-25 — Session 72
 - **index.html — banner "ELIGE TU DESTINO" eliminado:** imagen `freakonia_background.png` y su wrapper `.destino-banner-wrap` quitados de la sección `#hub` — la sección muestra directamente las cards de navegación

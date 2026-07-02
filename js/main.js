@@ -274,3 +274,34 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(el);
   });
 })();
+
+// ─── Scroll to top button ──────────────────────────────────────────────────
+(function scrollToTop() {
+  const btn = document.getElementById('scroll-to-top');
+  if (!btn) return;
+
+  function toggleButton() {
+    if (window.scrollY > 200) {
+      btn.classList.add('show');
+    } else {
+      btn.classList.remove('show');
+    }
+  }
+
+  function scrollToTopSmooth() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
+  window.addEventListener('scroll', toggleButton, { passive: true });
+  btn.addEventListener('click', scrollToTopSmooth);
+
+  // ESC key to scroll to top
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && btn.classList.contains('show')) {
+      scrollToTopSmooth();
+    }
+  });
+})();
