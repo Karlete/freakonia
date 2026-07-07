@@ -1,6 +1,6 @@
 # estado.md — Project State Tracker
 
-Last updated: 2026-07-02 (sesión 78 — scroll-to-top button + redesigned SOBRE MÍ section)
+Last updated: 2026-07-07 (sesión 79 — batch 144–148 got/esports/warhammer/gamedev/rol)
 
 ---
 
@@ -113,7 +113,7 @@ Estos están declarados dentro del `<style>` de cada página y son propios de ca
 
 Migrado en sesión 70 (2026-05-21). Ya **no existe** `js/news-data.js` ni `article.html?id=` ni los ficheros mensuales `js/news-2026-XX.js`. El nuevo flujo es:
 
-- `js/articles-index.js` — array `ARTICLES_INDEX` con metadatos de los **125 artículos** (sin el campo `full`). Un objeto por línea. **Añadir nuevos artículos al TOP del array.**
+- `js/articles-index.js` — array `ARTICLES_INDEX` con metadatos de los **148 artículos** (sin el campo `full`). Un objeto por línea. **Añadir nuevos artículos al TOP del array.**
 - `articles/[id].html` — un fichero HTML estático por artículo (125 ficheros). Auto-contenidos: nav, header, body, footer, links. Rutas relativas a CSS/JS con `../`.
 - `news.html` — `renderNews()` lee `ARTICLES_INDEX`, ordena por fecha desc, y cada card enlaza a `articles/[id].html`. El botón es `>> LEER ARTÍCULO`. Filtros por topic, search y paginación intactos.
 - `index.html` — slider "¿Qué se cuece?" lee `ARTICLES_INDEX`; cada card enlaza a `articles/[id].html`.
@@ -127,23 +127,23 @@ Migrado en sesión 70 (2026-05-21). Ya **no existe** `js/news-data.js` ni `artic
 
 ### NEWS_TRACKER — temas usados
 ```json
-{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba"],"last_update":"2026-06-22"}
+{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba"],"last_update":"2026-07-07"}
 ```
 **Próximos temas disponibles:** `nba` · `gaming` · `magic`
 
 ### IDs de artículos actuales (para evitar duplicados)
-**Fuente de verdad:** `js/articles-index.js` (un objeto por línea, IDs visibles a simple vista) o `ls articles/*.html`. La tabla detallada que vivía aquí (130 entradas) ha sido retirada por mantenimiento. IDs recientes (batch 134–138, 22/06/2026) para referencia rápida:
+**Fuente de verdad:** `js/articles-index.js` (un objeto por línea, IDs visibles a simple vista) o `ls articles/*.html`. La tabla detallada que vivía aquí (135 entradas) ha sido retirada por mantenimiento. IDs recientes (batch 144–148, 07/07/2026) para referencia rápida:
 | # | id | topic | fecha |
 |---|---|---|---|
-| 138 | `noticia-rol-justice-league-rpg-gencon-dnd-arcana-junio-2026` | rol | 22/06/2026 |
-| 137 | `noticia-gamedev-xbox-showcase-gears-fable-fatal-frame-2026` | gamedev | 22/06/2026 |
-| 136 | `noticia-warhammer-40k-11ed-armageddon-old-world-faq-junio-2026` | warhammer | 22/06/2026 |
-| 135 | `noticia-msi-2026-daejeon-preview-g2-t1-blg-arranca-28-junio` | esports | 22/06/2026 |
-| 134 | `noticia-hotd-t3-ep1-estreno-reacciones-jace-gulfo-2026` | got | 22/06/2026 |
-| 133 | `noticia-mtg-final-fantasy-lanzamiento-reacciones-2026` | magic | 16/06/2026 |
-| 132 | `noticia-hotd-t3-taormina-reacciones-batalla-gulfo-5dias` | got | 16/06/2026 |
-| 131 | `noticia-gothic-remake-500k-primera-semana-2026` | gaming | 16/06/2026 |
-_…121 entradas más (130 a 1) retiradas. Para la lista completa actualizada ver `js/articles-index.js`._
+| 148 | `noticia-rol-justice-league-gamefound-dnd-arcana-gencon-julio-2026` | rol | 07/07/2026 |
+| 147 | `noticia-gta6-trailer3-mundial-julio-rockstar-silencio-2026` | gamedev | 07/07/2026 |
+| 146 | `noticia-tow-nuevo-core-set-warriors-chaos-summer-preview-2026` | warhammer | 07/07/2026 |
+| 145 | `noticia-msi-2026-bracket-stage-blg-hle-ubf-g2-t1-lb-descanso` | esports | 07/07/2026 |
+| 144 | `noticia-hotd-t3-ep3-rhaenyra-trono-tumbleton-daeron-2026` | got | 07/07/2026 |
+| 143 | `noticia-mtg-marvel-lanzamiento-junio-2026` | magic | 29/06/2026 |
+| 142 | `noticia-gta6-preorders-boxart-trailer3-junio-2026` | gaming | 29/06/2026 |
+| 141 | `noticia-nba-knicks-desfile-canyon-heroes-draft-2026` | nba | 29/06/2026 |
+_…133 entradas más (140 a 1) retiradas. Para la lista completa actualizada ver `js/articles-index.js`._
 
 ### Páginas HTML — estado actual
 | Página | Estado | Notas |

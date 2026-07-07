@@ -2,6 +2,26 @@
 
 ---
 
+## Sesión 79 — 2026-07-07
+
+### feat(news): batch 144–148 — got/esports/warhammer/gamedev/rol
+
+**New files:**
+- `articles/noticia-hotd-t3-ep3-rhaenyra-trono-tumbleton-daeron-2026.html` — GoT (144): HotD T3 Ep.3 "Rhaenyra Triumphant": el señuelo de Daeron, la trampa de Tumbleton y la reina que todavía no sabe gobernar. Source: denofgeek.com.
+- `articles/noticia-msi-2026-bracket-stage-blg-hle-ubf-g2-t1-lb-descanso.html` — Esports (145): MSI 2026 jornada de descanso: BLG y HLE en la Upper Bracket Final, G2 y T1 en lower bracket esperando medirse el jueves. Source: sheepesports.com.
+- `articles/noticia-tow-nuevo-core-set-warriors-chaos-summer-preview-2026.html` — Warhammer (146): Bombazo en The Old World: nuevo core set Warriors of Chaos vs Grand Cathay con 54 miniaturas, reglamento revisado y Battle March. Source: warhammer-community.com.
+- `articles/noticia-gta6-trailer3-mundial-julio-rockstar-silencio-2026.html` — GameDev (147): GTA VI Trailer 3: las preorders superaron todos los récords sin gameplay y ahora la Final del Mundial el 19 de julio es la nueva ventana favorita. Source: gtaboom.com.
+- `articles/noticia-rol-justice-league-gamefound-dnd-arcana-gencon-julio-2026.html` — Rol (148): Julio es el mes del rol: el RPG de la Justice League en Gamefound, D&D lanza Arcana Unleashed y Gen Con 2026 calienta motores. Source: enworld.org.
+
+**Modified files:**
+- `js/articles-index.js`: 5 líneas nuevas al TOP (rol → gamedev → warhammer → esports → got).
+- `estado.md`: last_update → 2026-07-07, artículos 125 → 148, NEWS_TRACKER actualizado, IDs recientes actualizados.
+- `commit.md`: esta entrada.
+
+**NEWS_TRACKER:** last_update → 2026-07-07 · next_available → nba · gaming · magic
+
+---
+
 ## Sesión 77 — 2026-06-22
 
 ### feat(news): batch 134–138 — got/esports/warhammer/gamedev/rol
