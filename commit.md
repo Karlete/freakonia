@@ -2,6 +2,27 @@
 
 ---
 
+## Sesión 80 — 2026-07-13
+
+### feat(news): batch 149–153 — esports/got/nba/gaming/magic
+
+**New files:**
+- `articles/noticia-msi-2026-hle-campeon-zeus-mvp-baron-game5.html` — Esports (149): HLE campeona del MSI 2026: Kanavi roba el Barón en el Game 5 y Zeus MVP — el LCK gana su tercer MSI consecutivo. Source: dotesports.com.
+- `articles/noticia-hotd-t3-ep4-ormund-tumbleton-aegon-rooks-rest-2026.html` — GoT (150): HotD T3 Ep.4: Ormund toma Tumbleton, Aegon llora sobre Sunfyre en Rook's Rest y Rhaenyra sigue sin saber gobernar. Source: collider.com.
+- `articles/noticia-nba-free-agency-2026-giannis-miami-lebron-wemby-extension.html` — NBA (151): NBA Free Agency 2026: Giannis a Miami, LeBron sale de los Lakers, Wemby extiende $252M y Jaylen Brown a Philadelphia. Source: espn.com.
+- `articles/noticia-gaming-ewc-2026-riad-julio15-lol-classic-trailer.html` — Gaming (152): La Esports World Cup arranca el 15 de julio en Riad y Riot lanza el trailer de LoL Classic — el regreso al mapa original de 2012. Source: esports.gg.
+- `articles/noticia-mtg-marvel-dos-semanas-spiderman-commander-reality-fracture.html` — Magic (153): MTG Marvel dos semanas después: Spider-Man domina Commander y Reality Fracture desvela los Ecos como mecánica central. Source: mtggoldfish.com.
+
+**Modified files:**
+- `js/articles-index.js`: 5 líneas nuevas al TOP (esports → got → nba → gaming → magic).
+- `estado.md`: last_update → 2026-07-13, NEWS_TRACKER actualizado.
+- `task.md`: completado y marcado.
+- `commit.md`: esta entrada.
+
+**NEWS_TRACKER:** last_update → 2026-07-13 · next_available → warhammer · gamedev · rol
+
+---
+
 ## Sesión 79 — 2026-07-07
 
 ### feat(news): batch 144–148 — got/esports/warhammer/gamedev/rol

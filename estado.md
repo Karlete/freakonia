@@ -1,6 +1,6 @@
 # estado.md — Project State Tracker
 
-Last updated: 2026-07-07 (sesión 79 — batch 144–148 got/esports/warhammer/gamedev/rol)
+Last updated: 2026-07-13 (sesión 80 — batch 149–153 esports/got/nba/gaming/magic)
 
 ---
 
