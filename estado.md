@@ -1,6 +1,6 @@
 # estado.md — Project State Tracker
 
-Last updated: 2026-07-13 (sesión 80 — batch 149–153 esports/got/nba/gaming/magic)
+Last updated: 2026-08-31 (sesión 81 — batch 174–178 warhammer/gamedev/rol/gaming/esports)
 
 ---
 
@@ -127,23 +127,23 @@ Migrado en sesión 70 (2026-05-21). Ya **no existe** `js/news-data.js` ni `artic
 
 ### NEWS_TRACKER — temas usados
 ```json
-{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba"],"last_update":"2026-07-07"}
+{"used_topics":["got","esports","gaming","magic","gamedev","warhammer","rol","nba"],"last_update":"2026-08-31"}
 ```
-**Próximos temas disponibles:** `nba` · `gaming` · `magic`
+**Próximos temas disponibles:** `nba` · `got` · `magic`
 
 ### IDs de artículos actuales (para evitar duplicados)
-**Fuente de verdad:** `js/articles-index.js` (un objeto por línea, IDs visibles a simple vista) o `ls articles/*.html`. La tabla detallada que vivía aquí (135 entradas) ha sido retirada por mantenimiento. IDs recientes (batch 144–148, 07/07/2026) para referencia rápida:
+**Fuente de verdad:** `js/articles-index.js` (un objeto por línea, IDs visibles a simple vista) o `ls articles/*.html`. La tabla detallada que vivía aquí (135 entradas) ha sido retirada por mantenimiento. IDs recientes (batch 174–178, 31/08/2026) para referencia rápida:
 | # | id | topic | fecha |
 |---|---|---|---|
-| 148 | `noticia-rol-justice-league-gamefound-dnd-arcana-gencon-julio-2026` | rol | 07/07/2026 |
-| 147 | `noticia-gta6-trailer3-mundial-julio-rockstar-silencio-2026` | gamedev | 07/07/2026 |
-| 146 | `noticia-tow-nuevo-core-set-warriors-chaos-summer-preview-2026` | warhammer | 07/07/2026 |
-| 145 | `noticia-msi-2026-bracket-stage-blg-hle-ubf-g2-t1-lb-descanso` | esports | 07/07/2026 |
-| 144 | `noticia-hotd-t3-ep3-rhaenyra-trono-tumbleton-daeron-2026` | got | 07/07/2026 |
-| 143 | `noticia-mtg-marvel-lanzamiento-junio-2026` | magic | 29/06/2026 |
-| 142 | `noticia-gta6-preorders-boxart-trailer3-junio-2026` | gaming | 29/06/2026 |
-| 141 | `noticia-nba-knicks-desfile-canyon-heroes-draft-2026` | nba | 29/06/2026 |
-_…133 entradas más (140 a 1) retiradas. Para la lista completa actualizada ver `js/articles-index.js`._
+| 178 | `noticia-lec-summer-2026-final-standings-fnatic-eliminado-koi-salva` | esports | 31/08/2026 |
+| 177 | `noticia-gta6-extended-look-reacciones-gameplay-liberty-city-2026` | gaming | 31/08/2026 |
+| 176 | `noticia-rol-septiembre-dnd-arcana-13-omens-paizo-justice-league-2026` | rol | 31/08/2026 |
+| 175 | `noticia-gamedev-gamescom-2026-fable-gears-eday-highlights` | gamedev | 31/08/2026 |
+| 174 | `noticia-tow-dogs-war-warhammer-world-open-septiembre-2026` | warhammer | 31/08/2026 |
+| 173 | `noticia-rol-justice-league-gamefound-dnd-arcana-gencon-julio-2026` | rol | 07/07/2026 |
+| 172 | `noticia-gta6-trailer3-mundial-julio-rockstar-silencio-2026` | gamedev | 07/07/2026 |
+| 171 | `noticia-tow-nuevo-core-set-warriors-chaos-summer-preview-2026` | warhammer | 07/07/2026 |
+_…169 entradas más (170 a 1) retiradas. Para la lista completa actualizada ver `js/articles-index.js`._
 
 ### Páginas HTML — estado actual
 | Página | Estado | Notas |
