@@ -34,11 +34,34 @@
       overflow: hidden;
     }
 
+    /* ── Header background strip (4 pixel art images) ── */
+    .fv-header-bg {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      opacity: 0.75;
+      z-index: 0;
+    }
+
+    .fv-header-bg img {
+      flex: 1 1 0;
+      min-width: 0;
+      height: 100%;
+      object-fit: cover;
+      image-rendering: pixelated;
+    }
+
+    @media (max-width: 768px) {
+      .fv-header-bg img:nth-child(n+3) { display: none; }
+    }
+
     .page-header-fv::before {
       content: '';
       position: absolute;
       inset: 0;
+      z-index: 1;
       background:
+        linear-gradient(90deg, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.55) 40%, rgba(10,10,10,0.15) 100%),
         linear-gradient(135deg, rgba(255,0,255,0.07) 0%, transparent 55%),
         linear-gradient(225deg, rgba(0,255,65,0.04) 0%, transparent 55%);
       pointer-events: none;
@@ -57,7 +80,7 @@
 
     .page-header-fv .container {
       position: relative;
-      z-index: 1;
+      z-index: 2;
     }
 
     .fv-header-pre {
@@ -476,6 +499,12 @@
 
 <!-- ─── Page Header ─────────────────────────────────────────────────────── -->
 <header class="page-header-fv">
+  <div class="fv-header-bg" aria-hidden="true">
+    <img src="assets/img/gamedev/fondo_pixel_art.webp" alt="">
+    <img src="assets/img/gamedev/fondo_pixel_art2.webp" alt="">
+    <img src="assets/img/gamedev/fondo_pixel_art3.webp" alt="">
+    <img src="assets/img/gamedev/fondo_pixel_art4.webp" alt="">
+  </div>
   <div class="container">
     <p class="fv-header-pre">▶ GAMEDEV / FALLEN VALKYRIE</p>
     <h1 class="fv-header-title">DEVLOG</h1>
@@ -496,7 +525,7 @@
       </div>
       <div class="fv-stat-box">
         <span class="fv-stat-label">PROGRESO</span>
-        <span class="fv-stat-value" style="color:var(--accent-secondary);">15%</span>
+        <span class="fv-stat-value" style="color:var(--accent-secondary);">30%</span>
       </div>
     </div>
   </div>
@@ -556,42 +585,45 @@
       <div class="bar-container reveal" style="max-width:860px;">
         <div class="bar-label-row">
           <span>PROGRESO GLOBAL</span>
-          <span class="bar-pct">10%</span>
+          <span class="bar-pct">30%</span>
         </div>
         <div class="bar-track">
-          <div class="bar-fill pink" data-fill="15"></div>
+          <div class="bar-fill pink" data-fill="30"></div>
         </div>
       </div>
 
       <!-- Devlog Summary Card -->
       <div class="devlog-summary reveal">
-        <span class="summary-badge">📋 RESUMEN INICIAL</span>
+        <span class="summary-badge">📋 ESTADO ACTUAL</span>
 
         <h3 class="summary-title">LO QUE HAY HECHO HASTA AQUÍ</h3>
-        <span class="summary-date">HASTA HOY · 05/03/2026</span>
+        <span class="summary-date">HASTA HOY · 18/10/2026</span>
 
-        <img src="assets/img/fv_estado_1.gif"
+        <img src="assets/img/gamedev/FallenValkyrie_Boss1.gif"
              alt="Estado actual de Fallen Valkyrie"
              class="devlog-img"
+             style="object-fit: contain; background: #000;"
              onerror="this.parentElement.style.display='none'">
 
         <p class="summary-body">
-          Llevo un tiempo robando horas al día para avanzar en este proyecto.
-          De momento tengo bastante trabajo hecho en la lógica de la protagonista:
-          movimiento completo, máquina de estados, salto, dash, deslizamiento por
-          paredes y ataque. También tengo casi terminado el tilemap del primer nivel
-          y estoy cerrando los ajustes del primer enemigo: un esqueleto.
+          El primer nivel está prácticamente terminado y en fase de pulido. La
+          protagonista tiene su kit completo (movimiento, máquina de estados, salto,
+          dash, wall slide y ataque), el esqueleto tiene IA de persecución, retirada,
+          vida y animación de muerte, y el dragón azul ya funciona como boss del nivel
+          con fuego corrosivo y mordiscos letales. El escenario tiene background en
+          parallax, enemigos con estadísticas distintas y cofres con objetos que
+          recuperan vida. Siguiente paso: balance final del nivel 1 y empezar el nivel 2.
         </p>
 
         <div class="summary-tags">
-          <span class="devlog-tag">Player Movement</span>
+          <span class="devlog-tag">Player Kit</span>
           <span class="devlog-tag">State Machine</span>
-          <span class="devlog-tag">Jump</span>
-          <span class="devlog-tag">Dash</span>
-          <span class="devlog-tag">Wall Slide</span>
-          <span class="devlog-tag">Attack</span>
-          <span class="devlog-tag">Tilemap Lv1</span>
+          <span class="devlog-tag">Enemy AI</span>
           <span class="devlog-tag">Enemy: Skeleton</span>
+          <span class="devlog-tag">Boss: Blue Dragon</span>
+          <span class="devlog-tag">Parallax</span>
+          <span class="devlog-tag">Loot Chests</span>
+          <span class="devlog-tag">Level 1 ✔</span>
         </div>
       </div>
 
@@ -734,6 +766,39 @@
           <span class="devlog-tag">Sprite Import</span>
           <span class="devlog-tag">State Machine</span>
           <span class="devlog-tag">Boss Enemy</span>
+        </div>
+      </div>
+
+      <div class="devlog-entry reveal">
+        <div class="devlog-entry-header">
+          <span class="devlog-date">18/10/2026</span>
+          <span class="devlog-num">#06</span>
+        </div>
+
+        <h3 class="devlog-title">BOSS FIGHT: EL DRAGÓN AZUL DESPIERTA</h3>
+
+        <img src="assets/img/gamedev/FallenValkyrie_Boss1.gif"
+             alt="Batalla contra el dragón azul, boss del primer nivel de Fallen Valkyrie"
+             class="devlog-img"
+             style="object-fit: contain; background: #000;"
+             onerror="this.parentElement.removeChild(this)">
+
+        <p class="devlog-desc">
+          Por fin está terminada la batalla contra el boss del primer nivel. El dragón azul ya tiene su set de ataques completo: lanza fuego corrosivo que castiga quedarse quieto y, si te acercas demasiado, suelta mordiscos letales que obligan a medir muy bien cuándo entrar a golpear y cuándo salir con el dash. Mecánicas, animaciones y timing del combate cerrados en Unity.
+        </p>
+        <p class="devlog-desc">
+          Con el boss listo, el primer nivel está prácticamente completo y ahora toca perfilarlo. Ya tiene background en parallax para dar profundidad al escenario, enemigos con distintas estadísticas de vida, daño y velocidad para que cada encuentro se sienta diferente, y cofres repartidos por el mapa con objetos que recuperan vida. Quedan los últimos ajustes de balance y pulido, pero el nivel 1 ya se juega de principio a fin.
+        </p>
+
+        <div class="devlog-tags">
+          <span class="devlog-tag">Boss Fight</span>
+          <span class="devlog-tag">Blue Dragon</span>
+          <span class="devlog-tag">Corrosive Fire</span>
+          <span class="devlog-tag">Melee Bite</span>
+          <span class="devlog-tag">Parallax Background</span>
+          <span class="devlog-tag">Enemy Stats</span>
+          <span class="devlog-tag">Loot Chests</span>
+          <span class="devlog-tag">Level 1</span>
         </div>
       </div>
 

@@ -183,7 +183,82 @@
 .sobre-mi-right {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
 }
+
+/* ── Último devlog card ── */
+.last-devlog {
+  display: block;
+  background: var(--bg-card);
+  border: 4px solid var(--accent-secondary);
+  padding: 1.5rem;
+  box-shadow: 4px 4px 0 rgba(255, 0, 255, 0.2);
+  color: var(--text);
+  text-decoration: none;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.last-devlog:hover {
+  box-shadow: 4px 4px 0 var(--accent-secondary), var(--glow-pink);
+  transform: translate(-2px, -2px);
+}
+.last-devlog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--accent-secondary);
+}
+.last-devlog-badge {
+  font-family: var(--font-primary);
+  font-size: 0.5rem;
+  color: var(--accent-secondary);
+  letter-spacing: 2px;
+}
+.last-devlog-date {
+  font-family: var(--font-primary);
+  font-size: 0.4rem;
+  color: var(--text-dim);
+}
+.last-devlog-img {
+  display: block;
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  background: #000;
+  border: 2px solid #333;
+  image-rendering: pixelated;
+  margin-bottom: 1rem;
+}
+.last-devlog-game {
+  font-family: var(--font-primary);
+  font-size: 0.4rem;
+  color: var(--accent-warn);
+  letter-spacing: 1px;
+}
+.last-devlog-title {
+  font-family: var(--font-primary);
+  font-size: 0.6rem;
+  line-height: 1.6;
+  color: var(--accent-secondary);
+  margin: 0.5rem 0 0.75rem;
+}
+.last-devlog-desc {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-dim);
+  margin-bottom: 1rem;
+}
+.last-devlog-cta {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-family: var(--font-primary);
+  font-size: 0.45rem;
+  color: var(--accent-secondary);
+}
+.last-devlog:hover .last-devlog-cta { text-shadow: var(--glow-pink); }
 
 @media (max-width: 1024px) {
   .sobre-mi-layout {
@@ -632,6 +707,34 @@
               </div>
             </div>
           </div>
+
+          <!-- Último devlog — Fallen Valkyrie -->
+          <a href="fallen-valkyrie.html" class="last-devlog reveal">
+            <div class="last-devlog-header">
+              <span class="last-devlog-badge">📓 ÚLTIMO DEVLOG</span>
+              <span class="last-devlog-date">18/10/2026 · #06</span>
+            </div>
+            <img src="assets/img/gamedev/FallenValkyrie_Boss1.gif"
+                 alt="Batalla contra el dragón azul en Fallen Valkyrie"
+                 class="last-devlog-img"
+                 loading="lazy"
+                 onerror="this.parentElement.removeChild(this)">
+            <span class="last-devlog-game">⚔ FALLEN VALKYRIE</span>
+            <h3 class="last-devlog-title">BOSS FIGHT: EL DRAGÓN AZUL DESPIERTA</h3>
+            <p class="last-devlog-desc">
+              Boss del nivel 1 terminado: fuego corrosivo y mordiscos letales.
+              El primer nivel ya se juega de principio a fin, con parallax,
+              enemigos con stats distintas y cofres de vida.
+            </p>
+            <div class="bar-label">
+              <span>PROGRESO</span>
+              <span style="color:var(--accent-secondary);">30%</span>
+            </div>
+            <div class="bar-track">
+              <div class="bar-fill pink" data-fill="30"></div>
+            </div>
+            <span class="last-devlog-cta">▶ VER DEVLOG</span>
+          </a>
         </div>
       </div>
     </div>
