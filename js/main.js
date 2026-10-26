@@ -204,9 +204,11 @@ function toggleGameEmbed(btn) {
 
   const isVisible = container.style.display !== "none";
 
-  // Close all other open embeds first
+  // Close all other open embeds first (unload iframe so the game stops running)
   document.querySelectorAll(".game-embed-container").forEach((c) => {
     c.style.display = "none";
+    const frame = c.querySelector("iframe");
+    if (frame) frame.removeAttribute("src");
   });
   document.querySelectorAll(".play-embed-btn").forEach((b) => {
     b.textContent = b.classList.contains("btn-small")
@@ -215,6 +217,9 @@ function toggleGameEmbed(btn) {
   });
 
   if (!isVisible) {
+    // Lazy-load: the game only loads when the user presses play
+    const frame = container.querySelector("iframe");
+    if (frame && frame.dataset.src) frame.src = frame.dataset.src;
     container.style.display = "block";
     btn.textContent = "■ CERRAR JUEGO";
     container.scrollIntoView({ behavior: "smooth", block: "nearest" });
