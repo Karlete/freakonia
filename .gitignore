@@ -27,3 +27,8 @@ task_for_news.md
 # Node (just in case)
 node_modules/
 package-lock.json
+
+# Documentos privados de Fallen Valkyrie (no publicar — el repo es público en GitHub Pages)
+WEB_LANDING_FREAKONIA.md
+docs/
+assets/FV_web_assets/

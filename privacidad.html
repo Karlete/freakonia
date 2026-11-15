@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="description" content="Privacidad y cookies en Freakonia: sin cookies, sin formularios y con analítica anónima. Qué datos se tratan y cómo contactar." />
+  <title>Privacidad y cookies — Freakonia</title>
+  <link rel="canonical" href="https://freakonia.com/privacidad.html">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+
+  <style>
+    /* ── Privacidad — bloques de texto ── */
+    .privacy-wrap {
+      max-width: 860px;
+    }
+
+    .privacy-block {
+      background: var(--bg-card);
+      border: 2px solid #2a2a2a;
+      border-left: 4px solid var(--accent-primary);
+      padding: var(--sp-5);
+      margin-bottom: var(--sp-5);
+    }
+
+    .privacy-block h2 {
+      font-family: var(--font-primary);
+      font-size: 0.6rem;
+      line-height: 1.6;
+      color: var(--accent-primary);
+      margin-bottom: var(--sp-4);
+    }
+
+    .privacy-block p,
+    .privacy-block li {
+      font-family: var(--font-secondary);
+      font-size: 20px;
+      line-height: 1.6;
+      color: var(--text);
+    }
+
+    .privacy-block p + p { margin-top: var(--sp-3); }
+
+    .privacy-block ul {
+      padding-left: var(--sp-5);
+      margin-top: var(--sp-3);
+    }
+
+    .privacy-block a {
+      color: var(--accent-tertiary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .privacy-block a:hover,
+    .privacy-block a:focus-visible {
+      color: var(--accent-secondary);
+    }
+
+    .privacy-block code {
+      font-family: var(--font-secondary);
+      color: var(--accent-warn);
+    }
+
+    .privacy-updated {
+      font-family: var(--font-primary);
+      font-size: 0.45rem;
+      color: var(--text-dim);
+      margin-top: var(--sp-6);
+    }
+
+    .privacy-lang-link {
+      font-family: var(--font-primary);
+      font-size: 0.5rem;
+      color: var(--accent-tertiary);
+    }
+
+    .privacy-en {
+      margin-top: var(--sp-8);
+    }
+
+    .privacy-en .privacy-block { border-left-color: var(--accent-tertiary); }
+    .privacy-en .privacy-block h2 { color: var(--accent-tertiary); }
+  </style>
+</head>
+<body>
+
+<!-- CRT overlay -->
+<div class="crt-overlay" aria-hidden="true"></div>
+
+<!-- Scroll to top button -->
+<button id="scroll-to-top" class="scroll-to-top" aria-label="Volver al inicio" title="Volver al inicio (ESC)">▲</button>
+
+<!-- ─── Navigation ─────────────────────────────────────────────────────── -->
+<nav class="navbar" role="navigation" aria-label="Navegación principal">
+  <div class="container">
+    <a href="index.html" class="nav-brand">⚔ FREAKONIA</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">▼ MENU</button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html" class="nav-link">🏠 Inicio</a></li>
+      <li class="nav-dropdown">
+        <span class="nav-link nav-dropdown-toggle">🎮 GameDev ▾</span>
+        <ul class="nav-submenu">
+          <li><a href="gamedev.html">🎮 GameDev</a></li>
+          <li><a href="fallen-valkyrie.html">📓 FV Devlog</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <span class="nav-link nav-dropdown-toggle">🕹 Gaming ▾</span>
+        <ul class="nav-submenu">
+          <li><a href="gaming.html">🕹 Gaming</a></li>
+          <li><a href="esports.html">🏆 Esports</a></li>
+          <li><a href="quiz.html">🎯 Quiz Retro</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <span class="nav-link nav-dropdown-toggle">🐉 Fantasía ▾</span>
+        <ul class="nav-submenu">
+          <li><a href="got.html">🐉 GoT</a></li>
+          <li><a href="warhammer.html">⚙ Warhammer</a></li>
+          <li><a href="magic.html">✨ MtG</a></li>
+          <li><a href="rol.html">🎲 Rol</a></li>
+        </ul>
+      </li>
+      <li><a href="nba.html" class="nav-link">🏀 NBA</a></li>
+      <li class="nav-dropdown">
+        <span class="nav-link nav-dropdown-toggle">📡 Comunidad ▾</span>
+        <ul class="nav-submenu">
+          <li><a href="java.html">☕ Java</a></li>
+          <li><a href="social.html">📡 Social</a></li>
+        </ul>
+      </li>
+      <li><a href="news.html" class="nav-link">📰 News</a></li>
+      <li><a href="universo.html" class="nav-link">🗺 Universo</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ─── Page Header ─────────────────────────────────────────────────────── -->
+<header class="page-header">
+  <div class="container">
+    <h1>PRIVACIDAD Y COOKIES</h1>
+    <p class="subtitle">Corto y claro: esta web no usa cookies ni recoge tus datos.</p>
+    <p><a href="#en" class="privacy-lang-link" lang="en">🌐 ENGLISH VERSION ↓</a></p>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container privacy-wrap">
+
+      <div class="privacy-block">
+        <h2>QUIÉN ESTÁ DETRÁS</h2>
+        <p>
+          Freakonia · Valencia (46110) ·
+          <a href="mailto:sanprietogamer@gmail.com">sanprietogamer@gmail.com</a>
+        </p>
+        <p>Para cualquier duda sobre privacidad, escribe a ese email.</p>
+      </div>
+
+      <div class="privacy-block">
+        <h2>SIN COOKIES Y SIN FORMULARIOS</h2>
+        <p>
+          Freakonia no instala cookies en tu navegador, ni propias ni de terceros, y no tiene
+          formularios, registro ni newsletter. No te pedimos ningún dato personal.
+          Por eso no verás ningún aviso de cookies.
+        </p>
+      </div>
+
+      <div class="privacy-block">
+        <h2>ANALÍTICA ANÓNIMA</h2>
+        <p>
+          Para saber qué páginas se leen usamos <a href="https://www.goatcounter.com/" target="_blank" rel="noopener">GoatCounter</a>,
+          una analítica que no usa cookies y no guarda tu dirección IP ni ningún identificador que permita
+          reconocerte. Solo cuenta datos agregados: qué página se visita, desde qué web llegas,
+          el país, el navegador y el tamaño de pantalla.
+        </p>
+      </div>
+
+      <div class="privacy-block">
+        <h2>LO QUE SE GUARDA EN TU NAVEGADOR</h2>
+        <p>
+          Si cambias el idioma, la web recuerda tu elección en el almacenamiento local de tu navegador
+          (clave <code>sp-lang</code>). Ese dato no sale de tu dispositivo y puedes borrarlo
+          limpiando los datos del sitio.
+        </p>
+      </div>
+
+      <div class="privacy-block">
+        <h2>ALOJAMIENTO</h2>
+        <p>
+          La web está alojada en GitHub Pages (GitHub, Inc.). Como cualquier servidor, GitHub puede
+          registrar datos técnicos de las visitas, como la dirección IP, por seguridad y para que el
+          servicio funcione. Más información en la
+          <a href="https://docs.github.com/es/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">declaración de privacidad de GitHub</a>.
+        </p>
+        <p>Las fuentes tipográficas se sirven desde esta misma web.</p>
+      </div>
+
+      <div class="privacy-block">
+        <h2>CONTENIDO DE TERCEROS, SOLO SI PULSAS</h2>
+        <p>
+          Nada de terceros se carga sin que hagas clic. Los vídeos de YouTube se muestran con una
+          imagen propia y solo al pulsar se carga el reproductor desde <code>youtube-nocookie.com</code>.
+          Lo mismo con los juegos de itch.io: solo se cargan al pulsar «Jugar».
+          A partir de ese clic, se aplican las políticas de privacidad de
+          <a href="https://policies.google.com/privacy?hl=es" target="_blank" rel="noopener">Google/YouTube</a> e
+          <a href="https://itch.io/docs/legal/privacy-policy" target="_blank" rel="noopener">itch.io</a>.
+        </p>
+        <p>
+          Los enlaces a X, YouTube, itch.io o Steam te llevan a sus webs, que tienen sus propias políticas.
+        </p>
+      </div>
+
+      <p class="privacy-updated">ÚLTIMA ACTUALIZACIÓN · 02 · NOV · 2026</p>
+
+      <!-- ─── English ─────────────────────────────────────────────────── -->
+      <div class="privacy-en" id="en" lang="en">
+        <h2 class="section-title" style="color:var(--accent-tertiary);">PRIVACY &amp; COOKIES</h2>
+
+        <div class="privacy-block">
+          <h2>WHO WE ARE</h2>
+          <p>
+            Freakonia · Valencia (46110), Spain ·
+            <a href="mailto:sanprietogamer@gmail.com">sanprietogamer@gmail.com</a>
+          </p>
+        </div>
+
+        <div class="privacy-block">
+          <h2>NO COOKIES, NO FORMS</h2>
+          <p>
+            Freakonia sets no cookies, first or third party, and has no forms, sign-ups or newsletter.
+            We don't ask for any personal data, so there is no cookie banner.
+          </p>
+        </div>
+
+        <div class="privacy-block">
+          <h2>ANONYMOUS ANALYTICS</h2>
+          <p>
+            We use <a href="https://www.goatcounter.com/" target="_blank" rel="noopener">GoatCounter</a>, a cookie-free analytics
+            service that doesn't store your IP address or any identifier. It only counts aggregated data:
+            page visited, referring site, country, browser and screen size.
+          </p>
+        </div>
+
+        <div class="privacy-block">
+          <h2>STORED IN YOUR BROWSER</h2>
+          <p>
+            If you switch language, your choice is kept in your browser's local storage
+            (key <code>sp-lang</code>). It never leaves your device.
+          </p>
+        </div>
+
+        <div class="privacy-block">
+          <h2>HOSTING</h2>
+          <p>
+            This site is hosted on GitHub Pages (GitHub, Inc.), which may log technical data such as IP
+            addresses for security and operation. See the
+            <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.
+            Fonts are served from this site.
+          </p>
+        </div>
+
+        <div class="privacy-block">
+          <h2>THIRD-PARTY CONTENT, ONLY ON CLICK</h2>
+          <p>
+            Nothing from third parties loads until you click. YouTube videos show a local image and only load
+            the player from <code>youtube-nocookie.com</code> when you press play; itch.io games only load when
+            you press "Play". From then on, the privacy policies of
+            <a href="https://policies.google.com/privacy?hl=en" target="_blank" rel="noopener">Google/YouTube</a> and
+            <a href="https://itch.io/docs/legal/privacy-policy" target="_blank" rel="noopener">itch.io</a> apply.
+          </p>
+        </div>
+
+        <p class="privacy-updated">LAST UPDATED · 02 · NOV · 2026</p>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<!-- ─── Footer ──────────────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="gamedev.html">GameDev</a></li>
+      <li><a href="gaming.html">Gaming</a></li>
+      <li><a href="got.html">GoT</a></li>
+      <li><a href="social.html">Social</a></li>
+      <li><a href="java.html">Java</a></li>
+    </ul>
+    <p>⚔ FREAKONIA — KARLETE</p>
+    <p style="color:#444;">HECHO CON AMOR PIXELADO Y DEMASIADAS BEBIDAS ENERGÉTICAS</p>
+    <p style="color:#333;">◄ INSERT COIN ►</p>
+
+    <p class="footer-contact">
+      FREAKONIA · VALENCIA (46110) ·
+      <a href="mailto:sanprietogamer@gmail.com">sanprietogamer@gmail.com</a>
+    </p>
+    <p class="footer-contact">
+      <a href="https://x.com/sanprietoG" target="_blank" rel="noopener">X</a> ·
+      <a href="https://www.youtube.com/@sanprieto" target="_blank" rel="noopener">YouTube</a> ·
+      <a href="https://sanprieto.itch.io" target="_blank" rel="noopener">itch.io</a> ·
+      <a href="privacidad.html" aria-current="page">Privacidad y cookies</a>
+    </p>
+
+    <div class="footer-legal">
+      <div class="pixel-divider"></div>
+      <p class="footer-copyright">
+        © 2025 FREAKONIA — KARLETE. ALL RIGHTS RESERVED.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/analytics.js" defer></script>
+</body>
+</html>

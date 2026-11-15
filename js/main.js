@@ -2,17 +2,18 @@
 
 // ─── Navigation active state ───────────────────────────────────────────────
 (function setActiveNav() {
-  const path = window.location.pathname.split('/').pop() || 'index.html';
+  // Compara rutas resueltas (sirve también para páginas en subcarpetas, p. ej. /fallen-valkyrie/devlog/)
+  const norm = p => p.replace(/index\.html$/, '');
+  const here = norm(window.location.pathname);
+  const isCurrent = href => !!href && norm(new URL(href, window.location.href).pathname) === here;
   document.querySelectorAll('.nav-link').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href && (href === path || (path === '' && href === 'index.html'))) {
+    if (isCurrent(link.getAttribute('href'))) {
       link.classList.add('active');
     }
   });
   // Highlight dropdown parent when a submenu link matches the current page
   document.querySelectorAll('.nav-submenu a').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href && (href === path || (path === '' && href === 'index.html'))) {
+    if (isCurrent(link.getAttribute('href'))) {
       link.classList.add('active');
       const toggle = link.closest('.nav-dropdown')?.querySelector('.nav-dropdown-toggle');
       if (toggle) toggle.classList.add('active');

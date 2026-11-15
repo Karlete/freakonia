@@ -1,5 +1,6 @@
 // youtube.js — Video cards with inline embed toggle for @sanprieto channel
-// No API key required. Thumbnails via public YouTube CDN.
+// Fachada de privacidad: miniaturas locales (assets/img/youtube/[id].jpg) y
+// youtube-nocookie.com solo al pulsar. Sin clic no se pide nada a YouTube.
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 // type: 'short' = vertical 9:16 embed | 'video' = horizontal 16:9 embed
@@ -61,9 +62,8 @@ function toggleVideoEmbed(btn) {
 function buildVideoCard(video) {
   const { id, title, description, type } = video;
   const ytUrl = "https://www.youtube.com/watch?v=" + id;
-  const embedUrl = "https://www.youtube.com/embed/" + id + "?autoplay=1&rel=0";
-  const thumb = "https://img.youtube.com/vi/" + id + "/hqdefault.jpg";
-  const maxThumb = "https://img.youtube.com/vi/" + id + "/maxresdefault.jpg";
+  const embedUrl = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0";
+  const thumb = "assets/img/youtube/" + id + ".jpg"; // miniatura local (1280×720)
   const isShort = type === "short";
   const label = isShort ? "▶ SHORT" : "▶ VÍDEO";
 
@@ -77,10 +77,8 @@ function buildVideoCard(video) {
     "</div>" +
     '<div class="video-thumb-wrap">' +
     '<img src="' +
-    maxThumb +
-    '" onerror="this.src=\'' +
     thumb +
-    "'\" " +
+    '" width="1280" height="720" ' +
     'alt="' +
     title +
     '" class="video-thumb" loading="lazy" />' +

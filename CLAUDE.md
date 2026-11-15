@@ -12,7 +12,7 @@ Owner: Karlete | Stack: HTML5, CSS3, Vanilla JS | Host: GitHub Pages
 
 ## Design System
 
-- Primary font: "Press Start 2P" (Google Fonts)
+- Primary font: "Press Start 2P" (servida desde assets/fonts/ — NO usar Google Fonts ni terceros que pongan cookies; ver privacidad.html)
 - Secondary font: "VT323" for body text
 - Background: #0a0a0a | Primary accent: #00ff41 | Secondary: #ff00ff | Tertiary: #00bfff | Text: #e0e0e0
 - CRT scanlines overlay, pixel borders (4px solid), neon glow on hover
