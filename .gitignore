@@ -32,3 +32,9 @@ package-lock.json
 WEB_LANDING_FREAKONIA.md
 docs/
 assets/FV_web_assets/
+# Cualquier copia o variante del plan de la landing (vive en el repo PRIVADO de FV: estado FV/)
+WEB_LANDING_FREAKONIA*.md
+**/WEB_LANDING_FREAKONIA*.md
+GDD_Fallen_Valkyrie*.md
+ROADMAP*.md
+Fallen_Valkyrie_Roadmap_Marketing_Publicacion*.md
