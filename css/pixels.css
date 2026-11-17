@@ -167,19 +167,26 @@
 }
 
 .patron-donor-scroll {
+  --scrollbar-thumb: var(--accent-primary);
+  --scrollbar-track: var(--bg);
   max-height: 180px;
   overflow-y: auto;
   padding: 0.5rem 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
 
-.patron-donor-scroll::-webkit-scrollbar {
-  width: 4px;
-}
-.patron-donor-scroll::-webkit-scrollbar-track {
-  background: var(--bg);
-}
-.patron-donor-scroll::-webkit-scrollbar-thumb {
-  background: var(--accent-primary);
+/* Fallback para navegadores WebKit/Blink sin scrollbar-color */
+@supports not (scrollbar-color: auto) {
+  .patron-donor-scroll::-webkit-scrollbar {
+    width: 4px;
+  }
+  .patron-donor-scroll::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+  }
+  .patron-donor-scroll::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+  }
 }
 
 .patron-donor-item {
