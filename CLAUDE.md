@@ -37,6 +37,7 @@ Owner: Karlete | Stack: HTML5, CSS3, Vanilla JS | Host: GitHub Pages
 Use article-template.html in the project root as the HTML template.
 
 **Notas de la plantilla:**
+- `[ID]` → el mismo ID del nombre de fichero (se usa en la etiqueta canonical)
 - `[DD · MES · YYYY]` → formato `26 · MAY · 2026` (MES en español en mayúsculas: ENE FEB MAR ABR MAY JUN JUL AGO SEP OCT NOV DIC)
 - `[TAGS_HTML]` → cada tag como `<span class="tag">TAGNAME</span>`
 - `[SOURCE_BTN]` → si hay URL: `<a href="[URL]" target="_blank" rel="noopener" class="btn">&gt;&gt; FUENTE: [SOURCE]</a>` — si no hay URL, omitir

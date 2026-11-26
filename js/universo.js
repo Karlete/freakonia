@@ -114,7 +114,7 @@
       id: "freakonia",
       label: "FREAKONIA",
       emoji: "⚔",
-      href: "index.html",
+      href: "./",
       topic: null,
       color: "#00ff41",
       tagline: "El reino friki de Karlete. Sin filtros desde 1993.",
