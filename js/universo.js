@@ -528,8 +528,8 @@
     label.textContent = "— ÚLTIMAS NOTICIAS —";
     newsContainer.appendChild(label);
 
-    if (typeof NEWS_DATA !== "undefined") {
-      const topicNews = NEWS_DATA.filter((n) => n.topic === node.topic).slice(
+    if (typeof ARTICLES_INDEX !== "undefined") {
+      const topicNews = ARTICLES_INDEX.filter((n) => n.topic === node.topic).slice(
         0,
         2,
       );
@@ -543,7 +543,7 @@
         topicNews.forEach((article) => {
           const card = document.createElement("a");
           card.className = "universe-news-card";
-          card.href = `article.html?id=${article.id}`;
+          card.href = `articles/${article.id}.html`;
           card.style.setProperty("--card-hover-color", node.color);
           card.innerHTML = `
             <span class="universe-news-card-title">${article.title}</span>
